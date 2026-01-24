@@ -99,7 +99,7 @@ export default function PlatformRulesPage() {
         <div className="max-w-4xl mx-auto px-6">
           {/* Header */}
           <div className="mb-16 text-center">
-            <div className="inline-block px-4 py-2 bg-pink-50 text-pink-600 rounded-full text-sm font-medium mb-4">
+            <div className="inline-block px-4 py-2 bg-gray-50 text-gray-900 rounded-full text-sm font-medium mb-4">
               Community Guidelines
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Platform Rules</h1>
@@ -114,10 +114,10 @@ export default function PlatformRulesPage() {
             {rules.map((rule, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl border border-gray-100 p-8 hover:border-pink-200 hover:shadow-lg transition-all"
+                className="bg-white rounded-2xl border border-gray-100 p-8 hover:border-gray-300 hover:shadow-lg transition-all"
               >
                 <div className="flex items-start gap-5">
-                  <div className="w-14 h-14 bg-gradient-to-r from-pink-100 to-fuchsia-100 rounded-2xl flex items-center justify-center text-pink-600 flex-shrink-0">
+                  <div className="w-14 h-14 bg-gradient-to-r from-gray-100 to-gray-100 rounded-2xl flex items-center justify-center text-gray-900 flex-shrink-0">
                     {rule.icon}
                   </div>
                   <div className="flex-1">
@@ -128,7 +128,7 @@ export default function PlatformRulesPage() {
                       <ul className="space-y-2">
                         {rule.examples.map((example, idx) => (
                           <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
-                            <svg className="w-4 h-4 text-pink-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <svg className="w-4 h-4 text-gray-900 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                             </svg>
                             {example}
@@ -143,7 +143,7 @@ export default function PlatformRulesPage() {
           </div>
 
           {/* Enforcement Section */}
-          <div className="bg-gradient-to-r from-pink-50 to-fuchsia-50 rounded-2xl p-8 mb-16">
+          <div className="bg-gradient-to-r from-gray-50 to-gray-50 rounded-2xl p-8 mb-16">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Enforcement</h2>
             <p className="text-gray-600 leading-relaxed mb-6">
               Violations of these rules may result in content removal, account warnings, temporary suspension, 
@@ -152,15 +152,15 @@ export default function PlatformRulesPage() {
             </p>
             <div className="grid sm:grid-cols-3 gap-4">
               <div className="bg-white rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-pink-600 mb-1">Warning</div>
+                <div className="text-2xl font-bold text-gray-900 mb-1">Warning</div>
                 <p className="text-sm text-gray-600">First minor violation</p>
               </div>
               <div className="bg-white rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-pink-600 mb-1">Suspension</div>
+                <div className="text-2xl font-bold text-gray-900 mb-1">Suspension</div>
                 <p className="text-sm text-gray-600">Repeated or serious violations</p>
               </div>
               <div className="bg-white rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-pink-600 mb-1">Ban</div>
+                <div className="text-2xl font-bold text-gray-900 mb-1">Ban</div>
                 <p className="text-sm text-gray-600">Severe or persistent violations</p>
               </div>
             </div>
@@ -176,7 +176,7 @@ export default function PlatformRulesPage() {
             <a
               href="/report"
               className="inline-flex items-center gap-2 px-8 py-4 text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg"
-              style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}
+              style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />

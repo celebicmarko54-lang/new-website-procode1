@@ -22,7 +22,7 @@ export default function BillingPage() {
   const [selectedPlan, setSelectedPlan] = useState('');
 
   useEffect(() => {
-    const currentUser = localStorage.getItem('lovecode.dev_current_user');
+    const currentUser = localStorage.getItem('λforge_current_user');
     if (!currentUser) {
       router.push('/login');
       return;
@@ -77,7 +77,7 @@ export default function BillingPage() {
   if (!user) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin w-8 h-8 border-4 border-pink-500 border-t-transparent rounded-full"></div>
+        <div className="animate-spin w-8 h-8 border-4 border-gray-900 border-t-transparent rounded-full"></div>
       </div>
     );
   }
@@ -112,7 +112,7 @@ export default function BillingPage() {
               </p>
             </div>
             <div className={`px-4 py-2 rounded-full text-sm font-medium ${
-              currentPlan === 'free' ? 'bg-gray-100 text-gray-600' : 'bg-pink-100 text-pink-600'
+              currentPlan === 'free' ? 'bg-gray-100 text-gray-600' : 'bg-gray-100 text-gray-600'
             }`}>
               {currentPlan === 'free' ? 'Free Plan' : 'Active'}
             </div>

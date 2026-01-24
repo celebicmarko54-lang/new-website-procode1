@@ -93,23 +93,23 @@ export default function BlockchainSection() {
       <div className="absolute inset-0">
         <div className="absolute inset-0" style={{
           backgroundImage: `
-            linear-gradient(rgba(233, 30, 140, 0.15) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(233, 30, 140, 0.15) 1px, transparent 1px)
+            linear-gradient(rgba(31, 41, 55, 0.15) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(31, 41, 55, 0.15) 1px, transparent 1px)
           `,
           backgroundSize: '50px 50px',
         }} />
       </div>
 
       {/* Glowing orbs */}
-      <div className="absolute top-20 left-1/4 w-96 h-96 bg-[#E91E8C]/10 rounded-full blur-[120px]" />
-      <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-[#9B59B6]/10 rounded-full blur-[120px]" />
+      <div className="absolute top-20 left-1/4 w-96 h-96 bg-[#1f2937]/10 rounded-full blur-[120px]" />
+      <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-[#374151]/10 rounded-full blur-[120px]" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-pink-50 to-purple-50 border border-pink-200 mb-6">
-            <div className="w-2 h-2 rounded-full bg-[#E91E8C] animate-pulse" />
-            <span className="text-sm font-medium text-pink-600">Multi-Chain Ecosystem</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gray-50 to-gray-100 border border-gray-300 mb-6">
+            <div className="w-2 h-2 rounded-full bg-[#1f2937] animate-pulse" />
+            <span className="text-sm font-medium text-gray-700">Multi-Chain Ecosystem</span>
           </div>
 
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
@@ -117,7 +117,7 @@ export default function BlockchainSection() {
             <span 
               className="bg-clip-text text-transparent"
               style={{ 
-                background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)', 
+                background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', 
                 WebkitBackgroundClip: 'text' 
               }}
             >
@@ -127,7 +127,7 @@ export default function BlockchainSection() {
             <span 
               className="bg-clip-text text-transparent"
               style={{ 
-                background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)', 
+                background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', 
                 WebkitBackgroundClip: 'text' 
               }}
             >
@@ -154,7 +154,7 @@ export default function BlockchainSection() {
             {[...blockchains, ...blockchains].map((chain, index) => (
               <div 
                 key={`${chain.symbol}-${index}`}
-                className="flex-shrink-0 flex items-center gap-3 px-6 py-4 bg-gray-50 rounded-2xl border border-gray-200 hover:border-pink-300 transition-all hover:bg-pink-50/50 group cursor-pointer shadow-sm"
+                className="flex-shrink-0 flex items-center gap-3 px-6 py-4 bg-gray-50 rounded-2xl border border-gray-200 hover:border-gray-400 transition-all hover:bg-gray-100/50 group cursor-pointer shadow-sm"
               >
                 <div 
                   className="w-10 h-10 rounded-xl flex items-center justify-center text-lg font-bold"
@@ -176,7 +176,7 @@ export default function BlockchainSection() {
           {useCases.map((useCase) => (
             <div 
               key={useCase}
-              className="px-5 py-2.5 rounded-full bg-gradient-to-r from-pink-50 to-purple-50 border border-pink-200 text-gray-800 font-medium hover:from-pink-100 hover:to-purple-100 transition-all cursor-pointer"
+              className="px-5 py-2.5 rounded-full bg-gradient-to-r from-gray-50 to-gray-100 border border-gray-300 text-gray-800 font-medium hover:from-gray-100 hover:to-gray-200 transition-all cursor-pointer"
             >
               {useCase}
             </div>
@@ -188,10 +188,10 @@ export default function BlockchainSection() {
           {features.map((feature) => (
             <div 
               key={feature.title}
-              className="group p-6 rounded-2xl bg-white border border-gray-200 hover:border-pink-300 transition-all hover:shadow-lg hover:shadow-pink-100 shadow-sm"
+              className="group p-6 rounded-2xl bg-white border border-gray-200 hover:border-gray-400 transition-all hover:shadow-lg hover:shadow-gray-100 shadow-sm"
             >
               <div 
-                className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-pink-500 bg-pink-50 group-hover:scale-110 transition-transform"
+                className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-gray-700 bg-gray-100 group-hover:scale-110 transition-transform"
               >
                 {feature.icon}
               </div>
@@ -208,7 +208,7 @@ export default function BlockchainSection() {
             <span 
               className="font-bold bg-clip-text text-transparent"
               style={{ 
-                background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)', 
+                background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', 
                 WebkitBackgroundClip: 'text' 
               }}
             >
@@ -218,8 +218,8 @@ export default function BlockchainSection() {
 
           <a 
             href="/signup"
-            className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-2xl hover:shadow-lg hover:shadow-pink-500/25 transition-all duration-300 hover:scale-105 text-lg"
-            style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}
+            className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-2xl hover:shadow-lg hover:shadow-gray-500/25 transition-all duration-300 hover:scale-105 text-lg"
+            style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}
           >
             Start Building on Web3
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

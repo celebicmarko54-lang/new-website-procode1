@@ -13,7 +13,7 @@ interface CategoryCard {
 const categories: CategoryCard[] = [
   {
     name: 'Landing page',
-    gradient: 'from-pink-500 to-rose-600',
+    gradient: 'from-gray-800 to-gray-900',
     icon: (
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
         <rect x="3" y="3" width="18" height="18" rx="2" />
@@ -23,7 +23,7 @@ const categories: CategoryCard[] = [
   },
   {
     name: 'Dashboard',
-    gradient: 'from-violet-500 to-purple-600',
+    gradient: 'from-gray-700 to-gray-800',
     icon: (
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
         <path d="M3 3h8v10H3V3zm0 12h8v6H3v-6zm10-12h8v6h-8V3zm0 8h8v10h-8V11z"/>
@@ -74,7 +74,7 @@ const categories: CategoryCard[] = [
   },
   {
     name: 'Internal tool',
-    gradient: 'from-indigo-500 to-violet-600',
+    gradient: 'from-gray-600 to-gray-700',
     icon: (
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
         <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
@@ -114,7 +114,7 @@ const categories: CategoryCard[] = [
   },
   {
     name: 'Lifestyle',
-    gradient: 'from-rose-500 to-pink-600',
+    gradient: 'from-gray-800 to-gray-900',
     icon: (
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
         <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
@@ -124,7 +124,7 @@ const categories: CategoryCard[] = [
   },
   {
     name: 'Entertainment',
-    gradient: 'from-red-500 to-rose-600',
+    gradient: 'from-gray-700 to-gray-800',
     icon: (
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
         <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/>
@@ -224,11 +224,11 @@ export default function BuildAnythingSection() {
   }, [isPaused]);
 
   return (
-    <section className="py-24 overflow-hidden">
+    <section className="py-24 overflow-hidden bg-[#f8fafc] dark:bg-[#0a0a0a] transition-colors">
       {/* Header */}
       <div className="max-w-7xl mx-auto px-6 mb-16 pl-12 md:pl-20">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
-          YOU CAN BUILD <span className="bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)', WebkitBackgroundClip: 'text' }}>LITERALLY ANYTHING</span>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
+          YOU CAN BUILD <span className="text-gray-900 dark:text-white">LITERALLY ANYTHING</span>
         </h2>
       </div>
 
@@ -252,7 +252,7 @@ export default function BuildAnythingSection() {
               className="group relative w-[280px] flex-shrink-0"
             >
               {/* Card */}
-              <div className="relative rounded-2xl overflow-hidden bg-slate-900 border border-white/10 transition-all duration-300 group-hover:border-white/30 group-hover:scale-[1.02] shadow-xl">
+              <div className="relative rounded-2xl overflow-hidden bg-slate-900 dark:bg-gray-800 border border-white/10 dark:border-gray-700 transition-all duration-300 group-hover:border-white/30 group-hover:scale-[1.02] shadow-xl">
                 {/* Header with icon and name */}
                 <div className="absolute top-0 left-0 right-0 z-20 p-4 flex items-center gap-3 bg-gradient-to-b from-black/60 to-transparent">
                   <div className={`w-9 h-9 rounded-xl bg-gradient-to-br ${category.gradient} flex items-center justify-center text-white shadow-lg`}>
@@ -282,8 +282,8 @@ export default function BuildAnythingSection() {
       {/* Bottom scrollbar indicator */}
       <div className="max-w-7xl mx-auto px-6 mt-8">
         <div className="flex items-center gap-4">
-          <div className="flex-1 h-1 bg-gray-200 rounded-full overflow-hidden">
-            <div className="h-full w-1/3 bg-gradient-to-r from-gray-400 to-gray-300 rounded-full" />
+          <div className="flex-1 h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+            <div className="h-full w-1/3 bg-gradient-to-r from-gray-400 to-gray-300 dark:from-gray-500 dark:to-gray-600 rounded-full" />
           </div>
         </div>
       </div>
@@ -292,7 +292,7 @@ export default function BuildAnythingSection() {
       <div className="max-w-7xl mx-auto px-6 mt-8 flex justify-end">
         <a 
           href="/templates" 
-          className="inline-flex items-center gap-2 text-gray-500 hover:text-gray-900 transition-colors group"
+          className="inline-flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors group"
         >
           <span>See all community projects</span>
           <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

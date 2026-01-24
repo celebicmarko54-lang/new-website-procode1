@@ -36,7 +36,7 @@ export default function BlogPage() {
     },
     {
       title: 'Building for Scale: Performance Best Practices',
-      excerpt: 'Optimize your lovecode.dev projects for speed and reliability.',
+      excerpt: 'Optimize your Procode projects for speed and reliability.',
       author: 'David Kim',
       date: 'Nov 20, 2025',
       readTime: '7 min read',
@@ -89,22 +89,22 @@ export default function BlogPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-pink-50 to-fuchsia-50 border border-pink-200 mb-8">
-            <svg className="w-4 h-4 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gray-50 to-gray-50 border border-gray-300 mb-8">
+            <svg className="w-4 h-4 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
             </svg>
-            <span className="text-sm font-medium text-pink-700">Insights & Updates</span>
+            <span className="text-sm font-medium text-gray-700">Insights & Updates</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
-            lovecode.dev
-            <span className="block bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)', WebkitBackgroundClip: 'text' }}>
+            Procode
+            <span className="block bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', WebkitBackgroundClip: 'text' }}>
               Blog
             </span>
           </h1>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
-            Insights, tutorials, and updates from the lovecode.dev team. 
+            Insights, tutorials, and updates from the Procode team. 
             Stay ahead with the latest in AI-powered development.
           </p>
         </div>
@@ -121,9 +121,9 @@ export default function BlogPage() {
                 className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeCategory === category.name
                     ? 'text-white shadow-lg'
-                    : 'bg-white text-gray-600 hover:bg-pink-50 hover:text-pink-600 border border-gray-200 hover:border-pink-200'
+                    : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900 border border-gray-200 hover:border-gray-300'
                 }`}
-                style={activeCategory === category.name ? { background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' } : {}}
+                style={activeCategory === category.name ? { background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' } : {}}
               >
                 {category.name}
               </button>
@@ -137,22 +137,22 @@ export default function BlogPage() {
         <div className="max-w-6xl mx-auto">
           <div className="bg-white rounded-3xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer group">
             <div className="grid md:grid-cols-2">
-              <div className="aspect-square md:aspect-auto bg-gradient-to-br from-pink-100 to-fuchsia-100 flex items-center justify-center p-12">
-                <div className="w-32 h-32 bg-white/80 backdrop-blur rounded-3xl flex items-center justify-center text-pink-600 group-hover:scale-110 transition-transform">
+              <div className="aspect-square md:aspect-auto bg-gradient-to-br from-gray-100 to-gray-100 flex items-center justify-center p-12">
+                <div className="w-32 h-32 bg-white/80 backdrop-blur rounded-3xl flex items-center justify-center text-gray-900 group-hover:scale-110 transition-transform">
                   <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
               </div>
               <div className="p-8 md:p-12 flex flex-col justify-center">
-                <span className="text-sm font-medium text-pink-600 mb-3">{featuredPost.category}</span>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 group-hover:text-pink-600 transition-colors">
+                <span className="text-sm font-medium text-gray-900 mb-3">{featuredPost.category}</span>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 group-hover:text-gray-900 transition-colors">
                   {featuredPost.title}
                 </h2>
                 <p className="text-gray-600 mb-6 text-lg leading-relaxed">{featuredPost.excerpt}</p>
                 <div className="flex items-center gap-4 text-sm text-gray-500">
                   <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-gradient-to-r from-[#ec4899] to-[#be185d] rounded-full flex items-center justify-center text-white text-xs font-semibold">
+                    <div className="w-8 h-8 bg-gradient-to-r from-[#1f2937] to-[#374151] rounded-full flex items-center justify-center text-white text-xs font-semibold">
                       {featuredPost.author.split(' ').map(n => n[0]).join('')}
                     </div>
                     <span className="font-medium text-gray-700">{featuredPost.author}</span>
@@ -176,20 +176,20 @@ export default function BlogPage() {
             {filteredPosts.map((post, index) => (
               <article
                 key={index}
-                className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:border-pink-200 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:border-gray-300 hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
-                <div className="aspect-[2/1] bg-gradient-to-br from-pink-50 to-fuchsia-50 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-white/80 backdrop-blur rounded-2xl flex items-center justify-center text-pink-600 group-hover:scale-110 transition-transform">
+                <div className="aspect-[2/1] bg-gradient-to-br from-gray-50 to-gray-50 flex items-center justify-center">
+                  <div className="w-16 h-16 bg-white/80 backdrop-blur rounded-2xl flex items-center justify-center text-gray-900 group-hover:scale-110 transition-transform">
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </div>
                 </div>
                 <div className="p-6">
-                  <span className="text-xs font-medium text-pink-600 bg-pink-50 px-3 py-1 rounded-full">
+                  <span className="text-xs font-medium text-gray-900 bg-gray-50 px-3 py-1 rounded-full">
                     {post.category}
                   </span>
-                  <h3 className="font-semibold text-gray-900 mt-4 mb-2 group-hover:text-pink-600 transition-colors text-lg">
+                  <h3 className="font-semibold text-gray-900 mt-4 mb-2 group-hover:text-gray-900 transition-colors text-lg">
                     {post.title}
                   </h3>
                   <p className="text-sm text-gray-600 mb-4 line-clamp-2">{post.excerpt}</p>
@@ -207,7 +207,7 @@ export default function BlogPage() {
 
           {/* Load More */}
           <div className="text-center mt-12">
-            <button className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-200 text-gray-700 font-semibold rounded-xl hover:border-pink-300 hover:text-pink-600 transition-all duration-300">
+            <button className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-200 text-gray-700 font-semibold rounded-xl hover:border-gray-400 hover:text-gray-900 transition-all duration-300">
               Load More Posts
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -218,7 +218,7 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-pink-50 to-fuchsia-50 border-y border-pink-100">
+      <section className="py-20 px-6 bg-gradient-to-r from-gray-50 to-gray-50 border-y border-gray-100">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Subscribe to Our Newsletter
@@ -230,9 +230,9 @@ export default function BlogPage() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-5 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-pink-300 focus:ring-2 focus:ring-pink-100"
+              className="flex-1 px-5 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-gray-400 focus:ring-2 focus:ring-gray-100"
             />
-            <button className="px-6 py-3 text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg" style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}>
+            <button className="px-6 py-3 text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}>
               Subscribe
             </button>
           </div>
@@ -240,18 +240,18 @@ export default function BlogPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-gradient-to-r from-[#ec4899] to-[#be185d]">
+      <section className="py-24 px-6 bg-gradient-to-r from-[#1f2937] to-[#374151]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Build Something?
           </h2>
-          <p className="text-xl text-pink-100 mb-12 max-w-2xl mx-auto">
-            Turn your ideas into reality with lovecode.dev. Start building today.
+          <p className="text-xl text-gray-100 mb-12 max-w-2xl mx-auto">
+            Turn your ideas into reality with Procode. Start building today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/signup"
-              className="px-8 py-4 bg-white text-pink-600 font-semibold rounded-xl hover:bg-pink-50 transition-all duration-300 shadow-lg"
+              className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg"
             >
               Get Started Free
             </Link>

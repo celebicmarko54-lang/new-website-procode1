@@ -12,7 +12,7 @@ export default function TermsOfServicePage() {
         <div className="max-w-4xl mx-auto px-6">
           {/* Header */}
           <div className="mb-12 text-center">
-            <div className="inline-block px-4 py-2 bg-pink-50 text-pink-600 rounded-full text-sm font-medium mb-4">
+            <div className="inline-block px-4 py-2 bg-gray-50 text-gray-900 rounded-full text-sm font-medium mb-4">
               Legal
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Terms of Service</h1>
@@ -24,7 +24,7 @@ export default function TermsOfServicePage() {
             <section className="mb-10">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Acceptance of Terms</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                By accessing or using lovecode.dev's services, website, or any applications (collectively, the "Services"), 
+                By accessing or using Procode's services, website, or any applications (collectively, the "Services"), 
                 you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, 
                 please do not use our Services.
               </p>
@@ -37,7 +37,7 @@ export default function TermsOfServicePage() {
             <section className="mb-10">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Description of Services</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                lovecode.dev provides an AI-powered platform that enables users to create web applications through 
+                Procode provides an AI-powered platform that enables users to create web applications through 
                 natural language prompts. Our Services include:
               </p>
               <ul className="list-disc pl-6 text-gray-600 space-y-2">
@@ -71,7 +71,7 @@ export default function TermsOfServicePage() {
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. User Content and Ownership</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
                 <strong>Your Content:</strong> You retain ownership of all content, applications, and code you 
-                create using our Services ("User Content"). You grant lovecode.dev a limited license to host, store, 
+                create using our Services ("User Content"). You grant Procode a limited license to host, store, 
                 and display your User Content as necessary to provide the Services.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
@@ -120,7 +120,7 @@ export default function TermsOfServicePage() {
             <section className="mb-10">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Intellectual Property</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                The Services, including all content, features, and functionality, are owned by lovecode.dev and 
+                The Services, including all content, features, and functionality, are owned by Procode and 
                 protected by copyright, trademark, and other intellectual property laws.
               </p>
               <p className="text-gray-600 leading-relaxed">
@@ -141,7 +141,7 @@ export default function TermsOfServicePage() {
             <section className="mb-10">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Limitation of Liability</h2>
               <p className="text-gray-600 leading-relaxed">
-                TO THE MAXIMUM EXTENT PERMITTED BY LAW, lovecode.dev SHALL NOT BE LIABLE FOR ANY INDIRECT, 
+                TO THE MAXIMUM EXTENT PERMITTED BY LAW, Procode SHALL NOT BE LIABLE FOR ANY INDIRECT, 
                 INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, 
                 WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER 
                 INTANGIBLE LOSSES.
@@ -176,8 +176,8 @@ export default function TermsOfServicePage() {
                 If you have any questions about these Terms, please contact us at:
               </p>
               <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-                <p className="text-gray-700 font-medium">lovecode.dev Inc.</p>
-                <p className="text-gray-600">Email: legal@lovecode.dev.dev</p>
+                <p className="text-gray-700 font-medium">Procode Inc.</p>
+                <p className="text-gray-600">Email: legal@Procode.dev</p>
                 <p className="text-gray-600">Address: 123 Innovation Street, San Francisco, CA 94105</p>
               </div>
             </section>

@@ -9,8 +9,8 @@ const features = [
     ),
     title: 'Chat-based Development',
     description: 'Simply describe what you want to build in natural language. Our AI understands your vision and brings it to life.',
-    gradient: 'from-pink-100 to-rose-200',
-    iconBg: 'bg-gradient-to-br from-pink-400 to-rose-500',
+    gradient: 'from-gray-50 to-gray-100',
+    iconBg: 'bg-gray-900',
   },
   {
     icon: (
@@ -20,8 +20,8 @@ const features = [
     ),
     title: 'Lightning Fast',
     description: 'Go from idea to deployed app in minutes, not days. No coding experience required.',
-    gradient: 'from-purple-100 to-violet-200',
-    iconBg: 'bg-gradient-to-br from-purple-400 to-violet-500',
+    gradient: 'from-gray-50 to-gray-100',
+    iconBg: 'bg-gray-900',
   },
   {
     icon: (
@@ -31,8 +31,8 @@ const features = [
     ),
     title: 'Beautiful by Default',
     description: 'Every project comes with stunning, modern designs. Customize themes and styles with ease.',
-    gradient: 'from-blue-100 to-cyan-200',
-    iconBg: 'bg-gradient-to-br from-blue-400 to-cyan-500',
+    gradient: 'from-gray-50 to-gray-100',
+    iconBg: 'bg-gray-900',
   },
   {
     icon: (
@@ -42,8 +42,8 @@ const features = [
     ),
     title: 'Full Code Access',
     description: 'Export your code anytime. Built with React, Next.js, and modern best practices.',
-    gradient: 'from-amber-100 to-orange-200',
-    iconBg: 'bg-gradient-to-br from-amber-400 to-orange-500',
+    gradient: 'from-gray-50 to-gray-100',
+    iconBg: 'bg-gray-900',
   },
   {
     icon: (
@@ -53,8 +53,8 @@ const features = [
     ),
     title: 'One-Click Deploy',
     description: 'Deploy your apps instantly with built-in hosting. Share your creations with the world.',
-    gradient: 'from-emerald-100 to-teal-200',
-    iconBg: 'bg-gradient-to-br from-emerald-400 to-teal-500',
+    gradient: 'from-gray-50 to-gray-100',
+    iconBg: 'bg-gray-900',
   },
   {
     icon: (
@@ -64,8 +64,8 @@ const features = [
     ),
     title: 'Powerful Integrations',
     description: 'Connect with Supabase, GitHub, and more. Build full-stack apps with ease.',
-    gradient: 'from-indigo-100 to-purple-200',
-    iconBg: 'bg-gradient-to-br from-indigo-400 to-purple-500',
+    gradient: 'from-gray-50 to-gray-100',
+    iconBg: 'bg-gray-900',
   },
 ];
 
@@ -75,14 +75,14 @@ export default function FeaturesSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="px-4 py-1.5 text-sm bg-purple-100 text-purple-700 rounded-full mb-4 inline-block font-medium">
+          <span className="px-4 py-1.5 text-sm bg-gray-100 text-gray-700 rounded-full mb-4 inline-block font-medium">
             Features
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Everything you need to build
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            lovecode.dev provides all the tools you need to turn your ideas into beautiful, functional applications.
+            Procode provides all the tools you need to turn your ideas into beautiful, functional applications.
           </p>
         </div>
 

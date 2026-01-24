@@ -101,7 +101,7 @@ export default function ConnectionsPage() {
         {/* Hero Section */}
         <div className="max-w-7xl mx-auto px-6 mb-12">
           <div className="text-center">
-            <div className="inline-block px-4 py-2 bg-pink-50 text-pink-600 rounded-full text-sm font-medium mb-4">
+            <div className="inline-block px-4 py-2 bg-gray-50 text-gray-900 rounded-full text-sm font-medium mb-4">
               Integrations
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
@@ -119,7 +119,7 @@ export default function ConnectionsPage() {
             {categories.map((category) => (
               <button
                 key={category}
-                className="px-4 py-2 rounded-full text-sm font-medium bg-white text-gray-600 hover:bg-pink-50 hover:text-pink-600 border border-gray-200 transition-all"
+                className="px-4 py-2 rounded-full text-sm font-medium bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900 border border-gray-200 transition-all"
               >
                 {category}
               </button>
@@ -162,7 +162,7 @@ export default function ConnectionsPage() {
           <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-3">Need a different integration?</h2>
             <p className="text-gray-300 mb-6">
-              Let us know what services you'd like to connect with lovecode.dev
+              Let us know what services you'd like to connect with Procode
             </p>
             <button className="px-6 py-3 bg-orange-500 hover:bg-orange-600 rounded-lg font-medium transition-colors">
               Request Integration

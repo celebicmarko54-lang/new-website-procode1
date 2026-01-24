@@ -15,7 +15,7 @@ export default function DashboardPage() {
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
-    const currentUser = localStorage.getItem('lovecode.dev_current_user');
+    const currentUser = localStorage.getItem('Procode_current_user');
     if (!currentUser) {
       router.push('/login');
       return;
@@ -24,14 +24,14 @@ export default function DashboardPage() {
   }, [router]);
 
   const handleLogout = () => {
-    localStorage.removeItem('lovecode.dev_current_user');
+    localStorage.removeItem('Procode_current_user');
     router.push('/');
   };
 
   if (!user) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-white">
-        <div className="animate-spin w-8 h-8 border-4 border-pink-500 border-t-transparent rounded-full"></div>
+        <div className="animate-spin w-8 h-8 border-4 border-gray-900 border-t-transparent rounded-full"></div>
       </div>
     );
   }
@@ -47,7 +47,7 @@ export default function DashboardPage() {
         
         {/* Coming Soon Banner */}
         <div className="mb-8">
-          <h2 className="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#ec4899] via-[#db2777] to-[#be185d] tracking-tight">
+          <h2 className="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#1f2937] via-[#db2777] to-[#374151] tracking-tight">
             COMING SOON
           </h2>
           <p className="text-gray-400 mt-4 text-lg">We&apos;re building something magical for you</p>

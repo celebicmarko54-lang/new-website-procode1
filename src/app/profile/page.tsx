@@ -26,14 +26,14 @@ export default function ProfilePage() {
   const avatarColors = [
     'from-orange-600 to-amber-600',
     'from-blue-500 to-cyan-500',
-    'from-purple-500 to-pink-500',
+    'from-purple-500 to-gray-900',
     'from-green-500 to-emerald-500',
     'from-red-500 to-rose-500',
     'from-indigo-500 to-violet-500',
   ];
 
   useEffect(() => {
-    const currentUser = localStorage.getItem('lovecode.dev_current_user');
+    const currentUser = localStorage.getItem('Procode_current_user');
     if (!currentUser) {
       router.push('/login');
       return;
@@ -57,14 +57,14 @@ export default function ProfilePage() {
     };
 
     // Update in localStorage
-    localStorage.setItem('lovecode.dev_current_user', JSON.stringify(updatedUser));
+    localStorage.setItem('Procode_current_user', JSON.stringify(updatedUser));
 
     // Update in users list
-    const users = JSON.parse(localStorage.getItem('lovecode.dev_users') || '[]');
+    const users = JSON.parse(localStorage.getItem('Procode_users') || '[]');
     const updatedUsers = users.map((u: User) => 
       u.id === user.id ? updatedUser : u
     );
-    localStorage.setItem('lovecode.dev_users', JSON.stringify(updatedUsers));
+    localStorage.setItem('Procode_users', JSON.stringify(updatedUsers));
 
     setUser(updatedUser);
     setIsEditing(false);
@@ -74,7 +74,7 @@ export default function ProfilePage() {
   if (!user) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin w-8 h-8 border-4 border-pink-500 border-t-transparent rounded-full"></div>
+        <div className="animate-spin w-8 h-8 border-4 border-gray-900 border-t-transparent rounded-full"></div>
       </div>
     );
   }
@@ -100,7 +100,7 @@ export default function ProfilePage() {
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
           {/* Profile Header */}
-          <div className="bg-gradient-to-r from-[#ec4899] to-[#be185d] h-32"></div>
+          <div className="bg-gradient-to-r from-[#1f2937] to-[#374151] h-32"></div>
           
           <div className="px-6 pb-6">
             <div className="flex flex-col sm:flex-row sm:items-end gap-4 -mt-12">

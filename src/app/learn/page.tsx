@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 export default function LearnPage() {
   const courses = [
     {
-      title: 'Getting Started with lovecode.dev',
+      title: 'Getting Started with Procode',
       description: 'Learn the basics of creating apps with AI. Perfect for absolute beginners.',
       duration: '15 min',
       level: 'Beginner',
@@ -206,38 +206,38 @@ export default function LearnPage() {
   const getLevelColor = (level: string) => {
     switch (level) {
       case 'Beginner':
-        return 'bg-green-100 text-green-700';
+        return 'bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300';
       case 'Intermediate':
-        return 'bg-pink-100 text-pink-700';
+        return 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300';
       case 'Advanced':
-        return 'bg-purple-100 text-purple-700';
+        return 'bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300';
       default:
-        return 'bg-gray-100 text-gray-700';
+        return 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300';
     }
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-[#0a0a0a]">
       <Header />
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-pink-50 to-fuchsia-50 border border-pink-200 mb-8">
-            <svg className="w-4 h-4 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gray-50 to-gray-50 dark:from-gray-800 dark:to-gray-800 border border-gray-300 dark:border-gray-700 mb-8">
+            <svg className="w-4 h-4 text-gray-900 dark:text-gray-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
-            <span className="text-sm font-medium text-pink-700">Free Learning Platform</span>
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Free Learning Platform</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
             Learn to Build with
-            <span className="block bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)', WebkitBackgroundClip: 'text' }}>
-              lovecode.dev
+            <span className="block bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', WebkitBackgroundClip: 'text' }}>
+              Procode
             </span>
           </h1>
           
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
             Free courses, tutorials, and hands-on projects to help you master 
             AI-powered app development. Go from beginner to expert at your own pace.
           </p>
@@ -246,13 +246,13 @@ export default function LearnPage() {
             <Link
               href="/signup"
               className="px-8 py-4 text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg"
-              style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}
+              style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}
             >
               Start Learning Free
             </Link>
             <Link
               href="#courses"
-              className="px-8 py-4 border-2 border-gray-200 text-gray-700 font-semibold rounded-xl hover:border-pink-300 hover:text-pink-600 transition-all duration-300"
+              className="px-8 py-4 border-2 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:border-gray-400 dark:hover:border-gray-500 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
             >
               Browse Courses
             </Link>
@@ -261,24 +261,24 @@ export default function LearnPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-pink-50 to-fuchsia-50 border-y border-pink-100">
+      <section className="py-16 bg-gradient-to-r from-gray-50 to-gray-50 dark:from-gray-900 dark:to-gray-900 border-y border-gray-100 dark:border-gray-800">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-gray-900">50+</div>
-              <div className="text-gray-600 mt-1">Free Courses</div>
+              <div className="text-4xl font-bold text-gray-900 dark:text-white">50+</div>
+              <div className="text-gray-600 dark:text-gray-400 mt-1">Free Courses</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-gray-900">100K+</div>
-              <div className="text-gray-600 mt-1">Students</div>
+              <div className="text-4xl font-bold text-gray-900 dark:text-white">100K+</div>
+              <div className="text-gray-600 dark:text-gray-400 mt-1">Students</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-gray-900">4.9</div>
-              <div className="text-gray-600 mt-1">Average Rating</div>
+              <div className="text-4xl font-bold text-gray-900 dark:text-white">4.9</div>
+              <div className="text-gray-600 dark:text-gray-400 mt-1">Average Rating</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-gray-900">24/7</div>
-              <div className="text-gray-600 mt-1">Community Support</div>
+              <div className="text-4xl font-bold text-gray-900 dark:text-white">24/7</div>
+              <div className="text-gray-600 dark:text-gray-400 mt-1">Community Support</div>
             </div>
           </div>
         </div>
@@ -290,11 +290,11 @@ export default function LearnPage() {
           <div className="grid md:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="w-14 h-14 bg-gradient-to-r from-pink-100 to-fuchsia-100 rounded-2xl flex items-center justify-center text-pink-600 mx-auto mb-4">
+                <div className="w-14 h-14 bg-gradient-to-r from-gray-100 to-gray-100 dark:from-gray-800 dark:to-gray-800 rounded-2xl flex items-center justify-center text-gray-900 dark:text-gray-100 mx-auto mb-4">
                   {feature.icon}
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-sm text-gray-600">{feature.description}</p>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{feature.title}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -302,13 +302,13 @@ export default function LearnPage() {
       </section>
 
       {/* Learning Paths */}
-      <section className="py-20 px-6 bg-gray-50">
+      <section className="py-20 px-6 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Choose Your Learning Path
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Curated courses designed for your specific goals and skill level.
             </p>
           </div>
@@ -317,16 +317,16 @@ export default function LearnPage() {
             {learningPaths.map((path, index) => (
               <div
                 key={index}
-                className="group p-6 bg-white rounded-2xl border border-gray-100 hover:border-pink-200 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="group p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
-                <div className="w-14 h-14 bg-gradient-to-r from-pink-100 to-fuchsia-100 rounded-2xl flex items-center justify-center text-pink-600 mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 bg-gradient-to-r from-gray-100 to-gray-100 dark:from-gray-700 dark:to-gray-700 rounded-2xl flex items-center justify-center text-gray-900 dark:text-gray-100 mb-4 group-hover:scale-110 transition-transform">
                   {path.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
                   {path.name}
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">{path.description}</p>
-                <div className="flex items-center gap-4 text-sm text-gray-500">
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{path.description}</p>
+                <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
                   <span>{path.courses} courses</span>
                   <span>•</span>
                   <span>{path.hours} hours</span>
@@ -341,10 +341,10 @@ export default function LearnPage() {
       <section id="courses" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Popular Courses
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Start with our most popular courses, handpicked by our community.
             </p>
           </div>
@@ -353,10 +353,10 @@ export default function LearnPage() {
             {courses.map((course, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:border-pink-200 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="group bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 overflow-hidden hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
-                <div className="h-40 bg-gradient-to-br from-pink-100 to-fuchsia-100 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-white/80 backdrop-blur rounded-2xl flex items-center justify-center text-pink-600 group-hover:scale-110 transition-transform">
+                <div className="h-40 bg-gradient-to-br from-gray-100 to-gray-100 dark:from-gray-700 dark:to-gray-700 flex items-center justify-center">
+                  <div className="w-16 h-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur rounded-2xl flex items-center justify-center text-gray-900 dark:text-gray-100 group-hover:scale-110 transition-transform">
                     {course.icon}
                   </div>
                 </div>
@@ -365,20 +365,20 @@ export default function LearnPage() {
                     <span className={`text-xs font-medium px-3 py-1 rounded-full ${getLevelColor(course.level)}`}>
                       {course.level}
                     </span>
-                    <span className="text-xs text-gray-500 flex items-center gap-1">
+                    <span className="text-xs text-gray-500 dark:text-gray-400 flex items-center gap-1">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                       {course.duration}
                     </span>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
                     {course.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4">{course.description}</p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{course.description}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">{course.lessons} lessons</span>
-                    <span className="text-pink-600 font-medium text-sm group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                    <span className="text-sm text-gray-500 dark:text-gray-400">{course.lessons} lessons</span>
+                    <span className="text-gray-900 dark:text-white font-medium text-sm group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
                       Start Course
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -393,7 +393,7 @@ export default function LearnPage() {
           <div className="text-center mt-12">
             <Link
               href="/courses"
-              className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-200 text-gray-700 font-semibold rounded-xl hover:border-pink-300 hover:text-pink-600 transition-all duration-300"
+              className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:border-gray-400 dark:hover:border-gray-500 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
             >
               View All Courses
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -405,43 +405,43 @@ export default function LearnPage() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-pink-50 to-fuchsia-50">
+      <section className="py-20 px-6 bg-gradient-to-r from-gray-50 to-gray-50 dark:from-gray-900 dark:to-gray-900">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
-            <svg className="w-12 h-12 text-pink-300 mx-auto" fill="currentColor" viewBox="0 0 24 24">
+            <svg className="w-12 h-12 text-gray-400 dark:text-gray-600 mx-auto" fill="currentColor" viewBox="0 0 24 24">
               <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
             </svg>
           </div>
-          <blockquote className="text-2xl md:text-3xl font-medium text-gray-900 mb-8 leading-relaxed">
+          <blockquote className="text-2xl md:text-3xl font-medium text-gray-900 dark:text-white mb-8 leading-relaxed">
             "I went from knowing nothing about coding to building my own startup's MVP in just 3 weeks. 
             The courses are incredibly well-structured and the community is amazing."
           </blockquote>
           <div className="flex items-center justify-center gap-4">
-            <div className="w-14 h-14 bg-gradient-to-r from-[#ec4899] to-[#be185d] rounded-full flex items-center justify-center text-white font-semibold text-lg">
+            <div className="w-14 h-14 bg-gradient-to-r from-[#1f2937] to-[#374151] rounded-full flex items-center justify-center text-white font-semibold text-lg">
               AK
             </div>
             <div className="text-left">
-              <div className="font-semibold text-gray-900">Alex Kim</div>
-              <div className="text-gray-600">Founder, TechStart</div>
+              <div className="font-semibold text-gray-900 dark:text-white">Alex Kim</div>
+              <div className="text-gray-600 dark:text-gray-400">Founder, TechStart</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-gradient-to-r from-[#ec4899] to-[#be185d]">
+      <section className="py-24 px-6 bg-gradient-to-r from-[#1f2937] to-[#374151]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Start Your Learning Journey Today
           </h2>
-          <p className="text-xl text-pink-100 mb-12 max-w-2xl mx-auto">
-            Join over 100,000 students who have transformed their skills with lovecode.dev. 
+          <p className="text-xl text-gray-100 mb-12 max-w-2xl mx-auto">
+            Join over 100,000 students who have transformed their skills with Procode. 
             All courses are completely free.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/signup"
-              className="px-8 py-4 bg-white text-pink-600 font-semibold rounded-xl hover:bg-pink-50 transition-all duration-300 shadow-lg"
+              className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg"
             >
               Create Free Account
             </Link>

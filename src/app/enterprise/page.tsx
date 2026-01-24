@@ -72,7 +72,7 @@ const logos = [
 
 const testimonials = [
   {
-    quote: "lovecode.dev has transformed how our team builds internal tools. What used to take weeks now takes hours.",
+    quote: "λforge has transformed how our team builds internal tools. What used to take weeks now takes hours.",
     author: "Sarah Chen",
     role: "VP of Engineering",
     company: "TechCorp",
@@ -114,30 +114,30 @@ export default function EnterprisePage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-[#0a0a0a]">
       <Header />
       
       {/* Hero Section */}
       <section className="relative pt-28 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/80 backdrop-blur-sm rounded-full border border-gray-200/60 mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full border border-gray-200/60 dark:border-gray-700 mb-6">
               <span className="text-xs font-semibold text-white bg-gradient-to-r from-[#ff6b6b] to-[#ee5a24] px-2.5 py-0.5 rounded-full">ENTERPRISE</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
               Build at scale with
-              <span className="bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)', WebkitBackgroundClip: 'text' }}> enterprise-grade </span>
+              <span className="bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', WebkitBackgroundClip: 'text' }}> enterprise-grade </span>
               features
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
               Everything your team needs to build, deploy, and manage applications at scale. 
               Security, compliance, and support built for the enterprise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#contact" className="px-8 py-4 text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg" style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}>
+              <a href="#contact" className="px-8 py-4 text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}>
                 Contact Sales
               </a>
-              <Link href="/pricing" className="px-8 py-4 bg-white/80 backdrop-blur-sm border border-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-white transition-colors">
+              <Link href="/pricing" className="px-8 py-4 bg-white/80 dark:bg-gray-800 backdrop-blur-sm border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-white dark:hover:bg-gray-700 transition-colors">
                 View Pricing
               </Link>
             </div>
@@ -148,7 +148,7 @@ export default function EnterprisePage() {
       {/* Trusted By */}
       <section className="py-12 overflow-hidden">
         <div className="px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm font-medium text-gray-500 mb-8">TRUSTED BY LEADING COMPANIES</p>
+          <p className="text-center text-sm font-medium text-gray-500 dark:text-gray-400 mb-8">TRUSTED BY LEADING COMPANIES</p>
           <div className="relative w-full">
             <div className="flex items-center gap-20 animate-marquee whitespace-nowrap">
               {[...logos, ...logos, ...logos, ...logos, ...logos, ...logos].map((logo, index) => (
@@ -179,10 +179,10 @@ export default function EnterprisePage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Everything you need for enterprise
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Advanced features designed for teams that need security, scalability, and support.
             </p>
           </div>
@@ -191,13 +191,13 @@ export default function EnterprisePage() {
             {features.map((feature, index) => (
               <div 
                 key={index}
-                className="p-6 rounded-2xl border border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all bg-white group"
+                className="p-6 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-lg transition-all bg-white dark:bg-gray-800 group"
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#ec4899] to-[#be185d] text-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1f2937] to-[#374151] text-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -208,11 +208,11 @@ export default function EnterprisePage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Loved by enterprise teams
             </h2>
-            <p className="text-lg text-gray-600">
-              See what leaders are saying about lovecode.dev Enterprise.
+            <p className="text-lg text-gray-600 dark:text-gray-400">
+              See what leaders are saying about λforge Enterprise.
             </p>
           </div>
           
@@ -220,7 +220,7 @@ export default function EnterprisePage() {
             {testimonials.map((testimonial, index) => (
               <div 
                 key={index}
-                className="p-6 rounded-2xl bg-white border border-gray-200 shadow-sm"
+                className="p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm"
               >
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -229,14 +229,14 @@ export default function EnterprisePage() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-700 mb-6 italic">&ldquo;{testimonial.quote}&rdquo;</p>
+                <p className="text-gray-700 dark:text-gray-300 mb-6 italic">&ldquo;{testimonial.quote}&rdquo;</p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-600 to-amber-600 flex items-center justify-center text-white font-medium text-sm">
                     {testimonial.avatar}
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                    <p className="text-sm text-gray-500">{testimonial.role}, {testimonial.company}</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">{testimonial.author}</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">{testimonial.role}, {testimonial.company}</p>
                   </div>
                 </div>
               </div>
@@ -249,69 +249,69 @@ export default function EnterprisePage() {
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Get in touch
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 dark:text-gray-400">
               Tell us about your team and we&apos;ll get back to you within 24 hours.
             </p>
           </div>
           
           {submitted ? (
-            <div className="text-center py-12 px-6 bg-green-50 rounded-2xl border border-green-200">
-              <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="text-center py-12 px-6 bg-green-50 dark:bg-green-900/20 rounded-2xl border border-green-200 dark:border-green-800">
+              <div className="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/50 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Thank you!</h3>
-              <p className="text-gray-600">We&apos;ve received your message and will be in touch soon.</p>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Thank you!</h3>
+              <p className="text-gray-600 dark:text-gray-400">We&apos;ve received your message and will be in touch soon.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
+            <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 shadow-sm">
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Full Name</label>
                   <input
                     type="text"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent"
                     placeholder="John Smith"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Work Email</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Work Email</label>
                   <input
                     type="email"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent"
                     placeholder="john@company.com"
                   />
                 </div>
               </div>
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Company</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Company</label>
                   <input
                     type="text"
                     required
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent"
                     placeholder="Acme Inc."
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Team Size</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Team Size</label>
                   <select
                     required
                     value={formData.teamSize}
                     onChange={(e) => setFormData({ ...formData, teamSize: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent bg-white"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   >
                     <option value="">Select team size</option>
                     <option value="1-10">1-10 employees</option>
@@ -323,12 +323,12 @@ export default function EnterprisePage() {
                 </div>
               </div>
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-2">How can we help?</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">How can we help?</label>
                 <textarea
                   rows={4}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent resize-none"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent resize-none"
                   placeholder="Tell us about your use case and requirements..."
                 />
               </div>
@@ -336,7 +336,7 @@ export default function EnterprisePage() {
                 type="submit"
                 disabled={isSubmitting}
                 className="w-full py-4 text-white font-semibold rounded-xl hover:opacity-90 transition-all disabled:opacity-70 flex items-center justify-center gap-2"
-                style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}
+                style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}
               >
                 {isSubmitting ? (
                   <>

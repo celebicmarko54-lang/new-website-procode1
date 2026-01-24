@@ -462,7 +462,7 @@ export default function VideosPage() {
       'Tutorial': 'bg-blue-50 text-blue-600',
       'Tips': 'bg-amber-50 text-amber-600',
       'Advanced': 'bg-purple-50 text-purple-600',
-      'Speed Build': 'bg-pink-50 text-pink-600',
+      'Speed Build': 'bg-gray-50 text-gray-900',
       'Deployment': 'bg-cyan-50 text-cyan-600',
       'GitHub': 'bg-gray-100 text-gray-700',
       'Help': 'bg-red-50 text-red-600',
@@ -471,9 +471,9 @@ export default function VideosPage() {
   };
 
   const VideoCard = ({ video }: { video: { title: string; description?: string; duration: string; views: string; category: string } }) => (
-    <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:border-pink-200 hover:shadow-xl transition-all duration-300 cursor-pointer">
-      <div className="aspect-video bg-gradient-to-br from-pink-50 to-fuchsia-50 flex items-center justify-center relative">
-        <div className="w-14 h-14 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-pink-600 group-hover:scale-110 transition-transform shadow-lg">
+    <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:border-gray-300 hover:shadow-xl transition-all duration-300 cursor-pointer">
+      <div className="aspect-video bg-gradient-to-br from-gray-50 to-gray-50 flex items-center justify-center relative">
+        <div className="w-14 h-14 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-gray-900 group-hover:scale-110 transition-transform shadow-lg">
           <svg className="w-6 h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
             <path d="M8 5v14l11-7z"/>
           </svg>
@@ -483,7 +483,7 @@ export default function VideosPage() {
         </div>
       </div>
       <div className="p-4">
-        <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-pink-600 transition-colors line-clamp-2">
+        <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-gray-900 transition-colors line-clamp-2">
           {video.title}
         </h3>
         {video.description && (
@@ -505,7 +505,7 @@ export default function VideosPage() {
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
           {showAll && (
-            <button className="text-pink-600 hover:text-pink-700 font-medium text-sm">
+            <button className="text-gray-900 hover:text-gray-700 font-medium text-sm">
               View all →
             </button>
           )}
@@ -526,17 +526,17 @@ export default function VideosPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-pink-50 to-fuchsia-50 border border-pink-200 mb-8">
-            <svg className="w-4 h-4 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gray-50 to-gray-50 border border-gray-300 mb-8">
+            <svg className="w-4 h-4 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span className="text-sm font-medium text-pink-700">Video Learning</span>
+            <span className="text-sm font-medium text-gray-700">Video Learning</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
             How it
-            <span className="block bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)', WebkitBackgroundClip: 'text' }}>
+            <span className="block bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', WebkitBackgroundClip: 'text' }}>
               works
             </span>
           </h1>
@@ -553,9 +553,9 @@ export default function VideosPage() {
         <div className="max-w-6xl mx-auto">
           <div className="bg-gray-900 rounded-3xl overflow-hidden cursor-pointer group hover:shadow-2xl transition-all duration-300">
             <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-fuchsia-500/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-900/20 to-gray-500/20"></div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-24 h-24 bg-gradient-to-r from-[#ec4899] to-[#be185d] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-2xl shadow-pink-500/50">
+                <div className="w-24 h-24 bg-gradient-to-r from-[#1f2937] to-[#374151] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-2xl shadow-gray-900/50">
                   <svg className="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z"/>
                   </svg>
@@ -564,12 +564,12 @@ export default function VideosPage() {
               <div className="absolute bottom-4 right-4 bg-black/80 px-3 py-1.5 rounded-lg text-white text-sm font-medium">
                 {featuredVideo.duration}
               </div>
-              <div className="absolute top-4 left-4 px-3 py-1.5 bg-gradient-to-r from-[#ec4899] to-[#be185d] rounded-full text-white text-sm font-medium">
+              <div className="absolute top-4 left-4 px-3 py-1.5 bg-gradient-to-r from-[#1f2937] to-[#374151] rounded-full text-white text-sm font-medium">
                 Featured
               </div>
             </div>
             <div className="p-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-pink-400 transition-colors">{featuredVideo.title}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-gray-700 transition-colors">{featuredVideo.title}</h2>
               <p className="text-gray-400 mb-4 text-lg">{featuredVideo.description}</p>
               <span className="text-sm text-gray-500">{featuredVideo.views} views</span>
             </div>
@@ -585,12 +585,12 @@ export default function VideosPage() {
             {playlists.map((playlist, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-2xl border border-gray-100 p-6 hover:border-pink-200 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="group bg-white rounded-2xl border border-gray-100 p-6 hover:border-gray-300 hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-pink-100 to-fuchsia-100 rounded-xl flex items-center justify-center text-pink-600 mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-gradient-to-r from-gray-100 to-gray-100 rounded-xl flex items-center justify-center text-gray-900 mb-4 group-hover:scale-110 transition-transform">
                   {playlist.icon}
                 </div>
-                <h3 className="font-semibold text-gray-900 group-hover:text-pink-600 transition-colors">{playlist.name}</h3>
+                <h3 className="font-semibold text-gray-900 group-hover:text-gray-900 transition-colors">{playlist.name}</h3>
                 <p className="text-sm text-gray-500 mt-1">{playlist.videos} videos</p>
               </div>
             ))}
@@ -610,18 +610,18 @@ export default function VideosPage() {
       <VideoSection title="❓ Troubleshooting & Help" videos={troubleshootingVideos} />
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-gradient-to-r from-[#ec4899] to-[#be185d]">
+      <section className="py-24 px-6 bg-gradient-to-r from-[#1f2937] to-[#374151]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Start Building?
           </h2>
-          <p className="text-xl text-pink-100 mb-12 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-100 mb-12 max-w-2xl mx-auto">
             Join thousands of creators who are building amazing applications with Lovecode.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/signup"
-              className="px-8 py-4 bg-white text-pink-600 font-semibold rounded-xl hover:bg-pink-50 transition-all duration-300 shadow-lg inline-flex items-center justify-center gap-2"
+              className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg inline-flex items-center justify-center gap-2"
             >
               Start Building Free
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

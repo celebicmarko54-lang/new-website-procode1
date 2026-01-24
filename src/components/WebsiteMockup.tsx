@@ -1,7 +1,7 @@
 'use client';
 
 // Website mockup components that generate realistic website UI previews
-// Matching the style seen on lovecode.dev.dev community projects
+// Matching the style seen on Procode.dev community projects
 
 interface MockupProps {
   type: 'dashboard' | 'ecommerce' | 'portfolio' | 'blog' | 'tasks' | 'social' | 'landing' | 'saas' | 'crm' | 'learning' | 'fitness' | 'realestate' | 'default';
@@ -61,7 +61,7 @@ function DashboardMockup() {
         {[
           { color: 'from-green-500 to-emerald-600', label: '+24.5%' },
           { color: 'from-blue-500 to-cyan-500', label: '$12.4K' },
-          { color: 'from-purple-500 to-pink-500', label: '89%' },
+          { color: 'from-gray-700 to-gray-800', label: '89%' },
         ].map((stat, i) => (
           <div key={i} className="flex-1 bg-slate-800/80 rounded-md p-1.5 border border-slate-700">
             <div className="w-10 h-1 bg-slate-600 rounded mb-1"></div>
@@ -148,18 +148,18 @@ function PortfolioMockup() {
       <div className="mb-2">
         <div className="w-28 h-2 bg-gray-800 rounded mb-1"></div>
         <div className="w-24 h-2 bg-gray-800 rounded mb-1"></div>
-        <div className="w-20 h-3 bg-gradient-to-r from-orange-500 to-pink-500 rounded"></div>
+        <div className="w-20 h-3 bg-gradient-to-r from-gray-700 to-gray-800 rounded"></div>
       </div>
       
       {/* Feature boxes */}
       <div className="flex-1 flex gap-1.5">
         <div className="flex-1 bg-white rounded-lg p-1.5 shadow-sm border border-orange-200">
-          <div className="w-full h-8 bg-gradient-to-br from-orange-100 to-pink-100 rounded mb-1"></div>
+          <div className="w-full h-8 bg-gradient-to-br from-gray-100 to-gray-200 rounded mb-1"></div>
           <div className="w-full h-1 bg-gray-300 rounded mb-0.5"></div>
           <div className="w-3/4 h-1 bg-gray-200 rounded"></div>
         </div>
         <div className="flex-1 bg-white rounded-lg p-1.5 shadow-sm border border-orange-200">
-          <div className="w-full h-8 bg-gradient-to-br from-purple-100 to-blue-100 rounded mb-1"></div>
+          <div className="w-full h-8 bg-gradient-to-br from-gray-100 to-gray-200 rounded mb-1"></div>
           <div className="w-full h-1 bg-gray-300 rounded mb-0.5"></div>
           <div className="w-3/4 h-1 bg-gray-200 rounded"></div>
         </div>
@@ -175,7 +175,7 @@ function BlogMockup() {
       {/* Header */}
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-1">
-          <div className="w-4 h-4 rounded bg-gradient-to-r from-purple-500 to-pink-500"></div>
+          <div className="w-4 h-4 rounded bg-gradient-to-r from-gray-700 to-gray-800"></div>
           <div className="w-10 h-2 bg-white rounded"></div>
         </div>
         <div className="flex gap-1">
@@ -184,8 +184,8 @@ function BlogMockup() {
       </div>
       
       {/* Hero */}
-      <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-lg p-2 mb-2 border border-purple-500/30">
-        <div className="w-20 h-1 bg-purple-400 rounded mb-1"></div>
+      <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-lg p-2 mb-2 border border-gray-500/30">
+        <div className="w-20 h-1 bg-gray-400 rounded mb-1"></div>
         <div className="w-28 h-2.5 bg-white rounded mb-1"></div>
         <div className="w-24 h-1.5 bg-gray-400 rounded"></div>
       </div>
@@ -196,7 +196,7 @@ function BlogMockup() {
           <div key={i} className="bg-gray-800/80 rounded p-1 border border-gray-700">
             <div className={`w-4 h-4 rounded mb-1 bg-gradient-to-br ${
               ['from-blue-400 to-cyan-400', 'from-green-400 to-emerald-400', 'from-orange-400 to-red-400',
-               'from-purple-400 to-pink-400', 'from-yellow-400 to-orange-400', 'from-indigo-400 to-purple-400'][i]
+               'from-gray-600 to-gray-700', 'from-yellow-400 to-orange-400', 'from-gray-500 to-gray-600'][i]
             }`}></div>
             <div className="w-full h-1 bg-white rounded mb-0.5"></div>
             <div className="w-2/3 h-0.5 bg-gray-500 rounded"></div>
@@ -301,15 +301,15 @@ function SocialMockup() {
       {/* Header */}
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-1">
-          <div className="w-5 h-5 rounded-full bg-gradient-to-r from-pink-500 to-purple-600"></div>
+          <div className="w-5 h-5 rounded-full bg-gradient-to-r from-gray-700 to-gray-800"></div>
           <div className="w-12 h-2 bg-white rounded"></div>
         </div>
-        <div className="px-2 py-0.5 bg-pink-500 rounded text-[5px] font-bold">Personal</div>
+        <div className="px-2 py-0.5 bg-gray-800 rounded text-[5px] font-bold">Personal</div>
       </div>
       
       {/* Profile section */}
       <div className="flex items-center gap-2 mb-2 bg-white/5 rounded-lg p-2">
-        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-pink-400 to-purple-500"></div>
+        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-600 to-gray-700"></div>
         <div>
           <div className="w-14 h-2 bg-white rounded mb-1"></div>
           <div className="w-10 h-1 bg-gray-400 rounded"></div>
@@ -323,8 +323,8 @@ function SocialMockup() {
             <div className="w-full h-1.5 bg-white rounded mb-1"></div>
             <div className="w-3/4 h-1 bg-gray-400 rounded mb-1"></div>
             <div className="flex gap-2">
-              <div className="w-6 h-1 bg-pink-400 rounded"></div>
-              <div className="w-6 h-1 bg-purple-400 rounded"></div>
+              <div className="w-6 h-1 bg-gray-400 rounded"></div>
+              <div className="w-6 h-1 bg-gray-500 rounded"></div>
             </div>
           </div>
         ))}
@@ -448,7 +448,7 @@ function FitnessMockup() {
         {['Recovery', 'Training', 'Nutrition'].map((_, i) => (
           <div key={i} className="flex items-center gap-2 bg-gray-800/50 rounded-lg p-1.5 border border-gray-700">
             <div className={`w-4 h-4 rounded bg-gradient-to-r ${
-              ['from-blue-400 to-cyan-400', 'from-purple-400 to-pink-400', 'from-green-400 to-emerald-400'][i]
+              ['from-blue-400 to-cyan-400', 'from-gray-600 to-gray-700', 'from-green-400 to-emerald-400'][i]
             }`}></div>
             <div>
               <div className="w-12 h-1.5 bg-white rounded mb-0.5"></div>

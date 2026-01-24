@@ -49,7 +49,7 @@ export default function SecurityReportPage() {
         <Header />
         <main className="pt-32 pb-20">
           <div className="max-w-2xl mx-auto px-6 text-center">
-            <div className="w-20 h-20 bg-gradient-to-r from-pink-100 to-fuchsia-100 rounded-full flex items-center justify-center text-pink-600 mx-auto mb-6">
+            <div className="w-20 h-20 bg-gradient-to-r from-gray-100 to-gray-100 rounded-full flex items-center justify-center text-gray-900 mx-auto mb-6">
               <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
@@ -59,8 +59,8 @@ export default function SecurityReportPage() {
               Thank you for responsibly disclosing this security concern. Our security team 
               has been notified and will review your report promptly.
             </p>
-            <div className="bg-pink-50 rounded-xl p-4 mb-8 text-left">
-              <p className="text-pink-700 text-sm">
+            <div className="bg-gray-50 rounded-xl p-4 mb-8 text-left">
+              <p className="text-gray-700 text-sm">
                 <strong>Expected Response Time:</strong><br/>
                 Critical: Within 24 hours<br/>
                 High: Within 48 hours<br/>
@@ -70,7 +70,7 @@ export default function SecurityReportPage() {
             <a
               href="/"
               className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-xl hover:opacity-90 transition-all"
-              style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}
+              style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}
             >
               Return Home
             </a>
@@ -89,7 +89,7 @@ export default function SecurityReportPage() {
         <div className="max-w-3xl mx-auto px-6">
           {/* Header */}
           <div className="mb-12 text-center">
-            <div className="inline-block px-4 py-2 bg-pink-50 text-pink-600 rounded-full text-sm font-medium mb-4">
+            <div className="inline-block px-4 py-2 bg-gray-50 text-gray-900 rounded-full text-sm font-medium mb-4">
               Security
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Report Security Concerns</h1>
@@ -102,7 +102,7 @@ export default function SecurityReportPage() {
           {/* Bug Bounty Info */}
           <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 text-white mb-12">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-[#ec4899] to-[#be185d] rounded-xl flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 bg-gradient-to-r from-[#1f2937] to-[#374151] rounded-xl flex items-center justify-center flex-shrink-0">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -133,8 +133,8 @@ export default function SecurityReportPage() {
                     onClick={() => setSeverity(level.value)}
                     className={`p-4 rounded-xl border-2 transition-all text-left ${
                       severity === level.value
-                        ? 'border-pink-500 bg-pink-50'
-                        : 'border-gray-100 hover:border-pink-200'
+                        ? 'border-gray-900 bg-gray-50'
+                        : 'border-gray-100 hover:border-gray-300'
                     }`}
                   >
                     <div className="flex items-center gap-2 mb-1">
@@ -163,7 +163,7 @@ export default function SecurityReportPage() {
                 required
                 rows={4}
                 placeholder="Describe the security vulnerability..."
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-pink-300 focus:ring-4 focus:ring-pink-100 outline-none transition-all resize-none"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100 outline-none transition-all resize-none"
               />
             </div>
 
@@ -182,7 +182,7 @@ export default function SecurityReportPage() {
                 required
                 rows={5}
                 placeholder="1. Go to...&#10;2. Click on...&#10;3. Observe that..."
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-pink-300 focus:ring-4 focus:ring-pink-100 outline-none transition-all resize-none font-mono text-sm"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100 outline-none transition-all resize-none font-mono text-sm"
               />
             </div>
 
@@ -201,7 +201,7 @@ export default function SecurityReportPage() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 placeholder="security-researcher@example.com"
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-pink-300 focus:ring-4 focus:ring-pink-100 outline-none transition-all"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100 outline-none transition-all"
               />
             </div>
 
@@ -211,7 +211,7 @@ export default function SecurityReportPage() {
                 type="submit"
                 disabled={!severity || !description || !steps || !email}
                 className="flex-1 px-8 py-4 text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}
+                style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -222,29 +222,29 @@ export default function SecurityReportPage() {
           </form>
 
           {/* Guidelines */}
-          <div className="mt-12 bg-gradient-to-r from-pink-50 to-fuchsia-50 rounded-2xl p-8">
+          <div className="mt-12 bg-gradient-to-r from-gray-50 to-gray-50 rounded-2xl p-8">
             <h2 className="text-lg font-bold text-gray-900 mb-4">Responsible Disclosure Guidelines</h2>
             <ul className="space-y-3 text-gray-600">
               <li className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
                 Do not access, modify, or delete data belonging to other users.
               </li>
               <li className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
                 Do not perform denial of service attacks or degrade our services.
               </li>
               <li className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
                 Allow us reasonable time to fix the issue before public disclosure.
               </li>
               <li className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
                 Only test against accounts you own or have permission to access.
@@ -256,8 +256,8 @@ export default function SecurityReportPage() {
           <div className="mt-8 text-center text-gray-600">
             <p>
               For urgent security matters, you can also reach us at{' '}
-              <a href="mailto:security@lovecode.dev" className="text-pink-600 hover:text-pink-700 font-medium">
-                security@lovecode.dev
+              <a href="mailto:security@Procode" className="text-gray-900 hover:text-gray-700 font-medium">
+                security@Procode
               </a>
             </p>
           </div>

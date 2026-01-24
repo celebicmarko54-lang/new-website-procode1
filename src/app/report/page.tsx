@@ -34,7 +34,7 @@ export default function ReportAbusePage() {
         <Header />
         <main className="pt-32 pb-20">
           <div className="max-w-2xl mx-auto px-6 text-center">
-            <div className="w-20 h-20 bg-gradient-to-r from-pink-100 to-fuchsia-100 rounded-full flex items-center justify-center text-pink-600 mx-auto mb-6">
+            <div className="w-20 h-20 bg-gradient-to-r from-gray-100 to-gray-100 rounded-full flex items-center justify-center text-gray-900 mx-auto mb-6">
               <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
@@ -47,7 +47,7 @@ export default function ReportAbusePage() {
             <a
               href="/"
               className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-xl hover:opacity-90 transition-all"
-              style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}
+              style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}
             >
               Return Home
             </a>
@@ -66,12 +66,12 @@ export default function ReportAbusePage() {
         <div className="max-w-3xl mx-auto px-6">
           {/* Header */}
           <div className="mb-12 text-center">
-            <div className="inline-block px-4 py-2 bg-pink-50 text-pink-600 rounded-full text-sm font-medium mb-4">
+            <div className="inline-block px-4 py-2 bg-gray-50 text-gray-900 rounded-full text-sm font-medium mb-4">
               Safety
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Report Abuse</h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Help us keep lovecode.dev safe. Report content or behavior that violates our 
+              Help us keep Procode safe. Report content or behavior that violates our 
               community guidelines.
             </p>
           </div>
@@ -91,12 +91,12 @@ export default function ReportAbusePage() {
                     onClick={() => setReportType(type.value)}
                     className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all text-left ${
                       reportType === type.value
-                        ? 'border-pink-500 bg-pink-50'
-                        : 'border-gray-100 hover:border-pink-200'
+                        ? 'border-gray-900 bg-gray-50'
+                        : 'border-gray-100 hover:border-gray-300'
                     }`}
                   >
                     <span className="text-2xl">{type.icon}</span>
-                    <span className={`font-medium ${reportType === type.value ? 'text-pink-700' : 'text-gray-700'}`}>
+                    <span className={`font-medium ${reportType === type.value ? 'text-gray-700' : 'text-gray-700'}`}>
                       {type.label}
                     </span>
                   </button>
@@ -117,8 +117,8 @@ export default function ReportAbusePage() {
                 id="url"
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
-                placeholder="https://lovecode.dev/..."
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-pink-300 focus:ring-4 focus:ring-pink-100 outline-none transition-all"
+                placeholder="https://Procode/..."
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100 outline-none transition-all"
               />
             </div>
 
@@ -137,7 +137,7 @@ export default function ReportAbusePage() {
                 required
                 rows={5}
                 placeholder="Tell us what happened..."
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-pink-300 focus:ring-4 focus:ring-pink-100 outline-none transition-all resize-none"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100 outline-none transition-all resize-none"
               />
             </div>
 
@@ -155,7 +155,7 @@ export default function ReportAbusePage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@example.com"
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-pink-300 focus:ring-4 focus:ring-pink-100 outline-none transition-all"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100 outline-none transition-all"
               />
             </div>
 
@@ -165,13 +165,13 @@ export default function ReportAbusePage() {
                 type="submit"
                 disabled={!reportType || !description}
                 className="flex-1 px-8 py-4 text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-                style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}
+                style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}
               >
                 Submit Report
               </button>
               <a
                 href="/"
-                className="px-8 py-4 border-2 border-gray-200 text-gray-700 font-semibold rounded-xl hover:border-pink-300 hover:text-pink-600 transition-all text-center"
+                className="px-8 py-4 border-2 border-gray-200 text-gray-700 font-semibold rounded-xl hover:border-gray-400 hover:text-gray-900 transition-all text-center"
               >
                 Cancel
               </a>
@@ -179,23 +179,23 @@ export default function ReportAbusePage() {
           </form>
 
           {/* Info Box */}
-          <div className="mt-12 bg-gradient-to-r from-pink-50 to-fuchsia-50 rounded-2xl p-8">
+          <div className="mt-12 bg-gradient-to-r from-gray-50 to-gray-50 rounded-2xl p-8">
             <h2 className="text-lg font-bold text-gray-900 mb-3">What happens next?</h2>
             <div className="space-y-3 text-gray-600">
               <p className="flex items-start gap-3">
-                <span className="w-6 h-6 bg-pink-200 text-pink-700 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
+                <span className="w-6 h-6 bg-gray-300 text-gray-700 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
                 Our Trust &amp; Safety team reviews your report within 24-48 hours.
               </p>
               <p className="flex items-start gap-3">
-                <span className="w-6 h-6 bg-pink-200 text-pink-700 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
+                <span className="w-6 h-6 bg-gray-300 text-gray-700 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
                 We investigate the reported content or user.
               </p>
               <p className="flex items-start gap-3">
-                <span className="w-6 h-6 bg-pink-200 text-pink-700 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
+                <span className="w-6 h-6 bg-gray-300 text-gray-700 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
                 Appropriate action is taken based on our platform rules.
               </p>
               <p className="flex items-start gap-3">
-                <span className="w-6 h-6 bg-pink-200 text-pink-700 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">4</span>
+                <span className="w-6 h-6 bg-gray-300 text-gray-700 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">4</span>
                 If you provided an email, we&apos;ll notify you of the outcome.
               </p>
             </div>

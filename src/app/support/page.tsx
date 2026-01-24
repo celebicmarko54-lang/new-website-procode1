@@ -12,7 +12,7 @@ export default function SupportPage() {
     {
       name: 'Getting Started',
       articles: 12,
-      description: 'New to lovecode.dev? Start here',
+      description: 'New to λforge? Start here',
       icon: (
         <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -83,20 +83,20 @@ export default function SupportPage() {
 
   const faqs = [
     {
-      question: 'What is lovecode.dev?',
-      answer: 'lovecode.dev is an AI-powered platform that lets you build web applications by simply describing what you want in natural language.',
+      question: 'What is λforge?',
+      answer: 'λforge is an AI-powered platform that lets you build web applications by simply describing what you want in natural language.',
     },
     {
       question: 'Do I need coding experience?',
-      answer: 'No! lovecode.dev is designed for everyone. You can create professional apps without writing any code.',
+      answer: 'No! λforge is designed for everyone. You can create professional apps without writing any code.',
     },
     {
       question: 'Can I export my code?',
       answer: 'Yes, you can export your complete project code at any time. You own everything you create.',
     },
     {
-      question: 'What technologies does lovecode.dev use?',
-      answer: 'lovecode.dev generates modern React/Next.js applications with Tailwind CSS styling.',
+      question: 'What technologies does λforge use?',
+      answer: 'λforge generates modern React/Next.js applications with Tailwind CSS styling.',
     },
     {
       question: 'Is there a free plan?',
@@ -123,9 +123,9 @@ export default function SupportPage() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search for help..."
-              className="w-full px-6 py-4 rounded-2xl text-gray-900 text-lg border border-gray-200 focus:outline-none focus:ring-4 focus:ring-pink-100 focus:border-pink-300 shadow-lg"
+              className="w-full px-6 py-4 rounded-2xl text-gray-900 text-lg border border-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100 focus:border-gray-300 shadow-lg"
             />
-            <button className="absolute right-3 top-1/2 -translate-y-1/2 p-2 text-white rounded-xl hover:opacity-90 transition-all" style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}>
+            <button className="absolute right-3 top-1/2 -translate-y-1/2 p-2 text-white rounded-xl hover:opacity-90 transition-all" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}>
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
@@ -142,12 +142,12 @@ export default function SupportPage() {
             {categories.map((category, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-2xl border border-gray-100 p-6 hover:border-pink-200 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="group bg-white rounded-2xl border border-gray-100 p-6 hover:border-gray-300 hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
-                <div className="w-14 h-14 bg-gradient-to-r from-pink-100 to-fuchsia-100 rounded-2xl flex items-center justify-center text-pink-600 mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 bg-gradient-to-r from-gray-100 to-gray-100 rounded-2xl flex items-center justify-center text-gray-600 mb-4 group-hover:scale-110 transition-transform">
                   {category.icon}
                 </div>
-                <h3 className="font-semibold text-gray-900 text-lg mb-1 group-hover:text-pink-600 transition-colors">
+                <h3 className="font-semibold text-gray-900 text-lg mb-1 group-hover:text-gray-700 transition-colors">
                   {category.name}
                 </h3>
                 <p className="text-sm text-gray-600 mb-3">{category.description}</p>
@@ -171,7 +171,7 @@ export default function SupportPage() {
                     key={index}
                     className="flex items-center justify-between py-4 border-b border-gray-100 last:border-0 cursor-pointer group"
                   >
-                    <span className="text-gray-700 group-hover:text-pink-600 transition-colors font-medium">
+                    <span className="text-gray-700 group-hover:text-gray-900 transition-colors font-medium">
                       {article.title}
                     </span>
                     <span className="text-xs text-gray-400 flex items-center gap-1">
@@ -193,7 +193,7 @@ export default function SupportPage() {
                 Can&apos;t find what you&apos;re looking for? Our support team is here to help.
               </p>
               <div className="space-y-4">
-                <button className="w-full px-4 py-4 hover:opacity-90 rounded-xl font-semibold transition-all flex items-center justify-center gap-3 text-white" style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}>
+                <button className="w-full px-4 py-4 hover:opacity-90 rounded-xl font-semibold transition-all flex items-center justify-center gap-3 text-white" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}>
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                   </svg>
@@ -219,9 +219,9 @@ export default function SupportPage() {
             {faqs.map((faq, index) => (
               <details
                 key={index}
-                className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:border-pink-200 transition-all"
+                className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:border-gray-300 transition-all"
               >
-                <summary className="px-6 py-5 cursor-pointer font-semibold text-gray-900 hover:text-pink-600 transition-colors flex items-center justify-between">
+                <summary className="px-6 py-5 cursor-pointer font-semibold text-gray-900 hover:text-gray-700 transition-colors flex items-center justify-between">
                   {faq.question}
                   <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -237,18 +237,18 @@ export default function SupportPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-gradient-to-r from-[#ec4899] to-[#be185d]">
+      <section className="py-24 px-6 bg-gradient-to-r from-[#1f2937] to-[#374151]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Still Have Questions?
           </h2>
-          <p className="text-xl text-pink-100 mb-12 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-100 mb-12 max-w-2xl mx-auto">
             Our team is ready to help you succeed. Reach out anytime.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/community"
-              className="px-8 py-4 bg-white text-pink-600 font-semibold rounded-xl hover:bg-pink-50 transition-all duration-300 shadow-lg"
+              className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg"
             >
               Join Community
             </Link>

@@ -83,7 +83,7 @@ export default function StatusPage() {
               System Status
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Real-time status and uptime information for lovecode.dev services
+              Real-time status and uptime information for Procode services
             </p>
           </div>
         </div>
@@ -161,9 +161,9 @@ export default function StatusPage() {
 
         {/* Subscribe to Updates */}
         <div className="max-w-4xl mx-auto px-6">
-          <div className="bg-gradient-to-r from-[#ec4899] to-[#be185d] rounded-2xl p-8 text-center text-white">
+          <div className="bg-gradient-to-r from-[#1f2937] to-[#374151] rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-3">Get Status Updates</h2>
-            <p className="text-pink-100 mb-6">
+            <p className="text-gray-100 mb-6">
               Subscribe to receive notifications about system status and incidents
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
@@ -172,7 +172,7 @@ export default function StatusPage() {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/30"
               />
-              <button className="px-6 py-3 bg-white text-pink-600 hover:bg-pink-50 rounded-xl font-semibold transition-colors">
+              <button className="px-6 py-3 bg-white text-gray-900 hover:bg-gray-50 rounded-xl font-semibold transition-colors">
                 Subscribe
               </button>
             </div>

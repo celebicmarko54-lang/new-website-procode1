@@ -29,7 +29,7 @@ export default function SettingsPage() {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
 
   useEffect(() => {
-    const currentUser = localStorage.getItem('lovecode.dev_current_user');
+    const currentUser = localStorage.getItem('Procode_current_user');
     if (!currentUser) {
       router.push('/login');
       return;
@@ -41,13 +41,13 @@ export default function SettingsPage() {
     if (!user) return;
     
     // Remove user from users list
-    const users = JSON.parse(localStorage.getItem('lovecode.dev_users') || '[]');
+    const users = JSON.parse(localStorage.getItem('Procode_users') || '[]');
     const updatedUsers = users.filter((u: User) => u.id !== user.id);
-    localStorage.setItem('lovecode.dev_users', JSON.stringify(updatedUsers));
+    localStorage.setItem('Procode_users', JSON.stringify(updatedUsers));
     
     // Clear current user and projects
-    localStorage.removeItem('lovecode.dev_current_user');
-    localStorage.removeItem('lovecode.dev_projects');
+    localStorage.removeItem('Procode_current_user');
+    localStorage.removeItem('Procode_projects');
     
     router.push('/');
   };
@@ -97,7 +97,7 @@ export default function SettingsPage() {
                     onClick={() => setActiveTab(tab.id)}
                     className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors w-full text-left ${
                       activeTab === tab.id
-                        ? 'bg-pink-50 text-pink-600'
+                        ? 'bg-gray-50 text-gray-900'
                         : 'text-gray-600 hover:bg-gray-50'
                     }`}
                   >

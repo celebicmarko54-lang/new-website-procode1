@@ -92,12 +92,12 @@ export default function SecurityPage() {
         {/* Hero Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-pink-100 text-pink-700 rounded-full mb-6">
-              <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-full mb-6">
+              <span className="w-2 h-2 bg-gray-900 rounded-full"></span>
               <span className="font-medium">Enterprise-Grade Security</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-              <span className="text-pink-500">Security</span> First
+              <span className="text-gray-900">Security</span> First
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Your data security is our top priority. Learn about the measures we take to keep your information safe.
@@ -110,8 +110,8 @@ export default function SecurityPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {certifications.map((cert) => (
               <div key={cert.name} className="bg-white rounded-xl border border-gray-200 p-6 text-center hover:shadow-lg transition-all">
-                <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-pink-600 text-xl font-bold">{cert.icon}</span>
+                <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-gray-900 text-xl font-bold">{cert.icon}</span>
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-1">{cert.name}</h3>
                 <p className="text-xs text-gray-500">{cert.description}</p>
@@ -125,7 +125,7 @@ export default function SecurityPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Security Features</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {securityFeatures.map((feature) => (
-              <div key={feature.title} className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg hover:border-pink-200 transition-all">
+              <div key={feature.title} className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg hover:border-gray-300 transition-all">
                 <span className="text-3xl mb-4 block">{feature.icon}</span>
                 <h3 className="font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-sm text-gray-600">{feature.description}</p>
@@ -145,7 +145,7 @@ export default function SecurityPage() {
                   <ul className="space-y-3">
                     {practice.items.map((item) => (
                       <li key={item} className="flex items-start gap-2 text-gray-300 text-sm">
-                        <svg className="w-5 h-5 text-pink-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 text-gray-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                         {item}
@@ -160,7 +160,7 @@ export default function SecurityPage() {
 
         {/* Bug Bounty */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-          <div className="bg-gradient-to-r from-[#ec4899] to-[#be185d] rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-[#1f2937] to-[#374151] rounded-2xl p-8 text-white">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="text-center md:text-left">
                 <h2 className="text-2xl font-bold mb-2">Bug Bounty Program</h2>
@@ -168,7 +168,7 @@ export default function SecurityPage() {
                   Help us improve security and earn rewards for responsibly disclosing vulnerabilities.
                 </p>
               </div>
-              <button className="px-6 py-3 bg-white text-pink-600 rounded-lg hover:bg-gray-100 transition-colors font-medium flex-shrink-0">
+              <button className="px-6 py-3 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-colors font-medium flex-shrink-0">
                 Learn More
               </button>
             </div>
@@ -180,17 +180,17 @@ export default function SecurityPage() {
           <div className="bg-white rounded-xl border border-gray-200 p-8">
             <h2 className="text-xl font-bold text-gray-900 mb-4 text-center">Report a Security Issue</h2>
             <p className="text-gray-600 text-center mb-6">
-              If you believe you've found a security vulnerability in lovecode.dev, please report it to our security team immediately.
+              If you believe you've found a security vulnerability in Procode, please report it to our security team immediately.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="mailto:security@lovecode.dev.dev" 
+                href="mailto:security@Procode.dev" 
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors font-medium"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                security@lovecode.dev.dev
+                security@Procode.dev
               </a>
               <a 
                 href="#" 

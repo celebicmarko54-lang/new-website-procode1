@@ -32,16 +32,16 @@ export default function LoginPage() {
     };
 
     // Check if OAuth user exists, if not add to users
-    const users = JSON.parse(localStorage.getItem('lovecode.dev_users') || '[]');
+    const users = JSON.parse(localStorage.getItem('Procode_users') || '[]');
     const existingUser = users.find((u: { email: string }) => u.email === oauthUser.email);
     
     if (!existingUser) {
       users.push(oauthUser);
-      localStorage.setItem('lovecode.dev_users', JSON.stringify(users));
+      localStorage.setItem('Procode_users', JSON.stringify(users));
     }
 
     // Set current user
-    localStorage.setItem('lovecode.dev_current_user', JSON.stringify(existingUser || oauthUser));
+    localStorage.setItem('Procode_current_user', JSON.stringify(existingUser || oauthUser));
     
     setOauthLoading(null);
     router.push('/dashboard');
@@ -56,14 +56,14 @@ export default function LoginPage() {
     await new Promise(resolve => setTimeout(resolve, 1000));
 
     // Check if user exists in localStorage
-    const users = JSON.parse(localStorage.getItem('lovecode.dev_users') || '[]');
+    const users = JSON.parse(localStorage.getItem('Procode_users') || '[]');
     const user = users.find((u: { email: string; password: string }) => 
       u.email === formData.email && u.password === formData.password
     );
 
     if (user) {
       // Set logged in user
-      localStorage.setItem('lovecode.dev_current_user', JSON.stringify(user));
+      localStorage.setItem('Procode_current_user', JSON.stringify(user));
       router.push('/dashboard');
     } else {
       setError('Invalid email or password');
@@ -79,12 +79,12 @@ export default function LoginPage() {
         <div className="max-w-md w-full">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 mb-8">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#ec4899] to-[#be185d] flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#1f2937] to-[#374151] flex items-center justify-center">
               <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
               </svg>
             </div>
-            <span className="text-xl font-semibold text-gray-900">lovecode.dev</span>
+            <span className="text-xl font-semibold text-gray-900">Procode</span>
           </Link>
 
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome back</h1>
@@ -107,7 +107,7 @@ export default function LoginPage() {
                 required
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all text-gray-900"
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all text-gray-900"
                 placeholder="you@example.com"
               />
             </div>
@@ -117,7 +117,7 @@ export default function LoginPage() {
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                   Password
                 </label>
-                <Link href="/forgot-password" className="text-sm text-pink-600 hover:text-pink-700">
+                <Link href="/forgot-password" className="text-sm text-gray-900 hover:text-gray-700">
                   Forgot password?
                 </Link>
               </div>
@@ -128,7 +128,7 @@ export default function LoginPage() {
                   required
                   value={formData.password}
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                  className="w-full px-4 py-3 pr-12 rounded-xl border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all text-gray-900"
+                  className="w-full px-4 py-3 pr-12 rounded-xl border border-gray-300 focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all text-gray-900"
                   placeholder="••••••••"
                 />
                 <button
@@ -154,7 +154,7 @@ export default function LoginPage() {
               type="submit"
               disabled={isLoading}
               className="w-full py-3 px-4 text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-              style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}
+              style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}
             >
               {isLoading ? (
                 <span className="flex items-center justify-center gap-2">
@@ -223,7 +223,7 @@ export default function LoginPage() {
 
           <p className="mt-8 text-center text-sm text-gray-600">
             Don&apos;t have an account?{' '}
-            <Link href="/signup" className="font-semibold text-pink-600 hover:text-pink-700">
+            <Link href="/signup" className="font-semibold text-gray-900 hover:text-gray-700">
               Create account
             </Link>
           </p>
@@ -240,7 +240,7 @@ export default function LoginPage() {
           }}
         />
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-500/80 via-pink-600/70 to-purple-600/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-900/70 to-purple-600/80" />
         <div className="absolute inset-0 opacity-30">
           <div className="absolute top-20 left-20 w-72 h-72 bg-white/20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-white/20 rounded-full blur-3xl"></div>

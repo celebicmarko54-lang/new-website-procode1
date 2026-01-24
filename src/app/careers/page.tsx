@@ -76,12 +76,12 @@ export default function CareersPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-              Join the <span className="text-pink-500">lovecode.dev</span> Team
+              Join the <span className="text-gray-900">Procode</span> Team
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
               Help us build the future of software development. We're looking for passionate people to join our mission.
             </p>
-            <a href="#openings" className="inline-flex items-center gap-2 px-6 py-3 text-white rounded-lg hover:opacity-90 transition-all font-medium" style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}>
+            <a href="#openings" className="inline-flex items-center gap-2 px-6 py-3 text-white rounded-lg hover:opacity-90 transition-all font-medium" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}>
               View Open Positions
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -118,21 +118,21 @@ export default function CareersPage() {
           </div>
           
           {/* Glowing orbs */}
-          <div className="absolute top-10 left-1/4 w-64 h-64 bg-[#E91E8C]/5 rounded-full blur-[100px]" />
-          <div className="absolute bottom-10 right-1/4 w-64 h-64 bg-[#9B59B6]/5 rounded-full blur-[100px]" />
+          <div className="absolute top-10 left-1/4 w-64 h-64 bg-[#1f2937]/5 rounded-full blur-[100px]" />
+          <div className="absolute bottom-10 right-1/4 w-64 h-64 bg-[#374151]/5 rounded-full blur-[100px]" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-pink-50 to-purple-50 border border-pink-200 mb-4">
-                <div className="w-2 h-2 rounded-full bg-[#E91E8C] animate-pulse" />
-                <span className="text-sm font-medium text-pink-600">Why Join Us</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gray-50 to-purple-50 border border-gray-300 mb-4">
+                <div className="w-2 h-2 rounded-full bg-[#1f2937] animate-pulse" />
+                <span className="text-sm font-medium text-gray-900">Why Join Us</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Benefits & Perks</h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit) => (
-                <div key={benefit.title} className="group bg-white rounded-2xl border border-gray-200 p-6 text-center hover:shadow-xl hover:shadow-pink-100 hover:border-pink-200 transition-all duration-300">
-                  <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br from-pink-50 to-purple-50 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div key={benefit.title} className="group bg-white rounded-2xl border border-gray-200 p-6 text-center hover:shadow-xl hover:shadow-gray-100 hover:border-gray-300 transition-all duration-300">
+                  <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br from-gray-50 to-purple-50 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <span className="text-2xl">{benefit.icon}</span>
                   </div>
                   <h3 className="font-bold text-gray-900 mb-2">{benefit.title}</h3>
@@ -150,18 +150,18 @@ export default function CareersPage() {
             {openings.map((job) => (
               <div
                 key={job.title}
-                className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg hover:border-pink-200 transition-all cursor-pointer group"
+                className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg hover:border-gray-300 transition-all cursor-pointer group"
               >
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div>
-                    <h3 className="font-semibold text-gray-900 text-lg group-hover:text-pink-600 transition-colors">
+                    <h3 className="font-semibold text-gray-900 text-lg group-hover:text-gray-900 transition-colors">
                       {job.title}
                     </h3>
                     <p className="text-sm text-gray-600 mt-1">{job.description}</p>
                     <div className="flex flex-wrap gap-2 mt-3">
                       <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">{job.department}</span>
                       <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">{job.location}</span>
-                      <span className="text-xs bg-pink-100 text-pink-600 px-2 py-1 rounded">{job.type}</span>
+                      <span className="text-xs bg-gray-100 text-gray-900 px-2 py-1 rounded">{job.type}</span>
                     </div>
                   </div>
                   <button className="flex-shrink-0 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium">
@@ -173,10 +173,10 @@ export default function CareersPage() {
           </div>
 
           {/* Don't see a fit */}
-          <div className="mt-12 text-center bg-pink-50 rounded-xl p-8">
+          <div className="mt-12 text-center bg-gray-50 rounded-xl p-8">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Don't see a perfect fit?</h3>
             <p className="text-gray-600 mb-4">We're always looking for talented people. Send us your resume and we'll keep you in mind.</p>
-            <button className="px-6 py-3 text-white rounded-lg hover:opacity-90 transition-all font-medium" style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}>
+            <button className="px-6 py-3 text-white rounded-lg hover:opacity-90 transition-all font-medium" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}>
               Send General Application
             </button>
           </div>

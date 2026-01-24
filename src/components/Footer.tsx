@@ -1,7 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import { useLanguage, languages, Language } from '@/context/LanguageContext';
+import { useTheme } from '@/context/ThemeContext';
 
 interface FooterLink {
   name: string;
@@ -20,28 +22,15 @@ const footerLinks: FooterSection[] = [
     title: 'Company',
     links: [
       { name: 'Careers', href: '/careers' },
-      { name: 'Press & media', href: '/press' },
       { name: 'Enterprise', href: '/enterprise' },
       { name: 'Security', href: '/security' },
-    ],
-  },
-  {
-    title: 'Product',
-    links: [
       { name: 'Pricing', href: '/pricing' },
-      { name: 'Student discount', href: '/students' },
-      { name: 'for Founders', href: '/solutions/founders' },
-      { name: 'for Product Managers', href: '/solutions/product-managers' },
-      { name: 'for Designers', href: '/solutions/designers' },
-      { name: 'for Marketers', href: '/solutions/marketers' },
-      { name: 'Prototyping', href: '/solutions/prototyping' },
     ],
   },
   {
     title: 'Resources',
     links: [
       { name: 'Learn', href: '/learn' },
-      { name: 'Templates', href: '/templates' },
       { name: 'Guides', href: '/guides' },
       { name: 'Videos', href: '/videos' },
       { name: 'Blog', href: '/blog' },
@@ -62,8 +51,6 @@ const footerLinks: FooterSection[] = [
   {
     title: 'Community',
     links: [
-      { name: 'Become an expert partner', href: '/experts' },
-      { name: 'Hire a lovecode.dev expert', href: '/hire-expert' },
       { name: 'Affiliates', href: '/affiliates' },
     ],
   },
@@ -79,12 +66,31 @@ const socialMediaLinks = [
 
 export default function Footer() {
   const [cookieModalOpen, setCookieModalOpen] = useState(false);
+  const [langDropdownOpen, setLangDropdownOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
+  const langDropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (langDropdownRef.current && !langDropdownRef.current.contains(event.target as Node)) {
+        setLangDropdownOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const handleLinkClick = (link: { name: string; href: string; action?: string; external?: boolean }) => {
     if (link.action === 'cookies') {
       setCookieModalOpen(true);
       return;
     }
+  };
+
+  const handleSelectLanguage = (lang: Language) => {
+    setLanguage(lang);
+    setLangDropdownOpen(false);
   };
 
   return (
@@ -94,43 +100,87 @@ export default function Footer() {
         <div className="relative">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 relative z-10">
             {/* Cloud-like floating container */}
-            <div className="relative bg-white rounded-2xl shadow-md p-6 lg:p-8 border border-gray-100">
+            <div className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6 lg:p-8 border border-gray-200/80 dark:border-gray-700/80">
               {/* Main Footer Content */}
               <div className="flex flex-col lg:flex-row gap-8">
                 {/* Logo Section */}
                 <div className="lg:w-44 flex-shrink-0">
-                  <h2 
-                    className="text-xl font-black mb-3 tracking-tight"
-                    style={{
-                      background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 60%, #E74C3C 100%)',
-                      WebkitBackgroundClip: 'text',
-                      backgroundClip: 'text',
-                      color: 'transparent',
-                    }}
-                  >
-                    LOVECODE
+                  <h2 className="text-xl text-gray-900 dark:text-white mb-3 tracking-tight">
+                    <span className="italic">λ</span><span className="font-medium">forge.dev</span>
                   </h2>
-                  <p className="text-gray-500 text-xs mb-4">
-                    Made with ♥ and a little bit of magic ✨
+                  <p className="text-gray-500 dark:text-gray-400 text-xs mb-4">
+                    Build production-ready apps with AI
                   </p>
                   
-                  {/* Language Selector */}
-                  <button className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-gray-500 border border-dashed border-pink-300 rounded-lg hover:bg-pink-50 hover:border-pink-400 transition-all">
-                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                    </svg>
-                    <span>EN</span>
-                    <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
+                  {/* Language Selector and Theme Toggle */}
+                  <div className="flex items-center gap-2">
+                    {/* Language Selector Dropdown */}
+                    <div ref={langDropdownRef} className="relative">
+                      <button 
+                        onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+                        className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-gray-500 dark:text-gray-400 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-400 dark:hover:border-gray-500 transition-all"
+                      >
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                        </svg>
+                        <span className="uppercase font-medium">{language.code}</span>
+                        <svg className={`w-2.5 h-2.5 transition-transform ${langDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                      
+                      {langDropdownOpen && (
+                        <div className="absolute bottom-full left-0 mb-2 w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-1 z-50 animate-fade-in">
+                          {languages.map((lang) => (
+                            <button
+                              key={lang.code}
+                              onClick={() => handleSelectLanguage(lang)}
+                              className={`w-full flex items-center justify-between px-4 py-2.5 text-sm transition-colors ${
+                                language.code === lang.code 
+                                  ? 'bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white' 
+                                  : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white'
+                              }`}
+                            >
+                              <div className="flex items-center gap-3">
+                                <span className="uppercase text-xs font-semibold text-gray-400 dark:text-gray-500 w-5">{lang.code}</span>
+                                <span className="font-medium">{lang.name}</span>
+                              </div>
+                              {language.code === lang.code && (
+                                <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                </svg>
+                              )}
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                    
+                    {/* Theme Toggle Button */}
+                    <button
+                      onClick={toggleTheme}
+                      className="flex items-center justify-center w-8 h-8 text-gray-500 dark:text-gray-400 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-400 dark:hover:border-gray-500 transition-all"
+                      aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
+                      title={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
+                    >
+                      {theme === 'light' ? (
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                      ) : (
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                      )}
+                    </button>
+                  </div>
                 </div>
 
                 {/* Footer Links Grid */}
                 <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
                   {footerLinks.map((section) => (
                     <div key={section.title}>
-                      <h3 className="text-xs font-semibold text-pink-500 tracking-wide mb-2">
+                      <h3 className="text-xs font-semibold text-gray-900 dark:text-white tracking-wide mb-2 uppercase">
                         {section.title}
                       </h3>
                       <ul className="space-y-1">
@@ -146,7 +196,7 @@ export default function Footer() {
                               }}
                               target={link.external ? '_blank' : undefined}
                               rel={link.external ? 'noopener noreferrer' : undefined}
-                              className="text-xs text-gray-500 hover:text-pink-600 transition-colors flex items-center gap-1"
+                              className="text-xs text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors flex items-center gap-1"
                             >
                               {link.name}
                               {link.external && (
@@ -164,8 +214,8 @@ export default function Footer() {
               </div>
 
               {/* Social Media Links Row - Easy to Connect */}
-              <div className="mt-6 pt-4 border-t border-gray-100">
-                <h3 className="text-xs font-semibold text-pink-500 tracking-wide mb-3 text-center">
+              <div className="mt-6 pt-4 border-t border-gray-100 dark:border-gray-700">
+                <h3 className="text-xs font-semibold text-gray-900 dark:text-white tracking-wide mb-3 text-center uppercase">
                   Connect with us
                 </h3>
                 <div className="flex flex-wrap justify-center gap-3">
@@ -175,7 +225,7 @@ export default function Footer() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-white border-2 border-gray-200 rounded-full text-gray-600 hover:text-pink-600 hover:border-pink-400 hover:bg-pink-50 transition-all text-sm font-medium"
+                      className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-full text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:border-gray-400 dark:hover:border-gray-500 hover:bg-gray-50 dark:hover:bg-gray-600 transition-all text-sm font-medium"
                     >
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                         <path d={social.icon}/>
@@ -190,21 +240,10 @@ export default function Footer() {
               </div>
 
               {/* Bottom section with divider */}
-              <div className="mt-6 pt-4 border-t border-gray-100">
-                {/* Sketchy divider */}
-                <svg className="absolute left-6 right-6 h-2 -mt-5" style={{ width: 'calc(100% - 48px)' }} viewBox="0 0 1200 8" preserveAspectRatio="none">
-                  <path 
-                    d="M0 4 Q30 2, 60 4 T120 4 T180 4 T240 4 T300 4 T360 4 T420 4 T480 4 T540 4 T600 4 T660 4 T720 4 T780 4 T840 4 T900 4 T960 4 T1020 4 T1080 4 T1140 4 T1200 4" 
-                    fill="none" 
-                    stroke="#f9a8d4" 
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                  />
-                </svg>
-                
+              <div className="mt-6 pt-4 border-t border-gray-100 dark:border-gray-700">
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-                  <p className="text-xs text-gray-400">
-                    © {new Date().getFullYear()} lovecode.dev ~ All rights reserved ✌️
+                  <p className="text-xs text-gray-400 dark:text-gray-500">
+                    © {new Date().getFullYear()} λforge.dev · All rights reserved
                   </p>
                 </div>
               </div>

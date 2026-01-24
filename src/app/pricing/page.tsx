@@ -7,83 +7,82 @@ import Footer from '@/components/Footer';
 
 const plans = [
   {
-    name: 'Free',
+    name: 'Starter',
+    description: 'Build anything, right in λforge.',
     price: '$0',
     period: 'forever',
-    description: 'Perfect for trying out lovecode.dev',
+    cta: 'Start Building Free',
+    ctaStyle: 'border border-gray-300 text-gray-700 hover:bg-gray-50',
     features: [
-      '3 projects',
-      'Basic AI assistance',
+      'Free daily AI credits',
+      'Free credits for integrations',
+      'Publish 1 app',
       'Community support',
       'Public projects only',
-      '1GB storage',
     ],
-    cta: 'Get Started',
-    ctaStyle: 'border border-gray-300 text-gray-700 hover:bg-gray-50',
     popular: false,
   },
   {
-    name: 'Pro',
-    price: '$20',
+    name: 'Core',
+    description: 'Create, launch, and share your apps.',
+    price: '$25',
     period: 'per month',
-    description: 'For individuals and small teams',
+    cta: 'Join λforge Core',
+    ctaStyle: 'bg-gray-900 text-white hover:bg-gray-800',
     features: [
-      'Unlimited projects',
-      'Advanced AI features',
-      'Priority support',
-      'Private projects',
-      '10GB storage',
-      'Custom domains',
-      'Analytics dashboard',
-      'Team collaboration (up to 5)',
+      '$25 of monthly credits',
+      'Access to latest AI models',
+      'Publish and host live apps',
+      'Autonomous long builds',
+      'Remove "Made with λforge" badge',
+      'Pay-as-you-go for additional usage',
     ],
-    cta: 'Start Free Trial',
-    ctaStyle: 'text-white hover:opacity-90 shadow-lg',
-    ctaGradient: true,
     popular: true,
   },
   {
-    name: 'Team',
-    price: '$50',
-    period: 'per month',
-    description: 'For growing teams and businesses',
+    name: 'Teams',
+    description: 'Bring the power of λforge to your entire team.',
+    price: '$40',
+    period: 'per user, per month',
+    cta: 'Join λforge Teams',
+    ctaStyle: 'bg-gray-900 text-white hover:bg-gray-800',
     features: [
-      'Everything in Pro',
-      'Unlimited team members',
-      'Advanced permissions',
-      '100GB storage',
-      'SSO authentication',
-      'Audit logs',
-      'Priority queue',
-      'Dedicated support',
+      'Everything in Core',
+      '$40/mo in usage credits included',
+      'Upfront credits on annual plan',
+      '50 Viewer seats',
+      'Centralized billing',
+      'Role-based access control',
+      'Private deployments',
     ],
-    cta: 'Start Free Trial',
-    ctaStyle: 'text-white hover:opacity-90',
-    ctaGradient: true,
     popular: false,
   },
   {
     name: 'Enterprise',
+    description: 'Meet your security and performance needs.',
     price: 'Custom',
-    period: 'contact us',
-    description: 'For large organizations',
-    features: [
-      'Everything in Team',
-      'Unlimited storage',
-      'Custom integrations',
-      'SLA guarantee',
-      'Dedicated infrastructure',
-      'On-premise deployment',
-      'Custom training',
-      '24/7 phone support',
-    ],
+    period: 'pricing',
     cta: 'Contact Sales',
     ctaStyle: 'border border-gray-300 text-gray-700 hover:bg-gray-50',
+    features: [
+      'Everything in Teams',
+      'Custom Viewer Seats',
+      'SSO & SAML',
+      'SCIM provisioning',
+      'Custom data retention',
+      'Dedicated infrastructure',
+      'Priority support & SLA',
+      'Custom training',
+    ],
     popular: false,
   },
 ];
 
 const faqs = [
+  {
+    question: 'What are AI credits and how do they work?',
+    answer: 'AI credits are used to power the AI features in λforge. Each action like generating code, making edits, or running builds uses credits. Free users get daily credits that reset, while paid plans include monthly credit allowances.',
+  },
   {
     question: 'Can I change plans later?',
     answer: 'Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately and we\'ll prorate any differences.',
@@ -93,16 +92,16 @@ const faqs = [
     answer: 'We accept all major credit cards (Visa, Mastercard, American Express) and PayPal. Enterprise customers can also pay via invoice.',
   },
   {
-    question: 'Is there a free trial?',
-    answer: 'Yes! Pro and Team plans come with a 14-day free trial. No credit card required to start.',
+    question: 'Is there a free trial for paid plans?',
+    answer: 'The Starter plan is free forever with daily AI credits. This allows you to fully experience λforge before upgrading to a paid plan.',
   },
   {
-    question: 'What happens when I reach my storage limit?',
-    answer: 'You\'ll receive a notification when you\'re approaching your limit. You can upgrade your plan or remove unused projects to free up space.',
+    question: 'What happens when I run out of credits?',
+    answer: 'On paid plans, you can continue using λforge with pay-as-you-go pricing. On the free plan, your credits reset daily so you can continue building the next day.',
   },
   {
     question: 'Do you offer refunds?',
-    answer: 'Yes, we offer a 30-day money-back guarantee. If you\'re not satisfied, contact us for a full refund.',
+    answer: 'Yes, we offer a 30-day money-back guarantee for all paid plans. If you\'re not satisfied, contact us for a full refund.',
   },
 ];
 
@@ -111,52 +110,55 @@ export default function PricingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const getPrice = (plan: typeof plans[0]) => {
-    if (plan.price === 'Custom') return plan.price;
+    if (plan.price === 'Custom' || plan.price === '$0') return plan.price;
     const monthlyPrice = parseInt(plan.price.replace('$', ''));
     if (billingPeriod === 'yearly') {
       const yearlyPrice = Math.floor(monthlyPrice * 12 * 0.8);
-      return `$${yearlyPrice}`;
+      return `$${Math.floor(yearlyPrice / 12)}`;
     }
     return plan.price;
   };
 
-  const getPeriod = (plan: typeof plans[0]) => {
-    if (plan.period === 'contact us' || plan.period === 'forever') return plan.period;
-    return billingPeriod === 'yearly' ? 'per year' : 'per month';
-  };
-
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#0a0a0a] transition-colors">
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-28 pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative pt-28 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
-            Simple, transparent
-            <span className="bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)', WebkitBackgroundClip: 'text' }}> pricing</span>
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 mb-6">
+            <svg className="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Pricing</span>
+          </div>
+          
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
+            A fraction of the cost of hiring developers
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-            Choose the perfect plan for your needs. Start for free, upgrade when you&apos;re ready.
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
+            Why spend $100k+ on developers when you can build everything yourself? Start free, upgrade when you&apos;re ready.
           </p>
           
           {/* Billing Toggle */}
           <div className="flex items-center justify-center gap-4 mb-12">
-            <span className={`text-sm font-medium ${billingPeriod === 'monthly' ? 'text-gray-900' : 'text-gray-500'}`}>Monthly</span>
+            <span className={`text-sm font-medium ${billingPeriod === 'monthly' ? 'text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400'}`}>Monthly</span>
             <button
               onClick={() => setBillingPeriod(billingPeriod === 'monthly' ? 'yearly' : 'monthly')}
-              className="relative w-14 h-7 bg-gray-200 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
-              style={{ backgroundColor: billingPeriod === 'yearly' ? '#ec4899' : '#e5e7eb' }}
+              className={`relative w-14 h-7 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:focus:ring-offset-[#0a0a0a] ${
+                billingPeriod === 'yearly' ? 'bg-gray-900 dark:bg-white' : 'bg-gray-200 dark:bg-gray-700'
+              }`}
             >
               <span
-                className={`absolute top-0.5 left-0.5 w-6 h-6 bg-white rounded-full shadow transition-transform ${
+                className={`absolute top-0.5 left-0.5 w-6 h-6 bg-white dark:bg-gray-900 rounded-full shadow transition-transform ${
                   billingPeriod === 'yearly' ? 'translate-x-7' : ''
                 }`}
               />
             </button>
-            <span className={`text-sm font-medium ${billingPeriod === 'yearly' ? 'text-gray-900' : 'text-gray-500'}`}>
+            <span className={`text-sm font-medium ${billingPeriod === 'yearly' ? 'text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400'}`}>
               Yearly
-              <span className="ml-1.5 px-2 py-0.5 bg-green-100 text-green-700 text-xs font-semibold rounded-full">Save 20%</span>
+              <span className="ml-1.5 px-2 py-0.5 bg-green-100 text-green-700 text-xs font-semibold rounded-full">Save $60</span>
             </span>
           </div>
         </div>
@@ -171,94 +173,144 @@ export default function PricingPage() {
                 key={index}
                 className={`relative rounded-2xl p-6 ${
                   plan.popular
-                    ? 'bg-gradient-to-b from-pink-50 to-fuchsia-50 border-2 border-pink-300 shadow-xl'
-                    : 'bg-white border border-gray-200'
+                    ? 'bg-white dark:bg-gray-800 border-2 border-gray-900 dark:border-white shadow-xl'
+                    : 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="px-3 py-1 bg-gradient-to-r from-[#ec4899] to-[#be185d] text-white text-xs font-semibold rounded-full">
-                      MOST POPULAR
+                    <span className="px-3 py-1 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-xs font-semibold rounded-full">
+                      Most Popular
                     </span>
                   </div>
                 )}
                 
                 <div className="mb-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <p className="text-sm text-gray-600">{plan.description}</p>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{plan.name}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{plan.description}</p>
                 </div>
                 
                 <div className="mb-6">
-                  <span className="text-4xl font-bold text-gray-900">{getPrice(plan)}</span>
-                  <span className="text-gray-500 ml-2">{getPeriod(plan)}</span>
+                  <span className="text-4xl font-bold text-gray-900 dark:text-white">{getPrice(plan)}</span>
+                  <span className="text-gray-500 dark:text-gray-400 ml-2">{plan.period}</span>
                 </div>
                 
-                <ul className="space-y-3 mb-8">
+                <button className={`w-full py-3 rounded-xl font-semibold transition-all mb-6 ${plan.ctaStyle}`}>
+                  {plan.cta}
+                </button>
+                
+                <ul className="space-y-3">
                   {plan.features.map((feature, fIndex) => (
                     <li key={fIndex} className="flex items-start gap-2">
                       <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span className="text-sm text-gray-700">{feature}</span>
+                      <span className="text-sm text-gray-700 dark:text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                
-                <button className={`w-full py-3 rounded-xl font-semibold transition-all ${plan.ctaStyle}`}>
-                  {plan.cta}
-                </button>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Feature Comparison Table */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Compare plans</h2>
+      {/* Compare Plans */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Compare Plans</h2>
+            <p className="text-gray-600 dark:text-gray-400">Find the perfect plan for your needs</p>
+          </div>
           
-          <div className="bg-white rounded-2xl shadow-lg p-6 overflow-x-auto">
+          <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="border-b border-gray-200">
-                  <th className="text-left py-4 px-4 font-semibold text-gray-900">Feature</th>
-                  <th className="text-center py-4 px-4 font-semibold text-gray-900">Free</th>
-                  <th className="text-center py-4 px-4 font-semibold text-gray-900">Pro</th>
-                  <th className="text-center py-4 px-4 font-semibold text-gray-900">Team</th>
-                  <th className="text-center py-4 px-4 font-semibold text-gray-900">Enterprise</th>
+                <tr className="border-b border-gray-200 dark:border-gray-700">
+                  <th className="text-left py-4 px-4 font-semibold text-gray-900 dark:text-white">Feature</th>
+                  <th className="text-center py-4 px-4 font-semibold text-gray-900 dark:text-white">Starter</th>
+                  <th className="text-center py-4 px-4 font-semibold text-gray-900 dark:text-white">Core</th>
+                  <th className="text-center py-4 px-4 font-semibold text-gray-900 dark:text-white">Teams</th>
+                  <th className="text-center py-4 px-4 font-semibold text-gray-900 dark:text-white">Enterprise</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ['Projects', '3', 'Unlimited', 'Unlimited', 'Unlimited'],
-                  ['Storage', '1GB', '10GB', '100GB', 'Unlimited'],
-                  ['Team members', '1', '5', 'Unlimited', 'Unlimited'],
-                  ['Private projects', '✗', '✓', '✓', '✓'],
-                  ['Custom domains', '✗', '✓', '✓', '✓'],
-                  ['Analytics', '✗', '✓', '✓', '✓'],
-                  ['SSO', '✗', '✗', '✓', '✓'],
-                  ['Audit logs', '✗', '✗', '✓', '✓'],
-                  ['Priority support', '✗', '✓', '✓', '✓'],
-                  ['SLA', '✗', '✗', '✗', '✓'],
-                ].map((row, index) => (
+                  { name: 'AI Credits', starter: 'Daily free', core: '$25/mo', teams: '$40/mo', enterprise: 'Custom' },
+                  { name: 'Published Apps', starter: '1', core: 'Unlimited', teams: 'Unlimited', enterprise: 'Unlimited' },
+                  { name: 'Team Members', starter: '1', core: '1', teams: 'Unlimited', enterprise: 'Unlimited' },
+                  { name: 'Viewer Seats', starter: '-', core: '-', teams: '50', enterprise: 'Custom' },
+                  { name: 'Private Projects', starter: false, core: true, teams: true, enterprise: true },
+                  { name: 'Custom Domains', starter: false, core: true, teams: true, enterprise: true },
+                  { name: 'Remove Branding', starter: false, core: true, teams: true, enterprise: true },
+                  { name: 'Private Deployments', starter: false, core: false, teams: true, enterprise: true },
+                  { name: 'SSO & SAML', starter: false, core: false, teams: false, enterprise: true },
+                  { name: 'Dedicated Infrastructure', starter: false, core: false, teams: false, enterprise: true },
+                  { name: 'Priority Support', starter: false, core: false, teams: false, enterprise: true },
+                  { name: 'SLA Guarantee', starter: false, core: false, teams: false, enterprise: true },
+                ].map((feature, index) => (
                   <tr key={index} className="border-b border-gray-100">
-                    <td className="py-4 px-4 text-gray-900">{row[0]}</td>
-                    {row.slice(1).map((cell, cellIndex) => (
-                      <td key={cellIndex} className="text-center py-4 px-4 text-gray-900">
-                        {cell === '✓' ? (
+                    <td className="py-4 px-4 text-gray-700">{feature.name}</td>
+                    <td className="py-4 px-4 text-center">
+                      {typeof feature.starter === 'boolean' ? (
+                        feature.starter ? (
                           <svg className="w-5 h-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
-                        ) : cell === '✗' ? (
+                        ) : (
                           <svg className="w-5 h-5 text-gray-300 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                           </svg>
+                        )
+                      ) : (
+                        <span className="text-gray-600">{feature.starter}</span>
+                      )}
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      {typeof feature.core === 'boolean' ? (
+                        feature.core ? (
+                          <svg className="w-5 h-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
                         ) : (
-                          <span className="text-gray-700">{cell}</span>
-                        )}
-                      </td>
-                    ))}
+                          <svg className="w-5 h-5 text-gray-300 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        )
+                      ) : (
+                        <span className="text-gray-600">{feature.core}</span>
+                      )}
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      {typeof feature.teams === 'boolean' ? (
+                        feature.teams ? (
+                          <svg className="w-5 h-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        ) : (
+                          <svg className="w-5 h-5 text-gray-300 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        )
+                      ) : (
+                        <span className="text-gray-600">{feature.teams}</span>
+                      )}
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      {typeof feature.enterprise === 'boolean' ? (
+                        feature.enterprise ? (
+                          <svg className="w-5 h-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        ) : (
+                          <svg className="w-5 h-5 text-gray-300 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        )
+                      ) : (
+                        <span className="text-gray-600">{feature.enterprise}</span>
+                      )}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -270,28 +322,31 @@ export default function PricingPage() {
       {/* FAQ Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Frequently asked questions</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <p className="text-gray-600">Everything you need to know about our pricing</p>
+          </div>
           
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors"
+                  className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-gray-50 transition-colors"
                 >
                   <span className="font-medium text-gray-900">{faq.question}</span>
-                  <svg
-                    className={`w-5 h-5 text-gray-500 transition-transform ${openFaq === index ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
+                  <svg 
+                    className={`w-5 h-5 text-gray-500 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} 
+                    fill="none" 
+                    stroke="currentColor" 
                     viewBox="0 0 24 24"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
                 {openFaq === index && (
-                  <div className="px-5 pb-5 text-gray-600 bg-gray-50">
-                    {faq.answer}
+                  <div className="px-6 pb-4">
+                    <p className="text-gray-600">{faq.answer}</p>
                   </div>
                 )}
               </div>
@@ -301,19 +356,21 @@ export default function PricingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f8fafc] dark:bg-[#0a0a0a]">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            Ready to get started?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Join thousands of creators building with lovecode.dev.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/" className="px-8 py-4 text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg" style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Ready to get started?</h2>
+          <p className="text-gray-600 dark:text-gray-400 mb-8">Join thousands of creators building with λforge.</p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link 
+              href="/signup"
+              className="px-6 py-3 bg-gray-900 text-white font-semibold rounded-xl hover:bg-gray-800 transition-colors"
+            >
               Start Building Free
             </Link>
-            <Link href="/enterprise" className="px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-xl hover:bg-white/50 transition-colors">
+            <Link 
+              href="/contact"
+              className="px-6 py-3 border border-gray-300 text-gray-700 font-semibold rounded-xl hover:bg-white transition-colors"
+            >
               Contact Sales
             </Link>
           </div>

@@ -24,7 +24,7 @@ const solutions = [
       'Scalable architecture',
     ],
     testimonial: {
-      quote: "We built our entire MVP in 2 weeks. lovecode.dev saved us months of development time.",
+      quote: "We built our entire MVP in 2 weeks. λforge saved us months of development time.",
       author: "Jason Park",
       role: "Founder, TechStartup"
     }
@@ -39,8 +39,8 @@ const solutions = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
       </svg>
     ),
-    gradient: 'from-purple-500 to-pink-500',
-    bgGradient: 'from-purple-50 to-pink-50',
+    gradient: 'from-purple-500 to-gray-900',
+    bgGradient: 'from-purple-50 to-gray-50',
     features: [
       'Pixel-perfect implementation',
       'Interactive prototypes',
@@ -112,16 +112,16 @@ export default function SolutionsPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <div className="inline-block px-4 py-2 bg-pink-50 text-pink-600 rounded-full text-sm font-medium mb-4">
+          <div className="inline-block px-4 py-2 bg-gray-50 text-gray-900 rounded-full text-sm font-medium mb-4">
             Solutions
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
             Built for how
-            <span className="bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)', WebkitBackgroundClip: 'text' }}> you </span>
+            <span className="bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', WebkitBackgroundClip: 'text' }}> you </span>
             work
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Whether you&apos;re a founder, designer, or marketer, lovecode.dev adapts to your workflow and helps you ship faster.
+            Whether you&apos;re a founder, designer, or marketer, λforge adapts to your workflow and helps you ship faster.
           </p>
         </div>
       </section>
@@ -183,13 +183,13 @@ export default function SolutionsPage() {
             Not sure which solution fits?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Start building for free and discover how lovecode.dev can transform your workflow.
+            Start building for free and discover how λforge can transform your workflow.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/"
               className="px-8 py-4 text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg"
-              style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}
+              style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}
             >
               Start Building Free
             </Link>

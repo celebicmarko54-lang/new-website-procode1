@@ -103,8 +103,8 @@ export default function ChangelogPage() {
 
   const getVersionColor = (type: string) => {
     switch (type) {
-      case 'major': return 'bg-gradient-to-r from-[#ec4899] to-[#be185d]';
-      case 'minor': return 'bg-gradient-to-r from-pink-400 to-fuchsia-500';
+      case 'major': return 'bg-gradient-to-r from-[#1f2937] to-[#374151]';
+      case 'minor': return 'bg-gradient-to-r from-gray-700 to-gray-500';
       case 'patch': return 'bg-gradient-to-r from-gray-500 to-gray-600';
       default: return 'bg-gray-500';
     }
@@ -118,21 +118,21 @@ export default function ChangelogPage() {
         {/* Hero Section */}
         <div className="max-w-4xl mx-auto px-6 mb-12">
           <div className="text-center">
-            <div className="inline-block px-4 py-2 bg-pink-50 text-pink-600 rounded-full text-sm font-medium mb-4">
+            <div className="inline-block px-4 py-2 bg-gray-50 text-gray-900 rounded-full text-sm font-medium mb-4">
               Updates
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               Changelog
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              All the latest updates, improvements, and fixes to lovecode.dev
+              All the latest updates, improvements, and fixes to Procode
             </p>
           </div>
         </div>
 
         {/* Subscribe to Updates */}
         <div className="max-w-4xl mx-auto px-6 mb-12">
-          <div className="bg-gradient-to-r from-pink-50 to-fuchsia-50 rounded-2xl border border-pink-100 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="bg-gradient-to-r from-gray-50 to-gray-50 rounded-2xl border border-gray-100 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
               <h3 className="font-semibold text-gray-900">Stay up to date</h3>
               <p className="text-sm text-gray-600">Get notified when we release new features</p>
@@ -141,9 +141,9 @@ export default function ChangelogPage() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 sm:w-64 px-4 py-2 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                className="flex-1 sm:w-64 px-4 py-2 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
               />
-              <button className="px-4 py-2 text-white rounded-xl hover:opacity-90 transition-all font-medium" style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}>
+              <button className="px-4 py-2 text-white rounded-xl hover:opacity-90 transition-all font-medium" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}>
                 Subscribe
               </button>
             </div>

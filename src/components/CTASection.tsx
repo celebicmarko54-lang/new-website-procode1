@@ -22,9 +22,9 @@ export default function CTASection() {
   return (
     <section className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Background gradient blobs */}
-      <div className="absolute top-1/3 left-10 w-40 h-40 bg-pink-200/30 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/3 right-10 w-56 h-56 bg-purple-200/30 rounded-full blur-3xl" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl" />
+      <div className="absolute top-1/3 left-10 w-40 h-40 bg-gray-200/30 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/3 right-10 w-56 h-56 bg-gray-200/30 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gray-200/20 rounded-full blur-3xl" />
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
         {/* Badge */}
@@ -36,12 +36,12 @@ export default function CTASection() {
         {/* Heading */}
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
           Ready to build something
-          <span className="block bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)', WebkitBackgroundClip: 'text' }}>amazing?</span>
+          <span className="block text-gray-900">amazing?</span>
         </h2>
 
         {/* Description */}
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Join thousands of creators who are already building the future with lovecode.dev. 
+          Join thousands of creators who are already building the future with Procode. 
           Start for free, no credit card required.
         </p>
 
@@ -85,7 +85,7 @@ export default function CTASection() {
         {/* Watch Demo Button */}
         <button 
           onClick={() => setShowVideo(true)}
-          className="px-8 py-4 bg-white border border-gray-200 text-gray-700 rounded-full hover:border-purple-300 hover:bg-purple-50 transition-colors font-medium text-lg inline-flex items-center gap-2 shadow-sm"
+          className="px-8 py-4 bg-white border border-gray-200 text-gray-700 rounded-full hover:border-gray-300 hover:bg-gray-50 transition-colors font-medium text-lg inline-flex items-center gap-2 shadow-sm"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />

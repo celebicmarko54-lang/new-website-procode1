@@ -95,7 +95,7 @@ export default function LovecodeSection() {
   return (
     <section 
       ref={containerRef}
-      className="relative w-full h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden bg-white"
+      className="relative w-full h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden bg-[#f8fafc] dark:bg-[#0a0a0a] transition-colors"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -130,21 +130,21 @@ export default function LovecodeSection() {
         })}
       </div>
 
-      {/* LOVECODE text with staggered emerge animation */}
+      {/* λforge.dev text with staggered emerge animation */}
       <h2 
-        className="relative z-10 text-[18vw] md:text-[16vw] lg:text-[14vw] font-black tracking-tight whitespace-nowrap select-none flex"
+        className="relative z-10 text-[18vw] md:text-[16vw] lg:text-[14vw] tracking-tight whitespace-nowrap select-none flex items-baseline"
       >
-        {'LOVECODE'.split('').map((letter, index) => (
+        <span 
+          className="animate-emerge-letter italic text-gray-900 dark:text-white"
+          style={{ animationDelay: '0s' }}
+        >
+          λ
+        </span>
+        {'forge.dev'.split('').map((letter, index) => (
           <span 
             key={index}
-            className="animate-emerge-letter"
-            style={{
-              background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 60%, #E74C3C 100%)',
-              WebkitBackgroundClip: 'text',
-              backgroundClip: 'text',
-              color: 'transparent',
-              animationDelay: `${index * 0.1}s`,
-            }}
+            className="animate-emerge-letter font-medium text-gray-900 dark:text-white"
+            style={{ animationDelay: `${(index + 1) * 0.1}s` }}
           >
             {letter}
           </span>
@@ -157,7 +157,7 @@ export default function LovecodeSection() {
           isInView ? 'opacity-0' : 'opacity-60'
         }`}
       >
-        <p className="text-gray-500 text-sm font-medium tracking-wide">Move your mouse to explore</p>
+        <p className="text-gray-500 dark:text-gray-400 text-sm font-medium tracking-wide">Move your mouse to explore</p>
       </div>
     </section>
   );

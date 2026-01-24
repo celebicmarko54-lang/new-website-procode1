@@ -22,10 +22,10 @@ export default function SignupPage() {
   const [error, setError] = useState('');
 
   const avatarColors = [
-    'from-orange-400 to-pink-500',
+    'from-orange-400 to-gray-900',
     'from-blue-400 to-violet-500',
     'from-green-400 to-cyan-500',
-    'from-purple-400 to-pink-500',
+    'from-purple-400 to-gray-900',
     'from-yellow-400 to-orange-500',
     'from-rose-400 to-red-500',
   ];
@@ -54,7 +54,7 @@ export default function SignupPage() {
     }
 
     // Check if email already exists
-    const users = JSON.parse(localStorage.getItem('lovecode.dev_users') || '[]');
+    const users = JSON.parse(localStorage.getItem('Procode_users') || '[]');
     if (users.some((u: { email: string }) => u.email === formData.email)) {
       setError('An account with this email already exists');
       return;
@@ -85,7 +85,7 @@ export default function SignupPage() {
     await new Promise(resolve => setTimeout(resolve, 1000));
 
     // Save user to localStorage
-    const users = JSON.parse(localStorage.getItem('lovecode.dev_users') || '[]');
+    const users = JSON.parse(localStorage.getItem('Procode_users') || '[]');
     const newUser = {
       id: Date.now(),
       name: formData.name,
@@ -97,10 +97,10 @@ export default function SignupPage() {
       createdAt: new Date().toISOString(),
     };
     users.push(newUser);
-    localStorage.setItem('lovecode.dev_users', JSON.stringify(users));
+    localStorage.setItem('Procode_users', JSON.stringify(users));
 
     // Set as current user
-    localStorage.setItem('lovecode.dev_current_user', JSON.stringify(newUser));
+    localStorage.setItem('Procode_current_user', JSON.stringify(newUser));
 
     setIsLoading(false);
     router.push('/dashboard');
@@ -110,7 +110,7 @@ export default function SignupPage() {
     <div className="min-h-screen flex bg-white">
       {/* Left Side - Decorative */}
       <div className="hidden lg:flex flex-1 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#ec4899] via-[#db2777] to-[#be185d]">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1f2937] via-[#db2777] to-[#374151]">
           <div className="absolute inset-0 opacity-30">
             <div className="absolute top-20 left-20 w-72 h-72 bg-white/20 rounded-full blur-3xl"></div>
             <div className="absolute bottom-20 right-20 w-96 h-96 bg-white/20 rounded-full blur-3xl"></div>
@@ -157,12 +157,12 @@ export default function SignupPage() {
         <div className="max-w-md w-full">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 mb-8">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#ec4899] to-[#be185d] flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#1f2937] to-[#374151] flex items-center justify-center">
               <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
               </svg>
             </div>
-            <span className="text-xl font-semibold text-gray-900">lovecode.dev</span>
+            <span className="text-xl font-semibold text-gray-900">Procode</span>
           </Link>
 
           {/* Progress Steps */}
@@ -175,7 +175,7 @@ export default function SignupPage() {
                       ? 'text-white' 
                       : 'bg-gray-100 text-gray-400'
                   }`}
-                  style={step >= s ? { background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' } : {}}
+                  style={step >= s ? { background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' } : {}}
                 >
                   {step > s ? (
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -184,7 +184,7 @@ export default function SignupPage() {
                   ) : s}
                 </div>
                 {s < 3 && (
-                  <div className={`w-12 h-1 mx-2 rounded ${step > s ? 'bg-pink-500' : 'bg-gray-200'}`}></div>
+                  <div className={`w-12 h-1 mx-2 rounded ${step > s ? 'bg-gray-900' : 'bg-gray-200'}`}></div>
                 )}
               </div>
             ))}
@@ -213,7 +213,7 @@ export default function SignupPage() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all text-gray-900"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all text-gray-900"
                     placeholder="John Doe"
                   />
                 </div>
@@ -228,7 +228,7 @@ export default function SignupPage() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all text-gray-900"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all text-gray-900"
                     placeholder="you@example.com"
                   />
                 </div>
@@ -244,7 +244,7 @@ export default function SignupPage() {
                       required
                       value={formData.password}
                       onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                      className="w-full px-4 py-3 pr-12 rounded-xl border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all text-gray-900"
+                      className="w-full px-4 py-3 pr-12 rounded-xl border border-gray-300 focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all text-gray-900"
                       placeholder="••••••••"
                     />
                     <button
@@ -277,7 +277,7 @@ export default function SignupPage() {
                       required
                       value={formData.confirmPassword}
                       onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
-                      className="w-full px-4 py-3 pr-12 rounded-xl border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all text-gray-900"
+                      className="w-full px-4 py-3 pr-12 rounded-xl border border-gray-300 focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all text-gray-900"
                       placeholder="••••••••"
                     />
                     <button
@@ -302,7 +302,7 @@ export default function SignupPage() {
                 <button
                   type="submit"
                   className="w-full py-3 px-4 text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg"
-                  style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}
+                  style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}
                 >
                   Continue
                 </button>
@@ -310,7 +310,7 @@ export default function SignupPage() {
 
               <p className="mt-6 text-center text-sm text-gray-600">
                 Already have an account?{' '}
-                <Link href="/login" className="font-semibold text-pink-600 hover:text-pink-700">
+                <Link href="/login" className="font-semibold text-gray-900 hover:text-gray-700">
                   Log in
                 </Link>
               </p>
@@ -337,7 +337,7 @@ export default function SignupPage() {
                       type="button"
                       onClick={() => setFormData({ ...formData, avatar: color })}
                       className={`w-full aspect-square rounded-2xl bg-gradient-to-br ${color} flex items-center justify-center text-white text-2xl font-bold transition-all hover:scale-105 ${
-                        formData.avatar === color ? 'ring-4 ring-pink-500 ring-offset-2' : ''
+                        formData.avatar === color ? 'ring-4 ring-gray-900 ring-offset-2' : ''
                       }`}
                     >
                       {formData.name.charAt(0).toUpperCase()}
@@ -356,7 +356,7 @@ export default function SignupPage() {
                   <button
                     type="submit"
                     className="flex-1 py-3 px-4 text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg"
-                    style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}
+                    style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}
                   >
                     Continue
                   </button>
@@ -384,7 +384,7 @@ export default function SignupPage() {
                         onClick={() => setFormData({ ...formData, role: role.id })}
                         className={`p-4 rounded-xl border-2 text-left transition-all ${
                           formData.role === role.id
-                            ? 'border-pink-500 bg-pink-50'
+                            ? 'border-gray-900 bg-gray-50'
                             : 'border-gray-200 hover:border-gray-300'
                         }`}
                       >
@@ -404,7 +404,7 @@ export default function SignupPage() {
                     id="company"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none transition-all text-gray-900"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all text-gray-900"
                     placeholder="Acme Inc."
                   />
                 </div>
@@ -421,7 +421,7 @@ export default function SignupPage() {
                     type="submit"
                     disabled={isLoading}
                     className="flex-1 py-3 px-4 text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-                    style={{ background: 'linear-gradient(135deg, #E91E8C 0%, #9B59B6 100%)' }}
+                    style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}
                   >
                     {isLoading ? (
                       <span className="flex items-center justify-center gap-2">
@@ -440,9 +440,9 @@ export default function SignupPage() {
 
               <p className="mt-6 text-center text-xs text-gray-500">
                 By creating an account, you agree to our{' '}
-                <Link href="/terms" className="text-pink-600 hover:underline">Terms of Service</Link>
+                <Link href="/terms" className="text-gray-900 hover:underline">Terms of Service</Link>
                 {' '}and{' '}
-                <Link href="/privacy" className="text-pink-600 hover:underline">Privacy Policy</Link>
+                <Link href="/privacy" className="text-gray-900 hover:underline">Privacy Policy</Link>
               </p>
             </>
           )}

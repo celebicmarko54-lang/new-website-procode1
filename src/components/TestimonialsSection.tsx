@@ -2,25 +2,25 @@
 
 const testimonials = [
   {
-    quote: "lovecode.dev completely transformed how we prototype. What used to take weeks now takes hours.",
+    quote: "Procode completely transformed how we prototype. What used to take weeks now takes hours.",
     author: "Sarah Chen",
     role: "Product Manager at TechCorp",
     avatar: "SC",
-    gradient: 'from-pink-400 to-rose-500',
+    gradient: 'from-gray-700 to-gray-900',
   },
   {
-    quote: "I built my entire startup's MVP using lovecode.dev. The AI understands exactly what I need.",
+    quote: "I built my entire startup's MVP using Procode. The AI understands exactly what I need.",
     author: "Mike Rodriguez",
     role: "Founder of StartupX",
     avatar: "MR",
-    gradient: 'from-purple-400 to-violet-500',
+    gradient: 'from-gray-700 to-gray-900',
   },
   {
     quote: "As a designer, I can now bring my designs to life without waiting for developers.",
     author: "Emma Wilson",
     role: "Senior Designer at DesignStudio",
     avatar: "EW",
-    gradient: 'from-blue-400 to-cyan-500',
+    gradient: 'from-gray-700 to-gray-900',
   },
 ];
 
@@ -31,14 +31,14 @@ export default function TestimonialsSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="px-4 py-1.5 text-sm bg-pink-100 text-pink-700 rounded-full mb-4 inline-block font-medium">
+          <span className="px-4 py-1.5 text-sm bg-gray-100 text-gray-700 rounded-full mb-4 inline-block font-medium">
             Testimonials
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Loved by creators worldwide
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Join thousands of developers, designers, and entrepreneurs who are building with lovecode.dev.
+            Join thousands of developers, designers, and entrepreneurs who are building with Procode.
           </p>
         </div>
 
@@ -51,7 +51,7 @@ export default function TestimonialsSection() {
             >
               {/* Quote */}
               <div className="mb-6">
-                <svg className="w-8 h-8 text-purple-300 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8 text-gray-300 mb-4" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
                 <p className="text-gray-700 text-lg leading-relaxed">
@@ -74,7 +74,7 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Stats Bar */}
-        <div className="mt-16 p-8 bg-gradient-to-r from-purple-50 via-pink-50 to-orange-50 rounded-2xl border border-gray-100">
+        <div className="mt-16 p-8 bg-gray-50 rounded-2xl border border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <p className="text-4xl font-bold text-gray-900 mb-1">500K+</p>

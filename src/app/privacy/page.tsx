@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
         <div className="max-w-4xl mx-auto px-6">
           {/* Header */}
           <div className="mb-12 text-center">
-            <div className="inline-block px-4 py-2 bg-pink-50 text-pink-600 rounded-full text-sm font-medium mb-4">
+            <div className="inline-block px-4 py-2 bg-gray-50 text-gray-900 rounded-full text-sm font-medium mb-4">
               Legal
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Privacy Policy</h1>
@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
             <section className="mb-10">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Introduction</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Welcome to lovecode.dev. We respect your privacy and are committed to protecting your personal data. 
+                Welcome to Procode. We respect your privacy and are committed to protecting your personal data. 
                 This privacy policy will inform you about how we look after your personal data when you visit our 
                 website and use our services, and tell you about your privacy rights and how the law protects you.
               </p>
@@ -140,8 +140,8 @@ export default function PrivacyPolicyPage() {
                 If you have any questions about this privacy policy or our privacy practices, please contact us at:
               </p>
               <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-                <p className="text-gray-700 font-medium">lovecode.dev Inc.</p>
-                <p className="text-gray-600">Email: privacy@lovecode.dev.dev</p>
+                <p className="text-gray-700 font-medium">Procode Inc.</p>
+                <p className="text-gray-600">Email: privacy@Procode.dev</p>
                 <p className="text-gray-600">Address: 123 Innovation Street, San Francisco, CA 94105</p>
               </div>
             </section>
