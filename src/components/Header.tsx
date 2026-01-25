@@ -23,35 +23,90 @@ export default function Header() {
 
             {/* Main Navigation */}
             <nav className="hidden md:flex items-center gap-1">
+              {/* Products Dropdown */}
               <div
                 className="relative"
-                onMouseEnter={() => setActiveDropdown('solutions')}
+                onMouseEnter={() => setActiveDropdown('products')}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 <button className="px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors flex items-center gap-1">
-                  Solutions
-                  <svg className={`w-4 h-4 transition-transform ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  Products
+                  <svg className={`w-4 h-4 transition-transform ${activeDropdown === 'products' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                {activeDropdown === 'solutions' && (
+                {activeDropdown === 'products' && (
                   <div className="absolute top-full left-0 mt-1 w-48 rounded-lg bg-white dark:bg-black border border-gray-200 dark:border-gray-800 shadow-lg py-1 animate-fade-in">
-                    <Link href="/solutions/founders" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Startups & MVPs</Link>
-                    <Link href="/solutions/designers" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Creative Teams</Link>
-                    <Link href="/solutions/marketers" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Growth & Marketing</Link>
-                    <Link href="/solutions/prototyping" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Rapid Prototypes</Link>
-                    <Link href="/solutions/web3" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Web3 & Blockchain</Link>
+                    <Link href="/products/agent" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Agent</Link>
+                    <Link href="/products/design" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Design</Link>
+                    <Link href="/products/database" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Database</Link>
+                    <Link href="/products/publish" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Publish</Link>
+                    <Link href="/products/security" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Security</Link>
+                    <Link href="/products/integrations" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Integrations</Link>
+                    <Link href="/products/mobile" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Mobile</Link>
                   </div>
                 )}
               </div>
-              <Link href="/enterprise" className="px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
-                Enterprise
-              </Link>
+              
+              {/* For Work Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setActiveDropdown('forwork')}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <button className="px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors flex items-center gap-1">
+                  For Work
+                  <svg className={`w-4 h-4 transition-transform ${activeDropdown === 'forwork' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {activeDropdown === 'forwork' && (
+                  <div className="absolute top-full left-0 mt-1 w-64 rounded-lg bg-white dark:bg-black border border-gray-200 dark:border-gray-800 shadow-lg py-2 animate-fade-in">
+                    <Link href="/teams" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">
+                      <span className="font-medium">Teams</span>
+                      <span className="block text-xs text-gray-400">Build together with your team</span>
+                    </Link>
+                    <Link href="/enterprise" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">
+                      <span className="font-medium">Enterprise</span>
+                      <span className="block text-xs text-gray-400">Enterprise-grade security & controls</span>
+                    </Link>
+                    <div className="border-t border-gray-200 dark:border-gray-700 my-2 mx-4"></div>
+                    <div className="px-4 py-1 text-xs font-medium text-gray-400 uppercase">Use Cases</div>
+                    <Link href="/usecases/business-apps" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Business Apps</Link>
+                    <Link href="/usecases/mobile-apps" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Mobile Apps</Link>
+                    <Link href="/usecases/rapid-prototyping" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Rapid Prototyping</Link>
+                  </div>
+                )}
+              </div>
+
+              {/* Resources Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setActiveDropdown('resources')}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <button className="px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors flex items-center gap-1">
+                  Resources
+                  <svg className={`w-4 h-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {activeDropdown === 'resources' && (
+                  <div className="absolute top-full left-0 mt-1 w-48 rounded-lg bg-white dark:bg-black border border-gray-200 dark:border-gray-800 shadow-lg py-1 animate-fade-in">
+                    <Link href="/docs" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Documentation</Link>
+                    <Link href="/community" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Community</Link>
+                    <Link href="/gallery" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Gallery</Link>
+                    <Link href="/blog" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Blog</Link>
+                    <Link href="/changelog" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Changelog</Link>
+                  </div>
+                )}
+              </div>
+
               <Link href="/pricing" className="px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
                 Pricing
               </Link>
-              <Link href="/community" className="px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
-                Community
+              <Link href="/careers" className="px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
+                Careers
               </Link>
             </nav>
           </div>
@@ -100,10 +155,27 @@ export default function Header() {
         {showMobileMenu && (
           <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700 animate-fade-in">
             <nav className="flex flex-col gap-2">
-              <Link href="/solutions" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Solutions</Link>
+              <div className="px-3 py-2 text-xs font-medium text-gray-400 uppercase">Products</div>
+              <Link href="/products/agent" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Agent</Link>
+              <Link href="/products/design" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Design</Link>
+              <Link href="/products/database" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Database</Link>
+              <Link href="/products/publish" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Publish</Link>
+              <Link href="/products/security" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Security</Link>
+              <Link href="/products/integrations" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Integrations</Link>
+              <Link href="/products/mobile" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Mobile</Link>
+              <div className="border-t border-gray-200 dark:border-gray-700 my-2"></div>
+              <div className="px-3 py-2 text-xs font-medium text-gray-400 uppercase">For Work</div>
+              <Link href="/teams" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Teams</Link>
               <Link href="/enterprise" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Enterprise</Link>
-              <Link href="/pricing" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Pricing</Link>
+              <div className="border-t border-gray-200 dark:border-gray-700 my-2"></div>
+              <div className="px-3 py-2 text-xs font-medium text-gray-400 uppercase">Resources</div>
+              <Link href="/docs" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Documentation</Link>
               <Link href="/community" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Community</Link>
+              <Link href="/gallery" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Gallery</Link>
+              <Link href="/blog" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Blog</Link>
+              <div className="border-t border-gray-200 dark:border-gray-700 my-2"></div>
+              <Link href="/pricing" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Pricing</Link>
+              <Link href="/careers" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Careers</Link>
               <div className="flex items-center gap-2 px-3 py-2">
                 <LanguageSelector />
                 <ThemeToggle />

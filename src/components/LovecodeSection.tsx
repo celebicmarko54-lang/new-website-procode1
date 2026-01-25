@@ -2,28 +2,40 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 
-// Snake trail cards with AGNTIX template images
-const snakeCards = [
-  { id: 2, image: '/templates/2.jpg' },
-  { id: 3, image: '/templates/3.jpg' },
-  { id: 4, image: '/templates/4.jpg' },
-  { id: 5, image: '/templates/5.jpg' },
-  { id: 6, image: '/templates/6.jpg' },
-  { id: 7, image: '/templates/7.jpg' },
-  { id: 8, image: '/templates/8.jpg' },
-  { id: 9, image: '/templates/9.jpg' },
+// All available template images
+const allTemplates = [
+  '/templates/2.jpg',
+  '/templates/3.jpg',
+  '/templates/4.jpg',
+  '/templates/5.jpg',
+  '/templates/6.jpg',
+  '/templates/7.jpg',
+  '/templates/8.jpg',
+  '/templates/9.jpg',
 ];
+
+// Shuffle array function
+const shuffleArray = <T,>(array: T[]): T[] => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
 
 export default function LovecodeSection() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [currentImages, setCurrentImages] = useState<string[]>(() => shuffleArray(allTemplates));
   const [positions, setPositions] = useState<Array<{ x: number; y: number }>>(() => 
-    snakeCards.map(() => ({ x: 0, y: 0 }))
+    allTemplates.map(() => ({ x: 0, y: 0 }))
   );
   const [isInView, setIsInView] = useState(false);
   const [isMouseMoving, setIsMouseMoving] = useState(false);
   const mousePos = useRef({ x: 0, y: 0 });
   const animationRef = useRef<number | null>(null);
   const mouseStopTimeout = useRef<NodeJS.Timeout | null>(null);
+  const wasMouseMoving = useRef(false);
 
   // Smooth snake animation loop
   const animate = useCallback(() => {
@@ -61,6 +73,14 @@ export default function LovecodeSection() {
       }
     };
   }, [animate]);
+
+  // Shuffle images when mouse starts moving again after stopping
+  useEffect(() => {
+    if (isMouseMoving && !wasMouseMoving.current) {
+      setCurrentImages(shuffleArray(allTemplates));
+    }
+    wasMouseMoving.current = isMouseMoving;
+  }, [isMouseMoving]);
 
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;
@@ -101,15 +121,15 @@ export default function LovecodeSection() {
     >
       {/* Snake Trail Cards */}
       <div className="absolute inset-0 z-20 overflow-hidden pointer-events-none">
-        {snakeCards.map((card, index) => {
+        {currentImages.map((image, index) => {
           const pos = positions[index];
           const scale = Math.max(0.3, 1 - index * 0.04);
           const opacity = (isInView && isMouseMoving) ? Math.max(0.2, 1 - index * 0.05) : 0;
-          const zIndex = snakeCards.length - index;
+          const zIndex = currentImages.length - index;
           
           return (
             <div
-              key={card.id}
+              key={`${image}-${index}`}
               className="absolute w-[200px] h-[140px] rounded-xl overflow-hidden shadow-2xl"
               style={{
                 transform: `translate(${pos.x}px, ${pos.y}px) scale(${scale})`,
@@ -120,7 +140,7 @@ export default function LovecodeSection() {
               }}
             >
               <img 
-                src={card.image} 
+                src={image} 
                 alt="" 
                 className="w-full h-full object-cover"
                 loading="lazy"
