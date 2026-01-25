@@ -24,7 +24,7 @@ const solutions = [
       'Scalable architecture',
     ],
     testimonial: {
-      quote: "We built our entire MVP in 2 weeks. λforge saved us months of development time.",
+      quote: "We built our entire MVP in 2 weeks. AppNode saved us months of development time.",
       author: "Jason Park",
       role: "Founder, TechStartup"
     }
@@ -121,7 +121,7 @@ export default function SolutionsPage() {
             work
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Whether you&apos;re a founder, designer, or marketer, λforge adapts to your workflow and helps you ship faster.
+            Whether you&apos;re a founder, designer, or marketer, AppNode adapts to your workflow and helps you ship faster.
           </p>
         </div>
       </section>
@@ -183,7 +183,7 @@ export default function SolutionsPage() {
             Not sure which solution fits?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Start building for free and discover how λforge can transform your workflow.
+            Start building for free and discover how AppNode can transform your workflow.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

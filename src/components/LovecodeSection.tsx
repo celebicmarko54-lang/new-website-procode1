@@ -95,7 +95,7 @@ export default function LovecodeSection() {
   return (
     <section 
       ref={containerRef}
-      className="relative w-full h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden bg-[#f8fafc] dark:bg-[#0a0a0a] transition-colors"
+      className="relative w-full h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden bg-[#f8fafc] dark:bg-black transition-colors"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -110,7 +110,7 @@ export default function LovecodeSection() {
           return (
             <div
               key={card.id}
-              className="absolute w-[140px] h-[100px] rounded-xl overflow-hidden shadow-2xl"
+              className="absolute w-[200px] h-[140px] rounded-xl overflow-hidden shadow-2xl"
               style={{
                 transform: `translate(${pos.x}px, ${pos.y}px) scale(${scale})`,
                 opacity,
@@ -130,21 +130,15 @@ export default function LovecodeSection() {
         })}
       </div>
 
-      {/* λforge.dev text with staggered emerge animation */}
+      {/* AppNode text with staggered emerge animation */}
       <h2 
         className="relative z-10 text-[18vw] md:text-[16vw] lg:text-[14vw] tracking-tight whitespace-nowrap select-none flex items-baseline"
       >
-        <span 
-          className="animate-emerge-letter italic text-gray-900 dark:text-white"
-          style={{ animationDelay: '0s' }}
-        >
-          λ
-        </span>
-        {'forge.dev'.split('').map((letter, index) => (
+        {'AppNode'.split('').map((letter, index) => (
           <span 
             key={index}
             className="animate-emerge-letter font-medium text-gray-900 dark:text-white"
-            style={{ animationDelay: `${(index + 1) * 0.1}s` }}
+            style={{ animationDelay: `${index * 0.1}s` }}
           >
             {letter}
           </span>

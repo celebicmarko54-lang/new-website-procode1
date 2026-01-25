@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 const plans = [
   {
     name: 'Starter',
-    description: 'Build anything, right in λforge.',
+    description: 'Build anything, right in AppNode.',
     price: '$0',
     period: 'forever',
     cta: 'Start Building Free',
@@ -27,24 +27,24 @@ const plans = [
     description: 'Create, launch, and share your apps.',
     price: '$25',
     period: 'per month',
-    cta: 'Join λforge Core',
+    cta: 'Join AppNode Core',
     ctaStyle: 'bg-gray-900 text-white hover:bg-gray-800',
     features: [
       '$25 of monthly credits',
       'Access to latest AI models',
       'Publish and host live apps',
       'Autonomous long builds',
-      'Remove "Made with λforge" badge',
+      'Remove "Made with AppNode" badge',
       'Pay-as-you-go for additional usage',
     ],
     popular: true,
   },
   {
     name: 'Teams',
-    description: 'Bring the power of λforge to your entire team.',
+    description: 'Bring the power of AppNode to your entire team.',
     price: '$40',
     period: 'per user, per month',
-    cta: 'Join λforge Teams',
+    cta: 'Join AppNode Teams',
     ctaStyle: 'bg-gray-900 text-white hover:bg-gray-800',
     features: [
       'Everything in Core',
@@ -81,7 +81,7 @@ const plans = [
 const faqs = [
   {
     question: 'What are AI credits and how do they work?',
-    answer: 'AI credits are used to power the AI features in λforge. Each action like generating code, making edits, or running builds uses credits. Free users get daily credits that reset, while paid plans include monthly credit allowances.',
+    answer: 'AI credits are used to power the AI features in AppNode. Each action like generating code, making edits, or running builds uses credits. Free users get daily credits that reset, while paid plans include monthly credit allowances.',
   },
   {
     question: 'Can I change plans later?',
@@ -93,11 +93,11 @@ const faqs = [
   },
   {
     question: 'Is there a free trial for paid plans?',
-    answer: 'The Starter plan is free forever with daily AI credits. This allows you to fully experience λforge before upgrading to a paid plan.',
+    answer: 'The Starter plan is free forever with daily AI credits. This allows you to fully experience AppNode before upgrading to a paid plan.',
   },
   {
     question: 'What happens when I run out of credits?',
-    answer: 'On paid plans, you can continue using λforge with pay-as-you-go pricing. On the free plan, your credits reset daily so you can continue building the next day.',
+    answer: 'On paid plans, you can continue using AppNode with pay-as-you-go pricing. On the free plan, your credits reset daily so you can continue building the next day.',
   },
   {
     question: 'Do you offer refunds?',
@@ -120,14 +120,14 @@ export default function PricingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#0a0a0a] transition-colors">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-black transition-colors">
       <Header />
       
       {/* Hero Section */}
       <section className="relative pt-28 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-black mb-6">
             <svg className="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
@@ -147,11 +147,11 @@ export default function PricingPage() {
             <button
               onClick={() => setBillingPeriod(billingPeriod === 'monthly' ? 'yearly' : 'monthly')}
               className={`relative w-14 h-7 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:focus:ring-offset-[#0a0a0a] ${
-                billingPeriod === 'yearly' ? 'bg-gray-900 dark:bg-white' : 'bg-gray-200 dark:bg-gray-700'
+                billingPeriod === 'yearly' ? 'bg-gray-900 dark:bg-white' : 'bg-gray-200 dark:bg-black'
               }`}
             >
               <span
-                className={`absolute top-0.5 left-0.5 w-6 h-6 bg-white dark:bg-gray-900 rounded-full shadow transition-transform ${
+                className={`absolute top-0.5 left-0.5 w-6 h-6 bg-white dark:bg-black rounded-full shadow transition-transform ${
                   billingPeriod === 'yearly' ? 'translate-x-7' : ''
                 }`}
               />
@@ -173,8 +173,8 @@ export default function PricingPage() {
                 key={index}
                 className={`relative rounded-2xl p-6 ${
                   plan.popular
-                    ? 'bg-white dark:bg-gray-800 border-2 border-gray-900 dark:border-white shadow-xl'
-                    : 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700'
+                    ? 'bg-white dark:bg-black border-2 border-gray-900 dark:border-white shadow-xl'
+                    : 'bg-white dark:bg-black border border-gray-200 dark:border-gray-800'
                 }`}
               >
                 {plan.popular && (
@@ -216,7 +216,7 @@ export default function PricingPage() {
       </section>
 
       {/* Compare Plans */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Compare Plans</h2>
@@ -356,10 +356,10 @@ export default function PricingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f8fafc] dark:bg-[#0a0a0a]">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f8fafc] dark:bg-black">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Ready to get started?</h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">Join thousands of creators building with λforge.</p>
+          <p className="text-gray-600 dark:text-gray-400 mb-8">Join thousands of creators building with AppNode.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link 
               href="/signup"

@@ -27,7 +27,7 @@ export default function LanguageSelector() {
     <div ref={dropdownRef} className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-gray-300 dark:hover:border-gray-600 transition-all"
+        className="flex items-center gap-1.5 h-9 px-3 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded-lg hover:border-gray-300 dark:hover:border-gray-700 transition-all"
         aria-expanded={isOpen}
         aria-haspopup="true"
       >
@@ -47,14 +47,14 @@ export default function LanguageSelector() {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full right-0 mt-2 w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-1 z-50 animate-fade-in">
+        <div className="absolute top-full right-0 mt-2 w-48 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded-lg shadow-lg py-1 z-50 animate-fade-in">
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => handleSelect(lang)}
               className={`w-full flex items-center justify-between px-4 py-2.5 text-sm transition-colors ${
                 language.code === lang.code 
-                  ? 'bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white' 
+                  ? 'bg-gray-50 dark:bg-black text-gray-900 dark:text-white' 
                   : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white'
               }`}
             >

@@ -45,7 +45,6 @@ const footerLinks: FooterSection[] = [
       { name: 'Terms of Service', href: '/terms' },
       { name: 'Platform rules', href: '/rules' },
       { name: 'Report abuse', href: '/report' },
-      { name: 'Report security concerns', href: '/security-report' },
     ],
   },
   {
@@ -100,13 +99,13 @@ export default function Footer() {
         <div className="relative">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 relative z-10">
             {/* Cloud-like floating container */}
-            <div className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6 lg:p-8 border border-gray-200/80 dark:border-gray-700/80">
+            <div className="relative bg-white dark:bg-black rounded-2xl shadow-sm p-6 lg:p-8 border border-gray-200/80 dark:border-gray-800/80">
               {/* Main Footer Content */}
               <div className="flex flex-col lg:flex-row gap-8">
                 {/* Logo Section */}
                 <div className="lg:w-44 flex-shrink-0">
-                  <h2 className="text-xl text-gray-900 dark:text-white mb-3 tracking-tight">
-                    <span className="italic">λ</span><span className="font-medium">forge.dev</span>
+                  <h2 className="text-xl text-gray-900 dark:text-white mb-3 tracking-tight font-medium">
+                    AppNode
                   </h2>
                   <p className="text-gray-500 dark:text-gray-400 text-xs mb-4">
                     Build production-ready apps with AI
@@ -130,14 +129,14 @@ export default function Footer() {
                       </button>
                       
                       {langDropdownOpen && (
-                        <div className="absolute bottom-full left-0 mb-2 w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-1 z-50 animate-fade-in">
+                        <div className="absolute bottom-full left-0 mb-2 w-48 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded-lg shadow-lg py-1 z-50 animate-fade-in">
                           {languages.map((lang) => (
                             <button
                               key={lang.code}
                               onClick={() => handleSelectLanguage(lang)}
                               className={`w-full flex items-center justify-between px-4 py-2.5 text-sm transition-colors ${
                                 language.code === lang.code 
-                                  ? 'bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white' 
+                                  ? 'bg-gray-50 dark:bg-black text-gray-900 dark:text-white' 
                                   : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white'
                               }`}
                             >
@@ -225,7 +224,7 @@ export default function Footer() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-full text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:border-gray-400 dark:hover:border-gray-500 hover:bg-gray-50 dark:hover:bg-gray-600 transition-all text-sm font-medium"
+                      className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded-full text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:border-gray-400 dark:hover:border-gray-700 hover:bg-gray-50 dark:hover:bg-black transition-all text-sm font-medium"
                     >
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                         <path d={social.icon}/>
@@ -243,7 +242,7 @@ export default function Footer() {
               <div className="mt-6 pt-4 border-t border-gray-100 dark:border-gray-700">
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                   <p className="text-xs text-gray-400 dark:text-gray-500">
-                    © {new Date().getFullYear()} λforge.dev · All rights reserved
+                    © {new Date().getFullYear()} AppNode · All rights reserved
                   </p>
                 </div>
               </div>

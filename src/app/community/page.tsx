@@ -98,7 +98,7 @@ export default function CommunityPage() {
   });
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#0a0a0a] transition-colors">
+    <div className="min-h-screen bg-white dark:bg-black transition-colors">
       <Header />
       
       {/* Hero Section */}
@@ -123,7 +123,7 @@ export default function CommunityPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search projects, templates, and creators..."
-                className="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent text-base bg-white/80 dark:bg-gray-800/80 dark:text-white backdrop-blur-sm"
+                className="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent text-base bg-white/80 dark:bg-black/80 dark:text-white backdrop-blur-sm"
               />
             </div>
           </div>
@@ -161,7 +161,7 @@ export default function CommunityPage() {
                     className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
                       selectedCategory === category
                         ? 'text-white shadow-md'
-                        : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                        : 'bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-900'
                     }`}
                     style={selectedCategory === category ? { background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' } : {}}
                   >
@@ -175,7 +175,7 @@ export default function CommunityPage() {
                 {filteredProjects.map((project) => (
                   <div
                     key={project.id}
-                    className="group bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-all hover:-translate-y-0.5 cursor-pointer"
+                    className="group bg-white dark:bg-black rounded-xl border border-gray-100 dark:border-gray-800 overflow-hidden hover:shadow-lg transition-all hover:-translate-y-0.5 cursor-pointer"
                   >
                     {/* Project Preview */}
                     <div className="aspect-[4/3] relative overflow-hidden">
@@ -199,12 +199,12 @@ export default function CommunityPage() {
                         </h3>
                         <span className={`px-2 py-0.5 rounded text-[10px] font-medium ${
                           project.category === 'Website' ? 'bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300' :
-                          project.category === 'Personal' ? 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300' :
-                          project.category === 'Internal Tools' ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300' :
+                          project.category === 'Personal' ? 'bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300' :
+                          project.category === 'Internal Tools' ? 'bg-blue-100 dark:bg-black text-blue-700 dark:text-blue-300' :
                           project.category === 'Consumer App' ? 'bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300' :
                           project.category === 'B2B App' ? 'bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300' :
                           project.category === 'Prototype' ? 'bg-yellow-100 dark:bg-yellow-900/50 text-yellow-700 dark:text-yellow-300' :
-                          'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
+                          'bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300'
                         }`}>
                           {project.category}
                         </span>
@@ -226,7 +226,7 @@ export default function CommunityPage() {
             {/* Sidebar */}
             <div className="lg:w-80 space-y-6">
               {/* Top Contributors */}
-              <div className="bg-gray-50 dark:bg-gray-800/50 rounded-2xl p-5">
+              <div className="bg-gray-50 dark:bg-black/50 rounded-2xl p-5">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-4">🏆 Top Contributors</h3>
                 <div className="space-y-3">
                   {topContributors.map((contributor, index) => (
@@ -248,7 +248,7 @@ export default function CommunityPage() {
               </div>
 
               {/* Discussions */}
-              <div className="bg-gray-50 dark:bg-gray-800/50 rounded-2xl p-5">
+              <div className="bg-gray-50 dark:bg-black/50 rounded-2xl p-5">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-4">💬 Recent Discussions</h3>
                 <div className="space-y-4">
                   {discussions.map((discussion) => (
@@ -257,7 +257,7 @@ export default function CommunityPage() {
                         {discussion.title}
                       </p>
                       <div className="flex items-center gap-2 mt-1">
-                        <span className="text-xs px-2 py-0.5 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded">{discussion.category}</span>
+                        <span className="text-xs px-2 py-0.5 bg-gray-200 dark:bg-black text-gray-600 dark:text-gray-300 rounded">{discussion.category}</span>
                         <span className="text-xs text-gray-500 dark:text-gray-400">{discussion.replies} replies</span>
                       </div>
                     </div>

@@ -12,7 +12,7 @@ export default function SupportPage() {
     {
       name: 'Getting Started',
       articles: 12,
-      description: 'New to λforge? Start here',
+      description: 'New to AppNode? Start here',
       icon: (
         <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -83,20 +83,20 @@ export default function SupportPage() {
 
   const faqs = [
     {
-      question: 'What is λforge?',
-      answer: 'λforge is an AI-powered platform that lets you build web applications by simply describing what you want in natural language.',
+      question: 'What is AppNode?',
+      answer: 'AppNode is an AI-powered platform that lets you build web applications by simply describing what you want in natural language.',
     },
     {
       question: 'Do I need coding experience?',
-      answer: 'No! λforge is designed for everyone. You can create professional apps without writing any code.',
+      answer: 'No! AppNode is designed for everyone. You can create professional apps without writing any code.',
     },
     {
       question: 'Can I export my code?',
       answer: 'Yes, you can export your complete project code at any time. You own everything you create.',
     },
     {
-      question: 'What technologies does λforge use?',
-      answer: 'λforge generates modern React/Next.js applications with Tailwind CSS styling.',
+      question: 'What technologies does AppNode use?',
+      answer: 'AppNode generates modern React/Next.js applications with Tailwind CSS styling.',
     },
     {
       question: 'Is there a free plan?',

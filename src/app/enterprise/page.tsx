@@ -72,7 +72,7 @@ const logos = [
 
 const testimonials = [
   {
-    quote: "λforge has transformed how our team builds internal tools. What used to take weeks now takes hours.",
+    quote: "AppNode has transformed how our team builds internal tools. What used to take weeks now takes hours.",
     author: "Sarah Chen",
     role: "VP of Engineering",
     company: "TechCorp",
@@ -114,14 +114,14 @@ export default function EnterprisePage() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#0a0a0a]">
+    <div className="min-h-screen bg-white dark:bg-black">
       <Header />
       
       {/* Hero Section */}
       <section className="relative pt-28 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full border border-gray-200/60 dark:border-gray-700 mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/80 dark:bg-black/80 backdrop-blur-sm rounded-full border border-gray-200/60 dark:border-gray-800 mb-6">
               <span className="text-xs font-semibold text-white bg-gradient-to-r from-[#ff6b6b] to-[#ee5a24] px-2.5 py-0.5 rounded-full">ENTERPRISE</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
@@ -137,7 +137,7 @@ export default function EnterprisePage() {
               <a href="#contact" className="px-8 py-4 text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}>
                 Contact Sales
               </a>
-              <Link href="/pricing" className="px-8 py-4 bg-white/80 dark:bg-gray-800 backdrop-blur-sm border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-white dark:hover:bg-gray-700 transition-colors">
+              <Link href="/pricing" className="px-8 py-4 bg-white/80 dark:bg-black backdrop-blur-sm border border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-white dark:hover:bg-black transition-colors">
                 View Pricing
               </Link>
             </div>
@@ -191,7 +191,7 @@ export default function EnterprisePage() {
             {features.map((feature, index) => (
               <div 
                 key={index}
-                className="p-6 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-lg transition-all bg-white dark:bg-gray-800 group"
+                className="p-6 rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-lg transition-all bg-white dark:bg-black group"
               >
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1f2937] to-[#374151] text-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   {feature.icon}
@@ -212,7 +212,7 @@ export default function EnterprisePage() {
               Loved by enterprise teams
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              See what leaders are saying about λforge Enterprise.
+              See what leaders are saying about AppNode Enterprise.
             </p>
           </div>
           
@@ -220,7 +220,7 @@ export default function EnterprisePage() {
             {testimonials.map((testimonial, index) => (
               <div 
                 key={index}
-                className="p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm"
+                className="p-6 rounded-2xl bg-white dark:bg-black border border-gray-200 dark:border-gray-800 shadow-sm"
               >
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -268,7 +268,7 @@ export default function EnterprisePage() {
               <p className="text-gray-600 dark:text-gray-400">We&apos;ve received your message and will be in touch soon.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 shadow-sm">
+            <form onSubmit={handleSubmit} className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-800 p-8 shadow-sm">
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Full Name</label>
@@ -277,7 +277,7 @@ export default function EnterprisePage() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-800 bg-white dark:bg-black text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent"
                     placeholder="John Smith"
                   />
                 </div>
@@ -288,7 +288,7 @@ export default function EnterprisePage() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-800 bg-white dark:bg-black text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent"
                     placeholder="john@company.com"
                   />
                 </div>
@@ -301,7 +301,7 @@ export default function EnterprisePage() {
                     required
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-800 bg-white dark:bg-black text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent"
                     placeholder="Acme Inc."
                   />
                 </div>
@@ -311,7 +311,7 @@ export default function EnterprisePage() {
                     required
                     value={formData.teamSize}
                     onChange={(e) => setFormData({ ...formData, teamSize: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent bg-white dark:bg-black text-gray-900 dark:text-white"
                   >
                     <option value="">Select team size</option>
                     <option value="1-10">1-10 employees</option>
@@ -328,7 +328,7 @@ export default function EnterprisePage() {
                   rows={4}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent resize-none"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-800 bg-white dark:bg-black text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent resize-none"
                   placeholder="Tell us about your use case and requirements..."
                 />
               </div>

@@ -22,7 +22,7 @@ export default function BillingPage() {
   const [selectedPlan, setSelectedPlan] = useState('');
 
   useEffect(() => {
-    const currentUser = localStorage.getItem('λforge_current_user');
+    const currentUser = localStorage.getItem('AppNode_current_user');
     if (!currentUser) {
       router.push('/login');
       return;

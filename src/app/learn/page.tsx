@@ -208,16 +208,16 @@ export default function LearnPage() {
       case 'Beginner':
         return 'bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300';
       case 'Intermediate':
-        return 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300';
+        return 'bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300';
       case 'Advanced':
         return 'bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300';
       default:
-        return 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300';
+        return 'bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300';
     }
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#0a0a0a]">
+    <div className="min-h-screen bg-white dark:bg-black">
       <Header />
       
       {/* Hero Section */}
@@ -302,7 +302,7 @@ export default function LearnPage() {
       </section>
 
       {/* Learning Paths */}
-      <section className="py-20 px-6 bg-gray-50 dark:bg-gray-900">
+      <section className="py-20 px-6 bg-gray-50 dark:bg-black">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -317,7 +317,7 @@ export default function LearnPage() {
             {learningPaths.map((path, index) => (
               <div
                 key={index}
-                className="group p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="group p-6 bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
                 <div className="w-14 h-14 bg-gradient-to-r from-gray-100 to-gray-100 dark:from-gray-700 dark:to-gray-700 rounded-2xl flex items-center justify-center text-gray-900 dark:text-gray-100 mb-4 group-hover:scale-110 transition-transform">
                   {path.icon}
@@ -353,10 +353,10 @@ export default function LearnPage() {
             {courses.map((course, index) => (
               <div
                 key={index}
-                className="group bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 overflow-hidden hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="group bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
                 <div className="h-40 bg-gradient-to-br from-gray-100 to-gray-100 dark:from-gray-700 dark:to-gray-700 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur rounded-2xl flex items-center justify-center text-gray-900 dark:text-gray-100 group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 bg-white/80 dark:bg-black/80 backdrop-blur rounded-2xl flex items-center justify-center text-gray-900 dark:text-gray-100 group-hover:scale-110 transition-transform">
                     {course.icon}
                   </div>
                 </div>

@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "λforge.dev - Build something Magical",
-  description: "Create apps and websites by chatting with AI. Build beautiful, functional applications in minutes with λforge.dev.",
+  title: "AppNode - Build something Magical",
+  description: "Create apps and websites by chatting with AI. Build beautiful, functional applications in minutes with AppNode.",
   keywords: ["AI", "web development", "app builder", "no-code", "React", "Next.js"],
 };
 

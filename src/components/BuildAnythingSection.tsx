@@ -224,7 +224,7 @@ export default function BuildAnythingSection() {
   }, [isPaused]);
 
   return (
-    <section className="py-24 overflow-hidden bg-[#f8fafc] dark:bg-[#0a0a0a] transition-colors">
+    <section className="py-24 overflow-hidden bg-[#f8fafc] dark:bg-black transition-colors">
       {/* Header */}
       <div className="max-w-7xl mx-auto px-6 mb-16 pl-12 md:pl-20">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
@@ -252,7 +252,7 @@ export default function BuildAnythingSection() {
               className="group relative w-[280px] flex-shrink-0"
             >
               {/* Card */}
-              <div className="relative rounded-2xl overflow-hidden bg-slate-900 dark:bg-gray-800 border border-white/10 dark:border-gray-700 transition-all duration-300 group-hover:border-white/30 group-hover:scale-[1.02] shadow-xl">
+              <div className="relative rounded-2xl overflow-hidden bg-slate-900 dark:bg-black border border-white/10 dark:border-gray-800 transition-all duration-300 group-hover:border-white/30 group-hover:scale-[1.02] shadow-xl">
                 {/* Header with icon and name */}
                 <div className="absolute top-0 left-0 right-0 z-20 p-4 flex items-center gap-3 bg-gradient-to-b from-black/60 to-transparent">
                   <div className={`w-9 h-9 rounded-xl bg-gradient-to-br ${category.gradient} flex items-center justify-center text-white shadow-lg`}>
@@ -282,7 +282,7 @@ export default function BuildAnythingSection() {
       {/* Bottom scrollbar indicator */}
       <div className="max-w-7xl mx-auto px-6 mt-8">
         <div className="flex items-center gap-4">
-          <div className="flex-1 h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+          <div className="flex-1 h-1 bg-gray-200 dark:bg-black rounded-full overflow-hidden">
             <div className="h-full w-1/3 bg-gradient-to-r from-gray-400 to-gray-300 dark:from-gray-500 dark:to-gray-600 rounded-full" />
           </div>
         </div>

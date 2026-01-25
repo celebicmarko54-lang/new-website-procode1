@@ -9,7 +9,7 @@
 }
 
 .dark {
-  --background: #0a0a0a;
+  --background: #000000;
   --foreground: #f1f5f9;
 }
 
@@ -41,7 +41,7 @@ body {
 
 /* Dark mode scrollbar styling */
 .dark ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #000000;
 }
 
 .dark ::-webkit-scrollbar-thumb {
