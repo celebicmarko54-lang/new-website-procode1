@@ -64,10 +64,10 @@ const features = [
 ];
 
 const logos = [
-  { name: 'Stripe', image: '/logos/stripe.png' },
-  { name: 'Google', image: '/logos/google.png' },
-  { name: 'Slack', image: '/logos/slack.png' },
-  { name: 'Anthropic', image: '/logos/Antropic.png' },
+  { name: 'Stripe', image: '/logos/stripe.png', darkInvert: false },
+  { name: 'Google', image: '/logos/google.png', darkInvert: false },
+  { name: 'Slack', image: '/logos/slack.png', darkInvert: true },
+  { name: 'Anthropic', image: '/logos/Antropic.png', darkInvert: true },
 ];
 
 const testimonials = [
@@ -152,8 +152,8 @@ export default function EnterprisePage() {
           <div className="relative w-full">
             <div className="flex items-center gap-20 animate-marquee whitespace-nowrap">
               {[...logos, ...logos, ...logos, ...logos, ...logos, ...logos].map((logo, index) => (
-                <div key={`${logo.name}-${index}`} className="flex-shrink-0 h-10 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
-                  <img src={logo.image} alt={logo.name} className="h-8 w-auto object-contain" />
+                <div key={`${logo.name}-${index}`} className="flex-shrink-0 w-24 h-10 flex items-center justify-center">
+                  <img src={logo.image} alt={logo.name} className={`h-8 max-w-full object-contain ${logo.darkInvert ? 'dark:invert' : ''}`} />
                 </div>
               ))}
             </div>

@@ -5,119 +5,65 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-const plans = [
+const creditPackages = [
   {
-    name: 'Starter',
-    description: 'Build anything, right in AppNode.',
-    price: '$0',
-    period: 'forever',
-    cta: 'Start Building Free',
-    ctaStyle: 'border border-gray-300 text-gray-700 hover:bg-gray-50',
-    features: [
-      'Free daily AI credits',
-      'Free credits for integrations',
-      'Publish 1 app',
-      'Community support',
-      'Public projects only',
-    ],
+    credits: 10,
+    price: '$4.99',
+    perCredit: '$0.50 per credit',
     popular: false,
   },
   {
-    name: 'Core',
-    description: 'Create, launch, and share your apps.',
-    price: '$25',
-    period: 'per month',
-    cta: 'Join AppNode Core',
-    ctaStyle: 'bg-gray-900 text-white hover:bg-gray-800',
-    features: [
-      '$25 of monthly credits',
-      'Access to latest AI models',
-      'Publish and host live apps',
-      'Autonomous long builds',
-      'Remove "Made with AppNode" badge',
-      'Pay-as-you-go for additional usage',
-    ],
+    credits: 50,
+    price: '$19.99',
+    perCredit: '$0.40 per credit',
     popular: true,
   },
   {
-    name: 'Teams',
-    description: 'Bring the power of AppNode to your entire team.',
-    price: '$40',
-    period: 'per user, per month',
-    cta: 'Join AppNode Teams',
-    ctaStyle: 'bg-gray-900 text-white hover:bg-gray-800',
-    features: [
-      'Everything in Core',
-      '$40/mo in usage credits included',
-      'Upfront credits on annual plan',
-      '50 Viewer seats',
-      'Centralized billing',
-      'Role-based access control',
-      'Private deployments',
-    ],
+    credits: 100,
+    price: '$34.99',
+    perCredit: '$0.35 per credit',
     popular: false,
   },
   {
-    name: 'Enterprise',
-    description: 'Meet your security and performance needs.',
-    price: 'Custom',
-    period: 'pricing',
-    cta: 'Contact Sales',
-    ctaStyle: 'border border-gray-300 text-gray-700 hover:bg-gray-50',
-    features: [
-      'Everything in Teams',
-      'Custom Viewer Seats',
-      'SSO & SAML',
-      'SCIM provisioning',
-      'Custom data retention',
-      'Dedicated infrastructure',
-      'Priority support & SLA',
-      'Custom training',
-    ],
+    credits: 500,
+    price: '$149.99',
+    perCredit: '$0.30 per credit',
     popular: false,
   },
+];
+
+const freeFeatures = [
+  '2 free app generations',
+  'Full access to all templates',
+  'Live preview and deployment',
+  'Export to GitHub',
 ];
 
 const faqs = [
   {
-    question: 'What are AI credits and how do they work?',
-    answer: 'AI credits are used to power the AI features in AppNode. Each action like generating code, making edits, or running builds uses credits. Free users get daily credits that reset, while paid plans include monthly credit allowances.',
+    question: 'What can I do with credits?',
+    answer: 'Each credit allows you to generate one complete app. You can use credits to create web apps, mobile apps, landing pages, and more using our AI-powered builder.',
   },
   {
-    question: 'Can I change plans later?',
-    answer: 'Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately and we\'ll prorate any differences.',
+    question: 'Do credits expire?',
+    answer: 'No! Your purchased credits never expire. Use them whenever you want, at your own pace.',
+  },
+  {
+    question: 'Can I get a refund?',
+    answer: 'Yes, we offer a 30-day money-back guarantee for unused credits. Contact our support team for assistance.',
   },
   {
     question: 'What payment methods do you accept?',
-    answer: 'We accept all major credit cards (Visa, Mastercard, American Express) and PayPal. Enterprise customers can also pay via invoice.',
+    answer: 'We accept all major credit cards (Visa, Mastercard, American Express) and PayPal.',
   },
   {
-    question: 'Is there a free trial for paid plans?',
-    answer: 'The Starter plan is free forever with daily AI credits. This allows you to fully experience AppNode before upgrading to a paid plan.',
-  },
-  {
-    question: 'What happens when I run out of credits?',
-    answer: 'On paid plans, you can continue using AppNode with pay-as-you-go pricing. On the free plan, your credits reset daily so you can continue building the next day.',
-  },
-  {
-    question: 'Do you offer refunds?',
-    answer: 'Yes, we offer a 30-day money-back guarantee for all paid plans. If you\'re not satisfied, contact us for a full refund.',
+    question: 'How does the free tier work?',
+    answer: 'Every new user gets 2 free generations to try AppNode. No credit card required to get started!',
   },
 ];
 
 export default function PricingPage() {
-  const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'yearly'>('monthly');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-
-  const getPrice = (plan: typeof plans[0]) => {
-    if (plan.price === 'Custom' || plan.price === '$0') return plan.price;
-    const monthlyPrice = parseInt(plan.price.replace('$', ''));
-    if (billingPeriod === 'yearly') {
-      const yearlyPrice = Math.floor(monthlyPrice * 12 * 0.8);
-      return `$${Math.floor(yearlyPrice / 12)}`;
-    }
-    return plan.price;
-  };
 
   return (
     <div className="min-h-screen bg-[#f8fafc] dark:bg-black transition-colors">
@@ -125,9 +71,9 @@ export default function PricingPage() {
       
       {/* Hero Section */}
       <section className="relative pt-28 pb-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-black mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 mb-6">
             <svg className="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
@@ -135,208 +81,110 @@ export default function PricingPage() {
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
-            A fraction of the cost of hiring developers
+            Simple Credit-Based Pricing
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
-            Why spend $100k+ on developers when you can build everything yourself? Start free, upgrade when you&apos;re ready.
+            Pay only for what you use. No subscriptions, no hidden fees.
           </p>
-          
-          {/* Billing Toggle */}
-          <div className="flex items-center justify-center gap-4 mb-12">
-            <span className={`text-sm font-medium ${billingPeriod === 'monthly' ? 'text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400'}`}>Monthly</span>
-            <button
-              onClick={() => setBillingPeriod(billingPeriod === 'monthly' ? 'yearly' : 'monthly')}
-              className={`relative w-14 h-7 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:focus:ring-offset-[#0a0a0a] ${
-                billingPeriod === 'yearly' ? 'bg-gray-900 dark:bg-white' : 'bg-gray-200 dark:bg-black'
-              }`}
-            >
-              <span
-                className={`absolute top-0.5 left-0.5 w-6 h-6 bg-white dark:bg-black rounded-full shadow transition-transform ${
-                  billingPeriod === 'yearly' ? 'translate-x-7' : ''
-                }`}
-              />
-            </button>
-            <span className={`text-sm font-medium ${billingPeriod === 'yearly' ? 'text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400'}`}>
-              Yearly
-              <span className="ml-1.5 px-2 py-0.5 bg-green-100 text-green-700 text-xs font-semibold rounded-full">Save $60</span>
-            </span>
+
+          {/* Credit Info */}
+          <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800 shadow-sm">
+            <svg className="w-5 h-5 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">1 credit = 1 generation</span>
           </div>
         </div>
       </section>
 
-      {/* Pricing Cards */}
+      {/* Free Tier Section */}
+      <section className="pb-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800 rounded-2xl p-8">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 bg-gray-100 dark:bg-gray-900 rounded-full flex items-center justify-center">
+                <svg className="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white">Free Tier</h3>
+            </div>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">Get started without a credit card</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {freeFeatures.map((feature, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <svg className="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-sm text-gray-700 dark:text-gray-300">{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Buy Credits Section */}
       <section className="pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {plans.map((plan, index) => (
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">Buy Credits</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {creditPackages.map((pkg, index) => (
               <div
                 key={index}
                 className={`relative rounded-2xl p-6 ${
-                  plan.popular
-                    ? 'bg-white dark:bg-black border-2 border-gray-900 dark:border-white shadow-xl'
-                    : 'bg-white dark:bg-black border border-gray-200 dark:border-gray-800'
+                  pkg.popular
+                    ? 'bg-white dark:bg-[#0a0a0a] border-2 border-gray-900 dark:border-white shadow-xl'
+                    : 'bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800'
                 }`}
               >
-                {plan.popular && (
+                {pkg.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="px-3 py-1 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-xs font-semibold rounded-full">
+                    <span className="px-3 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-semibold rounded-full">
                       Most Popular
                     </span>
                   </div>
                 )}
                 
-                <div className="mb-6">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{plan.name}</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">{plan.description}</p>
-                </div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{pkg.credits} Credits</h3>
+                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">{pkg.price}</div>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">{pkg.perCredit}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">{pkg.credits} credits</p>
                 
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-gray-900 dark:text-white">{getPrice(plan)}</span>
-                  <span className="text-gray-500 dark:text-gray-400 ml-2">{plan.period}</span>
-                </div>
-                
-                <button className={`w-full py-3 rounded-xl font-semibold transition-all mb-6 ${plan.ctaStyle}`}>
-                  {plan.cta}
+                <button className={`w-full py-3 rounded-full font-semibold transition-all flex items-center justify-center gap-2 ${
+                  pkg.popular
+                    ? 'bg-black dark:bg-white text-white dark:text-black hover:opacity-90 shadow-lg'
+                    : 'bg-black dark:bg-white text-white dark:text-black hover:opacity-90'
+                }`}>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                  Buy Now
                 </button>
-                
-                <ul className="space-y-3">
-                  {plan.features.map((feature, fIndex) => (
-                    <li key={fIndex} className="flex items-start gap-2">
-                      <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className="text-sm text-gray-700 dark:text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Compare Plans */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Compare Plans</h2>
-            <p className="text-gray-600 dark:text-gray-400">Find the perfect plan for your needs</p>
-          </div>
-          
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead>
-                <tr className="border-b border-gray-200 dark:border-gray-700">
-                  <th className="text-left py-4 px-4 font-semibold text-gray-900 dark:text-white">Feature</th>
-                  <th className="text-center py-4 px-4 font-semibold text-gray-900 dark:text-white">Starter</th>
-                  <th className="text-center py-4 px-4 font-semibold text-gray-900 dark:text-white">Core</th>
-                  <th className="text-center py-4 px-4 font-semibold text-gray-900 dark:text-white">Teams</th>
-                  <th className="text-center py-4 px-4 font-semibold text-gray-900 dark:text-white">Enterprise</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { name: 'AI Credits', starter: 'Daily free', core: '$25/mo', teams: '$40/mo', enterprise: 'Custom' },
-                  { name: 'Published Apps', starter: '1', core: 'Unlimited', teams: 'Unlimited', enterprise: 'Unlimited' },
-                  { name: 'Team Members', starter: '1', core: '1', teams: 'Unlimited', enterprise: 'Unlimited' },
-                  { name: 'Viewer Seats', starter: '-', core: '-', teams: '50', enterprise: 'Custom' },
-                  { name: 'Private Projects', starter: false, core: true, teams: true, enterprise: true },
-                  { name: 'Custom Domains', starter: false, core: true, teams: true, enterprise: true },
-                  { name: 'Remove Branding', starter: false, core: true, teams: true, enterprise: true },
-                  { name: 'Private Deployments', starter: false, core: false, teams: true, enterprise: true },
-                  { name: 'SSO & SAML', starter: false, core: false, teams: false, enterprise: true },
-                  { name: 'Dedicated Infrastructure', starter: false, core: false, teams: false, enterprise: true },
-                  { name: 'Priority Support', starter: false, core: false, teams: false, enterprise: true },
-                  { name: 'SLA Guarantee', starter: false, core: false, teams: false, enterprise: true },
-                ].map((feature, index) => (
-                  <tr key={index} className="border-b border-gray-100">
-                    <td className="py-4 px-4 text-gray-700">{feature.name}</td>
-                    <td className="py-4 px-4 text-center">
-                      {typeof feature.starter === 'boolean' ? (
-                        feature.starter ? (
-                          <svg className="w-5 h-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                        ) : (
-                          <svg className="w-5 h-5 text-gray-300 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                          </svg>
-                        )
-                      ) : (
-                        <span className="text-gray-600">{feature.starter}</span>
-                      )}
-                    </td>
-                    <td className="py-4 px-4 text-center">
-                      {typeof feature.core === 'boolean' ? (
-                        feature.core ? (
-                          <svg className="w-5 h-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                        ) : (
-                          <svg className="w-5 h-5 text-gray-300 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                          </svg>
-                        )
-                      ) : (
-                        <span className="text-gray-600">{feature.core}</span>
-                      )}
-                    </td>
-                    <td className="py-4 px-4 text-center">
-                      {typeof feature.teams === 'boolean' ? (
-                        feature.teams ? (
-                          <svg className="w-5 h-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                        ) : (
-                          <svg className="w-5 h-5 text-gray-300 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                          </svg>
-                        )
-                      ) : (
-                        <span className="text-gray-600">{feature.teams}</span>
-                      )}
-                    </td>
-                    <td className="py-4 px-4 text-center">
-                      {typeof feature.enterprise === 'boolean' ? (
-                        feature.enterprise ? (
-                          <svg className="w-5 h-5 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                        ) : (
-                          <svg className="w-5 h-5 text-gray-300 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                          </svg>
-                        )
-                      ) : (
-                        <span className="text-gray-600">{feature.enterprise}</span>
-                      )}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0a0a0a]">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-gray-600">Everything you need to know about our pricing</p>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Frequently Asked Questions</h2>
+            <p className="text-gray-600 dark:text-gray-400">Everything you need to know about our pricing</p>
           </div>
           
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
+              <div key={index} className="border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden bg-[#f8fafc] dark:bg-black">
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-gray-50 transition-colors"
+                  className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-gray-50 dark:hover:bg-gray-900/50 transition-colors"
                 >
-                  <span className="font-medium text-gray-900">{faq.question}</span>
+                  <span className="font-medium text-gray-900 dark:text-white">{faq.question}</span>
                   <svg 
-                    className={`w-5 h-5 text-gray-500 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} 
+                    className={`w-5 h-5 text-gray-500 dark:text-gray-400 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} 
                     fill="none" 
                     stroke="currentColor" 
                     viewBox="0 0 24 24"
@@ -346,7 +194,7 @@ export default function PricingPage() {
                 </button>
                 {openFaq === index && (
                   <div className="px-6 pb-4">
-                    <p className="text-gray-600">{faq.answer}</p>
+                    <p className="text-gray-600 dark:text-gray-400">{faq.answer}</p>
                   </div>
                 )}
               </div>
@@ -356,24 +204,16 @@ export default function PricingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f8fafc] dark:bg-black">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Ready to get started?</h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">Join thousands of creators building with AppNode.</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link 
-              href="/signup"
-              className="px-6 py-3 bg-gray-900 text-white font-semibold rounded-xl hover:bg-gray-800 transition-colors"
-            >
-              Start Building Free
-            </Link>
-            <Link 
-              href="/contact"
-              className="px-6 py-3 border border-gray-300 text-gray-700 font-semibold rounded-xl hover:bg-white transition-colors"
-            >
-              Contact Sales
-            </Link>
-          </div>
+          <p className="text-gray-600 dark:text-gray-400 mb-8">Start building with 2 free generations.</p>
+          <Link 
+            href="/signup"
+            className="inline-flex px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-full hover:opacity-90 transition-all shadow-lg"
+          >
+            Get Started Free
+          </Link>
         </div>
       </section>
 

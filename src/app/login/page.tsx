@@ -37,11 +37,11 @@ export default function LoginPage() {
     
     if (!existingUser) {
       users.push(oauthUser);
-      localStorage.setItem('Procode_users', JSON.stringify(users));
+      localStorage.setItem('AppNode_users', JSON.stringify(users));
     }
 
     // Set current user
-    localStorage.setItem('Procode_current_user', JSON.stringify(existingUser || oauthUser));
+    localStorage.setItem('AppNode_current_user', JSON.stringify(existingUser || oauthUser));
     
     setOauthLoading(null);
     router.push('/dashboard');
@@ -56,14 +56,14 @@ export default function LoginPage() {
     await new Promise(resolve => setTimeout(resolve, 1000));
 
     // Check if user exists in localStorage
-    const users = JSON.parse(localStorage.getItem('Procode_users') || '[]');
+    const users = JSON.parse(localStorage.getItem('AppNode_users') || '[]');
     const user = users.find((u: { email: string; password: string }) => 
       u.email === formData.email && u.password === formData.password
     );
 
     if (user) {
       // Set logged in user
-      localStorage.setItem('Procode_current_user', JSON.stringify(user));
+      localStorage.setItem('AppNode_current_user', JSON.stringify(user));
       router.push('/dashboard');
     } else {
       setError('Invalid email or password');
@@ -73,32 +73,32 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex bg-white">
+    <div className="min-h-screen flex bg-[#f8fafc] dark:bg-black transition-colors">
       {/* Left Side - Form */}
       <div className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 mb-8">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#1f2937] to-[#374151] flex items-center justify-center">
-              <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            <div className="w-8 h-8 rounded-lg bg-black dark:bg-white flex items-center justify-center">
+              <svg className="w-5 h-5 text-white dark:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <span className="text-xl font-semibold text-gray-900">Procode</span>
+            <span className="text-xl font-semibold text-gray-900 dark:text-white">AppNode</span>
           </Link>
 
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome back</h1>
-          <p className="text-gray-600 mb-8">Log in to your account to continue building</p>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Welcome back</h1>
+          <p className="text-gray-600 dark:text-gray-400 mb-8">Log in to your account to continue building</p>
 
           {error && (
-            <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl text-red-600 text-sm">
+            <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-red-600 dark:text-red-400 text-sm">
               {error}
             </div>
           )}
 
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1.5">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
                 Email address
               </label>
               <input
@@ -107,17 +107,17 @@ export default function LoginPage() {
                 required
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all text-gray-900"
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#0a0a0a] focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
                 placeholder="you@example.com"
               />
             </div>
 
             <div>
               <div className="flex items-center justify-between mb-1.5">
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="password" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                   Password
                 </label>
-                <Link href="/forgot-password" className="text-sm text-gray-900 hover:text-gray-700">
+                <Link href="/forgot-password" className="text-sm text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
                   Forgot password?
                 </Link>
               </div>
@@ -128,13 +128,13 @@ export default function LoginPage() {
                   required
                   value={formData.password}
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                  className="w-full px-4 py-3 pr-12 rounded-xl border border-gray-300 focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all text-gray-900"
+                  className="w-full px-4 py-3 pr-12 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#0a0a0a] focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
                   placeholder="••••••••"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-gray-500 hover:text-gray-700 transition-colors"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
                 >
                   {showPassword ? (
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -153,8 +153,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full py-3 px-4 text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-              style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}
+              className="w-full py-3 px-4 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-full hover:opacity-90 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? (
                 <span className="flex items-center justify-center gap-2">
@@ -173,10 +172,10 @@ export default function LoginPage() {
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-200"></div>
+                <div className="w-full border-t border-gray-200 dark:border-gray-800"></div>
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-4 bg-white text-gray-500">Or continue with</span>
+                <span className="px-4 bg-[#f8fafc] dark:bg-black text-gray-500 dark:text-gray-400">Or continue with</span>
               </div>
             </div>
 
@@ -184,7 +183,7 @@ export default function LoginPage() {
               <button 
                 onClick={() => handleOAuthLogin('google')}
                 disabled={oauthLoading !== null}
-                className="flex items-center justify-center gap-2 px-4 py-3 border border-gray-300 rounded-xl hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center justify-center gap-2 px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-full bg-white dark:bg-[#0a0a0a] hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {oauthLoading === 'google' ? (
                   <svg className="animate-spin w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24">
@@ -199,12 +198,12 @@ export default function LoginPage() {
                     <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                   </svg>
                 )}
-                <span className="text-sm font-medium text-gray-700">Google</span>
+                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Google</span>
               </button>
               <button 
                 onClick={() => handleOAuthLogin('github')}
                 disabled={oauthLoading !== null}
-                className="flex items-center justify-center gap-2 px-4 py-3 border border-gray-300 rounded-xl hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center justify-center gap-2 px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-full bg-white dark:bg-[#0a0a0a] hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {oauthLoading === 'github' ? (
                   <svg className="animate-spin w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24">
@@ -212,48 +211,66 @@ export default function LoginPage() {
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
                 ) : (
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 dark:text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                   </svg>
                 )}
-                <span className="text-sm font-medium text-gray-700">GitHub</span>
+                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">GitHub</span>
               </button>
             </div>
           </div>
 
-          <p className="mt-8 text-center text-sm text-gray-600">
+          <p className="mt-8 text-center text-sm text-gray-600 dark:text-gray-400">
             Don&apos;t have an account?{' '}
-            <Link href="/signup" className="font-semibold text-gray-900 hover:text-gray-700">
+            <Link href="/signup" className="font-semibold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
               Create account
             </Link>
           </p>
         </div>
       </div>
 
-      {/* Right Side - Image with Overlay */}
+      {/* Right Side - Decorative */}
       <div className="hidden lg:flex flex-1 relative overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&q=80')"
-          }}
-        />
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-900/70 to-purple-600/80" />
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-white/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-white/20 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 bg-black dark:bg-white">
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-20 left-20 w-72 h-72 bg-white dark:bg-black rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-20 w-96 h-96 bg-white dark:bg-black rounded-full blur-3xl"></div>
+          </div>
         </div>
-        <div className="relative z-10 flex flex-col items-center justify-center p-12 text-white">
-          <div className="max-w-2xl text-center">
-            <h2 className="text-6xl xl:text-7xl font-black mb-8 leading-[1.1] tracking-tight drop-shadow-lg">
-              <span className="block bg-gradient-to-r from-white via-white to-white/80 bg-clip-text">Build anything.</span>
-              <span className="block mt-2 bg-gradient-to-r from-white/90 via-yellow-100 to-white bg-clip-text italic">Faster than ever.</span>
+        <div className="relative z-10 flex flex-col items-center justify-center p-12 text-white dark:text-black">
+          <div className="max-w-md text-center">
+            <h2 className="text-4xl xl:text-5xl font-bold mb-6 leading-tight">
+              Build anything.<br/>Faster than ever.
             </h2>
-            <p className="text-2xl xl:text-3xl text-white/90 font-light tracking-wide drop-shadow-md">
-              The world&apos;s simplest way to build apps.
+            <p className="text-xl text-white/80 dark:text-black/70">
+              The world&apos;s simplest way to build apps with AI.
             </p>
+            <div className="mt-10 flex flex-col gap-4">
+              <div className="flex items-center gap-3 bg-white/10 dark:bg-black/10 backdrop-blur-sm rounded-xl p-4">
+                <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-black/20 flex items-center justify-center">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span>AI-powered development</span>
+              </div>
+              <div className="flex items-center gap-3 bg-white/10 dark:bg-black/10 backdrop-blur-sm rounded-xl p-4">
+                <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-black/20 flex items-center justify-center">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span>Ship in minutes, not months</span>
+              </div>
+              <div className="flex items-center gap-3 bg-white/10 dark:bg-black/10 backdrop-blur-sm rounded-xl p-4">
+                <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-black/20 flex items-center justify-center">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span>2 free generations to start</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

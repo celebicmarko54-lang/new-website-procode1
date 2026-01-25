@@ -21,7 +21,7 @@ const footerLinks: FooterSection[] = [
   {
     title: 'Company',
     links: [
-      { name: 'Careers', href: '/careers' },
+      { name: 'About', href: '/about' },
       { name: 'Enterprise', href: '/enterprise' },
       { name: 'Security', href: '/security' },
       { name: 'Pricing', href: '/pricing' },
@@ -45,12 +45,6 @@ const footerLinks: FooterSection[] = [
       { name: 'Terms of Service', href: '/terms' },
       { name: 'Platform rules', href: '/rules' },
       { name: 'Report abuse', href: '/report' },
-    ],
-  },
-  {
-    title: 'Community',
-    links: [
-      { name: 'Affiliates', href: '/affiliates' },
     ],
   },
 ];

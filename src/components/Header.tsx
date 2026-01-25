@@ -105,9 +105,6 @@ export default function Header() {
               <Link href="/pricing" className="px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
                 Pricing
               </Link>
-              <Link href="/careers" className="px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
-                Careers
-              </Link>
             </nav>
           </div>
 
@@ -175,7 +172,6 @@ export default function Header() {
               <Link href="/blog" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Blog</Link>
               <div className="border-t border-gray-200 dark:border-gray-700 my-2"></div>
               <Link href="/pricing" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Pricing</Link>
-              <Link href="/careers" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Careers</Link>
               <div className="flex items-center gap-2 px-3 py-2">
                 <LanguageSelector />
                 <ThemeToggle />
