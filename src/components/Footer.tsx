@@ -2,49 +2,49 @@
 
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
-import { useLanguage, languages, Language } from '@/context/LanguageContext';
+import { useLanguage, languages, Language, useTranslation } from '@/context/LanguageContext';
 import { useTheme } from '@/context/ThemeContext';
 
 interface FooterLink {
-  name: string;
+  nameKey: string;
   href: string;
   external?: boolean;
   action?: string;
 }
 
 interface FooterSection {
-  title: string;
+  titleKey: string;
   links: FooterLink[];
 }
 
 const footerLinks: FooterSection[] = [
   {
-    title: 'Company',
+    titleKey: 'footer.company',
     links: [
-      { name: 'About', href: '/about' },
-      { name: 'Enterprise', href: '/enterprise' },
-      { name: 'Security', href: '/security' },
-      { name: 'Pricing', href: '/pricing' },
+      { nameKey: 'footer.about', href: '/about' },
+      { nameKey: 'footer.enterprise', href: '/enterprise' },
+      { nameKey: 'footer.security', href: '/security' },
+      { nameKey: 'footer.pricing', href: '/pricing' },
     ],
   },
   {
-    title: 'Resources',
+    titleKey: 'footer.resources',
     links: [
-      { name: 'Learn', href: '/learn' },
-      { name: 'Guides', href: '/guides' },
-      { name: 'Videos', href: '/videos' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Support', href: '/support' },
+      { nameKey: 'footer.learn', href: '/learn' },
+      { nameKey: 'footer.guides', href: '/guides' },
+      { nameKey: 'footer.videos', href: '/videos' },
+      { nameKey: 'footer.blog', href: '/blog' },
+      { nameKey: 'footer.support', href: '/support' },
     ],
   },
   {
-    title: 'Legal',
+    titleKey: 'footer.legal',
     links: [
-      { name: 'Privacy policy', href: '/privacy' },
-      { name: 'Cookie settings', href: '/cookies' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Platform rules', href: '/rules' },
-      { name: 'Report abuse', href: '/report' },
+      { nameKey: 'footer.privacyPolicy', href: '/privacy' },
+      { nameKey: 'footer.cookieSettings', href: '/cookies' },
+      { nameKey: 'footer.termsOfService', href: '/terms' },
+      { nameKey: 'footer.platformRules', href: '/rules' },
+      { nameKey: 'footer.reportAbuse', href: '/report' },
     ],
   },
 ];
@@ -62,6 +62,7 @@ export default function Footer() {
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const { language, setLanguage } = useLanguage();
   const { theme, toggleTheme } = useTheme();
+  const { t } = useTranslation();
   const langDropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -74,7 +75,7 @@ export default function Footer() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const handleLinkClick = (link: { name: string; href: string; action?: string; external?: boolean }) => {
+  const handleLinkClick = (link: FooterLink) => {
     if (link.action === 'cookies') {
       setCookieModalOpen(true);
       return;
@@ -102,7 +103,7 @@ export default function Footer() {
                     AppNode
                   </h2>
                   <p className="text-gray-500 dark:text-gray-400 text-xs mb-4">
-                    Build production-ready apps with AI
+                    {t('footer.tagline')}
                   </p>
                   
                   {/* Language Selector and Theme Toggle */}
@@ -172,13 +173,13 @@ export default function Footer() {
                 {/* Footer Links Grid */}
                 <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
                   {footerLinks.map((section) => (
-                    <div key={section.title}>
+                    <div key={section.titleKey}>
                       <h3 className="text-xs font-semibold text-gray-900 dark:text-white tracking-wide mb-2 uppercase">
-                        {section.title}
+                        {t(section.titleKey)}
                       </h3>
                       <ul className="space-y-1">
                         {section.links.map((link) => (
-                          <li key={link.name}>
+                          <li key={link.nameKey}>
                             <Link
                               href={link.action ? '#' : link.href}
                               onClick={(e) => {
@@ -191,7 +192,7 @@ export default function Footer() {
                               rel={link.external ? 'noopener noreferrer' : undefined}
                               className="text-xs text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors flex items-center gap-1"
                             >
-                              {link.name}
+                              {t(link.nameKey)}
                               {link.external && (
                                 <svg className="w-2.5 h-2.5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -209,7 +210,7 @@ export default function Footer() {
               {/* Social Media Links Row - Easy to Connect */}
               <div className="mt-6 pt-4 border-t border-gray-100 dark:border-gray-700">
                 <h3 className="text-xs font-semibold text-gray-900 dark:text-white tracking-wide mb-3 text-center uppercase">
-                  Connect with us
+                  {t('footer.connectWithUs')}
                 </h3>
                 <div className="flex flex-wrap justify-center gap-3">
                   {socialMediaLinks.map((social) => (
@@ -236,7 +237,7 @@ export default function Footer() {
               <div className="mt-6 pt-4 border-t border-gray-100 dark:border-gray-700">
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                   <p className="text-xs text-gray-400 dark:text-gray-500">
-                    © {new Date().getFullYear()} AppNode · All rights reserved
+                    © {new Date().getFullYear()} AppNode · {t('footer.allRightsReserved')}
                   </p>
                 </div>
               </div>

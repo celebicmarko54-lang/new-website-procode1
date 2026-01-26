@@ -4,66 +4,33 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useTranslation } from '@/context/LanguageContext';
 
 const creditPackages = [
-  {
-    credits: 10,
-    price: '$4.99',
-    perCredit: '$0.50 per credit',
-    popular: false,
-  },
-  {
-    credits: 50,
-    price: '$19.99',
-    perCredit: '$0.40 per credit',
-    popular: true,
-  },
-  {
-    credits: 100,
-    price: '$34.99',
-    perCredit: '$0.35 per credit',
-    popular: false,
-  },
-  {
-    credits: 500,
-    price: '$149.99',
-    perCredit: '$0.30 per credit',
-    popular: false,
-  },
-];
-
-const freeFeatures = [
-  '2 free app generations',
-  'Full access to all templates',
-  'Live preview and deployment',
-  'Export to GitHub',
-];
-
-const faqs = [
-  {
-    question: 'What can I do with credits?',
-    answer: 'Each credit allows you to generate one complete app. You can use credits to create web apps, mobile apps, landing pages, and more using our AI-powered builder.',
-  },
-  {
-    question: 'Do credits expire?',
-    answer: 'No! Your purchased credits never expire. Use them whenever you want, at your own pace.',
-  },
-  {
-    question: 'Can I get a refund?',
-    answer: 'Yes, we offer a 30-day money-back guarantee for unused credits. Contact our support team for assistance.',
-  },
-  {
-    question: 'What payment methods do you accept?',
-    answer: 'We accept all major credit cards (Visa, Mastercard, American Express) and PayPal.',
-  },
-  {
-    question: 'How does the free tier work?',
-    answer: 'Every new user gets 2 free generations to try AppNode. No credit card required to get started!',
-  },
+  { credits: 10, price: '$4.99', perCredit: '$0.50', popular: false },
+  { credits: 50, price: '$19.99', perCredit: '$0.40', popular: true },
+  { credits: 100, price: '$34.99', perCredit: '$0.35', popular: false },
+  { credits: 500, price: '$149.99', perCredit: '$0.30', popular: false },
 ];
 
 export default function PricingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const { t } = useTranslation();
+  
+  const freeFeatures = [
+    t('pricing.freeTier.features.0') || '2 free app generations',
+    t('pricing.freeTier.features.1') || 'Full access to all templates',
+    t('pricing.freeTier.features.2') || 'Live preview and deployment',
+    t('pricing.freeTier.features.3') || 'Export to GitHub',
+  ];
+
+  const faqs = [
+    { question: t('pricing.faq.q1'), answer: t('pricing.faq.a1') },
+    { question: t('pricing.faq.q2'), answer: t('pricing.faq.a2') },
+    { question: t('pricing.faq.q3'), answer: t('pricing.faq.a3') },
+    { question: t('pricing.faq.q4'), answer: t('pricing.faq.a4') },
+    { question: t('pricing.faq.q5'), answer: t('pricing.faq.a5') },
+  ];
 
   return (
     <div className="min-h-screen bg-[#f8fafc] dark:bg-black transition-colors">
@@ -72,27 +39,25 @@ export default function PricingPage() {
       {/* Hero Section */}
       <section className="relative pt-28 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 mb-6">
             <svg className="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Pricing</span>
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('pricing.badge')}</span>
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
-            Simple Credit-Based Pricing
+            {t('pricing.title')}
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
-            Pay only for what you use. No subscriptions, no hidden fees.
+            {t('pricing.subtitle')}
           </p>
 
-          {/* Credit Info */}
           <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800 shadow-sm">
             <svg className="w-5 h-5 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
-            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">1 credit = 1 generation</span>
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('pricing.creditInfo')}</span>
           </div>
         </div>
       </section>
@@ -107,9 +72,9 @@ export default function PricingPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white">Free Tier</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white">{t('pricing.freeTier.title')}</h3>
             </div>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">Get started without a credit card</p>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">{t('pricing.freeTier.subtitle')}</p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {freeFeatures.map((feature, index) => (
                 <div key={index} className="flex items-center gap-2">
@@ -127,7 +92,7 @@ export default function PricingPage() {
       {/* Buy Credits Section */}
       <section className="pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">Buy Credits</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">{t('pricing.buyCredits')}</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {creditPackages.map((pkg, index) => (
               <div
@@ -141,15 +106,14 @@ export default function PricingPage() {
                 {pkg.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                     <span className="px-3 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-semibold rounded-full">
-                      Most Popular
+                      {t('pricing.mostPopular')}
                     </span>
                   </div>
                 )}
                 
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{pkg.credits} Credits</h3>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{pkg.credits} {t('pricing.credits')}</h3>
                 <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">{pkg.price}</div>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">{pkg.perCredit}</p>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">{pkg.credits} credits</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">{pkg.perCredit} {t('pricing.perCredit')}</p>
                 
                 <button className={`w-full py-3 rounded-full font-semibold transition-all flex items-center justify-center gap-2 ${
                   pkg.popular
@@ -159,7 +123,7 @@ export default function PricingPage() {
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
-                  Buy Now
+                  {t('pricing.buyNow')}
                 </button>
               </div>
             ))}
@@ -171,8 +135,8 @@ export default function PricingPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0a0a0a]">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Frequently Asked Questions</h2>
-            <p className="text-gray-600 dark:text-gray-400">Everything you need to know about our pricing</p>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{t('pricing.faq.title')}</h2>
+            <p className="text-gray-600 dark:text-gray-400">{t('pricing.faq.subtitle')}</p>
           </div>
           
           <div className="space-y-4">
@@ -206,13 +170,13 @@ export default function PricingPage() {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Ready to get started?</h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">Start building with 2 free generations.</p>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{t('pricing.readyToStart')}</h2>
+          <p className="text-gray-600 dark:text-gray-400 mb-8">{t('pricing.startWith')}</p>
           <Link 
             href="/signup"
             className="inline-flex px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-full hover:opacity-90 transition-all shadow-lg"
           >
-            Get Started Free
+            {t('pricing.getStartedFree')}
           </Link>
         </div>
       </section>

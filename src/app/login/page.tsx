@@ -3,9 +3,11 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useTranslation } from '@/context/LanguageContext';
 
 export default function LoginPage() {
   const router = useRouter();
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -66,7 +68,7 @@ export default function LoginPage() {
       localStorage.setItem('AppNode_current_user', JSON.stringify(user));
       router.push('/dashboard');
     } else {
-      setError('Invalid email or password');
+      setError(t('auth.login.invalidCredentials') || 'Invalid email or password');
     }
 
     setIsLoading(false);
@@ -87,8 +89,8 @@ export default function LoginPage() {
             <span className="text-xl font-semibold text-gray-900 dark:text-white">AppNode</span>
           </Link>
 
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Welcome back</h1>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">Log in to your account to continue building</p>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">{t('auth.login.title')}</h1>
+          <p className="text-gray-600 dark:text-gray-400 mb-8">{t('auth.login.subtitle')}</p>
 
           {error && (
             <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-red-600 dark:text-red-400 text-sm">
@@ -99,7 +101,7 @@ export default function LoginPage() {
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
-                Email address
+                {t('auth.login.email')}
               </label>
               <input
                 type="email"
@@ -115,10 +117,10 @@ export default function LoginPage() {
             <div>
               <div className="flex items-center justify-between mb-1.5">
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                  Password
+                  {t('auth.login.password')}
                 </label>
                 <Link href="/forgot-password" className="text-sm text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
-                  Forgot password?
+                  {t('auth.login.forgotPassword')}
                 </Link>
               </div>
               <div className="relative">
@@ -161,10 +163,10 @@ export default function LoginPage() {
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
-                  Logging in...
+                  {t('auth.login.loggingIn') || 'Logging in...'}
                 </span>
               ) : (
-                'Log in'
+                t('common.logIn')
               )}
             </button>
           </form>
@@ -175,7 +177,7 @@ export default function LoginPage() {
                 <div className="w-full border-t border-gray-200 dark:border-gray-800"></div>
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-4 bg-[#f8fafc] dark:bg-black text-gray-500 dark:text-gray-400">Or continue with</span>
+                <span className="px-4 bg-[#f8fafc] dark:bg-black text-gray-500 dark:text-gray-400">{t('auth.login.orContinueWith') || 'Or continue with'}</span>
               </div>
             </div>
 
@@ -221,9 +223,9 @@ export default function LoginPage() {
           </div>
 
           <p className="mt-8 text-center text-sm text-gray-600 dark:text-gray-400">
-            Don&apos;t have an account?{' '}
+            {t('auth.login.noAccount')}{' '}
             <Link href="/signup" className="font-semibold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
-              Create account
+              {t('auth.login.signUpLink')}
             </Link>
           </p>
         </div>
@@ -240,10 +242,10 @@ export default function LoginPage() {
         <div className="relative z-10 flex flex-col items-center justify-center p-12 text-white dark:text-black">
           <div className="max-w-md text-center">
             <h2 className="text-4xl xl:text-5xl font-bold mb-6 leading-tight">
-              Build anything.<br/>Faster than ever.
+              {t('auth.login.decorativeTitle') || 'Build anything.'}<br/>{t('auth.login.decorativeSubtitle') || 'Faster than ever.'}
             </h2>
             <p className="text-xl text-white/80 dark:text-black/70">
-              The world&apos;s simplest way to build apps with AI.
+              {t('auth.login.decorativeDescription') || "The world's simplest way to build apps with AI."}
             </p>
             <div className="mt-10 flex flex-col gap-4">
               <div className="flex items-center gap-3 bg-white/10 dark:bg-black/10 backdrop-blur-sm rounded-xl p-4">
@@ -252,7 +254,7 @@ export default function LoginPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span>AI-powered development</span>
+                <span>{t('auth.features.aiPowered') || 'AI-powered development'}</span>
               </div>
               <div className="flex items-center gap-3 bg-white/10 dark:bg-black/10 backdrop-blur-sm rounded-xl p-4">
                 <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-black/20 flex items-center justify-center">
@@ -260,7 +262,7 @@ export default function LoginPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span>Ship in minutes, not months</span>
+                <span>{t('auth.features.shipFast') || 'Ship in minutes, not months'}</span>
               </div>
               <div className="flex items-center gap-3 bg-white/10 dark:bg-black/10 backdrop-blur-sm rounded-xl p-4">
                 <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-black/20 flex items-center justify-center">
@@ -268,7 +270,7 @@ export default function LoginPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span>2 free generations to start</span>
+                <span>{t('auth.features.freeGenerations') || '2 free generations to start'}</span>
               </div>
             </div>
           </div>

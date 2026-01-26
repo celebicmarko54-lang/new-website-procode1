@@ -3,9 +3,11 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useTranslation } from '@/context/LanguageContext';
 
 export default function SignupPage() {
   const router = useRouter();
+  const { t } = useTranslation();
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     name: '',
@@ -118,9 +120,9 @@ export default function SignupPage() {
         </div>
         <div className="relative z-10 flex flex-col items-center justify-center p-12 text-white dark:text-black">
           <div className="max-w-md text-center">
-            <h2 className="text-3xl font-bold mb-4">Start building today</h2>
+            <h2 className="text-3xl font-bold mb-4">{t('auth.signup.decorativeTitle') || 'Start building today'}</h2>
             <p className="text-lg text-white/80 dark:text-black/70">
-              Create your free account and start building amazing applications with AI in minutes.
+              {t('auth.signup.decorativeDescription') || 'Create your free account and start building amazing applications with AI in minutes.'}
             </p>
             <div className="mt-8 flex flex-col gap-4">
               <div className="flex items-center gap-3 bg-white/10 dark:bg-black/10 backdrop-blur-sm rounded-xl p-4">
@@ -129,7 +131,7 @@ export default function SignupPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span>2 free generations to start</span>
+                <span>{t('auth.features.freeGenerations') || '2 free generations to start'}</span>
               </div>
               <div className="flex items-center gap-3 bg-white/10 dark:bg-black/10 backdrop-blur-sm rounded-xl p-4">
                 <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-black/20 flex items-center justify-center">
@@ -137,7 +139,7 @@ export default function SignupPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span>No credit card required</span>
+                <span>{t('auth.features.noCreditCard') || 'No credit card required'}</span>
               </div>
               <div className="flex items-center gap-3 bg-white/10 dark:bg-black/10 backdrop-blur-sm rounded-xl p-4">
                 <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-black/20 flex items-center justify-center">
@@ -145,7 +147,7 @@ export default function SignupPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span>Full access to all templates</span>
+                <span>{t('auth.features.fullAccess') || 'Full access to all templates'}</span>
               </div>
             </div>
           </div>
@@ -198,13 +200,13 @@ export default function SignupPage() {
           {/* Step 1: Account Details */}
           {step === 1 && (
             <>
-              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Create your account</h1>
-              <p className="text-gray-600 dark:text-gray-400 mb-8">Start building amazing apps with AI</p>
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">{t('auth.signup.title')}</h1>
+              <p className="text-gray-600 dark:text-gray-400 mb-8">{t('auth.signup.subtitle')}</p>
 
               <form onSubmit={handleStep1Submit} className="space-y-5">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
-                    Full name
+                    {t('auth.signup.name')}
                   </label>
                   <input
                     type="text"
@@ -219,7 +221,7 @@ export default function SignupPage() {
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
-                    Email address
+                    {t('auth.signup.email')}
                   </label>
                   <input
                     type="email"
@@ -234,7 +236,7 @@ export default function SignupPage() {
 
                 <div>
                   <label htmlFor="password" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
-                    Password
+                    {t('auth.signup.password')}
                   </label>
                   <div className="relative">
                     <input
@@ -267,7 +269,7 @@ export default function SignupPage() {
 
                 <div>
                   <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
-                    Confirm password
+                    {t('auth.signup.confirmPassword')}
                   </label>
                   <div className="relative">
                     <input
@@ -302,14 +304,14 @@ export default function SignupPage() {
                   type="submit"
                   className="w-full py-3 px-4 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-full hover:opacity-90 transition-all shadow-lg"
                 >
-                  Continue
+                  {t('common.next') || 'Continue'}
                 </button>
               </form>
 
               <p className="mt-6 text-center text-sm text-gray-600 dark:text-gray-400">
-                Already have an account?{' '}
+                {t('auth.signup.hasAccount')}{' '}
                 <Link href="/login" className="font-semibold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
-                  Log in
+                  {t('auth.signup.loginLink')}
                 </Link>
               </p>
             </>
@@ -318,8 +320,8 @@ export default function SignupPage() {
           {/* Step 2: Choose Avatar */}
           {step === 2 && (
             <>
-              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Personalize your profile</h1>
-              <p className="text-gray-600 dark:text-gray-400 mb-8">Choose an avatar color that represents you</p>
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">{t('auth.signup.step2Title') || 'Personalize your profile'}</h1>
+              <p className="text-gray-600 dark:text-gray-400 mb-8">{t('auth.signup.step2Subtitle') || 'Choose an avatar color that represents you'}</p>
 
               <form onSubmit={handleStep2Submit} className="space-y-6">
                 <div className="flex justify-center mb-8">
@@ -349,13 +351,13 @@ export default function SignupPage() {
                     onClick={() => setStep(1)}
                     className="flex-1 py-3 px-4 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors"
                   >
-                    Back
+                    {t('common.back')}
                   </button>
                   <button
                     type="submit"
                     className="flex-1 py-3 px-4 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-full hover:opacity-90 transition-all shadow-lg"
                   >
-                    Continue
+                    {t('common.next') || 'Continue'}
                   </button>
                 </div>
               </form>
@@ -365,13 +367,13 @@ export default function SignupPage() {
           {/* Step 3: Role Selection */}
           {step === 3 && (
             <>
-              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Tell us about yourself</h1>
-              <p className="text-gray-600 dark:text-gray-400 mb-8">This helps us personalize your experience</p>
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">{t('auth.signup.step3Title') || 'Tell us about yourself'}</h1>
+              <p className="text-gray-600 dark:text-gray-400 mb-8">{t('auth.signup.step3Subtitle') || 'This helps us personalize your experience'}</p>
 
               <form onSubmit={handleFinalSubmit} className="space-y-5">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
-                    What best describes your role?
+                    {t('auth.signup.roleQuestion') || 'What best describes your role?'}
                   </label>
                   <div className="grid grid-cols-2 gap-3">
                     {roles.map((role) => (
@@ -394,7 +396,7 @@ export default function SignupPage() {
 
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
-                    Company name <span className="text-gray-400 dark:text-gray-500">(optional)</span>
+                    {t('auth.signup.company') || 'Company name'} <span className="text-gray-400 dark:text-gray-500">({t('common.optional') || 'optional'})</span>
                   </label>
                   <input
                     type="text"
@@ -412,7 +414,7 @@ export default function SignupPage() {
                     onClick={() => setStep(2)}
                     className="flex-1 py-3 px-4 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors"
                   >
-                    Back
+                    {t('common.back')}
                   </button>
                   <button
                     type="submit"
@@ -425,20 +427,17 @@ export default function SignupPage() {
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
-                        Creating account...
+                        {t('auth.signup.creatingAccount') || 'Creating account...'}
                       </span>
                     ) : (
-                      'Create account'
+                      t('auth.signup.createAccount') || 'Create account'
                     )}
                   </button>
                 </div>
               </form>
 
               <p className="mt-6 text-center text-xs text-gray-500 dark:text-gray-400">
-                By creating an account, you agree to our{' '}
-                <Link href="/terms" className="text-gray-900 dark:text-white hover:underline">Terms of Service</Link>
-                {' '}and{' '}
-                <Link href="/privacy" className="text-gray-900 dark:text-white hover:underline">Privacy Policy</Link>
+                {t('auth.signup.terms')}
               </p>
             </>
           )}

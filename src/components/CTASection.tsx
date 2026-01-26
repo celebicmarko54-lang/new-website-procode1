@@ -1,12 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslation } from '@/context/LanguageContext';
 
 export default function CTASection() {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
+  const { t } = useTranslation();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,19 +32,18 @@ export default function CTASection() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full mb-8 shadow-sm">
           <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-          <span className="text-sm text-gray-600 font-medium">New: Smart Styles & Auto Layouts</span>
+          <span className="text-sm text-gray-600 font-medium">{t('common.comingSoon')}: {t('cta.newFeatures')}</span>
         </div>
 
         {/* Heading */}
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-          Ready to build something
-          <span className="block text-gray-900">amazing?</span>
+          {t('cta.title')}
+          <span className="block text-gray-900">{t('cta.titleHighlight')}</span>
         </h2>
 
         {/* Description */}
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Join thousands of creators who are already building the future with AppNode. 
-          Start for free, no credit card required.
+          {t('cta.description')}
         </p>
 
         {/* CTA Form */}
@@ -52,7 +53,7 @@ export default function CTASection() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
+              placeholder={t('cta.emailPlaceholder')}
               className="w-full sm:w-80 px-6 py-4 border border-gray-200 rounded-full focus:outline-none focus:border-orange-300 focus:ring-2 focus:ring-orange-100 transition-all"
             />
             <button 
@@ -66,10 +67,10 @@ export default function CTASection() {
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
-                  Signing up...
+                  {t('common.loading')}
                 </>
               ) : (
-                'Start Building for Free'
+                t('cta.button')
               )}
             </button>
           </form>
@@ -78,7 +79,7 @@ export default function CTASection() {
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
-            Check your email to get started!
+            {t('cta.successMessage')}
           </div>
         )}
 
@@ -91,12 +92,12 @@ export default function CTASection() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          Watch Demo
+          {t('common.watchDemo')}
         </button>
 
         {/* Trust badges */}
         <div className="mt-12 flex flex-wrap items-center justify-center gap-8">
-          <span className="text-gray-400 text-sm">Trusted by teams at</span>
+          <span className="text-gray-400 text-sm">{t('cta.trustedBy')}</span>
           <div className="flex items-center gap-8">
             {['Google', 'Microsoft', 'Meta', 'Amazon'].map((company) => (
               <span key={company} className="text-gray-400 font-semibold hover:text-gray-600 cursor-pointer transition-colors">{company}</span>

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useTranslation } from '@/context/LanguageContext';
 
 const features = [
   {
@@ -95,6 +96,7 @@ const testimonials = [
 ];
 
 export default function EnterprisePage() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -122,23 +124,22 @@ export default function EnterprisePage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/80 dark:bg-black/80 backdrop-blur-sm rounded-full border border-gray-200/60 dark:border-gray-800 mb-6">
-              <span className="text-xs font-semibold text-white bg-gradient-to-r from-[#ff6b6b] to-[#ee5a24] px-2.5 py-0.5 rounded-full">ENTERPRISE</span>
+              <span className="text-xs font-semibold text-white bg-gradient-to-r from-[#ff6b6b] to-[#ee5a24] px-2.5 py-0.5 rounded-full">{t('enterprisePage.badge')}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
-              Build at scale with
-              <span className="bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', WebkitBackgroundClip: 'text' }}> enterprise-grade </span>
-              features
+              {t('enterprisePage.title')}
+              <span className="bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', WebkitBackgroundClip: 'text' }}> {t('enterprisePage.titleHighlight')} </span>
+              {t('enterprisePage.titleEnd')}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
-              Everything your team needs to build, deploy, and manage applications at scale. 
-              Security, compliance, and support built for the enterprise.
+              {t('enterprisePage.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="#contact" className="px-8 py-4 text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}>
-                Contact Sales
+                {t('common.contactSales')}
               </a>
               <Link href="/pricing" className="px-8 py-4 bg-white/80 dark:bg-black backdrop-blur-sm border border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-white dark:hover:bg-black transition-colors">
-                View Pricing
+                {t('enterprisePage.viewPricing')}
               </Link>
             </div>
           </div>
@@ -148,7 +149,7 @@ export default function EnterprisePage() {
       {/* Trusted By */}
       <section className="py-12 overflow-hidden">
         <div className="px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm font-medium text-gray-500 dark:text-gray-400 mb-8">TRUSTED BY LEADING COMPANIES</p>
+          <p className="text-center text-sm font-medium text-gray-500 dark:text-gray-400 mb-8">{t('enterprisePage.trustedBy')}</p>
           <div className="relative w-full">
             <div className="flex items-center gap-20 animate-marquee whitespace-nowrap">
               {[...logos, ...logos, ...logos, ...logos, ...logos, ...logos].map((logo, index) => (
@@ -180,10 +181,10 @@ export default function EnterprisePage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Everything you need for enterprise
+              {t('enterprisePage.featuresTitle')}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Advanced features designed for teams that need security, scalability, and support.
+              {t('enterprisePage.featuresSubtitle')}
             </p>
           </div>
           
@@ -209,10 +210,10 @@ export default function EnterprisePage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Loved by enterprise teams
+              {t('enterprisePage.testimonialsTitle')}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              See what leaders are saying about AppNode Enterprise.
+              {t('enterprisePage.testimonialsSubtitle')}
             </p>
           </div>
           

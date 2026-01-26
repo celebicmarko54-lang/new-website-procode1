@@ -1,9 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslation } from '@/context/LanguageContext';
 
 export default function HeroSection() {
   const [prompt, setPrompt] = useState('');
+  const { t } = useTranslation();
 
   const handleSubmit = () => {
     if (!prompt.trim()) return;
@@ -25,7 +27,7 @@ export default function HeroSection() {
       {/* Heading */}
       <div className="relative z-10 text-center" style={{ marginTop: '6vh' }}>
         <h1 className="text-4xl sm:text-5xl md:text-5xl font-bold text-gray-900 dark:text-white tracking-tight">
-          Build apps with AI in minutes
+          {t('hero.title')}
         </h1>
       </div>
 
@@ -43,7 +45,7 @@ export default function HeroSection() {
             </div>
             <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">
               <div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
-              <span className="text-xs font-medium">Ready</span>
+              <span className="text-xs font-medium">{t('hero.ready')}</span>
             </div>
           </div>
 
@@ -53,7 +55,7 @@ export default function HeroSection() {
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="Describe the app you want to build..."
+              placeholder={t('hero.placeholder')}
               rows={3}
               className="w-full resize-none ring-0 z-20 outline-0 bg-transparent text-base leading-relaxed placeholder:text-gray-500 text-[#1a1a1a] dark:text-white focus:outline-none"
             />
@@ -76,7 +78,7 @@ export default function HeroSection() {
                   <polyline points="21 15 16 10 5 21"/>
                 </svg>
               </button>
-              <span className="text-xs text-gray-500 dark:text-gray-400">Press Enter to send</span>
+              <span className="text-xs text-gray-500 dark:text-gray-400">{t('hero.pressEnter')}</span>
             </div>
             {/* Generate button */}
             <button 
@@ -85,7 +87,7 @@ export default function HeroSection() {
               disabled={!prompt.trim()}
               className="flex items-center gap-2 px-4 py-2 rounded font-medium text-sm transition-all duration-200 disabled:bg-gray-100 disabled:dark:bg-[#1f1f1f] disabled:text-gray-400 disabled:dark:text-gray-500 disabled:cursor-not-allowed enabled:bg-black enabled:dark:bg-white enabled:text-white enabled:dark:text-black enabled:hover:opacity-90"
             >
-              Build Now
+              {t('common.startBuilding')}
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>

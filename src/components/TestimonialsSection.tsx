@@ -1,30 +1,34 @@
 'use client';
 
+import { useTranslation } from '@/context/LanguageContext';
+
 const testimonials = [
   {
-    quote: "AppNode completely transformed how we prototype. What used to take weeks now takes hours.",
-    author: "Sarah Chen",
-    role: "Product Manager at TechCorp",
+    quoteKey: 'testimonials.quote1',
+    authorKey: 'testimonials.author1',
+    roleKey: 'testimonials.role1',
     avatar: "SC",
     gradient: 'from-gray-700 to-gray-900',
   },
   {
-    quote: "I built my entire startup's MVP using AppNode. The AI understands exactly what I need.",
-    author: "Mike Rodriguez",
-    role: "Founder of StartupX",
+    quoteKey: 'testimonials.quote2',
+    authorKey: 'testimonials.author2',
+    roleKey: 'testimonials.role2',
     avatar: "MR",
     gradient: 'from-gray-700 to-gray-900',
   },
   {
-    quote: "As a designer, I can now bring my designs to life without waiting for developers.",
-    author: "Emma Wilson",
-    role: "Senior Designer at DesignStudio",
+    quoteKey: 'testimonials.quote3',
+    authorKey: 'testimonials.author3',
+    roleKey: 'testimonials.role3',
     avatar: "EW",
     gradient: 'from-gray-700 to-gray-900',
   },
 ];
 
 export default function TestimonialsSection() {
+  const { t } = useTranslation();
+  
   return (
     <section className="py-24 px-4 relative overflow-hidden">
 
@@ -32,13 +36,13 @@ export default function TestimonialsSection() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="px-4 py-1.5 text-sm bg-gray-100 text-gray-700 rounded-full mb-4 inline-block font-medium">
-            Testimonials
+            {t('testimonials.badge')}
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Loved by creators worldwide
+            {t('testimonials.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Join thousands of developers, designers, and entrepreneurs who are building with AppNode.
+            {t('testimonials.subtitle')}
           </p>
         </div>
 
@@ -55,7 +59,7 @@ export default function TestimonialsSection() {
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  "{testimonial.quote}"
+                  "{t(testimonial.quoteKey)}"
                 </p>
               </div>
 
@@ -65,8 +69,8 @@ export default function TestimonialsSection() {
                   {testimonial.avatar}
                 </div>
                 <div>
-                  <p className="text-gray-900 font-medium">{testimonial.author}</p>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  <p className="text-gray-900 font-medium">{t(testimonial.authorKey)}</p>
+                  <p className="text-sm text-gray-500">{t(testimonial.roleKey)}</p>
                 </div>
               </div>
             </div>
@@ -78,19 +82,19 @@ export default function TestimonialsSection() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <p className="text-4xl font-bold text-gray-900 mb-1">500K+</p>
-              <p className="text-gray-600">Active Users</p>
+              <p className="text-gray-600">{t('testimonials.stats.activeUsers')}</p>
             </div>
             <div>
               <p className="text-4xl font-bold text-gray-900 mb-1">1M+</p>
-              <p className="text-gray-600">Projects Created</p>
+              <p className="text-gray-600">{t('testimonials.stats.projectsCreated')}</p>
             </div>
             <div>
               <p className="text-4xl font-bold text-gray-900 mb-1">150+</p>
-              <p className="text-gray-600">Countries</p>
+              <p className="text-gray-600">{t('testimonials.stats.countries')}</p>
             </div>
             <div>
               <p className="text-4xl font-bold text-gray-900 mb-1">4.9/5</p>
-              <p className="text-gray-600">Average Rating</p>
+              <p className="text-gray-600">{t('testimonials.stats.averageRating')}</p>
             </div>
           </div>
         </div>

@@ -1,0 +1,428 @@
+{
+  "common": {
+    "getStarted": "Empezar",
+    "learnMore": "Más información",
+    "signUp": "Registrarse",
+    "logIn": "Iniciar sesión",
+    "tryFree": "Probar gratis",
+    "startBuilding": "Empezar a crear",
+    "viewDocs": "Ver documentación",
+    "contactSales": "Contactar ventas",
+    "watchDemo": "Ver demo",
+    "readMore": "Leer más",
+    "seeAll": "Ver todo",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "comingSoon": "Próximamente"
+  },
+  "nav": {
+    "products": "Productos",
+    "solutions": "Soluciones",
+    "useCases": "Casos de uso",
+    "pricing": "Precios",
+    "enterprise": "Empresas",
+    "docs": "Docs",
+    "about": "Nosotros",
+    "blog": "Blog",
+    "careers": "Carreras",
+    "community": "Comunidad"
+  },
+  "hero": {
+    "title": "Crea apps con IA en minutos",
+    "placeholder": "Describe la app que quieres crear...",
+    "ready": "Listo",
+    "pressEnter": "Presiona Enter para enviar"
+  },
+  "features": {
+    "title": "Todo lo que necesitas para crear",
+    "subtitle": "AppNode proporciona todas las herramientas y funciones necesarias para crear aplicaciones potentes sin escribir código.",
+    "aiPowered": {
+      "title": "Desarrollo con IA",
+      "description": "Describe tu idea en lenguaje natural y observa cómo la IA construye tu aplicación en tiempo real."
+    },
+    "visualBuilder": {
+      "title": "Constructor visual",
+      "description": "Arrastra y suelta componentes, personaliza diseños y crea interfaces hermosas sin código."
+    },
+    "instantDeploy": {
+      "title": "Despliegue instantáneo",
+      "description": "Despliega tus aplicaciones con un clic. No se requiere configuración de servidor."
+    },
+    "database": {
+      "title": "Base de datos integrada",
+      "description": "Integración de base de datos potente con generación automática de esquemas y sincronización en tiempo real."
+    },
+    "auth": {
+      "title": "Autenticación",
+      "description": "Autenticación de usuarios segura lista para usar. Soporte para inicios de sesión sociales y SSO."
+    },
+    "api": {
+      "title": "Integración de API",
+      "description": "Conéctate a cualquier API con nuestro conector visual. Importa especificaciones OpenAPI instantáneamente."
+    },
+    "responsive": {
+      "title": "Diseño responsive",
+      "description": "Tus apps se ven geniales en cualquier dispositivo. Diseños y vistas previas responsive automáticos."
+    },
+    "collaboration": {
+      "title": "Colaboración en tiempo real",
+      "description": "Trabaja junto con tu equipo en tiempo real. Ve los cambios a medida que ocurren."
+    }
+  },
+  "buildAnything": {
+    "title": "CONSTRUYE TODO LO QUE IMAGINES",
+    "subtitle": "Desde landing pages simples hasta aplicaciones empresariales complejas, AppNode lo maneja todo.",
+    "exploreAll": "Explorar todas las plantillas",
+    "webApps": {
+      "title": "Aplicaciones Web",
+      "description": "Apps web completas con autenticación, bases de datos y APIs."
+    },
+    "mobileApps": {
+      "title": "Apps móviles",
+      "description": "Experiencias móviles nativas para iOS y Android desde una sola base de código."
+    },
+    "dashboards": {
+      "title": "Dashboards",
+      "description": "Dashboards de visualización de datos y análisis con actualizaciones en tiempo real."
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Tiendas online con pagos, inventario y gestión de pedidos."
+    },
+    "internal": {
+      "title": "Herramientas internas",
+      "description": "Paneles de administración personalizados, CRMs y herramientas de automatización de flujos de trabajo."
+    },
+    "marketplace": {
+      "title": "Marketplaces",
+      "description": "Plataformas bilaterales que conectan compradores y vendedores."
+    }
+  },
+  "testimonials": {
+    "badge": "Testimonios",
+    "title": "Amado por creadores de todo el mundo",
+    "subtitle": "Únete a miles de desarrolladores, diseñadores y emprendedores que están creando con AppNode.",
+    "quote1": "AppNode transformó completamente nuestra forma de prototipar. Lo que solía tomar semanas ahora toma horas.",
+    "author1": "Sarah Chen",
+    "role1": "Gerente de Producto en TechCorp",
+    "quote2": "Construí todo el MVP de mi startup usando AppNode. La IA entiende exactamente lo que necesito.",
+    "author2": "Mike Rodriguez",
+    "role2": "Fundador de StartupX",
+    "quote3": "Como diseñadora, ahora puedo dar vida a mis diseños sin esperar a los desarrolladores.",
+    "author3": "Emma Wilson",
+    "role3": "Diseñadora Senior en DesignStudio",
+    "stats": {
+      "activeUsers": "Usuarios Activos",
+      "projectsCreated": "Proyectos Creados",
+      "countries": "Países",
+      "averageRating": "Calificación Promedio"
+    }
+  },
+  "cta": {
+    "title": "¿Listo para crear algo",
+    "titleHighlight": "increíble?",
+    "subtitle": "Comienza a crear tu aplicación hoy. Sin tarjeta de crédito.",
+    "description": "Únete a miles de creadores que ya están construyendo el futuro con AppNode. Empieza gratis.",
+    "button": "Empezar a crear gratis",
+    "emailPlaceholder": "Ingresa tu email",
+    "successMessage": "¡Revisa tu email para comenzar!",
+    "newFeatures": "Estilos inteligentes y diseños automáticos",
+    "trustedBy": "Confiado por equipos en"
+  },
+  "footer": {
+    "company": "Empresa",
+    "resources": "Recursos",
+    "legal": "Legal",
+    "about": "Nosotros",
+    "enterprise": "Empresas",
+    "security": "Seguridad",
+    "pricing": "Precios",
+    "learn": "Aprender",
+    "guides": "Guías",
+    "videos": "Videos",
+    "blog": "Blog",
+    "support": "Soporte",
+    "privacyPolicy": "Política de privacidad",
+    "cookieSettings": "Configuración de cookies",
+    "termsOfService": "Términos de servicio",
+    "platformRules": "Reglas de la plataforma",
+    "reportAbuse": "Reportar abuso",
+    "allRightsReserved": "Todos los derechos reservados",
+    "madeWith": "Hecho con",
+    "languageLabel": "Idioma",
+    "tagline": "Crea aplicaciones listas para producción con IA",
+    "connectWithUs": "Conéctate con nosotros"
+  },
+  "products": {
+    "title": "Productos",
+    "subtitle": "Herramientas poderosas para construir, desplegar y escalar tus aplicaciones",
+    "agent": {
+      "title": "Agente IA",
+      "description": "IA inteligente que entiende tus requisitos y construye aplicaciones automáticamente.",
+      "tagline": "Construye con lenguaje natural"
+    },
+    "database": {
+      "title": "Base de datos",
+      "description": "Base de datos escalable y segura con sincronización en tiempo real y copias de seguridad automáticas.",
+      "tagline": "Tus datos, gestionados"
+    },
+    "design": {
+      "title": "Estudio de diseño",
+      "description": "Herramientas de diseño visual para crear interfaces impresionantes sin código.",
+      "tagline": "Diseña hermosamente"
+    },
+    "integrations": {
+      "title": "Integraciones",
+      "description": "Conéctate a miles de servicios y APIs con conectores preconstruidos.",
+      "tagline": "Conecta todo"
+    },
+    "mobile": {
+      "title": "Móvil",
+      "description": "Construye apps móviles nativas para iOS y Android desde un solo proyecto.",
+      "tagline": "Pasa a móvil"
+    },
+    "publish": {
+      "title": "Publicar",
+      "description": "Despliegue con un clic a dominios personalizados con SSL y CDN incluidos.",
+      "tagline": "Entrega más rápido"
+    },
+    "security": {
+      "title": "Seguridad",
+      "description": "Seguridad de nivel empresarial con cumplimiento SOC 2 y soporte SSO.",
+      "tagline": "Mantente seguro"
+    }
+  },
+  "solutions": {
+    "title": "Soluciones",
+    "subtitle": "Soluciones personalizadas para cada industria y caso de uso",
+    "startup": {
+      "title": "Para Startups",
+      "description": "Muévete rápido y construye tu MVP en días, no meses."
+    },
+    "enterprise": {
+      "title": "Para Empresas",
+      "description": "Escala de forma segura con cumplimiento, SSO y soporte dedicado."
+    },
+    "agencies": {
+      "title": "Para Agencias",
+      "description": "Entrega proyectos de clientes más rápido con soluciones white-label."
+    }
+  },
+  "useCases": {
+    "title": "Casos de uso",
+    "subtitle": "Descubre cómo los equipos usan AppNode",
+    "rapidPrototyping": {
+      "title": "Prototipado rápido",
+      "description": "Valida ideas rápidamente con prototipos funcionales en horas."
+    },
+    "businessApps": {
+      "title": "Aplicaciones de negocio",
+      "description": "Construye CRMs personalizados, ERPs y herramientas de automatización de flujos de trabajo."
+    },
+    "mobileApps": {
+      "title": "Aplicaciones móviles",
+      "description": "Crea experiencias móviles nativas sin experiencia en desarrollo móvil."
+    }
+  },
+  "pricing": {
+    "title": "Precios simples basados en créditos",
+    "subtitle": "Paga solo por lo que usas. Sin suscripciones, sin tarifas ocultas.",
+    "badge": "Precios",
+    "creditInfo": "1 crédito = 1 generación",
+    "freeTier": {
+      "title": "Gratis",
+      "subtitle": "Empieza sin tarjeta de crédito",
+      "features": ["2 generaciones de apps gratis", "Acceso completo a todas las plantillas", "Vista previa en vivo y despliegue", "Exportar a GitHub"]
+    },
+    "buyCredits": "Comprar créditos",
+    "mostPopular": "Más popular",
+    "credits": "Créditos",
+    "perCredit": "por crédito",
+    "buyNow": "Comprar ahora",
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestros precios",
+      "q1": "¿Qué puedo hacer con los créditos?",
+      "a1": "Cada crédito te permite generar una app completa. Puedes usar créditos para crear apps web, apps móviles, páginas de aterrizaje y más usando nuestro constructor con IA.",
+      "q2": "¿Los créditos expiran?",
+      "a2": "¡No! Tus créditos comprados nunca expiran. Úsalos cuando quieras, a tu propio ritmo.",
+      "q3": "¿Puedo obtener un reembolso?",
+      "a3": "Sí, ofrecemos una garantía de devolución de dinero de 30 días para créditos no utilizados. Contacta a nuestro equipo de soporte para obtener ayuda.",
+      "q4": "¿Qué métodos de pago aceptan?",
+      "a4": "Aceptamos todas las tarjetas de crédito principales (Visa, Mastercard, American Express) y PayPal.",
+      "q5": "¿Cómo funciona el plan gratuito?",
+      "a5": "¡Cada nuevo usuario recibe 2 generaciones gratuitas para probar AppNode. ¡No se requiere tarjeta de crédito para empezar!"
+    },
+    "readyToStart": "¿Listo para empezar?",
+    "startWith": "Empieza a crear con 2 generaciones gratis.",
+    "getStartedFree": "Empezar gratis",
+    "free": {
+      "name": "Gratis",
+      "price": "€0",
+      "period": "para siempre",
+      "description": "Perfecto para aprender y proyectos personales",
+      "features": ["3 proyectos", "1.000 registros", "Soporte de la comunidad", "Analytics básico"]
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "€29",
+      "period": "al mes",
+      "description": "Para profesionales y equipos pequeños",
+      "features": ["Proyectos ilimitados", "100.000 registros", "Soporte prioritario", "Dominios personalizados", "Analytics avanzado", "Colaboración en equipo"]
+    },
+    "enterprise": {
+      "name": "Empresas",
+      "price": "Personalizado",
+      "period": "",
+      "description": "Para grandes organizaciones con necesidades personalizadas",
+      "features": ["Todo en Pro", "Registros ilimitados", "SSO & SAML", "Garantía SLA", "Soporte dedicado", "Opción on-premise"]
+    }
+  },
+  "enterprise": {
+    "title": "AppNode para empresas",
+    "subtitle": "Empodera a tu organización con desarrollo de apps seguro y escalable",
+    "features": {
+      "security": {
+        "title": "Seguridad empresarial",
+        "description": "Certificación SOC 2 Tipo II con cifrado avanzado y controles de acceso."
+      },
+      "sso": {
+        "title": "Single Sign-On",
+        "description": "Integra con tu proveedor de identidad existente. Soporte SAML y OIDC."
+      },
+      "compliance": {
+        "title": "Cumplimiento",
+        "description": "GDPR, HIPAA y cumplimiento específico de la industria integrado."
+      },
+      "support": {
+        "title": "Soporte dedicado",
+        "description": "Soporte prioritario 24/7 con gestión de cuenta dedicada."
+      },
+      "sla": {
+        "title": "Garantía SLA",
+        "description": "SLA de disponibilidad del 99,99% con infraestructura empresarial."
+      },
+      "onpremise": {
+        "title": "On-Premise",
+        "description": "Despliega en tu propia nube o entorno on-premise."
+      }
+    },
+    "cta": "Hablar con ventas"
+  },
+  "auth": {
+    "login": {
+      "title": "Bienvenido de nuevo",
+      "subtitle": "Inicia sesión en tu cuenta AppNode",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "noAccount": "¿No tienes cuenta?",
+      "signUpLink": "Regístrate"
+    },
+    "signup": {
+      "title": "Crea tu cuenta",
+      "subtitle": "Empieza a construir con AppNode hoy",
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "confirmPassword": "Confirmar contraseña",
+      "hasAccount": "¿Ya tienes cuenta?",
+      "loginLink": "Iniciar sesión",
+      "terms": "Al registrarte, aceptas nuestros Términos de servicio y Política de privacidad."
+    }
+  },
+  "docs": {
+    "title": "Documentación",
+    "subtitle": "Todo lo que necesitas para construir con AppNode",
+    "gettingStarted": "Primeros pasos",
+    "tutorials": "Tutoriales",
+    "apiReference": "Referencia API",
+    "examples": "Ejemplos",
+    "searchPlaceholder": "Buscar documentación..."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Noticias, actualizaciones e información del equipo AppNode",
+    "readTime": "min de lectura",
+    "categories": {
+      "all": "Todo",
+      "product": "Producto",
+      "engineering": "Ingeniería",
+      "community": "Comunidad",
+      "tutorials": "Tutoriales"
+    }
+  },
+  "careers": {
+    "title": "Únete a nuestro equipo",
+    "subtitle": "Ayúdanos a dar forma al futuro del desarrollo de apps",
+    "openPositions": "Posiciones abiertas",
+    "benefits": {
+      "title": "¿Por qué AppNode?",
+      "remote": "Remote First",
+      "remoteDesc": "Trabaja desde cualquier parte del mundo",
+      "equity": "Equity",
+      "equityDesc": "Comparte nuestro éxito",
+      "health": "Beneficios de salud",
+      "healthDesc": "Cobertura completa para ti y tu familia",
+      "learning": "Presupuesto de aprendizaje",
+      "learningDesc": "Invierte en tu crecimiento"
+    },
+    "noPositions": "No hay posiciones abiertas en este momento. ¡Vuelve pronto!",
+    "applyNow": "Aplicar ahora"
+  },
+  "community": {
+    "title": "Comunidad",
+    "subtitle": "Conéctate con constructores de AppNode en todo el mundo",
+    "discord": "Únete a nuestro Discord",
+    "forum": "Foro de la comunidad",
+    "showcase": "Muestra de proyectos",
+    "events": "Próximos eventos"
+  },
+  "support": {
+    "title": "Soporte",
+    "subtitle": "Estamos aquí para ayudar",
+    "helpCenter": "Centro de ayuda",
+    "contactUs": "Contáctanos",
+    "status": "Estado del sistema",
+    "faq": "FAQ"
+  },
+  "legal": {
+    "terms": {
+      "title": "Términos de servicio",
+      "lastUpdated": "Última actualización"
+    },
+    "privacy": {
+      "title": "Política de privacidad",
+      "lastUpdated": "Última actualización"
+    },
+    "cookies": {
+      "title": "Política de cookies",
+      "lastUpdated": "Última actualización"
+    }
+  },
+  "status": {
+    "title": "Estado del sistema",
+    "operational": "Todos los sistemas operativos",
+    "degraded": "Rendimiento degradado",
+    "outage": "Interrupción del servicio",
+    "maintenance": "En mantenimiento"
+  },
+  "errors": {
+    "404": {
+      "title": "Página no encontrada",
+      "description": "La página que buscas no existe.",
+      "backHome": "Volver al inicio"
+    },
+    "500": {
+      "title": "Algo salió mal",
+      "description": "Estamos trabajando para solucionarlo. Por favor, inténtalo de nuevo más tarde.",
+      "retry": "Reintentar"
+    }
+  }
+}

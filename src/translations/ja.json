@@ -1,0 +1,428 @@
+{
+  "common": {
+    "getStarted": "始める",
+    "learnMore": "詳細を見る",
+    "signUp": "サインアップ",
+    "logIn": "ログイン",
+    "tryFree": "無料で試す",
+    "startBuilding": "作成を開始",
+    "viewDocs": "ドキュメントを見る",
+    "contactSales": "営業に連絡",
+    "watchDemo": "デモを見る",
+    "readMore": "続きを読む",
+    "seeAll": "すべて見る",
+    "back": "戻る",
+    "next": "次へ",
+    "submit": "送信",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "success": "成功",
+    "comingSoon": "近日公開"
+  },
+  "nav": {
+    "products": "製品",
+    "solutions": "ソリューション",
+    "useCases": "ユースケース",
+    "pricing": "料金",
+    "enterprise": "エンタープライズ",
+    "docs": "ドキュメント",
+    "about": "会社概要",
+    "blog": "ブログ",
+    "careers": "採用情報",
+    "community": "コミュニティ"
+  },
+  "hero": {
+    "title": "AIで数分でアプリを構築",
+    "placeholder": "構築したいアプリを説明してください...",
+    "ready": "準備完了",
+    "pressEnter": "Enterキーで送信"
+  },
+  "features": {
+    "title": "構築に必要なすべて",
+    "subtitle": "AppNodeは、コードを書かずに強力なアプリケーションを作成するために必要なすべてのツールと機能を提供します。",
+    "aiPowered": {
+      "title": "AI駆動の開発",
+      "description": "自然言語でアイデアを説明し、AIがリアルタイムでアプリケーションを構築する様子をご覧ください。"
+    },
+    "visualBuilder": {
+      "title": "ビジュアルビルダー",
+      "description": "コンポーネントをドラッグ＆ドロップし、レイアウトをカスタマイズし、コードなしで美しいインターフェースをデザイン。"
+    },
+    "instantDeploy": {
+      "title": "即時デプロイ",
+      "description": "ワンクリックでアプリケーションをデプロイ。サーバー設定は不要です。"
+    },
+    "database": {
+      "title": "内蔵データベース",
+      "description": "自動スキーマ生成とリアルタイム同期を備えた強力なデータベース統合。"
+    },
+    "auth": {
+      "title": "認証",
+      "description": "すぐに使える安全なユーザー認証。ソーシャルログインとSSOをサポート。"
+    },
+    "api": {
+      "title": "API統合",
+      "description": "ビジュアルコネクタで任意のAPIに接続。OpenAPI仕様を即座にインポート。"
+    },
+    "responsive": {
+      "title": "レスポンシブデザイン",
+      "description": "あらゆるデバイスでアプリが美しく表示されます。自動レスポンシブレイアウトとプレビュー。"
+    },
+    "collaboration": {
+      "title": "リアルタイムコラボレーション",
+      "description": "チームとリアルタイムで協力。変更が発生した瞬間に確認できます。"
+    }
+  },
+  "buildAnything": {
+    "title": "想像するものすべてを構築",
+    "subtitle": "シンプルなランディングページから複雑なエンタープライズアプリケーションまで、AppNodeがすべてを処理します。",
+    "exploreAll": "すべてのテンプレートを見る",
+    "webApps": {
+      "title": "Webアプリケーション",
+      "description": "認証、データベース、APIを備えた完全なWebアプリ。"
+    },
+    "mobileApps": {
+      "title": "モバイルアプリ",
+      "description": "単一のコードベースからiOSとAndroid向けのネイティブモバイル体験。"
+    },
+    "dashboards": {
+      "title": "ダッシュボード",
+      "description": "リアルタイム更新を備えたデータ可視化と分析ダッシュボード。"
+    },
+    "ecommerce": {
+      "title": "Eコマース",
+      "description": "決済、在庫、注文管理を備えたオンラインストア。"
+    },
+    "internal": {
+      "title": "内部ツール",
+      "description": "カスタム管理パネル、CRM、ワークフロー自動化ツール。"
+    },
+    "marketplace": {
+      "title": "マーケットプレイス",
+      "description": "買い手と売り手をつなぐ双方向プラットフォーム。"
+    }
+  },
+  "testimonials": {
+    "badge": "お客様の声",
+    "title": "世界中のクリエイターに愛されています",
+    "subtitle": "AppNodeで開発している何千人ものデベロッパー、デザイナー、起業家に加わりましょう。",
+    "quote1": "AppNodeはプロトタイプの作り方を完全に変えました。以前は数週間かかっていたことが、今では数時間で完了します。",
+    "author1": "サラ・チェン",
+    "role1": "TechCorpプロダクトマネージャー",
+    "quote2": "スタートアップのMVP全体をAppNodeで構築しました。AIは私が必要としていることを正確に理解しています。",
+    "author2": "マイク・ロドリゲス",
+    "role2": "StartupX創業者",
+    "quote3": "デザイナーとして、開発者を待たずにデザインを実現できるようになりました。",
+    "author3": "エマ・ウィルソン",
+    "role3": "DesignStudioシニアデザイナー",
+    "stats": {
+      "activeUsers": "アクティブユーザー",
+      "projectsCreated": "作成されたプロジェクト",
+      "countries": "国",
+      "averageRating": "平均評価"
+    }
+  },
+  "cta": {
+    "title": "素晴らしいものを",
+    "titleHighlight": "作りませんか？",
+    "subtitle": "今日からアプリ作成を始めましょう。クレジットカード不要。",
+    "description": "AppNodeで未来を築いている何千人もの開発者に参加しましょう。無料で始められます。",
+    "button": "無料で始める",
+    "emailPlaceholder": "メールアドレスを入力",
+    "successMessage": "メールを確認して開始してください！",
+    "newFeatures": "スマートスタイルと自動レイアウト",
+    "trustedBy": "信頼されるチーム"
+  },
+  "footer": {
+    "company": "会社",
+    "resources": "リソース",
+    "legal": "法的情報",
+    "about": "会社概要",
+    "enterprise": "エンタープライズ",
+    "security": "セキュリティ",
+    "pricing": "料金",
+    "learn": "学ぶ",
+    "guides": "ガイド",
+    "videos": "動画",
+    "blog": "ブログ",
+    "support": "サポート",
+    "privacyPolicy": "プライバシーポリシー",
+    "cookieSettings": "Cookie設定",
+    "termsOfService": "利用規約",
+    "platformRules": "プラットフォームルール",
+    "reportAbuse": "不正行為を報告",
+    "allRightsReserved": "全著作権所有",
+    "madeWith": "作成：",
+    "languageLabel": "言語",
+    "tagline": "AIで本番環境対応のアプリを構築",
+    "connectWithUs": "フォローする"
+  },
+  "products": {
+    "title": "製品",
+    "subtitle": "アプリケーションを構築、デプロイ、スケールするための強力なツール",
+    "agent": {
+      "title": "AIエージェント",
+      "description": "要件を理解し、自動的にアプリケーションを構築するインテリジェントAI。",
+      "tagline": "自然言語で構築"
+    },
+    "database": {
+      "title": "データベース",
+      "description": "リアルタイム同期と自動バックアップを備えたスケーラブルで安全なデータベース。",
+      "tagline": "データを管理"
+    },
+    "design": {
+      "title": "デザインスタジオ",
+      "description": "コードなしで美しいインターフェースを作成するビジュアルデザインツール。",
+      "tagline": "美しくデザイン"
+    },
+    "integrations": {
+      "title": "インテグレーション",
+      "description": "事前構築されたコネクタで数千のサービスとAPIに接続。",
+      "tagline": "すべてを接続"
+    },
+    "mobile": {
+      "title": "モバイル",
+      "description": "単一のプロジェクトからiOSとAndroid向けのネイティブモバイルアプリを構築。",
+      "tagline": "モバイル化"
+    },
+    "publish": {
+      "title": "パブリッシュ",
+      "description": "SSLとCDN付きのカスタムドメインへのワンクリックデプロイ。",
+      "tagline": "より速く出荷"
+    },
+    "security": {
+      "title": "セキュリティ",
+      "description": "SOC 2準拠とSSOサポートを備えたエンタープライズグレードのセキュリティ。",
+      "tagline": "安全を維持"
+    }
+  },
+  "solutions": {
+    "title": "ソリューション",
+    "subtitle": "あらゆる業界とユースケースに対応したソリューション",
+    "startup": {
+      "title": "スタートアップ向け",
+      "description": "数ヶ月ではなく数日でMVPを構築し、素早く前進。"
+    },
+    "enterprise": {
+      "title": "エンタープライズ向け",
+      "description": "コンプライアンス、SSO、専用サポートで安全にスケール。"
+    },
+    "agencies": {
+      "title": "エージェンシー向け",
+      "description": "ホワイトラベルソリューションでクライアントプロジェクトを迅速に提供。"
+    }
+  },
+  "useCases": {
+    "title": "ユースケース",
+    "subtitle": "チームがAppNodeをどのように使用しているかご覧ください",
+    "rapidPrototyping": {
+      "title": "ラピッドプロトタイピング",
+      "description": "数時間で動作するプロトタイプでアイデアを素早く検証。"
+    },
+    "businessApps": {
+      "title": "ビジネスアプリケーション",
+      "description": "カスタムCRM、ERP、ワークフロー自動化ツールを構築。"
+    },
+    "mobileApps": {
+      "title": "モバイルアプリケーション",
+      "description": "モバイル開発の専門知識なしでネイティブモバイル体験を作成。"
+    }
+  },
+  "pricing": {
+    "title": "シンプルなクレジット制料金",
+    "subtitle": "使った分だけ支払い。サブスクリプション不要、隠れた手数料なし。",
+    "badge": "料金",
+    "creditInfo": "1クレジット = 1生成",
+    "freeTier": {
+      "title": "無料プラン",
+      "subtitle": "クレジットカードなしで始められます",
+      "features": ["2回の無料アプリ生成", "全テンプレートへのフルアクセス", "ライブプレビューとデプロイ", "GitHubへのエクスポート"]
+    },
+    "buyCredits": "クレジットを購入",
+    "mostPopular": "人気No.1",
+    "credits": "クレジット",
+    "perCredit": "1クレジットあたり",
+    "buyNow": "今すぐ購入",
+    "faq": {
+      "title": "よくある質問",
+      "subtitle": "料金に関するすべての情報",
+      "q1": "クレジットで何ができますか？",
+      "a1": "各クレジットで1つの完全なアプリを生成できます。AIビルダーを使用して、Webアプリ、モバイルアプリ、ランディングページなどを作成できます。",
+      "q2": "クレジットに有効期限はありますか？",
+      "a2": "いいえ！購入したクレジットに有効期限はありません。お好きなペースでいつでもご利用いただけます。",
+      "q3": "返金は可能ですか？",
+      "a3": "はい、未使用のクレジットについては30日間の返金保証を提供しています。サポートチームにお問い合わせください。",
+      "q4": "どの支払い方法を受け付けていますか？",
+      "a4": "主要なクレジットカード（Visa、Mastercard、American Express）とPayPalをご利用いただけます。",
+      "q5": "無料プランはどのように機能しますか？",
+      "a5": "新規ユーザーには、AppNodeを試すための2回の無料生成が付与されます。クレジットカードは不要です！"
+    },
+    "readyToStart": "始める準備はできましたか？",
+    "startWith": "2回の無料生成から始めましょう。",
+    "getStartedFree": "無料で始める",
+    "free": {
+      "name": "無料",
+      "price": "¥0",
+      "period": "永久",
+      "description": "学習と個人プロジェクトに最適",
+      "features": ["3プロジェクト", "1,000レコード", "コミュニティサポート", "基本分析"]
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "¥4,300",
+      "period": "月額",
+      "description": "プロフェッショナルと小規模チーム向け",
+      "features": ["無制限プロジェクト", "100,000レコード", "優先サポート", "カスタムドメイン", "高度な分析", "チームコラボレーション"]
+    },
+    "enterprise": {
+      "name": "エンタープライズ",
+      "price": "カスタム",
+      "period": "",
+      "description": "カスタムニーズを持つ大規模組織向け",
+      "features": ["Proのすべて", "無制限レコード", "SSO & SAML", "SLA保証", "専用サポート", "オンプレミスオプション"]
+    }
+  },
+  "enterprise": {
+    "title": "エンタープライズ向けAppNode",
+    "subtitle": "安全でスケーラブルなアプリ開発で組織を強化",
+    "features": {
+      "security": {
+        "title": "エンタープライズセキュリティ",
+        "description": "高度な暗号化とアクセス制御を備えたSOC 2 Type II認証。"
+      },
+      "sso": {
+        "title": "シングルサインオン",
+        "description": "既存のIDプロバイダーと統合。SAMLとOIDCをサポート。"
+      },
+      "compliance": {
+        "title": "コンプライアンス",
+        "description": "GDPR、HIPAA、業界固有のコンプライアンスを内蔵。"
+      },
+      "support": {
+        "title": "専用サポート",
+        "description": "専任アカウント管理による24時間365日の優先サポート。"
+      },
+      "sla": {
+        "title": "SLA保証",
+        "description": "エンタープライズグレードのインフラストラクチャで99.99%の稼働時間SLA。"
+      },
+      "onpremise": {
+        "title": "オンプレミス",
+        "description": "独自のクラウドまたはオンプレミス環境にデプロイ。"
+      }
+    },
+    "cta": "営業に相談"
+  },
+  "auth": {
+    "login": {
+      "title": "おかえりなさい",
+      "subtitle": "AppNodeアカウントにサインイン",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "forgotPassword": "パスワードをお忘れですか？",
+      "noAccount": "アカウントをお持ちでないですか？",
+      "signUpLink": "サインアップ"
+    },
+    "signup": {
+      "title": "アカウントを作成",
+      "subtitle": "今日からAppNodeで構築を始めましょう",
+      "name": "氏名",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "confirmPassword": "パスワードを確認",
+      "hasAccount": "すでにアカウントをお持ちですか？",
+      "loginLink": "ログイン",
+      "terms": "サインアップすることで、利用規約とプライバシーポリシーに同意したことになります。"
+    }
+  },
+  "docs": {
+    "title": "ドキュメント",
+    "subtitle": "AppNodeで構築するために必要なすべて",
+    "gettingStarted": "はじめに",
+    "tutorials": "チュートリアル",
+    "apiReference": "APIリファレンス",
+    "examples": "サンプル",
+    "searchPlaceholder": "ドキュメントを検索..."
+  },
+  "blog": {
+    "title": "ブログ",
+    "subtitle": "AppNodeチームからのニュース、アップデート、インサイト",
+    "readTime": "分で読めます",
+    "categories": {
+      "all": "すべて",
+      "product": "製品",
+      "engineering": "エンジニアリング",
+      "community": "コミュニティ",
+      "tutorials": "チュートリアル"
+    }
+  },
+  "careers": {
+    "title": "チームに参加",
+    "subtitle": "アプリ開発の未来を一緒に作りましょう",
+    "openPositions": "募集中のポジション",
+    "benefits": {
+      "title": "なぜAppNode？",
+      "remote": "リモートファースト",
+      "remoteDesc": "世界中どこからでも働けます",
+      "equity": "ストックオプション",
+      "equityDesc": "成功を共有しましょう",
+      "health": "健康保険",
+      "healthDesc": "あなたとご家族のための包括的な保障",
+      "learning": "学習予算",
+      "learningDesc": "成長に投資しましょう"
+    },
+    "noPositions": "現在募集中のポジションはありません。また後でご確認ください！",
+    "applyNow": "今すぐ応募"
+  },
+  "community": {
+    "title": "コミュニティ",
+    "subtitle": "世界中のAppNodeビルダーとつながろう",
+    "discord": "Discordに参加",
+    "forum": "コミュニティフォーラム",
+    "showcase": "プロジェクトショーケース",
+    "events": "今後のイベント"
+  },
+  "support": {
+    "title": "サポート",
+    "subtitle": "お手伝いします",
+    "helpCenter": "ヘルプセンター",
+    "contactUs": "お問い合わせ",
+    "status": "システムステータス",
+    "faq": "よくある質問"
+  },
+  "legal": {
+    "terms": {
+      "title": "利用規約",
+      "lastUpdated": "最終更新日"
+    },
+    "privacy": {
+      "title": "プライバシーポリシー",
+      "lastUpdated": "最終更新日"
+    },
+    "cookies": {
+      "title": "Cookieポリシー",
+      "lastUpdated": "最終更新日"
+    }
+  },
+  "status": {
+    "title": "システムステータス",
+    "operational": "すべてのシステムが正常に動作中",
+    "degraded": "パフォーマンス低下",
+    "outage": "サービス停止",
+    "maintenance": "メンテナンス中"
+  },
+  "errors": {
+    "404": {
+      "title": "ページが見つかりません",
+      "description": "お探しのページは存在しません。",
+      "backHome": "ホームに戻る"
+    },
+    "500": {
+      "title": "問題が発生しました",
+      "description": "修正に取り組んでいます。後でもう一度お試しください。",
+      "retry": "再試行"
+    }
+  }
+}

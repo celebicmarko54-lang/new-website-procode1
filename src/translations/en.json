@@ -1,0 +1,746 @@
+{
+  "common": {
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "signUp": "Sign Up",
+    "logIn": "Log In",
+    "tryFree": "Try for Free",
+    "startBuilding": "Start Building",
+    "viewDocs": "View Documentation",
+    "contactSales": "Contact Sales",
+    "watchDemo": "Watch Demo",
+    "readMore": "Read More",
+    "seeAll": "See All",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "comingSoon": "Coming Soon"
+  },
+  "nav": {
+    "products": "Products",
+    "solutions": "Solutions",
+    "useCases": "Use Cases",
+    "pricing": "Pricing",
+    "enterprise": "Enterprise",
+    "docs": "Docs",
+    "about": "About",
+    "blog": "Blog",
+    "careers": "Careers",
+    "community": "Community"
+  },
+  "hero": {
+    "title": "Build apps with AI in minutes",
+    "placeholder": "Describe the app you want to build...",
+    "ready": "Ready",
+    "pressEnter": "Press Enter to send"
+  },
+  "features": {
+    "title": "Everything you need to build",
+    "subtitle": "AppNode provides all the tools and features you need to create powerful applications without writing code.",
+    "aiPowered": {
+      "title": "AI-Powered Development",
+      "description": "Describe your idea in natural language and watch as AI builds your application in real-time."
+    },
+    "visualBuilder": {
+      "title": "Visual Builder",
+      "description": "Drag and drop components, customize layouts, and design beautiful interfaces without code."
+    },
+    "instantDeploy": {
+      "title": "Instant Deployment",
+      "description": "Deploy your applications with one click. No server configuration needed."
+    },
+    "database": {
+      "title": "Built-in Database",
+      "description": "Powerful database integration with automatic schema generation and real-time sync."
+    },
+    "auth": {
+      "title": "Authentication",
+      "description": "Secure user authentication out of the box. Support for social logins and SSO."
+    },
+    "api": {
+      "title": "API Integration",
+      "description": "Connect to any API with our visual connector. Import OpenAPI specs instantly."
+    },
+    "responsive": {
+      "title": "Responsive Design",
+      "description": "Your apps look great on any device. Automatic responsive layouts and previews."
+    },
+    "collaboration": {
+      "title": "Real-time Collaboration",
+      "description": "Work together with your team in real-time. See changes as they happen."
+    }
+  },
+  "buildAnything": {
+    "title": "BUILD ANYTHING YOU IMAGINE",
+    "subtitle": "From simple landing pages to complex enterprise applications, AppNode handles it all.",
+    "exploreAll": "Explore all templates",
+    "webApps": {
+      "title": "Web Applications",
+      "description": "Full-featured web apps with authentication, databases, and APIs."
+    },
+    "mobileApps": {
+      "title": "Mobile Apps",
+      "description": "Native mobile experiences for iOS and Android from a single codebase."
+    },
+    "dashboards": {
+      "title": "Dashboards",
+      "description": "Data visualization and analytics dashboards with real-time updates."
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Online stores with payments, inventory, and order management."
+    },
+    "internal": {
+      "title": "Internal Tools",
+      "description": "Custom admin panels, CRMs, and workflow automation tools."
+    },
+    "marketplace": {
+      "title": "Marketplaces",
+      "description": "Two-sided platforms connecting buyers and sellers."
+    }
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "Loved by creators worldwide",
+    "subtitle": "Join thousands of developers, designers, and entrepreneurs who are building with AppNode.",
+    "quote1": "AppNode completely transformed how we prototype. What used to take weeks now takes hours.",
+    "author1": "Sarah Chen",
+    "role1": "Product Manager at TechCorp",
+    "quote2": "I built my entire startup's MVP using AppNode. The AI understands exactly what I need.",
+    "author2": "Mike Rodriguez",
+    "role2": "Founder of StartupX",
+    "quote3": "As a designer, I can now bring my designs to life without waiting for developers.",
+    "author3": "Emma Wilson",
+    "role3": "Senior Designer at DesignStudio",
+    "stats": {
+      "activeUsers": "Active Users",
+      "projectsCreated": "Projects Created",
+      "countries": "Countries",
+      "averageRating": "Average Rating"
+    }
+  },
+  "cta": {
+    "title": "Ready to build something",
+    "titleHighlight": "amazing?",
+    "subtitle": "Start creating your app today. No credit card required.",
+    "description": "Join thousands of creators who are already building the future with AppNode. Start for free, no credit card required.",
+    "button": "Start Building for Free",
+    "emailPlaceholder": "Enter your email",
+    "successMessage": "Check your email to get started!",
+    "newFeatures": "Smart Styles & Auto Layouts",
+    "trustedBy": "Trusted by teams at"
+  },
+  "footer": {
+    "company": "Company",
+    "resources": "Resources",
+    "legal": "Legal",
+    "about": "About",
+    "enterprise": "Enterprise",
+    "security": "Security",
+    "pricing": "Pricing",
+    "learn": "Learn",
+    "guides": "Guides",
+    "videos": "Videos",
+    "blog": "Blog",
+    "support": "Support",
+    "privacyPolicy": "Privacy Policy",
+    "cookieSettings": "Cookie Settings",
+    "termsOfService": "Terms of Service",
+    "platformRules": "Platform Rules",
+    "reportAbuse": "Report Abuse",
+    "allRightsReserved": "All rights reserved",
+    "madeWith": "Made with",
+    "languageLabel": "Language",
+    "tagline": "Build production-ready apps with AI",
+    "connectWithUs": "Connect with us"
+  },
+  "products": {
+    "title": "Products",
+    "subtitle": "Powerful tools to build, deploy, and scale your applications",
+    "agent": {
+      "title": "AI Agent",
+      "description": "Intelligent AI that understands your requirements and builds applications automatically.",
+      "tagline": "Build with natural language"
+    },
+    "database": {
+      "title": "Database",
+      "description": "Scalable, secure database with real-time sync and automatic backups.",
+      "tagline": "Your data, managed"
+    },
+    "design": {
+      "title": "Design Studio",
+      "description": "Visual design tools to create stunning interfaces without code.",
+      "tagline": "Design beautifully"
+    },
+    "integrations": {
+      "title": "Integrations",
+      "description": "Connect to thousands of services and APIs with pre-built connectors.",
+      "tagline": "Connect everything"
+    },
+    "mobile": {
+      "title": "Mobile",
+      "description": "Build native mobile apps for iOS and Android from a single project.",
+      "tagline": "Go mobile"
+    },
+    "publish": {
+      "title": "Publish",
+      "description": "One-click deployment to custom domains with SSL and CDN included.",
+      "tagline": "Ship faster"
+    },
+    "security": {
+      "title": "Security",
+      "description": "Enterprise-grade security with SOC 2 compliance and SSO support.",
+      "tagline": "Stay secure"
+    }
+  },
+  "productAgent": {
+    "badge": "AI-Powered Development",
+    "title": "Meet AppNode",
+    "titleHighlight": "Agent",
+    "subtitle": "Your AI coding companion that writes production-ready code, evolves it as you iterate, and stays out of your way while you build. Describe what you want, and Agent delivers.",
+    "startBuilding": "Start Building Free",
+    "howItWorks": "How Agent Works",
+    "demo": {
+      "you": "You",
+      "agent": "Agent",
+      "prompt": "Create a dashboard with user analytics, charts, and real-time data",
+      "response": "I'll create a comprehensive analytics dashboard for you...",
+      "writing": "Agent is writing code...",
+      "creating": "Creating components, setting up data fetching..."
+    },
+    "step1": {
+      "title": "Describe Your Vision",
+      "description": "Tell Agent what you want to build in plain English. No need for technical jargon - just describe your app like you would to a colleague."
+    },
+    "step2": {
+      "title": "Watch It Build",
+      "description": "Agent writes production-ready code in real-time. See files being created, components being structured, and your app taking shape."
+    },
+    "step3": {
+      "title": "Iterate & Improve",
+      "description": "Not quite right? Just tell Agent what to change. It understands context and makes smart adjustments while preserving what works."
+    },
+    "autonomous": {
+      "title": "Autonomous Long Builds",
+      "description": "Agent doesn't just write snippets - it can build entire applications autonomously. Set up a complex project structure, implement features across multiple files, and handle dependencies automatically.",
+      "item1": "Full-stack applications",
+      "item2": "Multi-file refactoring",
+      "item3": "Test generation",
+      "item4": "Documentation writing",
+      "item5": "Bug fixing & debugging"
+    },
+    "stats": {
+      "filesCreated": "Files created",
+      "linesOfCode": "Lines of code",
+      "buildTime": "Build time"
+    },
+    "cta": {
+      "title": "Ready to build with AI?",
+      "subtitle": "Start building your next project with AppNode Agent today. Free to start, no credit card required."
+    }
+  },
+  "productDatabase": {
+    "badge": "Data Management",
+    "title": "Built-in",
+    "titleHighlight": "Database",
+    "subtitle": "Store and manage your data without any setup. AppNode provides a powerful, scalable database ready from day one.",
+    "getStarted": "Get Started Free",
+    "readDocs": "Read the Docs",
+    "stats": {
+      "uptime": "Uptime SLA",
+      "latency": "Query latency",
+      "scalability": "Scalability",
+      "configuration": "Configuration"
+    },
+    "cta": {
+      "title": "Start storing data today",
+      "subtitle": "Build data-driven applications without the infrastructure headaches."
+    }
+  },
+  "productDesign": {
+    "badge": "Visual Development",
+    "title": "Design with",
+    "titleHighlight": "Precision",
+    "subtitle": "Granular controls so your app matches your vision. Import your designs or integrate your design system, refine in a live visual editor, and ship instantly.",
+    "tryDesignTools": "Try Design Tools",
+    "visualEditor": "Visual Editor",
+    "components": "Components",
+    "properties": "Properties",
+    "width": "Width",
+    "background": "Background",
+    "borderRadius": "Border Radius",
+    "featuresTitle": "Design Features",
+    "startDesigning": "Start Designing",
+    "features": {
+      "liveEditor": {
+        "title": "Live Visual Editor",
+        "description": "Edit components visually with real-time preview. What you see is exactly what users get."
+      },
+      "designSystem": {
+        "title": "Design System Import",
+        "description": "Import your existing Figma designs or brand guidelines and apply them instantly."
+      },
+      "componentLibrary": {
+        "title": "Component Library",
+        "description": "Access a rich library of pre-built, customizable components that follow best practices."
+      },
+      "responsive": {
+        "title": "Responsive Controls",
+        "description": "Design for all screen sizes with intuitive breakpoint controls and mobile preview."
+      },
+      "pixelPerfect": {
+        "title": "Pixel-Perfect Editing",
+        "description": "Fine-tune spacing, typography, and colors with precision controls."
+      },
+      "instantDeploy": {
+        "title": "Instant Deploy",
+        "description": "Ship your designs immediately. No build steps, no deployment configuration needed."
+      }
+    },
+    "cta": {
+      "title": "Design beautiful apps faster",
+      "subtitle": "Turn your design vision into reality with AppNode's powerful visual tools."
+    }
+  },
+  "productIntegrations": {
+    "badge": "Connect Everything",
+    "title": "Powerful",
+    "titleHighlight": "Integrations",
+    "subtitle": "Connect to your favorite tools and services with zero configuration. AppNode integrations plug in cleanly and securely.",
+    "browseAll": "Browse All Integrations",
+    "popularIntegrations": "Popular Integrations",
+    "getStarted": "Get Started Free",
+    "categories": {
+      "ai": "AI",
+      "payments": "Payments",
+      "communication": "Communication",
+      "email": "Email",
+      "cdn": "CDN",
+      "versionControl": "Version Control",
+      "cloud": "Cloud",
+      "deployment": "Deployment",
+      "database": "Database"
+    },
+    "integrations": {
+      "openai": "GPT-4, DALL-E, and more",
+      "stripe": "Accept payments globally",
+      "twilio": "SMS, voice, and video",
+      "sendgrid": "Transactional emails",
+      "cloudflare": "Edge computing and CDN",
+      "github": "Code hosting and CI/CD",
+      "slack": "Team messaging",
+      "googleCloud": "Cloud infrastructure",
+      "aws": "Amazon Web Services",
+      "anthropic": "Claude AI assistant",
+      "vercel": "Frontend deployment",
+      "supabase": "Backend as a service"
+    },
+    "howItWorks": {
+      "title": "How Integrations Work",
+      "step1": {
+        "title": "Select Integration",
+        "description": "Browse our catalog and click to enable any integration you need."
+      },
+      "step2": {
+        "title": "Authorize Once",
+        "description": "Connect your account securely with OAuth. Your credentials stay safe."
+      },
+      "step3": {
+        "title": "Start Using",
+        "description": "The integration is ready to use in your code immediately."
+      }
+    },
+    "cta": {
+      "title": "Connect your tools today",
+      "subtitle": "Build powerful apps that integrate with the services you already use."
+    }
+  },
+  "productMobile": {
+    "badge": "Build on the Go",
+    "title": "AppNode for",
+    "titleHighlight": "Mobile",
+    "subtitle": "Build, edit, and deploy your apps from anywhere. The full power of AppNode in your pocket, optimized for iOS and Android.",
+    "appStore": "App Store",
+    "playStore": "Play Store",
+    "live": "Live",
+    "run": "Run",
+    "deploy": "Deploy",
+    "output": "Output",
+    "featuresTitle": "Full Power, Anywhere",
+    "downloadIOS": "Download for iOS",
+    "downloadAndroid": "Download for Android",
+    "features": {
+      "codeEditor": {
+        "title": "Full Code Editor",
+        "description": "A complete code editor with syntax highlighting, autocomplete, and multi-file support."
+      },
+      "oneTapDeploy": {
+        "title": "One-Tap Deploy",
+        "description": "Deploy your changes instantly from your phone. Watch your app go live in seconds."
+      },
+      "realTimeSync": {
+        "title": "Real-time Sync",
+        "description": "Your projects sync across all devices. Start on desktop, continue on mobile."
+      },
+      "aiAssistant": {
+        "title": "AI Assistant",
+        "description": "Get AI help writing code, even on mobile. Voice input supported."
+      },
+      "liveAnalytics": {
+        "title": "Live Analytics",
+        "description": "Monitor your app performance, errors, and user metrics on the go."
+      },
+      "teamCollaboration": {
+        "title": "Team Collaboration",
+        "description": "Review PRs, comment on code, and collaborate with your team from anywhere."
+      }
+    },
+    "cta": {
+      "title": "Code from anywhere",
+      "subtitle": "Download AppNode mobile and take your development workflow wherever you go."
+    }
+  },
+  "productPublish": {
+    "badge": "Deployment",
+    "title": "Instantly",
+    "titleHighlight": "Publish",
+    "subtitle": "Deploy your apps with one click. Get a custom domain, SSL certificates, and global CDN automatically.",
+    "deployNow": "Deploy Now",
+    "featuresTitle": "Everything You Need to Ship",
+    "startDeploying": "Start Deploying",
+    "features": {
+      "oneClick": {
+        "title": "One-Click Deploy",
+        "description": "Deploy directly from your editor."
+      },
+      "customDomains": {
+        "title": "Custom Domains",
+        "description": "Connect your own domain or use our subdomain."
+      },
+      "ssl": {
+        "title": "Automatic SSL",
+        "description": "Every deployment gets a free SSL certificate."
+      },
+      "cdn": {
+        "title": "Global CDN",
+        "description": "Your app is served from 34+ edge locations."
+      },
+      "analytics": {
+        "title": "Analytics Built-in",
+        "description": "Track visitors and performance metrics."
+      },
+      "rollbacks": {
+        "title": "Instant Rollbacks",
+        "description": "Roll back to any previous deployment."
+      }
+    },
+    "cta": {
+      "title": "Ship your app today",
+      "subtitle": "Go from idea to production in minutes, not days."
+    }
+  },
+  "productSecurity": {
+    "badge": "Enterprise Security",
+    "title": "Security",
+    "titleHighlight": "First",
+    "subtitle": "Build with confidence. AppNode provides enterprise-grade security, pre-deployment screening, and secure defaults to keep your apps protected.",
+    "enterpriseSolutions": "Enterprise Solutions",
+    "securityReport": "Security Report",
+    "featuresTitle": "Security Features",
+    "badges": {
+      "soc2": "SOC 2 Type II",
+      "gdpr": "GDPR Compliant",
+      "iso": "ISO 27001",
+      "hipaa": "HIPAA Ready"
+    },
+    "features": {
+      "sso": {
+        "title": "SSO & SAML",
+        "description": "Integrate with your existing identity provider. Support for SAML, OIDC, and all major SSO providers.",
+        "item1": "SAML 2.0 support",
+        "item2": "Just-in-time provisioning",
+        "item3": "Multi-factor authentication"
+      },
+      "scanning": {
+        "title": "Pre-deployment Scanning",
+        "description": "Every deployment is automatically scanned for vulnerabilities, secrets, and security issues.",
+        "item1": "Dependency vulnerability scanning",
+        "item2": "Secret detection",
+        "item3": "OWASP compliance checks"
+      },
+      "encryption": {
+        "title": "Data Encryption",
+        "description": "All data is encrypted at rest and in transit using industry-standard encryption protocols.",
+        "item1": "AES-256 encryption at rest",
+        "item2": "TLS 1.3 in transit",
+        "item3": "Customer-managed keys available"
+      },
+      "auditLogs": {
+        "title": "Audit Logs",
+        "description": "Complete visibility into all actions taken on your account with detailed audit logs.",
+        "item1": "90-day log retention",
+        "item2": "Export to SIEM",
+        "item3": "Real-time alerts"
+      }
+    },
+    "cta": {
+      "title": "Need enterprise security?",
+      "subtitle": "Talk to our team about custom security requirements and compliance needs."
+    }
+  },
+  "solutions": {
+    "title": "Solutions",
+    "subtitle": "Tailored solutions for every industry and use case",
+    "startup": {
+      "title": "For Startups",
+      "description": "Move fast and build your MVP in days, not months."
+    },
+    "enterprise": {
+      "title": "For Enterprise",
+      "description": "Scale securely with compliance, SSO, and dedicated support."
+    },
+    "agencies": {
+      "title": "For Agencies",
+      "description": "Deliver client projects faster with white-label solutions."
+    }
+  },
+  "useCases": {
+    "title": "Use Cases",
+    "subtitle": "See how teams are using AppNode",
+    "rapidPrototyping": {
+      "title": "Rapid Prototyping",
+      "description": "Validate ideas quickly with working prototypes in hours."
+    },
+    "businessApps": {
+      "title": "Business Applications",
+      "description": "Build custom CRMs, ERPs, and workflow automation tools."
+    },
+    "mobileApps": {
+      "title": "Mobile Applications",
+      "description": "Create native mobile experiences without mobile development expertise."
+    }
+  },
+  "pricing": {
+    "title": "Simple Credit-Based Pricing",
+    "subtitle": "Pay only for what you use. No subscriptions, no hidden fees.",
+    "badge": "Pricing",
+    "creditInfo": "1 credit = 1 generation",
+    "freeTier": {
+      "title": "Free Tier",
+      "subtitle": "Get started without a credit card",
+      "features": ["2 free app generations", "Full access to all templates", "Live preview and deployment", "Export to GitHub"]
+    },
+    "buyCredits": "Buy Credits",
+    "mostPopular": "Most Popular",
+    "credits": "Credits",
+    "perCredit": "per credit",
+    "buyNow": "Buy Now",
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our pricing",
+      "q1": "What can I do with credits?",
+      "a1": "Each credit allows you to generate one complete app. You can use credits to create web apps, mobile apps, landing pages, and more using our AI-powered builder.",
+      "q2": "Do credits expire?",
+      "a2": "No! Your purchased credits never expire. Use them whenever you want, at your own pace.",
+      "q3": "Can I get a refund?",
+      "a3": "Yes, we offer a 30-day money-back guarantee for unused credits. Contact our support team for assistance.",
+      "q4": "What payment methods do you accept?",
+      "a4": "We accept all major credit cards (Visa, Mastercard, American Express) and PayPal.",
+      "q5": "How does the free tier work?",
+      "a5": "Every new user gets 2 free generations to try AppNode. No credit card required to get started!"
+    },
+    "readyToStart": "Ready to get started?",
+    "startWith": "Start building with 2 free generations.",
+    "getStartedFree": "Get Started Free",
+    "free": {
+      "name": "Free",
+      "price": "$0",
+      "period": "forever",
+      "description": "Perfect for learning and personal projects",
+      "features": ["3 projects", "1,000 records", "Community support", "Basic analytics"]
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "$29",
+      "period": "per month",
+      "description": "For professionals and small teams",
+      "features": ["Unlimited projects", "100,000 records", "Priority support", "Custom domains", "Advanced analytics", "Team collaboration"]
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Custom",
+      "period": "",
+      "description": "For large organizations with custom needs",
+      "features": ["Everything in Pro", "Unlimited records", "SSO & SAML", "SLA guarantee", "Dedicated support", "On-premise option"]
+    }
+  },
+  "enterprise": {
+    "title": "AppNode for Enterprise",
+    "subtitle": "Empower your organization with secure, scalable app development",
+    "features": {
+      "security": {
+        "title": "Enterprise Security",
+        "description": "SOC 2 Type II certified with advanced encryption and access controls."
+      },
+      "sso": {
+        "title": "Single Sign-On",
+        "description": "Integrate with your existing identity provider. SAML and OIDC support."
+      },
+      "compliance": {
+        "title": "Compliance",
+        "description": "GDPR, HIPAA, and industry-specific compliance built in."
+      },
+      "support": {
+        "title": "Dedicated Support",
+        "description": "24/7 priority support with dedicated account management."
+      },
+      "sla": {
+        "title": "SLA Guarantee",
+        "description": "99.99% uptime SLA with enterprise-grade infrastructure."
+      },
+      "onpremise": {
+        "title": "On-Premise",
+        "description": "Deploy in your own cloud or on-premise environment."
+      }
+    },
+    "cta": "Talk to Sales"
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome back",
+      "subtitle": "Sign in to your AppNode account",
+      "email": "Email address",
+      "password": "Password",
+      "forgotPassword": "Forgot password?",
+      "noAccount": "Don't have an account?",
+      "signUpLink": "Sign up",
+      "invalidCredentials": "Invalid email or password",
+      "loggingIn": "Logging in...",
+      "orContinueWith": "Or continue with",
+      "decorativeTitle": "Build anything.",
+      "decorativeSubtitle": "Faster than ever.",
+      "decorativeDescription": "The world's simplest way to build apps with AI."
+    },
+    "signup": {
+      "title": "Create your account",
+      "subtitle": "Start building with AppNode today",
+      "name": "Full name",
+      "email": "Email address",
+      "password": "Password",
+      "confirmPassword": "Confirm password",
+      "hasAccount": "Already have an account?",
+      "loginLink": "Log in",
+      "terms": "By signing up, you agree to our Terms of Service and Privacy Policy.",
+      "decorativeTitle": "Start building today",
+      "decorativeDescription": "Create your free account and start building amazing applications with AI in minutes.",
+      "step2Title": "Personalize your profile",
+      "step2Subtitle": "Choose an avatar color that represents you",
+      "step3Title": "Tell us about yourself",
+      "step3Subtitle": "This helps us personalize your experience",
+      "roleQuestion": "What best describes your role?",
+      "company": "Company name",
+      "creatingAccount": "Creating account...",
+      "createAccount": "Create account"
+    },
+    "features": {
+      "aiPowered": "AI-powered development",
+      "shipFast": "Ship in minutes, not months",
+      "freeGenerations": "2 free generations to start",
+      "noCreditCard": "No credit card required",
+      "fullAccess": "Full access to all templates"
+    }
+  },
+  "docs": {
+    "title": "Documentation",
+    "subtitle": "Everything you need to build with AppNode",
+    "gettingStarted": "Getting Started",
+    "tutorials": "Tutorials",
+    "apiReference": "API Reference",
+    "examples": "Examples",
+    "searchPlaceholder": "Search documentation..."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "News, updates, and insights from the AppNode team",
+    "readTime": "min read",
+    "categories": {
+      "all": "All",
+      "product": "Product",
+      "engineering": "Engineering",
+      "community": "Community",
+      "tutorials": "Tutorials"
+    }
+  },
+  "careers": {
+    "title": "Join Our Team",
+    "subtitle": "Help us shape the future of app development",
+    "openPositions": "Open Positions",
+    "benefits": {
+      "title": "Why AppNode?",
+      "remote": "Remote First",
+      "remoteDesc": "Work from anywhere in the world",
+      "equity": "Equity",
+      "equityDesc": "Share in our success",
+      "health": "Health Benefits",
+      "healthDesc": "Comprehensive coverage for you and your family",
+      "learning": "Learning Budget",
+      "learningDesc": "Invest in your growth"
+    },
+    "noPositions": "No open positions at the moment. Check back soon!",
+    "applyNow": "Apply Now"
+  },
+  "community": {
+    "title": "Community",
+    "subtitle": "Connect with AppNode builders around the world",
+    "discord": "Join our Discord",
+    "forum": "Community Forum",
+    "showcase": "Project Showcase",
+    "events": "Upcoming Events"
+  },
+  "support": {
+    "title": "Support",
+    "subtitle": "We're here to help",
+    "helpCenter": "Help Center",
+    "contactUs": "Contact Us",
+    "status": "System Status",
+    "faq": "FAQ"
+  },
+  "legal": {
+    "terms": {
+      "title": "Terms of Service",
+      "lastUpdated": "Last updated"
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated"
+    },
+    "cookies": {
+      "title": "Cookie Policy",
+      "lastUpdated": "Last updated"
+    }
+  },
+  "status": {
+    "title": "System Status",
+    "operational": "All Systems Operational",
+    "degraded": "Degraded Performance",
+    "outage": "Service Outage",
+    "maintenance": "Under Maintenance"
+  },
+  "errors": {
+    "404": {
+      "title": "Page Not Found",
+      "description": "The page you're looking for doesn't exist.",
+      "backHome": "Go Back Home"
+    },
+    "500": {
+      "title": "Something Went Wrong",
+      "description": "We're working on fixing this. Please try again later.",
+      "retry": "Try Again"
+    }
+  }
+}

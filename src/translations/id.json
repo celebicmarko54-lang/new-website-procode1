@@ -1,0 +1,428 @@
+{
+  "common": {
+    "getStarted": "Mulai",
+    "learnMore": "Pelajari lebih lanjut",
+    "signUp": "Daftar",
+    "logIn": "Masuk",
+    "tryFree": "Coba gratis",
+    "startBuilding": "Mulai membuat",
+    "viewDocs": "Lihat dokumentasi",
+    "contactSales": "Hubungi sales",
+    "watchDemo": "Tonton demo",
+    "readMore": "Baca selengkapnya",
+    "seeAll": "Lihat semua",
+    "back": "Kembali",
+    "next": "Berikutnya",
+    "submit": "Kirim",
+    "cancel": "Batal",
+    "save": "Simpan",
+    "loading": "Memuat...",
+    "error": "Error",
+    "success": "Berhasil",
+    "comingSoon": "Segera hadir"
+  },
+  "nav": {
+    "products": "Produk",
+    "solutions": "Solusi",
+    "useCases": "Kasus penggunaan",
+    "pricing": "Harga",
+    "enterprise": "Enterprise",
+    "docs": "Docs",
+    "about": "Tentang",
+    "blog": "Blog",
+    "careers": "Karir",
+    "community": "Komunitas"
+  },
+  "hero": {
+    "title": "Bangun aplikasi dengan AI dalam hitungan menit",
+    "placeholder": "Jelaskan aplikasi yang ingin Anda buat...",
+    "ready": "Siap",
+    "pressEnter": "Tekan Enter untuk mengirim"
+  },
+  "features": {
+    "title": "Semua yang Anda butuhkan untuk membangun",
+    "subtitle": "AppNode menyediakan semua alat dan fitur yang Anda butuhkan untuk membuat aplikasi powerful tanpa menulis kode.",
+    "aiPowered": {
+      "title": "Pengembangan berbasis AI",
+      "description": "Jelaskan ide Anda dalam bahasa alami dan lihat AI membangun aplikasi Anda secara real-time."
+    },
+    "visualBuilder": {
+      "title": "Builder visual",
+      "description": "Drag and drop komponen, kustomisasi layout, dan desain antarmuka yang indah tanpa kode."
+    },
+    "instantDeploy": {
+      "title": "Deploy instan",
+      "description": "Deploy aplikasi Anda dengan satu klik. Tidak perlu konfigurasi server."
+    },
+    "database": {
+      "title": "Database bawaan",
+      "description": "Integrasi database powerful dengan pembuatan skema otomatis dan sinkronisasi real-time."
+    },
+    "auth": {
+      "title": "Autentikasi",
+      "description": "Autentikasi pengguna yang aman siap pakai. Dukungan untuk login sosial dan SSO."
+    },
+    "api": {
+      "title": "Integrasi API",
+      "description": "Terhubung ke API apa pun dengan konektor visual kami. Import spesifikasi OpenAPI secara instan."
+    },
+    "responsive": {
+      "title": "Desain responsif",
+      "description": "Aplikasi Anda terlihat bagus di perangkat apa pun. Layout dan preview responsif otomatis."
+    },
+    "collaboration": {
+      "title": "Kolaborasi real-time",
+      "description": "Bekerja bersama tim Anda secara real-time. Lihat perubahan saat terjadi."
+    }
+  },
+  "buildAnything": {
+    "title": "BANGUN APAPUN YANG ANDA BAYANGKAN",
+    "subtitle": "Dari landing page sederhana hingga aplikasi enterprise yang kompleks, AppNode menangani semuanya.",
+    "exploreAll": "Jelajahi semua template",
+    "webApps": {
+      "title": "Aplikasi Web",
+      "description": "Aplikasi web lengkap dengan autentikasi, database, dan API."
+    },
+    "mobileApps": {
+      "title": "Aplikasi Mobile",
+      "description": "Pengalaman mobile native untuk iOS dan Android dari satu codebase."
+    },
+    "dashboards": {
+      "title": "Dashboard",
+      "description": "Dashboard visualisasi data dan analytics dengan update real-time."
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Toko online dengan pembayaran, inventori, dan manajemen pesanan."
+    },
+    "internal": {
+      "title": "Tools internal",
+      "description": "Panel admin custom, CRM, dan tools otomasi workflow."
+    },
+    "marketplace": {
+      "title": "Marketplace",
+      "description": "Platform dua sisi yang menghubungkan pembeli dan penjual."
+    }
+  },
+  "testimonials": {
+    "badge": "Testimoni",
+    "title": "Dicintai oleh kreator di seluruh dunia",
+    "subtitle": "Bergabunglah dengan ribuan developer, desainer, dan pengusaha yang membangun dengan AppNode.",
+    "quote1": "AppNode benar-benar mengubah cara kami membuat prototipe. Yang dulu memakan waktu berminggu-minggu sekarang hanya butuh beberapa jam.",
+    "author1": "Sarah Chen",
+    "role1": "Product Manager di TechCorp",
+    "quote2": "Saya membangun seluruh MVP startup saya menggunakan AppNode. AI-nya mengerti persis apa yang saya butuhkan.",
+    "author2": "Mike Rodriguez",
+    "role2": "Pendiri StartupX",
+    "quote3": "Sebagai desainer, sekarang saya bisa mewujudkan desain saya tanpa harus menunggu developer.",
+    "author3": "Emma Wilson",
+    "role3": "Senior Designer di DesignStudio",
+    "stats": {
+      "activeUsers": "Pengguna Aktif",
+      "projectsCreated": "Proyek Dibuat",
+      "countries": "Negara",
+      "averageRating": "Rating Rata-rata"
+    }
+  },
+  "cta": {
+    "title": "Siap membuat sesuatu yang",
+    "titleHighlight": "luar biasa?",
+    "subtitle": "Mulai buat aplikasi Anda hari ini. Tanpa kartu kredit.",
+    "description": "Bergabunglah dengan ribuan kreator yang sudah membangun masa depan dengan AppNode. Mulai gratis.",
+    "button": "Mulai membuat gratis",
+    "emailPlaceholder": "Masukkan email Anda",
+    "successMessage": "Cek email Anda untuk memulai!",
+    "newFeatures": "Gaya cerdas dan tata letak otomatis",
+    "trustedBy": "Dipercaya oleh tim di"
+  },
+  "footer": {
+    "company": "Perusahaan",
+    "resources": "Resources",
+    "legal": "Legal",
+    "about": "Tentang",
+    "enterprise": "Enterprise",
+    "security": "Keamanan",
+    "pricing": "Harga",
+    "learn": "Belajar",
+    "guides": "Panduan",
+    "videos": "Video",
+    "blog": "Blog",
+    "support": "Support",
+    "privacyPolicy": "Kebijakan privasi",
+    "cookieSettings": "Pengaturan cookie",
+    "termsOfService": "Ketentuan layanan",
+    "platformRules": "Aturan platform",
+    "reportAbuse": "Laporkan penyalahgunaan",
+    "allRightsReserved": "Hak cipta dilindungi",
+    "madeWith": "Dibuat dengan",
+    "languageLabel": "Bahasa",
+    "tagline": "Bangun aplikasi siap produksi dengan AI",
+    "connectWithUs": "Terhubung dengan kami"
+  },
+  "products": {
+    "title": "Produk",
+    "subtitle": "Tools powerful untuk membangun, deploy, dan skalakan aplikasi Anda",
+    "agent": {
+      "title": "AI Agent",
+      "description": "AI cerdas yang memahami kebutuhan Anda dan membangun aplikasi secara otomatis.",
+      "tagline": "Bangun dengan bahasa alami"
+    },
+    "database": {
+      "title": "Database",
+      "description": "Database scalable dan aman dengan sinkronisasi real-time dan backup otomatis.",
+      "tagline": "Data Anda, terkelola"
+    },
+    "design": {
+      "title": "Design Studio",
+      "description": "Tools desain visual untuk membuat antarmuka yang menakjubkan tanpa kode.",
+      "tagline": "Desain dengan indah"
+    },
+    "integrations": {
+      "title": "Integrasi",
+      "description": "Terhubung ke ribuan layanan dan API dengan konektor siap pakai.",
+      "tagline": "Hubungkan semuanya"
+    },
+    "mobile": {
+      "title": "Mobile",
+      "description": "Bangun aplikasi mobile native untuk iOS dan Android dari satu proyek.",
+      "tagline": "Go mobile"
+    },
+    "publish": {
+      "title": "Publish",
+      "description": "Deploy satu klik ke domain custom dengan SSL dan CDN termasuk.",
+      "tagline": "Ship lebih cepat"
+    },
+    "security": {
+      "title": "Keamanan",
+      "description": "Keamanan tingkat enterprise dengan kepatuhan SOC 2 dan dukungan SSO.",
+      "tagline": "Tetap aman"
+    }
+  },
+  "solutions": {
+    "title": "Solusi",
+    "subtitle": "Solusi yang disesuaikan untuk setiap industri dan kasus penggunaan",
+    "startup": {
+      "title": "Untuk Startup",
+      "description": "Bergerak cepat dan bangun MVP Anda dalam hitungan hari, bukan bulan."
+    },
+    "enterprise": {
+      "title": "Untuk Enterprise",
+      "description": "Skalakan dengan aman dengan kepatuhan, SSO, dan dukungan dedicated."
+    },
+    "agencies": {
+      "title": "Untuk Agensi",
+      "description": "Kirim proyek klien lebih cepat dengan solusi white-label."
+    }
+  },
+  "useCases": {
+    "title": "Kasus penggunaan",
+    "subtitle": "Lihat bagaimana tim menggunakan AppNode",
+    "rapidPrototyping": {
+      "title": "Prototyping cepat",
+      "description": "Validasi ide dengan cepat dengan prototipe yang berfungsi dalam hitungan jam."
+    },
+    "businessApps": {
+      "title": "Aplikasi bisnis",
+      "description": "Bangun CRM custom, ERP, dan tools otomasi workflow."
+    },
+    "mobileApps": {
+      "title": "Aplikasi mobile",
+      "description": "Buat pengalaman mobile native tanpa keahlian pengembangan mobile."
+    }
+  },
+  "pricing": {
+    "title": "Harga sederhana berbasis kredit",
+    "subtitle": "Bayar hanya untuk yang Anda gunakan. Tanpa langganan, tanpa biaya tersembunyi.",
+    "badge": "Harga",
+    "creditInfo": "1 kredit = 1 generasi",
+    "freeTier": {
+      "title": "Gratis",
+      "subtitle": "Mulai tanpa kartu kredit",
+      "features": ["2 generasi app gratis", "Akses penuh ke semua template", "Preview langsung dan deploy", "Ekspor ke GitHub"]
+    },
+    "buyCredits": "Beli kredit",
+    "mostPopular": "Paling populer",
+    "credits": "Kredit",
+    "perCredit": "per kredit",
+    "buyNow": "Beli sekarang",
+    "faq": {
+      "title": "Pertanyaan yang sering diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang harga kami",
+      "q1": "Apa yang bisa saya lakukan dengan kredit?",
+      "a1": "Setiap kredit memungkinkan Anda menghasilkan satu aplikasi lengkap. Anda dapat menggunakan kredit untuk membuat web app, mobile app, landing page, dan lainnya menggunakan builder AI kami.",
+      "q2": "Apakah kredit kedaluwarsa?",
+      "a2": "Tidak! Kredit yang dibeli tidak pernah kedaluwarsa. Gunakan kapan saja, sesuai kecepatan Anda.",
+      "q3": "Bisakah saya mendapatkan pengembalian dana?",
+      "a3": "Ya, kami menawarkan jaminan uang kembali 30 hari untuk kredit yang tidak terpakai. Hubungi tim dukungan kami untuk bantuan.",
+      "q4": "Metode pembayaran apa yang Anda terima?",
+      "a4": "Kami menerima semua kartu kredit utama (Visa, Mastercard, American Express) dan PayPal.",
+      "q5": "Bagaimana cara kerja paket gratis?",
+      "a5": "Setiap pengguna baru mendapat 2 generasi gratis untuk mencoba AppNode. Tidak perlu kartu kredit untuk memulai!"
+    },
+    "readyToStart": "Siap untuk memulai?",
+    "startWith": "Mulai membangun dengan 2 generasi gratis.",
+    "getStartedFree": "Mulai gratis",
+    "free": {
+      "name": "Gratis",
+      "price": "Rp0",
+      "period": "selamanya",
+      "description": "Sempurna untuk belajar dan proyek pribadi",
+      "features": ["3 proyek", "1.000 record", "Dukungan komunitas", "Analytics dasar"]
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "Rp450.000",
+      "period": "per bulan",
+      "description": "Untuk profesional dan tim kecil",
+      "features": ["Proyek unlimited", "100.000 record", "Dukungan prioritas", "Domain custom", "Analytics lanjutan", "Kolaborasi tim"]
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Custom",
+      "period": "",
+      "description": "Untuk organisasi besar dengan kebutuhan khusus",
+      "features": ["Semua di Pro", "Record unlimited", "SSO & SAML", "Jaminan SLA", "Dukungan dedicated", "Opsi on-premise"]
+    }
+  },
+  "enterprise": {
+    "title": "AppNode untuk Enterprise",
+    "subtitle": "Berdayakan organisasi Anda dengan pengembangan aplikasi yang aman dan scalable",
+    "features": {
+      "security": {
+        "title": "Keamanan enterprise",
+        "description": "Bersertifikat SOC 2 Type II dengan enkripsi lanjutan dan kontrol akses."
+      },
+      "sso": {
+        "title": "Single Sign-On",
+        "description": "Integrasi dengan identity provider Anda. Dukungan SAML dan OIDC."
+      },
+      "compliance": {
+        "title": "Kepatuhan",
+        "description": "GDPR, HIPAA, dan kepatuhan industri tertentu sudah termasuk."
+      },
+      "support": {
+        "title": "Dukungan dedicated",
+        "description": "Dukungan prioritas 24/7 dengan manajemen akun dedicated."
+      },
+      "sla": {
+        "title": "Jaminan SLA",
+        "description": "SLA uptime 99,99% dengan infrastruktur tingkat enterprise."
+      },
+      "onpremise": {
+        "title": "On-Premise",
+        "description": "Deploy di cloud Anda sendiri atau lingkungan on-premise."
+      }
+    },
+    "cta": "Hubungi Sales"
+  },
+  "auth": {
+    "login": {
+      "title": "Selamat datang kembali",
+      "subtitle": "Masuk ke akun AppNode Anda",
+      "email": "Alamat email",
+      "password": "Password",
+      "forgotPassword": "Lupa password?",
+      "noAccount": "Belum punya akun?",
+      "signUpLink": "Daftar"
+    },
+    "signup": {
+      "title": "Buat akun Anda",
+      "subtitle": "Mulai membangun dengan AppNode hari ini",
+      "name": "Nama lengkap",
+      "email": "Alamat email",
+      "password": "Password",
+      "confirmPassword": "Konfirmasi password",
+      "hasAccount": "Sudah punya akun?",
+      "loginLink": "Masuk",
+      "terms": "Dengan mendaftar, Anda menyetujui Ketentuan Layanan dan Kebijakan Privasi kami."
+    }
+  },
+  "docs": {
+    "title": "Dokumentasi",
+    "subtitle": "Semua yang Anda butuhkan untuk membangun dengan AppNode",
+    "gettingStarted": "Mulai",
+    "tutorials": "Tutorial",
+    "apiReference": "Referensi API",
+    "examples": "Contoh",
+    "searchPlaceholder": "Cari dokumentasi..."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Berita, update, dan insight dari tim AppNode",
+    "readTime": "menit baca",
+    "categories": {
+      "all": "Semua",
+      "product": "Produk",
+      "engineering": "Engineering",
+      "community": "Komunitas",
+      "tutorials": "Tutorial"
+    }
+  },
+  "careers": {
+    "title": "Bergabung dengan tim kami",
+    "subtitle": "Bantu kami membentuk masa depan pengembangan aplikasi",
+    "openPositions": "Posisi terbuka",
+    "benefits": {
+      "title": "Mengapa AppNode?",
+      "remote": "Remote First",
+      "remoteDesc": "Bekerja dari mana saja di dunia",
+      "equity": "Equity",
+      "equityDesc": "Bagikan kesuksesan kami",
+      "health": "Benefit kesehatan",
+      "healthDesc": "Cakupan komprehensif untuk Anda dan keluarga",
+      "learning": "Budget belajar",
+      "learningDesc": "Investasi untuk pertumbuhan Anda"
+    },
+    "noPositions": "Tidak ada posisi terbuka saat ini. Cek kembali segera!",
+    "applyNow": "Lamar sekarang"
+  },
+  "community": {
+    "title": "Komunitas",
+    "subtitle": "Terhubung dengan builder AppNode di seluruh dunia",
+    "discord": "Gabung Discord kami",
+    "forum": "Forum komunitas",
+    "showcase": "Showcase proyek",
+    "events": "Event mendatang"
+  },
+  "support": {
+    "title": "Support",
+    "subtitle": "Kami di sini untuk membantu",
+    "helpCenter": "Pusat bantuan",
+    "contactUs": "Hubungi kami",
+    "status": "Status sistem",
+    "faq": "FAQ"
+  },
+  "legal": {
+    "terms": {
+      "title": "Ketentuan layanan",
+      "lastUpdated": "Terakhir diperbarui"
+    },
+    "privacy": {
+      "title": "Kebijakan privasi",
+      "lastUpdated": "Terakhir diperbarui"
+    },
+    "cookies": {
+      "title": "Kebijakan cookie",
+      "lastUpdated": "Terakhir diperbarui"
+    }
+  },
+  "status": {
+    "title": "Status sistem",
+    "operational": "Semua sistem beroperasi",
+    "degraded": "Performa menurun",
+    "outage": "Gangguan layanan",
+    "maintenance": "Dalam pemeliharaan"
+  },
+  "errors": {
+    "404": {
+      "title": "Halaman tidak ditemukan",
+      "description": "Halaman yang Anda cari tidak ada.",
+      "backHome": "Kembali ke beranda"
+    },
+    "500": {
+      "title": "Terjadi kesalahan",
+      "description": "Kami sedang bekerja untuk memperbaiki ini. Silakan coba lagi nanti.",
+      "retry": "Coba lagi"
+    }
+  }
+}
