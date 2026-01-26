@@ -82,7 +82,7 @@ export default function FeaturesSection() {
             Everything you need to build
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Procode provides all the tools you need to turn your ideas into beautiful, functional applications.
+            AppNode provides all the tools you need to turn your ideas into beautiful, functional applications.
           </p>
         </div>
 

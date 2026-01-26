@@ -36,7 +36,7 @@ export default function Home() {
             </h2>
             
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Watch how easy it is to build production-ready apps with AppNode.
+              Watch how developers build production-ready apps in minutes using natural language.
             </p>
           </div>
 

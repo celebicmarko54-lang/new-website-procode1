@@ -2,14 +2,14 @@
 
 const testimonials = [
   {
-    quote: "Procode completely transformed how we prototype. What used to take weeks now takes hours.",
+    quote: "AppNode completely transformed how we prototype. What used to take weeks now takes hours.",
     author: "Sarah Chen",
     role: "Product Manager at TechCorp",
     avatar: "SC",
     gradient: 'from-gray-700 to-gray-900',
   },
   {
-    quote: "I built my entire startup's MVP using Procode. The AI understands exactly what I need.",
+    quote: "I built my entire startup's MVP using AppNode. The AI understands exactly what I need.",
     author: "Mike Rodriguez",
     role: "Founder of StartupX",
     avatar: "MR",
@@ -38,7 +38,7 @@ export default function TestimonialsSection() {
             Loved by creators worldwide
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Join thousands of developers, designers, and entrepreneurs who are building with Procode.
+            Join thousands of developers, designers, and entrepreneurs who are building with AppNode.
           </p>
         </div>
 

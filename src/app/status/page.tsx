@@ -83,7 +83,7 @@ export default function StatusPage() {
               System Status
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Real-time status and uptime information for Procode services
+              Real-time status and uptime information for AppNode services
             </p>
           </div>
         </div>

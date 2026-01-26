@@ -68,12 +68,12 @@ const docsSections = [
 // Content for each documentation page
 const docsContent: Record<string, { title: string; breadcrumb: string[]; content: React.ReactNode }> = {
   'introduction': {
-    title: 'Welcome to Procode',
+    title: 'Welcome to AppNode',
     breadcrumb: ['Getting Started', 'Introduction'],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          Procode is an AI-powered development platform that lets you build complete web applications just by describing what you want. No coding experience required — it feels like having a whole team working for you.
+          AppNode is an AI-powered development platform that lets you build complete web applications just by describing what you want. No coding experience required — it feels like having a whole team working for you.
         </p>
         <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 mb-8 bg-white dark:bg-[#0a0a0a]">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">What You Can Build</h3>
@@ -126,7 +126,7 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          Get up and running with Procode in minutes. Choose your path based on how you want to start building.
+          Get up and running with AppNode in minutes. Choose your path based on how you want to start building.
         </p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Choose Your Starting Point</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -274,14 +274,14 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          Bring your existing projects to Procode. Import any public or private repository and enhance it with AI-powered development tools.
+          Bring your existing projects to AppNode. Import any public or private repository and enhance it with AI-powered development tools.
         </p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">How to Import</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">1</div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Connect GitHub</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Authorize Procode to access your GitHub account for seamless imports</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">Authorize AppNode to access your GitHub account for seamless imports</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">2</div>
@@ -302,7 +302,7 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">What Happens After Import</h2>
         <ul className="space-y-2">
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Your code is cloned into a new Procode workspace
+            <span className="text-gray-400 dark:text-gray-600">•</span>Your code is cloned into a new AppNode workspace
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
             <span className="text-gray-400 dark:text-gray-600">•</span>Dependencies are automatically installed
@@ -322,12 +322,12 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
     ),
   },
   'trust-overview': {
-    title: 'Trust & Safety at Procode',
+    title: 'Trust & Safety at AppNode',
     breadcrumb: ['Trust & Safety', 'Overview'],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          We&apos;re committed to maintaining a safe, trustworthy platform for all users. Our Trust & Safety team works around the clock to ensure Procode remains a space where creators can build without fear.
+          We&apos;re committed to maintaining a safe, trustworthy platform for all users. Our Trust & Safety team works around the clock to ensure AppNode remains a space where creators can build without fear.
         </p>
         <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 mb-8 bg-white dark:bg-[#0a0a0a]">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Our Commitment</h3>
@@ -383,7 +383,7 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
             <span className="text-gray-400 dark:text-gray-600">•</span>Click the &quot;Report&quot; button on any project or user profile
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Email us directly at abuse@procode.dev
+            <span className="text-gray-400 dark:text-gray-600">•</span>Email us directly at abuse@appnode.dev
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
             <span className="text-gray-400 dark:text-gray-600">•</span>Use the contact form in your account settings
@@ -419,7 +419,7 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
           We respect intellectual property rights and respond promptly to valid copyright claims.
         </p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Filing a Claim</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-4">To file a DMCA takedown notice, please email <strong className="text-gray-900 dark:text-white">legal@procode.dev</strong> with:</p>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">To file a DMCA takedown notice, please email <strong className="text-gray-900 dark:text-white">legal@appnode.dev</strong> with:</p>
         <ul className="space-y-2">
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
             <span className="text-gray-400 dark:text-gray-600">•</span>Identification of the copyrighted work
@@ -447,12 +447,12 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
       <>
         <p className="text-sm text-gray-500 dark:text-gray-500 mb-4">Last updated: January 2025</p>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          These Terms of Service (&quot;Terms&quot;) govern your access to and use of Procode&apos;s services, websites, and applications (&quot;Services&quot;). By using our Services, you agree to be bound by these Terms.
+          These Terms of Service (&quot;Terms&quot;) govern your access to and use of AppNode&apos;s services, websites, and applications (&quot;Services&quot;). By using our Services, you agree to be bound by these Terms.
         </p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">1. Acceptance of Terms</h2>
         <p className="text-gray-600 dark:text-gray-400 mb-6">By accessing or using our Services, you agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you may not access or use our Services.</p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">2. Description of Services</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-6">Procode provides an AI-powered development platform that enables users to build websites, applications, and digital products. Our Services include code generation, hosting, collaboration tools, and related features.</p>
+        <p className="text-gray-600 dark:text-gray-400 mb-6">AppNode provides an AI-powered development platform that enables users to build websites, applications, and digital products. Our Services include code generation, hosting, collaboration tools, and related features.</p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">3. User Accounts</h2>
         <p className="text-gray-600 dark:text-gray-400 mb-4">To use certain features, you must create an account. You agree to:</p>
         <ul className="space-y-2 mb-6">
@@ -498,7 +498,7 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">7. Disclaimers</h2>
         <p className="text-gray-600 dark:text-gray-400 mb-6">OUR SERVICES ARE PROVIDED &quot;AS IS&quot; WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. WE DO NOT GUARANTEE THAT OUR SERVICES WILL BE UNINTERRUPTED, SECURE, OR ERROR-FREE.</p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">8. Contact</h2>
-        <p className="text-gray-600 dark:text-gray-400">For questions about these Terms, contact us at <strong className="text-gray-900 dark:text-white">legal@procode.dev</strong></p>
+        <p className="text-gray-600 dark:text-gray-400">For questions about these Terms, contact us at <strong className="text-gray-900 dark:text-white">legal@appnode.dev</strong></p>
       </>
     ),
   },
@@ -509,7 +509,7 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
       <>
         <p className="text-sm text-gray-500 dark:text-gray-500 mb-4">Last updated: January 2025</p>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          This Privacy Policy describes how Procode collects, uses, and shares information about you when you use our services.
+          This Privacy Policy describes how AppNode collects, uses, and shares information about you when you use our services.
         </p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Information We Collect</h2>
         <ul className="space-y-2 mb-6">
@@ -542,7 +542,7 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
           </li>
         </ul>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Contact</h2>
-        <p className="text-gray-600 dark:text-gray-400">For privacy-related questions, contact us at <strong className="text-gray-900 dark:text-white">privacy@procode.dev</strong></p>
+        <p className="text-gray-600 dark:text-gray-400">For privacy-related questions, contact us at <strong className="text-gray-900 dark:text-white">privacy@appnode.dev</strong></p>
       </>
     ),
   },
@@ -552,7 +552,7 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          These rules help maintain a safe and productive environment for all Procode users.
+          These rules help maintain a safe and productive environment for all AppNode users.
         </p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Prohibited Content</h2>
         <ul className="space-y-2 mb-6">
@@ -591,7 +591,7 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
     ),
   },
   'security-overview': {
-    title: 'Security at Procode',
+    title: 'Security at AppNode',
     breadcrumb: ['Security', 'Security Overview'],
     content: (
       <>
@@ -659,7 +659,7 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
           <span className="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 rounded-full text-sm">ISO 27001</span>
         </div>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Report a Vulnerability</h2>
-        <p className="text-gray-600 dark:text-gray-400">Found a security issue? Please report it responsibly to <strong className="text-gray-900 dark:text-white">security@procode.dev</strong>. We appreciate your help in keeping Procode secure and offer rewards for valid reports.</p>
+        <p className="text-gray-600 dark:text-gray-400">Found a security issue? Please report it responsibly to <strong className="text-gray-900 dark:text-white">security@appnode.dev</strong>. We appreciate your help in keeping AppNode secure and offer rewards for valid reports.</p>
       </>
     ),
   },
@@ -697,7 +697,7 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          Vibe coding is about describing what you want and letting AI handle the implementation. Learn how to get the best results from Procode&apos;s AI-powered development.
+          Vibe coding is about describing what you want and letting AI handle the implementation. Learn how to get the best results from AppNode&apos;s AI-powered development.
         </p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">The Vibe Coding Mindset</h2>
         <p className="text-gray-600 dark:text-gray-400 mb-6">Traditional coding requires you to know syntax, frameworks, and implementation details. Vibe coding flips this — you focus on <strong className="text-gray-900 dark:text-white">what</strong> you want, and AI figures out <strong className="text-gray-900 dark:text-white">how</strong> to build it.</p>
@@ -750,7 +750,7 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          Follow this step-by-step guide to build your first application with Procode.
+          Follow this step-by-step guide to build your first application with AppNode.
         </p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Step 1: Start a New Project</h2>
         <p className="text-gray-600 dark:text-gray-400 mb-6">Click &quot;Create New&quot; from your dashboard and choose &quot;Create with AI&quot; for the easiest start.</p>
@@ -769,7 +769,7 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          Learn how to add persistent data storage to your Procode applications.
+          Learn how to add persistent data storage to your AppNode applications.
         </p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Available Databases</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
@@ -801,7 +801,7 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          Get your application live with one click. Procode handles hosting, SSL, and scaling automatically.
+          Get your application live with one click. AppNode handles hosting, SSL, and scaling automatically.
         </p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Deploy Steps</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
@@ -822,7 +822,7 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
           </div>
         </div>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Custom Domains</h2>
-        <p className="text-gray-600 dark:text-gray-400">Connect your own domain by adding a CNAME record pointing to Procode. SSL certificates are automatically provisioned.</p>
+        <p className="text-gray-600 dark:text-gray-400">Connect your own domain by adding a CNAME record pointing to AppNode. SSL certificates are automatically provisioned.</p>
       </>
     ),
   },
@@ -832,7 +832,7 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          Collaborate with your team on Procode. Share projects, manage permissions, and build together in real-time.
+          Collaborate with your team on AppNode. Share projects, manage permissions, and build together in real-time.
         </p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Team Features</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
@@ -885,9 +885,9 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
           <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">Audit Logs:</strong> Track all actions across your organization</li>
           <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">Custom Contracts:</strong> Tailored agreements and SLAs</li>
           <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">Dedicated Support:</strong> Priority support with dedicated account manager</li>
-          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">Private Cloud:</strong> Run Procode in your own infrastructure</li>
+          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">Private Cloud:</strong> Run AppNode in your own infrastructure</li>
         </ul>
-        <p className="text-gray-600 dark:text-gray-400">Contact <strong className="text-gray-900 dark:text-white">enterprise@procode.dev</strong> to learn more.</p>
+        <p className="text-gray-600 dark:text-gray-400">Contact <strong className="text-gray-900 dark:text-white">enterprise@appnode.dev</strong> to learn more.</p>
       </>
     ),
   },

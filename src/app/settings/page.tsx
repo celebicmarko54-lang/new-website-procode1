@@ -29,7 +29,7 @@ export default function SettingsPage() {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
 
   useEffect(() => {
-    const currentUser = localStorage.getItem('Procode_current_user');
+    const currentUser = localStorage.getItem('appnode_current_user');
     if (!currentUser) {
       router.push('/login');
       return;
@@ -41,13 +41,13 @@ export default function SettingsPage() {
     if (!user) return;
     
     // Remove user from users list
-    const users = JSON.parse(localStorage.getItem('Procode_users') || '[]');
+    const users = JSON.parse(localStorage.getItem('appnode_users') || '[]');
     const updatedUsers = users.filter((u: User) => u.id !== user.id);
-    localStorage.setItem('Procode_users', JSON.stringify(updatedUsers));
+    localStorage.setItem('appnode_users', JSON.stringify(updatedUsers));
     
     // Clear current user and projects
-    localStorage.removeItem('Procode_current_user');
-    localStorage.removeItem('Procode_projects');
+    localStorage.removeItem('appnode_current_user');
+    localStorage.removeItem('appnode_projects');
     
     router.push('/');
   };

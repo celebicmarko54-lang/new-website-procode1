@@ -162,7 +162,7 @@ export default function ConnectionsPage() {
           <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-3">Need a different integration?</h2>
             <p className="text-gray-300 mb-6">
-              Let us know what services you'd like to connect with Procode
+              Let us know what services you'd like to connect with AppNode
             </p>
             <button className="px-6 py-3 bg-orange-500 hover:bg-orange-600 rounded-lg font-medium transition-colors">
               Request Integration

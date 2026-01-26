@@ -13,21 +13,21 @@ export default function RapidPrototypingPage() {
         {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300 text-sm font-medium mb-6">
               Use Case
             </div>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-              From Idea to Prototype in <span className="text-amber-500">Minutes</span>
+              From Idea to Prototype in <span className="text-gray-500 dark:text-gray-400">Minutes</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
               Validate ideas fast. Build working prototypes that look and feel like the real thing, 
               without writing a single line of code.
             </p>
             <div className="flex items-center justify-center gap-4">
-              <Link href="/signup" className="px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-colors">
+              <Link href="/signup" className="px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-medium rounded-full hover:opacity-90 transition-all shadow-xl shadow-gray-900/20 dark:shadow-none">
                 Start Prototyping
               </Link>
-              <Link href="/gallery" className="px-6 py-3 border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 font-medium rounded-lg transition-colors">
+              <Link href="/gallery" className="px-8 py-4 bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300 font-medium rounded-full hover:bg-gray-50 dark:hover:bg-[#151515] transition-colors">
                 See Examples
               </Link>
             </div>
@@ -60,8 +60,8 @@ export default function RapidPrototypingPage() {
               </div>
             </div>
             
-            <div className="p-6 bg-gradient-to-br from-amber-500/10 to-orange-500/10 rounded-xl border-2 border-amber-500">
-              <h3 className="font-semibold mb-4 text-amber-600 dark:text-amber-400">AppNode Prototyping</h3>
+            <div className="p-6 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-900 dark:to-black rounded-xl border-2 border-gray-300 dark:border-gray-700">
+              <h3 className="font-semibold mb-4 text-gray-900 dark:text-white">AppNode Prototyping</h3>
               <div className="space-y-3">
                 {[
                   { step: 'Describe your idea', time: '5 minutes' },
@@ -70,9 +70,9 @@ export default function RapidPrototypingPage() {
                   { step: 'Share with stakeholders', time: '1 minute' },
                   { step: 'Iterate based on feedback', time: '15-30 minutes' },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center justify-between py-2 border-b border-amber-200 dark:border-amber-800">
+                  <div key={i} className="flex items-center justify-between py-2 border-b border-gray-300 dark:border-gray-700">
                     <span>{item.step}</span>
-                    <span className="text-sm text-amber-600 dark:text-amber-400">{item.time}</span>
+                    <span className="text-sm text-gray-600 dark:text-gray-400">{item.time}</span>
                   </div>
                 ))}
                 <div className="pt-2 flex items-center justify-between font-semibold">
@@ -109,7 +109,7 @@ export default function RapidPrototypingPage() {
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
             Turn your ideas into working prototypes in minutes, not months.
           </p>
-          <Link href="/signup" className="inline-flex items-center gap-2 px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-colors text-lg">
+          <Link href="/signup" className="inline-flex items-center gap-2 px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-medium rounded-full hover:opacity-90 transition-all shadow-xl shadow-gray-900/20 dark:shadow-none text-lg">
             Get Started Free
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

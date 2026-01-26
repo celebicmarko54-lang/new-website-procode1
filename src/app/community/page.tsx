@@ -280,7 +280,7 @@ export default function CommunityPage() {
                   Connect with 5,000+ builders, get help, and share your projects.
                 </p>
                 <a
-                  href="https://discord.gg/Procode"
+                  href="https://discord.gg/appnode"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full py-2.5 bg-white text-gray-900 font-semibold rounded-lg text-center hover:bg-gray-100 transition-colors"

@@ -36,7 +36,7 @@ export default function BlogPage() {
     },
     {
       title: 'Building for Scale: Performance Best Practices',
-      excerpt: 'Optimize your Procode projects for speed and reliability.',
+      excerpt: 'Optimize your AppNode projects for speed and reliability.',
       author: 'David Kim',
       date: 'Nov 20, 2025',
       readTime: '7 min read',
@@ -97,14 +97,14 @@ export default function BlogPage() {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
-            Procode
+            AppNode
             <span className="block bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', WebkitBackgroundClip: 'text' }}>
               Blog
             </span>
           </h1>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
-            Insights, tutorials, and updates from the Procode team. 
+            Insights, tutorials, and updates from the AppNode team. 
             Stay ahead with the latest in AI-powered development.
           </p>
         </div>
@@ -246,7 +246,7 @@ export default function BlogPage() {
             Ready to Build Something?
           </h2>
           <p className="text-xl text-gray-100 mb-12 max-w-2xl mx-auto">
-            Turn your ideas into reality with Procode. Start building today.
+            Turn your ideas into reality with AppNode. Start building today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

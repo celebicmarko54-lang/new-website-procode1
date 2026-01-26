@@ -72,7 +72,7 @@ export default function UserProjects() {
         {/* Section Header */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
-            <h2 className="text-base font-semibold text-gray-900">Procode&apos;s Projects</h2>
+            <h2 className="text-base font-semibold text-gray-900">AppNode&apos;s Projects</h2>
             <span className="text-xs text-gray-400">({filteredProjects.length})</span>
           </div>
           

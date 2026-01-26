@@ -125,7 +125,7 @@ export default function ChangelogPage() {
               Changelog
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              All the latest updates, improvements, and fixes to Procode
+              All the latest updates, improvements, and fixes to AppNode
             </p>
           </div>
         </div>

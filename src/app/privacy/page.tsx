@@ -5,26 +5,26 @@ import Footer from '@/components/Footer';
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-black transition-colors">
       <Header />
       
       <main className="pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-6">
           {/* Header */}
           <div className="mb-12 text-center">
-            <div className="inline-block px-4 py-2 bg-gray-50 text-gray-900 rounded-full text-sm font-medium mb-4">
+            <div className="inline-block px-4 py-2 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-800 rounded-full text-sm font-medium mb-4">
               Legal
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Privacy Policy</h1>
-            <p className="text-gray-500">Last updated: December 1, 2025</p>
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">Privacy Policy</h1>
+            <p className="text-gray-500 dark:text-gray-400">Last updated: December 1, 2025</p>
           </div>
 
           {/* Content */}
           <div className="prose prose-gray max-w-none">
             <section className="mb-10">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Introduction</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Welcome to Procode. We respect your privacy and are committed to protecting your personal data. 
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">1. Introduction</h2>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                Welcome to AppNode. We respect your privacy and are committed to protecting your personal data. 
                 This privacy policy will inform you about how we look after your personal data when you visit our 
                 website and use our services, and tell you about your privacy rights and how the law protects you.
               </p>
@@ -135,14 +135,14 @@ export default function PrivacyPolicyPage() {
             </section>
 
             <section className="mb-10">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Contact Us</h2>
-              <p className="text-gray-600 leading-relaxed">
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">10. Contact Us</h2>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 If you have any questions about this privacy policy or our privacy practices, please contact us at:
               </p>
-              <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-                <p className="text-gray-700 font-medium">Procode Inc.</p>
-                <p className="text-gray-600">Email: privacy@Procode.dev</p>
-                <p className="text-gray-600">Address: 123 Innovation Street, San Francisco, CA 94105</p>
+              <div className="mt-4 p-4 bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800 rounded-lg">
+                <p className="text-gray-700 dark:text-gray-300 font-medium">AppNode Inc.</p>
+                <p className="text-gray-600 dark:text-gray-400">Email: privacy@appnode.dev</p>
+                <p className="text-gray-600 dark:text-gray-400">Address: 123 Innovation Street, San Francisco, CA 94105</p>
               </div>
             </section>
           </div>

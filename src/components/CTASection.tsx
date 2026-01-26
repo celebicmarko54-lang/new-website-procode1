@@ -41,7 +41,7 @@ export default function CTASection() {
 
         {/* Description */}
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Join thousands of creators who are already building the future with Procode. 
+          Join thousands of creators who are already building the future with AppNode. 
           Start for free, no credit card required.
         </p>
 

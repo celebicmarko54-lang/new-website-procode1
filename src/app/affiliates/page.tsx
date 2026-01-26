@@ -86,7 +86,7 @@ export default function AffiliatesPage() {
               Affiliate Program
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Earn Money Sharing Procode
+              Earn Money Sharing AppNode
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
               Join our affiliate program and earn up to 40% recurring commission for every customer you refer.

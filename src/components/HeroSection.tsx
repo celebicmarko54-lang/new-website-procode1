@@ -25,7 +25,7 @@ export default function HeroSection() {
       {/* Heading */}
       <div className="relative z-10 text-center" style={{ marginTop: '6vh' }}>
         <h1 className="text-4xl sm:text-5xl md:text-5xl font-bold text-gray-900 dark:text-white tracking-tight">
-          What will you build?
+          Build apps with AI in minutes
         </h1>
       </div>
 
@@ -53,7 +53,7 @@ export default function HeroSection() {
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="Describe what you want to build..."
+              placeholder="Describe the app you want to build..."
               rows={3}
               className="w-full resize-none ring-0 z-20 outline-0 bg-transparent text-base leading-relaxed placeholder:text-gray-500 text-[#1a1a1a] dark:text-white focus:outline-none"
             />
@@ -85,7 +85,7 @@ export default function HeroSection() {
               disabled={!prompt.trim()}
               className="flex items-center gap-2 px-4 py-2 rounded font-medium text-sm transition-all duration-200 disabled:bg-gray-100 disabled:dark:bg-[#1f1f1f] disabled:text-gray-400 disabled:dark:text-gray-500 disabled:cursor-not-allowed enabled:bg-black enabled:dark:bg-white enabled:text-white enabled:dark:text-black enabled:hover:opacity-90"
             >
-              Generate
+              Build Now
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>

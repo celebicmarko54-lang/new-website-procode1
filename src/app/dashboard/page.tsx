@@ -15,7 +15,7 @@ export default function DashboardPage() {
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
-    const currentUser = localStorage.getItem('Procode_current_user');
+    const currentUser = localStorage.getItem('appnode_current_user');
     if (!currentUser) {
       router.push('/login');
       return;
@@ -24,7 +24,7 @@ export default function DashboardPage() {
   }, [router]);
 
   const handleLogout = () => {
-    localStorage.removeItem('Procode_current_user');
+    localStorage.removeItem('appnode_current_user');
     router.push('/');
   };
 

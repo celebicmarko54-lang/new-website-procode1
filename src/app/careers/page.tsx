@@ -68,20 +68,26 @@ export default function CareersPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-black transition-colors">
       <Header />
       
       <main className="pt-24 pb-16">
         {/* Hero Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
           <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-              Join the <span className="text-gray-900">Procode</span> Team
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 mb-6">
+              <svg className="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Careers</span>
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              Join the <span className="text-gray-500 dark:text-gray-400">AppNode</span> Team
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-              Help us build the future of software development. We're looking for passionate people to join our mission.
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
+              Help us build the future of software development. We&apos;re looking for passionate people to join our mission.
             </p>
-            <a href="#openings" className="inline-flex items-center gap-2 px-6 py-3 text-white rounded-lg hover:opacity-90 transition-all font-medium" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}>
+            <a href="#openings" className="inline-flex items-center gap-2 px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full hover:opacity-90 transition-all font-medium">
               View Open Positions
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -92,13 +98,13 @@ export default function CareersPage() {
 
         {/* Company Values */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Our Values</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">Our Values</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value) => (
-              <div key={value.title} className="bg-white rounded-xl border border-gray-200 p-6 text-center hover:shadow-lg transition-all">
+              <div key={value.title} className="bg-white dark:bg-[#0a0a0a] rounded-xl border border-gray-200 dark:border-gray-800 p-6 text-center hover:shadow-lg transition-all">
                 <span className="text-4xl mb-4 block">{value.emoji}</span>
-                <h3 className="font-semibold text-gray-900 mb-2">{value.title}</h3>
-                <p className="text-sm text-gray-600">{value.description}</p>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{value.title}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{value.description}</p>
               </div>
             ))}
           </div>
@@ -107,36 +113,36 @@ export default function CareersPage() {
         {/* Benefits */}
         <div className="relative py-16 mb-16 overflow-hidden">
           {/* Background with grid */}
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white">
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900/20 dark:to-black">
             <div className="absolute inset-0" style={{
               backgroundImage: `
-                linear-gradient(rgba(233, 30, 140, 0.08) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(233, 30, 140, 0.08) 1px, transparent 1px)
+                linear-gradient(rgba(128, 128, 128, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(128, 128, 128, 0.08) 1px, transparent 1px)
               `,
               backgroundSize: '40px 40px',
             }} />
           </div>
           
           {/* Glowing orbs */}
-          <div className="absolute top-10 left-1/4 w-64 h-64 bg-[#1f2937]/5 rounded-full blur-[100px]" />
-          <div className="absolute bottom-10 right-1/4 w-64 h-64 bg-[#374151]/5 rounded-full blur-[100px]" />
+          <div className="absolute top-10 left-1/4 w-64 h-64 bg-gray-500/5 dark:bg-gray-400/5 rounded-full blur-[100px]" />
+          <div className="absolute bottom-10 right-1/4 w-64 h-64 bg-gray-500/5 dark:bg-gray-400/5 rounded-full blur-[100px]" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gray-50 to-purple-50 border border-gray-300 mb-4">
-                <div className="w-2 h-2 rounded-full bg-[#1f2937] animate-pulse" />
-                <span className="text-sm font-medium text-gray-900">Why Join Us</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 mb-4">
+                <div className="w-2 h-2 rounded-full bg-black dark:bg-white animate-pulse" />
+                <span className="text-sm font-medium text-gray-900 dark:text-white">Why Join Us</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Benefits & Perks</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Benefits & Perks</h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit) => (
-                <div key={benefit.title} className="group bg-white rounded-2xl border border-gray-200 p-6 text-center hover:shadow-xl hover:shadow-gray-100 hover:border-gray-300 transition-all duration-300">
-                  <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br from-gray-50 to-purple-50 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div key={benefit.title} className="group bg-white dark:bg-[#0a0a0a] rounded-2xl border border-gray-200 dark:border-gray-800 p-6 text-center hover:shadow-xl hover:shadow-gray-100 dark:hover:shadow-gray-900/50 hover:border-gray-300 dark:hover:border-gray-700 transition-all duration-300">
+                  <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-gray-100 dark:bg-gray-900 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <span className="text-2xl">{benefit.icon}</span>
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-2">{benefit.title}</h3>
-                  <p className="text-sm text-gray-600">{benefit.description}</p>
+                  <h3 className="font-bold text-gray-900 dark:text-white mb-2">{benefit.title}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{benefit.description}</p>
                 </div>
               ))}
             </div>
@@ -145,26 +151,26 @@ export default function CareersPage() {
 
         {/* Open Positions */}
         <div id="openings" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Open Positions</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">Open Positions</h2>
           <div className="space-y-4">
             {openings.map((job) => (
               <div
                 key={job.title}
-                className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg hover:border-gray-300 transition-all cursor-pointer group"
+                className="bg-white dark:bg-[#0a0a0a] rounded-xl border border-gray-200 dark:border-gray-800 p-6 hover:shadow-lg hover:border-gray-300 dark:hover:border-gray-700 transition-all cursor-pointer group"
               >
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div>
-                    <h3 className="font-semibold text-gray-900 text-lg group-hover:text-gray-900 transition-colors">
+                    <h3 className="font-semibold text-gray-900 dark:text-white text-lg group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
                       {job.title}
                     </h3>
-                    <p className="text-sm text-gray-600 mt-1">{job.description}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{job.description}</p>
                     <div className="flex flex-wrap gap-2 mt-3">
-                      <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">{job.department}</span>
-                      <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">{job.location}</span>
-                      <span className="text-xs bg-gray-100 text-gray-900 px-2 py-1 rounded">{job.type}</span>
+                      <span className="text-xs bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400 px-2 py-1 rounded">{job.department}</span>
+                      <span className="text-xs bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400 px-2 py-1 rounded">{job.location}</span>
+                      <span className="text-xs bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white px-2 py-1 rounded">{job.type}</span>
                     </div>
                   </div>
-                  <button className="flex-shrink-0 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium">
+                  <button className="flex-shrink-0 px-4 py-2 bg-black dark:bg-white text-white dark:text-black rounded-full hover:opacity-90 transition-colors text-sm font-medium">
                     Apply Now
                   </button>
                 </div>
@@ -173,10 +179,10 @@ export default function CareersPage() {
           </div>
 
           {/* Don't see a fit */}
-          <div className="mt-12 text-center bg-gray-50 rounded-xl p-8">
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Don't see a perfect fit?</h3>
-            <p className="text-gray-600 mb-4">We're always looking for talented people. Send us your resume and we'll keep you in mind.</p>
-            <button className="px-6 py-3 text-white rounded-lg hover:opacity-90 transition-all font-medium" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}>
+          <div className="mt-12 text-center bg-gray-50 dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800 rounded-xl p-8">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Don&apos;t see a perfect fit?</h3>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">We&apos;re always looking for talented people. Send us your resume and we&apos;ll keep you in mind.</p>
+            <button className="px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full hover:opacity-90 transition-all font-medium">
               Send General Application
             </button>
           </div>

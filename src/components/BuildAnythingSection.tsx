@@ -228,7 +228,7 @@ export default function BuildAnythingSection() {
       {/* Header */}
       <div className="max-w-7xl mx-auto px-6 mb-16 pl-12 md:pl-20">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
-          YOU CAN BUILD <span className="text-gray-900 dark:text-white">LITERALLY ANYTHING</span>
+          BUILD <span className="text-gray-900 dark:text-white">ANYTHING YOU IMAGINE</span>
         </h2>
       </div>
 
@@ -294,7 +294,7 @@ export default function BuildAnythingSection() {
           href="/templates" 
           className="inline-flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors group"
         >
-          <span>See all community projects</span>
+          <span>Explore all templates</span>
           <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>

@@ -151,10 +151,10 @@ export default function DocsPage() {
 
           {/* Content */}
           <article className="prose prose-gray max-w-none">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">Welcome to Procode</h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">Welcome to AppNode</h1>
             
             <p className="text-lg text-gray-600 mb-8">
-              Procode is an AI-powered development platform that lets you build complete web applications just by describing what you want. No coding experience required — it feels like having a whole team working for you.
+              AppNode is an AI-powered development platform that lets you build complete web applications just by describing what you want. No coding experience required — it feels like having a whole team working for you.
             </p>
 
             {/* What You Can Build */}

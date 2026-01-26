@@ -32,7 +32,7 @@ export default function LoginPage() {
     };
 
     // Check if OAuth user exists, if not add to users
-    const users = JSON.parse(localStorage.getItem('Procode_users') || '[]');
+    const users = JSON.parse(localStorage.getItem('appnode_users') || '[]');
     const existingUser = users.find((u: { email: string }) => u.email === oauthUser.email);
     
     if (!existingUser) {

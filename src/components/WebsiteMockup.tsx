@@ -1,7 +1,7 @@
 'use client';
 
 // Website mockup components that generate realistic website UI previews
-// Matching the style seen on Procode.dev community projects
+// Matching the style seen on AppNode community projects
 
 interface MockupProps {
   type: 'dashboard' | 'ecommerce' | 'portfolio' | 'blog' | 'tasks' | 'social' | 'landing' | 'saas' | 'crm' | 'learning' | 'fitness' | 'realestate' | 'default';

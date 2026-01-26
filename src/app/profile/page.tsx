@@ -33,7 +33,7 @@ export default function ProfilePage() {
   ];
 
   useEffect(() => {
-    const currentUser = localStorage.getItem('Procode_current_user');
+    const currentUser = localStorage.getItem('appnode_current_user');
     if (!currentUser) {
       router.push('/login');
       return;
@@ -57,14 +57,14 @@ export default function ProfilePage() {
     };
 
     // Update in localStorage
-    localStorage.setItem('Procode_current_user', JSON.stringify(updatedUser));
+    localStorage.setItem('appnode_current_user', JSON.stringify(updatedUser));
 
     // Update in users list
-    const users = JSON.parse(localStorage.getItem('Procode_users') || '[]');
+    const users = JSON.parse(localStorage.getItem('appnode_users') || '[]');
     const updatedUsers = users.map((u: User) => 
       u.id === user.id ? updatedUser : u
     );
-    localStorage.setItem('Procode_users', JSON.stringify(updatedUsers));
+    localStorage.setItem('appnode_users', JSON.stringify(updatedUsers));
 
     setUser(updatedUser);
     setIsEditing(false);

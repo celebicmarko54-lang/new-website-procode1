@@ -5,27 +5,27 @@ import Footer from '@/components/Footer';
 
 export default function TermsOfServicePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-black transition-colors">
       <Header />
       
       <main className="pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-6">
           {/* Header */}
           <div className="mb-12 text-center">
-            <div className="inline-block px-4 py-2 bg-gray-50 text-gray-900 rounded-full text-sm font-medium mb-4">
+            <div className="inline-block px-4 py-2 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-800 rounded-full text-sm font-medium mb-4">
               Legal
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Terms of Service</h1>
-            <p className="text-gray-500">Last updated: December 1, 2025</p>
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">Terms of Service</h1>
+            <p className="text-gray-500 dark:text-gray-400">Last updated: December 1, 2025</p>
           </div>
 
           {/* Content */}
           <div className="prose prose-gray max-w-none">
             <section className="mb-10">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Acceptance of Terms</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                By accessing or using Procode's services, website, or any applications (collectively, the "Services"), 
-                you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, 
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">1. Acceptance of Terms</h2>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                By accessing or using AppNode&apos;s services, website, or any applications (collectively, the &quot;Services&quot;), 
+                you agree to be bound by these Terms of Service (&quot;Terms&quot;). If you do not agree to these Terms, 
                 please do not use our Services.
               </p>
               <p className="text-gray-600 leading-relaxed">
@@ -35,9 +35,9 @@ export default function TermsOfServicePage() {
             </section>
 
             <section className="mb-10">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Description of Services</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Procode provides an AI-powered platform that enables users to create web applications through 
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">2. Description of Services</h2>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                AppNode provides an AI-powered platform that enables users to create web applications through 
                 natural language prompts. Our Services include:
               </p>
               <ul className="list-disc pl-6 text-gray-600 space-y-2">
@@ -69,9 +69,9 @@ export default function TermsOfServicePage() {
 
             <section className="mb-10">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. User Content and Ownership</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                 <strong>Your Content:</strong> You retain ownership of all content, applications, and code you 
-                create using our Services ("User Content"). You grant Procode a limited license to host, store, 
+                create using our Services (&quot;User Content&quot;). You grant AppNode a limited license to host, store, 
                 and display your User Content as necessary to provide the Services.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
@@ -118,9 +118,9 @@ export default function TermsOfServicePage() {
             </section>
 
             <section className="mb-10">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Intellectual Property</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                The Services, including all content, features, and functionality, are owned by Procode and 
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">7. Intellectual Property</h2>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                The Services, including all content, features, and functionality, are owned by AppNode and 
                 protected by copyright, trademark, and other intellectual property laws.
               </p>
               <p className="text-gray-600 leading-relaxed">
@@ -139,9 +139,9 @@ export default function TermsOfServicePage() {
             </section>
 
             <section className="mb-10">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Limitation of Liability</h2>
-              <p className="text-gray-600 leading-relaxed">
-                TO THE MAXIMUM EXTENT PERMITTED BY LAW, Procode SHALL NOT BE LIABLE FOR ANY INDIRECT, 
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">9. Limitation of Liability</h2>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                TO THE MAXIMUM EXTENT PERMITTED BY LAW, AppNode SHALL NOT BE LIABLE FOR ANY INDIRECT, 
                 INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, 
                 WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER 
                 INTANGIBLE LOSSES.
@@ -171,14 +171,14 @@ export default function TermsOfServicePage() {
             </section>
 
             <section className="mb-10">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">12. Contact Information</h2>
-              <p className="text-gray-600 leading-relaxed">
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">12. Contact Information</h2>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 If you have any questions about these Terms, please contact us at:
               </p>
-              <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-                <p className="text-gray-700 font-medium">Procode Inc.</p>
-                <p className="text-gray-600">Email: legal@Procode.dev</p>
-                <p className="text-gray-600">Address: 123 Innovation Street, San Francisco, CA 94105</p>
+              <div className="mt-4 p-4 bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800 rounded-lg">
+                <p className="text-gray-700 dark:text-gray-300 font-medium">AppNode Inc.</p>
+                <p className="text-gray-600 dark:text-gray-400">Email: legal@appnode.dev</p>
+                <p className="text-gray-600 dark:text-gray-400">Address: 123 Innovation Street, San Francisco, CA 94105</p>
               </div>
             </section>
           </div>

@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 export default function LearnPage() {
   const courses = [
     {
-      title: 'Getting Started with Procode',
+      title: 'Getting Started with AppNode',
       description: 'Learn the basics of creating apps with AI. Perfect for absolute beginners.',
       duration: '15 min',
       level: 'Beginner',
@@ -233,7 +233,7 @@ export default function LearnPage() {
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
             Learn to Build with
             <span className="block bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', WebkitBackgroundClip: 'text' }}>
-              Procode
+              AppNode
             </span>
           </h1>
           
@@ -435,7 +435,7 @@ export default function LearnPage() {
             Start Your Learning Journey Today
           </h2>
           <p className="text-xl text-gray-100 mb-12 max-w-2xl mx-auto">
-            Join over 100,000 students who have transformed their skills with Procode. 
+            Join over 100,000 students who have transformed their skills with AppNode. 
             All courses are completely free.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

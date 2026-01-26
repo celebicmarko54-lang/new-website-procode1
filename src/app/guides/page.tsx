@@ -11,7 +11,7 @@ export default function GuidesPage() {
   const guides = [
     {
       title: 'Complete Guide to Building SaaS Apps',
-      description: 'Everything you need to know about creating software-as-a-service applications with Procode',
+      description: 'Everything you need to know about creating software-as-a-service applications with AppNode',
       readTime: '15 min read',
       category: 'SaaS',
       featured: true,
