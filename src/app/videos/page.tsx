@@ -3,8 +3,11 @@
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useTranslation } from '@/context/LanguageContext';
 
 export default function VideosPage() {
+  const { t } = useTranslation();
+  
   const featuredVideo = {
     title: 'Complete Lovecode Tutorial: From Zero to Deployed App',
     description: 'The ultimate guide to building and deploying your first application with Lovecode. Learn everything from account setup to live deployment on Cloudflare, Vercel, or GitHub Pages.',
@@ -506,7 +509,7 @@ export default function VideosPage() {
           <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
           {showAll && (
             <button className="text-gray-900 hover:text-gray-700 font-medium text-sm">
-              View all →
+              {t('videosPage.viewAll')} →
             </button>
           )}
         </div>
@@ -531,19 +534,18 @@ export default function VideosPage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span className="text-sm font-medium text-gray-700">Video Learning</span>
+            <span className="text-sm font-medium text-gray-700">{t('videosPage.badge')}</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
-            How it
+            {t('videosPage.titleStart')}
             <span className="block bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', WebkitBackgroundClip: 'text' }}>
-              works
+              {t('videosPage.titleHighlight')}
             </span>
           </h1>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
-            Learn everything about Lovecode with our comprehensive video tutorials. 
-            From your first project to deploying on Cloudflare, Vercel, or GitHub.
+            {t('videosPage.subtitle')}
           </p>
         </div>
       </section>
@@ -565,7 +567,7 @@ export default function VideosPage() {
                 {featuredVideo.duration}
               </div>
               <div className="absolute top-4 left-4 px-3 py-1.5 bg-gradient-to-r from-[#1f2937] to-[#374151] rounded-full text-white text-sm font-medium">
-                Featured
+                {t('videosPage.featured')}
               </div>
             </div>
             <div className="p-8">
@@ -580,7 +582,7 @@ export default function VideosPage() {
       {/* Playlists */}
       <section className="px-6 pb-16">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Playlists</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">{t('videosPage.playlists')}</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {playlists.map((playlist, index) => (
               <div
@@ -613,17 +615,17 @@ export default function VideosPage() {
       <section className="py-24 px-6 bg-gradient-to-r from-[#1f2937] to-[#374151]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Start Building?
+            {t('videosPage.cta.title')}
           </h2>
           <p className="text-xl text-gray-100 mb-12 max-w-2xl mx-auto">
-            Join thousands of creators who are building amazing applications with Lovecode.
+            {t('videosPage.cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/signup"
               className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg inline-flex items-center justify-center gap-2"
             >
-              Start Building Free
+              {t('videosPage.cta.startBuildingFree')}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
@@ -635,7 +637,7 @@ export default function VideosPage() {
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
               </svg>
-              Subscribe on YouTube
+              {t('videosPage.cta.subscribeYouTube')}
             </Link>
           </div>
         </div>

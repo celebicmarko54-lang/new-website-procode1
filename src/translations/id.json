@@ -423,6 +423,17 @@
       "title": "Terjadi kesalahan",
       "description": "Kami sedang bekerja untuk memperbaiki ini. Silakan coba lagi nanti.",
       "retry": "Coba lagi"
-    }
-  }
+    }  },
+  "docsPage": {
+    "searchPlaceholder": "Cari dokumentasi...",
+    "welcomeTitle": "Selamat Datang di AppNode",
+    "welcomeDescription": "AppNode adalah platform pengembangan berbasis AI yang memungkinkan Anda membangun aplikasi web lengkap hanya dengan menjelaskan apa yang Anda inginkan. Tidak diperlukan pengalaman coding.",
+    "whatYouCanBuild": "Apa yang Bisa Anda Bangun",
+    "howItWorks": "Cara Kerjanya",
+    "howItWorksDescription": "Cukup jelaskan proyek Anda dalam bahasa alami. AI kami memahami kebutuhan Anda, menghasilkan rencana lengkap, dan membangun kode siap produksi secara real-time.",
+    "gettingStarted": "Memulai",
+    "gettingStartedDescription": "Siap membuat aplikasi pertama Anda? Berikut cara memulai dalam beberapa langkah:",
+    "startBuildingFree": "Mulai Gratis",
+    "viewQuickstartGuide": "Lihat Panduan Cepat",
+    "copyPage": "Salin halaman"  }
 }

@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useTranslation } from '@/context/LanguageContext';
 
 interface User {
   id: number;
@@ -16,6 +17,7 @@ interface User {
 
 export default function ProfilePage() {
   const router = useRouter();
+  const { t } = useTranslation();
   const [user, setUser] = useState<User | null>(null);
   const [isEditing, setIsEditing] = useState(false);
   const [name, setName] = useState('');
@@ -91,7 +93,7 @@ export default function ProfilePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </Link>
-              <h1 className="text-lg font-semibold text-gray-900">Profile</h1>
+              <h1 className="text-lg font-semibold text-gray-900">{t('profilePage.title')}</h1>
             </div>
           </div>
         </div>
@@ -115,7 +117,7 @@ export default function ProfilePage() {
                 onClick={() => setIsEditing(!isEditing)}
                 className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
               >
-                {isEditing ? 'Cancel' : 'Edit Profile'}
+                {isEditing ? t('common.cancel') : t('profilePage.editProfile')}
               </button>
             </div>
           </div>
@@ -126,7 +128,7 @@ export default function ProfilePage() {
               <div className="space-y-6">
                 {/* Name */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">{t('profilePage.fullName')}</label>
                   <input
                     type="text"
                     value={name}
@@ -137,19 +139,19 @@ export default function ProfilePage() {
 
                 {/* Company */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Company (optional)</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">{t('profilePage.companyOptional')}</label>
                   <input
                     type="text"
                     value={company}
                     onChange={(e) => setCompany(e.target.value)}
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none"
-                    placeholder="Your company name"
+                    placeholder={t('profilePage.companyPlaceholder')}
                   />
                 </div>
 
                 {/* Avatar Color */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-3">Avatar Color</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-3">{t('profilePage.avatarColor')}</label>
                   <div className="flex flex-wrap gap-3">
                     {avatarColors.map((color) => (
                       <button
@@ -172,7 +174,7 @@ export default function ProfilePage() {
                     disabled={isSaving || !name.trim()}
                     className="px-6 py-3 bg-gradient-to-r from-orange-600 to-amber-600 text-white font-medium rounded-xl hover:from-orange-700 hover:to-amber-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {isSaving ? 'Saving...' : 'Save Changes'}
+                    {isSaving ? t('profilePage.saving') : t('profilePage.saveChanges')}
                   </button>
                 </div>
               </div>
@@ -180,23 +182,23 @@ export default function ProfilePage() {
               <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-500 mb-1">Full Name</label>
+                    <label className="block text-sm font-medium text-gray-500 mb-1">{t('profilePage.fullName')}</label>
                     <p className="text-gray-900">{user.name}</p>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-500 mb-1">Email</label>
+                    <label className="block text-sm font-medium text-gray-500 mb-1">{t('profilePage.email')}</label>
                     <p className="text-gray-900">{user.email}</p>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-500 mb-1">Role</label>
+                    <label className="block text-sm font-medium text-gray-500 mb-1">{t('profilePage.role')}</label>
                     <p className="text-gray-900 capitalize">{user.role}</p>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-500 mb-1">Company</label>
-                    <p className="text-gray-900">{user.company || 'Not specified'}</p>
+                    <label className="block text-sm font-medium text-gray-500 mb-1">{t('profilePage.company')}</label>
+                    <p className="text-gray-900">{user.company || t('profilePage.notSpecified')}</p>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-500 mb-1">Member Since</label>
+                    <label className="block text-sm font-medium text-gray-500 mb-1">{t('profilePage.memberSince')}</label>
                     <p className="text-gray-900">{new Date(user.createdAt).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</p>
                   </div>
                 </div>

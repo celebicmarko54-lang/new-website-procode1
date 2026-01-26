@@ -423,6 +423,17 @@
       "title": "Qualcosa è andato storto",
       "description": "Stiamo lavorando per risolvere. Riprova più tardi.",
       "retry": "Riprova"
-    }
-  }
+    }  },
+  "docsPage": {
+    "searchPlaceholder": "Cerca nella documentazione...",
+    "welcomeTitle": "Benvenuto in AppNode",
+    "welcomeDescription": "AppNode è una piattaforma di sviluppo basata sull'IA che ti permette di creare applicazioni web complete semplicemente descrivendo ciò che vuoi. Nessuna esperienza di programmazione richiesta.",
+    "whatYouCanBuild": "Cosa puoi costruire",
+    "howItWorks": "Come funziona",
+    "howItWorksDescription": "Descrivi semplicemente il tuo progetto in linguaggio naturale. La nostra IA comprende i tuoi requisiti, genera un piano completo e costruisce codice pronto per la produzione in tempo reale.",
+    "gettingStarted": "Iniziare",
+    "gettingStartedDescription": "Pronto a creare la tua prima applicazione? Ecco come iniziare in pochi passi:",
+    "startBuildingFree": "Inizia gratuitamente",
+    "viewQuickstartGuide": "Vedi guida rapida",
+    "copyPage": "Copia pagina"  }
 }

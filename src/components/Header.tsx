@@ -40,7 +40,6 @@ export default function Header() {
                 {activeDropdown === 'products' && (
                   <div className="absolute top-full left-0 mt-1 w-48 rounded-lg bg-white dark:bg-black border border-gray-200 dark:border-gray-800 shadow-lg py-1 animate-fade-in">
                     <Link href="/products/agent" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('products.agent.title')}</Link>
-                    <Link href="/products/design" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('products.design.title')}</Link>
                     <Link href="/products/database" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('products.database.title')}</Link>
                     <Link href="/products/publish" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('products.publish.title')}</Link>
                     <Link href="/products/security" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('products.security.title')}</Link>
@@ -156,7 +155,6 @@ export default function Header() {
             <nav className="flex flex-col gap-2">
               <div className="px-3 py-2 text-xs font-medium text-gray-400 uppercase">Products</div>
               <Link href="/products/agent" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Agent</Link>
-              <Link href="/products/design" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Design</Link>
               <Link href="/products/database" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Database</Link>
               <Link href="/products/publish" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Publish</Link>
               <Link href="/products/security" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Security</Link>

@@ -2,8 +2,11 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useTranslation } from '@/context/LanguageContext';
 
 export default function StatusPage() {
+  const { t } = useTranslation();
+
   const services = [
     { name: 'API', status: 'operational', uptime: '99.99%' },
     { name: 'Web Application', status: 'operational', uptime: '99.98%' },
@@ -77,13 +80,13 @@ export default function StatusPage() {
           <div className="text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-full mb-6">
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-              <span className="font-medium">All Systems Operational</span>
+              <span className="font-medium">{t('statusPage.allOperational')}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-              System Status
+              {t('statusPage.title')}
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Real-time status and uptime information for AppNode services
+              {t('statusPage.subtitle')}
             </p>
           </div>
         </div>
@@ -92,7 +95,7 @@ export default function StatusPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <div className="bg-white rounded-xl border border-gray-200 p-6">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-lg font-semibold text-gray-900">Uptime - Last 7 Days</h2>
+              <h2 className="text-lg font-semibold text-gray-900">{t('statusPage.uptimeTitle')}</h2>
               <span className="text-2xl font-bold text-green-600">99.98%</span>
             </div>
             <div className="flex gap-1">
@@ -111,7 +114,7 @@ export default function StatusPage() {
 
         {/* Services Status */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Services</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">{t('statusPage.servicesTitle')}</h2>
           <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
             {services.map((service, index) => (
               <div 
@@ -135,7 +138,7 @@ export default function StatusPage() {
 
         {/* Recent Incidents */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Recent Incidents</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">{t('statusPage.incidentsTitle')}</h2>
           <div className="space-y-4">
             {incidents.map((incident) => (
               <div key={incident.title} className="bg-white rounded-xl border border-gray-200 p-6">
@@ -162,18 +165,18 @@ export default function StatusPage() {
         {/* Subscribe to Updates */}
         <div className="max-w-4xl mx-auto px-6">
           <div className="bg-gradient-to-r from-[#1f2937] to-[#374151] rounded-2xl p-8 text-center text-white">
-            <h2 className="text-2xl font-bold mb-3">Get Status Updates</h2>
+            <h2 className="text-2xl font-bold mb-3">{t('statusPage.subscribeTitle')}</h2>
             <p className="text-gray-100 mb-6">
-              Subscribe to receive notifications about system status and incidents
+              {t('statusPage.subscribeSubtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="Enter your email"
+                placeholder={t('statusPage.emailPlaceholder')}
                 className="flex-1 px-4 py-3 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/30"
               />
               <button className="px-6 py-3 bg-white text-gray-900 hover:bg-gray-50 rounded-xl font-semibold transition-colors">
-                Subscribe
+                {t('statusPage.subscribeButton')}
               </button>
             </div>
           </div>

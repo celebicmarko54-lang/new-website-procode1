@@ -610,6 +610,41 @@
     },
     "cta": "Talk to Sales"
   },
+  "enterprisePage": {
+    "badge": "ENTERPRISE",
+    "title": "Build at scale with",
+    "titleHighlight": "enterprise-grade",
+    "titleEnd": "features",
+    "subtitle": "Everything your team needs to build, deploy, and manage applications at scale. Security, compliance, and support built for the enterprise.",
+    "viewPricing": "View Pricing",
+    "trustedBy": "TRUSTED BY LEADING COMPANIES",
+    "featuresTitle": "Everything you need for enterprise",
+    "featuresSubtitle": "Advanced features designed for teams that need security, scalability, and support.",
+    "testimonialsTitle": "Loved by enterprise teams",
+    "testimonialsSubtitle": "See what leaders are saying about AppNode Enterprise.",
+    "contactTitle": "Get in touch",
+    "contactSubtitle": "Tell us about your team and we'll get back to you within 24 hours.",
+    "thankYou": "Thank you!",
+    "thankYouMessage": "We've received your message and will be in touch soon.",
+    "form": {
+      "fullName": "Full Name",
+      "namePlaceholder": "John Smith",
+      "workEmail": "Work Email",
+      "emailPlaceholder": "john@company.com",
+      "company": "Company",
+      "companyPlaceholder": "Acme Inc.",
+      "teamSize": "Team Size",
+      "selectTeamSize": "Select team size",
+      "teamSize1": "1-10 employees",
+      "teamSize2": "11-50 employees",
+      "teamSize3": "51-200 employees",
+      "teamSize4": "201-500 employees",
+      "teamSize5": "500+ employees",
+      "message": "How can we help?",
+      "messagePlaceholder": "Tell us about your use case and requirements...",
+      "sending": "Sending..."
+    }
+  },
   "auth": {
     "login": {
       "title": "Welcome back",
@@ -741,6 +776,403 @@
       "title": "Something Went Wrong",
       "description": "We're working on fixing this. Please try again later.",
       "retry": "Try Again"
+    }
+  },
+  "supportPage": {
+    "heroTitle": "How can we help?",
+    "heroSubtitle": "Search our knowledge base or browse categories below",
+    "searchPlaceholder": "Search for help...",
+    "browseByCategory": "Browse by Category",
+    "popularArticles": "Popular Articles",
+    "needMoreHelp": "Need more help?",
+    "needMoreHelpDescription": "Can't find what you're looking for? Our support team is here to help.",
+    "chatWithSupport": "Chat with Support",
+    "emailSupport": "Email Support",
+    "faq": "Frequently Asked Questions",
+    "stillHaveQuestions": "Still Have Questions?",
+    "stillHaveQuestionsDescription": "Our team is ready to help you succeed. Reach out anytime.",
+    "joinCommunity": "Join Community",
+    "browseGuides": "Browse Guides"
+  },
+  "docsPage": {
+    "searchPlaceholder": "Search docs...",
+    "welcomeTitle": "Welcome to AppNode",
+    "welcomeDescription": "AppNode is an AI-powered development platform that lets you build complete web applications just by describing what you want. No coding experience required — it feels like having a whole team working for you.",
+    "whatYouCanBuild": "What You Can Build",
+    "howItWorks": "How It Works",
+    "howItWorksDescription": "Simply describe your project in plain language. Our AI understands your requirements, generates a complete blueprint, and builds production-ready code in real-time. Watch your app come to life with instant previews.",
+    "gettingStarted": "Getting Started",
+    "gettingStartedDescription": "Ready to build your first app? Here's how to get started in just a few steps:",
+    "startBuildingFree": "Start Building Free",
+    "viewQuickstartGuide": "View Quickstart Guide",
+    "copyPage": "Copy page"
+  },
+  "blogPage": {
+    "badge": "Insights & Updates",
+    "subtitle": "Insights, tutorials, and updates from the AppNode team. Stay ahead with the latest in AI-powered development.",
+    "latestPosts": "Latest Posts",
+    "loadMorePosts": "Load More Posts",
+    "subscribeTitle": "Subscribe to Our Newsletter",
+    "subscribeDescription": "Get the latest articles, tutorials, and product updates delivered straight to your inbox.",
+    "emailPlaceholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "ctaTitle": "Ready to Build Something?",
+    "ctaDescription": "Turn your ideas into reality with AppNode. Start building today.",
+    "getStartedFree": "Get Started Free",
+    "browseCourses": "Browse Courses"
+  },
+  "careersPage": {
+    "badge": "Careers",
+    "title": "Join the",
+    "titleEnd": "Team",
+    "subtitle": "Help us build the future of software development. We're looking for passionate people to join our mission.",
+    "viewOpenPositions": "View Open Positions",
+    "ourValues": "Our Values",
+    "whyJoinUs": "Why Join Us",
+    "benefitsAndPerks": "Benefits & Perks",
+    "openPositions": "Open Positions",
+    "applyNow": "Apply Now",
+    "dontSeeAFit": "Don't see a perfect fit?",
+    "dontSeeAFitDescription": "We're always looking for talented people. Send us your resume and we'll keep you in mind.",
+    "sendGeneralApplication": "Send General Application"
+  },
+  "communityPage": {
+    "exploreThe": "Explore the",
+    "community": "Community",
+    "subtitle": "Discover inspiring projects, connect with creators, and share your work with thousands of builders.",
+    "searchPlaceholder": "Search projects, templates, and creators...",
+    "projectsCreated": "Projects Created",
+    "activeBuilders": "Active Builders",
+    "monthlyVisitors": "Monthly Visitors",
+    "loadMoreProjects": "Load More Projects",
+    "topContributors": "Top Contributors",
+    "viewAll": "View All",
+    "recentDiscussions": "Recent Discussions",
+    "joinDiscussion": "Join Discussion",
+    "joinOurDiscord": "Join our Discord",
+    "discordDescription": "Connect with 5,000+ builders, get help, and share your projects.",
+    "joinDiscordButton": "Join Discord",
+    "ctaTitle": "Ready to share your creation?",
+    "ctaDescription": "Build something amazing and showcase it to the community.",
+    "startBuilding": "Start Building"
+  },
+  "solutionsPage": {
+    "badge": "Solutions",
+    "titleStart": "Built for how",
+    "titleHighlight": "you",
+    "titleEnd": "work",
+    "subtitle": "Whether you're a founder, designer, or marketer, AppNode adapts to your workflow and helps you ship faster.",
+    "ctaTitle": "Not sure which solution fits?",
+    "ctaSubtitle": "Start building for free and discover how AppNode can transform your workflow.",
+    "startBuildingFree": "Start Building Free",
+    "talkToSales": "Talk to Sales"
+  },
+  "solutionsWeb3": {
+    "badge": "Web3 Solutions",
+    "title": "Build for Web3",
+    "subtitle": "Create decentralized applications with blockchain integration"
+  },
+  "useCasesBusinessApps": {
+    "badge": "Use Case",
+    "titleStart": "Build Business Apps",
+    "titleHighlight": "10x Faster",
+    "subtitle": "From dashboards to internal tools, build the business applications your team needs without waiting for engineering resources.",
+    "seeExamples": "See Examples",
+    "mockup": {
+      "salesDashboard": "Sales Dashboard",
+      "revenue": "Revenue",
+      "customers": "Customers",
+      "retention": "Retention"
+    },
+    "whatYouCanBuild": "What You Can Build",
+    "ctaTitle": "Build your business app today",
+    "ctaSubtitle": "No engineering team required. Start building in minutes."
+  },
+  "useCasesMobileApps": {
+    "badge": "Use Case",
+    "titleStart": "Build Mobile Apps",
+    "titleHighlight": "Without Code",
+    "subtitle": "Create native-quality mobile experiences that work on iOS and Android. No Swift, Kotlin, or React Native required.",
+    "seeExamples": "See Examples",
+    "featuresTitle": "Mobile App Features",
+    "features": {
+      "nativePerformance": {
+        "title": "Native Performance",
+        "description": "Apps that feel fast and responsive on any device"
+      },
+      "pushNotifications": {
+        "title": "Push Notifications",
+        "description": "Engage users with timely push notifications"
+      },
+      "locationServices": {
+        "title": "Location Services",
+        "description": "Build location-aware features with GPS"
+      },
+      "cameraMedia": {
+        "title": "Camera & Media",
+        "description": "Access camera, photos, and media libraries"
+      },
+      "offlineSupport": {
+        "title": "Offline Support",
+        "description": "Apps that work even without internet"
+      },
+      "crossPlatform": {
+        "title": "Cross-Platform",
+        "description": "One codebase for iOS and Android"
+      }
+    },
+    "ctaTitle": "Build your mobile app today",
+    "ctaSubtitle": "From idea to App Store in record time."
+  },
+  "useCasesRapidPrototyping": {
+    "badge": "Use Case",
+    "titleStart": "From Idea to Prototype in",
+    "titleHighlight": "Minutes",
+    "subtitle": "Validate ideas fast. Build working prototypes that look and feel like the real thing, without writing a single line of code.",
+    "startPrototyping": "Start Prototyping",
+    "seeExamples": "See Examples",
+    "comparisonTitle": "Traditional vs AppNode",
+    "totalTime": "Total time",
+    "traditional": {
+      "title": "Traditional Prototyping",
+      "totalTime": "6-10 weeks"
+    },
+    "appnode": {
+      "title": "AppNode Prototyping",
+      "totalTime": "1-2 hours"
+    },
+    "benefitsTitle": "Why Rapid Prototyping Matters",
+    "ctaTitle": "Start prototyping today",
+    "ctaSubtitle": "Turn your ideas into working prototypes in minutes, not months."
+  },
+  "privacyPage": {
+    "badge": "Legal",
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: December 1, 2025",
+    "contactTitle": "10. Contact Us",
+    "contactDescription": "If you have any questions about this privacy policy or our privacy practices, please contact us at:"
+  },
+  "termsPage": {
+    "badge": "Legal",
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: December 1, 2025",
+    "contactTitle": "12. Contact Information",
+    "contactDescription": "If you have any questions about these Terms, please contact us at:"
+  },
+  "cookiesPage": {
+    "badge": "Privacy",
+    "title": "Cookie Settings",
+    "subtitle": "Manage your cookie preferences. We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic.",
+    "required": "Required",
+    "saveSuccess": "Cookie preferences saved successfully!",
+    "savePreferences": "Save Preferences",
+    "acceptAll": "Accept All",
+    "aboutTitle": "About Our Cookies",
+    "aboutDescription": "Cookies are small text files that are stored on your device when you visit our website. They help us provide you with a better experience by remembering your preferences and understanding how you use our site.",
+    "moreInfo": "For more information about how we use cookies and your personal data, please read our",
+    "privacyPolicyLink": "Privacy Policy",
+    "essential": {
+      "title": "Essential Cookies",
+      "description": "These cookies are necessary for the website to function properly. They enable core functionality such as security, network management, and accessibility. You cannot disable these cookies."
+    },
+    "analytics": {
+      "title": "Analytics Cookies",
+      "description": "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. This helps us improve our services."
+    },
+    "marketing": {
+      "title": "Marketing Cookies",
+      "description": "These cookies are used to track visitors across websites. They are used to display ads that are relevant and engaging for the individual user."
+    },
+    "personalization": {
+      "title": "Personalization Cookies",
+      "description": "These cookies allow us to remember your preferences and provide enhanced, personalized features. They may be set by us or by third-party providers."
+    }
+  },
+  "statusPage": {
+    "title": "System Status",
+    "subtitle": "Real-time status and uptime information for AppNode services",
+    "allOperational": "All Systems Operational",
+    "uptimeTitle": "Uptime - Last 7 Days",
+    "servicesTitle": "Services",
+    "incidentsTitle": "Recent Incidents",
+    "subscribeTitle": "Get Status Updates",
+    "subscribeSubtitle": "Subscribe to receive notifications about system status and incidents",
+    "emailPlaceholder": "Enter your email",
+    "subscribeButton": "Subscribe"
+  },
+  "securityPage": {
+    "badge": "Enterprise-Grade Security",
+    "titleHighlight": "Security",
+    "titleSuffix": "First",
+    "subtitle": "Your data security is our top priority. Learn about the measures we take to keep your information safe.",
+    "featuresTitle": "Security Features",
+    "practicesTitle": "Our Security Practices",
+    "bugBountyTitle": "Bug Bounty Program",
+    "bugBountyDescription": "Help us improve security and earn rewards for responsibly disclosing vulnerabilities.",
+    "reportTitle": "Report a Security Issue",
+    "reportDescription": "If you believe you've found a security vulnerability in AppNode, please report it to our security team immediately.",
+    "whitepaper": "Security Whitepaper"
+  },
+  "changelogPage": {
+    "badge": "Updates",
+    "title": "Changelog",
+    "subtitle": "All the latest updates, improvements, and fixes to AppNode",
+    "stayUpToDate": "Stay up to date",
+    "getNotified": "Get notified when we release new features",
+    "emailPlaceholder": "Enter your email",
+    "subscribeButton": "Subscribe",
+    "viewOlder": "View older releases"
+  },
+  "dashboardPage": {
+    "welcome": "Welcome",
+    "loggedInAs": "You are logged in as",
+    "comingSoon": "COMING SOON",
+    "buildingMagic": "We're building something magical for you",
+    "signOut": "Sign out"
+  },
+  "settingsPage": {
+    "title": "Settings",
+    "generalSettings": "General Settings",
+    "language": "Language",
+    "timezone": "Timezone",
+    "darkMode": "Dark Mode",
+    "darkModeDesc": "Use dark theme across the app",
+    "notificationPreferences": "Notification Preferences",
+    "emailNotifications": "Email Notifications",
+    "emailNotificationsDesc": "Receive project updates via email",
+    "pushNotifications": "Push Notifications",
+    "pushNotificationsDesc": "Receive push notifications in browser",
+    "marketingEmails": "Marketing Emails",
+    "marketingEmailsDesc": "Receive tips, updates, and offers",
+    "securitySettings": "Security Settings",
+    "password": "Password",
+    "passwordLastChanged": "Last changed 30 days ago",
+    "changePassword": "Change Password",
+    "twoFactorAuth": "Two-Factor Authentication",
+    "twoFactorAuthDesc": "Add an extra layer of security",
+    "enable2FA": "Enable 2FA",
+    "activeSessions": "Active Sessions",
+    "activeSessionsDesc": "Manage your active sessions",
+    "viewSessions": "View Sessions",
+    "dangerZone": "Danger Zone",
+    "deleteAccount": "Delete Account",
+    "deleteAccountDesc": "Permanently delete your account and all data",
+    "deleteAccountConfirm": "Delete Account?",
+    "deleteAccountWarning": "This action cannot be undone. All your data will be permanently deleted."
+  },
+  "profilePage": {
+    "title": "Profile",
+    "editProfile": "Edit Profile",
+    "fullName": "Full Name",
+    "email": "Email",
+    "role": "Role",
+    "company": "Company",
+    "companyOptional": "Company (optional)",
+    "companyPlaceholder": "Your company name",
+    "avatarColor": "Avatar Color",
+    "memberSince": "Member Since",
+    "notSpecified": "Not specified",
+    "saveChanges": "Save Changes",
+    "saving": "Saving..."
+  },
+  "billingPage": {
+    "title": "Billing",
+    "currentPlan": "Current Plan",
+    "upgradeToUnlock": "Upgrade to unlock more features",
+    "planRenews": "Your plan renews on Dec 1, 2025",
+    "freePlan": "Free Plan",
+    "active": "Active",
+    "availablePlans": "Available Plans",
+    "mostPopular": "Most Popular",
+    "currentPlanLabel": "Current Plan",
+    "upgrade": "Upgrade",
+    "downgrade": "Downgrade",
+    "paymentMethod": "Payment Method",
+    "noPaymentRequired": "No payment method required for free plan.",
+    "edit": "Edit",
+    "billingHistory": "Billing History",
+    "upgradeToTitle": "Upgrade to",
+    "upgradeAccessMessage": "You'll get access to all",
+    "featuresImmediately": "features immediately.",
+    "confirmUpgrade": "Confirm Upgrade"
+  },
+  "teamsPage": {
+    "badge": "Team Collaboration",
+    "titleStart": "Build Together with",
+    "titleHighlight": "Teams",
+    "subtitle": "Bring the power of AppNode to your entire team. Collaborate in real-time, share projects, and ship faster together.",
+    "startTeamTrial": "Start Team Trial",
+    "enterpriseOptions": "Enterprise Options",
+    "teamWorkspace": "Team Workspace",
+    "online": "online",
+    "teamProjects": "Team Projects",
+    "activity": "Activity",
+    "teamFeatures": "Team Features",
+    "startFreeTeamTrial": "Start Free Team Trial",
+    "pricing": {
+      "title": "Teams Pricing",
+      "subtitle": "Simple, transparent pricing for teams of all sizes.",
+      "billedAnnually": "Billed annually"
+    },
+    "cta": {
+      "title": "Ready to build together?",
+      "subtitle": "Get your team on AppNode and ship faster than ever."
+    }
+  },
+  "learnPage": {
+    "badge": "Free Learning Platform",
+    "titleStart": "Learn to Build with",
+    "titleHighlight": "AppNode",
+    "subtitle": "Free courses, tutorials, and hands-on projects to help you master AI-powered app development. Go from beginner to expert at your own pace.",
+    "startLearningFree": "Start Learning Free",
+    "browseCourses": "Browse Courses",
+    "stats": {
+      "freeCourses": "Free Courses",
+      "students": "Students",
+      "averageRating": "Average Rating",
+      "communitySupport": "Community Support"
+    },
+    "chooseLearningPath": "Choose Your Learning Path",
+    "chooseLearningPathDesc": "Curated courses designed for your specific goals and skill level.",
+    "popularCourses": "Popular Courses",
+    "popularCoursesDesc": "Start with our most popular courses, handpicked by our community.",
+    "startCourse": "Start Course",
+    "viewAllCourses": "View All Courses",
+    "cta": {
+      "title": "Start Your Learning Journey Today",
+      "subtitle": "Join over 100,000 students who have transformed their skills with AppNode. All courses are completely free.",
+      "createFreeAccount": "Create Free Account",
+      "browseGuides": "Browse Guides"
+    }
+  },
+  "guidesPage": {
+    "badge": "In-Depth Tutorials",
+    "titleStart": "Developer",
+    "titleHighlight": "Guides",
+    "subtitle": "In-depth tutorials and best practices for building amazing applications. From beginner to advanced, we've got you covered.",
+    "featuredGuide": "Featured Guide",
+    "allGuides": "All Guides",
+    "readGuide": "Read Guide",
+    "cta": {
+      "title": "Ready to Start Building?",
+      "subtitle": "Put what you've learned into practice. Create your first app today.",
+      "getStartedFree": "Get Started Free",
+      "browseTemplates": "Browse Templates"
+    }
+  },
+  "videosPage": {
+    "badge": "Video Learning",
+    "titleStart": "How it",
+    "titleHighlight": "works",
+    "subtitle": "Learn everything about Lovecode with our comprehensive video tutorials. From your first project to deploying on Cloudflare, Vercel, or GitHub.",
+    "featured": "Featured",
+    "playlists": "Playlists",
+    "viewAll": "View all",
+    "cta": {
+      "title": "Ready to Start Building?",
+      "subtitle": "Join thousands of creators who are building amazing applications with Lovecode.",
+      "startBuildingFree": "Start Building Free",
+      "subscribeYouTube": "Subscribe on YouTube"
     }
   }
 }

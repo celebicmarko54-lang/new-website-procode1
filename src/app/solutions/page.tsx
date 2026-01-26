@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useTranslation } from '@/context/LanguageContext';
 
 const solutions = [
   {
@@ -105,6 +106,8 @@ const solutions = [
 ];
 
 export default function SolutionsPage() {
+  const { t } = useTranslation();
+  
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -113,15 +116,15 @@ export default function SolutionsPage() {
       <section className="pt-32 pb-16 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-block px-4 py-2 bg-gray-50 text-gray-900 rounded-full text-sm font-medium mb-4">
-            Solutions
+            {t('solutionsPage.badge')}
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
-            Built for how
-            <span className="bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', WebkitBackgroundClip: 'text' }}> you </span>
-            work
+            {t('solutionsPage.titleStart')}
+            <span className="bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', WebkitBackgroundClip: 'text' }}> {t('solutionsPage.titleHighlight')} </span>
+            {t('solutionsPage.titleEnd')}
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Whether you&apos;re a founder, designer, or marketer, AppNode adapts to your workflow and helps you ship faster.
+            {t('solutionsPage.subtitle')}
           </p>
         </div>
       </section>
@@ -165,7 +168,7 @@ export default function SolutionsPage() {
                 </div>
                 
                 <div className="mt-6 flex items-center gap-2 text-gray-900 font-medium group-hover:gap-3 transition-all">
-                  Learn more
+                  {t('common.learnMore')}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -180,10 +183,10 @@ export default function SolutionsPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            Not sure which solution fits?
+            {t('solutionsPage.ctaTitle')}
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Start building for free and discover how AppNode can transform your workflow.
+            {t('solutionsPage.ctaSubtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -191,13 +194,13 @@ export default function SolutionsPage() {
               className="px-8 py-4 text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg"
               style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}
             >
-              Start Building Free
+              {t('solutionsPage.startBuildingFree')}
             </Link>
             <Link
               href="/enterprise"
               className="px-8 py-4 border border-gray-300 text-gray-700 font-semibold rounded-xl hover:bg-gray-50 transition-colors"
             >
-              Talk to Sales
+              {t('solutionsPage.talkToSales')}
             </Link>
           </div>
         </div>

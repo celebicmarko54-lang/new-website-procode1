@@ -4,8 +4,10 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useTranslation } from '@/context/LanguageContext';
 
 export default function GuidesPage() {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState('All');
 
   const guides = [
@@ -127,19 +129,18 @@ export default function GuidesPage() {
             <svg className="w-4 h-4 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
-            <span className="text-sm font-medium text-gray-700">In-Depth Tutorials</span>
+            <span className="text-sm font-medium text-gray-700">{t('guidesPage.badge')}</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
-            Developer
+            {t('guidesPage.titleStart')}
             <span className="block bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', WebkitBackgroundClip: 'text' }}>
-              Guides
+              {t('guidesPage.titleHighlight')}
             </span>
           </h1>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
-            In-depth tutorials and best practices for building amazing applications. 
-            From beginner to advanced, we&apos;ve got you covered.
+            {t('guidesPage.subtitle')}
           </p>
         </div>
       </section>
@@ -152,7 +153,7 @@ export default function GuidesPage() {
               <div className="flex flex-col md:flex-row items-start justify-between gap-8">
                 <div className="flex-1">
                   <span className="inline-block px-4 py-1.5 bg-white/20 rounded-full text-sm font-medium mb-6">
-                    ⭐ Featured Guide
+                    ⭐ {t('guidesPage.featuredGuide')}
                   </span>
                   <h2 className="text-3xl md:text-4xl font-bold mb-4 group-hover:translate-x-1 transition-transform">{featuredGuide.title}</h2>
                   <p className="text-white/90 text-lg mb-6 max-w-2xl">{featuredGuide.description}</p>
@@ -198,7 +199,7 @@ export default function GuidesPage() {
       {/* Guides Grid */}
       <section className="px-6 pb-20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">All Guides</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">{t('guidesPage.allGuides')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredGuides.filter(g => !g.featured).map((guide, index) => (
               <div
@@ -218,7 +219,7 @@ export default function GuidesPage() {
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-gray-500">{guide.readTime}</span>
                   <span className="text-gray-900 font-medium text-sm group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-                    Read Guide
+                    {t('guidesPage.readGuide')}
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -234,23 +235,23 @@ export default function GuidesPage() {
       <section className="py-24 px-6 bg-gradient-to-r from-[#1f2937] to-[#374151]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Start Building?
+            {t('guidesPage.cta.title')}
           </h2>
           <p className="text-xl text-gray-100 mb-12 max-w-2xl mx-auto">
-            Put what you&apos;ve learned into practice. Create your first app today.
+            {t('guidesPage.cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/signup"
               className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg"
             >
-              Get Started Free
+              {t('guidesPage.cta.getStartedFree')}
             </Link>
             <Link
               href="/templates"
               className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
             >
-              Browse Templates
+              {t('guidesPage.cta.browseTemplates')}
             </Link>
           </div>
         </div>

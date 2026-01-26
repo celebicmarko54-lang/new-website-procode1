@@ -2,8 +2,11 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useTranslation } from '@/context/LanguageContext';
 
 export default function SecurityPage() {
+  const { t } = useTranslation();
+
   const securityFeatures = [
     {
       icon: '🔐',
@@ -94,13 +97,13 @@ export default function SecurityPage() {
           <div className="text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-full mb-6">
               <span className="w-2 h-2 bg-gray-900 rounded-full"></span>
-              <span className="font-medium">Enterprise-Grade Security</span>
+              <span className="font-medium">{t('securityPage.badge')}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-              <span className="text-gray-900">Security</span> First
+              <span className="text-gray-900">{t('securityPage.titleHighlight')}</span> {t('securityPage.titleSuffix')}
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Your data security is our top priority. Learn about the measures we take to keep your information safe.
+              {t('securityPage.subtitle')}
             </p>
           </div>
         </div>
@@ -122,7 +125,7 @@ export default function SecurityPage() {
 
         {/* Security Features */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Security Features</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">{t('securityPage.featuresTitle')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {securityFeatures.map((feature) => (
               <div key={feature.title} className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg hover:border-gray-300 transition-all">
@@ -137,7 +140,7 @@ export default function SecurityPage() {
         {/* Security Practices */}
         <div className="bg-gray-900 py-16 mb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-white mb-8 text-center">Our Security Practices</h2>
+            <h2 className="text-2xl font-bold text-white mb-8 text-center">{t('securityPage.practicesTitle')}</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {practices.map((practice) => (
                 <div key={practice.title} className="bg-white/10 backdrop-blur rounded-xl p-6">
@@ -163,13 +166,13 @@ export default function SecurityPage() {
           <div className="bg-gradient-to-r from-[#1f2937] to-[#374151] rounded-2xl p-8 text-white">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="text-center md:text-left">
-                <h2 className="text-2xl font-bold mb-2">Bug Bounty Program</h2>
+                <h2 className="text-2xl font-bold mb-2">{t('securityPage.bugBountyTitle')}</h2>
                 <p className="text-white/90">
-                  Help us improve security and earn rewards for responsibly disclosing vulnerabilities.
+                  {t('securityPage.bugBountyDescription')}
                 </p>
               </div>
               <button className="px-6 py-3 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-colors font-medium flex-shrink-0">
-                Learn More
+                {t('common.learnMore')}
               </button>
             </div>
           </div>
@@ -178,9 +181,9 @@ export default function SecurityPage() {
         {/* Security Contact */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-xl border border-gray-200 p-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-4 text-center">Report a Security Issue</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-4 text-center">{t('securityPage.reportTitle')}</h2>
             <p className="text-gray-600 text-center mb-6">
-              If you believe you&apos;ve found a security vulnerability in AppNode, please report it to our security team immediately.
+              {t('securityPage.reportDescription')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -199,7 +202,7 @@ export default function SecurityPage() {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-                Security Whitepaper
+                {t('securityPage.whitepaper')}
               </a>
             </div>
           </div>

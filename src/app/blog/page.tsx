@@ -4,8 +4,10 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useTranslation } from '@/context/LanguageContext';
 
 export default function BlogPage() {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState('All');
 
   const featuredPost = {
@@ -93,7 +95,7 @@ export default function BlogPage() {
             <svg className="w-4 h-4 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
             </svg>
-            <span className="text-sm font-medium text-gray-700">Insights & Updates</span>
+            <span className="text-sm font-medium text-gray-700">{t('blogPage.badge')}</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
@@ -104,8 +106,7 @@ export default function BlogPage() {
           </h1>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
-            Insights, tutorials, and updates from the AppNode team. 
-            Stay ahead with the latest in AI-powered development.
+            {t('blogPage.subtitle')}
           </p>
         </div>
       </section>
@@ -171,7 +172,7 @@ export default function BlogPage() {
       {/* Posts Grid */}
       <section className="px-6 pb-20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Latest Posts</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">{t('blogPage.latestPosts')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post, index) => (
               <article
@@ -208,7 +209,7 @@ export default function BlogPage() {
           {/* Load More */}
           <div className="text-center mt-12">
             <button className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-200 text-gray-700 font-semibold rounded-xl hover:border-gray-400 hover:text-gray-900 transition-all duration-300">
-              Load More Posts
+              {t('blogPage.loadMorePosts')}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -221,19 +222,19 @@ export default function BlogPage() {
       <section className="py-20 px-6 bg-gradient-to-r from-gray-50 to-gray-50 border-y border-gray-100">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Subscribe to Our Newsletter
+            {t('blogPage.subscribeTitle')}
           </h2>
           <p className="text-gray-600 mb-8">
-            Get the latest articles, tutorials, and product updates delivered straight to your inbox.
+            {t('blogPage.subscribeDescription')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
               type="email"
-              placeholder="Enter your email"
+              placeholder={t('blogPage.emailPlaceholder')}
               className="flex-1 px-5 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-gray-400 focus:ring-2 focus:ring-gray-100"
             />
             <button className="px-6 py-3 text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}>
-              Subscribe
+              {t('blogPage.subscribe')}
             </button>
           </div>
         </div>
@@ -243,23 +244,23 @@ export default function BlogPage() {
       <section className="py-24 px-6 bg-gradient-to-r from-[#1f2937] to-[#374151]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Build Something?
+            {t('blogPage.ctaTitle')}
           </h2>
           <p className="text-xl text-gray-100 mb-12 max-w-2xl mx-auto">
-            Turn your ideas into reality with AppNode. Start building today.
+            {t('blogPage.ctaDescription')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/signup"
               className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg"
             >
-              Get Started Free
+              {t('blogPage.getStartedFree')}
             </Link>
             <Link
               href="/learn"
               className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
             >
-              Browse Courses
+              {t('blogPage.browseCourses')}
             </Link>
           </div>
         </div>

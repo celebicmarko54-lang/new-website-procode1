@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useTranslation } from '@/context/LanguageContext';
 
 interface User {
   id: number;
@@ -16,6 +17,7 @@ interface User {
 
 export default function BillingPage() {
   const router = useRouter();
+  const { t } = useTranslation();
   const [user, setUser] = useState<User | null>(null);
   const [currentPlan, setCurrentPlan] = useState('free');
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
@@ -94,7 +96,7 @@ export default function BillingPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </Link>
-              <h1 className="text-lg font-semibold text-gray-900">Billing</h1>
+              <h1 className="text-lg font-semibold text-gray-900">{t('billingPage.title')}</h1>
             </div>
           </div>
         </div>
@@ -105,22 +107,22 @@ export default function BillingPage() {
         <div className="bg-white rounded-2xl border border-gray-200 p-6 mb-8">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-500 mb-1">Current Plan</p>
+              <p className="text-sm text-gray-500 mb-1">{t('billingPage.currentPlan')}</p>
               <h2 className="text-2xl font-bold text-gray-900 capitalize">{currentPlan}</h2>
               <p className="text-gray-500 mt-1">
-                {currentPlan === 'free' ? 'Upgrade to unlock more features' : 'Your plan renews on Dec 1, 2025'}
+                {currentPlan === 'free' ? t('billingPage.upgradeToUnlock') : t('billingPage.planRenews')}
               </p>
             </div>
             <div className={`px-4 py-2 rounded-full text-sm font-medium ${
               currentPlan === 'free' ? 'bg-gray-100 text-gray-600' : 'bg-gray-100 text-gray-600'
             }`}>
-              {currentPlan === 'free' ? 'Free Plan' : 'Active'}
+              {currentPlan === 'free' ? t('billingPage.freePlan') : t('billingPage.active')}
             </div>
           </div>
         </div>
 
         {/* Plans */}
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Available Plans</h3>
+        <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('billingPage.availablePlans')}</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
           {plans.map((plan) => (
             <div
@@ -131,7 +133,7 @@ export default function BillingPage() {
             >
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-gradient-to-r from-orange-600 to-amber-600 text-white text-xs font-semibold rounded-full">
-                  Most Popular
+                  {t('billingPage.mostPopular')}
                 </div>
               )}
               <h4 className="text-lg font-semibold text-gray-900 mb-2">{plan.name}</h4>
@@ -151,7 +153,7 @@ export default function BillingPage() {
               </ul>
               {plan.current ? (
                 <button className="w-full py-3 px-4 bg-gray-100 text-gray-500 font-medium rounded-xl cursor-default">
-                  Current Plan
+                  {t('billingPage.currentPlanLabel')}
                 </button>
               ) : (
                 <button
@@ -162,7 +164,7 @@ export default function BillingPage() {
                       : 'bg-gray-900 text-white hover:bg-gray-800'
                   }`}
                 >
-                  {plan.id === 'free' ? 'Downgrade' : 'Upgrade'}
+                  {plan.id === 'free' ? t('billingPage.downgrade') : t('billingPage.upgrade')}
                 </button>
               )}
             </div>
@@ -171,9 +173,9 @@ export default function BillingPage() {
 
         {/* Payment Method */}
         <div className="bg-white rounded-2xl border border-gray-200 p-6 mb-8">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Payment Method</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('billingPage.paymentMethod')}</h3>
           {currentPlan === 'free' ? (
-            <p className="text-gray-500">No payment method required for free plan.</p>
+            <p className="text-gray-500">{t('billingPage.noPaymentRequired')}</p>
           ) : (
             <div className="flex items-center justify-between p-4 border border-gray-200 rounded-xl">
               <div className="flex items-center gap-3">
@@ -186,7 +188,7 @@ export default function BillingPage() {
                 </div>
               </div>
               <button className="text-orange-600 hover:text-orange-700 text-sm font-medium">
-                Edit
+                {t('billingPage.edit')}
               </button>
             </div>
           )}
@@ -195,7 +197,7 @@ export default function BillingPage() {
         {/* Billing History */}
         <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
           <div className="p-6 border-b border-gray-200">
-            <h3 className="text-lg font-semibold text-gray-900">Billing History</h3>
+            <h3 className="text-lg font-semibold text-gray-900">{t('billingPage.billingHistory')}</h3>
           </div>
           <div className="divide-y divide-gray-100">
             {invoices.map((invoice) => (
@@ -231,23 +233,23 @@ export default function BillingPage() {
               </svg>
             </div>
             <h3 className="text-lg font-semibold text-gray-900 text-center mb-2">
-              Upgrade to {selectedPlan.charAt(0).toUpperCase() + selectedPlan.slice(1)}?
+              {t('billingPage.upgradeToTitle')} {selectedPlan.charAt(0).toUpperCase() + selectedPlan.slice(1)}?
             </h3>
             <p className="text-gray-500 text-center mb-6">
-              You&apos;ll get access to all {selectedPlan} features immediately.
+              {t('billingPage.upgradeAccessMessage')} {selectedPlan} {t('billingPage.featuresImmediately')}
             </p>
             <div className="flex gap-3">
               <button
                 onClick={() => setShowUpgradeModal(false)}
                 className="flex-1 px-4 py-3 text-sm font-medium text-gray-700 bg-gray-100 rounded-xl hover:bg-gray-200 transition-colors"
               >
-                Cancel
+                {t('common.cancel')}
               </button>
               <button
                 onClick={confirmUpgrade}
                 className="flex-1 px-4 py-3 text-sm font-medium text-white bg-gradient-to-r from-orange-600 to-amber-600 rounded-xl hover:from-orange-700 hover:to-amber-700 transition-colors"
               >
-                Confirm Upgrade
+                {t('billingPage.confirmUpgrade')}
               </button>
             </div>
           </div>

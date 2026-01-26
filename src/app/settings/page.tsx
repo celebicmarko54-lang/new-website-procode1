@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useTranslation } from '@/context/LanguageContext';
 
 interface User {
   id: number;
@@ -16,6 +17,7 @@ interface User {
 
 export default function SettingsPage() {
   const router = useRouter();
+  const { t } = useTranslation();
   const [user, setUser] = useState<User | null>(null);
   const [activeTab, setActiveTab] = useState('general');
   
@@ -79,7 +81,7 @@ export default function SettingsPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </Link>
-              <h1 className="text-lg font-semibold text-gray-900">Settings</h1>
+              <h1 className="text-lg font-semibold text-gray-900">{t('settingsPage.title')}</h1>
             </div>
           </div>
         </div>
@@ -115,12 +117,12 @@ export default function SettingsPage() {
               {activeTab === 'general' && (
                 <div className="space-y-6">
                   <div>
-                    <h2 className="text-lg font-semibold text-gray-900 mb-4">General Settings</h2>
+                    <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('settingsPage.generalSettings')}</h2>
                     
                     <div className="space-y-4">
                       {/* Language */}
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">Language</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">{t('settingsPage.language')}</label>
                         <select
                           value={language}
                           onChange={(e) => setLanguage(e.target.value)}
@@ -135,7 +137,7 @@ export default function SettingsPage() {
 
                       {/* Timezone */}
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">Timezone</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">{t('settingsPage.timezone')}</label>
                         <select
                           value={timezone}
                           onChange={(e) => setTimezone(e.target.value)}
@@ -151,8 +153,8 @@ export default function SettingsPage() {
                       {/* Dark Mode */}
                       <div className="flex items-center justify-between py-3">
                         <div>
-                          <p className="font-medium text-gray-900">Dark Mode</p>
-                          <p className="text-sm text-gray-500">Use dark theme across the app</p>
+                          <p className="font-medium text-gray-900">{t('settingsPage.darkMode')}</p>
+                          <p className="text-sm text-gray-500">{t('settingsPage.darkModeDesc')}</p>
                         </div>
                         <button
                           onClick={() => setDarkMode(!darkMode)}
@@ -168,13 +170,13 @@ export default function SettingsPage() {
 
               {activeTab === 'notifications' && (
                 <div className="space-y-6">
-                  <h2 className="text-lg font-semibold text-gray-900 mb-4">Notification Preferences</h2>
+                  <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('settingsPage.notificationPreferences')}</h2>
                   
                   <div className="space-y-4">
                     <div className="flex items-center justify-between py-3 border-b border-gray-100">
                       <div>
-                        <p className="font-medium text-gray-900">Email Notifications</p>
-                        <p className="text-sm text-gray-500">Receive project updates via email</p>
+                        <p className="font-medium text-gray-900">{t('settingsPage.emailNotifications')}</p>
+                        <p className="text-sm text-gray-500">{t('settingsPage.emailNotificationsDesc')}</p>
                       </div>
                       <button
                         onClick={() => setEmailNotifications(!emailNotifications)}
@@ -186,8 +188,8 @@ export default function SettingsPage() {
 
                     <div className="flex items-center justify-between py-3 border-b border-gray-100">
                       <div>
-                        <p className="font-medium text-gray-900">Push Notifications</p>
-                        <p className="text-sm text-gray-500">Receive push notifications in browser</p>
+                        <p className="font-medium text-gray-900">{t('settingsPage.pushNotifications')}</p>
+                        <p className="text-sm text-gray-500">{t('settingsPage.pushNotificationsDesc')}</p>
                       </div>
                       <button
                         onClick={() => setPushNotifications(!pushNotifications)}
@@ -199,8 +201,8 @@ export default function SettingsPage() {
 
                     <div className="flex items-center justify-between py-3">
                       <div>
-                        <p className="font-medium text-gray-900">Marketing Emails</p>
-                        <p className="text-sm text-gray-500">Receive tips, updates, and offers</p>
+                        <p className="font-medium text-gray-900">{t('settingsPage.marketingEmails')}</p>
+                        <p className="text-sm text-gray-500">{t('settingsPage.marketingEmailsDesc')}</p>
                       </div>
                       <button
                         onClick={() => setMarketingEmails(!marketingEmails)}
@@ -215,17 +217,17 @@ export default function SettingsPage() {
 
               {activeTab === 'security' && (
                 <div className="space-y-6">
-                  <h2 className="text-lg font-semibold text-gray-900 mb-4">Security Settings</h2>
+                  <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('settingsPage.securitySettings')}</h2>
                   
                   <div className="space-y-4">
                     <div className="p-4 border border-gray-200 rounded-xl">
                       <div className="flex items-center justify-between">
                         <div>
-                          <p className="font-medium text-gray-900">Password</p>
-                          <p className="text-sm text-gray-500">Last changed 30 days ago</p>
+                          <p className="font-medium text-gray-900">{t('settingsPage.password')}</p>
+                          <p className="text-sm text-gray-500">{t('settingsPage.passwordLastChanged')}</p>
                         </div>
                         <button className="px-4 py-2 text-sm font-medium text-orange-600 bg-orange-50 rounded-lg hover:bg-orange-100 transition-colors">
-                          Change Password
+                          {t('settingsPage.changePassword')}
                         </button>
                       </div>
                     </div>
@@ -233,11 +235,11 @@ export default function SettingsPage() {
                     <div className="p-4 border border-gray-200 rounded-xl">
                       <div className="flex items-center justify-between">
                         <div>
-                          <p className="font-medium text-gray-900">Two-Factor Authentication</p>
-                          <p className="text-sm text-gray-500">Add an extra layer of security</p>
+                          <p className="font-medium text-gray-900">{t('settingsPage.twoFactorAuth')}</p>
+                          <p className="text-sm text-gray-500">{t('settingsPage.twoFactorAuthDesc')}</p>
                         </div>
                         <button className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-orange-600 to-amber-600 rounded-lg hover:from-orange-700 hover:to-amber-700 transition-colors">
-                          Enable 2FA
+                          {t('settingsPage.enable2FA')}
                         </button>
                       </div>
                     </div>
@@ -245,11 +247,11 @@ export default function SettingsPage() {
                     <div className="p-4 border border-gray-200 rounded-xl">
                       <div className="flex items-center justify-between">
                         <div>
-                          <p className="font-medium text-gray-900">Active Sessions</p>
-                          <p className="text-sm text-gray-500">Manage your active sessions</p>
+                          <p className="font-medium text-gray-900">{t('settingsPage.activeSessions')}</p>
+                          <p className="text-sm text-gray-500">{t('settingsPage.activeSessionsDesc')}</p>
                         </div>
                         <button className="px-4 py-2 text-sm font-medium text-gray-600 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors">
-                          View Sessions
+                          {t('settingsPage.viewSessions')}
                         </button>
                       </div>
                     </div>
@@ -259,19 +261,19 @@ export default function SettingsPage() {
 
               {activeTab === 'danger' && (
                 <div className="space-y-6">
-                  <h2 className="text-lg font-semibold text-red-600 mb-4">Danger Zone</h2>
+                  <h2 className="text-lg font-semibold text-red-600 mb-4">{t('settingsPage.dangerZone')}</h2>
                   
                   <div className="p-4 border border-red-200 bg-red-50 rounded-xl">
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="font-medium text-gray-900">Delete Account</p>
-                        <p className="text-sm text-gray-500">Permanently delete your account and all data</p>
+                        <p className="font-medium text-gray-900">{t('settingsPage.deleteAccount')}</p>
+                        <p className="text-sm text-gray-500">{t('settingsPage.deleteAccountDesc')}</p>
                       </div>
                       <button 
                         onClick={() => setShowDeleteModal(true)}
                         className="px-4 py-2 text-sm font-medium text-white bg-red-600 rounded-lg hover:bg-red-700 transition-colors"
                       >
-                        Delete Account
+                        {t('settingsPage.deleteAccount')}
                       </button>
                     </div>
                   </div>
@@ -291,20 +293,20 @@ export default function SettingsPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 text-center mb-2">Delete Account?</h3>
-            <p className="text-gray-500 text-center mb-6">This action cannot be undone. All your data will be permanently deleted.</p>
+            <h3 className="text-lg font-semibold text-gray-900 text-center mb-2">{t('settingsPage.deleteAccountConfirm')}</h3>
+            <p className="text-gray-500 text-center mb-6">{t('settingsPage.deleteAccountWarning')}</p>
             <div className="flex gap-3">
               <button
                 onClick={() => setShowDeleteModal(false)}
                 className="flex-1 px-4 py-3 text-sm font-medium text-gray-700 bg-gray-100 rounded-xl hover:bg-gray-200 transition-colors"
               >
-                Cancel
+                {t('common.cancel')}
               </button>
               <button
                 onClick={handleDeleteAccount}
                 className="flex-1 px-4 py-3 text-sm font-medium text-white bg-red-600 rounded-xl hover:bg-red-700 transition-colors"
               >
-                Delete Account
+                {t('settingsPage.deleteAccount')}
               </button>
             </div>
           </div>

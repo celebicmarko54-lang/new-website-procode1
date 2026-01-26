@@ -3,8 +3,11 @@
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useTranslation } from '@/context/LanguageContext';
 
 export default function LearnPage() {
+  const { t } = useTranslation();
+  
   const courses = [
     {
       title: 'Getting Started with AppNode',
@@ -227,19 +230,18 @@ export default function LearnPage() {
             <svg className="w-4 h-4 text-gray-900 dark:text-gray-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
-            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Free Learning Platform</span>
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('learnPage.badge')}</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
-            Learn to Build with
+            {t('learnPage.titleStart')}
             <span className="block bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', WebkitBackgroundClip: 'text' }}>
-              AppNode
+              {t('learnPage.titleHighlight')}
             </span>
           </h1>
           
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-            Free courses, tutorials, and hands-on projects to help you master 
-            AI-powered app development. Go from beginner to expert at your own pace.
+            {t('learnPage.subtitle')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -248,13 +250,13 @@ export default function LearnPage() {
               className="px-8 py-4 text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg"
               style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}
             >
-              Start Learning Free
+              {t('learnPage.startLearningFree')}
             </Link>
             <Link
               href="#courses"
               className="px-8 py-4 border-2 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:border-gray-400 dark:hover:border-gray-500 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
             >
-              Browse Courses
+              {t('learnPage.browseCourses')}
             </Link>
           </div>
         </div>
@@ -266,19 +268,19 @@ export default function LearnPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-gray-900 dark:text-white">50+</div>
-              <div className="text-gray-600 dark:text-gray-400 mt-1">Free Courses</div>
+              <div className="text-gray-600 dark:text-gray-400 mt-1">{t('learnPage.stats.freeCourses')}</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-gray-900 dark:text-white">100K+</div>
-              <div className="text-gray-600 dark:text-gray-400 mt-1">Students</div>
+              <div className="text-gray-600 dark:text-gray-400 mt-1">{t('learnPage.stats.students')}</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-gray-900 dark:text-white">4.9</div>
-              <div className="text-gray-600 dark:text-gray-400 mt-1">Average Rating</div>
+              <div className="text-gray-600 dark:text-gray-400 mt-1">{t('learnPage.stats.averageRating')}</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-gray-900 dark:text-white">24/7</div>
-              <div className="text-gray-600 dark:text-gray-400 mt-1">Community Support</div>
+              <div className="text-gray-600 dark:text-gray-400 mt-1">{t('learnPage.stats.communitySupport')}</div>
             </div>
           </div>
         </div>
@@ -306,10 +308,10 @@ export default function LearnPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Choose Your Learning Path
+              {t('learnPage.chooseLearningPath')}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Curated courses designed for your specific goals and skill level.
+              {t('learnPage.chooseLearningPathDesc')}
             </p>
           </div>
           
@@ -342,10 +344,10 @@ export default function LearnPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Popular Courses
+              {t('learnPage.popularCourses')}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Start with our most popular courses, handpicked by our community.
+              {t('learnPage.popularCoursesDesc')}
             </p>
           </div>
           
@@ -379,7 +381,7 @@ export default function LearnPage() {
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-500 dark:text-gray-400">{course.lessons} lessons</span>
                     <span className="text-gray-900 dark:text-white font-medium text-sm group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-                      Start Course
+                      {t('learnPage.startCourse')}
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
@@ -395,7 +397,7 @@ export default function LearnPage() {
               href="/courses"
               className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:border-gray-400 dark:hover:border-gray-500 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
             >
-              View All Courses
+              {t('learnPage.viewAllCourses')}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -432,24 +434,23 @@ export default function LearnPage() {
       <section className="py-24 px-6 bg-gradient-to-r from-[#1f2937] to-[#374151]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Start Your Learning Journey Today
+            {t('learnPage.cta.title')}
           </h2>
           <p className="text-xl text-gray-100 mb-12 max-w-2xl mx-auto">
-            Join over 100,000 students who have transformed their skills with AppNode. 
-            All courses are completely free.
+            {t('learnPage.cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/signup"
               className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg"
             >
-              Create Free Account
+              {t('learnPage.cta.createFreeAccount')}
             </Link>
             <Link
               href="/guides"
               className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
             >
-              Browse Guides
+              {t('learnPage.cta.browseGuides')}
             </Link>
           </div>
         </div>

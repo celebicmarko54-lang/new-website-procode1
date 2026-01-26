@@ -424,5 +424,18 @@
       "description": "Wir arbeiten daran. Bitte versuchen Sie es später erneut.",
       "retry": "Erneut versuchen"
     }
+  },
+  "docsPage": {
+    "searchPlaceholder": "Dokumentation durchsuchen...",
+    "welcomeTitle": "Willkommen bei AppNode",
+    "welcomeDescription": "AppNode ist eine KI-gestützte Entwicklungsplattform, mit der Sie vollständige Webanwendungen erstellen können, indem Sie einfach beschreiben, was Sie möchten. Keine Programmiererfahrung erforderlich.",
+    "whatYouCanBuild": "Was Sie erstellen können",
+    "howItWorks": "So funktioniert es",
+    "howItWorksDescription": "Beschreiben Sie Ihr Projekt einfach in natürlicher Sprache. Unsere KI versteht Ihre Anforderungen, erstellt einen vollständigen Bauplan und generiert produktionsreifen Code in Echtzeit.",
+    "gettingStarted": "Erste Schritte",
+    "gettingStartedDescription": "Bereit, Ihre erste App zu erstellen? So starten Sie in wenigen Schritten:",
+    "startBuildingFree": "Kostenlos starten",
+    "viewQuickstartGuide": "Schnellstartanleitung ansehen",
+    "copyPage": "Seite kopieren"
   }
 }

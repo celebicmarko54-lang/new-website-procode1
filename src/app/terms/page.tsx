@@ -2,8 +2,11 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useTranslation } from '@/context/LanguageContext';
 
 export default function TermsOfServicePage() {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-[#f8fafc] dark:bg-black transition-colors">
       <Header />
@@ -13,10 +16,10 @@ export default function TermsOfServicePage() {
           {/* Header */}
           <div className="mb-12 text-center">
             <div className="inline-block px-4 py-2 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-800 rounded-full text-sm font-medium mb-4">
-              Legal
+              {t('termsPage.badge')}
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">Terms of Service</h1>
-            <p className="text-gray-500 dark:text-gray-400">Last updated: December 1, 2025</p>
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">{t('termsPage.title')}</h1>
+            <p className="text-gray-500 dark:text-gray-400">{t('termsPage.lastUpdated')}</p>
           </div>
 
           {/* Content */}
@@ -171,9 +174,9 @@ export default function TermsOfServicePage() {
             </section>
 
             <section className="mb-10">
-              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">12. Contact Information</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('termsPage.contactTitle')}</h2>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                If you have any questions about these Terms, please contact us at:
+                {t('termsPage.contactDescription')}
               </p>
               <div className="mt-4 p-4 bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800 rounded-lg">
                 <p className="text-gray-700 dark:text-gray-300 font-medium">AppNode Inc.</p>

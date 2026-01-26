@@ -4,8 +4,10 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useTranslation } from '@/context/LanguageContext';
 
 export default function GalleryPage() {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState('All');
   
   const categories = ['All', 'AI Apps', 'Websites', 'Business Apps', 'Personal Software', 'Games'];
@@ -38,10 +40,10 @@ export default function GalleryPage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-              Gallery
+              {t('galleryPage.title')}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400">
-              Explore what the AppNode community is building. Get inspired and start your own project.
+              {t('galleryPage.subtitle')}
             </p>
           </div>
 

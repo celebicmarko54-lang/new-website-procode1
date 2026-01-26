@@ -2,8 +2,10 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useTranslation } from '@/context/LanguageContext';
 
 export default function CareersPage() {
+  const { t } = useTranslation();
   const openings = [
     {
       title: 'Senior Full Stack Engineer',
@@ -79,16 +81,16 @@ export default function CareersPage() {
               <svg className="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Careers</span>
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('careersPage.badge')}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              Join the <span className="text-gray-500 dark:text-gray-400">AppNode</span> Team
+              {t('careersPage.title')} <span className="text-gray-500 dark:text-gray-400">AppNode</span> {t('careersPage.titleEnd')}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
-              Help us build the future of software development. We&apos;re looking for passionate people to join our mission.
+              {t('careersPage.subtitle')}
             </p>
             <a href="#openings" className="inline-flex items-center gap-2 px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full hover:opacity-90 transition-all font-medium">
-              View Open Positions
+              {t('careersPage.viewOpenPositions')}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -98,7 +100,7 @@ export default function CareersPage() {
 
         {/* Company Values */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">Our Values</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">{t('careersPage.ourValues')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value) => (
               <div key={value.title} className="bg-white dark:bg-[#0a0a0a] rounded-xl border border-gray-200 dark:border-gray-800 p-6 text-center hover:shadow-lg transition-all">
@@ -131,9 +133,9 @@ export default function CareersPage() {
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 mb-4">
                 <div className="w-2 h-2 rounded-full bg-black dark:bg-white animate-pulse" />
-                <span className="text-sm font-medium text-gray-900 dark:text-white">Why Join Us</span>
+                <span className="text-sm font-medium text-gray-900 dark:text-white">{t('careersPage.whyJoinUs')}</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Benefits & Perks</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">{t('careersPage.benefitsAndPerks')}</h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit) => (
@@ -151,7 +153,7 @@ export default function CareersPage() {
 
         {/* Open Positions */}
         <div id="openings" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">Open Positions</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">{t('careersPage.openPositions')}</h2>
           <div className="space-y-4">
             {openings.map((job) => (
               <div
@@ -171,7 +173,7 @@ export default function CareersPage() {
                     </div>
                   </div>
                   <button className="flex-shrink-0 px-4 py-2 bg-black dark:bg-white text-white dark:text-black rounded-full hover:opacity-90 transition-colors text-sm font-medium">
-                    Apply Now
+                    {t('careersPage.applyNow')}
                   </button>
                 </div>
               </div>
@@ -180,10 +182,10 @@ export default function CareersPage() {
 
           {/* Don't see a fit */}
           <div className="mt-12 text-center bg-gray-50 dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800 rounded-xl p-8">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Don&apos;t see a perfect fit?</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-4">We&apos;re always looking for talented people. Send us your resume and we&apos;ll keep you in mind.</p>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{t('careersPage.dontSeeAFit')}</h3>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">{t('careersPage.dontSeeAFitDescription')}</p>
             <button className="px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full hover:opacity-90 transition-all font-medium">
-              Send General Application
+              {t('careersPage.sendGeneralApplication')}
             </button>
           </div>
         </div>

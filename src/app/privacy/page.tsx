@@ -2,8 +2,11 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useTranslation } from '@/context/LanguageContext';
 
 export default function PrivacyPolicyPage() {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-[#f8fafc] dark:bg-black transition-colors">
       <Header />
@@ -13,10 +16,10 @@ export default function PrivacyPolicyPage() {
           {/* Header */}
           <div className="mb-12 text-center">
             <div className="inline-block px-4 py-2 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-800 rounded-full text-sm font-medium mb-4">
-              Legal
+              {t('privacyPage.badge')}
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">Privacy Policy</h1>
-            <p className="text-gray-500 dark:text-gray-400">Last updated: December 1, 2025</p>
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">{t('privacyPage.title')}</h1>
+            <p className="text-gray-500 dark:text-gray-400">{t('privacyPage.lastUpdated')}</p>
           </div>
 
           {/* Content */}
@@ -135,9 +138,9 @@ export default function PrivacyPolicyPage() {
             </section>
 
             <section className="mb-10">
-              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">10. Contact Us</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('privacyPage.contactTitle')}</h2>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                If you have any questions about this privacy policy or our privacy practices, please contact us at:
+                {t('privacyPage.contactDescription')}
               </p>
               <div className="mt-4 p-4 bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800 rounded-lg">
                 <p className="text-gray-700 dark:text-gray-300 font-medium">AppNode Inc.</p>

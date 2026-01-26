@@ -3,8 +3,10 @@
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useTranslation } from '@/context/LanguageContext';
 
 export default function AffiliatesPage() {
+  const { t } = useTranslation();
   const [email, setEmail] = useState('');
 
   const benefits = [

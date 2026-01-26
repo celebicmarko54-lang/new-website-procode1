@@ -251,10 +251,10 @@ export default function EnterprisePage() {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Get in touch
+              {t('enterprisePage.contactTitle')}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              Tell us about your team and we&apos;ll get back to you within 24 hours.
+              {t('enterprisePage.contactSubtitle')}
             </p>
           </div>
           
@@ -265,72 +265,72 @@ export default function EnterprisePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Thank you!</h3>
-              <p className="text-gray-600 dark:text-gray-400">We&apos;ve received your message and will be in touch soon.</p>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{t('enterprisePage.thankYou')}</h3>
+              <p className="text-gray-600 dark:text-gray-400">{t('enterprisePage.thankYouMessage')}</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-800 p-8 shadow-sm">
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Full Name</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('enterprisePage.form.fullName')}</label>
                   <input
                     type="text"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-800 bg-white dark:bg-black text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent"
-                    placeholder="John Smith"
+                    placeholder={t('enterprisePage.form.namePlaceholder')}
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Work Email</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('enterprisePage.form.workEmail')}</label>
                   <input
                     type="email"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-800 bg-white dark:bg-black text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent"
-                    placeholder="john@company.com"
+                    placeholder={t('enterprisePage.form.emailPlaceholder')}
                   />
                 </div>
               </div>
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Company</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('enterprisePage.form.company')}</label>
                   <input
                     type="text"
                     required
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-800 bg-white dark:bg-black text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent"
-                    placeholder="Acme Inc."
+                    placeholder={t('enterprisePage.form.companyPlaceholder')}
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Team Size</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('enterprisePage.form.teamSize')}</label>
                   <select
                     required
                     value={formData.teamSize}
                     onChange={(e) => setFormData({ ...formData, teamSize: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent bg-white dark:bg-black text-gray-900 dark:text-white"
                   >
-                    <option value="">Select team size</option>
-                    <option value="1-10">1-10 employees</option>
-                    <option value="11-50">11-50 employees</option>
-                    <option value="51-200">51-200 employees</option>
-                    <option value="201-500">201-500 employees</option>
-                    <option value="500+">500+ employees</option>
+                    <option value="">{t('enterprisePage.form.selectTeamSize')}</option>
+                    <option value="1-10">{t('enterprisePage.form.teamSize1')}</option>
+                    <option value="11-50">{t('enterprisePage.form.teamSize2')}</option>
+                    <option value="51-200">{t('enterprisePage.form.teamSize3')}</option>
+                    <option value="201-500">{t('enterprisePage.form.teamSize4')}</option>
+                    <option value="500+">{t('enterprisePage.form.teamSize5')}</option>
                   </select>
                 </div>
               </div>
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">How can we help?</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('enterprisePage.form.message')}</label>
                 <textarea
                   rows={4}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-800 bg-white dark:bg-black text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent resize-none"
-                  placeholder="Tell us about your use case and requirements..."
+                  placeholder={t('enterprisePage.form.messagePlaceholder')}
                 />
               </div>
               <button
@@ -345,10 +345,10 @@ export default function EnterprisePage() {
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
-                    Sending...
+                    {t('enterprisePage.form.sending')}
                   </>
                 ) : (
-                  'Contact Sales'
+                  t('common.contactSales')
                 )}
               </button>
             </form>

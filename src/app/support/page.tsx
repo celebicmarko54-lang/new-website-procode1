@@ -4,8 +4,10 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useTranslation } from '@/context/LanguageContext';
 
 export default function SupportPage() {
+  const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
 
   const categories = [
@@ -112,17 +114,17 @@ export default function SupportPage() {
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            How can we help?
+            {t('supportPage.heroTitle')}
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            Search our knowledge base or browse categories below
+            {t('supportPage.heroSubtitle')}
           </p>
           <div className="relative">
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search for help..."
+              placeholder={t('supportPage.searchPlaceholder')}
               className="w-full px-6 py-4 rounded-2xl text-gray-900 text-lg border border-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100 focus:border-gray-300 shadow-lg"
             />
             <button className="absolute right-3 top-1/2 -translate-y-1/2 p-2 text-white rounded-xl hover:opacity-90 transition-all" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}>
@@ -137,7 +139,7 @@ export default function SupportPage() {
       {/* Categories Grid */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Browse by Category</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">{t('supportPage.browseByCategory')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {categories.map((category, index) => (
               <div
@@ -164,7 +166,7 @@ export default function SupportPage() {
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Popular Articles */}
             <div className="bg-white rounded-2xl border border-gray-100 p-8">
-              <h2 className="text-xl font-bold text-gray-900 mb-6">Popular Articles</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-6">{t('supportPage.popularArticles')}</h2>
               <div className="space-y-1">
                 {popularArticles.map((article, index) => (
                   <div
@@ -188,22 +190,22 @@ export default function SupportPage() {
 
             {/* Contact Support */}
             <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 text-white">
-              <h2 className="text-xl font-bold mb-4">Need more help?</h2>
+              <h2 className="text-xl font-bold mb-4">{t('supportPage.needMoreHelp')}</h2>
               <p className="text-gray-300 mb-8">
-                Can&apos;t find what you&apos;re looking for? Our support team is here to help.
+                {t('supportPage.needMoreHelpDescription')}
               </p>
               <div className="space-y-4">
                 <button className="w-full px-4 py-4 hover:opacity-90 rounded-xl font-semibold transition-all flex items-center justify-center gap-3 text-white" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}>
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                   </svg>
-                  Chat with Support
+                  {t('supportPage.chatWithSupport')}
                 </button>
                 <button className="w-full px-4 py-4 bg-white/10 hover:bg-white/20 rounded-xl font-semibold transition-colors flex items-center justify-center gap-3">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  Email Support
+                  {t('supportPage.emailSupport')}
                 </button>
               </div>
             </div>
@@ -214,7 +216,7 @@ export default function SupportPage() {
       {/* FAQs */}
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{t('supportPage.faq')}</h2>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <details
@@ -240,23 +242,23 @@ export default function SupportPage() {
       <section className="py-24 px-6 bg-gradient-to-r from-[#1f2937] to-[#374151]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Still Have Questions?
+            {t('supportPage.stillHaveQuestions')}
           </h2>
           <p className="text-xl text-gray-100 mb-12 max-w-2xl mx-auto">
-            Our team is ready to help you succeed. Reach out anytime.
+            {t('supportPage.stillHaveQuestionsDescription')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/community"
               className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg"
             >
-              Join Community
+              {t('supportPage.joinCommunity')}
             </Link>
             <Link
               href="/guides"
               className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
             >
-              Browse Guides
+              {t('supportPage.browseGuides')}
             </Link>
           </div>
         </div>

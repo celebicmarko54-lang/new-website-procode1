@@ -424,5 +424,18 @@
       "description": "修正に取り組んでいます。後でもう一度お試しください。",
       "retry": "再試行"
     }
+  },
+  "docsPage": {
+    "searchPlaceholder": "ドキュメントを検索...",
+    "welcomeTitle": "AppNodeへようこそ",
+    "welcomeDescription": "AppNodeはAI駆動の開発プラットフォームで、作りたいものを説明するだけで完全なWebアプリケーションを構築できます。コーディング経験は不要です。まるで専門チームがあなたのために働いているかのようです。",
+    "whatYouCanBuild": "構築できるもの",
+    "howItWorks": "仕組み",
+    "howItWorksDescription": "プロジェクトを自然言語で説明するだけ。AIが要件を理解し、完全な設計図を生成し、本番対応のコードをリアルタイムで構築します。即座プレビューでアプリが形になる様子を見守りましょう。",
+    "gettingStarted": "はじめに",
+    "gettingStartedDescription": "最初のアプリを作る準備はできましたか？簡単な手順で始められます：",
+    "startBuildingFree": "無料で始める",
+    "viewQuickstartGuide": "クイックスタートガイドを見る",
+    "copyPage": "ページをコピー"
   }
 }

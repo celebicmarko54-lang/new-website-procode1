@@ -3,8 +3,11 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import { useTranslation } from '@/context/LanguageContext';
 
 export default function TeamsPage() {
+  const { t } = useTranslation();
+  
   return (
     <div className="min-h-screen bg-[#f8fafc] dark:bg-black text-gray-900 dark:text-white">
       <Header />
@@ -17,21 +20,20 @@ export default function TeamsPage() {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
-              Team Collaboration
+              {t('teamsPage.badge')}
             </div>
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6">
-              Build Together with <span className="text-violet-500">Teams</span>
+              {t('teamsPage.titleStart')} <span className="text-violet-500">{t('teamsPage.titleHighlight')}</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
-              Bring the power of AppNode to your entire team. Collaborate in real-time, 
-              share projects, and ship faster together.
+              {t('teamsPage.subtitle')}
             </p>
             <div className="flex items-center justify-center gap-4">
               <Link href="/signup?plan=teams" className="px-6 py-3 bg-violet-600 hover:bg-violet-700 text-white font-medium rounded-lg transition-colors">
-                Start Team Trial
+                {t('teamsPage.startTeamTrial')}
               </Link>
               <Link href="/enterprise" className="px-6 py-3 border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 font-medium rounded-lg transition-colors">
-                Enterprise Options
+                {t('teamsPage.enterpriseOptions')}
               </Link>
             </div>
           </div>
@@ -44,18 +46,18 @@ export default function TeamsPage() {
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
               <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
-              <span className="ml-4 text-sm text-gray-500">Team Workspace</span>
+              <span className="ml-4 text-sm text-gray-500">{t('teamsPage.teamWorkspace')}</span>
               <div className="ml-auto flex items-center gap-1">
                 <div className="w-6 h-6 rounded-full bg-blue-500 border-2 border-white dark:border-gray-900 flex items-center justify-center text-white text-xs">A</div>
                 <div className="w-6 h-6 rounded-full bg-green-500 border-2 border-white dark:border-gray-900 -ml-2 flex items-center justify-center text-white text-xs">B</div>
                 <div className="w-6 h-6 rounded-full bg-purple-500 border-2 border-white dark:border-gray-900 -ml-2 flex items-center justify-center text-white text-xs">C</div>
-                <span className="ml-2 text-sm text-gray-500">3 online</span>
+                <span className="ml-2 text-sm text-gray-500">3 {t('teamsPage.online')}</span>
               </div>
             </div>
             <div className="grid md:grid-cols-3 min-h-[350px]">
               {/* Projects */}
               <div className="border-r border-gray-200 dark:border-gray-700 p-4">
-                <div className="text-xs font-medium text-gray-500 uppercase mb-3">Team Projects</div>
+                <div className="text-xs font-medium text-gray-500 uppercase mb-3">{t('teamsPage.teamProjects')}</div>
                 <div className="space-y-2">
                   {['marketing-site', 'customer-portal', 'analytics-dashboard', 'mobile-app'].map((project, i) => (
                     <div key={i} className={`px-3 py-2 rounded-lg text-sm flex items-center justify-between ${i === 0 ? 'bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300' : 'hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300'}`}>
@@ -85,7 +87,7 @@ export default function TeamsPage() {
               
               {/* Activity */}
               <div className="border-l border-gray-200 dark:border-gray-700 p-4">
-                <div className="text-xs font-medium text-gray-500 uppercase mb-3">Activity</div>
+                <div className="text-xs font-medium text-gray-500 uppercase mb-3">{t('teamsPage.activity')}</div>
                 <div className="space-y-3">
                   {[
                     { user: 'Alex', action: 'pushed to main', time: '2m ago' },
@@ -111,7 +113,7 @@ export default function TeamsPage() {
 
         {/* Features */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl font-bold text-center mb-12">Team Features</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">{t('teamsPage.teamFeatures')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -158,15 +160,15 @@ export default function TeamsPage() {
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="bg-gradient-to-r from-violet-500/10 to-purple-500/10 rounded-2xl p-8 md:p-12">
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold mb-4">Teams Pricing</h2>
-              <p className="text-gray-600 dark:text-gray-400">Simple, transparent pricing for teams of all sizes.</p>
+              <h2 className="text-3xl font-bold mb-4">{t('teamsPage.pricing.title')}</h2>
+              <p className="text-gray-600 dark:text-gray-400">{t('teamsPage.pricing.subtitle')}</p>
             </div>
             <div className="bg-white dark:bg-gray-900 rounded-xl p-8 shadow-lg">
               <div className="flex items-baseline justify-center gap-2 mb-4">
                 <span className="text-5xl font-bold">$35</span>
                 <span className="text-gray-500">per user/month</span>
               </div>
-              <p className="text-center text-gray-600 dark:text-gray-400 mb-6">Billed annually</p>
+              <p className="text-center text-gray-600 dark:text-gray-400 mb-6">{t('teamsPage.pricing.billedAnnually')}</p>
               <ul className="space-y-3 mb-8">
                 {[
                   'Everything in Core',
@@ -186,7 +188,7 @@ export default function TeamsPage() {
                 ))}
               </ul>
               <Link href="/signup?plan=teams" className="block w-full py-3 bg-violet-600 hover:bg-violet-700 text-white font-medium rounded-lg transition-colors text-center">
-                Start Team Trial
+                {t('teamsPage.startTeamTrial')}
               </Link>
             </div>
           </div>
@@ -194,12 +196,12 @@ export default function TeamsPage() {
 
         {/* CTA */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to build together?</h2>
+          <h2 className="text-3xl font-bold mb-4">{t('teamsPage.cta.title')}</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-            Get your team on AppNode and ship faster than ever.
+            {t('teamsPage.cta.subtitle')}
           </p>
           <Link href="/signup?plan=teams" className="inline-flex items-center gap-2 px-8 py-4 bg-violet-600 hover:bg-violet-700 text-white font-medium rounded-lg transition-colors text-lg">
-            Start Free Team Trial
+            {t('teamsPage.startFreeTeamTrial')}
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

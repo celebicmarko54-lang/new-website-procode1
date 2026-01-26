@@ -113,7 +113,7 @@ export default function PricingPage() {
                 
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{pkg.credits} {t('pricing.credits')}</h3>
                 <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">{pkg.price}</div>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">{pkg.perCredit} {t('pricing.perCredit')}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">{pkg.perCredit}</p>
                 
                 <button className={`w-full py-3 rounded-full font-semibold transition-all flex items-center justify-center gap-2 ${
                   pkg.popular
