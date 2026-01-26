@@ -143,7 +143,8 @@ export default function DocsPage() {
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 max-w-4xl mx-auto px-6 py-12">
+        <main className="flex-1 min-w-0 px-6 py-12">
+          <div className="max-w-4xl mx-auto lg:mr-0 lg:ml-auto lg:pr-64">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-8">
             <span className="text-gray-700 dark:text-gray-300">Getting Started</span>
@@ -153,7 +154,7 @@ export default function DocsPage() {
 
           {/* Content */}
           <article className="prose prose-gray dark:prose-invert max-w-none">
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">{t('docsPage.welcomeTitle')}</h1>
+            <h1 id="welcome" className="text-4xl font-bold text-gray-900 dark:text-white mb-6">{t('docsPage.welcomeTitle')}</h1>
             
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
               {t('docsPage.welcomeDescription')}
@@ -186,7 +187,7 @@ export default function DocsPage() {
               </ul>
             </div>
 
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-4">{t('docsPage.howItWorks')}</h2>
+            <h2 id="how-it-works" className="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-4">{t('docsPage.howItWorks')}</h2>
             
             <p className="text-gray-600 dark:text-gray-400 mb-8">
               {t('docsPage.howItWorksDescription')}
@@ -212,7 +213,7 @@ export default function DocsPage() {
               </div>
             </div>
 
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-4">{t('docsPage.gettingStarted')}</h2>
+            <h2 id="getting-started" className="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-4">{t('docsPage.gettingStarted')}</h2>
             
             <p className="text-gray-600 dark:text-gray-400 mb-6">
               {t('docsPage.gettingStartedDescription')}
@@ -274,7 +275,26 @@ export default function DocsPage() {
               {t('docsPage.copyPage')}
             </button>
           </div>
+          </div>
         </main>
+
+        {/* On This Page Sidebar */}
+        <aside className="hidden xl:block w-56 shrink-0 h-[calc(100vh-56px)] sticky top-14 overflow-y-auto">
+          <div className="p-6">
+            <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">On this page</h4>
+            <nav className="space-y-2">
+              <a href="#welcome" className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                Welcome to AppNode
+              </a>
+              <a href="#how-it-works" className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                How it Works
+              </a>
+              <a href="#getting-started" className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                Getting Started
+              </a>
+            </nav>
+          </div>
+        </aside>
       </div>
 
       <Footer />

@@ -290,18 +290,7 @@ export default function BuildAnythingSection() {
         </div>
       </div>
 
-      {/* See all link */}
-      <div className="max-w-7xl mx-auto px-6 mt-8 flex justify-end">
-        <a 
-          href="/templates" 
-          className="inline-flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors group"
-        >
-          <span>{t('buildAnything.exploreAll')}</span>
-          <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </a>
-      </div>
+
     </section>
   );
 }

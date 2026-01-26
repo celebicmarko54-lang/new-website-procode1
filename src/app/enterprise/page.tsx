@@ -78,6 +78,7 @@ const testimonials = [
     role: "VP of Engineering",
     company: "TechCorp",
     avatar: "SC",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
   },
   {
     quote: "The enterprise features give us the security and control we need while keeping the developer experience simple.",
@@ -85,6 +86,7 @@ const testimonials = [
     role: "CTO",
     company: "FinanceApp",
     avatar: "MT",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
   },
   {
     quote: "Our design team can now prototype and ship production-ready apps without waiting for engineering resources.",
@@ -92,6 +94,7 @@ const testimonials = [
     role: "Head of Design",
     company: "DesignStudio",
     avatar: "EW",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
   },
 ];
 
@@ -232,9 +235,11 @@ export default function EnterprisePage() {
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mb-6 italic">&ldquo;{testimonial.quote}&rdquo;</p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-600 to-amber-600 flex items-center justify-center text-white font-medium text-sm">
-                    {testimonial.avatar}
-                  </div>
+                  <img 
+                    src={testimonial.image} 
+                    alt={testimonial.author}
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
                   <div>
                     <p className="font-semibold text-gray-900 dark:text-white">{testimonial.author}</p>
                     <p className="text-sm text-gray-500 dark:text-gray-400">{testimonial.role}, {testimonial.company}</p>

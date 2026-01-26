@@ -41,13 +41,31 @@ export default function SecurityPage() {
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              { name: t('productSecurity.badges.soc2'), icon: '🛡️' },
-              { name: t('productSecurity.badges.gdpr'), icon: '🇪🇺' },
-              { name: t('productSecurity.badges.iso'), icon: '📋' },
-              { name: t('productSecurity.badges.hipaa'), icon: '🏥' }
+              { name: t('productSecurity.badges.soc2'), icon: (
+                <svg className="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              )},
+              { name: t('productSecurity.badges.gdpr'), icon: (
+                <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              )},
+              { name: t('productSecurity.badges.iso'), icon: (
+                <svg className="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                </svg>
+              )},
+              { name: t('productSecurity.badges.hipaa'), icon: (
+                <svg className="w-6 h-6 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              )}
             ].map((badge, i) => (
               <div key={i} className="flex items-center gap-3 px-5 py-3 bg-white dark:bg-[#0a0a0a] rounded-xl border border-gray-200 dark:border-gray-800">
-                <span className="text-2xl">{badge.icon}</span>
+                <div className="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+                  {badge.icon}
+                </div>
                 <span className="font-medium text-gray-900 dark:text-white">{badge.name}</span>
               </div>
             ))}
@@ -58,13 +76,29 @@ export default function SecurityPage() {
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">{t('productSecurity.featuresTitle')}</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { icon: '🔐', title: t('productSecurity.features.sso.title'), description: t('productSecurity.features.sso.description'), features: [t('productSecurity.features.sso.item1'), t('productSecurity.features.sso.item2'), t('productSecurity.features.sso.item3')] },
-              { icon: '🔍', title: t('productSecurity.features.scanning.title'), description: t('productSecurity.features.scanning.description'), features: [t('productSecurity.features.scanning.item1'), t('productSecurity.features.scanning.item2'), t('productSecurity.features.scanning.item3')] },
-              { icon: '🔒', title: t('productSecurity.features.encryption.title'), description: t('productSecurity.features.encryption.description'), features: [t('productSecurity.features.encryption.item1'), t('productSecurity.features.encryption.item2'), t('productSecurity.features.encryption.item3')] },
-              { icon: '📋', title: t('productSecurity.features.auditLogs.title'), description: t('productSecurity.features.auditLogs.description'), features: [t('productSecurity.features.auditLogs.item1'), t('productSecurity.features.auditLogs.item2'), t('productSecurity.features.auditLogs.item3')] }
+              { icon: (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              ), gradient: 'from-violet-500 to-purple-600', title: t('productSecurity.features.sso.title'), description: t('productSecurity.features.sso.description'), features: [t('productSecurity.features.sso.item1'), t('productSecurity.features.sso.item2'), t('productSecurity.features.sso.item3')] },
+              { icon: (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              ), gradient: 'from-cyan-500 to-blue-600', title: t('productSecurity.features.scanning.title'), description: t('productSecurity.features.scanning.description'), features: [t('productSecurity.features.scanning.item1'), t('productSecurity.features.scanning.item2'), t('productSecurity.features.scanning.item3')] },
+              { icon: (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              ), gradient: 'from-emerald-500 to-teal-600', title: t('productSecurity.features.encryption.title'), description: t('productSecurity.features.encryption.description'), features: [t('productSecurity.features.encryption.item1'), t('productSecurity.features.encryption.item2'), t('productSecurity.features.encryption.item3')] },
+              { icon: (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                </svg>
+              ), gradient: 'from-orange-500 to-amber-600', title: t('productSecurity.features.auditLogs.title'), description: t('productSecurity.features.auditLogs.description'), features: [t('productSecurity.features.auditLogs.item1'), t('productSecurity.features.auditLogs.item2'), t('productSecurity.features.auditLogs.item3')] }
             ].map((feature, i) => (
               <div key={i} className="p-8 bg-white dark:bg-[#0a0a0a] rounded-2xl border border-gray-200 dark:border-gray-800">
-                <div className="text-3xl mb-4">{feature.icon}</div>
+                <div className={`w-12 h-12 bg-gradient-to-br ${feature.gradient} rounded-xl flex items-center justify-center mb-4 text-white shadow-lg`}>{feature.icon}</div>
                 <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">{feature.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">{feature.description}</p>
                 <ul className="space-y-2">

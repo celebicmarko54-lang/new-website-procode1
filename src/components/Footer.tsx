@@ -124,7 +124,7 @@ export default function Footer() {
                       </button>
                       
                       {langDropdownOpen && (
-                        <div className="absolute bottom-full left-0 mb-2 w-48 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded-lg shadow-lg py-1 z-50 animate-fade-in">
+                        <div className="absolute bottom-full left-0 mb-2 w-48 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded-lg shadow-lg py-1 z-50 animate-fade-in max-h-80 overflow-y-auto">
                           {languages.map((lang) => (
                             <button
                               key={lang.code}
