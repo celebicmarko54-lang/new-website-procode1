@@ -1,8 +1,19 @@
+import dynamic from 'next/dynamic';
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import LovecodeSection from "@/components/LovecodeSection";
-import BuildAnythingSection from "@/components/BuildAnythingSection";
-import Footer from "@/components/Footer";
+
+// Lazy load below-fold components for faster initial page load
+const LovecodeSection = dynamic(() => import("@/components/LovecodeSection"), {
+  loading: () => <div className="h-96 bg-[#f8fafc] dark:bg-black" />,
+  ssr: true,
+});
+const BuildAnythingSection = dynamic(() => import("@/components/BuildAnythingSection"), {
+  loading: () => <div className="h-96 bg-[#f8fafc] dark:bg-black" />,
+  ssr: true,
+});
+const Footer = dynamic(() => import("@/components/Footer"), {
+  ssr: true,
+});
 
 export default function Home() {
   return (
