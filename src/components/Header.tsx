@@ -13,8 +13,8 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#f8fafc]/95 dark:bg-black/95 backdrop-blur-sm border-b border-gray-200/50 dark:border-gray-800/50">
-      <div className="max-w-7xl ml-[15%] mr-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-7xl ml-[5%] mr-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 gap-[15%]">
           {/* Logo */}
           <div className="flex items-center gap-8">
             <Link href="/" className="flex items-center gap-2">
@@ -94,7 +94,7 @@ export default function Header() {
                 </button>
                 {activeDropdown === 'resources' && (
                   <div className="absolute top-full left-0 mt-1 w-48 rounded-lg bg-white dark:bg-black border border-gray-200 dark:border-gray-800 shadow-lg py-1 animate-fade-in">
-                    <Link href="/docs" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('docs.title')}</Link>
+                    <Link href="/report" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('docs.title')}</Link>
                     <Link href="/community" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('nav.community')}</Link>
                     <Link href="/gallery" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('community.showcase')}</Link>
                     <Link href="/blog" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('nav.blog')}</Link>
@@ -110,7 +110,7 @@ export default function Header() {
           </div>
 
           {/* Right Side */}
-          <div className="absolute right-[15%] flex items-center gap-2">
+          <div className="absolute right-[5%] flex items-center gap-2">
             {/* Language Selector */}
             <LanguageSelector />
             
@@ -120,7 +120,7 @@ export default function Header() {
             {/* Log in Button */}
             <Link 
               href="/login"
-              className="h-9 px-4 flex items-center text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="h-7 px-3 flex items-center text-xs font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
             >
               {t('common.logIn')}
             </Link>
@@ -128,7 +128,7 @@ export default function Header() {
             {/* Get Started Button */}
             <Link 
               href="/signup"
-              className="h-9 px-4 flex items-center text-sm font-medium text-white bg-gray-900 dark:bg-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 rounded-lg transition-colors"
+              className="h-7 px-3 flex items-center text-xs font-medium text-white bg-gray-900 dark:bg-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 rounded-md transition-colors"
             >
               {t('common.getStarted')}
             </Link>

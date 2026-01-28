@@ -52,13 +52,6 @@ export default function PricingPage() {
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
             {t('pricing.subtitle')}
           </p>
-
-          <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800 shadow-sm">
-            <svg className="w-5 h-5 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('pricing.creditInfo')}</span>
-          </div>
         </div>
       </section>
 

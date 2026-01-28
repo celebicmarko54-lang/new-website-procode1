@@ -1,9 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useRef, useEffect } from 'react';
-import { useLanguage, languages, Language, useTranslation } from '@/context/LanguageContext';
-import { useTheme } from '@/context/ThemeContext';
+import { useState } from 'react';
+import { useTranslation } from '@/context/LanguageContext';
+import LanguageSelector from './LanguageSelector';
+import ThemeToggle from './ThemeToggle';
 
 interface FooterLink {
   nameKey: string;
@@ -44,7 +45,7 @@ const footerLinks: FooterSection[] = [
       { nameKey: 'footer.cookieSettings', href: '/cookies' },
       { nameKey: 'footer.termsOfService', href: '/terms' },
       { nameKey: 'footer.platformRules', href: '/rules' },
-      { nameKey: 'footer.reportAbuse', href: '/report' },
+      { nameKey: 'docs.title', href: '/report' },
     ],
   },
 ];
@@ -59,32 +60,13 @@ const socialMediaLinks = [
 
 export default function Footer() {
   const [cookieModalOpen, setCookieModalOpen] = useState(false);
-  const [langDropdownOpen, setLangDropdownOpen] = useState(false);
-  const { language, setLanguage } = useLanguage();
-  const { theme, toggleTheme } = useTheme();
   const { t } = useTranslation();
-  const langDropdownRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (langDropdownRef.current && !langDropdownRef.current.contains(event.target as Node)) {
-        setLangDropdownOpen(false);
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
 
   const handleLinkClick = (link: FooterLink) => {
     if (link.action === 'cookies') {
       setCookieModalOpen(true);
       return;
     }
-  };
-
-  const handleSelectLanguage = (lang: Language) => {
-    setLanguage(lang);
-    setLangDropdownOpen(false);
   };
 
   return (
@@ -108,65 +90,8 @@ export default function Footer() {
                   
                   {/* Language Selector and Theme Toggle */}
                   <div className="flex items-center gap-2">
-                    {/* Language Selector Dropdown */}
-                    <div ref={langDropdownRef} className="relative">
-                      <button 
-                        onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-                        className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-gray-500 dark:text-gray-400 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-400 dark:hover:border-gray-500 transition-all"
-                      >
-                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                        </svg>
-                        <span className="uppercase font-medium">{language.code}</span>
-                        <svg className={`w-2.5 h-2.5 transition-transform ${langDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </button>
-                      
-                      {langDropdownOpen && (
-                        <div className="absolute bottom-full left-0 mb-2 w-48 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded-lg shadow-lg py-1 z-50 animate-fade-in max-h-80 overflow-y-auto">
-                          {languages.map((lang) => (
-                            <button
-                              key={lang.code}
-                              onClick={() => handleSelectLanguage(lang)}
-                              className={`w-full flex items-center justify-between px-4 py-2.5 text-sm transition-colors ${
-                                language.code === lang.code 
-                                  ? 'bg-gray-50 dark:bg-black text-gray-900 dark:text-white' 
-                                  : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white'
-                              }`}
-                            >
-                              <div className="flex items-center gap-3">
-                                <span className="uppercase text-xs font-semibold text-gray-400 dark:text-gray-500 w-5">{lang.code}</span>
-                                <span className="font-medium">{lang.name}</span>
-                              </div>
-                              {language.code === lang.code && (
-                                <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                </svg>
-                              )}
-                            </button>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                    
-                    {/* Theme Toggle Button */}
-                    <button
-                      onClick={toggleTheme}
-                      className="flex items-center justify-center w-8 h-8 text-gray-500 dark:text-gray-400 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-400 dark:hover:border-gray-500 transition-all"
-                      aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
-                      title={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
-                    >
-                      {theme === 'light' ? (
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                        </svg>
-                      ) : (
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                        </svg>
-                      )}
-                    </button>
+                    <LanguageSelector />
+                    <ThemeToggle />
                   </div>
                 </div>
 
