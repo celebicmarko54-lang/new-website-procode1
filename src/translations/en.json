@@ -791,6 +791,7 @@
     "faq": "Frequently Asked Questions",
     "stillHaveQuestions": "Still Have Questions?",
     "stillHaveQuestionsDescription": "Our team is ready to help you succeed. Reach out anytime.",
+    "viewGallery": "View Gallery",
     "joinCommunity": "Join Community",
     "browseGuides": "Browse Guides"
   },
@@ -1164,13 +1165,13 @@
     "badge": "Video Learning",
     "titleStart": "How it",
     "titleHighlight": "works",
-    "subtitle": "Learn everything about Lovecode with our comprehensive video tutorials. From your first project to deploying on Cloudflare, Vercel, or GitHub.",
+    "subtitle": "Learn everything about AppNode with our comprehensive video tutorials. From your first project to deploying on Cloudflare, Vercel, or GitHub.",
     "featured": "Featured",
     "playlists": "Playlists",
     "viewAll": "View all",
     "cta": {
       "title": "Ready to Start Building?",
-      "subtitle": "Join thousands of creators who are building amazing applications with Lovecode.",
+      "subtitle": "Join thousands of creators who are building amazing applications with AppNode.",
       "startBuildingFree": "Start Building Free",
       "subscribeYouTube": "Subscribe on YouTube"
     }

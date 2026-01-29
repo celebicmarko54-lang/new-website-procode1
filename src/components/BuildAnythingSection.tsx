@@ -280,17 +280,6 @@ export default function BuildAnythingSection() {
           ))}
         </div>
       </div>
-
-      {/* Bottom scrollbar indicator */}
-      <div className="max-w-7xl mx-auto px-6 mt-8">
-        <div className="flex items-center gap-4">
-          <div className="flex-1 h-1 bg-gray-200 dark:bg-black rounded-full overflow-hidden">
-            <div className="h-full w-1/3 bg-gradient-to-r from-gray-400 to-gray-300 dark:from-gray-500 dark:to-gray-600 rounded-full" />
-          </div>
-        </div>
-      </div>
-
-
     </section>
   );
 }

@@ -13,10 +13,10 @@ export default function AboutPage() {
   ];
 
   const team = [
-    { name: 'Alex Chen', role: 'CEO & Co-founder', image: '👨‍💼', bio: 'Former Google engineer, passionate about democratizing software development.' },
-    { name: 'Sarah Kim', role: 'CTO & Co-founder', image: '👩‍💻', bio: 'PhD in Machine Learning, previously led AI research at OpenAI.' },
-    { name: 'Marcus Johnson', role: 'Head of Product', image: '👨‍🎨', bio: '10+ years building developer tools at Stripe and Figma.' },
-    { name: 'Emma Wilson', role: 'Head of Engineering', image: '👩‍🔬', bio: 'Ex-Amazon, scaled systems serving millions of users.' },
+    { name: 'Team Member', role: 'Position', image: '', bio: 'Bio coming soon.' },
+    { name: 'Team Member', role: 'Position', image: '', bio: 'Bio coming soon.' },
+    { name: 'Team Member', role: 'Position', image: '', bio: 'Bio coming soon.' },
+    { name: 'Team Member', role: 'Position', image: '', bio: 'Bio coming soon.' },
   ];
 
   const values = [
@@ -162,8 +162,8 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {team.map((member, index) => (
               <div key={index} className="bg-white dark:bg-[#0a0a0a] rounded-2xl border border-gray-200 dark:border-gray-800 p-6 text-center hover:border-gray-300 dark:hover:border-gray-700 transition-colors">
-                <div className="w-20 h-20 bg-gray-100 dark:bg-gray-900 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">
-                  {member.image}
+                <div className="w-20 h-20 bg-gray-100 dark:bg-gray-900 rounded-full flex items-center justify-center text-4xl mx-auto mb-4 border-2 border-dashed border-gray-300 dark:border-gray-700">
+                  {member.image || <span className="text-gray-400 text-sm">Photo</span>}
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{member.name}</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">{member.role}</p>

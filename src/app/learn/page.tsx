@@ -226,7 +226,7 @@ export default function LearnPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gray-50 to-gray-50 dark:from-gray-800 dark:to-gray-800 border border-gray-300 dark:border-gray-700 mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-700 mb-8">
             <svg className="w-4 h-4 text-gray-900 dark:text-gray-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
@@ -263,7 +263,7 @@ export default function LearnPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-gray-50 to-gray-50 dark:from-gray-900 dark:to-gray-900 border-y border-gray-100 dark:border-gray-800">
+      <section className="py-16 bg-gray-50 dark:bg-black border-y border-gray-100 dark:border-gray-800">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
@@ -292,7 +292,7 @@ export default function LearnPage() {
           <div className="grid md:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="w-14 h-14 bg-gradient-to-r from-gray-100 to-gray-100 dark:from-gray-800 dark:to-gray-800 rounded-2xl flex items-center justify-center text-gray-900 dark:text-gray-100 mx-auto mb-4">
+                <div className="w-14 h-14 bg-gray-100 dark:bg-gray-900 rounded-2xl flex items-center justify-center text-gray-900 dark:text-gray-100 mx-auto mb-4">
                   {feature.icon}
                 </div>
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{feature.title}</h3>
@@ -321,7 +321,7 @@ export default function LearnPage() {
                 key={index}
                 className="group p-6 bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
-                <div className="w-14 h-14 bg-gradient-to-r from-gray-100 to-gray-100 dark:from-gray-700 dark:to-gray-700 rounded-2xl flex items-center justify-center text-gray-900 dark:text-gray-100 mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 bg-gray-100 dark:bg-gray-900 rounded-2xl flex items-center justify-center text-gray-900 dark:text-gray-100 mb-4 group-hover:scale-110 transition-transform">
                   {path.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
@@ -357,7 +357,7 @@ export default function LearnPage() {
                 key={index}
                 className="group bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
-                <div className="h-40 bg-gradient-to-br from-gray-100 to-gray-100 dark:from-gray-700 dark:to-gray-700 flex items-center justify-center">
+                <div className="h-40 bg-gray-100 dark:bg-gray-900 flex items-center justify-center">
                   <div className="w-16 h-16 bg-white/80 dark:bg-black/80 backdrop-blur rounded-2xl flex items-center justify-center text-gray-900 dark:text-gray-100 group-hover:scale-110 transition-transform">
                     {course.icon}
                   </div>
@@ -407,7 +407,7 @@ export default function LearnPage() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-gray-50 to-gray-50 dark:from-gray-900 dark:to-gray-900">
+      <section className="py-20 px-6 bg-gray-50 dark:bg-black">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
             <svg className="w-12 h-12 text-gray-400 dark:text-gray-600 mx-auto" fill="currentColor" viewBox="0 0 24 24">
@@ -419,7 +419,7 @@ export default function LearnPage() {
             The courses are incredibly well-structured and the community is amazing."
           </blockquote>
           <div className="flex items-center justify-center gap-4">
-            <div className="w-14 h-14 bg-gradient-to-r from-[#1f2937] to-[#374151] rounded-full flex items-center justify-center text-white font-semibold text-lg">
+            <div className="w-14 h-14 bg-gray-800 dark:bg-gray-900 rounded-full flex items-center justify-center text-white font-semibold text-lg">
               AK
             </div>
             <div className="text-left">
@@ -431,7 +431,7 @@ export default function LearnPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-gradient-to-r from-[#1f2937] to-[#374151]">
+      <section className="py-24 px-6 bg-gray-900 dark:bg-black border-t border-gray-200 dark:border-gray-800">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             {t('learnPage.cta.title')}

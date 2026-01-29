@@ -31,7 +31,7 @@ export default function TermsOfServicePage() {
                 you agree to be bound by these Terms of Service (&quot;Terms&quot;). If you do not agree to these Terms, 
                 please do not use our Services.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 We may modify these Terms at any time. Your continued use of the Services after any such changes 
                 constitutes your acceptance of the new Terms.
               </p>
@@ -54,45 +54,45 @@ export default function TermsOfServicePage() {
             </section>
 
             <section className="mb-10">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. User Accounts</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">3. User Accounts</h2>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                 To access certain features of our Services, you must create an account. You agree to:
               </p>
-              <ul className="list-disc pl-6 text-gray-600 space-y-2 mb-4">
+              <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-2 mb-4">
                 <li>Provide accurate and complete registration information</li>
                 <li>Maintain the security of your account credentials</li>
                 <li>Notify us immediately of any unauthorized access</li>
                 <li>Accept responsibility for all activities under your account</li>
               </ul>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 You must be at least 13 years old to create an account. If you are under 18, you must have 
                 parental or guardian consent to use our Services.
               </p>
             </section>
 
             <section className="mb-10">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. User Content and Ownership</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">4. User Content and Ownership</h2>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                 <strong>Your Content:</strong> You retain ownership of all content, applications, and code you 
                 create using our Services (&quot;User Content&quot;). You grant AppNode a limited license to host, store, 
                 and display your User Content as necessary to provide the Services.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-4">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                 <strong>Code Export:</strong> You may export and use the code generated through our platform 
                 in accordance with your subscription plan. Exported code is yours to use, modify, and distribute.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 <strong>Responsibility:</strong> You are solely responsible for your User Content and must ensure 
                 it does not violate any laws or third-party rights.
               </p>
             </section>
 
             <section className="mb-10">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Acceptable Use</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">5. Acceptable Use</h2>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                 You agree not to use our Services to:
               </p>
-              <ul className="list-disc pl-6 text-gray-600 space-y-2">
+              <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-2">
                 <li>Violate any applicable laws or regulations</li>
                 <li>Infringe upon intellectual property rights of others</li>
                 <li>Create or distribute malicious software or content</li>
@@ -106,16 +106,16 @@ export default function TermsOfServicePage() {
             </section>
 
             <section className="mb-10">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. Subscription and Payments</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">6. Subscription and Payments</h2>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                 Some features of our Services require a paid subscription. By subscribing, you agree to:
               </p>
-              <ul className="list-disc pl-6 text-gray-600 space-y-2 mb-4">
+              <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-2 mb-4">
                 <li>Pay all applicable fees for your chosen plan</li>
                 <li>Provide accurate billing information</li>
                 <li>Accept automatic renewal unless cancelled</li>
               </ul>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 Refunds are provided in accordance with our refund policy. Prices may change with 30 days' notice.
               </p>
             </section>
@@ -126,15 +126,15 @@ export default function TermsOfServicePage() {
                 The Services, including all content, features, and functionality, are owned by AppNode and 
                 protected by copyright, trademark, and other intellectual property laws.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 You may not copy, modify, distribute, sell, or lease any part of our Services without our 
                 prior written consent.
               </p>
             </section>
 
             <section className="mb-10">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Disclaimer of Warranties</h2>
-              <p className="text-gray-600 leading-relaxed">
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">8. Disclaimer of Warranties</h2>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, 
                 EITHER EXPRESS OR IMPLIED. WE DO NOT WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED, 
                 SECURE, OR ERROR-FREE. YOU USE THE SERVICES AT YOUR OWN RISK.
@@ -152,21 +152,21 @@ export default function TermsOfServicePage() {
             </section>
 
             <section className="mb-10">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Termination</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">10. Termination</h2>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                 We may terminate or suspend your account and access to the Services at any time, without 
                 prior notice, for conduct that we believe violates these Terms or is harmful to other users, 
                 us, or third parties, or for any other reason.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 Upon termination, your right to use the Services will immediately cease. You may export your 
                 data before termination in accordance with your subscription plan.
               </p>
             </section>
 
             <section className="mb-10">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Governing Law</h2>
-              <p className="text-gray-600 leading-relaxed">
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">11. Governing Law</h2>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 These Terms shall be governed by and construed in accordance with the laws of the State of 
                 California, United States, without regard to its conflict of law provisions. Any disputes 
                 arising under these Terms shall be resolved in the courts of San Francisco, California.

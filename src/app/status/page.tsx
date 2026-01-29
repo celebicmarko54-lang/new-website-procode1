@@ -164,7 +164,7 @@ export default function StatusPage() {
 
         {/* Subscribe to Updates */}
         <div className="max-w-4xl mx-auto px-6">
-          <div className="bg-gradient-to-r from-[#1f2937] to-[#374151] rounded-2xl p-8 text-center text-white">
+          <div className="bg-gray-900 dark:bg-black rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-3">{t('statusPage.subscribeTitle')}</h2>
             <p className="text-gray-100 mb-6">
               {t('statusPage.subscribeSubtitle')}

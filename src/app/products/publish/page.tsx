@@ -85,7 +85,7 @@ export default function PublishPage() {
             </p>
             <div className="flex items-center justify-center gap-4">
               <Link href="/signup" className="px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-xl hover:bg-gray-800 dark:hover:bg-gray-100 transition-all shadow-lg">{t('productPublish.deployNow')}</Link>
-              <Link href="/docs" className="px-8 py-4 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300 font-medium rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">{t('common.learnMore')}</Link>
+              <Link href="/learn/publish" className="px-8 py-4 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300 font-medium rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">{t('common.learnMore')}</Link>
             </div>
           </div>
         </section>

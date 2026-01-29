@@ -42,7 +42,7 @@ const docsSections = [
   {
     title: 'Tutorials',
     items: [
-      { id: 'vibe-code', title: 'How to Vibe Code' },
+      { id: 'generate-code', title: 'How to Generate Code' },
       { id: 'first-app', title: 'Building Your First App' },
       { id: 'databases', title: 'Building with Databases' },
       { id: 'deploying', title: 'Deploying Your App' },
@@ -691,16 +691,16 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
       </>
     ),
   },
-  'vibe-code': {
-    title: 'How to Vibe Code',
-    breadcrumb: ['Tutorials', 'How to Vibe Code'],
+  'generate-code': {
+    title: 'How to Generate Code',
+    breadcrumb: ['Tutorials', 'How to Generate Code'],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          Vibe coding is about describing what you want and letting AI handle the implementation. Learn how to get the best results from AppNode&apos;s AI-powered development.
+          Code generation is about describing what you want and letting AI handle the implementation. Learn how to get the best results from AppNode&apos;s AI-powered development.
         </p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">The Vibe Coding Mindset</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-6">Traditional coding requires you to know syntax, frameworks, and implementation details. Vibe coding flips this — you focus on <strong className="text-gray-900 dark:text-white">what</strong> you want, and AI figures out <strong className="text-gray-900 dark:text-white">how</strong> to build it.</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">The AI Code Generation Mindset</h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-6">Traditional coding requires you to know syntax, frameworks, and implementation details. AI code generation flips this — you focus on <strong className="text-gray-900 dark:text-white">what</strong> you want, and AI figures out <strong className="text-gray-900 dark:text-white">how</strong> to build it.</p>
         <div className="space-y-4 mb-8">
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-red-50 dark:bg-red-900/20 rounded-lg p-4">
@@ -708,7 +708,7 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
               <p className="text-sm text-gray-700 dark:text-gray-300">Create a React component with useState hook</p>
             </div>
             <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4">
-              <p className="text-xs text-green-600 dark:text-green-400 font-medium mb-1">Vibe Coding</p>
+              <p className="text-xs text-green-600 dark:text-green-400 font-medium mb-1">AI Generated</p>
               <p className="text-sm text-gray-700 dark:text-gray-300">Create a counter that shows a number and has plus/minus buttons</p>
             </div>
           </div>
@@ -718,7 +718,7 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
               <p className="text-sm text-gray-700 dark:text-gray-300">Add a fetch call to /api/users endpoint</p>
             </div>
             <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4">
-              <p className="text-xs text-green-600 dark:text-green-400 font-medium mb-1">Vibe Coding</p>
+              <p className="text-xs text-green-600 dark:text-green-400 font-medium mb-1">AI Generated</p>
               <p className="text-sm text-gray-700 dark:text-gray-300">Show a list of users from the database</p>
             </div>
           </div>
@@ -728,7 +728,7 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
               <p className="text-sm text-gray-700 dark:text-gray-300">Style the button with Tailwind classes</p>
             </div>
             <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4">
-              <p className="text-xs text-green-600 dark:text-green-400 font-medium mb-1">Vibe Coding</p>
+              <p className="text-xs text-green-600 dark:text-green-400 font-medium mb-1">AI Generated</p>
               <p className="text-sm text-gray-700 dark:text-gray-300">Make the button look modern and stand out</p>
             </div>
           </div>

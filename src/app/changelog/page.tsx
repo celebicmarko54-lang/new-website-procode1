@@ -106,9 +106,9 @@ export default function ChangelogPage() {
 
   const getVersionColor = (type: string) => {
     switch (type) {
-      case 'major': return 'bg-gradient-to-r from-[#1f2937] to-[#374151]';
-      case 'minor': return 'bg-gradient-to-r from-gray-700 to-gray-500';
-      case 'patch': return 'bg-gradient-to-r from-gray-500 to-gray-600';
+      case 'major': return 'bg-gray-900 dark:bg-gray-800';
+      case 'minor': return 'bg-gray-700 dark:bg-gray-700';
+      case 'patch': return 'bg-gray-500 dark:bg-gray-600';
       default: return 'bg-gray-500';
     }
   };

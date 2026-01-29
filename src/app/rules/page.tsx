@@ -92,18 +92,18 @@ export default function PlatformRulesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-black">
       <Header />
       
       <main className="pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-6">
           {/* Header */}
           <div className="mb-16 text-center">
-            <div className="inline-block px-4 py-2 bg-gray-50 text-gray-900 rounded-full text-sm font-medium mb-4">
+            <div className="inline-block px-4 py-2 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white rounded-full text-sm font-medium mb-4">
               Community Guidelines
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Platform Rules</h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">Platform Rules</h1>
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Our community thrives when everyone follows these guidelines. 
               Together, we create a positive and productive environment.
             </p>
@@ -114,21 +114,21 @@ export default function PlatformRulesPage() {
             {rules.map((rule, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl border border-gray-100 p-8 hover:border-gray-300 hover:shadow-lg transition-all"
+                className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-8 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-lg transition-all"
               >
                 <div className="flex items-start gap-5">
-                  <div className="w-14 h-14 bg-gradient-to-r from-gray-100 to-gray-100 rounded-2xl flex items-center justify-center text-gray-900 flex-shrink-0">
+                  <div className="w-14 h-14 bg-gradient-to-r from-gray-100 to-gray-100 dark:from-gray-800 dark:to-gray-800 rounded-2xl flex items-center justify-center text-gray-900 dark:text-white flex-shrink-0">
                     {rule.icon}
                   </div>
                   <div className="flex-1">
-                    <h2 className="text-xl font-bold text-gray-900 mb-3">{rule.title}</h2>
-                    <p className="text-gray-600 leading-relaxed mb-4">{rule.description}</p>
-                    <div className="bg-gray-50 rounded-xl p-4">
-                      <p className="text-sm font-medium text-gray-700 mb-2">Examples:</p>
+                    <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{rule.title}</h2>
+                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">{rule.description}</p>
+                    <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4">
+                      <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Examples:</p>
                       <ul className="space-y-2">
                         {rule.examples.map((example, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
-                            <svg className="w-4 h-4 text-gray-900 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <li key={idx} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                            <svg className="w-4 h-4 text-gray-900 dark:text-white mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                             </svg>
                             {example}
@@ -143,33 +143,33 @@ export default function PlatformRulesPage() {
           </div>
 
           {/* Enforcement Section */}
-          <div className="bg-gradient-to-r from-gray-50 to-gray-50 rounded-2xl p-8 mb-16">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Enforcement</h2>
-            <p className="text-gray-600 leading-relaxed mb-6">
+          <div className="bg-gray-50 dark:bg-black rounded-2xl p-8 mb-16">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Enforcement</h2>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
               Violations of these rules may result in content removal, account warnings, temporary suspension, 
               or permanent ban depending on the severity and frequency of violations. We review all reports 
               and take appropriate action.
             </p>
             <div className="grid sm:grid-cols-3 gap-4">
-              <div className="bg-white rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-1">Warning</div>
-                <p className="text-sm text-gray-600">First minor violation</p>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-4 text-center">
+                <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">Warning</div>
+                <p className="text-sm text-gray-600 dark:text-gray-400">First minor violation</p>
               </div>
-              <div className="bg-white rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-1">Suspension</div>
-                <p className="text-sm text-gray-600">Repeated or serious violations</p>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-4 text-center">
+                <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">Suspension</div>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Repeated or serious violations</p>
               </div>
-              <div className="bg-white rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-1">Ban</div>
-                <p className="text-sm text-gray-600">Severe or persistent violations</p>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-4 text-center">
+                <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">Ban</div>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Severe or persistent violations</p>
               </div>
             </div>
           </div>
 
           {/* Report Section */}
           <div className="text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">See Something Wrong?</h2>
-            <p className="text-gray-600 mb-8 max-w-xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">See Something Wrong?</h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-xl mx-auto">
               If you encounter content or behavior that violates our platform rules, 
               please report it so we can take action.
             </p>

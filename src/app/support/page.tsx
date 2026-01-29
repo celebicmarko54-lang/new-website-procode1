@@ -107,16 +107,16 @@ export default function SupportPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-black">
       <Header />
       
       {/* Hero Section with Search */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {t('supportPage.heroTitle')}
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
             {t('supportPage.heroSubtitle')}
           </p>
           <div className="relative">
@@ -125,7 +125,7 @@ export default function SupportPage() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={t('supportPage.searchPlaceholder')}
-              className="w-full px-6 py-4 rounded-2xl text-gray-900 text-lg border border-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100 focus:border-gray-300 shadow-lg"
+              className="w-full px-6 py-4 rounded-2xl text-gray-900 dark:text-white text-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-800 focus:border-gray-300 dark:focus:border-gray-600 shadow-lg"
             />
             <button className="absolute right-3 top-1/2 -translate-y-1/2 p-2 text-white rounded-xl hover:opacity-90 transition-all" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}>
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -139,21 +139,21 @@ export default function SupportPage() {
       {/* Categories Grid */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">{t('supportPage.browseByCategory')}</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">{t('supportPage.browseByCategory')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {categories.map((category, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-2xl border border-gray-100 p-6 hover:border-gray-300 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="group bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 p-6 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
-                <div className="w-14 h-14 bg-gradient-to-r from-gray-100 to-gray-100 rounded-2xl flex items-center justify-center text-gray-600 mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 bg-gray-100 dark:bg-gray-900 rounded-2xl flex items-center justify-center text-gray-600 dark:text-gray-400 mb-4 group-hover:scale-110 transition-transform">
                   {category.icon}
                 </div>
-                <h3 className="font-semibold text-gray-900 text-lg mb-1 group-hover:text-gray-700 transition-colors">
+                <h3 className="font-semibold text-gray-900 dark:text-white text-lg mb-1 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">
                   {category.name}
                 </h3>
-                <p className="text-sm text-gray-600 mb-3">{category.description}</p>
-                <span className="text-xs text-gray-400">{category.articles} articles</span>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{category.description}</p>
+                <span className="text-xs text-gray-400 dark:text-gray-500">{category.articles} articles</span>
               </div>
             ))}
           </div>
@@ -161,22 +161,22 @@ export default function SupportPage() {
       </section>
 
       {/* Popular Articles & Contact */}
-      <section className="py-16 px-6 bg-gray-50">
+      <section className="py-16 px-6 bg-gray-50 dark:bg-black">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Popular Articles */}
-            <div className="bg-white rounded-2xl border border-gray-100 p-8">
-              <h2 className="text-xl font-bold text-gray-900 mb-6">{t('supportPage.popularArticles')}</h2>
+            <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 p-8">
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">{t('supportPage.popularArticles')}</h2>
               <div className="space-y-1">
                 {popularArticles.map((article, index) => (
                   <div
                     key={index}
-                    className="flex items-center justify-between py-4 border-b border-gray-100 last:border-0 cursor-pointer group"
+                    className="flex items-center justify-between py-4 border-b border-gray-100 dark:border-gray-800 last:border-0 cursor-pointer group"
                   >
-                    <span className="text-gray-700 group-hover:text-gray-900 transition-colors font-medium">
+                    <span className="text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors font-medium">
                       {article.title}
                     </span>
-                    <span className="text-xs text-gray-400 flex items-center gap-1">
+                    <span className="text-xs text-gray-400 dark:text-gray-500 flex items-center gap-1">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
@@ -216,20 +216,20 @@ export default function SupportPage() {
       {/* FAQs */}
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{t('supportPage.faq')}</h2>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">{t('supportPage.faq')}</h2>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <details
                 key={index}
-                className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:border-gray-300 transition-all"
+                className="group bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-600 transition-all"
               >
-                <summary className="px-6 py-5 cursor-pointer font-semibold text-gray-900 hover:text-gray-700 transition-colors flex items-center justify-between">
+                <summary className="px-6 py-5 cursor-pointer font-semibold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-colors flex items-center justify-between">
                   {faq.question}
-                  <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-gray-400 dark:text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </summary>
-                <div className="px-6 pb-5 text-gray-600 leading-relaxed">
+                <div className="px-6 pb-5 text-gray-600 dark:text-gray-400 leading-relaxed">
                   {faq.answer}
                 </div>
               </details>
@@ -239,7 +239,7 @@ export default function SupportPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-gradient-to-r from-[#1f2937] to-[#374151]">
+      <section className="py-24 px-6 bg-gray-900 dark:bg-black">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             {t('supportPage.stillHaveQuestions')}
@@ -249,10 +249,10 @@ export default function SupportPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/community"
+              href="/gallery"
               className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg"
             >
-              {t('supportPage.joinCommunity')}
+              {t('supportPage.viewGallery')}
             </Link>
             <Link
               href="/guides"
