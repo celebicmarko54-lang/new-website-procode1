@@ -114,20 +114,20 @@ export default function ChangelogPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-black text-gray-900 dark:text-white transition-colors">
       <Header />
       
       <main className="pt-32 pb-20">
         {/* Hero Section */}
         <div className="max-w-4xl mx-auto px-6 mb-12">
           <div className="text-center">
-            <div className="inline-block px-4 py-2 bg-gray-50 text-gray-900 rounded-full text-sm font-medium mb-4">
+            <div className="inline-block px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white rounded-full text-sm font-medium mb-4">
               {t('changelogPage.badge')}
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
               {t('changelogPage.title')}
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               {t('changelogPage.subtitle')}
             </p>
           </div>
@@ -135,18 +135,18 @@ export default function ChangelogPage() {
 
         {/* Subscribe to Updates */}
         <div className="max-w-4xl mx-auto px-6 mb-12">
-          <div className="bg-gradient-to-r from-gray-50 to-gray-50 rounded-2xl border border-gray-100 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="bg-gray-50 dark:bg-[#0a0a0a] rounded-2xl border border-gray-200 dark:border-gray-800 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
-              <h3 className="font-semibold text-gray-900">{t('changelogPage.stayUpToDate')}</h3>
-              <p className="text-sm text-gray-600">{t('changelogPage.getNotified')}</p>
+              <h3 className="font-semibold text-gray-900 dark:text-white">{t('changelogPage.stayUpToDate')}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">{t('changelogPage.getNotified')}</p>
             </div>
             <div className="flex gap-2 w-full sm:w-auto">
               <input
                 type="email"
                 placeholder={t('changelogPage.emailPlaceholder')}
-                className="flex-1 sm:w-64 px-4 py-2 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
+                className="flex-1 sm:w-64 px-4 py-2 border border-gray-200 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent bg-white dark:bg-[#0a0a0a] text-gray-900 dark:text-white"
               />
-              <button className="px-4 py-2 text-white rounded-xl hover:opacity-90 transition-all font-medium" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}>
+              <button className="px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl hover:opacity-90 transition-all font-medium">
                 {t('changelogPage.subscribeButton')}
               </button>
             </div>
@@ -160,7 +160,7 @@ export default function ChangelogPage() {
               <div key={release.version} className="relative">
                 {/* Timeline line */}
                 {index !== releases.length - 1 && (
-                  <div className="absolute left-6 top-16 bottom-0 w-0.5 bg-gray-200 -mb-8"></div>
+                  <div className="absolute left-6 top-16 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-800 -mb-8"></div>
                 )}
                 
                 <div className="flex gap-6">
@@ -170,13 +170,13 @@ export default function ChangelogPage() {
                   </div>
                   
                   {/* Content */}
-                  <div className="flex-1 bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all">
+                  <div className="flex-1 bg-white dark:bg-[#0a0a0a] rounded-xl border border-gray-200 dark:border-gray-800 p-6 hover:shadow-lg transition-all">
                     <div className="flex flex-wrap items-center gap-3 mb-3">
-                      <span className="text-sm font-mono text-gray-500">v{release.version}</span>
-                      <span className="text-sm text-gray-400">{release.date}</span>
+                      <span className="text-sm font-mono text-gray-500 dark:text-gray-400">v{release.version}</span>
+                      <span className="text-sm text-gray-400 dark:text-gray-500">{release.date}</span>
                     </div>
-                    <h2 className="text-xl font-bold text-gray-900 mb-2">{release.title}</h2>
-                    <p className="text-gray-600 mb-4">{release.description}</p>
+                    <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{release.title}</h2>
+                    <p className="text-gray-600 dark:text-gray-400 mb-4">{release.description}</p>
                     
                     <div className="space-y-2">
                       {release.changes.map((change, i) => (
@@ -184,7 +184,7 @@ export default function ChangelogPage() {
                           <span className={`text-xs font-medium px-2 py-0.5 rounded ${getTypeColor(change.type)} capitalize`}>
                             {change.type}
                           </span>
-                          <span className="text-sm text-gray-700">{change.text}</span>
+                          <span className="text-sm text-gray-700 dark:text-gray-300">{change.text}</span>
                         </div>
                       ))}
                     </div>
@@ -196,7 +196,7 @@ export default function ChangelogPage() {
 
           {/* Load More */}
           <div className="text-center mt-12">
-            <button className="px-6 py-3 bg-white text-gray-700 rounded-lg border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-all font-medium">
+            <button className="px-6 py-3 bg-white dark:bg-[#0a0a0a] text-gray-700 dark:text-gray-300 rounded-lg border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all font-medium">
               {t('changelogPage.viewOlder')}
             </button>
           </div>

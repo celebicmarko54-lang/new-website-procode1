@@ -117,7 +117,7 @@ export default function PlatformRulesPage() {
                 className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-8 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-lg transition-all"
               >
                 <div className="flex items-start gap-5">
-                  <div className="w-14 h-14 bg-gradient-to-r from-gray-100 to-gray-100 dark:from-gray-800 dark:to-gray-800 rounded-2xl flex items-center justify-center text-gray-900 dark:text-white flex-shrink-0">
+                  <div className="w-14 h-14 bg-gray-100 dark:bg-gray-800 rounded-2xl flex items-center justify-center text-gray-900 dark:text-white flex-shrink-0">
                     {rule.icon}
                   </div>
                   <div className="flex-1">
@@ -143,7 +143,7 @@ export default function PlatformRulesPage() {
           </div>
 
           {/* Enforcement Section */}
-          <div className="bg-gray-50 dark:bg-black rounded-2xl p-8 mb-16">
+          <div className="bg-gray-50 dark:bg-[#0a0a0a] rounded-2xl border border-gray-100 dark:border-gray-800 p-8 mb-16">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Enforcement</h2>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
               Violations of these rules may result in content removal, account warnings, temporary suspension, 
@@ -175,8 +175,7 @@ export default function PlatformRulesPage() {
             </p>
             <a
               href="/report"
-              className="inline-flex items-center gap-2 px-8 py-4 text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg"
-              style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}
+              className="inline-flex items-center gap-2 px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />

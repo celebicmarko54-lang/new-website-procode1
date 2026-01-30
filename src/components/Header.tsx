@@ -63,10 +63,6 @@ export default function Header() {
                 </button>
                 {activeDropdown === 'forwork' && (
                   <div className="absolute top-full left-0 mt-1 w-64 rounded-lg bg-white dark:bg-black border border-gray-200 dark:border-gray-800 shadow-lg py-2 animate-fade-in">
-                    <Link href="/teams" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">
-                      <span className="font-medium">{t('solutions.startup.title')}</span>
-                      <span className="block text-xs text-gray-400">{t('solutions.startup.description')}</span>
-                    </Link>
                     <Link href="/enterprise" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">
                       <span className="font-medium">{t('nav.enterprise')}</span>
                       <span className="block text-xs text-gray-400">{t('solutions.enterprise.description')}</span>

@@ -96,6 +96,20 @@ body {
   animation: fade-in 0.2s ease-out forwards;
 }
 
+/* Shimmer animation for loading states */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
 /* Hero floating card animations - GPU accelerated */
 @keyframes heroFloat1 {
   0%, 100% { transform: translate3d(0, 0, 0); }

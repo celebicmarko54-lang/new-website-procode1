@@ -159,7 +159,7 @@ export default function IntegrationsPage() {
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('productIntegrations.badge')}</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-gray-900 dark:text-white">
-              {t('productIntegrations.title')} <span className="bg-gradient-to-r from-violet-500 to-purple-600 bg-clip-text text-transparent">{t('productIntegrations.titleHighlight')}</span>
+              {t('productIntegrations.title')} <span className="text-gray-900 dark:text-white">{t('productIntegrations.titleHighlight')}</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
               {t('productIntegrations.subtitle')}
@@ -199,13 +199,13 @@ export default function IntegrationsPage() {
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">{t('productIntegrations.howItWorks.title')}</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { step: '1', title: t('productIntegrations.howItWorks.step1.title'), desc: t('productIntegrations.howItWorks.step1.description'), gradient: 'from-violet-500 to-purple-600' },
-              { step: '2', title: t('productIntegrations.howItWorks.step2.title'), desc: t('productIntegrations.howItWorks.step2.description'), gradient: 'from-purple-500 to-pink-600' },
-              { step: '3', title: t('productIntegrations.howItWorks.step3.title'), desc: t('productIntegrations.howItWorks.step3.description'), gradient: 'from-pink-500 to-rose-600' }
+              { step: '1', title: t('productIntegrations.howItWorks.step1.title'), desc: t('productIntegrations.howItWorks.step1.description') },
+              { step: '2', title: t('productIntegrations.howItWorks.step2.title'), desc: t('productIntegrations.howItWorks.step2.description') },
+              { step: '3', title: t('productIntegrations.howItWorks.step3.title'), desc: t('productIntegrations.howItWorks.step3.description') }
             ].map((item, i) => (
               <div key={i} className="text-center p-6 bg-white dark:bg-[#0a0a0a] rounded-2xl border border-gray-200 dark:border-gray-800">
-                <div className={`w-16 h-16 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg`}>
-                  <span className="text-2xl font-bold text-white">{item.step}</span>
+                <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-gray-900 dark:text-white">{item.step}</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{item.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400">{item.desc}</p>
@@ -215,7 +215,7 @@ export default function IntegrationsPage() {
         </section>
 
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <div className="p-8 bg-gradient-to-br from-violet-500/10 to-purple-500/10 dark:from-violet-500/20 dark:to-purple-500/20 rounded-3xl border border-violet-200 dark:border-violet-800">
+          <div className="p-8 bg-gray-50 dark:bg-[#0a0a0a] rounded-3xl border border-gray-200 dark:border-gray-800">
             <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">{t('productIntegrations.cta.title')}</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">{t('productIntegrations.cta.subtitle')}</p>
             <Link href="/signup" className="inline-flex items-center gap-2 px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-medium rounded-full hover:opacity-90 transition-all shadow-xl shadow-gray-900/20 dark:shadow-none text-lg">

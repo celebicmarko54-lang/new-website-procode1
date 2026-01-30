@@ -857,6 +857,10 @@
     "ctaDescription": "Build something amazing and showcase it to the community.",
     "startBuilding": "Start Building"
   },
+  "galleryPage": {
+    "title": "Project Gallery",
+    "subtitle": "Discover amazing projects built with AppNode by our community"
+  },
   "solutionsPage": {
     "badge": "Solutions",
     "titleStart": "Built for how",
@@ -1173,6 +1177,7 @@
       "title": "Ready to Start Building?",
       "subtitle": "Join thousands of creators who are building amazing applications with AppNode.",
       "startBuildingFree": "Start Building Free",
+      "browseCourses": "Browse Courses",
       "subscribeYouTube": "Subscribe on YouTube"
     }
   }

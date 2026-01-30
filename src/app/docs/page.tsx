@@ -78,6 +78,22 @@ export default function DocsPage() {
     );
   };
 
+  // Filter sections based on search query
+  const filteredSections = searchQuery.trim() === '' 
+    ? docsSections 
+    : docsSections.map(section => ({
+        ...section,
+        items: section.items.filter(item => 
+          item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          section.title.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+      })).filter(section => section.items.length > 0);
+
+  // Auto-expand sections when searching
+  const sectionsToShow = searchQuery.trim() !== '' 
+    ? filteredSections.map(s => s.title) 
+    : expandedSections;
+
   return (
     <div className="min-h-screen bg-white dark:bg-black">
       <Header />
@@ -103,7 +119,7 @@ export default function DocsPage() {
 
             {/* Navigation */}
             <nav className="space-y-2">
-              {docsSections.map((section) => (
+              {filteredSections.map((section) => (
                 <div key={section.title}>
                   <button
                     onClick={() => toggleSection(section.title)}
@@ -111,7 +127,7 @@ export default function DocsPage() {
                   >
                     <span>{section.title}</span>
                     <svg 
-                      className={`w-4 h-4 text-gray-400 dark:text-gray-500 transition-transform ${expandedSections.includes(section.title) ? 'rotate-90' : ''}`} 
+                      className={`w-4 h-4 text-gray-400 dark:text-gray-500 transition-transform ${sectionsToShow.includes(section.title) ? 'rotate-90' : ''}`} 
                       fill="none" 
                       stroke="currentColor" 
                       viewBox="0 0 24 24"
@@ -119,7 +135,7 @@ export default function DocsPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </button>
-                  {expandedSections.includes(section.title) && (
+                  {sectionsToShow.includes(section.title) && (
                     <div className="mt-1 ml-3 space-y-1">
                       {section.items.map((item) => (
                         <Link

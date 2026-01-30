@@ -12,34 +12,18 @@ export default function GalleryPage() {
   
   const categories = ['All', 'AI Apps', 'Websites', 'Business Apps', 'Personal Software', 'Games'];
   
-  const projects = [
-    { title: 'AI Chat Bot', category: 'AI Apps', author: 'Sarah M.', image: '🤖', description: 'Smart customer support chatbot built with GPT-4' },
-    { title: 'Portfolio Site', category: 'Websites', author: 'Alex K.', image: '💼', description: 'Clean minimal portfolio for designers' },
-    { title: 'KPI Dashboard', category: 'Business Apps', author: 'James W.', image: '📊', description: 'Real-time business metrics dashboard' },
-    { title: 'Habit Tracker', category: 'Personal Software', author: 'Emily R.', image: '✅', description: 'Track daily habits and build streaks' },
-    { title: 'Recipe Generator', category: 'AI Apps', author: 'Mike D.', image: '🍳', description: 'AI-powered recipe suggestions from ingredients' },
-    { title: 'E-commerce Store', category: 'Business Apps', author: 'Lisa T.', image: '🛒', description: 'Full-featured online store with Stripe' },
-    { title: 'Space Invaders', category: 'Games', author: 'Chris B.', image: '👾', description: 'Classic arcade game remake' },
-    { title: 'Blog Platform', category: 'Websites', author: 'Jordan P.', image: '📝', description: 'Markdown-powered blogging platform' },
-    { title: 'Code Review AI', category: 'AI Apps', author: 'Taylor N.', image: '🔍', description: 'AI that reviews your code for bugs' },
-    { title: 'Budget Tracker', category: 'Personal Software', author: 'Sam L.', image: '💰', description: 'Track expenses and savings goals' },
-    { title: 'Landing Page', category: 'Websites', author: 'Morgan K.', image: '🚀', description: 'High-converting SaaS landing page' },
-    { title: 'CRM System', category: 'Business Apps', author: 'Riley J.', image: '👥', description: 'Customer relationship management tool' },
-  ];
-
-  const filteredProjects = activeCategory === 'All' 
-    ? projects 
-    : projects.filter(p => p.category === activeCategory);
+  // Empty placeholder slots for user uploads
+  const emptySlots = Array(12).fill(null);
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-black text-gray-900 dark:text-white">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-black text-gray-900 dark:text-white transition-colors">
       <Header />
       
       <main className="pt-24 pb-16">
         {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-gray-900 dark:text-white">
               {t('galleryPage.title')}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400">
@@ -65,37 +49,38 @@ export default function GalleryPage() {
           </div>
         </section>
 
-        {/* Projects Grid */}
+        {/* Projects Grid - Empty Slots with Animation */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredProjects.map((project, i) => (
-              <div key={i} className="group bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 transition-colors">
-                {/* Preview */}
-                <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 flex items-center justify-center text-6xl">
-                  {project.image}
+            {emptySlots.map((_, i) => (
+              <div 
+                key={i} 
+                className="group bg-white dark:bg-[#0a0a0a] rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 transition-all hover:shadow-lg"
+              >
+                {/* Preview - Empty with pulse animation */}
+                <div className="aspect-video bg-gray-100 dark:bg-gray-900 flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-200 dark:via-gray-800 to-transparent animate-shimmer"></div>
+                  <div className="w-16 h-16 rounded-xl bg-gray-200 dark:bg-gray-800 border-2 border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <svg className="w-8 h-8 text-gray-400 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" />
+                    </svg>
+                  </div>
                 </div>
                 
-                {/* Info */}
+                {/* Info - Empty placeholders */}
                 <div className="p-4">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-semibold group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
-                      {project.title}
-                    </h3>
-                    <span className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-gray-600 dark:text-gray-400">
-                      {project.category}
-                    </span>
+                    <div className="h-5 w-32 bg-gray-200 dark:bg-gray-800 rounded animate-pulse"></div>
+                    <div className="h-5 w-16 bg-gray-100 dark:bg-gray-900 rounded-full"></div>
                   </div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-                    {project.description}
-                  </p>
-                  <div className="flex items-center justify-between">
+                  <div className="h-4 w-full bg-gray-100 dark:bg-gray-900 rounded mb-2 animate-pulse" style={{ animationDelay: '0.1s' }}></div>
+                  <div className="h-4 w-2/3 bg-gray-100 dark:bg-gray-900 rounded animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                  <div className="flex items-center justify-between mt-4">
                     <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 to-blue-500"></div>
-                      <span className="text-sm text-gray-500">{project.author}</span>
+                      <div className="w-6 h-6 rounded-full bg-gray-200 dark:bg-gray-800"></div>
+                      <div className="h-3 w-16 bg-gray-200 dark:bg-gray-800 rounded"></div>
                     </div>
-                    <button className="text-sm text-purple-600 dark:text-purple-400 hover:underline">
-                      View →
-                    </button>
+                    <span className="text-sm text-gray-400 dark:text-gray-600">Coming soon</span>
                   </div>
                 </div>
               </div>
@@ -105,12 +90,12 @@ export default function GalleryPage() {
 
         {/* Submit CTA */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-2xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold mb-4">Share Your Creation</h2>
+          <div className="bg-gray-50 dark:bg-[#0a0a0a] rounded-2xl border border-gray-200 dark:border-gray-800 p-8 md:p-12 text-center">
+            <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Share Your Creation</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
               Built something cool with AppNode? Submit it to the gallery and inspire others.
             </p>
-            <Link href="/signup" className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg transition-colors">
+            <Link href="/signup" className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 font-medium rounded-lg transition-colors">
               Submit Your Project
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

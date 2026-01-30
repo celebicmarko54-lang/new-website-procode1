@@ -22,7 +22,7 @@ export default function SecurityPage() {
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('productSecurity.badge')}</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-gray-900 dark:text-white">
-              {t('productSecurity.title')} <span className="text-gray-500 dark:text-gray-400">{t('productSecurity.titleHighlight')}</span>
+              {t('productSecurity.title')} <span className="text-gray-900 dark:text-white">{t('productSecurity.titleHighlight')}</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
               {t('productSecurity.subtitle')}
@@ -98,7 +98,7 @@ export default function SecurityPage() {
               ), gradient: 'from-orange-500 to-amber-600', title: t('productSecurity.features.auditLogs.title'), description: t('productSecurity.features.auditLogs.description'), features: [t('productSecurity.features.auditLogs.item1'), t('productSecurity.features.auditLogs.item2'), t('productSecurity.features.auditLogs.item3')] }
             ].map((feature, i) => (
               <div key={i} className="p-8 bg-white dark:bg-[#0a0a0a] rounded-2xl border border-gray-200 dark:border-gray-800">
-                <div className={`w-12 h-12 bg-gradient-to-br ${feature.gradient} rounded-xl flex items-center justify-center mb-4 text-white shadow-lg`}>{feature.icon}</div>
+                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl flex items-center justify-center mb-4 text-gray-600 dark:text-gray-400">{feature.icon}</div>
                 <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">{feature.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">{feature.description}</p>
                 <ul className="space-y-2">

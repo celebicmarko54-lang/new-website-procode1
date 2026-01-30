@@ -87,11 +87,11 @@ export default function MobileAppsPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
                 {t('useCasesMobileApps.badge')}
-                <span className="px-2 py-0.5 bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 rounded-full text-xs">Coming Soon</span>
+                <span className="px-2 py-0.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full text-xs font-bold animate-pulse">Coming Soon</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-gray-900 dark:text-white">
                 {t('useCasesMobileApps.titleStart')}{' '}
-                <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
+                <span className="text-gray-900 dark:text-white">
                   {t('useCasesMobileApps.titleHighlight')}
                 </span>
               </h1>
@@ -212,7 +212,7 @@ export default function MobileAppsPage() {
         {/* Features */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('useCasesMobileApps.featuresTitle')}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">{t('useCasesMobileApps.featuresTitle')}</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Everything you need to create professional mobile applications
             </p>
@@ -222,9 +222,9 @@ export default function MobileAppsPage() {
             {features.map((feature, i) => (
               <div 
                 key={i} 
-                className="group p-6 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all hover:shadow-xl"
+                className="group p-6 bg-white dark:bg-[#0a0a0a] rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all hover:shadow-xl"
               >
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform shadow-lg`}>
+                <div className="w-12 h-12 rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-400 mb-4 group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
@@ -243,7 +243,7 @@ export default function MobileAppsPage() {
           <div className="bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 rounded-3xl p-8 md:p-12">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">One Codebase, All Platforms</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">One Codebase, All Platforms</h2>
                 <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
                   Build once and deploy to iOS and Android. AppNode generates optimized, native code for each platform automatically.
                 </p>
@@ -283,7 +283,7 @@ export default function MobileAppsPage() {
 
         {/* CTA */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('useCasesMobileApps.ctaTitle')}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">{t('useCasesMobileApps.ctaTitle')}</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
             {t('useCasesMobileApps.ctaSubtitle')}
           </p>

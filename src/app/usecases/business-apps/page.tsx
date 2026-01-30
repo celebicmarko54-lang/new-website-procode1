@@ -86,8 +86,8 @@ export default function BusinessAppsPage() {
                 </svg>
                 {t('useCasesBusinessApps.badge')}
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-                {t('useCasesBusinessApps.titleStart')} <span className="bg-gradient-to-r from-blue-500 to-cyan-600 bg-clip-text text-transparent">{t('useCasesBusinessApps.titleHighlight')}</span>
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-gray-900 dark:text-white">
+                {t('useCasesBusinessApps.titleStart')} <span className="text-gray-900 dark:text-white">{t('useCasesBusinessApps.titleHighlight')}</span>
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
                 {t('useCasesBusinessApps.subtitle')}
@@ -148,14 +148,14 @@ export default function BusinessAppsPage() {
 
         {/* Use Cases */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl font-bold text-center mb-12">{t('useCasesBusinessApps.whatYouCanBuild')}</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">{t('useCasesBusinessApps.whatYouCanBuild')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {useCases.map((item, i) => (
               <div key={i} className="p-6 bg-white dark:bg-[#0a0a0a] rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all hover:shadow-lg group">
-                <div className={`w-12 h-12 bg-gradient-to-br ${item.gradient} rounded-xl flex items-center justify-center mb-4 text-white shadow-lg group-hover:scale-110 transition-transform`}>
+                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl flex items-center justify-center mb-4 text-gray-600 dark:text-gray-400 group-hover:scale-110 transition-transform">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{item.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400">{item.description}</p>
               </div>
             ))}
@@ -164,8 +164,8 @@ export default function BusinessAppsPage() {
 
         {/* CTA */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <div className="p-8 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 dark:from-blue-500/20 dark:to-cyan-500/20 rounded-3xl border border-blue-200 dark:border-blue-800">
-            <h2 className="text-3xl font-bold mb-4">{t('useCasesBusinessApps.ctaTitle')}</h2>
+          <div className="p-8 bg-gray-50 dark:bg-[#0a0a0a] rounded-3xl border border-gray-200 dark:border-gray-800">
+            <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">{t('useCasesBusinessApps.ctaTitle')}</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
               {t('useCasesBusinessApps.ctaSubtitle')}
             </p>

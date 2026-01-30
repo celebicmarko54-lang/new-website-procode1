@@ -1,14 +1,30 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useTranslation } from '@/context/LanguageContext';
 
+interface Course {
+  title: string;
+  description: string;
+  duration: string;
+  level: string;
+  lessons: number;
+  icon: React.ReactNode;
+  tutorialContent: {
+    overview: string;
+    steps: string[];
+    tips: string[];
+  };
+}
+
 export default function LearnPage() {
   const { t } = useTranslation();
+  const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
   
-  const courses = [
+  const courses: Course[] = [
     {
       title: 'Getting Started with AppNode',
       description: 'Learn the basics of creating apps with AI. Perfect for absolute beginners.',
@@ -20,6 +36,21 @@ export default function LearnPage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
+      tutorialContent: {
+        overview: 'Get started with AppNode by learning the fundamentals of AI-powered app development.',
+        steps: [
+          'Sign up for a free AppNode account at appnode.dev',
+          'Navigate to the dashboard and click "New Project"',
+          'Describe your app idea in the chat interface',
+          'Review the generated code and make adjustments',
+          'Deploy your app with one click'
+        ],
+        tips: [
+          'Be specific when describing your app requirements',
+          'Start with simple projects to learn the workflow',
+          'Use the preview feature to test changes in real-time'
+        ]
+      }
     },
     {
       title: 'Building Your First Dashboard',
@@ -32,6 +63,23 @@ export default function LearnPage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
         </svg>
       ),
+      tutorialContent: {
+        overview: 'Learn to build professional analytics dashboards with charts, metrics, and real-time data.',
+        steps: [
+          'Start a new project and describe your dashboard needs',
+          'Add chart components (bar, line, pie charts)',
+          'Connect to your data source or use sample data',
+          'Customize colors and layouts to match your brand',
+          'Add interactive filters and date pickers',
+          'Test responsiveness on different screen sizes',
+          'Deploy and share with your team'
+        ],
+        tips: [
+          'Group related metrics together',
+          'Use consistent color coding for data categories',
+          'Keep the most important metrics at the top'
+        ]
+      }
     },
     {
       title: 'Advanced Prompting Techniques',
@@ -44,6 +92,21 @@ export default function LearnPage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
         </svg>
       ),
+      tutorialContent: {
+        overview: 'Master prompt engineering to get better results from AppNode AI.',
+        steps: [
+          'Understand the anatomy of a good prompt',
+          'Use specific technical requirements in your prompts',
+          'Learn to iterate and refine based on output',
+          'Combine multiple features in single prompts',
+          'Use reference examples to guide the AI'
+        ],
+        tips: [
+          'Always specify the tech stack you want',
+          'Include accessibility requirements',
+          'Mention responsive design needs upfront'
+        ]
+      }
     },
     {
       title: 'E-commerce Store Masterclass',
@@ -56,6 +119,23 @@ export default function LearnPage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       ),
+      tutorialContent: {
+        overview: 'Create a complete e-commerce solution with product catalog, cart, and checkout.',
+        steps: [
+          'Set up product catalog with categories',
+          'Build shopping cart functionality',
+          'Integrate Stripe for payments',
+          'Create order management system',
+          'Add inventory tracking',
+          'Set up email notifications',
+          'Implement user accounts and order history'
+        ],
+        tips: [
+          'Start with a simple product catalog first',
+          'Test the checkout flow thoroughly',
+          'Use test payment credentials during development'
+        ]
+      }
     },
     {
       title: 'Custom Components & Styling',
@@ -68,6 +148,22 @@ export default function LearnPage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
         </svg>
       ),
+      tutorialContent: {
+        overview: 'Learn to create consistent, reusable components with custom styling.',
+        steps: [
+          'Define your brand colors and typography',
+          'Create a component library structure',
+          'Build reusable button, input, and card components',
+          'Implement dark mode support',
+          'Add animation and transitions',
+          'Document your components'
+        ],
+        tips: [
+          'Start with a design system in mind',
+          'Use CSS variables for theming',
+          'Test components in isolation'
+        ]
+      }
     },
     {
       title: 'Deploying to Production',
@@ -80,6 +176,21 @@ export default function LearnPage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
+      tutorialContent: {
+        overview: 'Deploy your application to production with confidence.',
+        steps: [
+          'Choose a deployment platform (Vercel, Cloudflare, etc.)',
+          'Configure environment variables',
+          'Set up your custom domain',
+          'Enable SSL certificate',
+          'Configure CDN and caching'
+        ],
+        tips: [
+          'Always test in a staging environment first',
+          'Set up monitoring and alerts',
+          'Keep environment variables secure'
+        ]
+      }
     },
     {
       title: 'Building Mobile-First Apps',
@@ -92,6 +203,22 @@ export default function LearnPage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
         </svg>
       ),
+      tutorialContent: {
+        overview: 'Create responsive, mobile-first applications that work on all devices.',
+        steps: [
+          'Understand mobile-first design principles',
+          'Use responsive breakpoints effectively',
+          'Optimize touch interactions',
+          'Handle different screen orientations',
+          'Test on real devices',
+          'Optimize performance for mobile networks'
+        ],
+        tips: [
+          'Design for the smallest screen first',
+          'Use relative units (rem, %) instead of pixels',
+          'Test with throttled network conditions'
+        ]
+      }
     },
     {
       title: 'API Integration Essentials',
@@ -104,6 +231,22 @@ export default function LearnPage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
         </svg>
       ),
+      tutorialContent: {
+        overview: 'Learn to integrate external APIs and services into your applications.',
+        steps: [
+          'Understand REST API fundamentals',
+          'Handle API authentication (API keys, OAuth)',
+          'Make GET, POST, PUT, DELETE requests',
+          'Handle errors and edge cases',
+          'Implement rate limiting',
+          'Cache API responses for performance'
+        ],
+        tips: [
+          'Always handle API errors gracefully',
+          'Use environment variables for API keys',
+          'Implement retry logic for failed requests'
+        ]
+      }
     },
     {
       title: 'Authentication & Security',
@@ -116,93 +259,22 @@ export default function LearnPage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
         </svg>
       ),
-    },
-  ];
-
-  const learningPaths = [
-    { 
-      name: 'Web Developer', 
-      description: 'Build modern web applications from scratch',
-      courses: 8, 
-      hours: 12,
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-        </svg>
-      ),
-    },
-    { 
-      name: 'Product Designer', 
-      description: 'Create beautiful, user-friendly interfaces',
-      courses: 6, 
-      hours: 8,
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-        </svg>
-      ),
-    },
-    { 
-      name: 'Entrepreneur', 
-      description: 'Launch your MVP and validate ideas fast',
-      courses: 5, 
-      hours: 6,
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      ),
-    },
-    { 
-      name: 'Marketer', 
-      description: 'Build landing pages and marketing tools',
-      courses: 4, 
-      hours: 5,
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
-        </svg>
-      ),
-    },
-  ];
-
-  const features = [
-    {
-      title: 'Interactive Lessons',
-      description: 'Learn by doing with hands-on exercises and real projects.',
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Certificate of Completion',
-      description: 'Earn certificates to showcase your new skills.',
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Community Support',
-      description: 'Get help from our community of learners and experts.',
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Progress Tracking',
-      description: 'Track your learning journey and pick up where you left off.',
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-        </svg>
-      ),
+      tutorialContent: {
+        overview: 'Implement robust authentication and security measures in your app.',
+        steps: [
+          'Set up user registration and login',
+          'Implement password hashing and validation',
+          'Add social login (Google, GitHub)',
+          'Create protected routes',
+          'Implement session management',
+          'Add two-factor authentication'
+        ],
+        tips: [
+          'Never store plain text passwords',
+          'Use HTTPS everywhere',
+          'Implement rate limiting on auth endpoints'
+        ]
+      }
     },
   ];
 
@@ -211,11 +283,11 @@ export default function LearnPage() {
       case 'Beginner':
         return 'bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300';
       case 'Intermediate':
-        return 'bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300';
+        return 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300';
       case 'Advanced':
         return 'bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300';
       default:
-        return 'bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300';
+        return 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300';
     }
   };
 
@@ -223,10 +295,103 @@ export default function LearnPage() {
     <div className="min-h-screen bg-white dark:bg-black">
       <Header />
       
+      {/* Course Modal */}
+      {selectedCourse && (
+        <div 
+          className="fixed inset-0 bg-black/50 dark:bg-black/70 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedCourse(null)}
+        >
+          <div 
+            className="bg-white dark:bg-[#0a0a0a] rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto border border-gray-200 dark:border-gray-800 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="sticky top-0 bg-white dark:bg-[#0a0a0a] border-b border-gray-200 dark:border-gray-800 p-6 flex items-start justify-between">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center justify-center text-gray-900 dark:text-white">
+                  {selectedCourse.icon}
+                </div>
+                <div>
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">{selectedCourse.title}</h2>
+                  <div className="flex items-center gap-3 mt-1">
+                    <span className={`text-xs font-medium px-2 py-1 rounded-full ${getLevelColor(selectedCourse.level)}`}>
+                      {selectedCourse.level}
+                    </span>
+                    <span className="text-sm text-gray-500 dark:text-gray-400">{selectedCourse.duration}</span>
+                  </div>
+                </div>
+              </div>
+              <button 
+                onClick={() => setSelectedCourse(null)}
+                className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+              >
+                <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            
+            {/* Modal Content */}
+            <div className="p-6 space-y-6">
+              {/* Overview */}
+              <div>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Overview</h3>
+                <p className="text-gray-600 dark:text-gray-400">{selectedCourse.tutorialContent.overview}</p>
+              </div>
+              
+              {/* Steps */}
+              <div>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-3">How to do it</h3>
+                <ol className="space-y-3">
+                  {selectedCourse.tutorialContent.steps.map((step, index) => (
+                    <li key={index} className="flex gap-3">
+                      <span className="flex-shrink-0 w-6 h-6 bg-gray-900 dark:bg-white text-white dark:text-black rounded-full flex items-center justify-center text-sm font-medium">
+                        {index + 1}
+                      </span>
+                      <span className="text-gray-600 dark:text-gray-400 pt-0.5">{step}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+              
+              {/* Tips */}
+              <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-4">
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <svg className="w-5 h-5 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Pro Tips
+                </h3>
+                <ul className="space-y-2">
+                  {selectedCourse.tutorialContent.tips.map((tip, index) => (
+                    <li key={index} className="flex items-start gap-2 text-gray-600 dark:text-gray-400 text-sm">
+                      <svg className="w-4 h-4 text-gray-400 dark:text-gray-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      {tip}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            
+            {/* Modal Footer */}
+            <div className="sticky bottom-0 bg-white dark:bg-[#0a0a0a] border-t border-gray-200 dark:border-gray-800 p-6">
+              <button 
+                onClick={() => setSelectedCourse(null)}
+                className="w-full py-3 bg-black dark:bg-white text-white dark:text-black font-medium rounded-xl hover:opacity-90 transition-colors"
+              >
+                Got it!
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-700 mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 mb-8">
             <svg className="w-4 h-4 text-gray-900 dark:text-gray-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
@@ -235,7 +400,7 @@ export default function LearnPage() {
           
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
             {t('learnPage.titleStart')}
-            <span className="block bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', WebkitBackgroundClip: 'text' }}>
+            <span className="block text-gray-900 dark:text-white">
               {t('learnPage.titleHighlight')}
             </span>
           </h1>
@@ -247,8 +412,7 @@ export default function LearnPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/signup"
-              className="px-8 py-4 text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg"
-              style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}
+              className="px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg"
             >
               {t('learnPage.startLearningFree')}
             </Link>
@@ -258,83 +422,6 @@ export default function LearnPage() {
             >
               {t('learnPage.browseCourses')}
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-gray-50 dark:bg-black border-y border-gray-100 dark:border-gray-800">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-gray-900 dark:text-white">50+</div>
-              <div className="text-gray-600 dark:text-gray-400 mt-1">{t('learnPage.stats.freeCourses')}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-gray-900 dark:text-white">100K+</div>
-              <div className="text-gray-600 dark:text-gray-400 mt-1">{t('learnPage.stats.students')}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-gray-900 dark:text-white">4.9</div>
-              <div className="text-gray-600 dark:text-gray-400 mt-1">{t('learnPage.stats.averageRating')}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-gray-900 dark:text-white">24/7</div>
-              <div className="text-gray-600 dark:text-gray-400 mt-1">{t('learnPage.stats.communitySupport')}</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="w-14 h-14 bg-gray-100 dark:bg-gray-900 rounded-2xl flex items-center justify-center text-gray-900 dark:text-gray-100 mx-auto mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{feature.title}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Learning Paths */}
-      <section className="py-20 px-6 bg-gray-50 dark:bg-black">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              {t('learnPage.chooseLearningPath')}
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              {t('learnPage.chooseLearningPathDesc')}
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {learningPaths.map((path, index) => (
-              <div
-                key={index}
-                className="group p-6 bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-xl transition-all duration-300 cursor-pointer"
-              >
-                <div className="w-14 h-14 bg-gray-100 dark:bg-gray-900 rounded-2xl flex items-center justify-center text-gray-900 dark:text-gray-100 mb-4 group-hover:scale-110 transition-transform">
-                  {path.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
-                  {path.name}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{path.description}</p>
-                <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
-                  <span>{path.courses} courses</span>
-                  <span>•</span>
-                  <span>{path.hours} hours</span>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -355,7 +442,8 @@ export default function LearnPage() {
             {courses.map((course, index) => (
               <div
                 key={index}
-                className="group bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                onClick={() => setSelectedCourse(course)}
+                className="group bg-white dark:bg-[#0a0a0a] rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
                 <div className="h-40 bg-gray-100 dark:bg-gray-900 flex items-center justify-center">
                   <div className="w-16 h-16 bg-white/80 dark:bg-black/80 backdrop-blur rounded-2xl flex items-center justify-center text-gray-900 dark:text-gray-100 group-hover:scale-110 transition-transform">
@@ -391,47 +479,11 @@ export default function LearnPage() {
               </div>
             ))}
           </div>
-          
-          <div className="text-center mt-12">
-            <Link
-              href="/courses"
-              className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:border-gray-400 dark:hover:border-gray-500 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
-            >
-              {t('learnPage.viewAllCourses')}
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonial Section */}
-      <section className="py-20 px-6 bg-gray-50 dark:bg-black">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8">
-            <svg className="w-12 h-12 text-gray-400 dark:text-gray-600 mx-auto" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-            </svg>
-          </div>
-          <blockquote className="text-2xl md:text-3xl font-medium text-gray-900 dark:text-white mb-8 leading-relaxed">
-            "I went from knowing nothing about coding to building my own startup's MVP in just 3 weeks. 
-            The courses are incredibly well-structured and the community is amazing."
-          </blockquote>
-          <div className="flex items-center justify-center gap-4">
-            <div className="w-14 h-14 bg-gray-800 dark:bg-gray-900 rounded-full flex items-center justify-center text-white font-semibold text-lg">
-              AK
-            </div>
-            <div className="text-left">
-              <div className="font-semibold text-gray-900 dark:text-white">Alex Kim</div>
-              <div className="text-gray-600 dark:text-gray-400">Founder, TechStart</div>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-gray-900 dark:bg-black border-t border-gray-200 dark:border-gray-800">
+      <section className="py-24 px-6 bg-black dark:bg-black border-t border-gray-200 dark:border-gray-800">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             {t('learnPage.cta.title')}

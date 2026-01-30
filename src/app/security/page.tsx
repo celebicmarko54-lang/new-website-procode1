@@ -138,12 +138,12 @@ export default function SecurityPage() {
         </div>
 
         {/* Security Practices */}
-        <div className="bg-gray-900 dark:bg-[#0a0a0a] border-y border-gray-800 py-16 mb-16">
+        <div className="bg-black dark:bg-black border-y border-gray-800 py-16 mb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-white mb-8 text-center">{t('securityPage.practicesTitle')}</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {practices.map((practice) => (
-                <div key={practice.title} className="bg-white/10 backdrop-blur rounded-xl p-6 border border-gray-700">
+                <div key={practice.title} className="bg-[#0a0a0a] dark:bg-[#0a0a0a] backdrop-blur rounded-xl p-6 border border-gray-800">
                   <h3 className="font-semibold text-white text-lg mb-4">{practice.title}</h3>
                   <ul className="space-y-3">
                     {practice.items.map((item) => (

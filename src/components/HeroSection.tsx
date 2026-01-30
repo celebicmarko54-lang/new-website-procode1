@@ -35,7 +35,7 @@ export default function HeroSection() {
       <div className="relative z-10 w-full max-w-[720px] mx-auto mt-6">
         <form className="w-full bg-white dark:bg-[#0a0a0a] rounded-2xl border border-gray-200 dark:border-[#2a2a2a] overflow-hidden">
           {/* Top bar with lightning icon and Ready badge */}
-          <div className="flex items-center justify-between px-5 py-3 border-b border-gray-200 dark:border-[#1f1f1f]">
+          <div className="flex items-center justify-between px-5 py-3 border-b border-gray-200 dark:border-gray-800">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-[10px] flex items-center justify-center bg-black/5 dark:bg-white/10">
                 <svg className="w-4 h-4 text-gray-600 dark:text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -62,7 +62,7 @@ export default function HeroSection() {
           </div>
 
           {/* Bottom bar */}
-          <div className="flex items-center justify-between px-5 py-4 border-t border-gray-200 dark:border-[#1f1f1f]">
+          <div className="flex items-center justify-between px-5 py-4 border-t border-gray-200 dark:border-gray-800">
             <div className="flex items-center gap-3">
               {/* Attachment button */}
               <button type="button" className="p-2 rounded-lg transition-colors hover:bg-black/5 dark:hover:bg-white/10 text-gray-500 dark:text-gray-400" title="Add attachments">
