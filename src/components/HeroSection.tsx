@@ -1,15 +1,53 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useTranslation } from '@/context/LanguageContext';
+
+// Sample project templates
+const categories = ['AI Apps', 'Websites', 'Business Apps', 'Personal Software'];
+
+const projectTemplates = {
+  'AI Apps': [
+    { id: 1, title: 'AI Chat', image: '/templates/ai-chat.png', author: 'AppNode' },
+    { id: 2, title: 'Brainstorming Buddy', image: '/templates/brainstorm.png', author: 'AppNode' },
+    { id: 3, title: 'Recipe Generator', image: '/templates/recipe.png', author: 'AppNode' },
+  ],
+  'Websites': [
+    { id: 4, title: 'Portfolio Site', image: '/templates/portfolio.png', author: 'AppNode' },
+    { id: 5, title: 'Landing Page', image: '/templates/landing.png', author: 'AppNode' },
+    { id: 6, title: 'Blog Platform', image: '/templates/blog.png', author: 'AppNode' },
+  ],
+  'Business Apps': [
+    { id: 7, title: 'CRM Dashboard', image: '/templates/crm.png', author: 'AppNode' },
+    { id: 8, title: 'Invoice Manager', image: '/templates/invoice.png', author: 'AppNode' },
+    { id: 9, title: 'Task Tracker', image: '/templates/tasks.png', author: 'AppNode' },
+  ],
+  'Personal Software': [
+    { id: 10, title: 'Budget Tracker', image: '/templates/budget.png', author: 'AppNode' },
+    { id: 11, title: 'Habit Tracker', image: '/templates/habits.png', author: 'AppNode' },
+    { id: 12, title: 'Notes App', image: '/templates/notes.png', author: 'AppNode' },
+  ],
+};
 
 export default function HeroSection() {
   const [prompt, setPrompt] = useState('');
+  const [attachments, setAttachments] = useState<File[]>([]);
+  const [images, setImages] = useState<File[]>([]);
+  const [activeCategory, setActiveCategory] = useState('AI Apps');
   const { t } = useTranslation();
+  
+  const attachmentInputRef = useRef<HTMLInputElement>(null);
+  const imageInputRef = useRef<HTMLInputElement>(null);
 
   const handleSubmit = () => {
-    if (!prompt.trim()) return;
+    if (!prompt.trim() && attachments.length === 0 && images.length === 0) return;
     console.log('Submitting:', prompt);
+    console.log('Attachments:', attachments);
+    console.log('Images:', images);
+    // Clear after submit
+    setPrompt('');
+    setAttachments([]);
+    setImages([]);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -19,23 +57,56 @@ export default function HeroSection() {
     }
   };
 
+  const handleAttachmentClick = () => {
+    attachmentInputRef.current?.click();
+  };
+
+  const handleImageClick = () => {
+    imageInputRef.current?.click();
+  };
+
+  const handleAttachmentChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (files) {
+      setAttachments(prev => [...prev, ...Array.from(files)]);
+    }
+    // Reset input so same file can be selected again
+    e.target.value = '';
+  };
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (files) {
+      setImages(prev => [...prev, ...Array.from(files)]);
+    }
+    // Reset input so same file can be selected again
+    e.target.value = '';
+  };
+
+  const removeAttachment = (index: number) => {
+    setAttachments(prev => prev.filter((_, i) => i !== index));
+  };
+
+  const removeImage = (index: number) => {
+    setImages(prev => prev.filter((_, i) => i !== index));
+  };
+
   return (
     <section 
-      className="relative w-full flex flex-col items-center px-4 sm:px-6 lg:px-8 py-8 overflow-hidden bg-[#f8fafc] dark:bg-black transition-colors"
-      style={{ minHeight: '45vh' }}
+      className="relative w-full flex flex-col items-center px-4 sm:px-6 lg:px-8 py-4 overflow-hidden bg-[#f8fafc] dark:bg-black transition-colors"
     >
       {/* Heading */}
-      <div className="relative z-10 text-center" style={{ marginTop: '6vh' }}>
-        <h1 className="text-4xl sm:text-5xl md:text-5xl font-bold text-gray-900 dark:text-white tracking-tight">
+      <div className="relative z-10 text-center" style={{ marginTop: '2vh' }}>
+        <h1 className="text-3xl sm:text-4xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
           {t('hero.title')}
         </h1>
       </div>
 
       {/* Chat Input Box */}
-      <div className="relative z-10 w-full max-w-[720px] mx-auto mt-6">
-        <form className="w-full bg-white dark:bg-[#0a0a0a] rounded-2xl border border-gray-200 dark:border-[#2a2a2a] overflow-hidden">
+      <div className="relative z-10 w-full max-w-[720px] mx-auto mt-4">
+        <form className="w-full bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-[#2a2a2a] overflow-hidden">
           {/* Top bar with lightning icon and Ready badge */}
-          <div className="flex items-center justify-between px-5 py-3 border-b border-gray-200 dark:border-gray-800">
+          <div className="flex items-center justify-between px-5 py-2 border-b border-gray-200 dark:border-gray-800">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-[10px] flex items-center justify-center bg-black/5 dark:bg-white/10">
                 <svg className="w-4 h-4 text-gray-600 dark:text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -50,28 +121,100 @@ export default function HeroSection() {
           </div>
 
           {/* Input Area */}
-          <div className="flex-1 flex flex-col relative p-5 min-h-[100px]">
+          <div className="flex-1 flex flex-col relative p-4 min-h-[155px]">
             <textarea
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder={t('hero.placeholder')}
-              rows={3}
+              rows={4}
               className="w-full resize-none ring-0 z-20 outline-0 bg-transparent text-base leading-relaxed placeholder:text-gray-500 text-[#1a1a1a] dark:text-white focus:outline-none"
             />
+            
+            {/* Display attached files and images */}
+            {(attachments.length > 0 || images.length > 0) && (
+              <div className="flex flex-wrap gap-2 mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">
+                {attachments.map((file, index) => (
+                  <div key={`attachment-${index}`} className="flex items-center gap-2 px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-lg text-sm">
+                    <svg className="w-4 h-4 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+                    </svg>
+                    <span className="text-gray-700 dark:text-gray-300 max-w-[150px] truncate">{file.name}</span>
+                    <button 
+                      type="button" 
+                      onClick={() => removeAttachment(index)}
+                      className="text-gray-400 hover:text-red-500 transition-colors"
+                    >
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </button>
+                  </div>
+                ))}
+                {images.map((file, index) => (
+                  <div key={`image-${index}`} className="flex items-center gap-2 px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 rounded-lg text-sm">
+                    <svg className="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                      <circle cx="8.5" cy="8.5" r="1.5"/>
+                      <polyline points="21 15 16 10 5 21"/>
+                    </svg>
+                    <span className="text-gray-700 dark:text-gray-300 max-w-[150px] truncate">{file.name}</span>
+                    <button 
+                      type="button" 
+                      onClick={() => removeImage(index)}
+                      className="text-gray-400 hover:text-red-500 transition-colors"
+                    >
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
+          {/* Hidden file inputs */}
+          <input
+            type="file"
+            ref={attachmentInputRef}
+            onChange={handleAttachmentChange}
+            multiple
+            className="hidden"
+            accept=".pdf,.doc,.docx,.txt,.zip,.json,.csv,.xml,.md"
+          />
+          <input
+            type="file"
+            ref={imageInputRef}
+            onChange={handleImageChange}
+            multiple
+            className="hidden"
+            accept="image/*"
+          />
+
           {/* Bottom bar */}
-          <div className="flex items-center justify-between px-5 py-4 border-t border-gray-200 dark:border-gray-800">
+          <div className="flex items-center justify-between px-4 py-3 border-t border-gray-200 dark:border-gray-800">
             <div className="flex items-center gap-3">
               {/* Attachment button */}
-              <button type="button" className="p-2 rounded-lg transition-colors hover:bg-black/5 dark:hover:bg-white/10 text-gray-500 dark:text-gray-400" title="Add attachments">
+              <button 
+                type="button" 
+                onClick={handleAttachmentClick}
+                className={`p-2 rounded-lg transition-colors hover:bg-black/5 dark:hover:bg-white/10 ${attachments.length > 0 ? 'text-emerald-500' : 'text-gray-500 dark:text-gray-400'}`} 
+                title="Add attachments"
+              >
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
                 </svg>
               </button>
               {/* Image button */}
-              <button type="button" className="p-2 rounded-lg transition-colors hover:bg-black/5 dark:hover:bg-white/10 text-gray-500 dark:text-gray-400" title="Add image">
+              <button 
+                type="button" 
+                onClick={handleImageClick}
+                className={`p-2 rounded-lg transition-colors hover:bg-black/5 dark:hover:bg-white/10 ${images.length > 0 ? 'text-blue-500' : 'text-gray-500 dark:text-gray-400'}`} 
+                title="Add image"
+              >
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
                   <circle cx="8.5" cy="8.5" r="1.5"/>
@@ -95,64 +238,56 @@ export default function HeroSection() {
             </button>
           </div>
         </form>
-
-        {/* Action buttons */}
-        <div className="flex flex-wrap items-center gap-1.5 mt-2 justify-center">
-          <a 
-            href="https://github.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 px-2 py-1 rounded-md bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-[#2a2a2a] text-gray-700 dark:text-gray-300 text-xs font-medium hover:bg-gray-50 dark:hover:bg-[#151515] transition-colors"
-          >
-            <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-            </svg>
-            <span>Connect a Repo</span>
-          </a>
-          <a 
-            href="https://www.figma.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 px-2 py-1 rounded-md bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-[#2a2a2a] text-gray-700 dark:text-gray-300 text-xs font-medium hover:bg-gray-50 dark:hover:bg-[#151515] transition-colors"
-          >
-            <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none">
-              <path d="M5 5.5A3.5 3.5 0 018.5 2H12v7H8.5A3.5 3.5 0 015 5.5z" fill="#F24E1E"/>
-              <path d="M12 2h3.5a3.5 3.5 0 010 7H12V2z" fill="#FF7262"/>
-              <path d="M12 12.5a3.5 3.5 0 117 0 3.5 3.5 0 01-7 0z" fill="#1ABCFE"/>
-              <path d="M5 19.5A3.5 3.5 0 018.5 16H12v3.5a3.5 3.5 0 01-7 0z" fill="#0ACF83"/>
-              <path d="M5 12.5A3.5 3.5 0 018.5 9H12v7H8.5A3.5 3.5 0 015 12.5z" fill="#A259FF"/>
-            </svg>
-            <span>Figma Import</span>
-          </a>
-          <a 
-            href="/docs" 
-            className="flex items-center gap-1 px-2 py-1 rounded-md bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-[#2a2a2a] text-gray-700 dark:text-gray-300 text-xs font-medium hover:bg-gray-50 dark:hover:bg-[#151515] transition-colors"
-          >
-            <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
-              <rect x="3" y="3" width="7" height="7" rx="1"/>
-              <rect x="14" y="3" width="7" height="7" rx="1"/>
-              <rect x="3" y="14" width="7" height="7" rx="1"/>
-              <rect x="14" y="14" width="7" height="7" rx="1"/>
-            </svg>
-            <span>MCP Servers</span>
-          </a>
-          <a 
-            href="https://marketplace.visualstudio.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 px-2 py-1 rounded-md bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-[#2a2a2a] text-gray-700 dark:text-gray-300 text-xs font-medium hover:bg-gray-50 dark:hover:bg-[#151515] transition-colors"
-          >
-            <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
-              <line x1="12" y1="22" x2="12" y2="15.5"/>
-              <polyline points="22 8.5 12 15.5 2 8.5"/>
-              <polyline points="2 15.5 12 8.5 22 15.5"/>
-              <line x1="12" y1="2" x2="12" y2="8.5"/>
-            </svg>
-            <span>Get Extension</span>
-          </a>
-        </div>
       </div>
+
+      {/* Start with an idea section - wider than chat */}
+      <div className="relative z-10 w-full max-w-[900px] mx-auto mt-4 mb-4 px-4">
+        <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">Start with an idea</h3>
+          
+          {/* Category tabs */}
+          <div className="flex flex-wrap gap-1.5 mb-3">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`px-2.5 py-1 rounded-full text-xs font-medium transition-colors ${
+                  activeCategory === category
+                    ? 'bg-gray-900 dark:bg-white text-white dark:text-black'
+                    : 'bg-gray-100 dark:bg-black text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-[#1a1a1a]'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
+          {/* Project cards */}
+          <div className="grid grid-cols-3 gap-2">
+            {projectTemplates[activeCategory as keyof typeof projectTemplates].map((project) => (
+              <button
+                key={project.id}
+                onClick={() => setPrompt(`Create a ${project.title.toLowerCase()} app`)}
+                className="group bg-white dark:bg-black border border-gray-200 dark:border-[#2a2a2a] rounded-lg p-2 text-left hover:border-gray-300 dark:hover:border-gray-600 transition-all hover:shadow-md"
+              >
+                {/* Placeholder image */}
+                <div className="aspect-[16/9] bg-gray-100 dark:bg-[#111111] rounded-md mb-1.5 flex items-center justify-center overflow-hidden">
+                  <svg className="w-6 h-6 text-gray-300 dark:text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" strokeWidth="1.5"/>
+                    <circle cx="8.5" cy="8.5" r="1.5" strokeWidth="1.5"/>
+                    <polyline points="21 15 16 10 5 21" strokeWidth="1.5"/>
+                  </svg>
+                </div>
+                <h4 className="text-xs font-medium text-gray-900 dark:text-white truncate">{project.title}</h4>
+                <div className="flex items-center justify-between mt-0.5">
+                  <div className="flex items-center gap-1">
+                    <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600"></div>
+                    <span className="text-[10px] text-gray-500 dark:text-gray-400">{project.author}</span>
+                  </div>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
     </section>
   );
 }
