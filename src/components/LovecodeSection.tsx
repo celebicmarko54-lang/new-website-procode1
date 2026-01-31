@@ -4,14 +4,21 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 
 // All available template images
 const allTemplates = [
-  '/templates/2.jpg',
-  '/templates/3.jpg',
-  '/templates/4.jpg',
-  '/templates/5.jpg',
-  '/templates/6.jpg',
-  '/templates/7.jpg',
-  '/templates/8.jpg',
-  '/templates/9.jpg',
+  '/templates/1.1.png',
+  '/templates/1.2.png',
+  '/templates/1.3.png',
+  '/templates/1.4.png',
+  '/templates/1.5.png',
+  '/templates/1.7.png',
+  '/templates/1.8.png',
+  '/templates/1.9.png',
+  '/templates/1.10.png',
+  '/templates/1.11.png',
+  '/templates/1.12.png',
+  '/templates/1.13.png',
+  '/templates/1.14.png',
+  '/templates/1.15.png',
+  '/templates/1.16.png',
 ];
 
 // Shuffle array function

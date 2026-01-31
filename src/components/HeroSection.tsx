@@ -269,9 +269,19 @@ export default function HeroSection() {
                 onClick={() => setPrompt(`Create a ${project.title.toLowerCase()} app`)}
                 className="group bg-white dark:bg-black border border-gray-200 dark:border-[#2a2a2a] rounded-lg p-2 text-left hover:border-gray-300 dark:hover:border-gray-600 transition-all hover:shadow-md"
               >
-                {/* Placeholder image */}
+                {/* Template image */}
                 <div className="aspect-[16/9] bg-gray-100 dark:bg-[#111111] rounded-md mb-1.5 flex items-center justify-center overflow-hidden">
-                  <svg className="w-6 h-6 text-gray-300 dark:text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Show placeholder if image fails to load
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                    }}
+                  />
+                  <svg className="w-6 h-6 text-gray-300 dark:text-gray-700 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2" strokeWidth="1.5"/>
                     <circle cx="8.5" cy="8.5" r="1.5" strokeWidth="1.5"/>
                     <polyline points="21 15 16 10 5 21" strokeWidth="1.5"/>

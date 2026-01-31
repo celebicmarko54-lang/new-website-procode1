@@ -20,7 +20,7 @@ const categories: CategoryCard[] = [
         <rect x="3" y="3" width="18" height="18" rx="2" />
       </svg>
     ),
-    image: '/templates/2.jpg'
+    image: '/templates/1.1.png'
   },
   {
     name: 'Dashboard',
@@ -30,7 +30,7 @@ const categories: CategoryCard[] = [
         <path d="M3 3h8v10H3V3zm0 12h8v6H3v-6zm10-12h8v6h-8V3zm0 8h8v10h-8V11z"/>
       </svg>
     ),
-    image: '/templates/3.jpg'
+    image: '/templates/1.2.png'
   },
   {
     name: 'Mobile',
@@ -41,7 +41,7 @@ const categories: CategoryCard[] = [
         <circle cx="12" cy="19" r="1.5" fill="black" />
       </svg>
     ),
-    image: '/templates/4.jpg'
+    image: '/templates/1.3.png'
   },
   {
     name: 'Portfolio',
@@ -51,7 +51,7 @@ const categories: CategoryCard[] = [
         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
       </svg>
     ),
-    image: '/templates/5.jpg'
+    image: '/templates/1.4.png'
   },
   {
     name: 'E-commerce',
@@ -61,7 +61,7 @@ const categories: CategoryCard[] = [
         <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45A2 2 0 007 16h12v-2H7l1.1-2h7.45a2 2 0 001.75-1.03l3.58-6.49A1 1 0 0020 3H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
       </svg>
     ),
-    image: '/templates/6.jpg'
+    image: '/templates/1.5.png'
   },
   {
     name: 'Productivity',
@@ -71,7 +71,7 @@ const categories: CategoryCard[] = [
         <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
       </svg>
     ),
-    image: '/templates/7.jpg'
+    image: '/templates/1.7.png'
   },
   {
     name: 'Internal tool',
@@ -81,7 +81,7 @@ const categories: CategoryCard[] = [
         <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
       </svg>
     ),
-    image: '/templates/8.jpg'
+    image: '/templates/1.8.png'
   },
   {
     name: 'Community & Social',
@@ -91,7 +91,7 @@ const categories: CategoryCard[] = [
         <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
       </svg>
     ),
-    image: '/templates/9.jpg'
+    image: '/templates/1.9.png'
   },
   {
     name: 'Business & Finance',
@@ -101,7 +101,7 @@ const categories: CategoryCard[] = [
         <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
       </svg>
     ),
-    image: '/templates/2.jpg'
+    image: '/templates/1.10.png'
   },
   {
     name: 'CRM',
@@ -111,7 +111,7 @@ const categories: CategoryCard[] = [
         <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
       </svg>
     ),
-    image: '/templates/3.jpg'
+    image: '/templates/1.11.png'
   },
   {
     name: 'Lifestyle',
@@ -121,7 +121,7 @@ const categories: CategoryCard[] = [
         <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
       </svg>
     ),
-    image: '/templates/4.jpg'
+    image: '/templates/1.12.png'
   },
   {
     name: 'Entertainment',
@@ -131,7 +131,7 @@ const categories: CategoryCard[] = [
         <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/>
       </svg>
     ),
-    image: '/templates/5.jpg'
+    image: '/templates/1.13.png'
   },
   {
     name: 'Health & Wellness',
@@ -141,7 +141,7 @@ const categories: CategoryCard[] = [
         <path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/>
       </svg>
     ),
-    image: '/templates/6.jpg'
+    image: '/templates/1.14.png'
   },
   {
     name: 'Education',
@@ -151,7 +151,7 @@ const categories: CategoryCard[] = [
         <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
       </svg>
     ),
-    image: '/templates/7.jpg'
+    image: '/templates/1.15.png'
   },
   {
     name: 'Real Estate',
@@ -161,7 +161,7 @@ const categories: CategoryCard[] = [
         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
       </svg>
     ),
-    image: '/templates/8.jpg'
+    image: '/templates/1.16.png'
   },
   {
     name: 'Travel',
@@ -171,7 +171,7 @@ const categories: CategoryCard[] = [
         <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
       </svg>
     ),
-    image: '/templates/9.jpg'
+    image: '/templates/1.1.png'
   },
   {
     name: 'Food & Restaurant',
@@ -181,7 +181,7 @@ const categories: CategoryCard[] = [
         <path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/>
       </svg>
     ),
-    image: '/templates/2.jpg'
+    image: '/templates/1.2.png'
   },
   {
     name: 'AI & Tech',
@@ -191,7 +191,7 @@ const categories: CategoryCard[] = [
         <path d="M21 10.12h-6.78l2.74-2.82c-2.73-2.7-7.15-2.8-9.88-.1-2.73 2.71-2.73 7.08 0 9.79s7.15 2.71 9.88 0C18.32 15.65 19 14.08 19 12.1h2c0 1.98-.88 4.55-2.64 6.29-3.51 3.48-9.21 3.48-12.72 0-3.5-3.47-3.53-9.11-.02-12.58s9.14-3.47 12.65 0L21 3v7.12z"/>
       </svg>
     ),
-    image: '/templates/3.jpg'
+    image: '/templates/1.3.png'
   },
 ];
 
