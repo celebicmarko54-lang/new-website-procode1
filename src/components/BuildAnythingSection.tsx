@@ -228,7 +228,7 @@ export default function BuildAnythingSection() {
   return (
     <section className="py-24 overflow-hidden bg-[#f8fafc] dark:bg-black transition-colors">
       {/* Header */}
-      <div className="max-w-7xl mx-auto px-6 mb-16 pl-12 md:pl-20">
+      <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
           {t('buildAnything.title')}
         </h2>

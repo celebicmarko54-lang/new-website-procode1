@@ -31,6 +31,30 @@ const websiteProjects = [
   { id: 16, title: 'Restaurant Site', image: '/templates/WEBSITE8.png', author: 'AppNode Team', category: 'Websites' },
 ];
 
+// Business Apps projects with actual images
+const businessAppsProjects = [
+  { id: 17, title: 'CRM Dashboard', image: '/templates/biznis1.png', author: 'AppNode Team', category: 'Business Apps' },
+  { id: 18, title: 'Project Manager', image: '/templates/biznis2.png', author: 'AppNode Team', category: 'Business Apps' },
+  { id: 19, title: 'Invoice System', image: '/templates/biznis3.png', author: 'AppNode Team', category: 'Business Apps' },
+  { id: 20, title: 'HR Management', image: '/templates/Biznis4.png', author: 'AppNode Team', category: 'Business Apps' },
+  { id: 21, title: 'Inventory Tracker', image: '/templates/biznis5.png', author: 'AppNode Team', category: 'Business Apps' },
+  { id: 22, title: 'Analytics Dashboard', image: '/templates/Biznis6.png', author: 'AppNode Team', category: 'Business Apps' },
+  { id: 23, title: 'Task Management', image: '/templates/biznis7.png', author: 'AppNode Team', category: 'Business Apps' },
+  { id: 24, title: 'Team Collaboration', image: '/templates/biznis8.png', author: 'AppNode Team', category: 'Business Apps' },
+];
+
+// Personal Software projects with actual images
+const personalSoftwareProjects = [
+  { id: 25, title: 'Wellness & Meditation', image: '/templates/presonal1.png', author: 'AppNode Team', category: 'Personal Software' },
+  { id: 26, title: 'Personal Finance', image: '/templates/personal2.png', author: 'AppNode Team', category: 'Personal Software' },
+  { id: 27, title: 'LifeOS Productivity', image: '/templates/personal3.png', author: 'AppNode Team', category: 'Personal Software' },
+  { id: 28, title: 'Digital Journal', image: '/templates/personal4.png', author: 'AppNode Team', category: 'Personal Software' },
+  { id: 29, title: 'Fitness Tracker', image: '/templates/personal5.png', author: 'AppNode Team', category: 'Personal Software' },
+  { id: 30, title: 'Recipe Manager', image: '/templates/personal6.png', author: 'AppNode Team', category: 'Personal Software' },
+  { id: 31, title: 'Reading List', image: '/templates/personal7.png', author: 'AppNode Team', category: 'Personal Software' },
+  { id: 32, title: 'Goal Tracker', image: '/templates/Personal8.png', author: 'AppNode Team', category: 'Personal Software' },
+];
+
 export default function GalleryPage() {
   const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState('All');
@@ -42,11 +66,15 @@ export default function GalleryPage() {
   const getFilteredProjects = () => {
     switch (activeCategory) {
       case 'All':
-        return [...aiAppsProjects, ...websiteProjects];
+        return [...aiAppsProjects, ...websiteProjects, ...businessAppsProjects, ...personalSoftwareProjects];
       case 'AI Apps':
         return aiAppsProjects;
       case 'Websites':
         return websiteProjects;
+      case 'Business Apps':
+        return businessAppsProjects;
+      case 'Personal Software':
+        return personalSoftwareProjects;
       default:
         return [];
     }
@@ -55,7 +83,7 @@ export default function GalleryPage() {
   const filteredProjects = getFilteredProjects();
   
   // Calculate remaining empty slots - 8 slots for other categories to match AI Apps
-  const emptySlotCount = ['All', 'AI Apps', 'Websites'].includes(activeCategory) ? 0 : 8;
+  const emptySlotCount = ['All', 'AI Apps', 'Websites', 'Business Apps', 'Personal Software'].includes(activeCategory) ? 0 : 8;
   const emptySlots = Array(emptySlotCount).fill(null);
 
   return (
