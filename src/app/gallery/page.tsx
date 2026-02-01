@@ -3,17 +3,37 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { useTranslation } from '@/context/LanguageContext';
+
+// AI Apps projects with actual images
+const aiAppsProjects = [
+  { id: 1, title: 'E-commerce AI', image: '/templates/AIAPPS1.png', author: 'AppNode Team', category: 'AI Apps' },
+  { id: 2, title: 'Customer Support AI', image: '/templates/AIAPPS2.png', author: 'AppNode Team', category: 'AI Apps' },
+  { id: 3, title: 'AI Content Writer', image: '/templates/AIAPPS3.png', author: 'AppNode Team', category: 'AI Apps' },
+  { id: 4, title: 'AI Image Generator', image: '/templates/AIAPPS4.png', author: 'AppNode Team', category: 'AI Apps' },
+  { id: 5, title: 'Text to Speech AI', image: '/templates/AIAPPRS5.png', author: 'AppNode Team', category: 'AI Apps' },
+  { id: 6, title: 'Data Analytics AI', image: '/templates/AIAPPPS3.png', author: 'AppNode Team', category: 'AI Apps' },
+  { id: 7, title: 'AI Video Creator', image: '/templates/AIAPPS7.png', author: 'AppNode Team', category: 'AI Apps' },
+  { id: 8, title: 'AI Code Assistant', image: '/templates/AIAPPS8.png', author: 'AppNode Team', category: 'AI Apps' },
+];
 
 export default function GalleryPage() {
   const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState('All');
+  const [selectedProject, setSelectedProject] = useState<typeof aiAppsProjects[0] | null>(null);
   
   const categories = ['All', 'AI Apps', 'Websites', 'Business Apps', 'Personal Software', 'Games'];
   
-  // Empty placeholder slots for user uploads
-  const emptySlots = Array(12).fill(null);
+  // Filter projects based on active category
+  const filteredProjects = activeCategory === 'All' || activeCategory === 'AI Apps' 
+    ? aiAppsProjects 
+    : [];
+  
+  // Calculate remaining empty slots - 8 slots for other categories to match AI Apps
+  const emptySlotCount = activeCategory === 'All' ? 0 : (activeCategory === 'AI Apps' ? 0 : 8);
+  const emptySlots = Array(emptySlotCount).fill(null);
 
   return (
     <div className="min-h-screen bg-[#f8fafc] dark:bg-black text-gray-900 dark:text-white transition-colors">
@@ -39,7 +59,7 @@ export default function GalleryPage() {
                 onClick={() => setActiveCategory(category)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   activeCategory === category
-                    ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900'
+                    ? 'bg-gray-900 dark:bg-gray-700 text-white dark:text-white'
                     : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
                 }`}
               >
@@ -49,16 +69,58 @@ export default function GalleryPage() {
           </div>
         </section>
 
-        {/* Projects Grid - Empty Slots with Animation */}
+        {/* Projects Grid */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {/* Actual AI Apps Projects */}
+            {filteredProjects.map((project) => (
+              <div 
+                key={project.id} 
+                className="group bg-white dark:bg-[#0a0a0a] rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 transition-all hover:shadow-lg"
+              >
+                {/* Preview Image - Full coverage */}
+                <div className="aspect-[4/3] bg-gray-100 dark:bg-gray-900 relative overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                
+                {/* Info */}
+                <div className="p-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-semibold text-gray-900 dark:text-white">{project.title}</h3>
+                    <span className="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full">
+                      {project.category}
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Built with AppNode</p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-purple-500"></div>
+                      <span className="text-sm text-gray-600 dark:text-gray-400">{project.author}</span>
+                    </div>
+                    <button 
+                      onClick={() => setSelectedProject(project)}
+                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+                    >
+                      View
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+            
+            {/* Empty Slots */}
             {emptySlots.map((_, i) => (
               <div 
                 key={i} 
                 className="group bg-white dark:bg-[#0a0a0a] rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 transition-all hover:shadow-lg"
               >
-                {/* Preview - Empty with pulse animation */}
-                <div className="aspect-video bg-gray-100 dark:bg-gray-900 flex items-center justify-center relative overflow-hidden">
+                {/* Preview - Empty with pulse animation - same aspect ratio as AI Apps */}
+                <div className="aspect-[4/3] bg-gray-100 dark:bg-gray-900 flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-200 dark:via-gray-800 to-transparent animate-shimmer"></div>
                   <div className="w-16 h-16 rounded-xl bg-gray-200 dark:bg-gray-800 border-2 border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <svg className="w-8 h-8 text-gray-400 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -106,6 +168,54 @@ export default function GalleryPage() {
       </main>
 
       <Footer />
+
+      {/* Image Preview Modal */}
+      {selectedProject && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+          onClick={() => setSelectedProject(null)}
+        >
+          <div 
+            className="relative max-w-6xl w-full max-h-[90vh] bg-white dark:bg-[#0a0a0a] rounded-2xl overflow-hidden shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button 
+              onClick={() => setSelectedProject(null)}
+              className="absolute top-4 right-4 z-10 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            
+            {/* Full Quality Image */}
+            <div className="relative w-full" style={{ height: 'calc(90vh - 100px)' }}>
+              <Image
+                src={selectedProject.image}
+                alt={selectedProject.title}
+                fill
+                className="object-contain"
+                quality={100}
+                priority
+              />
+            </div>
+            
+            {/* Project Info */}
+            <div className="p-6 border-t border-gray-200 dark:border-gray-800">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">{selectedProject.title}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Built with AppNode by {selectedProject.author}</p>
+                </div>
+                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium">
+                  {selectedProject.category}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
