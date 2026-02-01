@@ -19,6 +19,18 @@ const aiAppsProjects = [
   { id: 8, title: 'AI Code Assistant', image: '/templates/AIAPPS8.png', author: 'AppNode Team', category: 'AI Apps' },
 ];
 
+// Website projects with actual images
+const websiteProjects = [
+  { id: 9, title: 'Portfolio Site', image: '/templates/WEBSITE1.png', author: 'AppNode Team', category: 'Websites' },
+  { id: 10, title: 'Landing Page', image: '/templates/WEBSITE2.png', author: 'AppNode Team', category: 'Websites' },
+  { id: 11, title: 'Business Website', image: '/templates/WEBSITE3.png', author: 'AppNode Team', category: 'Websites' },
+  { id: 12, title: 'E-commerce Store', image: '/templates/WEBSITE4.png', author: 'AppNode Team', category: 'Websites' },
+  { id: 13, title: 'Blog Platform', image: '/templates/WEBSITE5.png', author: 'AppNode Team', category: 'Websites' },
+  { id: 14, title: 'Agency Website', image: '/templates/WEBSITE6.png', author: 'AppNode Team', category: 'Websites' },
+  { id: 15, title: 'SaaS Dashboard', image: '/templates/WEBSITE7.png', author: 'AppNode Team', category: 'Websites' },
+  { id: 16, title: 'Restaurant Site', image: '/templates/WEBSITE8.png', author: 'AppNode Team', category: 'Websites' },
+];
+
 export default function GalleryPage() {
   const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState('All');
@@ -27,12 +39,23 @@ export default function GalleryPage() {
   const categories = ['All', 'AI Apps', 'Websites', 'Business Apps', 'Personal Software', 'Games'];
   
   // Filter projects based on active category
-  const filteredProjects = activeCategory === 'All' || activeCategory === 'AI Apps' 
-    ? aiAppsProjects 
-    : [];
+  const getFilteredProjects = () => {
+    switch (activeCategory) {
+      case 'All':
+        return [...aiAppsProjects, ...websiteProjects];
+      case 'AI Apps':
+        return aiAppsProjects;
+      case 'Websites':
+        return websiteProjects;
+      default:
+        return [];
+    }
+  };
+  
+  const filteredProjects = getFilteredProjects();
   
   // Calculate remaining empty slots - 8 slots for other categories to match AI Apps
-  const emptySlotCount = activeCategory === 'All' ? 0 : (activeCategory === 'AI Apps' ? 0 : 8);
+  const emptySlotCount = ['All', 'AI Apps', 'Websites'].includes(activeCategory) ? 0 : 8;
   const emptySlots = Array(emptySlotCount).fill(null);
 
   return (
