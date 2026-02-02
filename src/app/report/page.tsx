@@ -3,697 +3,698 @@
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useTranslation } from '@/context/LanguageContext';
 
-// Documentation structure matching magicapptesting.com/docs exactly
-const docsSections = [
+// Documentation structure - will be translated dynamically
+const getDocsSections = (t: (key: string) => string) => [
   {
-    title: 'Getting Started',
+    title: t('reportPage.sections.gettingStarted'),
     items: [
-      { id: 'introduction', title: 'Introduction' },
-      { id: 'quickstart', title: 'Quickstart Guides' },
-      { id: 'create-ai', title: 'Create with AI' },
-      { id: 'build-scratch', title: 'Build from Scratch' },
-      { id: 'import-github', title: 'Import from GitHub' },
+      { id: 'introduction', title: t('reportPage.items.introduction') },
+      { id: 'quickstart', title: t('reportPage.items.quickstart') },
+      { id: 'create-ai', title: t('reportPage.items.createAi') },
+      { id: 'build-scratch', title: t('reportPage.items.buildScratch') },
+      { id: 'import-github', title: t('reportPage.items.importGithub') },
     ],
   },
   {
-    title: 'Trust & Safety',
+    title: t('reportPage.sections.trustSafety'),
     items: [
-      { id: 'trust-overview', title: 'Overview' },
-      { id: 'reporting-abuse', title: 'Reporting Abuse' },
-      { id: 'copyright-claims', title: 'Copyright Claims' },
+      { id: 'trust-overview', title: t('reportPage.items.trustOverview') },
+      { id: 'reporting-abuse', title: t('reportPage.items.reportingAbuse') },
+      { id: 'copyright-claims', title: t('reportPage.items.copyrightClaims') },
     ],
   },
   {
-    title: 'Legal',
+    title: t('reportPage.sections.legal'),
     items: [
-      { id: 'terms', title: 'Terms of Service' },
-      { id: 'privacy', title: 'Privacy Policy' },
-      { id: 'platform-rules', title: 'Platform Rules' },
+      { id: 'terms', title: t('reportPage.items.terms') },
+      { id: 'privacy', title: t('reportPage.items.privacy') },
+      { id: 'platform-rules', title: t('reportPage.items.platformRules') },
     ],
   },
   {
-    title: 'Security',
+    title: t('reportPage.sections.security'),
     items: [
-      { id: 'security-overview', title: 'Security Overview' },
-      { id: 'data-protection', title: 'Data Protection' },
+      { id: 'security-overview', title: t('reportPage.items.securityOverview') },
+      { id: 'data-protection', title: t('reportPage.items.dataProtection') },
     ],
   },
   {
-    title: 'Tutorials',
+    title: t('reportPage.sections.tutorials'),
     items: [
-      { id: 'generate-code', title: 'How to Generate Code' },
-      { id: 'first-app', title: 'Building Your First App' },
-      { id: 'databases', title: 'Building with Databases' },
-      { id: 'deploying', title: 'Deploying Your App' },
+      { id: 'generate-code', title: t('reportPage.items.generateCode') },
+      { id: 'first-app', title: t('reportPage.items.firstApp') },
+      { id: 'databases', title: t('reportPage.items.databases') },
+      { id: 'deploying', title: t('reportPage.items.deploying') },
     ],
   },
   {
-    title: 'Teams & Enterprise',
+    title: t('reportPage.sections.teamsEnterprise'),
     items: [
-      { id: 'teams-overview', title: 'Teams Overview' },
-      { id: 'enterprise-features', title: 'Enterprise Features' },
-      { id: 'collaboration', title: 'Collaboration' },
+      { id: 'teams-overview', title: t('reportPage.items.teamsOverview') },
+      { id: 'enterprise-features', title: t('reportPage.items.enterpriseFeatures') },
+      { id: 'collaboration', title: t('reportPage.items.collaboration') },
     ],
   },
   {
-    title: 'Changelog',
+    title: t('reportPage.sections.changelog'),
     items: [
-      { id: 'recent-updates', title: 'Recent Updates' },
-      { id: 'roadmap', title: 'Roadmap' },
+      { id: 'recent-updates', title: t('reportPage.items.recentUpdates') },
+      { id: 'roadmap', title: t('reportPage.items.roadmap') },
     ],
   },
 ];
 
-// Content for each documentation page
-const docsContent: Record<string, { title: string; breadcrumb: string[]; content: React.ReactNode }> = {
+// Content for each documentation page - function that returns translated content
+const getDocsContent = (t: (key: string) => string): Record<string, { title: string; breadcrumb: string[]; content: React.ReactNode }> => ({
   'introduction': {
-    title: 'Welcome to AppNode',
-    breadcrumb: ['Getting Started', 'Introduction'],
+    title: t('reportPage.content.welcomeTitle'),
+    breadcrumb: [t('reportPage.sections.gettingStarted'), t('reportPage.items.introduction')],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          AppNode is an AI-powered development platform that lets you build complete web applications just by describing what you want. No coding experience required — it feels like having a whole team working for you.
+          {t('reportPage.content.welcomeDescription')}
         </p>
         <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 mb-8 bg-white dark:bg-[#0a0a0a]">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">What You Can Build</h3>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.whatYouCanBuild')}</h3>
           <ul className="space-y-2">
             <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-              <span className="text-gray-400 dark:text-gray-600">•</span>Full-stack web applications with databases
+              <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.whatYouCanBuildItems.fullStack')}
             </li>
             <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-              <span className="text-gray-400 dark:text-gray-600">•</span>Landing pages and marketing websites
+              <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.whatYouCanBuildItems.landingPages')}
             </li>
             <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-              <span className="text-gray-400 dark:text-gray-600">•</span>Dashboards and admin panels
+              <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.whatYouCanBuildItems.dashboards')}
             </li>
             <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-              <span className="text-gray-400 dark:text-gray-600">•</span>E-commerce stores and portfolios
+              <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.whatYouCanBuildItems.ecommerce')}
             </li>
             <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-              <span className="text-gray-400 dark:text-gray-600">•</span>SaaS products and internal tools
+              <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.whatYouCanBuildItems.saas')}
             </li>
           </ul>
         </div>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">How It Works</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.howItWorks')}</h2>
         <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-          Simply describe your project in plain language. Our AI understands your requirements, generates a complete blueprint, and builds production-ready code in real-time. Watch your app come to life with instant previews.
+          {t('reportPage.content.howItWorksDescription')}
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Describe</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Tell AI what you want to build</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.steps.describe')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.steps.describeText')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Generate</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">AI writes production-ready code</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.steps.generate')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.steps.generateText')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Preview</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">See your app live instantly</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.steps.preview')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.steps.previewText')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Deploy</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">One-click deployment to production</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.steps.deploy')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.steps.deployText')}</p>
           </div>
         </div>
       </>
     ),
   },
   'quickstart': {
-    title: 'Quickstart Guides',
-    breadcrumb: ['Getting Started', 'Quickstart Guides'],
+    title: t('reportPage.content.quickstartTitle'),
+    breadcrumb: [t('reportPage.sections.gettingStarted'), t('reportPage.items.quickstart')],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          Get up and running with AppNode in minutes. Choose your path based on how you want to start building.
+          {t('reportPage.content.quickstartDescription')}
         </p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Choose Your Starting Point</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.chooseStartingPoint')}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
             <div className="flex items-center justify-between mb-1">
-              <h3 className="font-semibold text-gray-900 dark:text-white">Create with AI</h3>
-              <span className="text-xs text-gray-500">2 minutes</span>
+              <h3 className="font-semibold text-gray-900 dark:text-white">{t('reportPage.items.createAi')}</h3>
+              <span className="text-xs text-gray-500">2 {t('reportPage.content.minutes')}</span>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Best for beginners — describe your idea and let AI build it</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.bestForBeginners')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
             <div className="flex items-center justify-between mb-1">
-              <h3 className="font-semibold text-gray-900 dark:text-white">Build from Scratch</h3>
-              <span className="text-xs text-gray-500">5 minutes</span>
+              <h3 className="font-semibold text-gray-900 dark:text-white">{t('reportPage.items.buildScratch')}</h3>
+              <span className="text-xs text-gray-500">5 {t('reportPage.content.minutes')}</span>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Start with a blank canvas and full control</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.blankCanvas')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
             <div className="flex items-center justify-between mb-1">
-              <h3 className="font-semibold text-gray-900 dark:text-white">Import from GitHub</h3>
-              <span className="text-xs text-gray-500">3 minutes</span>
+              <h3 className="font-semibold text-gray-900 dark:text-white">{t('reportPage.items.importGithub')}</h3>
+              <span className="text-xs text-gray-500">3 {t('reportPage.content.minutes')}</span>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Bring your existing project and enhance it with AI</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.bringExisting')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
             <div className="flex items-center justify-between mb-1">
-              <h3 className="font-semibold text-gray-900 dark:text-white">Use a Template</h3>
-              <span className="text-xs text-gray-500">1 minute</span>
+              <h3 className="font-semibold text-gray-900 dark:text-white">{t('reportPage.content.useTemplate')}</h3>
+              <span className="text-xs text-gray-500">1 {t('reportPage.content.minute')}</span>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Start from a pre-built template and customize it</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.useTemplateDesc')}</p>
           </div>
         </div>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Example Prompts to Try</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.examplePrompts')}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div className="bg-gray-100 dark:bg-gray-900 rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">&quot;Create a todo list with drag and drop and dark mode&quot;</div>
-          <div className="bg-gray-100 dark:bg-gray-900 rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">&quot;Build a simple drawing app with different brush sizes and colors&quot;</div>
-          <div className="bg-gray-100 dark:bg-gray-900 rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">&quot;Make a memory card game with emojis&quot;</div>
-          <div className="bg-gray-100 dark:bg-gray-900 rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">&quot;Create an expense tracker with charts and categories&quot;</div>
+          <div className="bg-gray-100 dark:bg-gray-900 rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{t('reportPage.content.examplePrompt1')}</div>
+          <div className="bg-gray-100 dark:bg-gray-900 rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{t('reportPage.content.examplePrompt2')}</div>
+          <div className="bg-gray-100 dark:bg-gray-900 rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{t('reportPage.content.examplePrompt3')}</div>
+          <div className="bg-gray-100 dark:bg-gray-900 rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{t('reportPage.content.examplePrompt4')}</div>
         </div>
       </>
     ),
   },
   'create-ai': {
-    title: 'Create with AI',
-    breadcrumb: ['Getting Started', 'Create with AI'],
+    title: t('reportPage.content.createWithAiTitle'),
+    breadcrumb: [t('reportPage.sections.gettingStarted'), t('reportPage.items.createAi')],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          The fastest way to build. Just describe what you want in plain language and watch AI create your complete application in real-time.
+          {t('reportPage.content.createWithAiDescription')}
         </p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Step-by-Step Guide</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.stepByStepGuide')}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">1</div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Start a New Project</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Click &quot;Create New&quot; from your dashboard or the homepage</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.startNewProject')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.startNewProjectDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">2</div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Describe Your Idea</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Write a detailed description of what you want to build. The more context, the better results.</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.describeYourIdea')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.describeYourIdeaDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">3</div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Review the Blueprint</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">AI generates a project blueprint with features, design, and architecture. You can refine it.</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.reviewBlueprint')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.reviewBlueprintDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">4</div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Watch It Build</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">AI writes code for each component. See files appear in real-time with live preview.</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.watchItBuild')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.watchItBuildDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">5</div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Test & Iterate</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Try your app in the preview. Ask AI to make changes or add features.</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.testIterate')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.testIterateDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">6</div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Deploy</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">When ready, deploy with one click to get a live URL.</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.deployStep')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.deployStepDesc')}</p>
           </div>
         </div>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Tips for Better Results</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.tipsForBetterResults')}</h2>
         <ul className="space-y-2">
-          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">Be specific:</strong> Instead of &quot;make a website&quot;, say &quot;create a portfolio website with a dark theme, project gallery, and contact form&quot;</li>
-          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">Describe features:</strong> List the key features you need — authentication, database, file uploads, etc.</li>
-          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">Mention design preferences:</strong> Colors, style (minimal, bold, playful), and layout preferences help AI match your vision</li>
-          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">Iterate:</strong> Start simple, then ask AI to add more features incrementally</li>
+          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">{t('reportPage.content.tipSpecific')}</strong> {t('reportPage.content.tipSpecificDesc')}</li>
+          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">{t('reportPage.content.tipFeatures')}</strong> {t('reportPage.content.tipFeaturesDesc')}</li>
+          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">{t('reportPage.content.tipDesign')}</strong> {t('reportPage.content.tipDesignDesc')}</li>
+          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">{t('reportPage.content.tipIterate')}</strong> {t('reportPage.content.tipIterateDesc')}</li>
         </ul>
       </>
     ),
   },
   'build-scratch': {
-    title: 'Build from Scratch',
-    breadcrumb: ['Getting Started', 'Build from Scratch'],
+    title: t('reportPage.content.buildFromScratchTitle'),
+    breadcrumb: [t('reportPage.sections.gettingStarted'), t('reportPage.items.buildScratch')],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          Start with a blank canvas and full control. Perfect for developers who want to structure their project their way while still leveraging AI assistance.
+          {t('reportPage.content.buildFromScratchDesc')}
         </p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Choose Your Template</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-6">Select a base template to start with. Each template comes pre-configured with the framework, build tools, and dependencies you need.</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.chooseTemplate')}</h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-6">{t('reportPage.content.chooseTemplateDesc')}</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">React + Vite</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Fast, modern React setup</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.reactVite')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.reactViteDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Next.js</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Full-stack React framework</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.nextjs')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.nextjsDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Vue 3</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Progressive JavaScript framework</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.vue3')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.vue3Desc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Svelte</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Compile-time framework</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.svelte')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.svelteDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Astro</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Content-focused sites</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.astro')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.astroDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Vanilla JS</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">No framework, pure JavaScript</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.vanillaJs')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.vanillaJsDesc')}</p>
           </div>
         </div>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Workspace Features</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.workspaceFeatures')}</h2>
         <ul className="space-y-2">
-          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">Code Editor:</strong> Full-featured editor with syntax highlighting, autocomplete, and multi-file editing</li>
-          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">File Explorer:</strong> Navigate and manage your project files and folders</li>
-          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">Terminal:</strong> Run commands, install packages, and manage your environment</li>
-          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">Live Preview:</strong> See changes instantly as you code</li>
-          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">AI Chat:</strong> Ask for help, generate code snippets, or debug issues</li>
-          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">Version Control:</strong> Built-in git integration to track changes</li>
+          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">{t('reportPage.content.codeEditor')}</strong> {t('reportPage.content.codeEditorDesc')}</li>
+          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">{t('reportPage.content.fileExplorer')}</strong> {t('reportPage.content.fileExplorerDesc')}</li>
+          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">{t('reportPage.content.terminal')}</strong> {t('reportPage.content.terminalDesc')}</li>
+          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">{t('reportPage.content.livePreview')}</strong> {t('reportPage.content.livePreviewDesc')}</li>
+          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">{t('reportPage.content.aiChat')}</strong> {t('reportPage.content.aiChatDesc')}</li>
+          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">{t('reportPage.content.versionControl')}</strong> {t('reportPage.content.versionControlDesc')}</li>
         </ul>
       </>
     ),
   },
   'import-github': {
-    title: 'Import from GitHub',
-    breadcrumb: ['Getting Started', 'Import from GitHub'],
+    title: t('reportPage.content.importGithubTitle'),
+    breadcrumb: [t('reportPage.sections.gettingStarted'), t('reportPage.items.importGithub')],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          Bring your existing projects to AppNode. Import any public or private repository and enhance it with AI-powered development tools.
+          {t('reportPage.content.importGithubDesc')}
         </p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">How to Import</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.howToImport')}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">1</div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Connect GitHub</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Authorize AppNode to access your GitHub account for seamless imports</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.connectGithub')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.connectGithubDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">2</div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Select Repository</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Choose from your repositories or paste any public repo URL</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.selectRepository')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.selectRepositoryDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">3</div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Configure Settings</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Select branch, set environment variables, and configure build settings</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.configureSettings')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.configureSettingsDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">4</div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Import & Build</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">We clone your repo, install dependencies, and start the dev server</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.importBuild')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.importBuildDesc')}</p>
           </div>
         </div>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">What Happens After Import</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.whatHappensAfterImport')}</h2>
         <ul className="space-y-2">
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Your code is cloned into a new AppNode workspace
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.afterImport1')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Dependencies are automatically installed
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.afterImport2')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Development server starts with live preview
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.afterImport3')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>AI analyzes your codebase to provide contextual help
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.afterImport4')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Changes can be pushed back to GitHub or exported
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.afterImport5')}
           </li>
         </ul>
-        <p className="mt-6 text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">Note:</strong> For private repositories, you&apos;ll need to authorize GitHub access. We only request the minimum permissions needed to clone your code.</p>
+        <p className="mt-6 text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">{t('reportPage.content.privateRepoNote')}</strong> {t('reportPage.content.privateRepoNoteDesc')}</p>
       </>
     ),
   },
   'trust-overview': {
-    title: 'Trust & Safety at AppNode',
-    breadcrumb: ['Trust & Safety', 'Overview'],
+    title: t('reportPage.content.trustOverviewTitle'),
+    breadcrumb: [t('reportPage.sections.trustSafety'), t('reportPage.items.trustOverview')],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          We&apos;re committed to maintaining a safe, trustworthy platform for all users. Our Trust & Safety team works around the clock to ensure AppNode remains a space where creators can build without fear.
+          {t('reportPage.content.trustOverviewDesc')}
         </p>
         <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 mb-8 bg-white dark:bg-[#0a0a0a]">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Our Commitment</h3>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.ourCommitment')}</h3>
           <ul className="space-y-2">
             <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-              <span className="text-gray-400 dark:text-gray-600">•</span>24/7 monitoring of platform activity
+              <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.commitment1')}
             </li>
             <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-              <span className="text-gray-400 dark:text-gray-600">•</span>Rapid response to abuse reports
+              <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.commitment2')}
             </li>
             <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-              <span className="text-gray-400 dark:text-gray-600">•</span>Transparent enforcement policies
+              <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.commitment3')}
             </li>
             <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-              <span className="text-gray-400 dark:text-gray-600">•</span>Regular security audits and updates
+              <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.commitment4')}
             </li>
           </ul>
         </div>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">How We Keep You Safe</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-6">Our multi-layered approach to safety includes automated detection systems, human review processes, and community reporting tools. We continuously improve our systems based on emerging threats and user feedback.</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.howWeKeepYouSafe')}</h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-6">{t('reportPage.content.howWeKeepYouSafeDesc')}</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Automated Detection</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">AI-powered systems identify harmful content</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.automatedDetection')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.automatedDetectionDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Human Review</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Expert team reviews flagged content</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.humanReview')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.humanReviewDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">User Reports</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Community helps identify issues</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.userReports')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.userReportsDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Swift Action</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Quick response to violations</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.swiftAction')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.swiftActionDesc')}</p>
           </div>
         </div>
       </>
     ),
   },
   'reporting-abuse': {
-    title: 'Reporting Abuse',
-    breadcrumb: ['Trust & Safety', 'Reporting Abuse'],
+    title: t('reportPage.content.reportingAbuseTitle'),
+    breadcrumb: [t('reportPage.sections.trustSafety'), t('reportPage.items.reportingAbuse')],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          If you encounter content or behavior that violates our policies, please report it immediately. We take all reports seriously and investigate promptly.
+          {t('reportPage.content.reportingAbuseDesc')}
         </p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">How to Report</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.howToReport')}</h2>
         <ul className="space-y-2 mb-8">
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Click the &quot;Report&quot; button on any project or user profile
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.howToReport1')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Email us directly at abuse@appnode.dev
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.howToReport2')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Use the contact form in your account settings
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.howToReport3')}
           </li>
         </ul>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">What We Investigate</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.whatWeInvestigate')}</h2>
         <ul className="space-y-2">
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Harassment or threats
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.investigate1')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Malware or malicious code
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.investigate2')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Copyright infringement
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.investigate3')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Spam or phishing attempts
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.investigate4')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Illegal content
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.investigate5')}
           </li>
         </ul>
       </>
     ),
   },
   'copyright-claims': {
-    title: 'Copyright Claims',
-    breadcrumb: ['Trust & Safety', 'Copyright Claims'],
+    title: t('reportPage.content.copyrightClaimsTitle'),
+    breadcrumb: [t('reportPage.sections.trustSafety'), t('reportPage.items.copyrightClaims')],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          We respect intellectual property rights and respond promptly to valid copyright claims.
+          {t('reportPage.content.copyrightClaimsDesc')}
         </p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Filing a Claim</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-4">To file a DMCA takedown notice, please email <strong className="text-gray-900 dark:text-white">legal@appnode.dev</strong> with:</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.filingClaim')}</h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">{t('reportPage.content.filingClaimDesc')}</p>
         <ul className="space-y-2">
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Identification of the copyrighted work
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.claimItem1')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>URL of the infringing content
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.claimItem2')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Your contact information
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.claimItem3')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>A statement of good faith belief
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.claimItem4')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Your physical or electronic signature
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.claimItem5')}
           </li>
         </ul>
       </>
     ),
   },
   'terms': {
-    title: 'Terms of Service',
-    breadcrumb: ['Legal', 'Terms of Service'],
+    title: t('reportPage.content.termsTitle'),
+    breadcrumb: [t('reportPage.sections.legal'), t('reportPage.items.terms')],
     content: (
       <>
-        <p className="text-sm text-gray-500 dark:text-gray-500 mb-4">Last updated: January 2025</p>
+        <p className="text-sm text-gray-500 dark:text-gray-500 mb-4">{t('reportPage.content.termsLastUpdated')}</p>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          These Terms of Service (&quot;Terms&quot;) govern your access to and use of AppNode&apos;s services, websites, and applications (&quot;Services&quot;). By using our Services, you agree to be bound by these Terms.
+          {t('reportPage.content.termsIntro')}
         </p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">1. Acceptance of Terms</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-6">By accessing or using our Services, you agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you may not access or use our Services.</p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">2. Description of Services</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-6">AppNode provides an AI-powered development platform that enables users to build websites, applications, and digital products. Our Services include code generation, hosting, collaboration tools, and related features.</p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">3. User Accounts</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-4">To use certain features, you must create an account. You agree to:</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.acceptanceOfTerms')}</h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-6">{t('reportPage.content.acceptanceOfTermsDesc')}</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.descriptionOfServices')}</h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-6">{t('reportPage.content.descriptionOfServicesDesc')}</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.userAccounts')}</h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">{t('reportPage.content.userAccountsDesc')}</p>
         <ul className="space-y-2 mb-6">
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Provide accurate and complete information
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.userAccount1')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Maintain the security of your account credentials
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.userAccount2')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Accept responsibility for all activities under your account
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.userAccount3')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Notify us immediately of any unauthorized use
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.userAccount4')}
           </li>
         </ul>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">4. Acceptable Use</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-4">You agree not to use our Services to:</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.acceptableUse')}</h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">{t('reportPage.content.acceptableUseDesc')}</p>
         <ul className="space-y-2 mb-6">
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Violate any applicable laws or regulations
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.acceptableUse1')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Infringe on intellectual property rights
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.acceptableUse2')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Distribute malware, spam, or harmful content
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.acceptableUse3')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Harass, threaten, or harm others
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.acceptableUse4')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Attempt to gain unauthorized access to our systems
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.acceptableUse5')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Use our Services for any illegal or unauthorized purpose
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.acceptableUse6')}
           </li>
         </ul>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">5. Intellectual Property</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-6">You retain ownership of content you create using our Services. By using our Services, you grant us a limited license to host, display, and distribute your content as necessary to provide the Services.</p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">6. Termination</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-6">We reserve the right to suspend or terminate your account for violations of these Terms or for any other reason at our discretion. You may also terminate your account at any time.</p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">7. Disclaimers</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-6">OUR SERVICES ARE PROVIDED &quot;AS IS&quot; WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. WE DO NOT GUARANTEE THAT OUR SERVICES WILL BE UNINTERRUPTED, SECURE, OR ERROR-FREE.</p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">8. Contact</h2>
-        <p className="text-gray-600 dark:text-gray-400">For questions about these Terms, contact us at <strong className="text-gray-900 dark:text-white">legal@appnode.dev</strong></p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.intellectualProperty')}</h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-6">{t('reportPage.content.intellectualPropertyDesc')}</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.termination')}</h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-6">{t('reportPage.content.terminationDesc')}</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.disclaimers')}</h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-6">{t('reportPage.content.disclaimersDesc')}</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.termsContact')}</h2>
+        <p className="text-gray-600 dark:text-gray-400">{t('reportPage.content.termsContactDesc')}</p>
       </>
     ),
   },
   'privacy': {
-    title: 'Privacy Policy',
-    breadcrumb: ['Legal', 'Privacy Policy'],
+    title: t('reportPage.content.privacyTitle'),
+    breadcrumb: [t('reportPage.sections.legal'), t('reportPage.items.privacy')],
     content: (
       <>
-        <p className="text-sm text-gray-500 dark:text-gray-500 mb-4">Last updated: January 2025</p>
+        <p className="text-sm text-gray-500 dark:text-gray-500 mb-4">{t('reportPage.content.privacyLastUpdated')}</p>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          This Privacy Policy describes how AppNode collects, uses, and shares information about you when you use our services.
+          {t('reportPage.content.privacyIntro')}
         </p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Information We Collect</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.infoWeCollect')}</h2>
         <ul className="space-y-2 mb-6">
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Account information (email, name, profile)
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.infoCollect1')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Usage data (features used, projects created)
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.infoCollect2')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Device information (browser, OS, IP address)
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.infoCollect3')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Payment information (processed by secure providers)
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.infoCollect4')}
           </li>
         </ul>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">How We Use Your Information</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.howWeUseInfo')}</h2>
         <ul className="space-y-2 mb-6">
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Provide and improve our services
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.useInfo1')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Process transactions and send related information
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.useInfo2')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Send technical notices and support messages
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.useInfo3')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Respond to your comments and questions
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.useInfo4')}
           </li>
         </ul>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Contact</h2>
-        <p className="text-gray-600 dark:text-gray-400">For privacy-related questions, contact us at <strong className="text-gray-900 dark:text-white">privacy@appnode.dev</strong></p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.privacyContact')}</h2>
+        <p className="text-gray-600 dark:text-gray-400">{t('reportPage.content.privacyContactDesc')}</p>
       </>
     ),
   },
   'platform-rules': {
-    title: 'Platform Rules',
-    breadcrumb: ['Legal', 'Platform Rules'],
+    title: t('reportPage.content.platformRulesTitle'),
+    breadcrumb: [t('reportPage.sections.legal'), t('reportPage.items.platformRules')],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          These rules help maintain a safe and productive environment for all AppNode users.
+          {t('reportPage.content.platformRulesDesc')}
         </p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Prohibited Content</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.prohibitedContent')}</h2>
         <ul className="space-y-2 mb-6">
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Malware, viruses, or malicious code
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.prohibited1')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Phishing or scam websites
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.prohibited2')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Content that promotes violence or hate
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.prohibited3')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Illegal goods or services
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.prohibited4')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Copyright-infringing material
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.prohibited5')}
           </li>
         </ul>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Account Rules</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.accountRules')}</h2>
         <ul className="space-y-2">
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>One account per person
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.accountRule1')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>No sharing account credentials
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.accountRule2')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>No impersonating others
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.accountRule3')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>No automated account creation
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.accountRule4')}
           </li>
         </ul>
       </>
     ),
   },
   'security-overview': {
-    title: 'Security at AppNode',
-    breadcrumb: ['Security', 'Security Overview'],
+    title: t('reportPage.content.securityOverviewTitle'),
+    breadcrumb: [t('reportPage.sections.security'), t('reportPage.items.securityOverview')],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          Security is foundational to everything we build. We implement industry-leading practices to protect your data, your projects, and your users.
+          {t('reportPage.content.securityOverviewDesc')}
         </p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Infrastructure Security</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.infrastructureSecurity')}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Encryption at Rest</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">All data encrypted with AES-256</p>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.encryptionAtRest')}</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.encryptionAtRestDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Encryption in Transit</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">TLS 1.3 for all connections</p>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.encryptionInTransit')}</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.encryptionInTransitDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Isolated Environments</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Sandboxed execution for all projects</p>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.isolatedEnvironments')}</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.isolatedEnvironmentsDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-1">DDoS Protection</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Enterprise-grade attack mitigation</p>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.ddosProtection')}</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.ddosProtectionDesc')}</p>
           </div>
         </div>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Application Security</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.applicationSecurity')}</h2>
         <ul className="space-y-2 mb-6">
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Regular penetration testing by third-party firms
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.appSecurity1')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Automated vulnerability scanning in CI/CD pipeline
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.appSecurity2')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Secure development lifecycle (SDL) practices
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.appSecurity3')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Code review requirements for all changes
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.appSecurity4')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Bug bounty program for responsible disclosure
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.appSecurity5')}
           </li>
         </ul>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Account Security</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.accountSecurity')}</h2>
         <ul className="space-y-2 mb-6">
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Multi-factor authentication (MFA) support
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.accountSec1')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Session management and device tracking
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.accountSec2')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Suspicious activity detection and alerts
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.accountSec3')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Secure password requirements with bcrypt hashing
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.accountSec4')}
           </li>
         </ul>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Compliance</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-4">We maintain compliance with industry standards and regulations:</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.compliance')}</h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">{t('reportPage.content.complianceDesc')}</p>
         <div className="flex flex-wrap gap-2 mb-6">
           <span className="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 rounded-full text-sm">SOC 2 Type II</span>
           <span className="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 rounded-full text-sm">GDPR</span>
           <span className="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 rounded-full text-sm">CCPA</span>
           <span className="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 rounded-full text-sm">ISO 27001</span>
         </div>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Report a Vulnerability</h2>
-        <p className="text-gray-600 dark:text-gray-400">Found a security issue? Please report it responsibly to <strong className="text-gray-900 dark:text-white">security@appnode.dev</strong>. We appreciate your help in keeping AppNode secure and offer rewards for valid reports.</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.reportVulnerability')}</h2>
+        <p className="text-gray-600 dark:text-gray-400">{t('reportPage.content.reportVulnerabilityDesc')}</p>
       </>
     ),
   },
   'data-protection': {
-    title: 'Data Protection',
-    breadcrumb: ['Security', 'Data Protection'],
+    title: t('reportPage.content.dataProtectionTitle'),
+    breadcrumb: [t('reportPage.sections.security'), t('reportPage.items.dataProtection')],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          We take data protection seriously. Your code, your projects, and your personal information are safeguarded with multiple layers of protection.
+          {t('reportPage.content.dataProtectionDesc')}
         </p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Your Data Rights</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.yourDataRights')}</h2>
         <ul className="space-y-2 mb-6">
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Access your personal data
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.dataRight1')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Export your projects at any time
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.dataRight2')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Request deletion of your account
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.dataRight3')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Opt out of marketing communications
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.dataRight4')}
           </li>
         </ul>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Data Retention</h2>
-        <p className="text-gray-600 dark:text-gray-400">We retain your data only as long as necessary to provide our services. When you delete your account, your data is permanently removed within 30 days.</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.dataRetention')}</h2>
+        <p className="text-gray-600 dark:text-gray-400">{t('reportPage.content.dataRetentionDesc')}</p>
       </>
     ),
   },
   'generate-code': {
-    title: 'How to Generate Code',
-    breadcrumb: ['Tutorials', 'How to Generate Code'],
+    title: t('reportPage.content.generateCodeTitle'),
+    breadcrumb: [t('reportPage.sections.tutorials'), t('reportPage.items.generateCode')],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
@@ -745,231 +746,234 @@ const docsContent: Record<string, { title: string; breadcrumb: string[]; content
     ),
   },
   'first-app': {
-    title: 'Building Your First App',
-    breadcrumb: ['Tutorials', 'Building Your First App'],
+    title: t('reportPage.content.firstAppTitle'),
+    breadcrumb: [t('reportPage.sections.tutorials'), t('reportPage.items.firstApp')],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          Follow this step-by-step guide to build your first application with AppNode.
+          {t('reportPage.content.firstAppIntro')}
         </p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Step 1: Start a New Project</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-6">Click &quot;Create New&quot; from your dashboard and choose &quot;Create with AI&quot; for the easiest start.</p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Step 2: Describe Your App</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-6">Try this prompt: &quot;Create a simple todo list app with the ability to add, complete, and delete tasks. Use a clean, minimal design with a light theme.&quot;</p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Step 3: Watch It Build</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-6">AI will generate your app in real-time. You&apos;ll see files being created and a live preview updating as code is written.</p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Step 4: Make Changes</h2>
-        <p className="text-gray-600 dark:text-gray-400">Try asking: &quot;Add a dark mode toggle&quot; or &quot;Make the completed tasks strikethrough&quot; to see how AI can iterate on your app.</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.firstAppStep1Title')}</h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-6">{t('reportPage.content.firstAppStep1Text')}</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.firstAppStep2Title')}</h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-6">{t('reportPage.content.firstAppStep2Text')}</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.firstAppStep3Title')}</h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-6">{t('reportPage.content.firstAppStep3Text')}</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.firstAppStep4Title')}</h2>
+        <p className="text-gray-600 dark:text-gray-400">{t('reportPage.content.firstAppStep4Text')}</p>
       </>
     ),
   },
   'databases': {
-    title: 'Building with Databases',
-    breadcrumb: ['Tutorials', 'Building with Databases'],
+    title: t('reportPage.content.databasesTitle'),
+    breadcrumb: [t('reportPage.sections.tutorials'), t('reportPage.items.databases')],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          Learn how to add persistent data storage to your AppNode applications.
+          {t('reportPage.content.databasesIntro')}
         </p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Available Databases</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.databasesAvailable')}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">SQLite</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Simple, file-based database. Great for small apps.</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.databasesSqlite')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.databasesSqliteDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">PostgreSQL</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Full-featured relational database for complex data.</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.databasesPostgres')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.databasesPostgresDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">MongoDB</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Document database for flexible schemas.</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.databasesMongo')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.databasesMongoDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Redis</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">In-memory store for caching and sessions.</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.databasesRedis')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.databasesRedisDesc')}</p>
           </div>
         </div>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Adding a Database</h2>
-        <p className="text-gray-600 dark:text-gray-400">Simply describe your data needs: &quot;I need to store users with name, email, and profile picture&quot; and AI will set up the database schema and connections for you.</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.databasesAdding')}</h2>
+        <p className="text-gray-600 dark:text-gray-400">{t('reportPage.content.databasesAddingText')}</p>
       </>
     ),
   },
   'deploying': {
-    title: 'Deploying Your App',
-    breadcrumb: ['Tutorials', 'Deploying Your App'],
+    title: t('reportPage.content.deployingTitle'),
+    breadcrumb: [t('reportPage.sections.tutorials'), t('reportPage.items.deploying')],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          Get your application live with one click. AppNode handles hosting, SSL, and scaling automatically.
+          {t('reportPage.content.deployingIntro')}
         </p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Deploy Steps</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.deployingSteps')}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">1</div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Click Deploy</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Hit the Deploy button in your workspace</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.deployingStep1')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.deployingStep1Text')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">2</div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Choose a Domain</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Use our free subdomain or connect your own</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.deployingStep2')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.deployingStep2Text')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">3</div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Go Live</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Your app is deployed in seconds with SSL included</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.deployingStep3')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.deployingStep3Text')}</p>
           </div>
         </div>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Custom Domains</h2>
-        <p className="text-gray-600 dark:text-gray-400">Connect your own domain by adding a CNAME record pointing to AppNode. SSL certificates are automatically provisioned.</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.deployingCustom')}</h2>
+        <p className="text-gray-600 dark:text-gray-400">{t('reportPage.content.deployingCustomText')}</p>
       </>
     ),
   },
   'teams-overview': {
-    title: 'Teams Overview',
-    breadcrumb: ['Teams & Enterprise', 'Teams Overview'],
+    title: t('reportPage.content.teamsTitle'),
+    breadcrumb: [t('reportPage.sections.teamsEnterprise'), t('reportPage.items.teamsOverview')],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          Collaborate with your team on AppNode. Share projects, manage permissions, and build together in real-time.
+          {t('reportPage.content.teamsIntro')}
         </p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Team Features</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.teamsFeatures')}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Shared Projects</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">All team members can access and contribute to projects</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.teamsShared')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.teamsSharedDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Real-time Collaboration</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">See changes from teammates instantly</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.teamsRealtime')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.teamsRealtimeDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Role-based Access</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Control who can view, edit, or deploy</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.teamsRole')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.teamsRoleDesc')}</p>
           </div>
           <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Team Billing</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Consolidated billing for your organization</p>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.teamsBilling')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.teamsBillingDesc')}</p>
           </div>
         </div>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Getting Started with Teams</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.teamsGettingStarted')}</h2>
         <ul className="space-y-2">
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Create a team from your dashboard settings
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.teamsStep1')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Invite team members via email
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.teamsStep2')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Set permissions for each member
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.teamsStep3')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Start collaborating on projects
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.teamsStep4')}
           </li>
         </ul>
       </>
     ),
   },
   'enterprise-features': {
-    title: 'Enterprise Features',
-    breadcrumb: ['Teams & Enterprise', 'Enterprise Features'],
+    title: t('reportPage.content.enterpriseTitle'),
+    breadcrumb: [t('reportPage.sections.teamsEnterprise'), t('reportPage.items.enterpriseFeatures')],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          Advanced features for large organizations with complex requirements.
+          {t('reportPage.content.enterpriseIntro')}
         </p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Enterprise Benefits</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.enterpriseBenefits')}</h2>
         <ul className="space-y-2 mb-6">
-          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">SSO Integration:</strong> Connect with your identity provider (Okta, Azure AD, etc.)</li>
-          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">Audit Logs:</strong> Track all actions across your organization</li>
-          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">Custom Contracts:</strong> Tailored agreements and SLAs</li>
-          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">Dedicated Support:</strong> Priority support with dedicated account manager</li>
-          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">Private Cloud:</strong> Run AppNode in your own infrastructure</li>
+          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">{t('reportPage.content.enterpriseSSO')}:</strong> {t('reportPage.content.enterpriseSSODesc')}</li>
+          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">{t('reportPage.content.enterpriseAudit')}:</strong> {t('reportPage.content.enterpriseAuditDesc')}</li>
+          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">{t('reportPage.content.enterpriseContracts')}:</strong> {t('reportPage.content.enterpriseContractsDesc')}</li>
+          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">{t('reportPage.content.enterpriseSupport')}:</strong> {t('reportPage.content.enterpriseSupportDesc')}</li>
+          <li className="text-gray-600 dark:text-gray-400"><strong className="text-gray-900 dark:text-white">{t('reportPage.content.enterpriseCloud')}:</strong> {t('reportPage.content.enterpriseCloudDesc')}</li>
         </ul>
-        <p className="text-gray-600 dark:text-gray-400">Contact <strong className="text-gray-900 dark:text-white">enterprise@appnode.dev</strong> to learn more.</p>
+        <p className="text-gray-600 dark:text-gray-400">{t('reportPage.content.enterpriseContact')}</p>
       </>
     ),
   },
   'collaboration': {
-    title: 'Collaboration',
-    breadcrumb: ['Teams & Enterprise', 'Collaboration'],
+    title: t('reportPage.content.collaborationTitle'),
+    breadcrumb: [t('reportPage.sections.teamsEnterprise'), t('reportPage.items.collaboration')],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          Work together seamlessly with real-time collaboration features.
+          {t('reportPage.content.collaborationIntro')}
         </p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Real-time Features</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.collaborationRealtime')}</h2>
         <ul className="space-y-2 mb-6">
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>See teammates&apos; cursors in the editor
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.collaborationItem1')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Live code changes sync instantly
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.collaborationItem2')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Built-in comments and discussions
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.collaborationItem3')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Activity feed shows recent changes
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.collaborationItem4')}
           </li>
         </ul>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Communication</h2>
-        <p className="text-gray-600 dark:text-gray-400">Use the built-in chat or connect your Slack workspace for seamless team communication.</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.collaborationComm')}</h2>
+        <p className="text-gray-600 dark:text-gray-400">{t('reportPage.content.collaborationCommText')}</p>
       </>
     ),
   },
   'recent-updates': {
-    title: 'Coming Soon',
-    breadcrumb: ['Changelog', 'Recent Updates'],
+    title: t('reportPage.content.changelogTitle'),
+    breadcrumb: [t('reportPage.sections.changelog'), t('reportPage.items.recentUpdates')],
     content: (
       <div className="text-center py-12">
         <span className="text-6xl mb-6 block">🚀</span>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Coming Soon</h2>
-        <p className="text-gray-600 dark:text-gray-400">We&apos;re working on something exciting. Check back soon for updates on the latest features and improvements.</p>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.changelogTitle')}</h2>
+        <p className="text-gray-600 dark:text-gray-400">{t('reportPage.content.changelogText')}</p>
       </div>
     ),
   },
   'roadmap': {
-    title: 'Roadmap',
-    breadcrumb: ['Changelog', 'Roadmap'],
+    title: t('reportPage.content.roadmapTitle'),
+    breadcrumb: [t('reportPage.sections.changelog'), t('reportPage.items.roadmap')],
     content: (
       <>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-          See what we&apos;re working on and what&apos;s coming next.
+          {t('reportPage.content.roadmapIntro')}
         </p>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">In Progress</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.roadmapInProgress')}</h2>
         <ul className="space-y-2 mb-6">
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Mobile app preview
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.roadmapItem1')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Enhanced AI models
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.roadmapItem2')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Plugin marketplace
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.roadmapItem3')}
           </li>
         </ul>
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Planned</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.roadmapPlanned')}</h2>
         <ul className="space-y-2">
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Native mobile app builder
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.roadmapItem4')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>API marketplace
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.roadmapItem5')}
           </li>
           <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
-            <span className="text-gray-400 dark:text-gray-600">•</span>Advanced analytics dashboard
+            <span className="text-gray-400 dark:text-gray-600">•</span>{t('reportPage.content.roadmapItem6')}
           </li>
         </ul>
       </>
     ),
   },
-};
+});
 
 export default function DocsPage() {
+  const { t } = useTranslation();
+  const docsSections = getDocsSections(t);
+  const docsContent = getDocsContent(t);
   const [activeSection, setActiveSection] = useState('introduction');
-  const [expandedSections, setExpandedSections] = useState<string[]>(['Getting Started']);
+  const [expandedSections, setExpandedSections] = useState<string[]>([t('reportPage.sections.gettingStarted')]);
   const [searchQuery, setSearchQuery] = useState('');
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -1044,7 +1048,7 @@ export default function DocsPage() {
               </svg>
               <input
                 type="text"
-                placeholder="Search docs..."
+                placeholder={t('reportPage.searchPlaceholder')}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-12 py-2 text-sm bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-300 dark:focus:ring-gray-700"
@@ -1124,7 +1128,7 @@ export default function DocsPage() {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
               </svg>
-              Copy page
+              {t('reportPage.copyPage')}
             </button>
           </div>
         </main>
