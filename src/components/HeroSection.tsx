@@ -8,24 +8,24 @@ const categories = ['AI Apps', 'Websites', 'Business Apps', 'Personal Software']
 
 const projectTemplates = {
   'AI Apps': [
-    { id: 1, title: 'AI Chat', image: '/templates/ai-chat.png', author: 'AppNode' },
-    { id: 2, title: 'Brainstorming Buddy', image: '/templates/brainstorm.png', author: 'AppNode' },
-    { id: 3, title: 'Recipe Generator', image: '/templates/recipe.png', author: 'AppNode' },
+    { id: 1, title: 'AI Chat', image: '/templates/AIAPPS1.png', author: 'AppNode' },
+    { id: 2, title: 'Brainstorming Buddy', image: '/templates/AIAPPS2.png', author: 'AppNode' },
+    { id: 3, title: 'Recipe Generator', image: '/templates/AIAPPS3.png', author: 'AppNode' },
   ],
   'Websites': [
-    { id: 4, title: 'Portfolio Site', image: '/templates/portfolio.png', author: 'AppNode' },
-    { id: 5, title: 'Landing Page', image: '/templates/landing.png', author: 'AppNode' },
-    { id: 6, title: 'Blog Platform', image: '/templates/blog.png', author: 'AppNode' },
+    { id: 4, title: 'Portfolio Site', image: '/templates/WEBSITE5.png', author: 'AppNode' },
+    { id: 5, title: 'Landing Page', image: '/templates/WEBSITE6.png', author: 'AppNode' },
+    { id: 6, title: 'Blog Platform', image: '/templates/WEBSITE7.png', author: 'AppNode' },
   ],
   'Business Apps': [
-    { id: 7, title: 'CRM Dashboard', image: '/templates/crm.png', author: 'AppNode' },
-    { id: 8, title: 'Invoice Manager', image: '/templates/invoice.png', author: 'AppNode' },
-    { id: 9, title: 'Task Tracker', image: '/templates/tasks.png', author: 'AppNode' },
+    { id: 7, title: 'CRM Dashboard', image: '/templates/biznis2.png', author: 'AppNode' },
+    { id: 8, title: 'Invoice Manager', image: '/templates/biznis5.png', author: 'AppNode' },
+    { id: 9, title: 'Task Tracker', image: '/templates/biznis8.png', author: 'AppNode' },
   ],
   'Personal Software': [
-    { id: 10, title: 'Budget Tracker', image: '/templates/budget.png', author: 'AppNode' },
-    { id: 11, title: 'Habit Tracker', image: '/templates/habits.png', author: 'AppNode' },
-    { id: 12, title: 'Notes App', image: '/templates/notes.png', author: 'AppNode' },
+    { id: 10, title: 'Budget Tracker', image: '/templates/personal5.png', author: 'AppNode' },
+    { id: 11, title: 'Habit Tracker', image: '/templates/personal7.png', author: 'AppNode' },
+    { id: 12, title: 'Notes App', image: '/templates/Personal8.png', author: 'AppNode' },
   ],
 };
 
@@ -34,6 +34,7 @@ export default function HeroSection() {
   const [attachments, setAttachments] = useState<File[]>([]);
   const [images, setImages] = useState<File[]>([]);
   const [activeCategory, setActiveCategory] = useState('AI Apps');
+  const [viewImage, setViewImage] = useState<{image: string; title: string} | null>(null);
   const { t } = useTranslation();
   
   const attachmentInputRef = useRef<HTMLInputElement>(null);
@@ -241,7 +242,7 @@ export default function HeroSection() {
       </div>
 
       {/* Start with an idea section - wider than chat */}
-      <div className="relative z-10 w-full max-w-[900px] mx-auto mt-4 mb-4 px-4">
+      <div className="relative z-10 w-full max-w-[1100px] mx-auto mt-4 mb-4 px-4">
         <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">Start with an idea</h3>
           
           {/* Category tabs */}
@@ -262,19 +263,22 @@ export default function HeroSection() {
           </div>
 
           {/* Project cards */}
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-3 gap-4">
             {projectTemplates[activeCategory as keyof typeof projectTemplates].map((project) => (
-              <button
+              <div
                 key={project.id}
-                onClick={() => setPrompt(`Create a ${project.title.toLowerCase()} app`)}
-                className="group bg-white dark:bg-black border border-gray-200 dark:border-[#2a2a2a] rounded-lg p-2 text-left hover:border-gray-300 dark:hover:border-gray-600 transition-all hover:shadow-md"
+                className="group bg-white dark:bg-black border border-gray-200 dark:border-[#2a2a2a] rounded-xl p-4 text-left hover:border-gray-300 dark:hover:border-gray-600 transition-all hover:shadow-md"
               >
                 {/* Template image */}
-                <div className="aspect-[16/9] bg-gray-100 dark:bg-[#111111] rounded-md mb-1.5 flex items-center justify-center overflow-hidden">
+                <div 
+                  className="aspect-[16/10] bg-gray-50 dark:bg-[#111111] rounded-lg mb-3 flex items-center justify-center overflow-hidden cursor-pointer"
+                  onClick={() => setPrompt(`Create a ${project.title.toLowerCase()} app`)}
+                >
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
+                    style={{ imageRendering: 'auto' }}
                     onError={(e) => {
                       // Show placeholder if image fails to load
                       e.currentTarget.style.display = 'none';
@@ -287,17 +291,55 @@ export default function HeroSection() {
                     <polyline points="21 15 16 10 5 21" strokeWidth="1.5"/>
                   </svg>
                 </div>
-                <h4 className="text-xs font-medium text-gray-900 dark:text-white truncate">{project.title}</h4>
-                <div className="flex items-center justify-between mt-0.5">
-                  <div className="flex items-center gap-1">
-                    <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600"></div>
-                    <span className="text-[10px] text-gray-500 dark:text-gray-400">{project.author}</span>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h4 className="text-xs font-medium text-gray-900 dark:text-white truncate">{project.title}</h4>
+                    <div className="flex items-center gap-1 mt-0.5">
+                      <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600"></div>
+                      <span className="text-[10px] text-gray-500 dark:text-gray-400">{project.author}</span>
+                    </div>
                   </div>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setViewImage({ image: project.image, title: project.title });
+                    }}
+                    className="px-3 py-1.5 text-xs font-medium bg-gray-100 dark:bg-[#1f1f1f] text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-[#2a2a2a] transition-colors"
+                  >
+                    View
+                  </button>
                 </div>
-              </button>
+              </div>
             ))}
           </div>
         </div>
+
+      {/* Image Modal */}
+      {viewImage && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          onClick={() => setViewImage(null)}
+        >
+          <div className="relative max-w-[90vw] max-h-[90vh]">
+            <button
+              onClick={() => setViewImage(null)}
+              className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
+            >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <line x1="18" y1="6" x2="6" y2="18" strokeWidth="2" strokeLinecap="round"/>
+                <line x1="6" y1="6" x2="18" y2="18" strokeWidth="2" strokeLinecap="round"/>
+              </svg>
+            </button>
+            <img 
+              src={viewImage.image} 
+              alt={viewImage.title}
+              className="max-w-full max-h-[85vh] rounded-xl shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <p className="text-center text-white mt-4 text-lg font-medium">{viewImage.title}</p>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
