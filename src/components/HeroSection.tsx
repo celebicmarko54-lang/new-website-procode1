@@ -4,7 +4,7 @@ import { useState, useRef } from 'react';
 import { useTranslation } from '@/context/LanguageContext';
 
 // Sample project templates
-const categories = ['AI Apps', 'Websites', 'Business Apps', 'Personal Software'];
+const categories = ['AI Apps', 'Websites', 'Business Apps', 'Personal Software', 'Games'];
 
 const projectTemplates = {
   'AI Apps': [
@@ -26,6 +26,11 @@ const projectTemplates = {
     { id: 10, title: 'Budget Tracker', image: '/templates/personal5.png', author: 'AppNode' },
     { id: 11, title: 'Habit Tracker', image: '/templates/personal7.png', author: 'AppNode' },
     { id: 12, title: 'Notes App', image: '/templates/Personal8.png', author: 'AppNode' },
+  ],
+  'Games': [
+    { id: 13, title: 'Game 1', image: '/templates/GAME HOME1.png', author: 'AppNode' },
+    { id: 14, title: 'Game 2', image: '/templates/GAME HOME2.png', author: 'AppNode' },
+    { id: 15, title: 'Game 3', image: '/templates/GAME HOME3.png', author: 'AppNode' },
   ],
 };
 

@@ -55,6 +55,13 @@ const personalSoftwareProjects = [
   { id: 32, title: 'Goal Tracker', image: '/templates/Personal8.png', author: 'AppNode Team', category: 'Personal Software' },
 ];
 
+// Games projects with actual images
+const gamesProjects = [
+  { id: 33, title: 'Game 1', image: '/templates/GAME HOME1.png', author: 'AppNode Team', category: 'Games' },
+  { id: 34, title: 'Game 2', image: '/templates/GAME HOME2.png', author: 'AppNode Team', category: 'Games' },
+  { id: 35, title: 'Game 3', image: '/templates/GAME HOME3.png', author: 'AppNode Team', category: 'Games' },
+];
+
 export default function GalleryPage() {
   const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState('All');
@@ -66,7 +73,7 @@ export default function GalleryPage() {
   const getFilteredProjects = () => {
     switch (activeCategory) {
       case 'All':
-        return [...aiAppsProjects, ...websiteProjects, ...businessAppsProjects, ...personalSoftwareProjects];
+        return [...aiAppsProjects, ...websiteProjects, ...businessAppsProjects, ...personalSoftwareProjects, ...gamesProjects];
       case 'AI Apps':
         return aiAppsProjects;
       case 'Websites':
@@ -75,6 +82,8 @@ export default function GalleryPage() {
         return businessAppsProjects;
       case 'Personal Software':
         return personalSoftwareProjects;
+      case 'Games':
+        return gamesProjects;
       default:
         return [];
     }
@@ -83,7 +92,7 @@ export default function GalleryPage() {
   const filteredProjects = getFilteredProjects();
   
   // Calculate remaining empty slots - 8 slots for other categories to match AI Apps
-  const emptySlotCount = ['All', 'AI Apps', 'Websites', 'Business Apps', 'Personal Software'].includes(activeCategory) ? 0 : 8;
+  const emptySlotCount = ['All', 'AI Apps', 'Websites', 'Business Apps', 'Personal Software', 'Games'].includes(activeCategory) ? 0 : 8;
   const emptySlots = Array(emptySlotCount).fill(null);
 
   return (
