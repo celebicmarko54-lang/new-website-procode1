@@ -119,9 +119,7 @@ export default function SolutionsPage() {
             {t('solutionsPage.badge')}
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
-            {t('solutionsPage.titleStart')}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#ff6b6b] to-[#ee5a24]"> {t('solutionsPage.titleHighlight')} </span>
-            {t('solutionsPage.titleEnd')}
+            {t('solutionsPage.titleStart')} {t('solutionsPage.titleHighlight')} {t('solutionsPage.titleEnd')}
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             {t('solutionsPage.subtitle')}

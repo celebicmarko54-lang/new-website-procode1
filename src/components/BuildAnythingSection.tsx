@@ -56,55 +56,55 @@ const categories: CategoryCard[] = [
     image: '/templates/1.8.png'
   },
   {
-    name: 'Beverage Menu',
+    name: 'Luxury Fragrance',
     gradient: 'from-blue-500 to-indigo-600',
     icon: null,
     image: '/templates/1.9.png'
   },
   {
-    name: 'Finance Tracker',
+    name: 'Furniture Store',
     gradient: 'from-green-500 to-emerald-600',
     icon: null,
     image: '/templates/1.10.png'
   },
   {
-    name: 'Contact Manager',
+    name: 'Tech Dashboard',
     gradient: 'from-blue-600 to-indigo-700',
     icon: null,
     image: '/templates/1.11.png'
   },
   {
-    name: 'Travel Blog',
+    name: 'Tech Setup Blog',
     gradient: 'from-gray-800 to-gray-900',
     icon: null,
     image: '/templates/1.12.png'
   },
   {
-    name: 'Digital Narratives',
+    name: 'Entertainment Hub',
     gradient: 'from-gray-700 to-gray-800',
     icon: null,
     image: '/templates/1.13.png'
   },
   {
-    name: 'Digital Architect',
+    name: 'Piano App',
     gradient: 'from-teal-500 to-emerald-600',
     icon: null,
     image: '/templates/1.14.png'
   },
   {
-    name: 'Ink & Graphite',
+    name: 'Analytics Platform',
     gradient: 'from-indigo-500 to-blue-600',
     icon: null,
     image: '/templates/1.15.png'
   },
   {
-    name: 'Property Listings',
+    name: 'Sales Dashboard',
     gradient: 'from-orange-500 to-red-600',
     icon: null,
     image: '/templates/1.16.png'
   },
   {
-    name: 'Coastal Escapes',
+    name: 'Travel Experience',
     gradient: 'from-sky-500 to-blue-600',
     icon: null,
     image: '/templates/1.1.png'

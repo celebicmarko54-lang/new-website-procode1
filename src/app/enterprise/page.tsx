@@ -87,9 +87,7 @@ export default function EnterprisePage() {
               <span className="text-xs font-semibold text-white bg-gradient-to-r from-[#ff6b6b] to-[#ee5a24] px-2.5 py-0.5 rounded-full">{t('enterprisePage.badge')}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
-              {t('enterprisePage.title')}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#ff6b6b] to-[#ee5a24]"> {t('enterprisePage.titleHighlight')} </span>
-              {t('enterprisePage.titleEnd')}
+              {t('enterprisePage.title')} {t('enterprisePage.titleHighlight')} {t('enterprisePage.titleEnd')}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
               {t('enterprisePage.subtitle')}

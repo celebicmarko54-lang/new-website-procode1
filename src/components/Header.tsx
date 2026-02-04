@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import LanguageSelector from './LanguageSelector';
 import ThemeToggle from './ThemeToggle';
 import { useTranslation } from '@/context/LanguageContext';
@@ -16,8 +17,17 @@ export default function Header() {
       <div className="max-w-7xl ml-[5%] mr-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 gap-[15%]">
           {/* Logo */}
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-8 ml-4">
             <Link href="/" className="flex items-center gap-2">
+              <Image 
+                src="/templates/AppNodelogo.png" 
+                alt="AppNode Logo" 
+                width={90} 
+                height={90}
+                className="w-[90px] h-[90px] dark:invert dark:brightness-100"
+                quality={100}
+                unoptimized
+              />
               <span className="text-xl text-gray-900 dark:text-white tracking-tight font-medium">
                 AppNode
               </span>

@@ -56,7 +56,7 @@ export default function BusinessAppsPage() {
                 {t('useCasesBusinessApps.badge')}
               </div>
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-gray-900 dark:text-white">
-                {t('useCasesBusinessApps.titleStart')} <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#ff6b6b] to-[#ee5a24]">{t('useCasesBusinessApps.titleHighlight')}</span>
+                {t('useCasesBusinessApps.titleStart')} {t('useCasesBusinessApps.titleHighlight')}
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
                 {t('useCasesBusinessApps.subtitle')}

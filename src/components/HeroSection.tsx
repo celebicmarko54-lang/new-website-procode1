@@ -361,13 +361,11 @@ export default function HeroSection() {
               </svg>
             </button>
             <div className="relative w-[90vw] h-[75vh] max-w-4xl" onClick={(e) => e.stopPropagation()}>
-              <Image 
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img 
                 src={viewImage.image} 
                 alt={viewImage.title}
-                fill
-                className="object-contain rounded-xl shadow-2xl"
-                quality={90}
-                priority
+                className="w-full h-full object-contain rounded-xl shadow-2xl"
               />
             </div>
             <p className="text-center text-white mt-4 text-lg font-medium">{viewImage.title}</p>
