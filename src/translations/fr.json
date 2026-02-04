@@ -1228,6 +1228,8 @@
   "blogPage": {
     "badge": "Aperçus et mises à jour",
     "subtitle": "Aperçus, tutoriels et mises à jour de l'équipe AppNode. Restez en avance avec les dernières nouveautés du développement alimenté par l'IA.",
+    "searchPlaceholder": "Rechercher dans le blog...",
+    "noPostsFound": "Aucun article ne correspond à vos critères.",
     "latestPosts": "Derniers articles",
     "loadMorePosts": "Charger plus d'articles",
     "subscribeTitle": "Abonnez-vous à notre newsletter",

@@ -78,7 +78,7 @@ export default function PublishPage() {
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('productPublish.badge')}</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-gray-900 dark:text-white">
-              {t('productPublish.titleHighlight')} <span className="text-gray-500 dark:text-gray-400">{t('productPublish.title')}</span>
+              {t('productPublish.titleHighlight')} <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#ff6b6b] to-[#ee5a24]">{t('productPublish.title')}</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
               {t('productPublish.subtitle')}

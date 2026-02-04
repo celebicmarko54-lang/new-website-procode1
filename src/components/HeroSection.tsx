@@ -15,7 +15,7 @@ const projectTemplates = {
     { id: 3, title: 'Recipe Generator', image: '/templates/AIAPPS3.png', author: 'AppNode' },
   ],
   'Websites': [
-    { id: 4, title: 'Portfolio Site', image: '/templates/WEBSITE5.png', author: 'AppNode' },
+    { id: 4, title: 'Portfolio Site', image: '/templates/WEBSITE5NEW.png', author: 'AppNode' },
     { id: 5, title: 'Landing Page', image: '/templates/WEBSITE6.png', author: 'AppNode' },
     { id: 6, title: 'Blog Platform', image: '/templates/WEBSITE7.png', author: 'AppNode' },
   ],

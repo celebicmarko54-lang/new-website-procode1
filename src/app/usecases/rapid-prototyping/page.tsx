@@ -62,7 +62,7 @@ export default function RapidPrototypingPage() {
               {t('useCasesRapidPrototyping.badge')}
             </div>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-              {t('useCasesRapidPrototyping.titleStart')} <span className="text-gray-500 dark:text-gray-400">{t('useCasesRapidPrototyping.titleHighlight')}</span>
+              {t('useCasesRapidPrototyping.titleStart')} <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#ff6b6b] to-[#ee5a24]">{t('useCasesRapidPrototyping.titleHighlight')}</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
               {t('useCasesRapidPrototyping.subtitle')}

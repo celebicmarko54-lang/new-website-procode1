@@ -1227,6 +1227,8 @@
   "blogPage": {
     "badge": "Approfondimenti e aggiornamenti",
     "subtitle": "Approfondimenti, tutorial e aggiornamenti dal team AppNode. Rimani aggiornato sulle ultime novità nello sviluppo basato su IA.",
+    "searchPlaceholder": "Cerca nel blog...",
+    "noPostsFound": "Nessun articolo trovato corrispondente ai tuoi criteri.",
     "latestPosts": "Ultimi articoli",
     "loadMorePosts": "Carica altri articoli",
     "subscribeTitle": "Iscriviti alla nostra newsletter",

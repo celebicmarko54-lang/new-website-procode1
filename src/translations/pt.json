@@ -1228,6 +1228,8 @@
   "blogPage": {
     "badge": "Insights e atualizações",
     "subtitle": "Insights, tutoriais e atualizações da equipe AppNode. Fique por dentro das últimas novidades em desenvolvimento impulsionado por IA.",
+    "searchPlaceholder": "Pesquisar no blog...",
+    "noPostsFound": "Nenhuma publicação encontrada com seus critérios.",
     "latestPosts": "Últimas publicações",
     "loadMorePosts": "Carregar mais publicações",
     "subscribeTitle": "Assine nossa newsletter",

@@ -1227,6 +1227,8 @@
   "blogPage": {
     "badge": "Insight dan update",
     "subtitle": "Insight, tutorial, dan update dari tim AppNode. Tetap update dengan yang terbaru dalam pengembangan berbasis AI.",
+    "searchPlaceholder": "Cari di blog...",
+    "noPostsFound": "Tidak ditemukan posting yang sesuai dengan kriteria Anda.",
     "latestPosts": "Posting terbaru",
     "loadMorePosts": "Muat lebih banyak posting",
     "subscribeTitle": "Berlangganan newsletter kami",

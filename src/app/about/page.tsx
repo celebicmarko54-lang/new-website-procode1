@@ -52,7 +52,7 @@ export default function AboutPage() {
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300">About Us</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-gray-900 dark:text-white">
-              Empowering creators to <span className="text-gray-500 dark:text-gray-400">build anything</span>
+              Empowering creators to <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#ff6b6b] to-[#ee5a24]">build anything</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
               AppNode is on a mission to democratize software development. We believe everyone should have the power to bring their ideas to life, regardless of technical background.

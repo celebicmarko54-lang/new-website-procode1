@@ -25,7 +25,7 @@ const websiteProjects = [
   { id: 10, title: 'Landing Page', image: '/templates/WEBSITE2.png', author: 'AppNode Team', category: 'Websites' },
   { id: 11, title: 'Business Website', image: '/templates/WEBSITE3.png', author: 'AppNode Team', category: 'Websites' },
   { id: 12, title: 'E-commerce Store', image: '/templates/WEBSITE4.png', author: 'AppNode Team', category: 'Websites' },
-  { id: 13, title: 'Blog Platform', image: '/templates/WEBSITE5.png', author: 'AppNode Team', category: 'Websites' },
+  { id: 13, title: 'Blog Platform', image: '/templates/WEBSITE5NEW.png', author: 'AppNode Team', category: 'Websites' },
   { id: 14, title: 'Agency Website', image: '/templates/WEBSITE6.png', author: 'AppNode Team', category: 'Websites' },
   { id: 15, title: 'SaaS Dashboard', image: '/templates/WEBSITE7.png', author: 'AppNode Team', category: 'Websites' },
   { id: 16, title: 'Restaurant Site', image: '/templates/WEBSITE8.png', author: 'AppNode Team', category: 'Websites' },

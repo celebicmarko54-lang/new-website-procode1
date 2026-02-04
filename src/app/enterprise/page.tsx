@@ -88,7 +88,7 @@ export default function EnterprisePage() {
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
               {t('enterprisePage.title')}
-              <span className="bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', WebkitBackgroundClip: 'text' }}> {t('enterprisePage.titleHighlight')} </span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#ff6b6b] to-[#ee5a24]"> {t('enterprisePage.titleHighlight')} </span>
               {t('enterprisePage.titleEnd')}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">

@@ -1228,6 +1228,8 @@
   "blogPage": {
     "badge": "インサイトとアップデート",
     "subtitle": "AppNodeチームからのインサイト、チュートリアル、アップデート。AI駆動開発の最新情報をお届けします。",
+    "searchPlaceholder": "ブログを検索...",
+    "noPostsFound": "条件に一致する投稿が見つかりませんでした。",
     "latestPosts": "最新の投稿",
     "loadMorePosts": "投稿をもっと読み込む",
     "subscribeTitle": "ニュースレターを購読",

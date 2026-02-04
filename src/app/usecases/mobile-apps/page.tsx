@@ -238,49 +238,6 @@ export default function MobileAppsPage() {
           </div>
         </section>
 
-        {/* Platform Support */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 rounded-3xl p-8 md:p-12">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">One Codebase, All Platforms</h2>
-                <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                  Build once and deploy to iOS and Android. AppNode generates optimized, native code for each platform automatically.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <div className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700">
-                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                    </svg>
-                    <span className="font-medium text-gray-700 dark:text-gray-300">iOS</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700">
-                    <svg className="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M17.523 15.341c-.5 0-.909.406-.909.909 0 .5.409.909.909.909.5 0 .909-.409.909-.909a.909.909 0 0 0-.909-.909zm-11.046 0c-.5 0-.909.406-.909.909 0 .5.409.909.909.909.5 0 .909-.409.909-.909a.909.909 0 0 0-.909-.909zm11.319-5.659l1.931-3.342a.4.4 0 0 0-.146-.546.4.4 0 0 0-.546.146l-1.956 3.387a11.588 11.588 0 0 0-4.551-.918 11.591 11.591 0 0 0-4.551.918L5.021 5.94a.4.4 0 0 0-.546-.146.4.4 0 0 0-.146.546l1.931 3.342C3.273 11.319 1.364 14.252 1 17.682h22c-.364-3.43-2.273-6.363-5.204-7.999z"/>
-                    </svg>
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Android</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700">
-                    <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                    </svg>
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Web</span>
-                  </div>
-                </div>
-              </div>
-              <div className="flex justify-center gap-4">
-                {/* Mini phone mockups */}
-                <div className="w-32 h-56 bg-gray-900 rounded-2xl p-1.5 shadow-xl transform -rotate-6">
-                  <div className="w-full h-full bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl" />
-                </div>
-                <div className="w-32 h-56 bg-gray-900 rounded-2xl p-1.5 shadow-xl transform rotate-6">
-                  <div className="w-full h-full bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* CTA */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">{t('useCasesMobileApps.ctaTitle')}</h2>

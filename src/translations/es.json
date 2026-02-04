@@ -1228,6 +1228,8 @@
   "blogPage": {
     "badge": "Perspectivas y actualizaciones",
     "subtitle": "Perspectivas, tutoriales y actualizaciones del equipo de AppNode. Mantente al día con lo último en desarrollo impulsado por IA.",
+    "searchPlaceholder": "Buscar en el blog...",
+    "noPostsFound": "No se encontraron publicaciones que coincidan con tus criterios.",
     "latestPosts": "Últimas publicaciones",
     "loadMorePosts": "Cargar más publicaciones",
     "subscribeTitle": "Suscríbete a nuestro boletín",

@@ -9,262 +9,243 @@ import { useTranslation } from '@/context/LanguageContext';
 export default function BlogPage() {
   const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 10;
 
   const featuredPost = {
-    title: 'The Future of AI-Powered Development',
-    excerpt: 'How artificial intelligence is transforming the way we build software and what it means for developers worldwide.',
-    author: 'Sarah Chen',
-    date: 'Nov 28, 2025',
-    readTime: '8 min read',
-    category: 'AI & Future',
+    title: 'Introducing AppNode Agent: Build Apps 10x Faster with AI',
+    excerpt: 'We\'re excited to announce AppNode Agent, our most advanced AI development assistant. It understands your vision, generates production-ready code, and deploys your app automatically. With built-in testing, real-time collaboration, and one-click deployment, you can go from idea to live application in minutes. AppNode Agent represents a major leap forward in how software is built, making professional development accessible to everyone.',
+    date: 'Mon, Nov 25, 2025',
+    category: 'Featured',
   };
 
   const posts = [
     {
-      title: 'Introducing Smart Styles: AI-Powered Design',
-      excerpt: 'Our latest feature automatically creates beautiful, consistent styling for your apps.',
-      author: 'Mike Johnson',
-      date: 'Nov 25, 2025',
-      readTime: '5 min read',
+      title: 'Building Production Apps with AppNode + Supabase',
+      excerpt: 'Learn how to connect your AppNode projects to Supabase for powerful database functionality. Our new integration makes it easy to add authentication, real-time subscriptions, and PostgreSQL databases to any app you build.',
+      date: 'Fri, Nov 22, 2025',
       category: 'Product',
     },
     {
-      title: '10 Tips for Better AI Prompts',
-      excerpt: 'Learn how to write prompts that get you exactly what you want, every time.',
-      author: 'Emily Davis',
-      date: 'Nov 22, 2025',
-      readTime: '6 min read',
-      category: 'Tips',
+      title: 'Smart Styles: AI-Powered Design System for Your Apps',
+      excerpt: 'Introducing Smart Styles, our new feature that automatically creates beautiful, consistent designs across your entire application. No more manually adjusting colors, spacing, or typography.',
+      date: 'Wed, Nov 20, 2025',
+      category: 'Product',
     },
     {
-      title: 'Building for Scale: Performance Best Practices',
-      excerpt: 'Optimize your AppNode projects for speed and reliability.',
-      author: 'David Kim',
-      date: 'Nov 20, 2025',
-      readTime: '7 min read',
+      title: 'How AppNode Secures AI-Generated Code',
+      excerpt: 'AI-generated code is changing how software is built, but securing that code raises new challenges. This deep dive explores our hybrid approach combining static analysis with LLM-based reasoning for comprehensive security.',
+      date: 'Mon, Nov 18, 2025',
       category: 'Engineering',
     },
     {
-      title: 'Community Spotlight: Amazing Projects',
-      excerpt: 'Showcasing incredible applications built by our community members.',
-      author: 'Lisa Wang',
-      date: 'Nov 18, 2025',
-      readTime: '4 min read',
+      title: '10 Prompting Tips for Better AI-Generated Apps',
+      excerpt: 'Master the art of vibe coding with these practical prompting strategies. Learn how to communicate effectively with AppNode Agent to get exactly the app you envision, faster.',
+      date: 'Fri, Nov 15, 2025',
+      category: 'Tips',
+    },
+    {
+      title: 'Community Spotlight: Apps Built This Month',
+      excerpt: 'Showcasing incredible applications built by our community. From SaaS dashboards to mobile apps, see what\'s possible when creativity meets AI-powered development.',
+      date: 'Wed, Nov 13, 2025',
       category: 'Community',
     },
     {
-      title: 'Security Best Practices for Your Apps',
-      excerpt: 'Keep your applications and user data safe with these essential tips.',
-      author: 'Alex Rivera',
-      date: 'Nov 15, 2025',
-      readTime: '9 min read',
-      category: 'Security',
+      title: 'Real-time Collaboration: Build Together, Ship Faster',
+      excerpt: 'Multiple team members can now edit the same project simultaneously. See changes as they happen, leave comments on components, and manage version history with ease.',
+      date: 'Mon, Nov 11, 2025',
+      category: 'Product',
     },
     {
-      title: 'From Idea to Launch in One Day',
-      excerpt: 'A step-by-step guide to shipping your first app in record time.',
-      author: 'Jordan Lee',
-      date: 'Nov 12, 2025',
-      readTime: '6 min read',
-      category: 'Tutorial',
+      title: 'From Zero to Production in One Day: A Case Study',
+      excerpt: 'How a solo founder built and launched a complete SaaS application using AppNode in under 8 hours. A step-by-step breakdown of the entire process.',
+      date: 'Fri, Nov 8, 2025',
+      category: 'Community',
+    },
+    {
+      title: 'Understanding AppNode\'s Component Architecture',
+      excerpt: 'A technical deep dive into how AppNode structures generated code, manages state, and ensures optimal performance for applications of any scale.',
+      date: 'Wed, Nov 6, 2025',
+      category: 'Engineering',
+    },
+    {
+      title: 'Mobile Apps on AppNode: iOS and Android Coming Soon',
+      excerpt: 'We\'re working on native mobile experiences so you can build apps without learning Swift or Kotlin. Our upcoming mobile export feature will generate optimized apps ready for the App Store and Google Play. Stay tuned!',
+      date: 'Mon, Nov 4, 2025',
+      category: 'Product',
+    },
+    {
+      title: 'AppNode for Enterprise: Security, Compliance, and Scale',
+      excerpt: 'Announcing enterprise-grade features including SSO, audit logs, custom deployment options, and dedicated support for organizations building at scale.',
+      date: 'Fri, Nov 1, 2025',
+      category: 'News',
+    },
+    {
+      title: 'The Future of No-Code: Where We\'re Headed',
+      excerpt: 'Our vision for the next generation of software development. AI agents, autonomous testing, and the democratization of building.',
+      date: 'Wed, Oct 30, 2025',
+      category: 'AI',
+    },
+    {
+      title: 'Performance Optimization Guide for AppNode Apps',
+      excerpt: 'Best practices for building fast, responsive applications. Learn about lazy loading, code splitting, and caching strategies.',
+      date: 'Mon, Oct 28, 2025',
+      category: 'Engineering',
     },
   ];
 
   const categories = [
-    { name: 'All', count: 7 },
-    { name: 'Product', count: 1 },
-    { name: 'Engineering', count: 1 },
-    { name: 'Tutorial', count: 1 },
-    { name: 'Tips', count: 1 },
-    { name: 'Community', count: 1 },
-    { name: 'AI & Future', count: 1 },
+    { name: 'All', slug: 'all' },
+    { name: 'AI', slug: 'ai' },
+    { name: 'Product', slug: 'product' },
+    { name: 'Engineering', slug: 'engineering' },
+    { name: 'Community', slug: 'community' },
+    { name: 'Tips', slug: 'tips' },
+    { name: 'News', slug: 'news' },
   ];
 
-  const filteredPosts = activeCategory === 'All' 
-    ? posts 
-    : posts.filter(p => p.category === activeCategory);
+  // Filter posts by category and search
+  const filteredPosts = posts.filter(post => {
+    const matchesCategory = activeCategory === 'All' || post.category === activeCategory;
+    const matchesSearch = searchQuery === '' || 
+      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  // Pagination
+  const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+  const paginatedPosts = filteredPosts.slice(
+    (currentPage - 1) * postsPerPage,
+    currentPage * postsPerPage
+  );
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-black">
+    <div className="min-h-screen bg-white dark:bg-[#0d1117]">
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 dark:bg-black border border-gray-300 dark:border-gray-700 mb-8">
-            <svg className="w-4 h-4 text-gray-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-            </svg>
-            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('blogPage.badge')}</span>
-          </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
-            AppNode
-            <span className="block bg-clip-text text-transparent" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', WebkitBackgroundClip: 'text' }}>
-              Blog
-            </span>
-          </h1>
-          
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-            {t('blogPage.subtitle')}
-          </p>
-        </div>
-      </section>
-
-      {/* Category Filter */}
-      <section className="px-6 pb-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
-              <button
-                key={category.name}
-                onClick={() => setActiveCategory(category.name)}
-                className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
-                  activeCategory === category.name
-                    ? 'text-white shadow-lg'
-                    : 'bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white border border-gray-200 dark:border-gray-700 hover:border-gray-300'
-                }`}
-                style={activeCategory === category.name ? { background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' } : {}}
-              >
-                {category.name}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Post */}
-      <section className="px-6 pb-16">
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-white dark:bg-black rounded-3xl border border-gray-100 dark:border-gray-800 overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer group">
-            <div className="grid md:grid-cols-2">
-              <div className="aspect-square md:aspect-auto bg-gray-100 dark:bg-black flex items-center justify-center p-12">
-                <div className="w-32 h-32 bg-white/80 dark:bg-gray-800/80 backdrop-blur rounded-3xl flex items-center justify-center text-gray-900 dark:text-white group-hover:scale-110 transition-transform">
-                  <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
-                </div>
+      <main className="pt-24 pb-16">
+        {/* Featured Post */}
+        <section className="max-w-5xl mx-auto px-6 mb-12">
+          <Link href="#" className="group block">
+            <article className="py-8 border-b-2 border-gray-200 dark:border-gray-800">
+              <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-4">
+                <span>{featuredPost.date}</span>
+                <span>•</span>
+                <span className="text-orange-500 dark:text-orange-400 font-medium">{featuredPost.category}</span>
               </div>
-              <div className="p-8 md:p-12 flex flex-col justify-center">
-                <span className="text-sm font-medium text-gray-900 dark:text-gray-300 mb-3">{featuredPost.category}</span>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
-                  {featuredPost.title}
-                </h2>
-                <p className="text-gray-600 dark:text-gray-400 mb-6 text-lg leading-relaxed">{featuredPost.excerpt}</p>
-                <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-500">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-gray-800 dark:bg-gray-900 rounded-full flex items-center justify-center text-white text-xs font-semibold">
-                      {featuredPost.author.split(' ').map(n => n[0]).join('')}
-                    </div>
-                    <span className="font-medium text-gray-700 dark:text-gray-300">{featuredPost.author}</span>
-                  </div>
-                  <span>•</span>
-                  <span>{featuredPost.date}</span>
-                  <span>•</span>
-                  <span>{featuredPost.readTime}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors">
+                {featuredPost.title}
+              </h1>
+              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-4xl">
+                {featuredPost.excerpt}
+              </p>
+            </article>
+          </Link>
+        </section>
 
-      {/* Posts Grid */}
-      <section className="px-6 pb-20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">{t('blogPage.latestPosts')}</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPosts.map((post, index) => (
-              <article
-                key={index}
-                className="group bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-xl transition-all duration-300 cursor-pointer"
-              >
-                <div className="aspect-[2/1] bg-gray-50 dark:bg-black flex items-center justify-center">
-                  <div className="w-16 h-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur rounded-2xl flex items-center justify-center text-gray-900 dark:text-white group-hover:scale-110 transition-transform">
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <span className="text-xs font-medium text-gray-900 dark:text-gray-300 bg-gray-50 dark:bg-gray-800 px-3 py-1 rounded-full">
-                    {post.category}
-                  </span>
-                  <h3 className="font-semibold text-gray-900 dark:text-white mt-4 mb-2 group-hover:text-gray-900 dark:group-hover:text-white transition-colors text-lg">
-                    {post.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">{post.excerpt}</p>
-                  <div className="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-500">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">{post.author}</span>
-                    <span>•</span>
-                    <span>{post.date}</span>
-                    <span>•</span>
-                    <span>{post.readTime}</span>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          {/* Load More */}
-          <div className="text-center mt-12">
-            <button className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:border-gray-400 dark:hover:border-gray-500 hover:text-gray-900 dark:hover:text-white transition-all duration-300">
-              {t('blogPage.loadMorePosts')}
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        {/* Search and Categories */}
+        <section className="max-w-5xl mx-auto px-6 mb-8">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+            {/* Search */}
+            <div className="relative w-full sm:w-auto">
+              <input
+                type="text"
+                placeholder={t('blogPage.searchPlaceholder') || 'Search the blog...'}
+                value={searchQuery}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  setCurrentPage(1);
+                }}
+                className="w-full sm:w-72 px-4 py-2.5 pl-10 bg-gray-50 dark:bg-[#161b22] border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 focus:border-transparent transition-all"
+              />
+              <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
-            </button>
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* Newsletter Section */}
-      <section className="py-20 px-6 bg-gray-50 dark:bg-black border-y border-gray-100 dark:border-gray-800">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            {t('blogPage.subscribeTitle')}
-          </h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
-            {t('blogPage.subscribeDescription')}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder={t('blogPage.emailPlaceholder')}
-              className="flex-1 px-5 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:border-gray-400 dark:focus:border-gray-500 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-800"
-            />
-            <button className="px-6 py-3 text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}>
-              {t('blogPage.subscribe')}
-            </button>
+            {/* Category Filter */}
+            <nav className="flex flex-wrap items-center gap-1 overflow-x-auto pb-2 sm:pb-0">
+              {categories.map((category) => (
+                <button
+                  key={category.name}
+                  onClick={() => {
+                    setActiveCategory(category.name);
+                    setCurrentPage(1);
+                  }}
+                  className={`px-4 py-2 text-sm font-medium rounded-lg whitespace-nowrap transition-all ${
+                    activeCategory === category.name
+                      ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900'
+                      : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
+                  }`}
+                >
+                  {category.name}
+                </button>
+              ))}
+            </nav>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-24 px-6 bg-gray-900 dark:bg-black">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            {t('blogPage.ctaTitle')}
-          </h2>
-          <p className="text-xl text-gray-100 mb-12 max-w-2xl mx-auto">
-            {t('blogPage.ctaDescription')}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/signup"
-              className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg"
-            >
-              {t('blogPage.getStartedFree')}
-            </Link>
-            <Link
-              href="/learn"
-              className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
-            >
-              {t('blogPage.browseCourses')}
-            </Link>
+        {/* Posts List */}
+        <section className="max-w-5xl mx-auto px-6">
+          <div className="divide-y divide-gray-200 dark:divide-gray-800">
+            {paginatedPosts.map((post, index) => (
+              <Link href="#" key={index} className="group block">
+                <article className="py-8">
+                  <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-3">
+                    <span>{post.date}</span>
+                  </div>
+                  <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors leading-snug">
+                    {post.title}
+                  </h2>
+                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                </article>
+              </Link>
+            ))}
           </div>
-        </div>
-      </section>
+
+          {/* Empty State */}
+          {paginatedPosts.length === 0 && (
+            <div className="py-16 text-center">
+              <p className="text-gray-500 dark:text-gray-400 text-lg">
+                {t('blogPage.noPostsFound') || 'No posts found matching your criteria.'}
+              </p>
+            </div>
+          )}
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <nav className="flex items-center justify-center gap-2 pt-12 pb-8">
+              {Array.from({ length: Math.min(totalPages, 5) }, (_, i) => i + 1).map((page) => (
+                <button
+                  key={page}
+                  onClick={() => setCurrentPage(page)}
+                  className={`w-10 h-10 flex items-center justify-center rounded-lg font-medium transition-all ${
+                    currentPage === page
+                      ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900'
+                      : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white'
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+              {totalPages > 1 && currentPage < totalPages && (
+                <button
+                  onClick={() => setCurrentPage(currentPage + 1)}
+                  className="w-10 h-10 flex items-center justify-center rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              )}
+            </nav>
+          )}
+        </section>
+      </main>
 
       <Footer />
     </div>

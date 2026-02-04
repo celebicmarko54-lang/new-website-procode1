@@ -1228,6 +1228,8 @@
   "blogPage": {
     "badge": "Einblicke & Updates",
     "subtitle": "Einblicke, Tutorials und Updates vom AppNode-Team. Bleiben Sie auf dem Laufenden mit den neuesten Entwicklungen in der KI-gestützten Entwicklung.",
+    "searchPlaceholder": "Blog durchsuchen...",
+    "noPostsFound": "Keine Beiträge gefunden, die Ihren Kriterien entsprechen.",
     "latestPosts": "Neueste Beiträge",
     "loadMorePosts": "Mehr Beiträge laden",
     "subscribeTitle": "Newsletter abonnieren",

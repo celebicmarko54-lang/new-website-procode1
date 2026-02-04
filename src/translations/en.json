@@ -857,6 +857,8 @@
   "blogPage": {
     "badge": "Insights & Updates",
     "subtitle": "Insights, tutorials, and updates from the AppNode team. Stay ahead with the latest in AI-powered development.",
+    "searchPlaceholder": "Search the blog...",
+    "noPostsFound": "No posts found matching your criteria.",
     "latestPosts": "Latest Posts",
     "loadMorePosts": "Load More Posts",
     "subscribeTitle": "Subscribe to Our Newsletter",

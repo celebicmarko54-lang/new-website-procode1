@@ -159,7 +159,7 @@ export default function IntegrationsPage() {
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('productIntegrations.badge')}</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-gray-900 dark:text-white">
-              {t('productIntegrations.title')} <span className="text-gray-900 dark:text-white">{t('productIntegrations.titleHighlight')}</span>
+              {t('productIntegrations.title')} <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#ff6b6b] to-[#ee5a24]">{t('productIntegrations.titleHighlight')}</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
               {t('productIntegrations.subtitle')}
