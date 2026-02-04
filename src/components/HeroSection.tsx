@@ -1,6 +1,8 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslation } from '@/context/LanguageContext';
 
 // Sample project templates
@@ -28,11 +30,14 @@ const projectTemplates = {
     { id: 12, title: 'Notes App', image: '/templates/Personal8.png', author: 'AppNode' },
   ],
   'Games': [
-    { id: 13, title: 'Game 1', image: '/templates/GAME HOME1.png', author: 'AppNode' },
-    { id: 14, title: 'Game 2', image: '/templates/GAME HOME2.png', author: 'AppNode' },
-    { id: 15, title: 'Game 3', image: '/templates/GAME HOME3.png', author: 'AppNode' },
+    { id: 13, title: 'Game 1', image: '/templates/GAME1.png', author: 'AppNode' },
+    { id: 14, title: 'Game 2', image: '/templates/GAME2.png', author: 'AppNode' },
+    { id: 15, title: 'Game 3', image: '/templates/GAME3.png', author: 'AppNode' },
   ],
 };
+
+// Get all images for preloading
+const allTemplateImages = Object.values(projectTemplates).flat().map(p => p.image);
 
 export default function HeroSection() {
   const [prompt, setPrompt] = useState('');
@@ -44,6 +49,14 @@ export default function HeroSection() {
   
   const attachmentInputRef = useRef<HTMLInputElement>(null);
   const imageInputRef = useRef<HTMLInputElement>(null);
+
+  // Preload all template images on mount
+  useEffect(() => {
+    allTemplateImages.forEach((src) => {
+      const img = new window.Image();
+      img.src = src;
+    });
+  }, []);
 
   const handleSubmit = () => {
     if (!prompt.trim() && attachments.length === 0 && images.length === 0) return;
@@ -267,55 +280,67 @@ export default function HeroSection() {
             ))}
           </div>
 
-          {/* Project cards */}
-          <div className="grid grid-cols-3 gap-4">
-            {projectTemplates[activeCategory as keyof typeof projectTemplates].map((project) => (
-              <div
-                key={project.id}
-                className="group bg-white dark:bg-black border border-gray-200 dark:border-[#2a2a2a] rounded-xl p-4 text-left hover:border-gray-300 dark:hover:border-gray-600 transition-all hover:shadow-md"
-              >
-                {/* Template image */}
-                <div 
-                  className="aspect-[16/10] bg-gray-50 dark:bg-[#111111] rounded-lg mb-3 flex items-center justify-center overflow-hidden cursor-pointer"
-                  onClick={() => setPrompt(`Create a ${project.title.toLowerCase()} app`)}
+          {/* Project cards - Render ALL categories, show/hide based on active */}
+          {categories.map((category) => (
+            <div 
+              key={category}
+              className={`grid grid-cols-3 gap-4 ${activeCategory === category ? 'block' : 'hidden'}`}
+            >
+              {projectTemplates[category as keyof typeof projectTemplates].map((project, index) => (
+                <div
+                  key={project.id}
+                  className="group bg-white dark:bg-black border border-gray-200 dark:border-[#2a2a2a] rounded-xl p-4 text-left hover:border-gray-300 dark:hover:border-gray-600 transition-all hover:shadow-md"
                 >
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover object-top"
-                    style={{ imageRendering: 'auto' }}
-                    onError={(e) => {
-                      // Show placeholder if image fails to load
-                      e.currentTarget.style.display = 'none';
-                      e.currentTarget.nextElementSibling?.classList.remove('hidden');
-                    }}
-                  />
-                  <svg className="w-6 h-6 text-gray-300 dark:text-gray-700 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" strokeWidth="1.5"/>
-                    <circle cx="8.5" cy="8.5" r="1.5" strokeWidth="1.5"/>
-                    <polyline points="21 15 16 10 5 21" strokeWidth="1.5"/>
-                  </svg>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h4 className="text-xs font-medium text-gray-900 dark:text-white truncate">{project.title}</h4>
-                    <div className="flex items-center gap-1 mt-0.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600"></div>
-                      <span className="text-[10px] text-gray-500 dark:text-gray-400">{project.author}</span>
-                    </div>
-                  </div>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setViewImage({ image: project.image, title: project.title });
-                    }}
-                    className="px-3 py-1.5 text-xs font-medium bg-gray-100 dark:bg-[#1f1f1f] text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-[#2a2a2a] transition-colors"
+                  {/* Template image */}
+                  <div 
+                    className="aspect-[16/10] bg-gray-50 dark:bg-[#111111] rounded-lg mb-3 overflow-hidden cursor-pointer relative"
+                    onClick={() => setPrompt(`Create a ${project.title.toLowerCase()} app`)}
                   >
-                    View
-                  </button>
+                    <Image 
+                      src={project.image} 
+                      alt={project.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover object-top"
+                      priority
+                      quality={75}
+                    />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h4 className="text-xs font-medium text-gray-900 dark:text-white truncate">{project.title}</h4>
+                      <div className="flex items-center gap-1 mt-0.5">
+                        <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600"></div>
+                        <span className="text-[10px] text-gray-500 dark:text-gray-400">{project.author}</span>
+                      </div>
+                    </div>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setViewImage({ image: project.image, title: project.title });
+                      }}
+                      className="px-3 py-1.5 text-xs font-medium bg-gray-100 dark:bg-[#1f1f1f] text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-[#2a2a2a] transition-colors"
+                    >
+                      View
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          ))}
+          
+          {/* See all link */}
+          <div className="flex justify-end mt-3">
+            <Link 
+              href="/gallery"
+              className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors flex items-center gap-1"
+            >
+              See all
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </Link>
           </div>
         </div>
 
@@ -335,12 +360,16 @@ export default function HeroSection() {
                 <line x1="6" y1="6" x2="18" y2="18" strokeWidth="2" strokeLinecap="round"/>
               </svg>
             </button>
-            <img 
-              src={viewImage.image} 
-              alt={viewImage.title}
-              className="max-w-full max-h-[85vh] rounded-xl shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
-            />
+            <div className="relative w-[90vw] h-[75vh] max-w-4xl" onClick={(e) => e.stopPropagation()}>
+              <Image 
+                src={viewImage.image} 
+                alt={viewImage.title}
+                fill
+                className="object-contain rounded-xl shadow-2xl"
+                quality={90}
+                priority
+              />
+            </div>
             <p className="text-center text-white mt-4 text-lg font-medium">{viewImage.title}</p>
           </div>
         </div>

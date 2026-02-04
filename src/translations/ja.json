@@ -76,8 +76,8 @@
     }
   },
   "buildAnything": {
-    "title": "想像するものすべてを構築",
-    "subtitle": "シンプルなランディングページから複雑なエンタープライズアプリケーションまで、AppNodeがすべてを処理します。",
+    "title": "制限なくあらゆるアプリケーションを構築",
+    "subtitle": "構築を始めよう。収益を得よう。今日から。",
     "exploreAll": "すべてのテンプレートを見る",
     "webApps": {
       "title": "Webアプリケーション",
@@ -323,7 +323,13 @@
       "password": "パスワード",
       "forgotPassword": "パスワードをお忘れですか？",
       "noAccount": "アカウントをお持ちでないですか？",
-      "signUpLink": "サインアップ"
+      "signUpLink": "サインアップ",
+      "invalidCredentials": "メールアドレスまたはパスワードが無効です",
+      "loggingIn": "ログイン中...",
+      "orContinueWith": "または続行",
+      "decorativeTitle": "何でも構築。",
+      "decorativeSubtitle": "かつてないほど速く。",
+      "decorativeDescription": "AIでアプリを作成する最も簡単な方法。"
     },
     "signup": {
       "title": "アカウントを作成",
@@ -334,7 +340,24 @@
       "confirmPassword": "パスワードを確認",
       "hasAccount": "すでにアカウントをお持ちですか？",
       "loginLink": "ログイン",
-      "terms": "サインアップすることで、利用規約とプライバシーポリシーに同意したことになります。"
+      "terms": "サインアップすることで、利用規約とプライバシーポリシーに同意したことになります。",
+      "decorativeTitle": "今日から構築を始めましょう",
+      "decorativeDescription": "無料アカウントを作成し、AIで数分で素晴らしいアプリを構築しましょう。",
+      "step2Title": "プロフィールをカスタマイズ",
+      "step2Subtitle": "あなたを表すアバターの色を選択してください",
+      "step3Title": "自己紹介",
+      "step3Subtitle": "これにより、エクスペリエンスをパーソナライズできます",
+      "roleQuestion": "あなたの役割を最もよく表すものは？",
+      "company": "会社名",
+      "creatingAccount": "アカウント作成中...",
+      "createAccount": "アカウントを作成"
+    },
+    "features": {
+      "aiPowered": "AI搭載開発",
+      "shipFast": "数ヶ月ではなく数分でリリース",
+      "freeGenerations": "2回の無料生成で開始",
+      "noCreditCard": "クレジットカード不要",
+      "fullAccess": "すべてのテンプレートにフルアクセス"
     }
   },
   "docs": {
@@ -807,6 +830,798 @@
       "roadmapItem4": "ネイティブモバイルアプリビルダー",
       "roadmapItem5": "APIマーケットプレイス",
       "roadmapItem6": "高度な分析ダッシュボード"
+    }
+  },
+  "productAgent": {
+    "badge": "AI駆動開発",
+    "title": "AppNode",
+    "titleHighlight": "Agent",
+    "subtitle": "プロダクション対応のコードを書き、反復しながら改善し、構築中は邪魔をしないAIコーディングコンパニオン。欲しいものを説明すれば、Agentが提供します。",
+    "startBuilding": "無料で始める",
+    "howItWorks": "Agentの仕組み",
+    "demo": {
+      "you": "あなた",
+      "agent": "Agent",
+      "prompt": "ユーザー分析、チャート、リアルタイムデータを備えたダッシュボードを作成",
+      "response": "完全な分析ダッシュボードを作成します...",
+      "writing": "Agentがコードを書いています...",
+      "creating": "コンポーネントの作成、データフェッチの設定..."
+    },
+    "step1": {
+      "title": "ビジョンを説明する",
+      "description": "構築したいものを簡単な言葉でAgentに伝えてください。技術的な専門用語は必要ありません - 同僚に説明するようにアプリを説明するだけです。"
+    },
+    "step2": {
+      "title": "構築を見守る",
+      "description": "Agentがリアルタイムでプロダクション対応のコードを書きます。ファイルが作成され、コンポーネントが構造化され、アプリが形になっていくのをご覧ください。"
+    },
+    "step3": {
+      "title": "反復と改善",
+      "description": "完璧ではない？Agentに何を変えるか伝えるだけです。コンテキストを理解し、機能しているものを保持しながらスマートな調整を行います。"
+    },
+    "autonomous": {
+      "title": "自律的な長時間ビルド",
+      "description": "Agentはスニペットを書くだけではありません - 完全なアプリケーションを自律的に構築できます。複雑なプロジェクト構造を設定し、複数のファイルにわたって機能を実装し、依存関係を自動的に管理します。",
+      "item1": "フルスタックアプリケーション",
+      "item2": "マルチファイルリファクタリング",
+      "item3": "テスト生成",
+      "item4": "ドキュメント作成",
+      "item5": "バグ修正とデバッグ"
+    },
+    "stats": {
+      "filesCreated": "作成されたファイル",
+      "linesOfCode": "コード行数",
+      "buildTime": "ビルド時間"
+    },
+    "cta": {
+      "title": "AIで構築する準備はできましたか？",
+      "subtitle": "今日からAppNode Agentで次のプロジェクトの構築を始めましょう。無料で開始、クレジットカード不要。"
+    }
+  },
+  "productDatabase": {
+    "badge": "データ管理",
+    "title": "組み込み",
+    "titleHighlight": "データベース",
+    "subtitle": "設定なしでデータを保存・管理。AppNodeは初日からパワフルでスケーラブルなデータベースを提供します。",
+    "getStarted": "無料で始める",
+    "readDocs": "ドキュメントを読む",
+    "stats": {
+      "uptime": "アップタイムSLA",
+      "latency": "クエリレイテンシー",
+      "scalability": "スケーラビリティ",
+      "configuration": "設定"
+    },
+    "cta": {
+      "title": "今日からデータを保存",
+      "subtitle": "インフラの心配なしにデータ駆動アプリケーションを構築。"
+    }
+  },
+  "productDesign": {
+    "badge": "ビジュアル開発",
+    "title": "精密な",
+    "titleHighlight": "デザイン",
+    "subtitle": "アプリをビジョン通りに仕上げるための詳細なコントロール。デザインをインポートするか、デザインシステムを統合し、ライブビジュアルエディタで改良し、即座に公開。",
+    "tryDesignTools": "デザインツールを試す",
+    "visualEditor": "ビジュアルエディタ",
+    "components": "コンポーネント",
+    "properties": "プロパティ",
+    "width": "幅",
+    "background": "背景",
+    "borderRadius": "角丸",
+    "featuresTitle": "デザイン機能",
+    "startDesigning": "デザインを始める",
+    "features": {
+      "liveEditor": {
+        "title": "ライブビジュアルエディタ",
+        "description": "リアルタイムプレビューでコンポーネントを視覚的に編集。見たものがそのままユーザーに届きます。"
+      },
+      "designSystem": {
+        "title": "デザインシステムのインポート",
+        "description": "既存のFigmaデザインやブランドガイドラインをインポートして即座に適用。"
+      },
+      "componentLibrary": {
+        "title": "コンポーネントライブラリ",
+        "description": "ベストプラクティスに従った、豊富な事前構築済みカスタマイズ可能なコンポーネントにアクセス。"
+      },
+      "responsive": {
+        "title": "レスポンシブコントロール",
+        "description": "直感的なブレークポイントコントロールとモバイルプレビューであらゆる画面サイズに対応したデザイン。"
+      },
+      "pixelPerfect": {
+        "title": "ピクセルパーフェクト編集",
+        "description": "精密なコントロールでスペーシング、タイポグラフィ、カラーを微調整。"
+      },
+      "instantDeploy": {
+        "title": "即座のデプロイ",
+        "description": "デザインを即座に公開。ビルドステップなし、デプロイ設定不要。"
+      }
+    },
+    "cta": {
+      "title": "美しいアプリをより速く設計",
+      "subtitle": "AppNodeのパワフルなビジュアルツールでデザインビジョンを現実に。"
+    }
+  },
+  "productIntegrations": {
+    "badge": "すべてを接続",
+    "title": "パワフルな",
+    "titleHighlight": "インテグレーション",
+    "subtitle": "お気に入りのツールやサービスに設定なしで接続。AppNodeのインテグレーションはクリーンで安全に接続します。",
+    "browseAll": "すべてのインテグレーションを見る",
+    "popularIntegrations": "人気のインテグレーション",
+    "getStarted": "無料で始める",
+    "categories": {
+      "ai": "AI",
+      "payments": "決済",
+      "communication": "コミュニケーション",
+      "email": "メール",
+      "cdn": "CDN",
+      "versionControl": "バージョン管理",
+      "cloud": "クラウド",
+      "deployment": "デプロイ",
+      "database": "データベース"
+    },
+    "integrations": {
+      "openai": "GPT-4、DALL-Eなど",
+      "stripe": "グローバルに決済を受け付け",
+      "twilio": "SMS、音声、ビデオ",
+      "sendgrid": "トランザクションメール",
+      "cloudflare": "エッジコンピューティングとCDN",
+      "github": "コードホスティングとCI/CD",
+      "slack": "チームメッセージング",
+      "googleCloud": "クラウドインフラ",
+      "aws": "Amazon Web Services",
+      "anthropic": "Claude AIアシスタント",
+      "vercel": "フロントエンドデプロイ",
+      "supabase": "Backend as a service"
+    },
+    "howItWorks": {
+      "title": "インテグレーションの仕組み",
+      "step1": {
+        "title": "インテグレーションを選択",
+        "description": "カタログを閲覧し、クリックして必要なインテグレーションを有効化。"
+      },
+      "step2": {
+        "title": "一度だけ認証",
+        "description": "OAuthでアカウントを安全に接続。認証情報は安全に保管されます。"
+      },
+      "step3": {
+        "title": "使用開始",
+        "description": "インテグレーションはすぐにコードで使用可能。"
+      }
+    },
+    "cta": {
+      "title": "今日からツールを接続",
+      "subtitle": "既に使用しているサービスと統合したパワフルなアプリを構築。"
+    }
+  },
+  "productMobile": {
+    "badge": "外出先で開発",
+    "title": "AppNode",
+    "titleHighlight": "モバイル",
+    "subtitle": "どこからでもアプリを構築、編集、デプロイ。AppNodeの全パワーをポケットに。iOSとAndroidに最適化。",
+    "appStore": "App Store",
+    "playStore": "Play Store",
+    "live": "ライブ",
+    "run": "実行",
+    "deploy": "デプロイ",
+    "output": "出力",
+    "featuresTitle": "フルパワー、どこでも",
+    "downloadIOS": "iOSでダウンロード",
+    "downloadAndroid": "Androidでダウンロード",
+    "features": {
+      "codeEditor": {
+        "title": "フル機能コードエディタ",
+        "description": "シンタックスハイライト、オートコンプリート、マルチファイルサポートを備えた本格的なコードエディタ。"
+      },
+      "oneTapDeploy": {
+        "title": "ワンタップデプロイ",
+        "description": "スマホから即座に変更をデプロイ。数秒でアプリが本番環境に。"
+      },
+      "realTimeSync": {
+        "title": "リアルタイム同期",
+        "description": "プロジェクトはすべてのデバイス間で同期。デスクトップで開始し、モバイルで続行。"
+      },
+      "aiAssistant": {
+        "title": "AIアシスタント",
+        "description": "モバイルでもAIによるコード作成支援を受けられます。音声入力対応。"
+      },
+      "liveAnalytics": {
+        "title": "ライブ分析",
+        "description": "外出先でアプリのパフォーマンス、エラー、ユーザーメトリクスを監視。"
+      },
+      "teamCollaboration": {
+        "title": "チームコラボレーション",
+        "description": "どこからでもPRをレビュー、コードにコメント、チームとコラボ。"
+      }
+    },
+    "cta": {
+      "title": "どこからでもコーディング",
+      "subtitle": "AppNodeモバイルをダウンロードして、開発ワークフローを持ち歩こう。"
+    }
+  },
+  "productPublish": {
+    "badge": "デプロイ",
+    "title": "即座に",
+    "titleHighlight": "公開",
+    "subtitle": "ワンクリックでアプリをデプロイ。カスタムドメイン、SSL証明書、グローバルCDNを自動で取得。",
+    "deployNow": "今すぐデプロイ",
+    "featuresTitle": "配信に必要なすべて",
+    "startDeploying": "デプロイを始める",
+    "features": {
+      "oneClick": {
+        "title": "ワンクリックデプロイ",
+        "description": "エディタから直接デプロイ。"
+      },
+      "customDomains": {
+        "title": "カスタムドメイン",
+        "description": "独自ドメインを接続するか、当社のサブドメインを使用。"
+      },
+      "ssl": {
+        "title": "自動SSL",
+        "description": "すべてのデプロイで無料SSL証明書を取得。"
+      },
+      "cdn": {
+        "title": "グローバルCDN",
+        "description": "34以上のエッジロケーションからアプリを配信。"
+      },
+      "analytics": {
+        "title": "組み込み分析",
+        "description": "訪問者とパフォーマンスメトリクスを追跡。"
+      },
+      "rollbacks": {
+        "title": "即座のロールバック",
+        "description": "以前のデプロイにいつでも戻せます。"
+      }
+    },
+    "cta": {
+      "title": "今日アプリを公開",
+      "subtitle": "アイデアから本番環境まで数分で。日数ではなく。"
+    }
+  },
+  "productSecurity": {
+    "badge": "エンタープライズセキュリティ",
+    "title": "セキュリティ",
+    "titleHighlight": "ファースト",
+    "subtitle": "自信を持って構築。AppNodeはエンタープライズグレードのセキュリティ、デプロイ前スキャン、安全なデフォルト設定でアプリを保護します。",
+    "enterpriseSolutions": "エンタープライズソリューション",
+    "securityReport": "セキュリティレポート",
+    "featuresTitle": "セキュリティ機能",
+    "badges": {
+      "soc2": "SOC 2 Type II",
+      "gdpr": "GDPR準拠",
+      "iso": "ISO 27001",
+      "hipaa": "HIPAA対応"
+    },
+    "features": {
+      "sso": {
+        "title": "SSOとSAML",
+        "description": "既存のIDプロバイダーと統合。SAML、OIDC、主要なSSOプロバイダーすべてをサポート。",
+        "item1": "SAML 2.0サポート",
+        "item2": "ジャストインタイムプロビジョニング",
+        "item3": "多要素認証"
+      },
+      "scanning": {
+        "title": "デプロイ前スキャン",
+        "description": "すべてのデプロイは脆弱性、シークレット、セキュリティ問題を自動的にスキャン。",
+        "item1": "依存関係の脆弱性スキャン",
+        "item2": "シークレット検出",
+        "item3": "OWASPコンプライアンスチェック"
+      },
+      "encryption": {
+        "title": "データ暗号化",
+        "description": "すべてのデータは業界標準の暗号化プロトコルで保存時および転送時に暗号化。",
+        "item1": "保存時AES-256暗号化",
+        "item2": "転送時TLS 1.3",
+        "item3": "顧客管理キー対応"
+      },
+      "auditLogs": {
+        "title": "監査ログ",
+        "description": "詳細な監査ログでアカウント内のすべてのアクションを完全に可視化。",
+        "item1": "90日間のログ保持",
+        "item2": "SIEMエクスポート",
+        "item3": "リアルタイムアラート"
+      }
+    },
+    "cta": {
+      "title": "エンタープライズセキュリティが必要ですか？",
+      "subtitle": "カスタムセキュリティ要件とコンプライアンスニーズについて、当社チームにご相談ください。"
+    }
+  },
+  "enterprisePage": {
+    "badge": "エンタープライズ",
+    "title": "エンタープライズ",
+    "titleHighlight": "機能で",
+    "titleEnd": "スケール",
+    "subtitle": "アプリケーションを大規模に構築、デプロイ、管理するためにチームが必要とするすべて。エンタープライズ向けに設計されたセキュリティ、コンプライアンス、サポート。",
+    "viewPricing": "価格を見る",
+    "trustedBy": "リーディング企業が信頼",
+    "featuresTitle": "エンタープライズのためのすべて",
+    "featuresSubtitle": "セキュリティ、スケーラビリティ、サポートを必要とするチームのために設計された高度な機能。",
+    "testimonialsTitle": "エンタープライズチームに愛されています",
+    "testimonialsSubtitle": "AppNode Enterpriseについてリーダーたちの声をご覧ください。",
+    "contactTitle": "お問い合わせ",
+    "contactSubtitle": "チームについてお聞かせください。24時間以内にご連絡いたします。",
+    "thankYou": "ありがとうございます！",
+    "thankYouMessage": "メッセージを受け取りました。間もなくご連絡いたします。",
+    "features": {
+      "security": {
+        "title": "エンタープライズグレードセキュリティ",
+        "description": "SOC 2 Type II認証済み、SSO、SAML、高度なアクセス制御でデータを安全に保護。"
+      },
+      "collaboration": {
+        "title": "チームコラボレーション",
+        "description": "無制限のチームメンバー、共有ワークスペース、リアルタイムコラボレーション機能。"
+      },
+      "performance": {
+        "title": "優先パフォーマンス",
+        "description": "専用インフラストラクチャ、保証されたアップタイムSLA、より高速なビルド時間。"
+      },
+      "support": {
+        "title": "専任サポート",
+        "description": "24時間365日の優先サポート、専任カスタマーサクセスマネージャー、オンボーディング。"
+      },
+      "integrations": {
+        "title": "カスタムインテグレーション",
+        "description": "APIアクセス、カスタムWebhook、既存のツールやワークフローとの統合。"
+      },
+      "analytics": {
+        "title": "高度な分析",
+        "description": "詳細な使用状況分析、監査ログ、組織向けのコンプライアンスレポート。"
+      }
+    },
+    "testimonials": {
+      "testimonial1": {
+        "quote": "AppNodeは私たちのチームが内部ツールを構築する方法を変革しました。以前は数週間かかっていたことが、今では数時間で完了します。",
+        "author": "サラ・チェン",
+        "role": "エンジニアリングVP",
+        "company": "TechCorp"
+      },
+      "testimonial2": {
+        "quote": "エンタープライズ機能は、開発者体験をシンプルに保ちながら、必要なセキュリティとコントロールを提供してくれます。",
+        "author": "マイケル・トーレス",
+        "role": "CTO",
+        "company": "FinanceApp"
+      },
+      "testimonial3": {
+        "quote": "デザインチームは今やエンジニアリングリソースを待たずに、プロトタイプを作成し本番対応アプリを出荷できます。",
+        "author": "エミリー・ワトソン",
+        "role": "デザイン責任者",
+        "company": "DesignStudio"
+      }
+    },
+    "form": {
+      "fullName": "氏名",
+      "namePlaceholder": "山田 太郎",
+      "workEmail": "業務用メール",
+      "emailPlaceholder": "taro@company.co.jp",
+      "company": "会社名",
+      "companyPlaceholder": "株式会社アクメ",
+      "teamSize": "チーム規模",
+      "selectTeamSize": "チーム規模を選択",
+      "teamSize1": "1-10名",
+      "teamSize2": "11-50名",
+      "teamSize3": "51-200名",
+      "teamSize4": "201-500名",
+      "teamSize5": "500名以上",
+      "message": "どのようにお手伝いできますか？",
+      "messagePlaceholder": "ユースケースと要件をお聞かせください...",
+      "sending": "送信中..."
+    }
+  },
+  "supportPage": {
+    "heroTitle": "どのようにお手伝いできますか？",
+    "heroSubtitle": "ナレッジベースを検索するか、以下のカテゴリをご覧ください",
+    "searchPlaceholder": "ヘルプを検索...",
+    "browseByCategory": "カテゴリで閲覧",
+    "popularArticles": "人気の記事",
+    "needMoreHelp": "さらにサポートが必要ですか？",
+    "needMoreHelpDescription": "お探しのものが見つかりませんか？サポートチームがお手伝いします。",
+    "chatWithSupport": "サポートとチャット",
+    "emailSupport": "メールサポート",
+    "faq": "よくある質問",
+    "stillHaveQuestions": "まだ質問がありますか？",
+    "stillHaveQuestionsDescription": "私たちのチームはあなたの成功をサポートする準備ができています。いつでもお問い合わせください。",
+    "viewGallery": "ギャラリーを見る",
+    "joinCommunity": "コミュニティに参加",
+    "browseGuides": "ガイドを閲覧"
+  },
+  "blogPage": {
+    "badge": "インサイトとアップデート",
+    "subtitle": "AppNodeチームからのインサイト、チュートリアル、アップデート。AI駆動開発の最新情報をお届けします。",
+    "latestPosts": "最新の投稿",
+    "loadMorePosts": "投稿をもっと読み込む",
+    "subscribeTitle": "ニュースレターを購読",
+    "subscribeDescription": "最新の記事、チュートリアル、製品アップデートを直接受信トレイに。",
+    "emailPlaceholder": "メールアドレスを入力",
+    "subscribe": "購読する",
+    "ctaTitle": "何かを構築する準備はできましたか？",
+    "ctaDescription": "AppNodeでアイデアを現実に。今日から構築を始めましょう。",
+    "getStartedFree": "無料で始める",
+    "browseCourses": "コースを閲覧"
+  },
+  "careersPage": {
+    "badge": "採用情報",
+    "title": "チームに",
+    "titleEnd": "参加",
+    "subtitle": "ソフトウェア開発の未来を一緒に築きましょう。私たちのミッションに加わる情熱的な人材を探しています。",
+    "viewOpenPositions": "募集中のポジションを見る",
+    "ourValues": "私たちの価値観",
+    "whyJoinUs": "なぜ参加するのか",
+    "benefitsAndPerks": "福利厚生と特典",
+    "openPositions": "募集中のポジション",
+    "applyNow": "今すぐ応募",
+    "dontSeeAFit": "適切なポジションが見つかりませんか？",
+    "dontSeeAFitDescription": "私たちは常に才能ある人材を探しています。履歴書をお送りください。",
+    "sendGeneralApplication": "一般応募を送信"
+  },
+  "communityPage": {
+    "exploreThe": "探索する",
+    "community": "コミュニティ",
+    "subtitle": "インスピレーションを与えるプロジェクトを発見し、クリエイターとつながり、数千人の開発者と作品を共有しましょう。",
+    "searchPlaceholder": "プロジェクト、テンプレート、クリエイターを検索...",
+    "projectsCreated": "作成されたプロジェクト",
+    "activeBuilders": "アクティブな開発者",
+    "monthlyVisitors": "月間訪問者",
+    "loadMoreProjects": "プロジェクトをもっと読み込む",
+    "topContributors": "トップコントリビューター",
+    "viewAll": "すべて見る",
+    "recentDiscussions": "最近のディスカッション",
+    "joinDiscussion": "ディスカッションに参加",
+    "joinOurDiscord": "Discordに参加",
+    "discordDescription": "5,000人以上の開発者とつながり、ヘルプを得て、プロジェクトを共有しましょう。",
+    "joinDiscordButton": "Discordに参加",
+    "ctaTitle": "作品を共有する準備はできましたか？",
+    "ctaDescription": "素晴らしいものを作って、コミュニティに見せましょう。",
+    "startBuilding": "構築を始める"
+  },
+  "galleryPage": {
+    "title": "プロジェクトギャラリー",
+    "subtitle": "コミュニティがAppNodeで構築した素晴らしいプロジェクトを発見"
+  },
+  "solutionsPage": {
+    "badge": "ソリューション",
+    "titleStart": "あなたの",
+    "titleHighlight": "働き方に",
+    "titleEnd": "合わせて設計",
+    "subtitle": "創業者、デザイナー、マーケターのいずれであっても、AppNodeはワークフローに適応し、より速い配信を支援します。",
+    "ctaTitle": "どのソリューションが合うかわかりませんか？",
+    "ctaSubtitle": "無料で構築を始めて、AppNodeがワークフローをどう変革できるか発見してください。",
+    "startBuildingFree": "無料で始める",
+    "talkToSales": "営業に相談"
+  },
+  "solutionsWeb3": {
+    "badge": "Web3ソリューション",
+    "title": "Web3向け構築",
+    "subtitle": "ブロックチェーン統合で分散型アプリケーションを作成"
+  },
+  "useCasesBusinessApps": {
+    "badge": "ユースケース",
+    "titleStart": "ビジネスアプリを",
+    "titleHighlight": "10倍速く作成",
+    "subtitle": "ダッシュボードから社内ツールまで、エンジニアリングリソースを待たずにチームが必要とするビジネスアプリケーションを構築。",
+    "seeExamples": "例を見る",
+    "mockup": {
+      "salesDashboard": "セールスダッシュボード",
+      "revenue": "収益",
+      "customers": "顧客",
+      "retention": "リテンション"
+    },
+    "whatYouCanBuild": "構築できるもの",
+    "useCases": {
+      "dashboards": {
+        "title": "ダッシュボード",
+        "description": "KPIダッシュボード、分析ビュー、レポートツール"
+      },
+      "workflowAutomation": {
+        "title": "ワークフロー自動化",
+        "description": "繰り返しタスクと承認プロセスを自動化"
+      },
+      "adminPanels": {
+        "title": "管理パネル",
+        "description": "データとシステム用のカスタム管理インターフェース"
+      },
+      "crmTools": {
+        "title": "CRMツール",
+        "description": "顧客管理と営業追跡システム"
+      },
+      "inventorySystems": {
+        "title": "在庫システム",
+        "description": "在庫、注文、サプライチェーンデータを追跡"
+      },
+      "formsSurveys": {
+        "title": "フォーム＆アンケート",
+        "description": "データ収集ツールとフィードバックシステム"
+      }
+    },
+    "ctaTitle": "今日ビジネスアプリを構築",
+    "ctaSubtitle": "エンジニアリングチーム不要。数分で開始。"
+  },
+  "useCasesMobileApps": {
+    "badge": "ユースケース",
+    "titleStart": "モバイルアプリを",
+    "titleHighlight": "コードなしで作成",
+    "subtitle": "iOSとAndroidで動作するネイティブ品質のモバイル体験を作成。Swift、Kotlin、React Native不要。",
+    "seeExamples": "例を見る",
+    "featuresTitle": "モバイルアプリ機能",
+    "features": {
+      "nativePerformance": {
+        "title": "ネイティブパフォーマンス",
+        "description": "どのデバイスでも高速でレスポンシブなアプリ"
+      },
+      "pushNotifications": {
+        "title": "プッシュ通知",
+        "description": "タイムリーなプッシュ通知でユーザーをエンゲージ"
+      },
+      "locationServices": {
+        "title": "位置情報サービス",
+        "description": "GPSで位置情報ベースの機能を作成"
+      },
+      "cameraMedia": {
+        "title": "カメラとメディア",
+        "description": "カメラ、写真、メディアライブラリにアクセス"
+      },
+      "offlineSupport": {
+        "title": "オフラインサポート",
+        "description": "インターネットなしでも動作するアプリ"
+      },
+      "crossPlatform": {
+        "title": "クロスプラットフォーム",
+        "description": "iOSとAndroid用の1つのコードベース"
+      }
+    },
+    "ctaTitle": "今日モバイルアプリを構築",
+    "ctaSubtitle": "アイデアからApp Storeまで記録的な時間で。"
+  },
+  "useCasesRapidPrototyping": {
+    "badge": "ユースケース",
+    "titleStart": "アイデアからプロトタイプまで",
+    "titleHighlight": "数分で",
+    "subtitle": "アイデアを素早く検証。1行もコードを書かずに、本物の製品のように見えて動作する機能的なプロトタイプを構築。",
+    "startPrototyping": "プロトタイピングを始める",
+    "seeExamples": "例を見る",
+    "comparisonTitle": "従来型 vs AppNode",
+    "totalTime": "総時間",
+    "traditional": {
+      "title": "従来のプロトタイピング",
+      "totalTime": "6-10週間"
+    },
+    "appnode": {
+      "title": "AppNodeプロトタイピング",
+      "totalTime": "1-2時間"
+    },
+    "benefitsTitle": "ラピッドプロトタイピングが重要な理由",
+    "ctaTitle": "今日からプロトタイピングを始める",
+    "ctaSubtitle": "アイデアを数ヶ月ではなく数分で機能的なプロトタイプに。"
+  },
+  "privacyPage": {
+    "badge": "法的情報",
+    "title": "プライバシーポリシー",
+    "lastUpdated": "最終更新日：2025年12月1日",
+    "contactTitle": "10. お問い合わせ",
+    "contactDescription": "このプライバシーポリシーまたは当社のプライバシー慣行についてご質問がある場合は、以下までお問い合わせください："
+  },
+  "termsPage": {
+    "badge": "法的情報",
+    "title": "利用規約",
+    "lastUpdated": "最終更新日：2025年12月1日",
+    "contactTitle": "12. お問い合わせ先",
+    "contactDescription": "これらの規約についてご質問がある場合は、以下までお問い合わせください："
+  },
+  "cookiesPage": {
+    "badge": "プライバシー",
+    "title": "Cookie設定",
+    "subtitle": "Cookieの設定を管理します。ブラウジング体験の向上、パーソナライズされたコンテンツの提供、トラフィック分析のためにCookieを使用しています。",
+    "required": "必須",
+    "saveSuccess": "Cookie設定が正常に保存されました！",
+    "savePreferences": "設定を保存",
+    "acceptAll": "すべて受け入れる",
+    "aboutTitle": "当社のCookieについて",
+    "aboutDescription": "Cookieは、当社のウェブサイトを訪問した際にデバイスに保存される小さなテキストファイルです。お好みを記憶し、サイトの使用方法を理解することで、より良い体験を提供するのに役立ちます。",
+    "moreInfo": "Cookieと個人データの使用方法の詳細については、",
+    "privacyPolicyLink": "プライバシーポリシー",
+    "essential": {
+      "title": "必須Cookie",
+      "description": "これらのCookieはウェブサイトの機能に必要です。セキュリティ、ネットワーク管理、アクセシビリティなどの基本機能を有効にします。これらのCookieを無効にすることはできません。"
+    },
+    "analytics": {
+      "title": "分析Cookie",
+      "description": "これらのCookieは、匿名で情報を収集・報告することで、訪問者がサイトとどのようにやり取りしているかを理解するのに役立ちます。これによりサービスの改善に役立てています。"
+    },
+    "marketing": {
+      "title": "マーケティングCookie",
+      "description": "これらのCookieは、ウェブサイト間で訪問者を追跡するために使用されます。個々のユーザーにとって関連性があり魅力的な広告を表示するために使用されます。"
+    },
+    "personalization": {
+      "title": "パーソナライゼーションCookie",
+      "description": "これらのCookieにより、お好みを記憶し、強化されたパーソナライズされた機能を提供できます。当社またはサードパーティプロバイダーによって設定される場合があります。"
+    }
+  },
+  "statusPage": {
+    "title": "システムステータス",
+    "subtitle": "AppNodeサービスのリアルタイムステータスとアップタイム情報",
+    "allOperational": "すべてのシステムが稼働中",
+    "uptimeTitle": "アップタイム - 過去7日間",
+    "servicesTitle": "サービス",
+    "incidentsTitle": "最近のインシデント",
+    "subscribeTitle": "ステータス更新を受け取る",
+    "subscribeSubtitle": "システムステータスとインシデントに関する通知を受け取るために購読",
+    "emailPlaceholder": "メールアドレスを入力",
+    "subscribeButton": "購読する"
+  },
+  "securityPage": {
+    "badge": "エンタープライズセキュリティ",
+    "titleHighlight": "セキュリティ",
+    "titleSuffix": "ファースト",
+    "subtitle": "お客様のデータのセキュリティは最優先事項です。情報を安全に保つために講じている対策をご覧ください。",
+    "featuresTitle": "セキュリティ機能",
+    "practicesTitle": "セキュリティプラクティス",
+    "bugBountyTitle": "バグバウンティプログラム",
+    "bugBountyDescription": "セキュリティの向上にご協力いただき、責任ある脆弱性の開示に対して報酬を獲得してください。",
+    "reportTitle": "セキュリティ問題を報告",
+    "reportDescription": "AppNodeでセキュリティの脆弱性を発見したと思われる場合は、すぐにセキュリティチームに報告してください。",
+    "whitepaper": "セキュリティホワイトペーパー"
+  },
+  "changelogPage": {
+    "badge": "アップデート",
+    "title": "変更履歴",
+    "subtitle": "AppNodeの最新のアップデート、改善、修正をすべてご覧ください",
+    "stayUpToDate": "最新情報を入手",
+    "getNotified": "新機能のリリース時に通知を受け取る",
+    "emailPlaceholder": "メールアドレスを入力",
+    "subscribeButton": "購読する",
+    "viewOlder": "古いバージョンを見る"
+  },
+  "dashboardPage": {
+    "welcome": "ようこそ",
+    "loggedInAs": "ログイン中",
+    "comingSoon": "近日公開",
+    "buildingMagic": "あなたのために魔法のようなものを構築中",
+    "signOut": "サインアウト"
+  },
+  "settingsPage": {
+    "title": "設定",
+    "generalSettings": "一般設定",
+    "language": "言語",
+    "timezone": "タイムゾーン",
+    "darkMode": "ダークモード",
+    "darkModeDesc": "アプリ全体でダークテーマを使用",
+    "notificationPreferences": "通知設定",
+    "emailNotifications": "メール通知",
+    "emailNotificationsDesc": "プロジェクトの更新をメールで受信",
+    "pushNotifications": "プッシュ通知",
+    "pushNotificationsDesc": "ブラウザでプッシュ通知を受信",
+    "marketingEmails": "マーケティングメール",
+    "marketingEmailsDesc": "ヒント、アップデート、オファーを受信",
+    "securitySettings": "セキュリティ設定",
+    "password": "パスワード",
+    "passwordLastChanged": "30日前に最終変更",
+    "changePassword": "パスワードを変更",
+    "twoFactorAuth": "二要素認証",
+    "twoFactorAuthDesc": "セキュリティの追加レイヤーを追加",
+    "enable2FA": "2FAを有効にする",
+    "activeSessions": "アクティブセッション",
+    "activeSessionsDesc": "アクティブセッションを管理",
+    "viewSessions": "セッションを表示",
+    "dangerZone": "危険ゾーン",
+    "deleteAccount": "アカウントを削除",
+    "deleteAccountDesc": "アカウントとすべてのデータを完全に削除",
+    "deleteAccountConfirm": "アカウントを削除しますか？",
+    "deleteAccountWarning": "この操作は元に戻せません。すべてのデータが完全に削除されます。"
+  },
+  "profilePage": {
+    "title": "プロフィール",
+    "editProfile": "プロフィールを編集",
+    "fullName": "氏名",
+    "email": "メール",
+    "role": "役職",
+    "company": "会社",
+    "companyOptional": "会社（オプション）",
+    "companyPlaceholder": "会社名",
+    "avatarColor": "アバターの色",
+    "memberSince": "登録日",
+    "notSpecified": "未指定",
+    "saveChanges": "変更を保存",
+    "saving": "保存中..."
+  },
+  "billingPage": {
+    "title": "請求",
+    "currentPlan": "現在のプラン",
+    "upgradeToUnlock": "アップグレードしてさらに多くの機能をアンロック",
+    "planRenews": "プランは2025年12月1日に更新されます",
+    "freePlan": "無料プラン",
+    "active": "アクティブ",
+    "availablePlans": "利用可能なプラン",
+    "mostPopular": "最も人気",
+    "currentPlanLabel": "現在のプラン",
+    "upgrade": "アップグレード",
+    "downgrade": "ダウングレード",
+    "paymentMethod": "支払い方法",
+    "noPaymentRequired": "無料プランでは支払い方法は不要です。",
+    "edit": "編集",
+    "billingHistory": "請求履歴",
+    "upgradeToTitle": "へアップグレード",
+    "upgradeAccessMessage": "すべての",
+    "featuresImmediately": "機能にすぐにアクセスできます。",
+    "confirmUpgrade": "アップグレードを確認"
+  },
+  "teamsPage": {
+    "badge": "チームコラボレーション",
+    "titleStart": "一緒に構築",
+    "titleHighlight": "Teams",
+    "subtitle": "AppNodeのパワーをチーム全体に。リアルタイムでコラボレーション、プロジェクトを共有、一緒により速く配信。",
+    "startTeamTrial": "チームトライアルを開始",
+    "enterpriseOptions": "エンタープライズオプション",
+    "teamWorkspace": "チームワークスペース",
+    "online": "オンライン",
+    "teamProjects": "チームプロジェクト",
+    "activity": "アクティビティ",
+    "teamFeatures": "チーム機能",
+    "startFreeTeamTrial": "無料チームトライアルを開始",
+    "pricing": {
+      "title": "Teamsの料金",
+      "subtitle": "あらゆる規模のチームにシンプルで透明な料金設定。",
+      "billedAnnually": "年払い"
+    },
+    "cta": {
+      "title": "一緒に構築する準備はできましたか？",
+      "subtitle": "チームをAppNodeに招待して、これまで以上に速く配信。"
+    }
+  },
+  "learnPage": {
+    "badge": "無料学習プラットフォーム",
+    "titleStart": "AppNodeで",
+    "titleHighlight": "学ぶ",
+    "subtitle": "AI駆動アプリ開発をマスターするための無料コース、チュートリアル、ハンズオンプロジェクト。初心者からエキスパートまで、自分のペースで。",
+    "startLearningFree": "無料で学習を始める",
+    "browseCourses": "コースを閲覧",
+    "stats": {
+      "freeCourses": "無料コース",
+      "students": "受講生",
+      "averageRating": "平均評価",
+      "communitySupport": "コミュニティサポート"
+    },
+    "chooseLearningPath": "学習パスを選択",
+    "chooseLearningPathDesc": "特定の目標とスキルレベルに合わせて設計されたキュレーションされたコース。",
+    "popularCourses": "人気のコース",
+    "popularCoursesDesc": "コミュニティが選んだ最も人気のあるコースから始めましょう。",
+    "startCourse": "コースを開始",
+    "viewAllCourses": "すべてのコースを見る",
+    "cta": {
+      "title": "今日から学習の旅を始めましょう",
+      "subtitle": "AppNodeでスキルを変革した100,000人以上の受講生に加わりましょう。すべてのコースは完全無料です。",
+      "createFreeAccount": "無料アカウントを作成",
+      "browseGuides": "ガイドを閲覧"
+    }
+  },
+  "guidesPage": {
+    "badge": "詳細なチュートリアル",
+    "titleStart": "開発者向け",
+    "titleHighlight": "ガイド",
+    "subtitle": "素晴らしいアプリケーションを構築するための詳細なチュートリアルとベストプラクティス。初心者から上級者まで、すべてカバー。",
+    "featuredGuide": "注目のガイド",
+    "allGuides": "すべてのガイド",
+    "readGuide": "ガイドを読む",
+    "cta": {
+      "title": "構築を始める準備はできましたか？",
+      "subtitle": "学んだことを実践に。今日最初のアプリを作成。",
+      "getStartedFree": "無料で始める",
+      "browseTemplates": "テンプレートを閲覧"
+    }
+  },
+  "videosPage": {
+    "badge": "ビデオ学習",
+    "titleStart": "仕組みを",
+    "titleHighlight": "学ぶ",
+    "subtitle": "包括的なビデオチュートリアルでAppNodeのすべてを学びましょう。最初のプロジェクトからCloudflare、Vercel、GitHubへのデプロイまで。",
+    "featured": "注目",
+    "playlists": "プレイリスト",
+    "viewAll": "すべて見る",
+    "cta": {
+      "title": "構築を始める準備はできましたか？",
+      "subtitle": "AppNodeで素晴らしいアプリを構築している数千人のクリエイターに加わりましょう。",
+      "startBuildingFree": "無料で始める",
+      "browseCourses": "コースを閲覧",
+      "subscribeYouTube": "YouTubeで購読"
     }
   }
 }

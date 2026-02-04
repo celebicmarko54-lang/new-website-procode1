@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from '@/context/LanguageContext';
 
 // AI Apps projects with actual images
@@ -57,17 +57,43 @@ const personalSoftwareProjects = [
 
 // Games projects with actual images
 const gamesProjects = [
-  { id: 33, title: 'Game 1', image: '/templates/GAME HOME1.png', author: 'AppNode Team', category: 'Games' },
-  { id: 34, title: 'Game 2', image: '/templates/GAME HOME2.png', author: 'AppNode Team', category: 'Games' },
-  { id: 35, title: 'Game 3', image: '/templates/GAME HOME3.png', author: 'AppNode Team', category: 'Games' },
+  { id: 33, title: 'Game 1', image: '/templates/GAME1.png', author: 'AppNode Team', category: 'Games' },
+  { id: 34, title: 'Game 2', image: '/templates/GAME2.png', author: 'AppNode Team', category: 'Games' },
+  { id: 35, title: 'Game 3', image: '/templates/GAME3.png', author: 'AppNode Team', category: 'Games' },
+  { id: 36, title: 'Game 4', image: '/templates/GAME6.png', author: 'AppNode Team', category: 'Games' },
+  { id: 37, title: 'Game 5', image: '/templates/GAME7.png', author: 'AppNode Team', category: 'Games' },
+  { id: 38, title: 'Game 6', image: '/templates/GAME HOME1.png', author: 'AppNode Team', category: 'Games' },
+  { id: 39, title: 'Game 7', image: '/templates/GAME HOME2.png', author: 'AppNode Team', category: 'Games' },
+  { id: 40, title: 'Game 8', image: '/templates/GAME HOME3.png', author: 'AppNode Team', category: 'Games' },
 ];
+
+// All projects combined for preloading
+const allProjects = [...aiAppsProjects, ...websiteProjects, ...businessAppsProjects, ...personalSoftwareProjects, ...gamesProjects];
 
 export default function GalleryPage() {
   const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState('All');
   const [selectedProject, setSelectedProject] = useState<typeof aiAppsProjects[0] | null>(null);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
   
   const categories = ['All', 'AI Apps', 'Websites', 'Business Apps', 'Personal Software', 'Games'];
+  
+  // Preload all images on mount
+  useEffect(() => {
+    const preloadImages = async () => {
+      const promises = allProjects.map((project) => {
+        return new Promise<void>((resolve) => {
+          const img = new window.Image();
+          img.src = project.image;
+          img.onload = () => resolve();
+          img.onerror = () => resolve();
+        });
+      });
+      await Promise.all(promises);
+      setImagesLoaded(true);
+    };
+    preloadImages();
+  }, []);
   
   // Filter projects based on active category
   const getFilteredProjects = () => {
@@ -144,7 +170,10 @@ export default function GalleryPage() {
                     src={project.image}
                     alt={project.title}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                    priority
+                    quality={75}
                   />
                 </div>
                 
@@ -152,19 +181,19 @@ export default function GalleryPage() {
                 <div className="p-4">
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="font-semibold text-gray-900 dark:text-white">{project.title}</h3>
-                    <span className="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full">
+                    <span className="text-xs px-2 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full">
                       {project.category}
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Built with AppNode</p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-purple-500"></div>
+                      <div className="w-6 h-6 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600"></div>
                       <span className="text-sm text-gray-600 dark:text-gray-400">{project.author}</span>
                     </div>
                     <button 
                       onClick={() => setSelectedProject(project)}
-                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+                      className="text-sm text-emerald-600 dark:text-emerald-400 hover:underline"
                     >
                       View
                     </button>
@@ -255,8 +284,9 @@ export default function GalleryPage() {
                 src={selectedProject.image}
                 alt={selectedProject.title}
                 fill
+                sizes="90vw"
                 className="object-contain"
-                quality={100}
+                quality={90}
                 priority
               />
             </div>
@@ -268,7 +298,7 @@ export default function GalleryPage() {
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">{selectedProject.title}</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Built with AppNode by {selectedProject.author}</p>
                 </div>
-                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium">
+                <span className="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-medium">
                   {selectedProject.category}
                 </span>
               </div>

@@ -6,61 +6,45 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useTranslation } from '@/context/LanguageContext';
 
-const features = [
+const featureIcons = [
+  <svg key="security" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+  </svg>,
+  <svg key="collaboration" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+  </svg>,
+  <svg key="performance" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+  </svg>,
+  <svg key="support" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+  </svg>,
+  <svg key="integrations" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+  </svg>,
+  <svg key="analytics" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+  </svg>,
+];
+
+const featureKeys = ['security', 'collaboration', 'performance', 'support', 'integrations', 'analytics'];
+
+const testimonialData = [
   {
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
-    title: 'Enterprise-grade Security',
-    description: 'SOC 2 Type II certified with SSO, SAML, and advanced access controls to keep your data safe.',
+    key: 'testimonial1',
+    avatar: "SC",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
   },
   {
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-      </svg>
-    ),
-    title: 'Team Collaboration',
-    description: 'Unlimited team members, shared workspaces, and real-time collaboration features.',
+    key: 'testimonial2',
+    avatar: "MT",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
   },
   {
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
-    title: 'Priority Performance',
-    description: 'Dedicated infrastructure with guaranteed uptime SLAs and faster build times.',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-      </svg>
-    ),
-    title: 'Dedicated Support',
-    description: '24/7 priority support with dedicated customer success manager and onboarding.',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
-    title: 'Custom Integrations',
-    description: 'API access, custom webhooks, and integrations with your existing tools and workflows.',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-      </svg>
-    ),
-    title: 'Advanced Analytics',
-    description: 'Detailed usage analytics, audit logs, and compliance reporting for your organization.',
+    key: 'testimonial3',
+    avatar: "EW",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
   },
 ];
 
@@ -69,33 +53,6 @@ const logos = [
   { name: 'Google', image: '/logos/google.png', darkInvert: false },
   { name: 'Slack', image: '/logos/slack.png', darkInvert: true },
   { name: 'Anthropic', image: '/logos/Antropic.png', darkInvert: true },
-];
-
-const testimonials = [
-  {
-    quote: "AppNode has transformed how our team builds internal tools. What used to take weeks now takes hours.",
-    author: "Sarah Chen",
-    role: "VP of Engineering",
-    company: "TechCorp",
-    avatar: "SC",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    quote: "The enterprise features give us the security and control we need while keeping the developer experience simple.",
-    author: "Michael Torres",
-    role: "CTO",
-    company: "FinanceApp",
-    avatar: "MT",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    quote: "Our design team can now prototype and ship production-ready apps without waiting for engineering resources.",
-    author: "Emily Watson",
-    role: "Head of Design",
-    company: "DesignStudio",
-    avatar: "EW",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
-  },
 ];
 
 export default function EnterprisePage() {
@@ -192,16 +149,16 @@ export default function EnterprisePage() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {featureKeys.map((featureKey, index) => (
               <div 
                 key={index}
                 className="p-6 rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-lg transition-all bg-white dark:bg-black group"
               >
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1f2937] to-[#374151] text-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  {feature.icon}
+                  {featureIcons[index]}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{t(`enterprisePage.features.${featureKey}.title`)}</h3>
+                <p className="text-gray-600 dark:text-gray-400">{t(`enterprisePage.features.${featureKey}.description`)}</p>
               </div>
             ))}
           </div>
@@ -221,7 +178,7 @@ export default function EnterprisePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonialData.map((testimonial, index) => (
               <div 
                 key={index}
                 className="p-6 rounded-2xl bg-white dark:bg-black border border-gray-200 dark:border-gray-800 shadow-sm"
@@ -233,16 +190,16 @@ export default function EnterprisePage() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-700 dark:text-gray-300 mb-6 italic">&ldquo;{testimonial.quote}&rdquo;</p>
+                <p className="text-gray-700 dark:text-gray-300 mb-6 italic">&ldquo;{t(`enterprisePage.testimonials.${testimonial.key}.quote`)}&rdquo;</p>
                 <div className="flex items-center gap-3">
                   <img 
                     src={testimonial.image} 
-                    alt={testimonial.author}
+                    alt={t(`enterprisePage.testimonials.${testimonial.key}.author`)}
                     className="w-10 h-10 rounded-full object-cover"
                   />
                   <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">{testimonial.author}</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">{testimonial.role}, {testimonial.company}</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">{t(`enterprisePage.testimonials.${testimonial.key}.author`)}</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">{t(`enterprisePage.testimonials.${testimonial.key}.role`)}, {t(`enterprisePage.testimonials.${testimonial.key}.company`)}</p>
                   </div>
                 </div>
               </div>

@@ -76,8 +76,8 @@
     }
   },
   "buildAnything": {
-    "title": "BUILD ANYTHING YOU IMAGINE",
-    "subtitle": "From simple landing pages to complex enterprise applications, AppNode handles it all.",
+    "title": "Build any application without limits",
+    "subtitle": "Start building. Start earning. Today.",
     "exploreAll": "Explore all templates",
     "webApps": {
       "title": "Web Applications",
@@ -626,6 +626,52 @@
     "contactSubtitle": "Tell us about your team and we'll get back to you within 24 hours.",
     "thankYou": "Thank you!",
     "thankYouMessage": "We've received your message and will be in touch soon.",
+    "features": {
+      "security": {
+        "title": "Enterprise-grade Security",
+        "description": "SOC 2 Type II certified with SSO, SAML, and advanced access controls to keep your data safe."
+      },
+      "collaboration": {
+        "title": "Team Collaboration",
+        "description": "Unlimited team members, shared workspaces, and real-time collaboration features."
+      },
+      "performance": {
+        "title": "Priority Performance",
+        "description": "Dedicated infrastructure with guaranteed uptime SLAs and faster build times."
+      },
+      "support": {
+        "title": "Dedicated Support",
+        "description": "24/7 priority support with dedicated customer success manager and onboarding."
+      },
+      "integrations": {
+        "title": "Custom Integrations",
+        "description": "API access, custom webhooks, and integrations with your existing tools and workflows."
+      },
+      "analytics": {
+        "title": "Advanced Analytics",
+        "description": "Detailed usage analytics, audit logs, and compliance reporting for your organization."
+      }
+    },
+    "testimonials": {
+      "testimonial1": {
+        "quote": "AppNode has transformed how our team builds internal tools. What used to take weeks now takes hours.",
+        "author": "Sarah Chen",
+        "role": "VP of Engineering",
+        "company": "TechCorp"
+      },
+      "testimonial2": {
+        "quote": "The enterprise features give us the security and control we need while keeping the developer experience simple.",
+        "author": "Michael Torres",
+        "role": "CTO",
+        "company": "FinanceApp"
+      },
+      "testimonial3": {
+        "quote": "Our design team can now prototype and ship production-ready apps without waiting for engineering resources.",
+        "author": "Emily Watson",
+        "role": "Head of Design",
+        "company": "DesignStudio"
+      }
+    },
     "form": {
       "fullName": "Full Name",
       "namePlaceholder": "John Smith",
@@ -890,6 +936,32 @@
       "retention": "Retention"
     },
     "whatYouCanBuild": "What You Can Build",
+    "useCases": {
+      "dashboards": {
+        "title": "Dashboards",
+        "description": "KPI dashboards, analytics views, and reporting tools"
+      },
+      "workflowAutomation": {
+        "title": "Workflow Automation",
+        "description": "Automate repetitive tasks and approval processes"
+      },
+      "adminPanels": {
+        "title": "Admin Panels",
+        "description": "Custom admin interfaces for your data and systems"
+      },
+      "crmTools": {
+        "title": "CRM Tools",
+        "description": "Customer management and sales tracking systems"
+      },
+      "inventorySystems": {
+        "title": "Inventory Systems",
+        "description": "Track stock, orders, and supply chain data"
+      },
+      "formsSurveys": {
+        "title": "Forms & Surveys",
+        "description": "Data collection tools and feedback systems"
+      }
+    },
     "ctaTitle": "Build your business app today",
     "ctaSubtitle": "No engineering team required. Start building in minutes."
   },
