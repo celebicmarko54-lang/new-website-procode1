@@ -1468,7 +1468,87 @@
     "getNotified": "Ricevi notifiche quando rilasciamo nuove funzionalità",
     "emailPlaceholder": "Inserisci la tua email",
     "subscribeButton": "Iscriviti",
-    "viewOlder": "Visualizza versioni precedenti"
+    "viewOlder": "Visualizza versioni precedenti",
+    "changeTypes": {
+      "new": "Nuovo",
+      "improved": "Migliorato",
+      "fixed": "Corretto"
+    },
+    "releases": {
+      "v250": {
+        "date": "28 novembre 2025",
+        "title": "Stili intelligenti e layout automatici",
+        "description": "Introduzione dello styling basato sull'IA che crea automaticamente design belli e coerenti per le tue applicazioni.",
+        "changes": [
+          "Stili intelligenti: l'IA applica automaticamente uno stile coerente in tutta la tua app",
+          "Layout automatici: layout responsivi intelligenti che si adattano al contenuto",
+          "Preset di temi: scegli tra oltre 20 temi progettati professionalmente",
+          "Generazione di codice più veloce con prompt ottimizzati",
+          "Migliore supporto TypeScript nel codice generato",
+          "Problemi di layout sui dispositivi mobili corretti"
+        ]
+      },
+      "v242": {
+        "date": "15 novembre 2025",
+        "title": "Miglioramenti delle prestazioni",
+        "description": "Ottimizzazioni delle prestazioni principali e correzioni di bug.",
+        "changes": [
+          "Tempi di caricamento dei progetti 50% più veloci",
+          "Utilizzo della memoria ridotto nell'editor",
+          "Esportazione del codice per progetti di grandi dimensioni corretta",
+          "Problemi di autenticazione con provider di terze parti corretti"
+        ]
+      },
+      "v240": {
+        "date": "1 novembre 2025",
+        "title": "Collaborazione in team",
+        "description": "Lavora insieme al tuo team in tempo reale.",
+        "changes": [
+          "Collaborazione in tempo reale: più utenti possono modificare contemporaneamente",
+          "Spazi di lavoro del team con permessi basati sui ruoli",
+          "Commenti e feedback sui componenti",
+          "Cronologia delle versioni con funzionalità di ripristino",
+          "Migliore risoluzione dei conflitti per modifiche simultanee"
+        ]
+      },
+      "v230": {
+        "date": "15 ottobre 2025",
+        "title": "Integrazione database",
+        "description": "Connetti le tue app ai database con facilità.",
+        "changes": [
+          "Integrazione Supabase per database PostgreSQL",
+          "Designer visuale dello schema del database",
+          "Operazioni CRUD generate automaticamente",
+          "Sottoscrizioni ai dati in tempo reale",
+          "Migliore gestione delle connessioni al database",
+          "Problemi di recupero dati nelle build di produzione corretti"
+        ]
+      },
+      "v220": {
+        "date": "28 settembre 2025",
+        "title": "Libreria di componenti",
+        "description": "Libreria di componenti ampliata con oltre 100 nuovi componenti.",
+        "changes": [
+          "Oltre 100 nuovi componenti predefiniti",
+          "Componenti per grafici e visualizzazione dati",
+          "Costruttore di moduli con validazione",
+          "Libreria di preset di animazione",
+          "Ricerca e filtraggio dei componenti"
+        ]
+      },
+      "v210": {
+        "date": "10 settembre 2025",
+        "title": "Autenticazione semplificata",
+        "description": "Aggiungi l'autenticazione utente alle tue app in pochi secondi.",
+        "changes": [
+          "Configurazione dell'autenticazione con un clic",
+          "Provider di accesso social (Google, GitHub, ecc.)",
+          "Dashboard di gestione utenti",
+          "Flussi di reimpostazione password",
+          "Miglioramenti della sicurezza per i token di autenticazione"
+        ]
+      }
+    }
   },
   "dashboardPage": {
     "welcome": "Benvenuto",

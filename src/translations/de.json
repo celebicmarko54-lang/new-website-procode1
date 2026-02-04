@@ -1469,7 +1469,87 @@
     "getNotified": "Erhalten Sie Benachrichtigungen, wenn wir neue Funktionen veröffentlichen",
     "emailPlaceholder": "E-Mail eingeben",
     "subscribeButton": "Abonnieren",
-    "viewOlder": "Ältere Releases ansehen"
+    "viewOlder": "Ältere Releases ansehen",
+    "changeTypes": {
+      "new": "Neu",
+      "improved": "Verbessert",
+      "fixed": "Behoben"
+    },
+    "releases": {
+      "v250": {
+        "date": "28. November 2025",
+        "title": "Intelligente Stile & Auto-Layouts",
+        "description": "Einführung von KI-gestütztem Styling, das automatisch schöne, konsistente Designs für Ihre Anwendungen erstellt.",
+        "changes": [
+          "Intelligente Stile: KI wendet automatisch konsistentes Styling in Ihrer App an",
+          "Auto-Layouts: Intelligente responsive Layouts, die sich an Inhalte anpassen",
+          "Theme-Vorlagen: Wählen Sie aus 20+ professionell gestalteten Themes",
+          "Schnellere Codegenerierung mit optimierten Prompts",
+          "Bessere TypeScript-Unterstützung im generierten Code",
+          "Layout-Probleme auf Mobilgeräten behoben"
+        ]
+      },
+      "v242": {
+        "date": "15. November 2025",
+        "title": "Leistungsverbesserungen",
+        "description": "Große Leistungsoptimierungen und Fehlerbehebungen.",
+        "changes": [
+          "50% schnellere Projektladezeiten",
+          "Reduzierter Speicherverbrauch im Editor",
+          "Code-Export für große Projekte behoben",
+          "Authentifizierungsprobleme mit Drittanbietern behoben"
+        ]
+      },
+      "v240": {
+        "date": "1. November 2025",
+        "title": "Team-Zusammenarbeit",
+        "description": "Arbeiten Sie in Echtzeit mit Ihrem Team zusammen.",
+        "changes": [
+          "Echtzeit-Zusammenarbeit: Mehrere Benutzer können gleichzeitig bearbeiten",
+          "Team-Arbeitsbereiche mit rollenbasierten Berechtigungen",
+          "Kommentare und Feedback zu Komponenten",
+          "Versionsverlauf mit Wiederherstellungsfunktion",
+          "Bessere Konfliktlösung bei gleichzeitigen Bearbeitungen"
+        ]
+      },
+      "v230": {
+        "date": "15. Oktober 2025",
+        "title": "Datenbankintegration",
+        "description": "Verbinden Sie Ihre Apps mühelos mit Datenbanken.",
+        "changes": [
+          "Supabase-Integration für PostgreSQL-Datenbanken",
+          "Visueller Datenbank-Schema-Designer",
+          "Automatisch generierte CRUD-Operationen",
+          "Echtzeit-Datenabonnements",
+          "Bessere Handhabung von Datenbankverbindungen",
+          "Datenabrufprobleme in Produktions-Builds behoben"
+        ]
+      },
+      "v220": {
+        "date": "28. September 2025",
+        "title": "Komponentenbibliothek",
+        "description": "Erweiterte Komponentenbibliothek mit 100+ neuen Komponenten.",
+        "changes": [
+          "100+ neue vorgefertigte Komponenten",
+          "Diagramm- und Datenvisualisierungskomponenten",
+          "Formular-Builder mit Validierung",
+          "Animations-Vorlagenbibliothek",
+          "Komponentensuche und -filterung"
+        ]
+      },
+      "v210": {
+        "date": "10. September 2025",
+        "title": "Authentifizierung leicht gemacht",
+        "description": "Fügen Sie Benutzerauthentifizierung in Sekunden zu Ihren Apps hinzu.",
+        "changes": [
+          "Ein-Klick-Authentifizierungseinrichtung",
+          "Soziale Login-Anbieter (Google, GitHub, etc.)",
+          "Benutzerverwaltungs-Dashboard",
+          "Passwort-Zurücksetzungs-Abläufe",
+          "Sicherheitsverbesserungen für Auth-Tokens"
+        ]
+      }
+    }
   },
   "dashboardPage": {
     "welcome": "Willkommen",

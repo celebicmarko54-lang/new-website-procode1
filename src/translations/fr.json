@@ -1469,7 +1469,87 @@
     "getNotified": "Soyez notifié lorsque nous publions de nouvelles fonctionnalités",
     "emailPlaceholder": "Entrez votre e-mail",
     "subscribeButton": "S'abonner",
-    "viewOlder": "Voir les anciennes versions"
+    "viewOlder": "Voir les anciennes versions",
+    "changeTypes": {
+      "new": "Nouveau",
+      "improved": "Amélioré",
+      "fixed": "Corrigé"
+    },
+    "releases": {
+      "v250": {
+        "date": "28 novembre 2025",
+        "title": "Styles intelligents et mises en page automatiques",
+        "description": "Présentation du style alimenté par l'IA qui crée automatiquement des designs beaux et cohérents pour vos applications.",
+        "changes": [
+          "Styles intelligents : l'IA applique automatiquement un style cohérent dans votre app",
+          "Mises en page automatiques : mises en page responsives intelligentes qui s'adaptent au contenu",
+          "Préréglages de thèmes : choisissez parmi plus de 20 thèmes conçus professionnellement",
+          "Génération de code plus rapide avec des prompts optimisés",
+          "Meilleur support TypeScript dans le code généré",
+          "Problèmes de mise en page sur les appareils mobiles corrigés"
+        ]
+      },
+      "v242": {
+        "date": "15 novembre 2025",
+        "title": "Améliorations des performances",
+        "description": "Optimisations majeures des performances et corrections de bugs.",
+        "changes": [
+          "Temps de chargement des projets 50% plus rapides",
+          "Utilisation de la mémoire réduite dans l'éditeur",
+          "Exportation de code pour les grands projets corrigée",
+          "Problèmes d'authentification avec les fournisseurs tiers corrigés"
+        ]
+      },
+      "v240": {
+        "date": "1er novembre 2025",
+        "title": "Collaboration en équipe",
+        "description": "Travaillez avec votre équipe en temps réel.",
+        "changes": [
+          "Collaboration en temps réel : plusieurs utilisateurs peuvent modifier simultanément",
+          "Espaces de travail d'équipe avec permissions basées sur les rôles",
+          "Commentaires et retours sur les composants",
+          "Historique des versions avec fonctionnalité de restauration",
+          "Meilleure résolution des conflits pour les modifications simultanées"
+        ]
+      },
+      "v230": {
+        "date": "15 octobre 2025",
+        "title": "Intégration de base de données",
+        "description": "Connectez vos apps aux bases de données facilement.",
+        "changes": [
+          "Intégration Supabase pour les bases de données PostgreSQL",
+          "Concepteur visuel de schéma de base de données",
+          "Opérations CRUD générées automatiquement",
+          "Abonnements aux données en temps réel",
+          "Meilleure gestion des connexions de base de données",
+          "Problèmes de récupération de données dans les builds de production corrigés"
+        ]
+      },
+      "v220": {
+        "date": "28 septembre 2025",
+        "title": "Bibliothèque de composants",
+        "description": "Bibliothèque de composants étendue avec plus de 100 nouveaux composants.",
+        "changes": [
+          "Plus de 100 nouveaux composants préconçus",
+          "Composants de graphiques et de visualisation de données",
+          "Constructeur de formulaires avec validation",
+          "Bibliothèque de préréglages d'animation",
+          "Recherche et filtrage de composants"
+        ]
+      },
+      "v210": {
+        "date": "10 septembre 2025",
+        "title": "Authentification simplifiée",
+        "description": "Ajoutez l'authentification utilisateur à vos apps en quelques secondes.",
+        "changes": [
+          "Configuration de l'authentification en un clic",
+          "Fournisseurs de connexion sociale (Google, GitHub, etc.)",
+          "Tableau de bord de gestion des utilisateurs",
+          "Flux de réinitialisation de mot de passe",
+          "Améliorations de sécurité pour les tokens d'authentification"
+        ]
+      }
+    }
   },
   "dashboardPage": {
     "welcome": "Bienvenue",

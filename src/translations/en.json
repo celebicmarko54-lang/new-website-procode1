@@ -1098,7 +1098,87 @@
     "getNotified": "Get notified when we release new features",
     "emailPlaceholder": "Enter your email",
     "subscribeButton": "Subscribe",
-    "viewOlder": "View older releases"
+    "viewOlder": "View older releases",
+    "changeTypes": {
+      "new": "New",
+      "improved": "Improved",
+      "fixed": "Fixed"
+    },
+    "releases": {
+      "v250": {
+        "date": "November 28, 2025",
+        "title": "Smart Styles & Auto Layouts",
+        "description": "Introducing AI-powered styling that automatically creates beautiful, consistent designs for your applications.",
+        "changes": [
+          "Smart Styles: AI automatically applies consistent styling across your app",
+          "Auto Layouts: Intelligent responsive layouts that adapt to content",
+          "Theme presets: Choose from 20+ professionally designed themes",
+          "Faster code generation with optimized prompts",
+          "Better TypeScript support in generated code",
+          "Fixed layout issues on mobile devices"
+        ]
+      },
+      "v242": {
+        "date": "November 15, 2025",
+        "title": "Performance Improvements",
+        "description": "Major performance optimizations and bug fixes.",
+        "changes": [
+          "50% faster project loading times",
+          "Reduced memory usage in the editor",
+          "Fixed code export failing for large projects",
+          "Fixed authentication issues with third-party providers"
+        ]
+      },
+      "v240": {
+        "date": "November 1, 2025",
+        "title": "Team Collaboration",
+        "description": "Work together with your team in real-time.",
+        "changes": [
+          "Real-time collaboration: Multiple users can edit simultaneously",
+          "Team workspaces with role-based permissions",
+          "Comments and feedback on components",
+          "Version history with restore functionality",
+          "Better conflict resolution for concurrent edits"
+        ]
+      },
+      "v230": {
+        "date": "October 15, 2025",
+        "title": "Database Integration",
+        "description": "Connect your apps to databases with ease.",
+        "changes": [
+          "Supabase integration for PostgreSQL databases",
+          "Visual database schema designer",
+          "Auto-generated CRUD operations",
+          "Real-time data subscriptions",
+          "Better handling of database connections",
+          "Fixed data fetching issues in production builds"
+        ]
+      },
+      "v220": {
+        "date": "September 28, 2025",
+        "title": "Component Library",
+        "description": "Expanded component library with 100+ new components.",
+        "changes": [
+          "100+ new pre-built components",
+          "Chart and data visualization components",
+          "Form builder with validation",
+          "Animation presets library",
+          "Component search and filtering"
+        ]
+      },
+      "v210": {
+        "date": "September 10, 2025",
+        "title": "Authentication Made Easy",
+        "description": "Add user authentication to your apps in seconds.",
+        "changes": [
+          "One-click authentication setup",
+          "Social login providers (Google, GitHub, etc.)",
+          "User management dashboard",
+          "Password reset flows",
+          "Security improvements for auth tokens"
+        ]
+      }
+    }
   },
   "dashboardPage": {
     "welcome": "Welcome",
