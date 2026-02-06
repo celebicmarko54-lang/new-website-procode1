@@ -39,7 +39,7 @@ export default function LearnPage() {
       tutorialContent: {
         overview: 'Get started with AppNode by learning the fundamentals of AI-powered app development.',
         steps: [
-          'Sign up for a free AppNode account at appnode.dev',
+          'Sign up for a free AppNode account at appnode.ai',
           'Navigate to the dashboard and click "New Project"',
           'Describe your app idea in the chat interface',
           'Review the generated code and make adjustments',
@@ -445,8 +445,8 @@ export default function LearnPage() {
                 onClick={() => setSelectedCourse(course)}
                 className="group bg-white dark:bg-[#0a0a0a] rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
-                <div className="h-40 bg-gray-100 dark:bg-gray-900 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-white/80 dark:bg-black/80 backdrop-blur rounded-2xl flex items-center justify-center text-gray-900 dark:text-gray-100 group-hover:scale-110 transition-transform">
+                <div className="h-40 bg-gray-100 dark:bg-black flex items-center justify-center border-b border-gray-100 dark:border-gray-800">
+                  <div className="w-16 h-16 bg-white dark:bg-gray-900 rounded-2xl flex items-center justify-center text-gray-900 dark:text-gray-100 group-hover:scale-110 transition-transform">
                     {course.icon}
                   </div>
                 </div>

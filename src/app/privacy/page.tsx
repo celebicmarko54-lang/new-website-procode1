@@ -144,8 +144,7 @@ export default function PrivacyPolicyPage() {
               </p>
               <div className="mt-4 p-4 bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800 rounded-lg">
                 <p className="text-gray-700 dark:text-gray-300 font-medium">AppNode Inc.</p>
-                <p className="text-gray-600 dark:text-gray-400">Email: privacy@appnode.dev</p>
-                <p className="text-gray-600 dark:text-gray-400">Address: 123 Innovation Street, San Francisco, CA 94105</p>
+                <p className="text-gray-600 dark:text-gray-400">Email: contact@appnode.ai</p>
               </div>
             </section>
           </div>

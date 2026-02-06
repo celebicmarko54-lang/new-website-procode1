@@ -49,12 +49,12 @@ export default function Header() {
                 </button>
                 {activeDropdown === 'products' && (
                   <div className="absolute top-full left-0 mt-1 w-48 rounded-lg bg-white dark:bg-black border border-gray-200 dark:border-gray-800 shadow-lg py-1 animate-fade-in">
-                    <Link href="/products/agent" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('products.agent.title')}</Link>
-                    <Link href="/products/database" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('products.database.title')}</Link>
-                    <Link href="/products/publish" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('products.publish.title')}</Link>
-                    <Link href="/products/security" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('products.security.title')}</Link>
-                    <Link href="/products/integrations" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('products.integrations.title')}</Link>
-                    <Link href="/products/mobile" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('products.mobile.title')}</Link>
+                    <Link href="/products/agent" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('products.agent.title')}</Link>
+                    <Link href="/products/database" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('products.database.title')}</Link>
+                    <Link href="/products/publish" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('products.publish.title')}</Link>
+                    <Link href="/products/security" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('products.security.title')}</Link>
+                    <Link href="/products/integrations" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('products.integrations.title')}</Link>
+                    <Link href="/products/mobile" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('products.mobile.title')}</Link>
                   </div>
                 )}
               </div>
@@ -73,15 +73,15 @@ export default function Header() {
                 </button>
                 {activeDropdown === 'forwork' && (
                   <div className="absolute top-full left-0 mt-1 w-64 rounded-lg bg-white dark:bg-black border border-gray-200 dark:border-gray-800 shadow-lg py-2 animate-fade-in">
-                    <Link href="/enterprise" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">
+                    <Link href="/enterprise" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">
                       <span className="font-medium">{t('nav.enterprise')}</span>
                       <span className="block text-xs text-gray-400">{t('solutions.enterprise.description')}</span>
                     </Link>
                     <div className="border-t border-gray-200 dark:border-gray-700 my-2 mx-4"></div>
                     <div className="px-4 py-1 text-xs font-medium text-gray-400 uppercase">{t('useCases.title')}</div>
-                    <Link href="/usecases/business-apps" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('useCases.businessApps.title')}</Link>
-                    <Link href="/usecases/mobile-apps" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('useCases.mobileApps.title')}</Link>
-                    <Link href="/usecases/rapid-prototyping" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('useCases.rapidPrototyping.title')}</Link>
+                    <Link href="/usecases/business-apps" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('useCases.businessApps.title')}</Link>
+                    <Link href="/usecases/mobile-apps" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('useCases.mobileApps.title')}</Link>
+                    <Link href="/usecases/rapid-prototyping" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('useCases.rapidPrototyping.title')}</Link>
                   </div>
                 )}
               </div>
@@ -100,10 +100,10 @@ export default function Header() {
                 </button>
                 {activeDropdown === 'resources' && (
                   <div className="absolute top-full left-0 mt-1 w-48 rounded-lg bg-white dark:bg-black border border-gray-200 dark:border-gray-800 shadow-lg py-1 animate-fade-in">
-                    <Link href="/report" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('docs.title')}</Link>
-                    <Link href="/gallery" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('community.showcase')}</Link>
-                    <Link href="/blog" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">{t('nav.blog')}</Link>
-                    <Link href="/changelog" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">Changelog</Link>
+                    <Link href="/report" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('docs.title')}</Link>
+                    <Link href="/gallery" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('community.showcase')}</Link>
+                    <Link href="/blog" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('nav.blog')}</Link>
+                    <Link href="/changelog" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">Changelog</Link>
                   </div>
                 )}
               </div>

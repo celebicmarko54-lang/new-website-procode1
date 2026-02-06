@@ -99,7 +99,7 @@ export default function PlatformRulesPage() {
         <div className="max-w-4xl mx-auto px-6">
           {/* Header */}
           <div className="mb-16 text-center">
-            <div className="inline-block px-4 py-2 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white rounded-full text-sm font-medium mb-4">
+            <div className="inline-block px-4 py-2 bg-gray-50 dark:bg-black text-gray-900 dark:text-white rounded-full text-sm font-medium mb-4 border border-transparent dark:border-gray-800">
               Community Guidelines
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">Platform Rules</h1>
@@ -114,16 +114,16 @@ export default function PlatformRulesPage() {
             {rules.map((rule, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-8 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-lg transition-all"
+                className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 p-8 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-lg transition-all"
               >
                 <div className="flex items-start gap-5">
-                  <div className="w-14 h-14 bg-gray-100 dark:bg-gray-800 rounded-2xl flex items-center justify-center text-gray-900 dark:text-white flex-shrink-0">
+                  <div className="w-14 h-14 bg-gray-100 dark:bg-[#111] rounded-2xl flex items-center justify-center text-gray-900 dark:text-white flex-shrink-0">
                     {rule.icon}
                   </div>
                   <div className="flex-1">
                     <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{rule.title}</h2>
                     <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">{rule.description}</p>
-                    <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4">
+                    <div className="bg-gray-50 dark:bg-[#111] rounded-xl p-4">
                       <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Examples:</p>
                       <ul className="space-y-2">
                         {rule.examples.map((example, idx) => (
@@ -143,7 +143,7 @@ export default function PlatformRulesPage() {
           </div>
 
           {/* Enforcement Section */}
-          <div className="bg-gray-50 dark:bg-[#0a0a0a] rounded-2xl border border-gray-100 dark:border-gray-800 p-8 mb-16">
+          <div className="bg-gray-50 dark:bg-black rounded-2xl border border-gray-100 dark:border-transparent p-8 mb-16">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Enforcement</h2>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
               Violations of these rules may result in content removal, account warnings, temporary suspension, 
@@ -151,15 +151,15 @@ export default function PlatformRulesPage() {
               and take appropriate action.
             </p>
             <div className="grid sm:grid-cols-3 gap-4">
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-4 text-center">
+              <div className="bg-white dark:bg-black rounded-xl p-4 text-center">
                 <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">Warning</div>
                 <p className="text-sm text-gray-600 dark:text-gray-400">First minor violation</p>
               </div>
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-4 text-center">
+              <div className="bg-white dark:bg-black rounded-xl p-4 text-center">
                 <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">Suspension</div>
                 <p className="text-sm text-gray-600 dark:text-gray-400">Repeated or serious violations</p>
               </div>
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-4 text-center">
+              <div className="bg-white dark:bg-black rounded-xl p-4 text-center">
                 <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">Ban</div>
                 <p className="text-sm text-gray-600 dark:text-gray-400">Severe or persistent violations</p>
               </div>

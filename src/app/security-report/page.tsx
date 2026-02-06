@@ -256,8 +256,8 @@ export default function SecurityReportPage() {
           <div className="mt-8 text-center text-gray-600">
             <p>
               For urgent security matters, you can also reach us at{' '}
-              <a href="mailto:security@appnode.dev" className="text-gray-900 hover:text-gray-700 font-medium">
-                security@appnode.dev
+              <a href="mailto:contact@appnode.ai" className="text-gray-900 hover:text-gray-700 font-medium">
+                contact@appnode.ai
               </a>
             </p>
           </div>

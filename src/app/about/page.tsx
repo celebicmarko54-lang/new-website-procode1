@@ -20,21 +20,43 @@ export default function AboutPage() {
   ];
 
   const values = [
-    { icon: '🚀', title: 'Innovation First', description: 'We push boundaries and embrace cutting-edge technology to solve real problems.' },
-    { icon: '👥', title: 'User Obsessed', description: 'Every decision we make starts with our users. Their success is our success.' },
-    { icon: '🔒', title: 'Trust & Security', description: 'We take security seriously. Your data and code are protected by industry-leading practices.' },
-    { icon: '🌍', title: 'Global Impact', description: 'We\'re building tools that empower creators everywhere, regardless of background.' },
-    { icon: '💡', title: 'Transparency', description: 'We believe in open communication with our community and being honest about our roadmap.' },
-    { icon: '🤝', title: 'Community Driven', description: 'Our community shapes our product. We listen, learn, and build together.' },
+    { 
+      icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
+      title: 'Innovation First', 
+      description: 'We push boundaries and embrace cutting-edge technology to solve real problems.' 
+    },
+    { 
+      icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>,
+      title: 'User Obsessed', 
+      description: 'Every decision we make starts with our users. Their success is our success.' 
+    },
+    { 
+      icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>,
+      title: 'Trust & Security', 
+      description: 'We take security seriously. Your data and code are protected by industry-leading practices.' 
+    },
+    { 
+      icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
+      title: 'Global Impact', 
+      description: 'We\'re building tools that empower creators everywhere, regardless of background.' 
+    },
+    { 
+      icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>,
+      title: 'Transparency', 
+      description: 'We believe in open communication with our community and being honest about our roadmap.' 
+    },
+    { 
+      icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>,
+      title: 'Community Driven', 
+      description: 'Our community shapes our product. We listen, learn, and build together.' 
+    },
   ];
 
   const milestones = [
-    { year: '2023', title: 'Founded', description: 'AppNode was born from a simple idea: make app development accessible to everyone.' },
-    { year: '2024', title: 'Seed Funding', description: 'Raised $5M to accelerate development and grow our team.' },
-    { year: '2024', title: '10K Users', description: 'Reached our first 10,000 users milestone in just 6 months.' },
-    { year: '2025', title: 'Series A', description: 'Raised $25M to expand globally and launch new features.' },
-    { year: '2025', title: '100K Users', description: 'Crossed 100,000 developers building on AppNode.' },
-    { year: '2026', title: 'Today', description: 'Continuing to innovate and empower creators worldwide.' },
+    { year: '2025', title: 'Founded / Development Kickoff', description: 'AppNode officially started serious work in October 2025 (ideas brewing earlier). Built the core AI engine that combines Replit-style live coding + v0-style AI UI generation. Created X account to start sharing teasers and building early community.' },
+    { year: '2026', title: 'Beta Launch & Seed Funding', description: 'Launched private/public beta with powerful AI for web apps. Raised seed funding ($2-5M range) to grow the team and speed up mobile features. Partnered with key AI providers and dev tools to boost credibility and hype.' },
+    { year: '2026', title: '10K Users', description: 'Reached 10,000 users in just a few months after beta. Early adopters loving the speed – turn ideas into deployable apps in minutes. Started teasing iOS support and built-in App Store for sharing/publishing apps.' },
+    { year: '2026', title: 'Continuing to Grow', description: 'Expanding features, growing our community, and staying updated with the latest AI advancements. Follow us on X for real-time updates on new releases and upcoming features.' },
   ];
 
   return (
@@ -125,8 +147,11 @@ export default function AboutPage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Journey</h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              From a small idea to a global platform.
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-2">
+              From October 2025: Serious development begins
+            </p>
+            <p className="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto text-sm">
+              AppNode was born from a simple idea: make app development accessible to everyone using AI – no complex setup, just describe what you want and get a working app.
             </p>
           </div>
           <div className="relative">

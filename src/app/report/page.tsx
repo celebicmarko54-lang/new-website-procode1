@@ -162,10 +162,10 @@ const getDocsContent = (t: (key: string) => string): Record<string, { title: str
         </div>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.examplePrompts')}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div className="bg-gray-100 dark:bg-gray-900 rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{t('reportPage.content.examplePrompt1')}</div>
-          <div className="bg-gray-100 dark:bg-gray-900 rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{t('reportPage.content.examplePrompt2')}</div>
-          <div className="bg-gray-100 dark:bg-gray-900 rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{t('reportPage.content.examplePrompt3')}</div>
-          <div className="bg-gray-100 dark:bg-gray-900 rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{t('reportPage.content.examplePrompt4')}</div>
+          <div className="bg-gray-100 dark:bg-black rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{t('reportPage.content.examplePrompt1')}</div>
+          <div className="bg-gray-100 dark:bg-black rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{t('reportPage.content.examplePrompt2')}</div>
+          <div className="bg-gray-100 dark:bg-black rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{t('reportPage.content.examplePrompt3')}</div>
+          <div className="bg-gray-100 dark:bg-black rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{t('reportPage.content.examplePrompt4')}</div>
         </div>
       </>
     ),
@@ -654,10 +654,10 @@ const getDocsContent = (t: (key: string) => string): Record<string, { title: str
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.compliance')}</h2>
         <p className="text-gray-600 dark:text-gray-400 mb-4">{t('reportPage.content.complianceDesc')}</p>
         <div className="flex flex-wrap gap-2 mb-6">
-          <span className="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 rounded-full text-sm">SOC 2 Type II</span>
-          <span className="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 rounded-full text-sm">GDPR</span>
-          <span className="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 rounded-full text-sm">CCPA</span>
-          <span className="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 rounded-full text-sm">ISO 27001</span>
+          <span className="px-3 py-1 bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 rounded-full text-sm">SOC 2 Type II</span>
+          <span className="px-3 py-1 bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 rounded-full text-sm">GDPR</span>
+          <span className="px-3 py-1 bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 rounded-full text-sm">CCPA</span>
+          <span className="px-3 py-1 bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 rounded-full text-sm">ISO 27001</span>
         </div>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.reportVulnerability')}</h2>
         <p className="text-gray-600 dark:text-gray-400">{t('reportPage.content.reportVulnerabilityDesc')}</p>
