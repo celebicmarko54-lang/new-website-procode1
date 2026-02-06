@@ -4,6 +4,152 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { useTranslation } from '@/context/LanguageContext';
+import { useState, useEffect } from 'react';
+
+function TypingAnimation() {
+  const [displayText, setDisplayText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [showWelcome, setShowWelcome] = useState(false);
+
+  const introLines = [
+    'Meet AppNode Agent',
+    '',
+    'Your AI coding companion that writes production-ready code from just a prompt...',
+    '',
+    'Create any application just from a prompt',
+    'Build any business dashboard',
+    'Develop sports apps',
+    'And many more...',
+    '',
+    '> What can AppNode Agent create?',
+    '',
+  ];
+
+  const appExamples = [
+    'E-commerce website',
+    'Social media platform',
+    'Fitness tracker app',
+    'Recipe sharing tool',
+    'Weather forecasting dashboard',
+    'Stock market analyzer',
+    'Blogging platform',
+    'Task management system',
+    'Video streaming service',
+    'Chatbot interface',
+    'Online learning platform',
+    'Event booking system',
+    'Portfolio website',
+    'CRM software',
+    'Invoice generator',
+    'Calendar app',
+    'Music player',
+    'Photo editor',
+    'News aggregator',
+    'Forum discussion board',
+    'Real estate listing app',
+    'Travel planner',
+    'Budget tracker',
+    'Quiz game',
+    'Language learning tool',
+    'Habit builder',
+    'Crypto wallet interface',
+    'Job board',
+    'Restaurant menu app',
+    'Fitness coaching dashboard',
+    'Inventory management system',
+    'Survey tool',
+    'Podcast player',
+    'Book recommendation engine',
+    'Map-based navigation app',
+    'Donation platform',
+    'Workout log',
+    'Code snippet sharer',
+    'Meme generator',
+    'Virtual whiteboard',
+    'Expense splitter',
+    'Pet care tracker',
+    'Gardening app',
+    'Astronomy viewer',
+    'Recipe nutrition calculator',
+    'Language translator',
+    'Goal setting tool',
+    'Meditation guide',
+    'Car maintenance log',
+    'Home automation dashboard',
+  ];
+
+  const fullScript = [
+    ...introLines,
+    ...appExamples.map((app, i) => `${i + 1}. ${app}`),
+    '',
+    '...',
+    '',
+  ];
+
+  useEffect(() => {
+    if (currentIndex >= fullScript.length) {
+      setTimeout(() => setShowWelcome(true), 500);
+      return;
+    }
+
+    const currentLine = fullScript[currentIndex];
+    let charIndex = 0;
+
+    const typeChar = () => {
+      if (charIndex <= currentLine.length) {
+        setDisplayText(prev => {
+          const lines = prev.split('\n');
+          lines[lines.length - 1] = currentLine.slice(0, charIndex);
+          return lines.join('\n');
+        });
+        charIndex++;
+        const delay = currentIndex < introLines.length ? 30 : 15;
+        setTimeout(typeChar, delay);
+        
+        // Auto-scroll to bottom
+        const container = document.getElementById('typing-container');
+        if (container) {
+          container.scrollTop = container.scrollHeight;
+        }
+      } else {
+        setTimeout(() => {
+          setDisplayText(prev => prev + '\n');
+          setCurrentIndex(prev => prev + 1);
+        }, currentIndex < introLines.length ? 200 : 50);
+      }
+    };
+
+    typeChar();
+  }, [currentIndex]);
+
+  return (
+    <div className="bg-[#0a0a0a] rounded-2xl p-8 shadow-2xl border border-gray-800 min-h-[500px] relative overflow-hidden">
+      <div className="flex items-center gap-2 mb-4">
+        <div className="w-3 h-3 rounded-full bg-red-500"></div>
+        <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+        <div className="w-3 h-3 rounded-full bg-green-500"></div>
+      </div>
+      
+      {!showWelcome ? (
+        <div className="font-mono text-sm h-[400px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent" id="typing-container">
+          <pre className="text-white whitespace-pre-wrap">
+            {displayText}
+            <span className="inline-block w-2 h-4 bg-white animate-pulse ml-1"></span>
+          </pre>
+        </div>
+      ) : (
+        <div className="flex items-center justify-center h-[400px] animate-fade-in">
+          <div className="text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-pulse">
+              Welcome to AppNode.ai
+            </h2>
+            <p className="text-gray-400 text-lg">Build anything. Ship faster.</p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function AgentPage() {
   const { t } = useTranslation();
@@ -40,30 +186,7 @@ export default function AgentPage() {
 
         {/* Demo Section */}
         <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="bg-[#0a0a0a] rounded-2xl p-8 shadow-2xl border border-gray-800">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-3 h-3 rounded-full bg-red-500"></div>
-              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div className="w-3 h-3 rounded-full bg-green-500"></div>
-            </div>
-            <div className="space-y-4 font-mono text-sm">
-              <div className="flex gap-3">
-                <span className="text-gray-400">{t('productAgent.demo.you')}:</span>
-                <span className="text-gray-300">{t('productAgent.demo.prompt')}</span>
-              </div>
-              <div className="flex gap-3">
-                <span className="text-green-400">{t('productAgent.demo.agent')}:</span>
-                <span className="text-gray-300">{t('productAgent.demo.response')}</span>
-              </div>
-              <div className="mt-4 p-4 bg-black rounded-lg border border-gray-800">
-                <span className="text-gray-500">// dashboard.tsx - {t('productAgent.demo.writing')}</span>
-                <div className="mt-2 flex items-center gap-2">
-                  <div className="w-2 h-4 bg-gray-400 animate-pulse"></div>
-                  <span className="text-gray-400">{t('productAgent.demo.creating')}</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <TypingAnimation />
         </section>
 
         {/* Features Grid */}

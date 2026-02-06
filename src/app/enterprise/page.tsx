@@ -49,10 +49,18 @@ const testimonialData = [
 ];
 
 const logos = [
-  { name: 'Stripe', image: '/logos/stripe.png', darkInvert: false },
-  { name: 'Google', image: '/logos/google.png', darkInvert: false },
-  { name: 'Slack', image: '/logos/slack.png', darkInvert: true },
-  { name: 'Anthropic', image: '/logos/Antropic.png', darkInvert: true },
+  { name: 'Stripe', image: '/logos/stripe.png', extraClass: '' },
+  { name: 'Google', image: '/logos/google.png', extraClass: '' },
+  { name: 'Slack', image: '/logos/slack.png', extraClass: 'dark:invert dark:brightness-200' },
+  { name: 'Anthropic', image: '/logos/Antropic.png', extraClass: 'dark:invert dark:brightness-200' },
+  { name: 'Microsoft', image: '/logos/Microsoft-Logo-PNG-Image.png', extraClass: '' },
+  { name: 'Meta', image: '/logos/Meta-Logo.png', extraClass: '' },
+  { name: 'Adobe', image: '/logos/Adobe-logo-500x281.png', extraClass: '' },
+  { name: 'Coinbase', image: '/logos/Coinbase.svg.png', extraClass: 'dark:invert dark:brightness-200' },
+  { name: 'Monday', image: '/logos/Monday_logo.svg.png', extraClass: '' },
+  { name: 'Boeing', image: '/logos/logo-boeing-business-boeing-logo-035a6398c48a4513ed2ead8bc0c6b849.png', extraClass: 'scale-[4] dark:invert dark:brightness-200' },
+  { name: 'PayPal', image: '/logos/pngegg.png', extraClass: '' },
+  { name: 'Company', image: '/logos/pngegg (1).png', extraClass: 'dark:invert dark:brightness-200' },
 ];
 
 export default function EnterprisePage() {
@@ -105,14 +113,18 @@ export default function EnterprisePage() {
       </section>
 
       {/* Trusted By */}
-      <section className="py-12 overflow-hidden">
+      <section className="py-16 overflow-hidden">
         <div className="px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm font-medium text-gray-500 dark:text-gray-400 mb-8">{t('enterprisePage.trustedBy')}</p>
-          <div className="relative w-full">
-            <div className="flex items-center gap-20 animate-marquee whitespace-nowrap">
+          <p className="text-center text-sm font-medium text-gray-500 dark:text-gray-400 mb-12">{t('enterprisePage.trustedBy')}</p>
+          <div className="relative w-full overflow-hidden">
+            <div className="flex items-center gap-20 animate-marquee">
               {[...logos, ...logos, ...logos, ...logos, ...logos, ...logos].map((logo, index) => (
-                <div key={`${logo.name}-${index}`} className="flex-shrink-0 w-24 h-10 flex items-center justify-center">
-                  <img src={logo.image} alt={logo.name} className={`h-8 max-w-full object-contain ${logo.darkInvert ? 'dark:invert' : ''}`} />
+                <div key={`${logo.name}-${index}`} className="flex-shrink-0 w-40 h-14 flex items-center justify-center">
+                  <img 
+                    src={logo.image} 
+                    alt={logo.name} 
+                    className={`h-12 w-auto max-w-[160px] object-contain scale-110 ${logo.extraClass}`} 
+                  />
                 </div>
               ))}
             </div>
@@ -124,11 +136,12 @@ export default function EnterprisePage() {
               transform: translateX(0);
             }
             100% {
-              transform: translateX(-16.666%);
+              transform: translateX(-50%);
             }
           }
           .animate-marquee {
-            animation: marquee 20s linear infinite;
+            display: flex;
+            animation: marquee 25s linear infinite;
             will-change: transform;
           }
         `}</style>
