@@ -214,7 +214,7 @@ export default function HeroSection() {
           />
 
           {/* Bottom bar */}
-          <div className="flex items-center justify-between px-5 py-4 border-t border-gray-200 dark:border-[#1f1f1f]">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 px-4 sm:px-5 py-4 border-t border-gray-200 dark:border-[#1f1f1f]">
             <div className="flex items-center gap-3">
               {/* Attachment button */}
               <button 
@@ -240,14 +240,14 @@ export default function HeroSection() {
                   <polyline points="21 15 16 10 5 21"/>
                 </svg>
               </button>
-              <span className="text-xs text-gray-500 dark:text-gray-400">{t('hero.pressEnter')}</span>
+              <span className="text-xs text-gray-500 dark:text-gray-400 hidden sm:inline">{t('hero.pressEnter')}</span>
             </div>
             {/* Generate button */}
             <button 
               type="submit"
               onClick={handleSubmit}
               disabled={!prompt.trim()}
-              className="flex items-center gap-2 px-4 py-2 rounded font-medium text-sm transition-all duration-200 disabled:bg-gray-100 disabled:dark:bg-[#1f1f1f] disabled:text-gray-400 disabled:dark:text-gray-500 disabled:cursor-not-allowed enabled:bg-black enabled:dark:bg-white enabled:text-white enabled:dark:text-black enabled:hover:opacity-90"
+              className="flex items-center justify-center gap-2 px-4 py-2 rounded font-medium text-sm transition-all duration-200 disabled:bg-gray-100 disabled:dark:bg-[#1f1f1f] disabled:text-gray-400 disabled:dark:text-gray-500 disabled:cursor-not-allowed enabled:bg-black enabled:dark:bg-white enabled:text-white enabled:dark:text-black enabled:hover:opacity-90 w-full sm:w-auto"
             >
               {t('common.startBuilding')}
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -260,16 +260,16 @@ export default function HeroSection() {
       </div>
 
       {/* Start with an idea section - wider than chat */}
-      <div className="relative z-10 w-full max-w-[1100px] mx-auto mt-4 mb-4 px-4">
+      <div className="relative z-10 w-full max-w-[1100px] mx-auto mt-4 mb-4 px-2 sm:px-4">
         <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">Start with an idea</h3>
           
           {/* Category tabs */}
-          <div className="flex flex-wrap gap-1.5 mb-3">
+          <div className="flex flex-wrap gap-1.5 mb-3 overflow-x-auto pb-1">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-2.5 py-1 rounded-full text-xs font-medium transition-colors ${
+                className={`px-2.5 py-1 rounded-full text-xs font-medium transition-colors whitespace-nowrap ${
                   activeCategory === category
                     ? 'bg-gray-900 dark:bg-white text-white dark:text-black'
                     : 'bg-gray-100 dark:bg-black text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-[#1a1a1a]'
@@ -284,7 +284,7 @@ export default function HeroSection() {
           {categories.map((category) => (
             <div 
               key={category}
-              className={`grid grid-cols-3 gap-4 ${activeCategory === category ? 'block' : 'hidden'}`}
+              className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 ${activeCategory === category ? 'block' : 'hidden'}`}
             >
               {projectTemplates[category as keyof typeof projectTemplates].map((project, index) => (
                 <div

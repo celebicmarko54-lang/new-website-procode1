@@ -165,13 +165,13 @@ export default function BuildAnythingSection() {
   }, [isPaused]);
 
   return (
-    <section className="py-24 overflow-hidden bg-[#f8fafc] dark:bg-black transition-colors">
+    <section className="py-12 sm:py-16 md:py-24 overflow-hidden bg-[#f8fafc] dark:bg-black transition-colors">
       {/* Header */}
-      <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-8 sm:mb-12 md:mb-16 text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 tracking-tight">
           {t('buildAnything.title')}
         </h2>
-        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400">
+        <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 px-2">
           {t('buildAnything.subtitle')}
         </p>
       </div>
@@ -182,34 +182,36 @@ export default function BuildAnythingSection() {
         className="overflow-hidden"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
+        onTouchStart={() => setIsPaused(true)}
+        onTouchEnd={() => setIsPaused(false)}
         style={{ 
           maskImage: 'linear-gradient(to right, transparent, black 2%, black 98%, transparent)',
           WebkitMaskImage: 'linear-gradient(to right, transparent, black 2%, black 98%, transparent)'
         }}
       >
-        <div className="flex gap-5 px-6" style={{ width: 'max-content' }}>
+        <div className="flex gap-3 sm:gap-5 px-4 sm:px-6" style={{ width: 'max-content' }}>
           {/* Double the cards for seamless loop */}
           {[...categories, ...categories].map((category, index) => (
             <a
               key={`${category.name}-${index}`}
               href="#"
-              className="group relative w-[280px] flex-shrink-0"
+              className="group relative w-[200px] sm:w-[240px] md:w-[280px] flex-shrink-0"
             >
               {/* Card */}
-              <div className="relative rounded-2xl overflow-hidden bg-slate-900 dark:bg-black border border-white/10 dark:border-gray-800 transition-all duration-300 group-hover:border-white/30 group-hover:scale-[1.02] shadow-xl">
+              <div className="relative rounded-xl sm:rounded-2xl overflow-hidden bg-slate-900 dark:bg-black border border-white/10 dark:border-gray-800 transition-all duration-300 group-hover:border-white/30 group-hover:scale-[1.02] shadow-xl">
                 {/* Header with name only */}
-                <div className="absolute top-0 left-0 right-0 z-20 p-4 bg-gradient-to-b from-black/60 to-transparent">
-                  <span className="text-white font-medium drop-shadow-lg">{category.name}</span>
+                <div className="absolute top-0 left-0 right-0 z-20 p-3 sm:p-4 bg-gradient-to-b from-black/60 to-transparent">
+                  <span className="text-white font-medium drop-shadow-lg text-sm sm:text-base">{category.name}</span>
                 </div>
 
                 {/* Image */}
-                <div className="h-[320px] relative">
+                <div className="h-[220px] sm:h-[280px] md:h-[320px] relative">
                   <Image
                     src={category.image}
                     alt={category.name || ''}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    sizes="280px"
+                    sizes="(max-width: 640px) 200px, (max-width: 768px) 240px, 280px"
                     priority={index < 10}
                     quality={75}
                   />

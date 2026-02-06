@@ -76,38 +76,38 @@ export default function FeaturesSection() {
   const { t } = useTranslation();
   
   return (
-    <section className="py-24 px-4">
+    <section className="py-12 sm:py-16 md:py-24 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="px-4 py-1.5 text-sm bg-gray-100 text-gray-700 rounded-full mb-4 inline-block font-medium">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <span className="px-3 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm bg-gray-100 text-gray-700 rounded-full mb-3 sm:mb-4 inline-block font-medium">
             {t('nav.products')}
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 px-2">
             {t('features.title')}
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-2">
             {t('features.subtitle')}
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {featureIcons.map((feature, index) => (
             <div
               key={index}
-              className={`group p-6 bg-gradient-to-br ${feature.gradient} rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-white/50`}
+              className={`group p-4 sm:p-6 bg-gradient-to-br ${feature.gradient} rounded-xl sm:rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-white/50`}
             >
               {/* Icon */}
-              <div className={`w-14 h-14 rounded-xl ${feature.iconBg} flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform shadow-lg`}>
+              <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl ${feature.iconBg} flex items-center justify-center text-white mb-3 sm:mb-4 group-hover:scale-110 transition-transform shadow-lg`}>
                 {feature.icon}
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">
                 {t(feature.titleKey)}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 {t(feature.descriptionKey)}
               </p>
             </div>
@@ -115,8 +115,8 @@ export default function FeaturesSection() {
         </div>
 
         {/* CTA */}
-        <div className="mt-16 text-center">
-          <button className="px-8 py-3.5 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-all font-medium text-lg shadow-xl shadow-gray-900/20">
+        <div className="mt-10 sm:mt-16 text-center">
+          <button className="px-6 sm:px-8 py-3 sm:py-3.5 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-all font-medium text-base sm:text-lg shadow-xl shadow-gray-900/20">
             {t('common.startBuilding')}
           </button>
         </div>

@@ -14,27 +14,27 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#f8fafc]/95 dark:bg-black/95 backdrop-blur-sm border-b border-gray-200/50 dark:border-gray-800/50">
-      <div className="max-w-7xl ml-[5%] mr-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 gap-[15%]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-8 ml-4">
+          <div className="flex items-center gap-4 lg:gap-8">
             <Link href="/" className="flex items-center gap-2">
               <Image 
                 src="/templates/AppNodelogo.png" 
                 alt="AppNode Logo" 
                 width={90} 
                 height={90}
-                className="w-[90px] h-[90px] dark:invert dark:brightness-100"
+                className="w-[60px] h-[60px] sm:w-[90px] sm:h-[90px] dark:invert dark:brightness-100"
                 quality={100}
                 unoptimized
               />
-              <span className="text-xl text-gray-900 dark:text-white tracking-tight font-medium">
+              <span className="text-lg sm:text-xl text-gray-900 dark:text-white tracking-tight font-medium hidden xs:inline">
                 AppNode
               </span>
             </Link>
 
             {/* Main Navigation */}
-            <nav className="hidden md:flex items-center gap-1">
+            <nav className="hidden lg:flex items-center gap-1">
               {/* Products Dropdown */}
               <div
                 className="relative"
@@ -115,32 +115,36 @@ export default function Header() {
           </div>
 
           {/* Right Side */}
-          <div className="absolute right-[5%] flex items-center gap-2">
-            {/* Language Selector */}
-            <LanguageSelector />
+          <div className="flex items-center gap-2">
+            {/* Language Selector - Hidden on mobile */}
+            <div className="hidden sm:block">
+              <LanguageSelector />
+            </div>
             
-            {/* Theme Toggle */}
-            <ThemeToggle />
+            {/* Theme Toggle - Hidden on mobile */}
+            <div className="hidden sm:block">
+              <ThemeToggle />
+            </div>
             
-            {/* Log in Button */}
+            {/* Log in Button - Hidden on mobile */}
             <Link 
               href="/login"
-              className="h-7 px-3 flex items-center text-xs font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="hidden sm:flex h-7 px-3 items-center text-xs font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
             >
               {t('common.logIn')}
             </Link>
             
-            {/* Get Started Button */}
+            {/* Get Started Button - Hidden on mobile */}
             <Link 
               href="/signup"
-              className="h-7 px-3 flex items-center text-xs font-medium text-white bg-gray-900 dark:bg-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 rounded-md transition-colors"
+              className="hidden sm:flex h-7 px-3 items-center text-xs font-medium text-white bg-gray-900 dark:bg-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 rounded-md transition-colors"
             >
               {t('common.getStarted')}
             </Link>
             
             {/* Mobile menu button */}
             <button 
-              className="md:hidden p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+              className="lg:hidden p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
               onClick={() => setShowMobileMenu(!showMobileMenu)}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -156,8 +160,17 @@ export default function Header() {
         
         {/* Mobile Menu */}
         {showMobileMenu && (
-          <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700 animate-fade-in">
-            <nav className="flex flex-col gap-2">
+          <div className="lg:hidden py-4 border-t border-gray-200 dark:border-gray-700 animate-fade-in max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <nav className="flex flex-col gap-2 px-2">
+              {/* Auth buttons for mobile */}
+              <div className="flex gap-2 mb-4">
+                <Link href="/login" className="flex-1 text-center px-4 py-2 text-sm text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">
+                  {t('common.logIn')}
+                </Link>
+                <Link href="/signup" className="flex-1 text-center px-4 py-2 text-sm text-white bg-gray-900 dark:bg-white dark:text-gray-900 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100">
+                  {t('common.getStarted')}
+                </Link>
+              </div>
               <div className="px-3 py-2 text-xs font-medium text-gray-400 uppercase">Products</div>
               <Link href="/products/agent" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Agent</Link>
               <Link href="/products/database" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Database</Link>

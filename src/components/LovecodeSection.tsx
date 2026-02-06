@@ -122,12 +122,12 @@ export default function LovecodeSection() {
   return (
     <section 
       ref={containerRef}
-      className="relative w-full h-[35vh] md:h-[40vh] flex items-end justify-center overflow-hidden bg-[#f8fafc] dark:bg-black transition-colors"
+      className="relative w-full h-[25vh] sm:h-[30vh] md:h-[35vh] lg:h-[40vh] flex items-end justify-center overflow-hidden bg-[#f8fafc] dark:bg-black transition-colors"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
       {/* Snake Trail Cards */}
-      <div className="absolute inset-0 z-20 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 z-20 overflow-hidden pointer-events-none hidden md:block">
         {currentImages.map((image, index) => {
           const pos = positions[index];
           const scale = Math.max(0.3, 1 - index * 0.04);
@@ -159,7 +159,7 @@ export default function LovecodeSection() {
 
       {/* AppNode text with staggered emerge animation */}
       <h2 
-        className="relative z-10 text-[18vw] md:text-[16vw] lg:text-[14vw] tracking-tight whitespace-nowrap select-none flex items-baseline"
+        className="relative z-10 text-[20vw] sm:text-[18vw] md:text-[16vw] lg:text-[14vw] tracking-tight whitespace-nowrap select-none flex items-baseline"
       >
         {'AppNode'.split('').map((letter, index) => (
           <span 
@@ -174,11 +174,11 @@ export default function LovecodeSection() {
 
       {/* Mouse hint */}
       <div 
-        className={`absolute bottom-4 left-1/2 -translate-x-1/2 transition-all duration-500 ${
+        className={`absolute bottom-4 left-1/2 -translate-x-1/2 transition-all duration-500 hidden md:block ${
           isInView ? 'opacity-0' : 'opacity-60'
         }`}
       >
-        <p className="text-gray-500 dark:text-gray-400 text-sm font-medium tracking-wide">Move your mouse to explore</p>
+        <p className="text-gray-500 dark:text-gray-400 text-xs sm:text-sm font-medium tracking-wide">Move your mouse to explore</p>
       </div>
     </section>
   );

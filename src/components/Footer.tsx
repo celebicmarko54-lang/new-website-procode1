@@ -77,41 +77,42 @@ export default function Footer() {
       <footer className="w-full relative overflow-hidden">
         {/* Main Footer - Transparent to show gradient */}
         <div className="relative">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 relative z-10">
+          <div className="max-w-6xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 relative z-10">
             {/* Cloud-like floating container */}
-            <div className="relative bg-white dark:bg-black rounded-2xl shadow-sm p-6 lg:p-8 border border-gray-200/80 dark:border-gray-800/80">
+            <div className="relative bg-white dark:bg-black rounded-xl sm:rounded-2xl shadow-sm p-4 sm:p-6 lg:p-8 border border-gray-200/80 dark:border-gray-800/80">
               {/* Main Footer Content */}
-              <div className="flex flex-col lg:flex-row gap-8">
+              <div className="flex flex-col gap-6 sm:gap-8">
                 {/* Logo Section */}
-                <div className="lg:w-44 flex-shrink-0">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Image 
-                      src="/templates/AppNodelogo.png" 
-                      alt="AppNode Logo" 
-                      width={70} 
-                      height={70}
-                      className="w-[70px] h-[70px] dark:invert dark:brightness-100"
-                      quality={100}
-                      unoptimized
-                    />
-                    <h2 className="text-xl text-gray-900 dark:text-white tracking-tight font-medium">
-                      AppNode
-                    </h2>
+                <div className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-8">
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center gap-2 mb-3">
+                      <Image 
+                        src="/templates/AppNodelogo.png" 
+                        alt="AppNode Logo" 
+                        width={70} 
+                        height={70}
+                        className="w-[50px] h-[50px] sm:w-[70px] sm:h-[70px] dark:invert dark:brightness-100"
+                        quality={100}
+                        unoptimized
+                      />
+                      <h2 className="text-lg sm:text-xl text-gray-900 dark:text-white tracking-tight font-medium">
+                        AppNode
+                      </h2>
+                    </div>
+                    <p className="text-gray-500 dark:text-gray-400 text-xs mb-4 max-w-[200px]">
+                      {t('footer.tagline')}
+                    </p>
+                    
+                    {/* Language Selector and Theme Toggle */}
+                    <div className="flex items-center gap-2">
+                      <LanguageSelector />
+                      <ThemeToggle />
+                    </div>
                   </div>
-                  <p className="text-gray-500 dark:text-gray-400 text-xs mb-4">
-                    {t('footer.tagline')}
-                  </p>
-                  
-                  {/* Language Selector and Theme Toggle */}
-                  <div className="flex items-center gap-2">
-                    <LanguageSelector />
-                    <ThemeToggle />
-                  </div>
-                </div>
 
-                {/* Footer Links Grid */}
-                <div className="flex-1 flex justify-center">
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-12">
+                  {/* Footer Links Grid */}
+                  <div className="flex-1">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
                   {footerLinks.map((section) => (
                     <div key={section.titleKey}>
                       <h3 className="text-xs font-semibold text-gray-900 dark:text-white tracking-wide mb-2 uppercase">
@@ -144,6 +145,7 @@ export default function Footer() {
                       </ul>
                     </div>
                   ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -153,14 +155,14 @@ export default function Footer() {
                 <h3 className="text-xs font-semibold text-gray-900 dark:text-white tracking-wide mb-3 text-center uppercase">
                   {t('footer.connectWithUs')}
                 </h3>
-                <div className="flex flex-wrap justify-center gap-3">
+                <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
                   {socialMediaLinks.map((social) => (
                     <a
                       key={social.name}
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 px-2.5 py-1 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded-full text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:border-gray-400 dark:hover:border-gray-700 hover:bg-gray-50 dark:hover:bg-black transition-all text-xs font-medium"
+                      className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-1 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded-full text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:border-gray-400 dark:hover:border-gray-700 hover:bg-gray-50 dark:hover:bg-black transition-all text-[10px] sm:text-xs font-medium"
                     >
                       <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
                         <path d={social.icon}/>
