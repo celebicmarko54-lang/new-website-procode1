@@ -100,7 +100,7 @@ export default function LearnPublishPage() {
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300">How It Works</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-gray-900 dark:text-white">
-              Build & Publish with <span className="text-gray-500 dark:text-gray-400">AppNode</span>
+              Build & Publish with AppNode
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
               Learn how to use AppNode's AI-powered code generator to create and deploy applications. 
@@ -217,7 +217,7 @@ export default function LearnPublishPage() {
               Start Building Free
             </Link>
             <Link 
-              href="/report" 
+              href="/docs" 
               className="px-8 py-4 bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300 font-medium rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors"
             >
               View Documentation

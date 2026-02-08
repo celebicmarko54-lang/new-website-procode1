@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -103,6 +103,18 @@ export default function SupportPage() {
   const [emailSent, setEmailSent] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const searchRef = useRef<HTMLDivElement>(null);
+
+  // Close search results when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(e.target as Node)) {
+        setSearchQuery('');
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -340,12 +352,48 @@ ${transcript}
     },
   ];
 
+  // Search results computed from all page content
+  const searchResults = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (q.length < 2) return null;
+
+    const matchedCategories = categories.filter(
+      (c) =>
+        c.name.toLowerCase().includes(q) ||
+        c.description.toLowerCase().includes(q)
+    );
+
+    const matchedArticles = popularArticles.filter((a) =>
+      a.title.toLowerCase().includes(q)
+    );
+
+    const matchedFAQs = faqs.filter(
+      (f) =>
+        f.question.toLowerCase().includes(q) ||
+        f.answer.toLowerCase().includes(q)
+    );
+
+    const matchedKB = knowledgeBase.filter(
+      (kb) =>
+        kb.keywords.some((k) => k.toLowerCase().includes(q)) ||
+        kb.answer.toLowerCase().includes(q)
+    );
+
+    const total =
+      matchedCategories.length +
+      matchedArticles.length +
+      matchedFAQs.length +
+      matchedKB.length;
+
+    return { matchedCategories, matchedArticles, matchedFAQs, matchedKB, total };
+  }, [searchQuery, categories, popularArticles, faqs]);
+
   return (
     <div className="min-h-screen bg-[#f8fafc] dark:bg-black">
       <Header />
       
       {/* Hero Section with Search */}
-      <section className="pt-32 pb-20 px-6">
+      <section className="pt-32 pb-20 px-6 relative z-20">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {t('supportPage.heroTitle')}
@@ -353,7 +401,7 @@ ${transcript}
           <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
             {t('supportPage.heroSubtitle')}
           </p>
-          <div className="relative">
+          <div className="relative z-50" ref={searchRef}>
             <input
               type="text"
               value={searchQuery}
@@ -366,12 +414,92 @@ ${transcript}
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </button>
+
+            {/* Search Results Dropdown */}
+            {searchResults && (
+              <div className="absolute left-0 right-0 top-full mt-2 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-2xl z-50 max-h-[420px] overflow-y-auto text-left">
+                {searchResults.total === 0 ? (
+                  <div className="px-6 py-8 text-center text-gray-500 dark:text-gray-400">
+                    <svg className="w-10 h-10 mx-auto mb-3 text-gray-300 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    No results found for &ldquo;{searchQuery.trim()}&rdquo;
+                  </div>
+                ) : (
+                  <>
+                    {/* Matched Categories */}
+                    {searchResults.matchedCategories.length > 0 && (
+                      <div className="px-4 pt-4 pb-2">
+                        <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 px-2 mb-2">Categories</p>
+                        {searchResults.matchedCategories.map((cat, i) => (
+                          <div key={i} className="flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer transition-colors" onClick={() => { setSearchQuery(''); document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>
+                            <div className="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center justify-center text-gray-500 dark:text-gray-400 shrink-0">
+                              {cat.icon}
+                            </div>
+                            <div>
+                              <p className="font-medium text-gray-900 dark:text-white text-sm">{cat.name}</p>
+                              <p className="text-xs text-gray-500 dark:text-gray-400">{cat.description} &middot; {cat.articles} articles</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Matched Articles */}
+                    {searchResults.matchedArticles.length > 0 && (
+                      <div className="px-4 pt-3 pb-2 border-t border-gray-100 dark:border-gray-800 first:border-0">
+                        <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 px-2 mb-2">Articles</p>
+                        {searchResults.matchedArticles.map((art, i) => (
+                          <div key={i} className="flex items-center justify-between px-3 py-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer transition-colors" onClick={() => { setSearchQuery(''); document.getElementById('articles')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>
+                            <div className="flex items-center gap-3">
+                              <svg className="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                              </svg>
+                              <span className="text-sm font-medium text-gray-900 dark:text-white">{art.title}</span>
+                            </div>
+                            <span className="text-xs text-gray-400 dark:text-gray-500">{art.views} views</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Matched FAQs */}
+                    {searchResults.matchedFAQs.length > 0 && (
+                      <div className="px-4 pt-3 pb-2 border-t border-gray-100 dark:border-gray-800">
+                        <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 px-2 mb-2">FAQ</p>
+                        {searchResults.matchedFAQs.map((faq, i) => {
+                          const faqIndex = faqs.findIndex(f => f.question === faq.question);
+                          return (
+                            <div key={i} className="px-3 py-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer transition-colors" onClick={() => { setSearchQuery(''); const el = document.getElementById(`faq-${faqIndex}`); if (el) { (el as HTMLDetailsElement).open = true; el.scrollIntoView({ behavior: 'smooth', block: 'center' }); } }}>
+                              <p className="text-sm font-medium text-gray-900 dark:text-white">{faq.question}</p>
+                              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-2">{faq.answer}</p>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    )}
+
+                    {/* Matched Knowledge Base */}
+                    {searchResults.matchedKB.length > 0 && (
+                      <div className="px-4 pt-3 pb-3 border-t border-gray-100 dark:border-gray-800">
+                        <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 px-2 mb-2">Help Topics</p>
+                        {searchResults.matchedKB.slice(0, 3).map((kb, i) => (
+                          <div key={i} className="px-3 py-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer transition-colors" onClick={() => { setSearchQuery(''); setIsChatOpen(true); }}>
+                            <p className="text-sm text-gray-700 dark:text-gray-300 line-clamp-2">{kb.answer}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </section>
 
       {/* Categories Grid */}
-      <section className="py-20 px-6">
+      <section id="categories" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">{t('supportPage.browseByCategory')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -395,7 +523,7 @@ ${transcript}
       </section>
 
       {/* Popular Articles & Contact */}
-      <section className="py-16 px-6 bg-gray-50 dark:bg-black">
+      <section id="articles" className="py-16 px-6 bg-gray-50 dark:bg-black">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Popular Articles */}
@@ -454,13 +582,14 @@ ${transcript}
       </section>
 
       {/* FAQs */}
-      <section className="py-20 px-6">
+      <section id="faq" className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">{t('supportPage.faq')}</h2>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <details
                 key={index}
+                id={`faq-${index}`}
                 className="group bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-600 transition-all"
               >
                 <summary className="px-6 py-5 cursor-pointer font-semibold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-colors flex items-center justify-between">

@@ -627,7 +627,7 @@
       "reportingAbuseDesc": "Jika Anda menemukan konten atau perilaku yang melanggar kebijakan kami, harap segera laporkan. Kami menanggapi semua laporan dengan serius dan menyelidiki dengan segera.",
       "howToReport": "Cara Melaporkan",
       "howToReport1": "Klik tombol \"Laporkan\" di proyek atau profil pengguna mana pun",
-      "howToReport2": "Kirim email langsung ke abuse@appnode.ai",
+      "howToReport2": "Kirim email langsung ke contact@appnode.ai",
       "howToReport3": "Gunakan formulir kontak di pengaturan akun Anda",
       "whatWeInvestigate": "Apa yang Kami Selidiki",
       "investigate1": "Pelecehan atau ancaman",
@@ -638,7 +638,7 @@
       "copyrightClaimsTitle": "Klaim Hak Cipta",
       "copyrightClaimsDesc": "Kami menghormati hak kekayaan intelektual dan merespons dengan cepat terhadap klaim hak cipta yang valid.",
       "filingClaim": "Mengajukan Klaim",
-      "filingClaimDesc": "Untuk mengajukan pemberitahuan penghapusan DMCA, silakan kirim email ke legal@appnode.ai dengan:",
+      "filingClaimDesc": "Untuk mengajukan pemberitahuan penghapusan DMCA, silakan kirim email ke contact@appnode.ai dengan:",
       "claimItem1": "Identifikasi karya berhak cipta",
       "claimItem2": "URL konten yang melanggar",
       "claimItem3": "Informasi kontak Anda",
@@ -672,7 +672,7 @@
       "disclaimers": "7. Penafian",
       "disclaimersDesc": "LAYANAN KAMI DISEDIAKAN \"SEBAGAIMANA ADANYA\" TANPA JAMINAN APAPUN, BAIK TERSURAT MAUPUN TERSIRAT. KAMI TIDAK MENJAMIN BAHWA LAYANAN KAMI AKAN TANPA GANGGUAN, AMAN, ATAU BEBAS KESALAHAN.",
       "termsContact": "8. Kontak",
-      "termsContactDesc": "Untuk pertanyaan tentang Ketentuan ini, hubungi kami di legal@appnode.ai",
+      "termsContactDesc": "Untuk pertanyaan tentang Ketentuan ini, hubungi kami di contact@appnode.ai",
       "privacyTitle": "Kebijakan Privasi",
       "privacyLastUpdated": "Terakhir diperbarui: Januari 2025",
       "privacyIntro": "Kebijakan Privasi ini menjelaskan bagaimana AppNode mengumpulkan, menggunakan, dan membagikan informasi tentang Anda saat Anda menggunakan layanan kami.",
@@ -687,7 +687,7 @@
       "useInfo3": "Mengirim pemberitahuan teknis dan pesan dukungan",
       "useInfo4": "Menanggapi komentar dan pertanyaan Anda",
       "privacyContact": "Kontak",
-      "privacyContactDesc": "Untuk pertanyaan terkait privasi, hubungi kami di privacy@appnode.ai",
+      "privacyContactDesc": "Untuk pertanyaan terkait privasi, hubungi kami di contact@appnode.ai",
       "platformRulesTitle": "Aturan Platform",
       "platformRulesDesc": "Aturan ini membantu menjaga lingkungan yang aman dan produktif untuk semua pengguna AppNode.",
       "prohibitedContent": "Konten yang Dilarang",
@@ -726,7 +726,7 @@
       "compliance": "Kepatuhan",
       "complianceDesc": "Kami menjaga kepatuhan dengan standar dan peraturan industri:",
       "reportVulnerability": "Laporkan Kerentanan",
-      "reportVulnerabilityDesc": "Menemukan masalah keamanan? Harap laporkan secara bertanggung jawab ke security@appnode.ai. Kami menghargai bantuan Anda dalam menjaga keamanan AppNode dan menawarkan hadiah untuk laporan yang valid.",
+      "reportVulnerabilityDesc": "Menemukan masalah keamanan? Harap laporkan secara bertanggung jawab ke contact@appnode.ai. Kami menghargai bantuan Anda dalam menjaga keamanan AppNode dan menawarkan hadiah untuk laporan yang valid.",
       "dataProtectionTitle": "Perlindungan Data",
       "dataProtectionDesc": "Kami menangani perlindungan data dengan serius. Kode, proyek, dan informasi pribadi Anda dilindungi dengan beberapa lapisan perlindungan.",
       "yourDataRights": "Hak Data Anda",
@@ -1186,6 +1186,24 @@
         "author": "Emily Watson",
         "role": "Head of Design",
         "company": "DesignStudio"
+      },
+      "testimonial4": {
+        "quote": "Kami memigrasikan seluruh panel admin ke AppNode hanya dalam 2 minggu. ROI-nya luar biasa untuk tim operasi kami.",
+        "author": "James Kim",
+        "role": "Direktur Operasi",
+        "company": "CloudScale"
+      },
+      "testimonial5": {
+        "quote": "Integrasi SSO dan log audit adalah persis yang dibutuhkan tim kepatuhan kami. Onboarding berjalan lancar.",
+        "author": "Anika Larsson",
+        "role": "Chief Security Officer",
+        "company": "SecureBank"
+      },
+      "testimonial6": {
+        "quote": "Fleksibilitas API AppNode memungkinkan kami menghubungkan semua tool yang ada. Produktivitas tim berlipat ganda di bulan pertama.",
+        "author": "Ryan Park",
+        "role": "Engineering Manager",
+        "company": "DataFlow"
       }
     },
     "form": {
@@ -1703,6 +1721,188 @@
       "startBuildingFree": "Mulai gratis",
       "browseCourses": "Jelajahi kursus",
       "subscribeYouTube": "Subscribe di YouTube"
+    }
+  },
+  "aboutPage": {
+    "badge": "Tentang kami",
+    "title": "Misi kami",
+    "subtitle": "Kami membangun dunia di mana pengembangan didemokratisasi, dan siapa pun dengan ide dapat membuat aplikasi yang powerful.",
+    "stats": {
+      "developers": "Developer",
+      "appsBuilt": "App dibuat",
+      "countries": "Negara",
+      "uptime": "Uptime"
+    },
+    "ourStory": {
+      "title": "Cerita kami",
+      "p1": "AppNode lahir dari keyakinan bahwa membuat software harus menjadi pengalaman yang luar biasa. Sebagai developer, kami mendambakan tools yang mendukung kami, mempercepat kreativitas, dan memungkinkan kami mewujudkan ide tanpa hambatan.",
+      "p2": "Di 2023, kami memulai perjalanan membangun platform pengembangan yang diperkuat AI — tanpa mengorbankan kegembiraan coding. Kami passionate tentang masa depan di mana AI tidak menggantikan semua orang, tetapi memperkuat semua orang.",
+      "p3": "Hari ini, AppNode dicintai oleh ratusan ribu developer di seluruh dunia. Dari proyek hobi pribadi hingga produk skala enterprise, kami membantu orang membangun dan deploy aplikasi powerful dalam hitungan menit.",
+      "p4": "Tapi ini baru permulaan. Kami punya visi berani: dunia di mana siapa pun yang ingin membangun app bisa melakukannya. Bergabunglah dengan kami.",
+      "quote": "\"Kami membangun tool yang selalu kami inginkan — dan itu menjadi platform paling dicintai di dunia.\"",
+      "quoteAttribution": "— Tim AppNode"
+    },
+    "values": {
+      "title": "Nilai-nilai kami",
+      "subtitle": "Prinsip-prinsip yang memandu semua yang kami lakukan.",
+      "innovationFirst": {
+        "title": "Inovasi pertama",
+        "description": "Kami mendorong batas kemungkinan, mengeksplorasi teknologi terbaru untuk meningkatkan pengalaman developer."
+      },
+      "developerFocused": {
+        "title": "Fokus developer",
+        "description": "Setiap keputusan dibuat dengan berpikir 'apakah ini yang terbaik untuk developer?'"
+      },
+      "simplicityMatters": {
+        "title": "Kesederhanaan penting",
+        "description": "Kompleksitas adalah musuh. Kami membuat hal-hal kompleks menjadi sederhana dan dapat dipahami semua orang."
+      },
+      "quality": {
+        "title": "Obsesi kualitas",
+        "description": "Kami tidak berkompromi dengan kualitas. Setiap fitur harus memenuhi standar tinggi kami."
+      },
+      "communityDriven": {
+        "title": "Didorong komunitas",
+        "description": "Komunitas kami membentuk kreasi kami. Kami mendengarkan feedback dan membangun dari inspirasi mereka."
+      },
+      "transparency": {
+        "title": "Transparansi",
+        "description": "Kami berbagi kesuksesan dan tantangan secara terbuka, membangun kepercayaan dengan pengguna kami."
+      }
+    },
+    "journey": {
+      "title": "Perjalanan kami",
+      "subtitle": "Dari ide hingga platform global.",
+      "milestone1": {
+        "year": "Jan 2023",
+        "title": "Ide lahir",
+        "description": "Konsep pertama platform pengembangan berbantuan AI lahir."
+      },
+      "milestone2": {
+        "year": "Apr 2023",
+        "title": "Beta privat",
+        "description": "100 pengguna pertama mulai menguji AppNode."
+      },
+      "milestone3": {
+        "year": "Sep 2023",
+        "title": "Peluncuran publik",
+        "description": "Terbuka untuk dunia. Mencapai 10.000 pengguna di bulan pertama."
+      },
+      "milestone4": {
+        "year": "Mar 2024",
+        "title": "1 juta app",
+        "description": "Satu juta aplikasi dibangun dengan AppNode."
+      },
+      "milestone5": {
+        "year": "Agu 2024",
+        "title": "Peluncuran Enterprise",
+        "description": "Solusi diluncurkan untuk perusahaan Fortune 500."
+      },
+      "milestone6": {
+        "year": "Hari ini",
+        "title": "Inovasi berkelanjutan",
+        "description": "Kami terus membangun masa depan pengembangan."
+      }
+    },
+    "team": {
+      "title": "Kenali tim",
+      "subtitle": "Didorong oleh tim berbakat yang passionate tentang misi AppNode.",
+      "joinTeam": "Gabung tim",
+      "viewOpenings": "Lihat lowongan"
+    },
+    "cta": {
+      "title": "Bangun bersama kami?",
+      "subtitle": "Bergabunglah dengan ratusan ribu kreator yang membangun app luar biasa dengan AppNode.",
+      "getStartedFree": "Mulai gratis",
+      "contactUs": "Hubungi kami"
+    }
+  },
+  "rulesPage": {
+    "badge": "Panduan komunitas",
+    "title": "Aturan platform",
+    "subtitle": "Komunitas kami berkembang ketika semua orang mengikuti panduan ini. Bersama, kita menciptakan lingkungan yang positif dan produktif.",
+    "rules": {
+      "respectAndKindness": {
+        "title": "Hormat dan kebaikan",
+        "description": "Perlakukan semua anggota dengan hormat. Pelecehan, ujaran kebencian, dan diskriminasi tidak ditoleransi. Kami menghargai diskusi yang sopan dan inklusif.",
+        "examples": {
+          "title": "Contoh:",
+          "item1": "Gunakan bahasa konstruktif dalam feedback",
+          "item2": "Hormati perspektif dan latar belakang yang berbeda",
+          "item3": "Tetap positif bahkan saat tidak setuju"
+        }
+      },
+      "originalContent": {
+        "title": "Konten original",
+        "description": "Bagikan konten Anda sendiri. Jangan plagiat atau menyalin karya orang lain tanpa izin. Selalu berikan kredit kepada penulis asli.",
+        "examples": {
+          "title": "Contoh:",
+          "item1": "Bagikan proyek dan kode Anda sendiri",
+          "item2": "Kutip sumber untuk resource eksternal",
+          "item3": "Dapatkan izin untuk kolaborasi"
+        }
+      },
+      "noSpam": {
+        "title": "Tanpa spam atau promosi diri",
+        "description": "Jangan membebani komunitas dengan link tidak relevan, konten berulang, atau promosi diri berlebihan. Kualitas di atas kuantitas.",
+        "examples": {
+          "title": "Contoh:",
+          "item1": "Hindari link dalam konteks tidak relevan",
+          "item2": "Fokus pada kontribusi berharga dalam diskusi",
+          "item3": "Ikuti panduan berbagi komunitas"
+        }
+      },
+      "safeContent": {
+        "title": "Privasi dan keamanan",
+        "description": "Jangan bagikan informasi pribadi orang lain tanpa izin mereka dan jangan mencoba mengompromikan keamanan platform. Lindungi data Anda dan data orang lain.",
+        "examples": {
+          "title": "Contoh:",
+          "item1": "Jangan posting API key atau kredensial",
+          "item2": "Jangan bagikan detail pribadi tanpa persetujuan",
+          "item3": "Laporkan kerentanan keamanan secara bertanggung jawab"
+        }
+      },
+      "securePractices": {
+        "title": "Konten yang sesuai",
+        "description": "Konten dewasa, grafis, atau ofensif dilarang di platform. Jaga konten tetap sesuai untuk semua usia dan latar belakang.",
+        "examples": {
+          "title": "Contoh:",
+          "item1": "Pastikan semua unggahan SFW",
+          "item2": "Gunakan bahasa yang bijaksana dalam gambar dan kode",
+          "item3": "Bagikan konten yang sesuai untuk lingkungan kerja atau sekolah"
+        }
+      },
+      "fairUse": {
+        "title": "Membantu dan belajar dari orang lain",
+        "description": "Dukung komunitas, bagikan pengetahuan, dan tetap terbuka untuk belajar. Bersama, kita semua tumbuh.",
+        "examples": {
+          "title": "Contoh:",
+          "item1": "Jawab pertanyaan dari semua tingkat skill",
+          "item2": "Bagikan kesalahan sebagai kesempatan belajar",
+          "item3": "Tunjukkan rasa terima kasih atas kontribusi dan bantuan"
+        }
+      }
+    },
+    "enforcement": {
+      "title": "Penegakan",
+      "description": "Pelanggaran aturan ini dapat mengakibatkan penghapusan konten, peringatan akun, suspensi sementara, atau larangan permanen tergantung pada tingkat keparahan dan frekuensi pelanggaran. Kami meninjau semua laporan dan mengambil tindakan yang sesuai.",
+      "warning": {
+        "title": "Peringatan",
+        "subtitle": "Pelanggaran minor pertama"
+      },
+      "suspension": {
+        "title": "Suspensi",
+        "subtitle": "Pelanggaran berulang atau serius"
+      },
+      "ban": {
+        "title": "Larangan",
+        "subtitle": "Pelanggaran parah atau persisten"
+      }
+    },
+    "report": {
+      "title": "Melihat sesuatu yang salah?",
+      "description": "Jika Anda menemukan konten atau perilaku yang melanggar aturan platform kami, silakan laporkan agar kami dapat mengambil tindakan.",
+      "button": "Laporkan pelanggaran"
     }
   }
 }

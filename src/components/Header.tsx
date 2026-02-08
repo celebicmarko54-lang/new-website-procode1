@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#f8fafc]/95 dark:bg-black/95 backdrop-blur-sm border-b border-gray-200/50 dark:border-gray-800/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-[7.5%]">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-4 lg:gap-8">
@@ -25,8 +25,8 @@ export default function Header() {
                 width={90} 
                 height={90}
                 className="w-[60px] h-[60px] sm:w-[90px] sm:h-[90px] dark:invert dark:brightness-100"
-                quality={100}
-                unoptimized
+                priority
+                fetchPriority="high"
               />
               <span className="text-lg sm:text-xl text-gray-900 dark:text-white tracking-tight font-medium hidden xs:inline">
                 AppNode
@@ -100,7 +100,7 @@ export default function Header() {
                 </button>
                 {activeDropdown === 'resources' && (
                   <div className="absolute top-full left-0 mt-1 w-48 rounded-lg bg-white dark:bg-black border border-gray-200 dark:border-gray-800 shadow-lg py-1 animate-fade-in">
-                    <Link href="/report" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('docs.title')}</Link>
+                    <Link href="/docs" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('docs.title')}</Link>
                     <Link href="/gallery" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('community.showcase')}</Link>
                     <Link href="/blog" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('nav.blog')}</Link>
                     <Link href="/changelog" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">Changelog</Link>
@@ -171,24 +171,31 @@ export default function Header() {
                   {t('common.getStarted')}
                 </Link>
               </div>
-              <div className="px-3 py-2 text-xs font-medium text-gray-400 uppercase">Products</div>
-              <Link href="/products/agent" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Agent</Link>
-              <Link href="/products/database" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Database</Link>
-              <Link href="/products/publish" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Publish</Link>
-              <Link href="/products/security" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Security</Link>
-              <Link href="/products/integrations" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Integrations</Link>
-              <Link href="/products/mobile" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Mobile</Link>
+              <div className="px-3 py-2 text-xs font-medium text-gray-400 uppercase">{t('nav.products')}</div>
+              <Link href="/products/agent" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('products.agent.title')}</Link>
+              <Link href="/products/database" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('products.database.title')}</Link>
+              <Link href="/products/publish" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('products.publish.title')}</Link>
+              <Link href="/products/security" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('products.security.title')}</Link>
+              <Link href="/products/integrations" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('products.integrations.title')}</Link>
+              <Link href="/products/mobile" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('products.mobile.title')}</Link>
               <div className="border-t border-gray-200 dark:border-gray-700 my-2"></div>
-              <div className="px-3 py-2 text-xs font-medium text-gray-400 uppercase">For Work</div>
-              <Link href="/teams" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Teams</Link>
-              <Link href="/enterprise" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Enterprise</Link>
+              <div className="px-3 py-2 text-xs font-medium text-gray-400 uppercase">{t('solutions.title')}</div>
+              <Link href="/enterprise" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">
+                <span className="font-medium">{t('nav.enterprise')}</span>
+                <span className="block text-xs text-gray-400">{t('solutions.enterprise.description')}</span>
+              </Link>
+              <div className="px-3 py-1 text-xs font-medium text-gray-400 uppercase">{t('useCases.title')}</div>
+              <Link href="/usecases/business-apps" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('useCases.businessApps.title')}</Link>
+              <Link href="/usecases/mobile-apps" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('useCases.mobileApps.title')}</Link>
+              <Link href="/usecases/rapid-prototyping" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('useCases.rapidPrototyping.title')}</Link>
               <div className="border-t border-gray-200 dark:border-gray-700 my-2"></div>
-              <div className="px-3 py-2 text-xs font-medium text-gray-400 uppercase">Resources</div>
-              <Link href="/docs" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Documentation</Link>
-              <Link href="/gallery" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Gallery</Link>
-              <Link href="/blog" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Blog</Link>
+              <div className="px-3 py-2 text-xs font-medium text-gray-400 uppercase">{t('footer.resources')}</div>
+              <Link href="/docs" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('docs.title')}</Link>
+              <Link href="/gallery" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('community.showcase')}</Link>
+              <Link href="/blog" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('nav.blog')}</Link>
+              <Link href="/changelog" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Changelog</Link>
               <div className="border-t border-gray-200 dark:border-gray-700 my-2"></div>
-              <Link href="/pricing" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Pricing</Link>
+              <Link href="/pricing" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('nav.pricing')}</Link>
               <div className="flex items-center gap-2 px-3 py-2">
                 <LanguageSelector />
                 <ThemeToggle />

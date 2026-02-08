@@ -264,7 +264,7 @@ export default function HeroSection() {
         <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">Start with an idea</h3>
           
           {/* Category tabs */}
-          <div className="flex flex-wrap gap-1.5 mb-3 overflow-x-auto pb-1">
+          <div className="flex flex-nowrap gap-1.5 mb-3 overflow-x-auto pb-1 scrollbar-hide">
             {categories.map((category) => (
               <button
                 key={category}
@@ -300,9 +300,10 @@ export default function HeroSection() {
                       src={project.image} 
                       alt={project.title}
                       fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover object-top"
-                      priority
+                      loading={index === 0 && category === 'AI Apps' ? 'eager' : 'lazy'}
+                      priority={index === 0 && category === 'AI Apps'}
                       quality={75}
                     />
                   </div>

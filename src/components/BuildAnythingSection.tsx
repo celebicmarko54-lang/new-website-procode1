@@ -14,7 +14,7 @@ interface CategoryCard {
 
 const categories: CategoryCard[] = [
   {
-    name: 'Analytics Dashboard',
+    name: 'SaaS Platform',
     gradient: 'from-gray-800 to-gray-900',
     icon: null,
     image: '/templates/1.1.png'
@@ -38,19 +38,19 @@ const categories: CategoryCard[] = [
     image: '/templates/1.4.png'
   },
   {
-    name: 'Beauty & Style',
+    name: 'Style Collection',
     gradient: 'from-emerald-500 to-teal-600',
     icon: null,
     image: '/templates/1.5.png'
   },
   {
-    name: 'Product Catalog',
+    name: 'Beauty Products',
     gradient: 'from-amber-500 to-orange-600',
     icon: null,
     image: '/templates/1.7.png'
   },
   {
-    name: 'Data Analytics',
+    name: 'Fitness Tracker',
     gradient: 'from-gray-600 to-gray-700',
     icon: null,
     image: '/templates/1.8.png'
@@ -62,64 +62,46 @@ const categories: CategoryCard[] = [
     image: '/templates/1.9.png'
   },
   {
-    name: 'Furniture Store',
+    name: 'Beauty Store',
     gradient: 'from-green-500 to-emerald-600',
     icon: null,
     image: '/templates/1.10.png'
   },
   {
-    name: 'Tech Dashboard',
+    name: 'Streaming Platform',
     gradient: 'from-blue-600 to-indigo-700',
     icon: null,
     image: '/templates/1.11.png'
   },
   {
-    name: 'Tech Setup Blog',
+    name: 'Gaming Gear Store',
     gradient: 'from-gray-800 to-gray-900',
     icon: null,
     image: '/templates/1.12.png'
   },
   {
-    name: 'Entertainment Hub',
+    name: 'Gaming Store',
     gradient: 'from-gray-700 to-gray-800',
     icon: null,
     image: '/templates/1.13.png'
   },
   {
-    name: 'Piano App',
+    name: 'Synthesizer',
     gradient: 'from-teal-500 to-emerald-600',
     icon: null,
     image: '/templates/1.14.png'
   },
   {
-    name: 'Analytics Platform',
+    name: 'Project Roadmap',
     gradient: 'from-indigo-500 to-blue-600',
     icon: null,
     image: '/templates/1.15.png'
   },
   {
-    name: 'Sales Dashboard',
+    name: 'Analytics Dashboard',
     gradient: 'from-orange-500 to-red-600',
     icon: null,
     image: '/templates/1.16.png'
-  },
-  {
-    name: 'Travel Experience',
-    gradient: 'from-sky-500 to-blue-600',
-    icon: null,
-    image: '/templates/1.1.png'
-  },
-  {
-    name: 'Gourmet Kitchen',
-    gradient: 'from-orange-500 to-amber-600',
-    icon: null,
-    image: '/templates/1.2.png'
-  },
-  {
-    name: 'AI Assistant',
-    gradient: 'from-cyan-400 to-blue-600',
-    icon: null,
-    image: '/templates/1.3.png'
   },
 ];
 
@@ -212,8 +194,8 @@ export default function BuildAnythingSection() {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                     sizes="(max-width: 640px) 200px, (max-width: 768px) 240px, 280px"
-                    priority={index < 10}
-                    quality={75}
+                    loading={index < 4 ? 'eager' : 'lazy'}
+                    quality={70}
                   />
                   {/* Overlay gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

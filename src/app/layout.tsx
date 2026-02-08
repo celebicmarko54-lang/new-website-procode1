@@ -34,7 +34,12 @@ export default function RootLayout({
       <head suppressHydrationWarning>
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preload" as="image" href="/templates/AppNodelogo.png" />
+        <link rel="preload" as="video" href="/intro.mp4" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
         <script
           suppressHydrationWarning
           dangerouslySetInnerHTML={{

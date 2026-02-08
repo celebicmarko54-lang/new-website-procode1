@@ -628,7 +628,7 @@
       "reportingAbuseDesc": "Si vous rencontrez du contenu ou un comportement qui viole nos politiques, veuillez le signaler immédiatement. Nous prenons tous les signalements au sérieux et enquêtons rapidement.",
       "howToReport": "Comment signaler",
       "howToReport1": "Cliquez sur le bouton \"Signaler\" sur n'importe quel projet ou profil utilisateur",
-      "howToReport2": "Envoyez-nous un email directement à abuse@appnode.ai",
+      "howToReport2": "Envoyez-nous un email directement à contact@appnode.ai",
       "howToReport3": "Utilisez le formulaire de contact dans les paramètres de votre compte",
       "whatWeInvestigate": "Ce que nous investiguons",
       "investigate1": "Harcèlement ou menaces",
@@ -639,7 +639,7 @@
       "copyrightClaimsTitle": "Réclamations de droits d'auteur",
       "copyrightClaimsDesc": "Nous respectons les droits de propriété intellectuelle et répondons rapidement aux réclamations de droits d'auteur valides.",
       "filingClaim": "Déposer une réclamation",
-      "filingClaimDesc": "Pour déposer une notification de retrait DMCA, veuillez envoyer un email à legal@appnode.ai avec :",
+      "filingClaimDesc": "Pour déposer une notification de retrait DMCA, veuillez envoyer un email à contact@appnode.ai avec :",
       "claimItem1": "Identification de l'œuvre protégée",
       "claimItem2": "URL du contenu en infraction",
       "claimItem3": "Vos coordonnées",
@@ -673,7 +673,7 @@
       "disclaimers": "7. Avertissements",
       "disclaimersDesc": "NOS SERVICES SONT FOURNIS \"EN L'ÉTAT\" SANS GARANTIES D'AUCUNE SORTE, EXPRESSES OU IMPLICITES. NOUS NE GARANTISSONS PAS QUE NOS SERVICES SERONT ININTERROMPUS, SÉCURISÉS OU SANS ERREUR.",
       "termsContact": "8. Contact",
-      "termsContactDesc": "Pour toute question concernant ces Conditions, contactez-nous à legal@appnode.ai",
+      "termsContactDesc": "Pour toute question concernant ces Conditions, contactez-nous à contact@appnode.ai",
       "privacyTitle": "Politique de confidentialité",
       "privacyLastUpdated": "Dernière mise à jour : Janvier 2025",
       "privacyIntro": "Cette Politique de confidentialité décrit comment AppNode collecte, utilise et partage les informations vous concernant lorsque vous utilisez nos services.",
@@ -688,7 +688,7 @@
       "useInfo3": "Envoyer des avis techniques et des messages de support",
       "useInfo4": "Répondre à vos commentaires et questions",
       "privacyContact": "Contact",
-      "privacyContactDesc": "Pour les questions relatives à la confidentialité, contactez-nous à privacy@appnode.ai",
+      "privacyContactDesc": "Pour les questions relatives à la confidentialité, contactez-nous à contact@appnode.ai",
       "platformRulesTitle": "Règles de la plateforme",
       "platformRulesDesc": "Ces règles aident à maintenir un environnement sûr et productif pour tous les utilisateurs d'AppNode.",
       "prohibitedContent": "Contenu interdit",
@@ -727,7 +727,7 @@
       "compliance": "Conformité",
       "complianceDesc": "Nous maintenons la conformité avec les normes et réglementations de l'industrie :",
       "reportVulnerability": "Signaler une vulnérabilité",
-      "reportVulnerabilityDesc": "Vous avez trouvé un problème de sécurité ? Veuillez le signaler de manière responsable à security@appnode.ai. Nous apprécions votre aide pour maintenir AppNode sécurisé et offrons des récompenses pour les signalements valides.",
+      "reportVulnerabilityDesc": "Vous avez trouvé un problème de sécurité ? Veuillez le signaler de manière responsable à contact@appnode.ai. Nous apprécions votre aide pour maintenir AppNode sécurisé et offrons des récompenses pour les signalements valides.",
       "dataProtectionTitle": "Protection des données",
       "dataProtectionDesc": "Nous prenons la protection des données au sérieux. Votre code, vos projets et vos informations personnelles sont protégés par plusieurs couches de protection.",
       "yourDataRights": "Vos droits sur les données",
@@ -1187,6 +1187,24 @@
         "author": "Emily Watson",
         "role": "Head of Design",
         "company": "DesignStudio"
+      },
+      "testimonial4": {
+        "quote": "Nous avons migré l'intégralité de notre panneau d'administration vers AppNode en seulement 2 semaines. Le retour sur investissement a été incroyable pour notre équipe opérationnelle.",
+        "author": "James Kim",
+        "role": "Directeur des Opérations",
+        "company": "CloudScale"
+      },
+      "testimonial5": {
+        "quote": "L'intégration SSO et les journaux d'audit étaient exactement ce dont notre équipe de conformité avait besoin. L'intégration s'est faite sans accroc.",
+        "author": "Anika Larsson",
+        "role": "Directrice de la Sécurité",
+        "company": "SecureBank"
+      },
+      "testimonial6": {
+        "quote": "La flexibilité de l'API d'AppNode nous a permis de connecter tous nos outils existants. La productivité de l'équipe a doublé dès le premier mois.",
+        "author": "Ryan Park",
+        "role": "Responsable Ingénierie",
+        "company": "DataFlow"
       }
     },
     "form": {
@@ -1704,6 +1722,188 @@
       "startBuildingFree": "Commencer gratuitement",
       "browseCourses": "Parcourir les cours",
       "subscribeYouTube": "S'abonner sur YouTube"
+    }
+  },
+  "aboutPage": {
+    "badge": "À propos de nous",
+    "title": "Notre mission",
+    "subtitle": "Nous construisons un monde où le développement est démocratisé, et où toute personne ayant une idée peut créer des applications puissantes.",
+    "stats": {
+      "developers": "Développeurs",
+      "appsBuilt": "Apps créées",
+      "countries": "Pays",
+      "uptime": "Disponibilité"
+    },
+    "ourStory": {
+      "title": "Notre histoire",
+      "p1": "AppNode est né de la croyance que la création de logiciels devrait être une expérience merveilleuse. En tant que développeurs, nous aspirions à des outils qui nous soutiennent, accélèrent la créativité et nous permettent de donner vie aux idées sans obstacles.",
+      "p2": "En 2023, nous avons commencé notre voyage en construisant une plateforme de développement propulsée par l'IA — sans sacrifier la joie de coder. Nous sommes passionnés par un avenir où l'IA ne remplace pas tout, mais renforce tout le monde.",
+      "p3": "Aujourd'hui, AppNode est aimé par des centaines de milliers de développeurs dans le monde entier. Des projets de loisirs personnels aux produits à l'échelle de l'entreprise, nous aidons les gens à construire et déployer des applications puissantes en quelques minutes.",
+      "p4": "Mais ce n'est que le début. Nous avons une vision audacieuse : un monde où quiconque veut créer une application peut le faire. Rejoignez-nous.",
+      "quote": "\"Nous avons construit l'outil que nous avons toujours voulu — et il est devenu la plateforme la plus aimée au monde.\"",
+      "quoteAttribution": "— L'équipe AppNode"
+    },
+    "values": {
+      "title": "Nos valeurs",
+      "subtitle": "Les principes qui guident tout ce que nous faisons.",
+      "innovationFirst": {
+        "title": "L'innovation d'abord",
+        "description": "Nous repoussons les limites du possible, explorant les dernières technologies pour améliorer l'expérience développeur."
+      },
+      "developerFocused": {
+        "title": "Centré sur les développeurs",
+        "description": "Chaque décision est prise en pensant 'est-ce le mieux pour les développeurs ?'"
+      },
+      "simplicityMatters": {
+        "title": "La simplicité compte",
+        "description": "La complexité est l'ennemi. Nous rendons les choses complexes simples et compréhensibles pour tous."
+      },
+      "quality": {
+        "title": "Obsession de la qualité",
+        "description": "Nous ne compromettons pas la qualité. Chaque fonctionnalité doit répondre à nos normes élevées."
+      },
+      "communityDriven": {
+        "title": "Guidé par la communauté",
+        "description": "Notre communauté façonne nos créations. Nous écoutons les retours et construisons sur leur inspiration."
+      },
+      "transparency": {
+        "title": "Transparence",
+        "description": "Nous partageons ouvertement nos succès et nos défis, renforçant la confiance avec nos utilisateurs."
+      }
+    },
+    "journey": {
+      "title": "Notre parcours",
+      "subtitle": "D'une idée à une plateforme mondiale.",
+      "milestone1": {
+        "year": "Jan 2023",
+        "title": "L'idée naît",
+        "description": "Le premier concept d'une plateforme de développement assistée par IA est né."
+      },
+      "milestone2": {
+        "year": "Avr 2023",
+        "title": "Bêta privée",
+        "description": "Les 100 premiers utilisateurs ont commencé à tester AppNode."
+      },
+      "milestone3": {
+        "year": "Sep 2023",
+        "title": "Lancement public",
+        "description": "Ouvert au monde. Atteint 10 000 utilisateurs le premier mois."
+      },
+      "milestone4": {
+        "year": "Mar 2024",
+        "title": "1 million d'apps",
+        "description": "Un million d'applications construites avec AppNode."
+      },
+      "milestone5": {
+        "year": "Aoû 2024",
+        "title": "Lancement Enterprise",
+        "description": "Solutions lancées pour les entreprises Fortune 500."
+      },
+      "milestone6": {
+        "year": "Aujourd'hui",
+        "title": "Innovation continue",
+        "description": "Nous continuons à construire l'avenir du développement."
+      }
+    },
+    "team": {
+      "title": "Rencontrez l'équipe",
+      "subtitle": "Animé par une équipe talentueuse passionnée par la mission d'AppNode.",
+      "joinTeam": "Rejoindre l'équipe",
+      "viewOpenings": "Voir les postes ouverts"
+    },
+    "cta": {
+      "title": "Construisez avec nous ?",
+      "subtitle": "Rejoignez des centaines de milliers de créateurs qui construisent des apps incroyables avec AppNode.",
+      "getStartedFree": "Commencer gratuitement",
+      "contactUs": "Nous contacter"
+    }
+  },
+  "rulesPage": {
+    "badge": "Directives communautaires",
+    "title": "Règles de la plateforme",
+    "subtitle": "Notre communauté prospère quand tout le monde suit ces directives. Ensemble, nous créons un environnement positif et productif.",
+    "rules": {
+      "respectAndKindness": {
+        "title": "Respect et bienveillance",
+        "description": "Traitez tous les membres avec respect. Le harcèlement, les discours haineux et la discrimination ne sont pas tolérés. Nous valorisons les discussions courtoises et inclusives.",
+        "examples": {
+          "title": "Exemples :",
+          "item1": "Utiliser un langage constructif dans les retours",
+          "item2": "Respecter les différentes perspectives et origines",
+          "item3": "Rester positif même en cas de désaccord"
+        }
+      },
+      "originalContent": {
+        "title": "Contenu original",
+        "description": "Partagez votre propre contenu. Ne plagiez pas ou ne copiez pas le travail des autres sans permission. Créditez toujours les auteurs originaux.",
+        "examples": {
+          "title": "Exemples :",
+          "item1": "Partager vos propres projets et code",
+          "item2": "Citer les sources pour les ressources externes",
+          "item3": "Obtenir la permission pour les collaborations"
+        }
+      },
+      "noSpam": {
+        "title": "Pas de spam ni d'autopromotion",
+        "description": "Ne surchargez pas la communauté avec des liens non pertinents, du contenu répétitif ou de l'autopromotion excessive. La qualité avant la quantité.",
+        "examples": {
+          "title": "Exemples :",
+          "item1": "Éviter les liens dans des contextes non pertinents",
+          "item2": "Se concentrer sur les contributions de valeur dans les discussions",
+          "item3": "Suivre les directives de partage de la communauté"
+        }
+      },
+      "safeContent": {
+        "title": "Contenu sûr",
+        "description": "Gardez la plateforme sûre pour tous. Ne créez pas, ne partagez pas ou ne promouvez pas de contenu nuisible, illégal ou inapproprié.",
+        "examples": {
+          "title": "Exemples :",
+          "item1": "Pas de contenu explicite, violent ou perturbant",
+          "item2": "Pas de promotion d'activités illégales",
+          "item3": "Pas de contenu susceptible de nuire aux autres"
+        }
+      },
+      "securePractices": {
+        "title": "Pratiques sécurisées",
+        "description": "Suivez les bonnes pratiques de sécurité. N'essayez jamais d'exploiter, de pirater ou de compromettre la plateforme ou les autres utilisateurs.",
+        "examples": {
+          "title": "Exemples :",
+          "item1": "N'essayez pas d'accéder aux comptes des autres",
+          "item2": "Signalez les vulnérabilités de sécurité de manière responsable",
+          "item3": "Ne partagez jamais de code malveillant ou de liens de phishing"
+        }
+      },
+      "fairUse": {
+        "title": "Utilisation équitable",
+        "description": "Utilisez la plateforme de manière équitable et comme prévu. Respectez les limites d'utilisation et n'abusez pas de nos services.",
+        "examples": {
+          "title": "Exemples :",
+          "item1": "Restez dans les limites de votre plan",
+          "item2": "N'abusez pas des ressources de la plateforme",
+          "item3": "Respectez les conditions d'utilisation"
+        }
+      }
+    },
+    "enforcement": {
+      "title": "Application",
+      "description": "Les violations de ces règles peuvent entraîner la suppression du contenu, des avertissements de compte, une suspension temporaire ou un bannissement permanent selon la gravité et la fréquence des violations. Nous examinons tous les signalements et prenons les mesures appropriées.",
+      "warning": {
+        "title": "Avertissement",
+        "subtitle": "Première violation mineure"
+      },
+      "suspension": {
+        "title": "Suspension",
+        "subtitle": "Violations répétées ou graves"
+      },
+      "ban": {
+        "title": "Bannissement",
+        "subtitle": "Violations sévères ou persistantes"
+      }
+    },
+    "report": {
+      "title": "Vous voyez quelque chose de mal ?",
+      "description": "Si vous rencontrez du contenu ou un comportement qui viole nos règles de la plateforme, veuillez le signaler pour que nous puissions agir.",
+      "button": "Signaler un abus"
     }
   }
 }

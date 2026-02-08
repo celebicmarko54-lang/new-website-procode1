@@ -46,7 +46,7 @@ const footerLinks: FooterSection[] = [
       { nameKey: 'footer.cookieSettings', href: '/cookies' },
       { nameKey: 'footer.termsOfService', href: '/terms' },
       { nameKey: 'footer.platformRules', href: '/rules' },
-      { nameKey: 'docs.title', href: '/report' },
+      { nameKey: 'docs.title', href: '/docs' },
     ],
   },
 ];

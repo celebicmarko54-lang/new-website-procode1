@@ -46,21 +46,138 @@ const testimonialData = [
     avatar: "EW",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
   },
+  {
+    key: 'testimonial4',
+    avatar: "JK",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+  },
+  {
+    key: 'testimonial5',
+    avatar: "AL",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face",
+  },
+  {
+    key: 'testimonial6',
+    avatar: "RP",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+  },
 ];
 
-const logos = [
-  { name: 'Stripe', image: '/logos/stripe.png', extraClass: '' },
-  { name: 'Google', image: '/logos/google.png', extraClass: '' },
-  { name: 'Slack', image: '/logos/slack.png', extraClass: 'dark:invert dark:brightness-200' },
-  { name: 'Anthropic', image: '/logos/Antropic.png', extraClass: 'dark:invert dark:brightness-200' },
-  { name: 'Microsoft', image: '/logos/Microsoft-Logo-PNG-Image.png', extraClass: '' },
-  { name: 'Meta', image: '/logos/Meta-Logo.png', extraClass: '' },
-  { name: 'Adobe', image: '/logos/Adobe-logo-500x281.png', extraClass: '' },
-  { name: 'Coinbase', image: '/logos/Coinbase.svg.png', extraClass: 'dark:invert dark:brightness-200' },
-  { name: 'Monday', image: '/logos/Monday_logo.svg.png', extraClass: '' },
-  { name: 'Boeing', image: '/logos/logo-boeing-business-boeing-logo-035a6398c48a4513ed2ead8bc0c6b849.png', extraClass: 'scale-[4] dark:invert dark:brightness-200' },
-  { name: 'PayPal', image: '/logos/pngegg.png', extraClass: '' },
-  { name: 'Company', image: '/logos/pngegg (1).png', extraClass: 'dark:invert dark:brightness-200' },
+const LogoMeta = () => (
+  <svg viewBox="0 0 280 60" className="h-10 w-auto" aria-label="Meta">
+    <defs>
+      <linearGradient id="metaGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#0081FB" />
+        <stop offset="100%" stopColor="#0064E0" />
+      </linearGradient>
+    </defs>
+    <path d="M21.5 8C15.5 8 12.5 14 10.5 18C8.5 22 6 30 3.5 30C1.5 30 0 26 0 20C0 14 2 8 7.5 8C11 8 13 11 14.5 14L10.5 22L14.5 14C16 11 18 8 21.5 8C27 8 29 14 29 20C29 26 27.5 30 25.5 30C23 30 20.5 22 18.5 18C16.5 14 15.5 8 21.5 8Z" fill="url(#metaGrad)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" />
+    </path>
+    <text x="38" y="35" fontSize="28" fontWeight="700" fill="#0081FB" fontFamily="system-ui, -apple-system, sans-serif">
+      Meta
+    </text>
+  </svg>
+);
+
+const LogoClickUp = () => (
+  <svg viewBox="0 0 280 60" className="h-10 w-auto" aria-label="ClickUp">
+    <defs>
+      <linearGradient id="clickupGrad1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#8930FD" />
+        <stop offset="100%" stopColor="#49CCF9" />
+      </linearGradient>
+      <linearGradient id="clickupGrad2" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%" stopColor="#FF02F0" />
+        <stop offset="100%" stopColor="#FFC800" />
+      </linearGradient>
+    </defs>
+    <g transform="translate(2,8)">
+      <path d="M6 30L15 20L24 30" stroke="url(#clickupGrad1)" strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round">
+        <animate attributeName="stroke-dasharray" values="0 50;50 0" dur="2s" fill="freeze" />
+      </path>
+      <path d="M10 24L15 16L20 24" stroke="url(#clickupGrad2)" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round">
+        <animate attributeName="stroke-dasharray" values="0 40;40 0" dur="2s" begin="0.3s" fill="freeze" />
+      </path>
+    </g>
+    <text x="34" y="38" fontSize="26" fontWeight="800" fontFamily="system-ui, -apple-system, sans-serif">
+      <tspan fill="#7B68EE">Click</tspan><tspan fill="#49CCF9">Up</tspan>
+    </text>
+  </svg>
+);
+
+const LogoPayPal = () => (
+  <svg viewBox="0 0 280 60" className="h-10 w-auto" aria-label="PayPal">
+    <g transform="translate(0,6)">
+      <path d="M12 4C12 4 24 4 26 4C30 4 33 6.5 33 11C33 17 29 22 22 22H18L16 34H8L12 4Z" fill="#003087">
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="2.5s" repeatCount="indefinite" />
+      </path>
+      <path d="M18 8C18 8 28 8 30 8C34 8 37 10.5 37 15C37 21 33 26 26 26H22L20 38H14L18 8Z" fill="#009CDE">
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="2.5s" begin="0.3s" repeatCount="indefinite" />
+      </path>
+    </g>
+    <text x="44" y="38" fontSize="28" fontWeight="700" fontFamily="system-ui, -apple-system, sans-serif">
+      <tspan fill="#003087">Pay</tspan><tspan fill="#009CDE">Pal</tspan>
+    </text>
+  </svg>
+);
+
+const LogoCoinbase = () => (
+  <svg viewBox="0 0 280 60" className="h-10 w-auto" aria-label="Coinbase">
+    <g transform="translate(4,8)">
+      <circle cx="20" cy="22" r="18" fill="#0052FF" stroke="none">
+        <animate attributeName="r" values="17;18;17" dur="3s" repeatCount="indefinite" />
+      </circle>
+      <rect x="12" y="18" width="16" height="8" rx="2" fill="white" />
+    </g>
+    <text x="48" y="38" fontSize="25" fontWeight="700" fill="#0052FF" fontFamily="system-ui, -apple-system, sans-serif" letterSpacing="-0.5">
+      coinbase
+    </text>
+  </svg>
+);
+
+const LogoBoeing = () => (
+  <svg viewBox="0 0 280 60" className="h-10 w-auto" aria-label="Boeing">
+    <g transform="translate(0,6)">
+      <path d="M4 24C4 24 14 8 25 8C29 8 31 12 31 16C31 22 26 30 18 30C14 30 10 28 8 26" stroke="#0033A0" strokeWidth="3" fill="none" strokeLinecap="round">
+        <animate attributeName="stroke-dasharray" values="0 80;80 0" dur="2s" fill="freeze" />
+      </path>
+      <line x1="12" y1="6" x2="32" y2="6" stroke="#0033A0" strokeWidth="2" strokeLinecap="round">
+        <animate attributeName="stroke-dasharray" values="0 20;20 0" dur="1.5s" fill="freeze" />
+      </line>
+    </g>
+    <text x="40" y="38" fontSize="30" fontWeight="700" fill="#0033A0" fontFamily="system-ui, -apple-system, sans-serif" letterSpacing="1">
+      BOEING
+    </text>
+  </svg>
+);
+
+const LogoMonday = () => (
+  <svg viewBox="0 0 300 60" className="h-10 w-auto" aria-label="Monday.com">
+    <g transform="translate(2,12)">
+      <ellipse cx="8" cy="20" rx="7" ry="14" fill="#FF3D57" transform="rotate(-12,8,20)">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite" />
+      </ellipse>
+      <ellipse cx="26" cy="20" rx="7" ry="14" fill="#FFCB00" transform="rotate(-12,26,20)">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" begin="0.2s" repeatCount="indefinite" />
+      </ellipse>
+      <ellipse cx="44" cy="20" rx="7" ry="14" fill="#00CA72" transform="rotate(-12,44,20)">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" begin="0.4s" repeatCount="indefinite" />
+      </ellipse>
+    </g>
+    <text x="60" y="38" fontSize="26" fontWeight="700" fill="currentColor" fontFamily="system-ui, -apple-system, sans-serif">
+      monday<tspan fontSize="18" fill="#FF3D57">.com</tspan>
+    </text>
+  </svg>
+);
+
+const animatedLogos = [
+  { name: 'Meta', component: LogoMeta, color: '#0081FB' },
+  { name: 'ClickUp', component: LogoClickUp, color: '#7B68EE' },
+  { name: 'PayPal', component: LogoPayPal, color: '#003087' },
+  { name: 'Coinbase', component: LogoCoinbase, color: '#0052FF' },
+  { name: 'Boeing', component: LogoBoeing, color: '#0033A0' },
+  { name: 'Monday', component: LogoMonday, color: '#FF3D57' },
 ];
 
 export default function EnterprisePage() {
@@ -116,17 +233,22 @@ export default function EnterprisePage() {
       <section className="py-16 overflow-hidden">
         <div className="px-4 sm:px-6 lg:px-8">
           <p className="text-center text-sm font-medium text-gray-500 dark:text-gray-400 mb-12">{t('enterprisePage.trustedBy')}</p>
-          <div className="relative w-full overflow-hidden">
-            <div className="flex items-center gap-20 animate-marquee">
-              {[...logos, ...logos, ...logos, ...logos, ...logos, ...logos].map((logo, index) => (
-                <div key={`${logo.name}-${index}`} className="flex-shrink-0 w-40 h-14 flex items-center justify-center">
-                  <img 
-                    src={logo.image} 
-                    alt={logo.name} 
-                    className={`h-12 w-auto max-w-[160px] object-contain scale-110 ${logo.extraClass}`} 
-                  />
-                </div>
-              ))}
+          <div className="relative w-full overflow-hidden logo-marquee-mask">
+            <div className="flex items-center gap-24 animate-marquee">
+              {[...animatedLogos, ...animatedLogos, ...animatedLogos, ...animatedLogos, ...animatedLogos, ...animatedLogos, ...animatedLogos, ...animatedLogos].map((logo, index) => {
+                const LogoComp = logo.component;
+                return (
+                  <div
+                    key={`${logo.name}-${index}`}
+                    className="flex-shrink-0 h-16 flex items-center justify-center logo-float group cursor-pointer text-gray-800 dark:text-white"
+                    style={{ animationDelay: `${(index % 6) * 0.3}s` }}
+                  >
+                    <div className="transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg" style={{ filter: `drop-shadow(0 0 0px ${logo.color}00)`, transition: 'filter 0.3s, transform 0.3s' }} onMouseEnter={(e) => (e.currentTarget.style.filter = `drop-shadow(0 0 12px ${logo.color}66)`)} onMouseLeave={(e) => (e.currentTarget.style.filter = `drop-shadow(0 0 0px ${logo.color}00)`)}>
+                      <LogoComp />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -139,10 +261,30 @@ export default function EnterprisePage() {
               transform: translateX(-50%);
             }
           }
+          @keyframes logoFloat {
+            0%, 100% {
+              transform: translateY(0px);
+            }
+            50% {
+              transform: translateY(-6px);
+            }
+          }
           .animate-marquee {
             display: flex;
-            animation: marquee 25s linear infinite;
+            animation: marquee 30s linear infinite;
             will-change: transform;
+          }
+          .logo-float {
+            animation: logoFloat 4s ease-in-out infinite;
+          }
+          .logo-marquee-mask {
+            -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+          }
+          @media (max-width: 768px) {
+            .animate-marquee {
+              animation: marquee 18s linear infinite;
+            }
           }
         `}</style>
       </section>

@@ -670,6 +670,24 @@
         "author": "Emily Watson",
         "role": "Head of Design",
         "company": "DesignStudio"
+      },
+      "testimonial4": {
+        "quote": "We migrated our entire admin panel to AppNode in just 2 weeks. The ROI has been incredible for our operations team.",
+        "author": "James Kim",
+        "role": "Director of Operations",
+        "company": "CloudScale"
+      },
+      "testimonial5": {
+        "quote": "The SSO integration and audit logs were exactly what our compliance team needed. Onboarding was seamless.",
+        "author": "Anika Larsson",
+        "role": "Chief Security Officer",
+        "company": "SecureBank"
+      },
+      "testimonial6": {
+        "quote": "AppNode's API flexibility allowed us to connect all our existing tools. Our team productivity doubled in the first month.",
+        "author": "Ryan Park",
+        "role": "Engineering Manager",
+        "company": "DataFlow"
       }
     },
     "form": {
@@ -1502,7 +1520,7 @@
       "reportingAbuseDesc": "If you encounter content or behavior that violates our policies, please report it immediately. We take all reports seriously and investigate promptly.",
       "howToReport": "How to Report",
       "howToReport1": "Click the \"Report\" button on any project or user profile",
-      "howToReport2": "Email us directly at abuse@appnode.ai",
+      "howToReport2": "Email us directly at contact@appnode.ai",
       "howToReport3": "Use the contact form in your account settings",
       "whatWeInvestigate": "What We Investigate",
       "investigate1": "Harassment or threats",
@@ -1513,7 +1531,7 @@
       "copyrightClaimsTitle": "Copyright Claims",
       "copyrightClaimsDesc": "We respect intellectual property rights and respond promptly to valid copyright claims.",
       "filingClaim": "Filing a Claim",
-      "filingClaimDesc": "To file a DMCA takedown notice, please email legal@appnode.ai with:",
+      "filingClaimDesc": "To file a DMCA takedown notice, please email contact@appnode.ai with:",
       "claimItem1": "Identification of the copyrighted work",
       "claimItem2": "URL of the infringing content",
       "claimItem3": "Your contact information",
@@ -1547,7 +1565,7 @@
       "disclaimers": "7. Disclaimers",
       "disclaimersDesc": "OUR SERVICES ARE PROVIDED \"AS IS\" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. WE DO NOT GUARANTEE THAT OUR SERVICES WILL BE UNINTERRUPTED, SECURE, OR ERROR-FREE.",
       "termsContact": "8. Contact",
-      "termsContactDesc": "For questions about these Terms, contact us at legal@appnode.ai",
+      "termsContactDesc": "For questions about these Terms, contact us at contact@appnode.ai",
       "privacyTitle": "Privacy Policy",
       "privacyLastUpdated": "Last updated: January 2025",
       "privacyIntro": "This Privacy Policy describes how AppNode collects, uses, and shares information about you when you use our services.",
@@ -1562,7 +1580,7 @@
       "useInfo3": "Send technical notices and support messages",
       "useInfo4": "Respond to your comments and questions",
       "privacyContact": "Contact",
-      "privacyContactDesc": "For privacy-related questions, contact us at privacy@appnode.ai",
+      "privacyContactDesc": "For privacy-related questions, contact us at contact@appnode.ai",
       "platformRulesTitle": "Platform Rules",
       "platformRulesDesc": "These rules help maintain a safe and productive environment for all AppNode users.",
       "prohibitedContent": "Prohibited Content",
@@ -1601,7 +1619,7 @@
       "compliance": "Compliance",
       "complianceDesc": "We maintain compliance with industry standards and regulations:",
       "reportVulnerability": "Report a Vulnerability",
-      "reportVulnerabilityDesc": "Found a security issue? Please report it responsibly to security@appnode.ai. We appreciate your help in keeping AppNode secure and offer rewards for valid reports.",
+      "reportVulnerabilityDesc": "Found a security issue? Please report it responsibly to contact@appnode.ai. We appreciate your help in keeping AppNode secure and offer rewards for valid reports.",
       "dataProtectionTitle": "Data Protection",
       "dataProtectionDesc": "We take data protection seriously. Your code, your projects, and your personal information are safeguarded with multiple layers of protection.",
       "yourDataRights": "Your Data Rights",
@@ -1704,6 +1722,188 @@
       "roadmapItem4": "Native mobile app builder",
       "roadmapItem5": "API marketplace",
       "roadmapItem6": "Advanced analytics dashboard"
+    }
+  },
+  "aboutPage": {
+    "badge": "About Us",
+    "title": "Empowering creators to build anything",
+    "subtitle": "AppNode is on a mission to democratize software development. We believe everyone should have the power to bring their ideas to life, regardless of technical background.",
+    "stats": {
+      "developers": "Developers",
+      "appsBuilt": "Apps Built",
+      "countries": "Countries",
+      "uptime": "Uptime"
+    },
+    "ourStory": {
+      "title": "Our Story",
+      "p1": "AppNode started with a simple observation: building software is too hard. Too many great ideas never see the light of day because creating apps requires years of technical training.",
+      "p2": "We founded AppNode to change that. Using the latest advances in AI and intuitive design, we've created a platform where anyone can build production-ready applications in minutes, not months.",
+      "p3": "Today, over 100,000 creators use AppNode to build everything from simple landing pages to complex enterprise applications. Our community spans 50+ countries and continues to grow every day.",
+      "p4": "We're just getting started. Our vision is a world where technology creation is as accessible as writing an email. Join us on this journey.",
+      "quote": "\"The best way to predict the future is to create it.\"",
+      "quoteAttribution": "— Our founding principle"
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "These principles guide everything we do at AppNode.",
+      "innovationFirst": {
+        "title": "Innovation First",
+        "description": "We push boundaries and embrace cutting-edge technology to solve real problems."
+      },
+      "developerFocused": {
+        "title": "Developer Focused",
+        "description": "Every decision we make starts with our users. Their success is our success."
+      },
+      "simplicityMatters": {
+        "title": "Simplicity Matters",
+        "description": "We take security seriously. Your data and code are protected by industry-leading practices."
+      },
+      "quality": {
+        "title": "Quality Obsession",
+        "description": "We're building tools that empower creators everywhere, regardless of background."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "description": "We believe in open communication with our community and being honest about our roadmap."
+      },
+      "communityDriven": {
+        "title": "Community Driven",
+        "description": "Our community shapes our product. We listen, learn, and build together."
+      }
+    },
+    "journey": {
+      "title": "Our Journey",
+      "subtitle": "From an idea to a global platform.",
+      "milestone1": {
+        "year": "Jan 2023",
+        "title": "The Idea Is Born",
+        "description": "The first concept of an AI-assisted development platform was born."
+      },
+      "milestone2": {
+        "year": "Apr 2023",
+        "title": "Private Beta",
+        "description": "The first 100 users began testing AppNode."
+      },
+      "milestone3": {
+        "year": "Sep 2023",
+        "title": "Public Launch",
+        "description": "Opened to the world. Reached 10,000 users in the first month."
+      },
+      "milestone4": {
+        "year": "Mar 2024",
+        "title": "1 Million Apps",
+        "description": "One million applications built with AppNode."
+      },
+      "milestone5": {
+        "year": "Aug 2024",
+        "title": "Enterprise Launch",
+        "description": "Solutions launched for Fortune 500 companies."
+      },
+      "milestone6": {
+        "year": "Today",
+        "title": "Continuous Innovation",
+        "description": "We continue to build the future of development."
+      }
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "subtitle": "Powered by a talented team passionate about AppNode's mission.",
+      "joinTeam": "Join the Team",
+      "viewOpenings": "View Open Positions"
+    },
+    "cta": {
+      "title": "Build with us?",
+      "subtitle": "Join hundreds of thousands of creators building amazing apps with AppNode.",
+      "getStartedFree": "Get Started Free",
+      "contactUs": "Contact Us"
+    }
+  },
+  "rulesPage": {
+    "badge": "Community Guidelines",
+    "title": "Platform Rules",
+    "subtitle": "Our community thrives when everyone follows these guidelines. Together, we create a positive and productive environment.",
+    "rules": {
+      "respectAndKindness": {
+        "title": "Respect and Kindness",
+        "description": "Treat all community members with respect. Harassment, hate speech, discrimination, or personal attacks of any kind are not tolerated.",
+        "examples": {
+          "title": "Examples:",
+          "item1": "Be helpful and constructive in feedback",
+          "item2": "Avoid inflammatory or hostile language",
+          "item3": "Respect differences in opinion and experience"
+        }
+      },
+      "originalContent": {
+        "title": "Original Content",
+        "description": "Create and share original work. Respect intellectual property rights and give proper attribution when using others' work.",
+        "examples": {
+          "title": "Examples:",
+          "item1": "Only share content you have rights to",
+          "item2": "Credit original creators when inspired by their work",
+          "item3": "Don't copy or plagiarize other users' projects"
+        }
+      },
+      "safeContent": {
+        "title": "Safe Content",
+        "description": "Keep the platform safe for everyone. Do not create, share, or promote harmful, illegal, or inappropriate content.",
+        "examples": {
+          "title": "Examples:",
+          "item1": "No explicit, violent, or disturbing content",
+          "item2": "No promotion of illegal activities",
+          "item3": "No content that could harm or endanger others"
+        }
+      },
+      "noSpam": {
+        "title": "No Spam or Manipulation",
+        "description": "Don't engage in spam, manipulation, or deceptive practices. Keep the platform authentic and trustworthy.",
+        "examples": {
+          "title": "Examples:",
+          "item1": "No automated or bulk actions to artificially boost visibility",
+          "item2": "No fake accounts or impersonation",
+          "item3": "No misleading or deceptive content"
+        }
+      },
+      "securePractices": {
+        "title": "Secure Practices",
+        "description": "Follow security best practices. Never attempt to exploit, hack, or compromise the platform or other users.",
+        "examples": {
+          "title": "Examples:",
+          "item1": "Don't attempt to access others' accounts",
+          "item2": "Report security vulnerabilities responsibly",
+          "item3": "Never share malicious code or phishing links"
+        }
+      },
+      "fairUse": {
+        "title": "Fair Use",
+        "description": "Use the platform fairly and as intended. Respect usage limits and don't abuse our services.",
+        "examples": {
+          "title": "Examples:",
+          "item1": "Stay within your plan's usage limits",
+          "item2": "Don't use the platform for unauthorized commercial purposes",
+          "item3": "Don't circumvent platform restrictions"
+        }
+      }
+    },
+    "enforcement": {
+      "title": "Enforcement",
+      "description": "Violations of these rules may result in content removal, account warnings, temporary suspension, or permanent ban depending on the severity and frequency of violations. We review all reports and take appropriate action.",
+      "warning": {
+        "title": "Warning",
+        "subtitle": "First minor violation"
+      },
+      "suspension": {
+        "title": "Suspension",
+        "subtitle": "Repeated or serious violations"
+      },
+      "ban": {
+        "title": "Ban",
+        "subtitle": "Severe or persistent violations"
+      }
+    },
+    "report": {
+      "title": "See Something Wrong?",
+      "description": "If you encounter content or behavior that violates our platform rules, please report it so we can take action.",
+      "button": "Report Abuse"
     }
   }
 }

@@ -25,7 +25,7 @@ export default function DatabasePage() {
             </p>
             <div className="flex items-center justify-center gap-4">
               <Link href="/signup" className="px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-medium rounded-full hover:opacity-90 transition-all shadow-xl shadow-gray-900/20 dark:shadow-none">{t('productDatabase.getStarted')}</Link>
-              <Link href="/report" className="px-8 py-4 bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-[#2a2a2a] text-gray-700 dark:text-gray-300 font-medium rounded-full hover:bg-gray-50 dark:hover:bg-[#151515] transition-colors">{t('productDatabase.readDocs')}</Link>
+              <Link href="/docs" className="px-8 py-4 bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-[#2a2a2a] text-gray-700 dark:text-gray-300 font-medium rounded-full hover:bg-gray-50 dark:hover:bg-[#151515] transition-colors">{t('productDatabase.readDocs')}</Link>
             </div>
           </div>
         </section>

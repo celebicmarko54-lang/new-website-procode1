@@ -628,7 +628,7 @@
       "reportingAbuseDesc": "Se você encontrar conteúdo ou comportamento que viole nossas políticas, por favor reporte imediatamente. Levamos todas as denúncias a sério e investigamos prontamente.",
       "howToReport": "Como Reportar",
       "howToReport1": "Clique no botão \"Reportar\" em qualquer projeto ou perfil de usuário",
-      "howToReport2": "Envie um email diretamente para abuse@appnode.ai",
+      "howToReport2": "Envie um email diretamente para contact@appnode.ai",
       "howToReport3": "Use o formulário de contato nas configurações da sua conta",
       "whatWeInvestigate": "O que investigamos",
       "investigate1": "Assédio ou ameaças",
@@ -639,7 +639,7 @@
       "copyrightClaimsTitle": "Reivindicações de Direitos Autorais",
       "copyrightClaimsDesc": "Respeitamos os direitos de propriedade intelectual e respondemos prontamente a reivindicações válidas de direitos autorais.",
       "filingClaim": "Fazer uma Reivindicação",
-      "filingClaimDesc": "Para registrar um aviso de remoção DMCA, por favor envie um email para legal@appnode.ai com:",
+      "filingClaimDesc": "Para registrar um aviso de remoção DMCA, por favor envie um email para contact@appnode.ai com:",
       "claimItem1": "Identificação da obra protegida por direitos autorais",
       "claimItem2": "URL do conteúdo infrator",
       "claimItem3": "Suas informações de contato",
@@ -673,7 +673,7 @@
       "disclaimers": "7. Isenções de Responsabilidade",
       "disclaimersDesc": "NOSSOS SERVIÇOS SÃO FORNECIDOS \"COMO ESTÃO\" SEM GARANTIAS DE QUALQUER TIPO, EXPRESSAS OU IMPLÍCITAS. NÃO GARANTIMOS QUE NOSSOS SERVIÇOS SERÃO ININTERRUPTOS, SEGUROS OU LIVRES DE ERROS.",
       "termsContact": "8. Contato",
-      "termsContactDesc": "Para perguntas sobre estes Termos, entre em contato conosco em legal@appnode.ai",
+      "termsContactDesc": "Para perguntas sobre estes Termos, entre em contato conosco em contact@appnode.ai",
       "privacyTitle": "Política de Privacidade",
       "privacyLastUpdated": "Última atualização: Janeiro de 2025",
       "privacyIntro": "Esta Política de Privacidade descreve como o AppNode coleta, usa e compartilha informações sobre você quando você usa nossos serviços.",
@@ -688,7 +688,7 @@
       "useInfo3": "Enviar avisos técnicos e mensagens de suporte",
       "useInfo4": "Responder aos seus comentários e perguntas",
       "privacyContact": "Contato",
-      "privacyContactDesc": "Para perguntas relacionadas à privacidade, entre em contato conosco em privacy@appnode.ai",
+      "privacyContactDesc": "Para perguntas relacionadas à privacidade, entre em contato conosco em contact@appnode.ai",
       "platformRulesTitle": "Regras da Plataforma",
       "platformRulesDesc": "Estas regras ajudam a manter um ambiente seguro e produtivo para todos os usuários do AppNode.",
       "prohibitedContent": "Conteúdo Proibido",
@@ -727,7 +727,7 @@
       "compliance": "Conformidade",
       "complianceDesc": "Mantemos conformidade com padrões e regulamentos do setor:",
       "reportVulnerability": "Reportar uma Vulnerabilidade",
-      "reportVulnerabilityDesc": "Encontrou um problema de segurança? Por favor, reporte de forma responsável para security@appnode.ai. Agradecemos sua ajuda em manter o AppNode seguro e oferecemos recompensas por relatórios válidos.",
+      "reportVulnerabilityDesc": "Encontrou um problema de segurança? Por favor, reporte de forma responsável para contact@appnode.ai. Agradecemos sua ajuda em manter o AppNode seguro e oferecemos recompensas por relatórios válidos.",
       "dataProtectionTitle": "Proteção de Dados",
       "dataProtectionDesc": "Levamos a proteção de dados a sério. Seu código, seus projetos e suas informações pessoais são protegidos com múltiplas camadas de proteção.",
       "yourDataRights": "Seus Direitos sobre os Dados",
@@ -1187,6 +1187,24 @@
         "author": "Emily Watson",
         "role": "Head of Design",
         "company": "DesignStudio"
+      },
+      "testimonial4": {
+        "quote": "Migramos todo o nosso painel de administração para o AppNode em apenas 2 semanas. O ROI foi incrível para nossa equipe de operações.",
+        "author": "James Kim",
+        "role": "Diretor de Operações",
+        "company": "CloudScale"
+      },
+      "testimonial5": {
+        "quote": "A integração SSO e os logs de auditoria eram exatamente o que nossa equipe de compliance precisava. A integração foi perfeita.",
+        "author": "Anika Larsson",
+        "role": "Diretora de Segurança",
+        "company": "SecureBank"
+      },
+      "testimonial6": {
+        "quote": "A flexibilidade da API do AppNode nos permitiu conectar todas as nossas ferramentas existentes. A produtividade da equipe dobrou no primeiro mês.",
+        "author": "Ryan Park",
+        "role": "Gerente de Engenharia",
+        "company": "DataFlow"
       }
     },
     "form": {
@@ -1704,6 +1722,188 @@
       "startBuildingFree": "Começar grátis",
       "browseCourses": "Ver cursos",
       "subscribeYouTube": "Inscrever-se no YouTube"
+    }
+  },
+  "aboutPage": {
+    "badge": "Sobre nós",
+    "title": "Nossa missão",
+    "subtitle": "Estamos construindo um mundo onde o desenvolvimento é democratizado, e qualquer pessoa com uma ideia pode criar aplicações poderosas.",
+    "stats": {
+      "developers": "Desenvolvedores",
+      "appsBuilt": "Apps criados",
+      "countries": "Países",
+      "uptime": "Disponibilidade"
+    },
+    "ourStory": {
+      "title": "Nossa história",
+      "p1": "AppNode nasceu da crença de que criar software deveria ser uma experiência maravilhosa. Como desenvolvedores, ansiávamos por ferramentas que nos apoiassem, acelerassem a criatividade e nos permitissem dar vida às ideias sem obstáculos.",
+      "p2": "Em 2023, começamos nossa jornada construindo uma plataforma de desenvolvimento potencializada por IA — sem sacrificar a alegria de programar. Somos apaixonados por um futuro onde a IA não substitui tudo, mas fortalece todos.",
+      "p3": "Hoje, AppNode é amado por centenas de milhares de desenvolvedores ao redor do mundo. De projetos pessoais de hobby a produtos em escala empresarial, ajudamos pessoas a construir e implantar aplicações poderosas em minutos.",
+      "p4": "Mas isso é apenas o começo. Temos uma visão ousada: um mundo onde qualquer pessoa que queira construir um app possa fazê-lo. Junte-se a nós.",
+      "quote": "\"Construímos a ferramenta que sempre quisemos — e ela se tornou a plataforma mais amada do mundo.\"",
+      "quoteAttribution": "— A equipe AppNode"
+    },
+    "values": {
+      "title": "Nossos valores",
+      "subtitle": "Os princípios que guiam tudo o que fazemos.",
+      "innovationFirst": {
+        "title": "Inovação em primeiro lugar",
+        "description": "Empurramos os limites do possível, explorando as últimas tecnologias para melhorar a experiência do desenvolvedor."
+      },
+      "developerFocused": {
+        "title": "Focado em desenvolvedores",
+        "description": "Cada decisão é tomada pensando 'isso é o melhor para desenvolvedores?'"
+      },
+      "simplicityMatters": {
+        "title": "Simplicidade importa",
+        "description": "Complexidade é o inimigo. Tornamos coisas complexas simples e compreensíveis para todos."
+      },
+      "quality": {
+        "title": "Obsessão por qualidade",
+        "description": "Não comprometemos a qualidade. Cada recurso deve atender aos nossos altos padrões."
+      },
+      "communityDriven": {
+        "title": "Guiado pela comunidade",
+        "description": "Nossa comunidade molda nossas criações. Ouvimos o feedback e construímos sobre sua inspiração."
+      },
+      "transparency": {
+        "title": "Transparência",
+        "description": "Compartilhamos abertamente nossos sucessos e desafios, construindo confiança com nossos usuários."
+      }
+    },
+    "journey": {
+      "title": "Nossa jornada",
+      "subtitle": "De uma ideia a uma plataforma global.",
+      "milestone1": {
+        "year": "Jan 2023",
+        "title": "A ideia nasce",
+        "description": "O primeiro conceito de uma plataforma de desenvolvimento assistida por IA nasceu."
+      },
+      "milestone2": {
+        "year": "Abr 2023",
+        "title": "Beta privado",
+        "description": "Os primeiros 100 usuários começaram a testar o AppNode."
+      },
+      "milestone3": {
+        "year": "Set 2023",
+        "title": "Lançamento público",
+        "description": "Aberto ao mundo. Alcançamos 10.000 usuários no primeiro mês."
+      },
+      "milestone4": {
+        "year": "Mar 2024",
+        "title": "1 milhão de apps",
+        "description": "Um milhão de aplicações construídas com AppNode."
+      },
+      "milestone5": {
+        "year": "Ago 2024",
+        "title": "Lançamento Enterprise",
+        "description": "Soluções lançadas para empresas Fortune 500."
+      },
+      "milestone6": {
+        "year": "Hoje",
+        "title": "Inovação contínua",
+        "description": "Continuamos construindo o futuro do desenvolvimento."
+      }
+    },
+    "team": {
+      "title": "Conheça a equipe",
+      "subtitle": "Movido por uma equipe talentosa apaixonada pela missão do AppNode.",
+      "joinTeam": "Junte-se à equipe",
+      "viewOpenings": "Ver vagas abertas"
+    },
+    "cta": {
+      "title": "Constrói conosco?",
+      "subtitle": "Junte-se a centenas de milhares de criadores construindo apps incríveis com AppNode.",
+      "getStartedFree": "Começar grátis",
+      "contactUs": "Fale conosco"
+    }
+  },
+  "rulesPage": {
+    "badge": "Diretrizes da comunidade",
+    "title": "Regras da plataforma",
+    "subtitle": "Nossa comunidade prospera quando todos seguem estas diretrizes. Juntos, criamos um ambiente positivo e produtivo.",
+    "rules": {
+      "respectAndKindness": {
+        "title": "Respeito e gentileza",
+        "description": "Trate todos os membros com respeito. Assédio, discurso de ódio e discriminação não são tolerados. Valorizamos discussões corteses e inclusivas.",
+        "examples": {
+          "title": "Exemplos:",
+          "item1": "Usar linguagem construtiva no feedback",
+          "item2": "Respeitar diferentes perspectivas e origens",
+          "item3": "Manter-se positivo mesmo ao discordar"
+        }
+      },
+      "originalContent": {
+        "title": "Conteúdo original",
+        "description": "Compartilhe seu próprio conteúdo. Não plagie ou copie o trabalho de outros sem permissão. Sempre dê crédito aos autores originais.",
+        "examples": {
+          "title": "Exemplos:",
+          "item1": "Compartilhar seus próprios projetos e código",
+          "item2": "Citar fontes para recursos externos",
+          "item3": "Obter permissão para colaborações"
+        }
+      },
+      "noSpam": {
+        "title": "Sem spam ou autopromoção",
+        "description": "Não sobrecarregue a comunidade com links irrelevantes, conteúdo repetitivo ou autopromoção excessiva. Qualidade acima de quantidade.",
+        "examples": {
+          "title": "Exemplos:",
+          "item1": "Evitar links em contextos irrelevantes",
+          "item2": "Focar em contribuições valiosas nas discussões",
+          "item3": "Seguir as diretrizes de compartilhamento da comunidade"
+        }
+      },
+      "safeContent": {
+        "title": "Privacidade e segurança",
+        "description": "Não compartilhe informações pessoais de outros sem permissão e não tente comprometer a segurança da plataforma. Proteja seus dados e os de outros.",
+        "examples": {
+          "title": "Exemplos:",
+          "item1": "Não publicar chaves de API ou credenciais",
+          "item2": "Não compartilhar detalhes pessoais sem consentimento",
+          "item3": "Reportar vulnerabilidades de segurança responsavelmente"
+        }
+      },
+      "securePractices": {
+        "title": "Conteúdo apropriado",
+        "description": "Conteúdo adulto, gráfico ou ofensivo é proibido na plataforma. Mantenha o conteúdo apropriado para todas as idades e origens.",
+        "examples": {
+          "title": "Exemplos:",
+          "item1": "Garantir que todos os uploads sejam SFW",
+          "item2": "Usar linguagem respeitosa em imagens e código",
+          "item3": "Compartilhar conteúdo apropriado para ambientes de trabalho ou escola"
+        }
+      },
+      "fairUse": {
+        "title": "Ajudar e aprender com outros",
+        "description": "Apoie a comunidade, compartilhe conhecimento e esteja aberto ao aprendizado. Juntos, todos crescemos.",
+        "examples": {
+          "title": "Exemplos:",
+          "item1": "Responder perguntas de todos os níveis de habilidade",
+          "item2": "Compartilhar erros como oportunidades de aprendizado",
+          "item3": "Mostrar gratidão por contribuições e ajuda"
+        }
+      }
+    },
+    "enforcement": {
+      "title": "Aplicação",
+      "description": "Violações destas regras podem resultar em remoção de conteúdo, avisos de conta, suspensão temporária ou banimento permanente dependendo da gravidade e frequência das violações. Revisamos todos os relatórios e tomamos as medidas apropriadas.",
+      "warning": {
+        "title": "Aviso",
+        "subtitle": "Primeira violação menor"
+      },
+      "suspension": {
+        "title": "Suspensão",
+        "subtitle": "Violações repetidas ou sérias"
+      },
+      "ban": {
+        "title": "Banimento",
+        "subtitle": "Violações graves ou persistentes"
+      }
+    },
+    "report": {
+      "title": "Viu algo errado?",
+      "description": "Se você encontrar conteúdo ou comportamento que viole nossas regras da plataforma, por favor reporte para que possamos agir.",
+      "button": "Reportar abuso"
     }
   }
 }

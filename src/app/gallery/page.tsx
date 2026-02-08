@@ -159,7 +159,7 @@ export default function GalleryPage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {/* Actual AI Apps Projects */}
-            {filteredProjects.map((project) => (
+            {filteredProjects.map((project, index) => (
               <div 
                 key={project.id} 
                 className="group bg-white dark:bg-[#0a0a0a] rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 transition-all hover:shadow-lg"
@@ -172,8 +172,8 @@ export default function GalleryPage() {
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
-                    priority
-                    quality={75}
+                    loading={index < 8 ? 'eager' : 'lazy'}
+                    quality={70}
                   />
                 </div>
                 

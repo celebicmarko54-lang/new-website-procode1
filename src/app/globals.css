@@ -26,17 +26,31 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeSpeed;
 }
 
-/* Enable hardware acceleration for smoother animations */
+/* Performance: Enable hardware acceleration and optimize rendering */
 img, video {
   content-visibility: auto;
+  contain-intrinsic-size: auto 300px;
 }
 
 /* Optimize image rendering */
 img {
   image-rendering: -webkit-optimize-contrast;
   backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* GPU acceleration for interactive elements */
+a, button {
+  transform: translateZ(0);
+}
+
+/* Sections - style containment only (no layout to avoid stacking context) */
+section {
+  contain: style;
 }
 
 body {
@@ -47,7 +61,9 @@ body {
   padding: 0;
   min-height: 100vh;
   position: relative;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Dark mode scrollbar styling */

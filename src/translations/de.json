@@ -628,7 +628,7 @@
       "reportingAbuseDesc": "Wenn Sie auf Inhalte oder Verhalten stoßen, das gegen unsere Richtlinien verstößt, melden Sie es bitte umgehend. Wir nehmen alle Meldungen ernst und untersuchen sie zeitnah.",
       "howToReport": "So melden Sie",
       "howToReport1": "Klicken Sie auf die Schaltfläche \"Melden\" bei jedem Projekt oder Nutzerprofil",
-      "howToReport2": "Schreiben Sie uns direkt an abuse@appnode.ai",
+      "howToReport2": "Schreiben Sie uns direkt an contact@appnode.ai",
       "howToReport3": "Nutzen Sie das Kontaktformular in Ihren Kontoeinstellungen",
       "whatWeInvestigate": "Was wir untersuchen",
       "investigate1": "Belästigung oder Drohungen",
@@ -639,7 +639,7 @@
       "copyrightClaimsTitle": "Urheberrechtsansprüche",
       "copyrightClaimsDesc": "Wir respektieren geistige Eigentumsrechte und reagieren umgehend auf gültige Urheberrechtsansprüche.",
       "filingClaim": "Anspruch einreichen",
-      "filingClaimDesc": "Um eine DMCA-Takedown-Benachrichtigung einzureichen, senden Sie bitte eine E-Mail an legal@appnode.ai mit:",
+      "filingClaimDesc": "Um eine DMCA-Takedown-Benachrichtigung einzureichen, senden Sie bitte eine E-Mail an contact@appnode.ai mit:",
       "claimItem1": "Identifizierung des urheberrechtlich geschützten Werks",
       "claimItem2": "URL des verletzenden Inhalts",
       "claimItem3": "Ihre Kontaktinformationen",
@@ -673,7 +673,7 @@
       "disclaimers": "7. Haftungsausschluss",
       "disclaimersDesc": "UNSERE DIENSTE WERDEN OHNE JEGLICHE GEWÄHRLEISTUNG BEREITGESTELLT.",
       "termsContact": "8. Kontakt",
-      "termsContactDesc": "Bei Fragen zu diesen Bedingungen kontaktieren Sie uns unter legal@appnode.ai",
+      "termsContactDesc": "Bei Fragen zu diesen Bedingungen kontaktieren Sie uns unter contact@appnode.ai",
       "privacyTitle": "Datenschutzrichtlinie",
       "privacyLastUpdated": "Zuletzt aktualisiert: Januar 2025",
       "privacyIntro": "Diese Datenschutzrichtlinie beschreibt, wie AppNode Informationen über Sie sammelt, verwendet und weitergibt.",
@@ -688,7 +688,7 @@
       "useInfo3": "Versand technischer Hinweise und Support-Nachrichten",
       "useInfo4": "Beantwortung Ihrer Kommentare und Fragen",
       "privacyContact": "Kontakt",
-      "privacyContactDesc": "Bei datenschutzbezogenen Fragen kontaktieren Sie uns unter privacy@appnode.ai",
+      "privacyContactDesc": "Bei datenschutzbezogenen Fragen kontaktieren Sie uns unter contact@appnode.ai",
       "platformRulesTitle": "Plattformregeln",
       "platformRulesDesc": "Diese Regeln helfen dabei, eine sichere und produktive Umgebung für alle Nutzer zu gewährleisten.",
       "prohibitedContent": "Verbotene Inhalte",
@@ -727,7 +727,7 @@
       "compliance": "Compliance",
       "complianceDesc": "Wir halten die Einhaltung von Branchenstandards und Vorschriften aufrecht:",
       "reportVulnerability": "Sicherheitslücke melden",
-      "reportVulnerabilityDesc": "Sicherheitsproblem gefunden? Bitte melden Sie es verantwortungsvoll an security@appnode.ai.",
+      "reportVulnerabilityDesc": "Sicherheitsproblem gefunden? Bitte melden Sie es verantwortungsvoll an contact@appnode.ai.",
       "dataProtectionTitle": "Datenschutz",
       "dataProtectionDesc": "Wir nehmen Datenschutz ernst. Ihr Code, Ihre Projekte und Ihre persönlichen Informationen sind geschützt.",
       "yourDataRights": "Ihre Datenrechte",
@@ -1187,6 +1187,24 @@
         "author": "Emily Watson",
         "role": "Head of Design",
         "company": "DesignStudio"
+      },
+      "testimonial4": {
+        "quote": "Wir haben unser gesamtes Admin-Panel in nur 2 Wochen zu AppNode migriert. Der ROI war unglaublich für unser Operations-Team.",
+        "author": "James Kim",
+        "role": "Director of Operations",
+        "company": "CloudScale"
+      },
+      "testimonial5": {
+        "quote": "Die SSO-Integration und Audit-Logs waren genau das, was unser Compliance-Team brauchte. Das Onboarding war nahtlos.",
+        "author": "Anika Larsson",
+        "role": "Chief Security Officer",
+        "company": "SecureBank"
+      },
+      "testimonial6": {
+        "quote": "AppNodes API-Flexibilität ermöglichte es uns, alle vorhandenen Tools zu verbinden. Die Produktivität unseres Teams hat sich im ersten Monat verdoppelt.",
+        "author": "Ryan Park",
+        "role": "Engineering Manager",
+        "company": "DataFlow"
       }
     },
     "form": {
@@ -1704,6 +1722,188 @@
       "startBuildingFree": "Kostenlos erstellen",
       "browseCourses": "Kurse durchsuchen",
       "subscribeYouTube": "Auf YouTube abonnieren"
+    }
+  },
+  "aboutPage": {
+    "badge": "Über uns",
+    "title": "Unsere Mission",
+    "subtitle": "Wir bauen eine Welt, in der Entwicklung demokratisiert ist und jeder mit einer Idee leistungsstarke Anwendungen erstellen kann.",
+    "stats": {
+      "developers": "Entwickler",
+      "appsBuilt": "Erstellte Apps",
+      "countries": "Länder",
+      "uptime": "Verfügbarkeit"
+    },
+    "ourStory": {
+      "title": "Unsere Geschichte",
+      "p1": "AppNode begann mit dem Glauben, dass Software-Erstellung ein wunderbares Erlebnis sein sollte. Als Entwickler sehnten wir uns nach Tools, die uns unterstützen, Kreativität beschleunigen und uns ermöglichen, Ideen ohne Hindernisse zum Leben zu erwecken.",
+      "p2": "Im Jahr 2023 begannen wir unsere Reise und bauten eine Entwicklungsplattform, die mit KI gestärkt ist — ohne die Freude am Programmieren zu opfern. Wir sind leidenschaftlich für eine Zukunft, in der KI nicht alles ersetzt, sondern alle stärkt.",
+      "p3": "Heute wird AppNode von Hunderttausenden von Entwicklern weltweit geliebt. Von persönlichen Hobbyprojekten bis hin zu unternehmensweiten Produkten helfen wir Menschen, leistungsstarke Anwendungen in Minuten zu erstellen und bereitzustellen.",
+      "p4": "Aber das ist erst der Anfang. Wir haben eine mutige Vision: eine Welt, in der jeder, der eine App erstellen möchte, dies auch kann. Begleiten Sie uns.",
+      "quote": "«Wir haben das Tool gebaut, das wir uns immer gewünscht haben — und es wurde weltweit zur meistgeliebten Plattform.»",
+      "quoteAttribution": "— Das AppNode-Team"
+    },
+    "values": {
+      "title": "Unsere Werte",
+      "subtitle": "Die Prinzipien, die alles leiten, was wir tun.",
+      "innovationFirst": {
+        "title": "Innovation zuerst",
+        "description": "Wir erweitern die Grenzen des Möglichen und erkunden die neuesten Technologien, um die Entwicklererfahrung zu verbessern."
+      },
+      "developerFocused": {
+        "title": "Entwicklerfokussiert",
+        "description": "Jede Entscheidung wird mit der Frage 'Ist das das Beste für Entwickler?' getroffen."
+      },
+      "simplicityMatters": {
+        "title": "Einfachheit zählt",
+        "description": "Komplexität ist der Feind. Wir machen komplexe Dinge einfach und für jeden verständlich."
+      },
+      "quality": {
+        "title": "Qualitätsbesessenheit",
+        "description": "Wir machen keine Kompromisse. Jede Funktion muss unseren hohen Standards entsprechen."
+      },
+      "communityDriven": {
+        "title": "Community-getrieben",
+        "description": "Unsere Community formt unsere Kreationen. Wir hören auf Feedback und bauen darauf auf."
+      },
+      "transparency": {
+        "title": "Transparenz",
+        "description": "Wir teilen unsere Erfolge und Herausforderungen offen und bauen Vertrauen mit unseren Nutzern auf."
+      }
+    },
+    "journey": {
+      "title": "Unsere Reise",
+      "subtitle": "Von einer Idee zur globalen Plattform.",
+      "milestone1": {
+        "year": "Jan 2023",
+        "title": "Die Idee entsteht",
+        "description": "Das erste Konzept einer KI-gestützten Entwicklungsplattform wurde geboren."
+      },
+      "milestone2": {
+        "year": "Apr 2023",
+        "title": "Private Beta",
+        "description": "Die ersten 100 Benutzer begannen, AppNode zu testen."
+      },
+      "milestone3": {
+        "year": "Sep 2023",
+        "title": "Öffentlicher Start",
+        "description": "Weltweit geöffnet. Erreichte 10.000 Benutzer im ersten Monat."
+      },
+      "milestone4": {
+        "year": "Mär 2024",
+        "title": "1 Million Apps",
+        "description": "Eine Million Anwendungen mit AppNode erstellt."
+      },
+      "milestone5": {
+        "year": "Aug 2024",
+        "title": "Enterprise-Start",
+        "description": "Lösungen für Fortune-500-Unternehmen gestartet."
+      },
+      "milestone6": {
+        "year": "Heute",
+        "title": "Kontinuierliche Innovation",
+        "description": "Wir bauen weiter an der Zukunft der Entwicklung."
+      }
+    },
+    "team": {
+      "title": "Treffen Sie das Team",
+      "subtitle": "Angetrieben von einem talentierten Team, das sich für die Mission von AppNode begeistert.",
+      "joinTeam": "Team beitreten",
+      "viewOpenings": "Offene Stellen ansehen"
+    },
+    "cta": {
+      "title": "Bauen Sie mit uns?",
+      "subtitle": "Schließen Sie sich Hunderttausenden von Machern an, die erstaunliche Apps mit AppNode erstellen.",
+      "getStartedFree": "Kostenlos starten",
+      "contactUs": "Kontaktieren Sie uns"
+    }
+  },
+  "rulesPage": {
+    "badge": "Community-Richtlinien",
+    "title": "Plattform-Regeln",
+    "subtitle": "Unsere Community gedeiht, wenn alle diese Richtlinien befolgen. Gemeinsam schaffen wir eine positive und produktive Umgebung.",
+    "rules": {
+      "respectAndKindness": {
+        "title": "Respekt und Freundlichkeit",
+        "description": "Behandeln Sie alle Mitglieder mit Respekt. Belästigung, Hassrede und Diskriminierung werden nicht toleriert. Wir schätzen höfliche und inklusive Diskussionen.",
+        "examples": {
+          "title": "Beispiele:",
+          "item1": "Konstruktive Sprache bei Feedback verwenden",
+          "item2": "Unterschiedliche Perspektiven und Hintergründe respektieren",
+          "item3": "Positiv bleiben, auch bei Meinungsverschiedenheiten"
+        }
+      },
+      "originalContent": {
+        "title": "Originalinhalte",
+        "description": "Teilen Sie Ihre eigenen Inhalte. Plagiieren oder kopieren Sie nicht die Arbeit anderer ohne Erlaubnis. Nennen Sie immer die Originalautoren.",
+        "examples": {
+          "title": "Beispiele:",
+          "item1": "Eigene Projekte und Code teilen",
+          "item2": "Quellen für externe Ressourcen angeben",
+          "item3": "Erlaubnis für Gemeinschaftsarbeiten einholen"
+        }
+      },
+      "noSpam": {
+        "title": "Kein Spam oder Eigenwerbung",
+        "description": "Überlasten Sie die Community nicht mit irrelevanten Links, sich wiederholenden Inhalten oder übermäßiger Eigenwerbung. Qualität vor Quantität.",
+        "examples": {
+          "title": "Beispiele:",
+          "item1": "Links in irrelevanten Kontexten vermeiden",
+          "item2": "Auf wertvolle Beiträge in Diskussionen fokussieren",
+          "item3": "Community-Sharing-Richtlinien befolgen"
+        }
+      },
+      "safeContent": {
+        "title": "Datenschutz und Sicherheit",
+        "description": "Teilen Sie keine persönlichen Informationen anderer ohne deren Erlaubnis und versuchen Sie nicht, die Plattformsicherheit zu kompromittieren. Schützen Sie Ihre eigenen und anderer Daten.",
+        "examples": {
+          "title": "Beispiele:",
+          "item1": "Keine API-Schlüssel oder Anmeldedaten posten",
+          "item2": "Keine persönlichen Details ohne Zustimmung teilen",
+          "item3": "Sicherheitslücken verantwortungsvoll melden"
+        }
+      },
+      "securePractices": {
+        "title": "Angemessene Inhalte",
+        "description": "Erwachsene, grafische oder anstößige Inhalte sind auf der Plattform verboten. Halten Sie Inhalte für alle Altersgruppen und Hintergründe geeignet.",
+        "examples": {
+          "title": "Beispiele:",
+          "item1": "Sicherstellen, dass alle Uploads SFW sind",
+          "item2": "Durchdachte Sprache in Bildern und Code verwenden",
+          "item3": "Inhalte teilen, die für Arbeits- oder Schulumgebungen geeignet sind"
+        }
+      },
+      "fairUse": {
+        "title": "Anderen helfen und lernen",
+        "description": "Unterstützen Sie die Community, teilen Sie Wissen und seien Sie offen für Lernen. Gemeinsam wachsen wir alle.",
+        "examples": {
+          "title": "Beispiele:",
+          "item1": "Fragen aller Fähigkeitsstufen beantworten",
+          "item2": "Fehler als Lernmöglichkeiten teilen",
+          "item3": "Dankbarkeit für Beiträge und Hilfe zeigen"
+        }
+      }
+    },
+    "enforcement": {
+      "title": "Durchsetzung",
+      "description": "Verstöße gegen diese Regeln können je nach Schwere und Häufigkeit der Verstöße zur Entfernung von Inhalten, Kontowarnungen, vorübergehender Sperrung oder dauerhaftem Ausschluss führen. Wir überprüfen alle Meldungen und ergreifen entsprechende Maßnahmen.",
+      "warning": {
+        "title": "Warnung",
+        "subtitle": "Erster geringfügiger Verstoß"
+      },
+      "suspension": {
+        "title": "Sperrung",
+        "subtitle": "Wiederholte oder schwere Verstöße"
+      },
+      "ban": {
+        "title": "Ausschluss",
+        "subtitle": "Schwere oder anhaltende Verstöße"
+      }
+    },
+    "report": {
+      "title": "Etwas Falsches gesehen?",
+      "description": "Wenn Sie auf Inhalte oder Verhalten stoßen, die gegen unsere Plattformregeln verstoßen, melden Sie es bitte, damit wir handeln können.",
+      "button": "Missbrauch melden"
     }
   }
 }
