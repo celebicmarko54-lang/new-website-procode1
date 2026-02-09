@@ -103,7 +103,7 @@ export default function Header() {
                     <Link href="/docs" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('docs.title')}</Link>
                     <Link href="/gallery" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('community.showcase')}</Link>
                     <Link href="/blog" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('nav.blog')}</Link>
-                    <Link href="/changelog" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">Changelog</Link>
+                    <Link href="/changelog" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('changelogPage.title')}</Link>
                   </div>
                 )}
               </div>
@@ -193,7 +193,7 @@ export default function Header() {
               <Link href="/docs" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('docs.title')}</Link>
               <Link href="/gallery" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('community.showcase')}</Link>
               <Link href="/blog" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('nav.blog')}</Link>
-              <Link href="/changelog" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">Changelog</Link>
+              <Link href="/changelog" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('changelogPage.title')}</Link>
               <div className="border-t border-gray-200 dark:border-gray-700 my-2"></div>
               <Link href="/pricing" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('nav.pricing')}</Link>
               <div className="flex items-center gap-2 px-3 py-2">

@@ -1482,7 +1482,7 @@
   },
   "changelogPage": {
     "badge": "Aggiornamenti",
-    "title": "Changelog",
+    "title": "Registro delle modifiche",
     "subtitle": "Tutti gli ultimi aggiornamenti, miglioramenti e correzioni per AppNode",
     "stayUpToDate": "Rimani aggiornato",
     "getNotified": "Ricevi notifiche quando rilasciamo nuove funzionalità",

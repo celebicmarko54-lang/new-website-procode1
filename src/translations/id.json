@@ -1482,7 +1482,7 @@
   },
   "changelogPage": {
     "badge": "Update",
-    "title": "Changelog",
+    "title": "Catatan Perubahan",
     "subtitle": "Semua update, perbaikan, dan peningkatan terbaru untuk AppNode",
     "stayUpToDate": "Tetap update",
     "getNotified": "Dapatkan notifikasi saat kami merilis fitur baru",
