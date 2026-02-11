@@ -1815,7 +1815,9 @@
       "title": "私たちと一緒に構築しませんか？",
       "subtitle": "数十万人のクリエイターと共に、AppNodeで素晴らしいアプリを構築しましょう。",
       "getStartedFree": "無料で始める",
-      "contactUs": "お問い合わせ"
+      "contactUs": "お問い合わせ",
+      "logIn": "ログイン",
+      "getStarted": "始める"
     }
   },
   "rulesPage": {

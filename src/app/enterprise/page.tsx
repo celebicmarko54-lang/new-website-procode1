@@ -171,6 +171,42 @@ const LogoMonday = () => (
   </svg>
 );
 
+const LogoAdobe = () => (
+  <div style={{ width: '160px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <img src="/logos/Adobe-logo-500x281.png" alt="Adobe" style={{ maxHeight: '40px', maxWidth: '160px', objectFit: 'contain' }} />
+  </div>
+);
+
+const LogoAnthropic = () => (
+  <div style={{ width: '160px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <img src="/logos/Antropic.png" alt="Anthropic" className="dark:invert" style={{ maxHeight: '32px', maxWidth: '160px', objectFit: 'contain' }} />
+  </div>
+);
+
+const LogoMicrosoft = () => (
+  <div style={{ width: '160px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <img src="/logos/Microsoft-Logo-PNG-Image.png" alt="Microsoft" style={{ maxHeight: '36px', maxWidth: '160px', objectFit: 'contain' }} />
+  </div>
+);
+
+const LogoGoogle = () => (
+  <div style={{ width: '160px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <img src="/logos/google.png" alt="Google" style={{ maxHeight: '36px', maxWidth: '160px', objectFit: 'contain' }} />
+  </div>
+);
+
+const LogoSlack = () => (
+  <div style={{ width: '160px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <img src="/logos/slack.png" alt="Slack" className="dark:invert" style={{ maxHeight: '36px', maxWidth: '160px', objectFit: 'contain' }} />
+  </div>
+);
+
+const LogoStripe = () => (
+  <div style={{ width: '160px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <img src="/logos/stripe.png" alt="Stripe" style={{ maxHeight: '36px', maxWidth: '160px', objectFit: 'contain' }} />
+  </div>
+);
+
 const animatedLogos = [
   { name: 'Meta', component: LogoMeta, color: '#0081FB' },
   { name: 'ClickUp', component: LogoClickUp, color: '#7B68EE' },
@@ -178,6 +214,12 @@ const animatedLogos = [
   { name: 'Coinbase', component: LogoCoinbase, color: '#0052FF' },
   { name: 'Boeing', component: LogoBoeing, color: '#0033A0' },
   { name: 'Monday', component: LogoMonday, color: '#FF3D57' },
+  { name: 'Adobe', component: LogoAdobe, color: '#FF0000' },
+  { name: 'Anthropic', component: LogoAnthropic, color: '#D4A574' },
+  { name: 'Microsoft', component: LogoMicrosoft, color: '#00A4EF' },
+  { name: 'Google', component: LogoGoogle, color: '#4285F4' },
+  { name: 'Slack', component: LogoSlack, color: '#4A154B' },
+  { name: 'Stripe', component: LogoStripe, color: '#635BFF' },
 ];
 
 export default function EnterprisePage() {
@@ -234,16 +276,15 @@ export default function EnterprisePage() {
         <div className="px-4 sm:px-6 lg:px-8">
           <p className="text-center text-sm font-medium text-gray-500 dark:text-gray-400 mb-12">{t('enterprisePage.trustedBy')}</p>
           <div className="relative w-full overflow-hidden logo-marquee-mask">
-            <div className="flex items-center gap-24 animate-marquee">
-              {[...animatedLogos, ...animatedLogos, ...animatedLogos, ...animatedLogos, ...animatedLogos, ...animatedLogos, ...animatedLogos, ...animatedLogos].map((logo, index) => {
+            <div className="animate-marquee">
+              {[...animatedLogos, ...animatedLogos].map((logo, index) => {
                 const LogoComp = logo.component;
                 return (
                   <div
                     key={`${logo.name}-${index}`}
-                    className="flex-shrink-0 h-16 flex items-center justify-center logo-float group cursor-pointer text-gray-800 dark:text-white"
-                    style={{ animationDelay: `${(index % 6) * 0.3}s` }}
+                    className="logo-item group cursor-pointer text-gray-800 dark:text-white"
                   >
-                    <div className="transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg" style={{ filter: `drop-shadow(0 0 0px ${logo.color}00)`, transition: 'filter 0.3s, transform 0.3s' }} onMouseEnter={(e) => (e.currentTarget.style.filter = `drop-shadow(0 0 12px ${logo.color}66)`)} onMouseLeave={(e) => (e.currentTarget.style.filter = `drop-shadow(0 0 0px ${logo.color}00)`)}>
+                    <div className="transition-all duration-300 group-hover:scale-110" style={{ filter: `drop-shadow(0 0 0px ${logo.color}00)`, transition: 'filter 0.3s, transform 0.3s' }} onMouseEnter={(e) => (e.currentTarget.style.filter = `drop-shadow(0 0 12px ${logo.color}66)`)} onMouseLeave={(e) => (e.currentTarget.style.filter = `drop-shadow(0 0 0px ${logo.color}00)`)}>
                       <LogoComp />
                     </div>
                   </div>
@@ -271,8 +312,20 @@ export default function EnterprisePage() {
           }
           .animate-marquee {
             display: flex;
-            animation: marquee 30s linear infinite;
+            align-items: center;
+            width: max-content;
+            animation: marquee 45s linear infinite;
             will-change: transform;
+          }
+          .logo-item {
+            flex-shrink: 0;
+            width: 200px;
+            min-width: 200px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 24px;
           }
           .logo-float {
             animation: logoFloat 4s ease-in-out infinite;

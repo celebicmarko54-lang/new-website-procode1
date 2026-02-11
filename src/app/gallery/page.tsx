@@ -57,14 +57,14 @@ const personalSoftwareProjects = [
 
 // Games projects with actual images
 const gamesProjects = [
-  { id: 33, title: 'Game 1', image: '/templates/GAME1.png', author: 'AppNode Team', category: 'Games' },
-  { id: 34, title: 'Game 2', image: '/templates/GAME2.png', author: 'AppNode Team', category: 'Games' },
-  { id: 35, title: 'Game 3', image: '/templates/GAME3.png', author: 'AppNode Team', category: 'Games' },
-  { id: 36, title: 'Game 4', image: '/templates/GAME6.png', author: 'AppNode Team', category: 'Games' },
-  { id: 37, title: 'Game 5', image: '/templates/GAME7.png', author: 'AppNode Team', category: 'Games' },
-  { id: 38, title: 'Game 6', image: '/templates/GAME HOME1.png', author: 'AppNode Team', category: 'Games' },
-  { id: 39, title: 'Game 7', image: '/templates/GAME HOME2.png', author: 'AppNode Team', category: 'Games' },
-  { id: 40, title: 'Game 8', image: '/templates/GAME HOME3.png', author: 'AppNode Team', category: 'Games' },
+  { id: 33, title: 'Cyber Runner', image: '/templates/GAME1.png', author: 'AppNode Team', category: 'Games' },
+  { id: 34, title: 'Mystic Forest', image: '/templates/GAME2.png', author: 'AppNode Team', category: 'Games' },
+  { id: 35, title: 'Space Odyssey', image: '/templates/GAME3.png', author: 'AppNode Team', category: 'Games' },
+  { id: 36, title: 'Neon City', image: '/templates/GAME6.png', author: 'AppNode Team', category: 'Games' },
+  { id: 37, title: 'Cell Evolution', image: '/templates/GAME7.png', author: 'AppNode Team', category: 'Games' },
+  { id: 38, title: 'Detective Dashboard', image: '/templates/GAME HOME1.png', author: 'AppNode Team', category: 'Games' },
+  { id: 39, title: 'Party Games', image: '/templates/GAME HOME2.png', author: 'AppNode Team', category: 'Games' },
+  { id: 40, title: 'Drift Rush', image: '/templates/GAME HOME3.png', author: 'AppNode Team', category: 'Games' },
 ];
 
 // All projects combined for preloading

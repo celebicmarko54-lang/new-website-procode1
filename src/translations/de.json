@@ -1815,7 +1815,9 @@
       "title": "Bauen Sie mit uns?",
       "subtitle": "Schließen Sie sich Hunderttausenden von Machern an, die erstaunliche Apps mit AppNode erstellen.",
       "getStartedFree": "Kostenlos starten",
-      "contactUs": "Kontaktieren Sie uns"
+      "contactUs": "Kontaktieren Sie uns",
+      "logIn": "Anmelden",
+      "getStarted": "Loslegen"
     }
   },
   "rulesPage": {

@@ -1738,7 +1738,7 @@
       "title": "Our Story",
       "p1": "AppNode started with a simple observation: building software is too hard. Too many great ideas never see the light of day because creating apps requires years of technical training.",
       "p2": "We founded AppNode to change that. Using the latest advances in AI and intuitive design, we've created a platform where anyone can build production-ready applications in minutes, not months.",
-      "p3": "Today, over 100,000 creators use AppNode to build everything from simple landing pages to complex enterprise applications. Our community spans 50+ countries and continues to grow every day.",
+      "p3": "Today, AppNode is loved by developers worldwide. From personal hobby projects to enterprise-scale products, we help people build and deploy powerful applications in minutes.",
       "p4": "We're just getting started. Our vision is a world where technology creation is as accessible as writing an email. Join us on this journey.",
       "quote": "\"The best way to predict the future is to create it.\"",
       "quoteAttribution": "— Our founding principle"
@@ -1815,7 +1815,9 @@
       "title": "Build with us?",
       "subtitle": "Join hundreds of thousands of creators building amazing apps with AppNode.",
       "getStartedFree": "Get Started Free",
-      "contactUs": "Contact Us"
+      "contactUs": "Contact Us",
+      "logIn": "Log In",
+      "getStarted": "Get Started"
     }
   },
   "rulesPage": {

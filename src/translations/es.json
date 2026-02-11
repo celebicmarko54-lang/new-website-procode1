@@ -1815,7 +1815,9 @@
       "title": "¿Construyes con nosotros?",
       "subtitle": "Únete a cientos de miles de creadores construyendo apps increíbles con AppNode.",
       "getStartedFree": "Comenzar gratis",
-      "contactUs": "Contáctanos"
+      "contactUs": "Contáctanos",
+      "logIn": "Iniciar sesión",
+      "getStarted": "Comenzar"
     }
   },
   "rulesPage": {
