@@ -22,7 +22,7 @@ export default function CTASection() {
   };
 
   return (
-    <section className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white dark:from-[#1A1A1A] dark:to-[#1A1A1A] relative overflow-hidden">
       {/* Background gradient blobs */}
       <div className="absolute top-1/3 left-10 w-40 h-40 bg-gray-200/30 rounded-full blur-3xl" />
       <div className="absolute bottom-1/3 right-10 w-56 h-56 bg-gray-200/30 rounded-full blur-3xl" />

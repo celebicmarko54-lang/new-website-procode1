@@ -26,7 +26,7 @@ export default function CookieSettingsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-black">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A]">
       <Header />
       
       <main className="pt-32 pb-20">
@@ -45,7 +45,7 @@ export default function CookieSettingsPage() {
           {/* Cookie Categories */}
           <div className="space-y-6 mb-12">
             {/* Essential Cookies */}
-            <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 p-6 hover:border-gray-300 dark:hover:border-gray-600 transition-all">
+            <div className="bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-100 dark:border-2 dark:border-gray-800 p-6 hover:border-gray-300 dark:hover:border-gray-600 transition-all">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
@@ -73,7 +73,7 @@ export default function CookieSettingsPage() {
             </div>
 
             {/* Analytics Cookies */}
-            <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 p-6 hover:border-gray-300 dark:hover:border-gray-600 transition-all">
+            <div className="bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-100 dark:border-2 dark:border-gray-800 p-6 hover:border-gray-300 dark:hover:border-gray-600 transition-all">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
@@ -106,7 +106,7 @@ export default function CookieSettingsPage() {
             </div>
 
             {/* Marketing Cookies */}
-            <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 p-6 hover:border-gray-300 dark:hover:border-gray-600 transition-all">
+            <div className="bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-100 dark:border-2 dark:border-gray-800 p-6 hover:border-gray-300 dark:hover:border-gray-600 transition-all">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
@@ -139,7 +139,7 @@ export default function CookieSettingsPage() {
             </div>
 
             {/* Personalization Cookies */}
-            <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-6 hover:border-gray-300 dark:hover:border-gray-600 transition-all">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-2 dark:border-gray-800 p-6 hover:border-gray-300 dark:hover:border-gray-600 transition-all">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
@@ -190,7 +190,7 @@ export default function CookieSettingsPage() {
           </div>
 
           {/* Additional Info */}
-          <div className="mt-16 bg-gray-50 dark:bg-black rounded-2xl p-8">
+          <div className="mt-16 bg-gray-50 dark:bg-[#1A1A1A] rounded-2xl p-8">
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{t('cookiesPage.aboutTitle')}</h2>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
               {t('cookiesPage.aboutDescription')}

@@ -9,7 +9,7 @@ export default function TeamsPage() {
   const { t } = useTranslation();
   
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-black text-gray-900 dark:text-white">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] text-gray-900 dark:text-white">
       <Header />
       
       <main className="pt-24 pb-16">
@@ -32,7 +32,7 @@ export default function TeamsPage() {
               <Link href="/signup?plan=teams" className="px-6 py-3 bg-violet-600 hover:bg-violet-700 text-white font-medium rounded-lg transition-colors">
                 {t('teamsPage.startTeamTrial')}
               </Link>
-              <Link href="/enterprise" className="px-6 py-3 border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 font-medium rounded-lg transition-colors">
+              <Link href="/enterprise" className="px-6 py-3 border border-gray-300 dark:border-2 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 font-medium rounded-lg transition-colors">
                 {t('teamsPage.enterpriseOptions')}
               </Link>
             </div>
@@ -41,8 +41,8 @@ export default function TeamsPage() {
 
         {/* Collaboration Demo */}
         <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden shadow-xl">
-            <div className="flex items-center gap-2 px-4 py-3 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-2 dark:border-gray-800 overflow-hidden shadow-xl">
+            <div className="flex items-center gap-2 px-4 py-3 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-b-2 dark:border-gray-700">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
               <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
@@ -56,7 +56,7 @@ export default function TeamsPage() {
             </div>
             <div className="grid md:grid-cols-3 min-h-[350px]">
               {/* Projects */}
-              <div className="border-r border-gray-200 dark:border-gray-700 p-4">
+              <div className="border-r border-gray-200 dark:border-r-2 dark:border-gray-700 p-4">
                 <div className="text-xs font-medium text-gray-500 uppercase mb-3">{t('teamsPage.teamProjects')}</div>
                 <div className="space-y-2">
                   {['marketing-site', 'customer-portal', 'analytics-dashboard', 'mobile-app'].map((project, i) => (
@@ -86,7 +86,7 @@ export default function TeamsPage() {
               </div>
               
               {/* Activity */}
-              <div className="border-l border-gray-200 dark:border-gray-700 p-4">
+              <div className="border-l border-gray-200 dark:border-l-2 dark:border-gray-700 p-4">
                 <div className="text-xs font-medium text-gray-500 uppercase mb-3">{t('teamsPage.activity')}</div>
                 <div className="space-y-3">
                   {[
@@ -147,7 +147,7 @@ export default function TeamsPage() {
                 description: 'One invoice for your entire team. Easy expense tracking and management.'
               }
             ].map((feature, i) => (
-              <div key={i} className="p-6 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
+              <div key={i} className="p-6 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-2 dark:border-gray-800">
                 <div className="text-3xl mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>

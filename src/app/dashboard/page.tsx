@@ -32,14 +32,14 @@ export default function DashboardPage() {
 
   if (!user) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-white">
+      <div className="min-h-screen flex items-center justify-center bg-white dark:bg-[#1A1A1A]">
         <div className="animate-spin w-8 h-8 border-4 border-gray-900 border-t-transparent rounded-full"></div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
+    <div className="min-h-screen flex items-center justify-center bg-white dark:bg-[#1A1A1A]">
       <div className="text-center">
         <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${user.avatar} flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4`}>
           {user.name.charAt(0).toUpperCase()}

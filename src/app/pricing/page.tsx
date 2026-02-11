@@ -33,13 +33,13 @@ export default function PricingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-black transition-colors">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
       <Header />
       
       {/* Hero Section */}
       <section className="relative pt-20 sm:pt-24 md:pt-28 pb-8 sm:pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 mb-4 sm:mb-6">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-2 dark:border-gray-800 mb-4 sm:mb-6">
             <svg className="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
@@ -58,7 +58,7 @@ export default function PricingPage() {
       {/* Free Tier Section */}
       <section className="pb-8 sm:pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8">
+          <div className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8">
             <div className="flex items-center gap-3 mb-3 sm:mb-4">
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-100 dark:bg-gray-900 rounded-full flex items-center justify-center">
                 <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -92,8 +92,8 @@ export default function PricingPage() {
                 key={index}
                 className={`relative rounded-xl sm:rounded-2xl p-3 sm:p-6 ${
                   pkg.popular
-                    ? 'bg-white dark:bg-[#0a0a0a] border-2 border-gray-900 dark:border-white shadow-xl'
-                    : 'bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800'
+                    ? 'bg-white dark:bg-[#1A1A1A] border-2 border-gray-900 dark:border-white shadow-xl'
+                    : 'bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800'
                 }`}
               >
                 {pkg.popular && (
@@ -125,7 +125,7 @@ export default function PricingPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0a0a0a]">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#1A1A1A]">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">{t('pricing.faq.title')}</h2>
@@ -134,7 +134,7 @@ export default function PricingPage() {
           
           <div className="space-y-3 sm:space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="border border-gray-200 dark:border-gray-800 rounded-lg sm:rounded-xl overflow-hidden bg-[#f8fafc] dark:bg-black">
+              <div key={index} className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg sm:rounded-xl overflow-hidden bg-[#f8fafc] dark:bg-[#1A1A1A]">
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                   className="w-full flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 text-left hover:bg-gray-50 dark:hover:bg-gray-900/50 transition-colors"

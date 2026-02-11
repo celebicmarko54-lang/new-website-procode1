@@ -10,29 +10,29 @@ const categories = ['AI Apps', 'Websites', 'Business Apps', 'Personal Software',
 
 const projectTemplates = {
   'AI Apps': [
-    { id: 1, title: 'AI Chat', image: '/templates/AIAPPS1.png', author: 'AppNode' },
-    { id: 2, title: 'Brainstorming Buddy', image: '/templates/AIAPPS2.png', author: 'AppNode' },
-    { id: 3, title: 'Recipe Generator', image: '/templates/AIAPPS3.png', author: 'AppNode' },
+    { id: 1, title: 'E-commerce AI', image: '/templates/AIAPPS1.png', author: 'AppNode' },
+    { id: 2, title: 'Customer Support AI', image: '/templates/AIAPPS2.png', author: 'AppNode' },
+    { id: 3, title: 'AI Content Writer', image: '/templates/AIAPPS3.png', author: 'AppNode' },
   ],
   'Websites': [
-    { id: 4, title: 'Portfolio Site', image: '/templates/WEBSITE5NEW.png', author: 'AppNode' },
-    { id: 5, title: 'Landing Page', image: '/templates/WEBSITE6.png', author: 'AppNode' },
-    { id: 6, title: 'Blog Platform', image: '/templates/WEBSITE7.png', author: 'AppNode' },
+    { id: 4, title: 'Fashion Blog', image: '/templates/WEBSITE5NEW.png', author: 'AppNode' },
+    { id: 5, title: 'Product Landing', image: '/templates/WEBSITE6.png', author: 'AppNode' },
+    { id: 6, title: 'Fragrance Store', image: '/templates/WEBSITE7.png', author: 'AppNode' },
   ],
   'Business Apps': [
-    { id: 7, title: 'CRM Dashboard', image: '/templates/biznis2.png', author: 'AppNode' },
-    { id: 8, title: 'Invoice Manager', image: '/templates/biznis5.png', author: 'AppNode' },
-    { id: 9, title: 'Task Tracker', image: '/templates/biznis8.png', author: 'AppNode' },
+    { id: 7, title: 'Order Dashboard', image: '/templates/biznis2.png', author: 'AppNode' },
+    { id: 8, title: 'Sales Analytics', image: '/templates/biznis5.png', author: 'AppNode' },
+    { id: 9, title: 'Business Analytics', image: '/templates/biznis8.png', author: 'AppNode' },
   ],
   'Personal Software': [
-    { id: 10, title: 'Budget Tracker', image: '/templates/personal5.png', author: 'AppNode' },
-    { id: 11, title: 'Habit Tracker', image: '/templates/personal7.png', author: 'AppNode' },
-    { id: 12, title: 'Notes App', image: '/templates/Personal8.png', author: 'AppNode' },
+    { id: 10, title: 'Personal Dashboard', image: '/templates/personal5.png', author: 'AppNode' },
+    { id: 11, title: 'Finance Dashboard', image: '/templates/personal7.png', author: 'AppNode' },
+    { id: 12, title: 'Daily Planner', image: '/templates/Personal8.png', author: 'AppNode' },
   ],
   'Games': [
-    { id: 13, title: 'Game 1', image: '/templates/GAME1.png', author: 'AppNode' },
-    { id: 14, title: 'Game 2', image: '/templates/GAME2.png', author: 'AppNode' },
-    { id: 15, title: 'Game 3', image: '/templates/GAME3.png', author: 'AppNode' },
+    { id: 13, title: 'Cyber Runner', image: '/templates/GAME1.png', author: 'AppNode' },
+    { id: 14, title: 'Mystic Forest', image: '/templates/GAME2.png', author: 'AppNode' },
+    { id: 15, title: 'Space Odyssey', image: '/templates/GAME3.png', author: 'AppNode' },
   ],
 };
 
@@ -112,7 +112,7 @@ export default function HeroSection() {
 
   return (
     <section 
-      className="relative w-full flex flex-col items-center px-4 sm:px-6 lg:px-8 py-4 overflow-hidden bg-[#f8fafc] dark:bg-black transition-colors"
+      className="relative w-full flex flex-col items-center px-4 sm:px-6 lg:px-8 py-4 overflow-hidden bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors"
     >
       {/* Heading */}
       <div className="relative z-10 text-center" style={{ marginTop: '2vh' }}>
@@ -123,7 +123,7 @@ export default function HeroSection() {
 
       {/* Chat Input Box */}
       <div className="relative z-10 w-full max-w-[720px] mx-auto mt-4">
-        <form className="w-full bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-[#1f1f1f] overflow-hidden">
+        <form className="w-full bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-200 dark:border-[#1f1f1f] overflow-hidden">
           {/* Top bar with lightning icon and Ready badge */}
           <div className="flex items-center justify-between px-5 py-3 border-b border-gray-200 dark:border-[#1f1f1f]">
             <div className="flex items-center gap-2">
@@ -152,7 +152,7 @@ export default function HeroSection() {
             
             {/* Display attached files and images */}
             {(attachments.length > 0 || images.length > 0) && (
-              <div className="flex flex-wrap gap-2 mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">
+              <div className="flex flex-wrap gap-2 mt-3 pt-3 border-t border-gray-200 dark:border-t-2 dark:border-gray-700">
                 {attachments.map((file, index) => (
                   <div key={`attachment-${index}`} className="flex items-center gap-2 px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-lg text-sm">
                     <svg className="w-4 h-4 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -272,7 +272,7 @@ export default function HeroSection() {
                 className={`px-2.5 py-1 rounded-full text-xs font-medium transition-colors whitespace-nowrap ${
                   activeCategory === category
                     ? 'bg-gray-900 dark:bg-white text-white dark:text-black'
-                    : 'bg-gray-100 dark:bg-black text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-[#1a1a1a]'
+                    : 'bg-gray-100 dark:bg-[#1A1A1A] text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-[#1a1a1a]'
                 }`}
               >
                 {category}
@@ -289,7 +289,7 @@ export default function HeroSection() {
               {projectTemplates[category as keyof typeof projectTemplates].map((project, index) => (
                 <div
                   key={project.id}
-                  className="group bg-white dark:bg-black border border-gray-200 dark:border-[#2a2a2a] rounded-xl p-4 text-left hover:border-gray-300 dark:hover:border-gray-600 transition-all hover:shadow-md"
+                  className="group bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-[#2a2a2a] rounded-xl p-4 text-left hover:border-gray-300 dark:hover:border-gray-600 transition-all hover:shadow-md"
                 >
                   {/* Template image */}
                   <div 

@@ -389,7 +389,7 @@ ${transcript}
   }, [searchQuery, categories, popularArticles, faqs]);
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-black">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A]">
       <Header />
       
       {/* Hero Section with Search */}
@@ -407,7 +407,7 @@ ${transcript}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={t('supportPage.searchPlaceholder')}
-              className="w-full px-6 py-4 rounded-2xl text-gray-900 dark:text-white text-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black focus:outline-none focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-800 focus:border-gray-300 dark:focus:border-gray-700 shadow-lg"
+              className="w-full px-6 py-4 rounded-2xl text-gray-900 dark:text-white text-lg border border-gray-200 dark:border-2 dark:border-gray-800 bg-white dark:bg-[#1A1A1A] focus:outline-none focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-800 focus:border-gray-300 dark:focus:border-gray-700 shadow-lg"
             />
             <button className="absolute right-3 top-1/2 -translate-y-1/2 p-2 text-white rounded-xl hover:opacity-90 transition-all" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}>
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -417,7 +417,7 @@ ${transcript}
 
             {/* Search Results Dropdown */}
             {searchResults && (
-              <div className="absolute left-0 right-0 top-full mt-2 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-2xl z-50 max-h-[420px] overflow-y-auto text-left">
+              <div className="absolute left-0 right-0 top-full mt-2 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-2 dark:border-gray-800 shadow-2xl z-50 max-h-[420px] overflow-y-auto text-left">
                 {searchResults.total === 0 ? (
                   <div className="px-6 py-8 text-center text-gray-500 dark:text-gray-400">
                     <svg className="w-10 h-10 mx-auto mb-3 text-gray-300 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -447,7 +447,7 @@ ${transcript}
 
                     {/* Matched Articles */}
                     {searchResults.matchedArticles.length > 0 && (
-                      <div className="px-4 pt-3 pb-2 border-t border-gray-100 dark:border-gray-800 first:border-0">
+                      <div className="px-4 pt-3 pb-2 border-t border-gray-100 dark:border-t-2 dark:border-gray-800 first:border-0">
                         <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 px-2 mb-2">Articles</p>
                         {searchResults.matchedArticles.map((art, i) => (
                           <div key={i} className="flex items-center justify-between px-3 py-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer transition-colors" onClick={() => { setSearchQuery(''); document.getElementById('articles')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>
@@ -465,7 +465,7 @@ ${transcript}
 
                     {/* Matched FAQs */}
                     {searchResults.matchedFAQs.length > 0 && (
-                      <div className="px-4 pt-3 pb-2 border-t border-gray-100 dark:border-gray-800">
+                      <div className="px-4 pt-3 pb-2 border-t border-gray-100 dark:border-t-2 dark:border-gray-800">
                         <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 px-2 mb-2">FAQ</p>
                         {searchResults.matchedFAQs.map((faq, i) => {
                           const faqIndex = faqs.findIndex(f => f.question === faq.question);
@@ -481,7 +481,7 @@ ${transcript}
 
                     {/* Matched Knowledge Base */}
                     {searchResults.matchedKB.length > 0 && (
-                      <div className="px-4 pt-3 pb-3 border-t border-gray-100 dark:border-gray-800">
+                      <div className="px-4 pt-3 pb-3 border-t border-gray-100 dark:border-t-2 dark:border-gray-800">
                         <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 px-2 mb-2">Help Topics</p>
                         {searchResults.matchedKB.slice(0, 3).map((kb, i) => (
                           <div key={i} className="px-3 py-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer transition-colors" onClick={() => { setSearchQuery(''); setIsChatOpen(true); }}>
@@ -506,7 +506,7 @@ ${transcript}
             {categories.map((category, index) => (
               <div
                 key={index}
-                className="group bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 p-6 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="group bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-100 dark:border-2 dark:border-gray-800 p-6 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
                 <div className="w-14 h-14 bg-gray-100 dark:bg-gray-900 rounded-2xl flex items-center justify-center text-gray-600 dark:text-gray-400 mb-4 group-hover:scale-110 transition-transform">
                   {category.icon}
@@ -523,17 +523,17 @@ ${transcript}
       </section>
 
       {/* Popular Articles & Contact */}
-      <section id="articles" className="py-16 px-6 bg-gray-50 dark:bg-black">
+      <section id="articles" className="py-16 px-6 bg-gray-50 dark:bg-[#1A1A1A]">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Popular Articles */}
-            <div className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 p-8">
+            <div className="bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-100 dark:border-2 dark:border-gray-800 p-8">
               <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">{t('supportPage.popularArticles')}</h2>
               <div className="space-y-1">
                 {popularArticles.map((article, index) => (
                   <div
                     key={index}
-                    className="flex items-center justify-between py-4 border-b border-gray-100 dark:border-gray-800 last:border-0 cursor-pointer group"
+                    className="flex items-center justify-between py-4 border-b border-gray-100 dark:border-b-2 dark:border-gray-800 last:border-0 cursor-pointer group"
                   >
                     <span className="text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors font-medium">
                       {article.title}
@@ -551,7 +551,7 @@ ${transcript}
             </div>
 
             {/* Contact Support */}
-            <div className="bg-white dark:bg-black rounded-2xl p-8 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-800">
+            <div className="bg-white dark:bg-[#1A1A1A] rounded-2xl p-8 text-gray-900 dark:text-white border border-gray-200 dark:border-2 dark:border-gray-800">
               <h2 className="text-xl font-bold mb-4">{t('supportPage.needMoreHelp')}</h2>
               <p className="text-gray-600 dark:text-gray-300 mb-8">
                 {t('supportPage.needMoreHelpDescription')}
@@ -590,7 +590,7 @@ ${transcript}
               <details
                 key={index}
                 id={`faq-${index}`}
-                className="group bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-600 transition-all"
+                className="group bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-100 dark:border-2 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-600 transition-all"
               >
                 <summary className="px-6 py-5 cursor-pointer font-semibold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-colors flex items-center justify-between">
                   {faq.question}
@@ -608,7 +608,7 @@ ${transcript}
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-gray-100 dark:bg-black">
+      <section className="py-24 px-6 bg-gray-100 dark:bg-[#1A1A1A]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             {t('supportPage.stillHaveQuestions')}
@@ -645,7 +645,7 @@ ${transcript}
           {/* Chat Window */}
           <div className="relative w-full max-w-md bg-white dark:bg-gray-900 rounded-2xl shadow-2xl flex flex-col max-h-[600px] sm:max-h-[500px] overflow-hidden animate-in slide-in-from-bottom-4 duration-300">
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-800 bg-gray-900 dark:bg-black text-white">
+            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-b-2 dark:border-gray-800 bg-gray-900 dark:bg-[#1A1A1A] text-white">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -670,7 +670,7 @@ ${transcript}
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50 dark:bg-black">
+            <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50 dark:bg-[#1A1A1A]">
               {chatMessages.map((message) => (
                 <div 
                   key={message.id}
@@ -682,7 +682,7 @@ ${transcript}
                         ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900' 
                         : message.sender === 'system'
                         ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 border border-green-200 dark:border-green-800'
-                        : 'bg-white dark:bg-black text-gray-900 dark:text-white shadow-sm border border-gray-200 dark:border-gray-700'
+                        : 'bg-white dark:bg-[#1A1A1A] text-gray-900 dark:text-white shadow-sm border border-gray-200 dark:border-2 dark:border-gray-700'
                     }`}
                   >
                     <p className="text-sm whitespace-pre-line">{message.text}</p>
@@ -699,7 +699,7 @@ ${transcript}
               
               {isTyping && (
                 <div className="flex justify-start">
-                  <div className="bg-white dark:bg-black rounded-2xl px-4 py-3 shadow-sm border border-gray-200 dark:border-gray-700">
+                  <div className="bg-white dark:bg-[#1A1A1A] rounded-2xl px-4 py-3 shadow-sm border border-gray-200 dark:border-2 dark:border-gray-700">
                     <div className="flex gap-1">
                       <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
                       <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></span>
@@ -713,7 +713,7 @@ ${transcript}
 
             {/* Quick Actions */}
             {chatMessages.length <= 2 && (
-              <div className="px-4 py-2 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-black">
+              <div className="px-4 py-2 border-t border-gray-200 dark:border-t-2 dark:border-gray-700 bg-white dark:bg-[#1A1A1A]">
                 <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">Quick questions:</p>
                 <div className="flex flex-wrap gap-2">
                   {quickActions.map((action, index) => (
@@ -734,7 +734,7 @@ ${transcript}
 
             {/* Email Form for Live Agent */}
             {showEmailForm && (
-              <div className="p-4 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-black">
+              <div className="p-4 border-t border-gray-200 dark:border-t-2 dark:border-gray-700 bg-white dark:bg-[#1A1A1A]">
                 <p className="text-sm font-medium text-gray-900 dark:text-white mb-3">Contact Details</p>
                 <div className="space-y-3">
                   <input
@@ -742,21 +742,21 @@ ${transcript}
                     value={userName}
                     onChange={(e) => setUserName(e.target.value)}
                     placeholder="Your name"
-                    className="w-full px-4 py-2.5 bg-gray-100 dark:bg-black rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
+                    className="w-full px-4 py-2.5 bg-gray-100 dark:bg-[#1A1A1A] rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 border border-gray-200 dark:border-2 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
                   />
                   <input
                     type="email"
                     value={userEmail}
                     onChange={(e) => setUserEmail(e.target.value)}
                     placeholder="Your email address"
-                    className="w-full px-4 py-2.5 bg-gray-100 dark:bg-black rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
+                    className="w-full px-4 py-2.5 bg-gray-100 dark:bg-[#1A1A1A] rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 border border-gray-200 dark:border-2 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
                   />
                   <textarea
                     value={userProblem}
                     onChange={(e) => setUserProblem(e.target.value)}
                     placeholder="Describe your problem or question..."
                     rows={3}
-                    className="w-full px-4 py-2.5 bg-gray-100 dark:bg-black rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 resize-none"
+                    className="w-full px-4 py-2.5 bg-gray-100 dark:bg-[#1A1A1A] rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 border border-gray-200 dark:border-2 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 resize-none"
                   />
                   <button
                     onClick={() => sendToSupport(userEmail, userName)}
@@ -777,7 +777,7 @@ ${transcript}
 
             {/* Input */}
             {!showEmailForm && (
-              <div className="p-4 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-black">
+              <div className="p-4 border-t border-gray-200 dark:border-t-2 dark:border-gray-700 bg-white dark:bg-[#1A1A1A]">
                 <div className="flex gap-2">
                   <input
                     ref={inputRef}
@@ -786,7 +786,7 @@ ${transcript}
                     onChange={(e) => setInputMessage(e.target.value)}
                     onKeyPress={handleKeyPress}
                     placeholder="Type your message..."
-                    className="flex-1 px-4 py-3 bg-gray-100 dark:bg-black rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 border border-transparent dark:border-gray-700"
+                    className="flex-1 px-4 py-3 bg-gray-100 dark:bg-[#1A1A1A] rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 border border-transparent dark:border-2 dark:border-gray-700"
                   />
                   <button
                     onClick={handleSendMessage}

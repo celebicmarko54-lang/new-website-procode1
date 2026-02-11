@@ -122,7 +122,7 @@ export default function LovecodeSection() {
   return (
     <section 
       ref={containerRef}
-      className="relative w-full h-[25vh] sm:h-[30vh] md:h-[35vh] lg:h-[40vh] flex items-end justify-center overflow-hidden bg-[#f8fafc] dark:bg-black transition-colors"
+      className="relative w-full h-[25vh] sm:h-[30vh] md:h-[35vh] lg:h-[40vh] flex items-end justify-center overflow-hidden bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >

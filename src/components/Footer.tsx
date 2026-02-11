@@ -77,7 +77,7 @@ export default function Footer() {
         <div className="relative">
           <div className="max-w-6xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 relative z-10">
             {/* Cloud-like floating container */}
-            <div className="relative bg-white dark:bg-black rounded-xl sm:rounded-2xl shadow-sm p-4 sm:p-6 lg:p-8 border border-gray-200/80 dark:border-gray-800/80">
+            <div className="relative bg-white dark:bg-[#1A1A1A] rounded-xl sm:rounded-2xl shadow-sm p-4 sm:p-6 lg:p-8 border border-gray-200/80 dark:border-2 dark:border-gray-800/80">
               {/* Main Footer Content */}
               <div className="flex flex-col gap-6 sm:gap-8">
                 {/* Logo Section */}
@@ -149,7 +149,7 @@ export default function Footer() {
               </div>
 
               {/* Social Media Links Row - Easy to Connect */}
-              <div className="mt-6 pt-4 border-t border-gray-100 dark:border-gray-700">
+              <div className="mt-6 pt-4 border-t border-gray-100 dark:border-t-2 dark:border-gray-700">
                 <h3 className="text-xs font-semibold text-gray-900 dark:text-white tracking-wide mb-3 text-center uppercase">
                   {t('footer.connectWithUs')}
                 </h3>
@@ -160,7 +160,7 @@ export default function Footer() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-1 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded-full text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:border-gray-400 dark:hover:border-gray-700 hover:bg-gray-50 dark:hover:bg-black transition-all text-[10px] sm:text-xs font-medium"
+                      className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-1 bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800 rounded-full text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:border-gray-400 dark:hover:border-gray-700 hover:bg-gray-50 dark:hover:bg-[#1A1A1A] transition-all text-[10px] sm:text-xs font-medium"
                     >
                       <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
                         <path d={social.icon}/>
@@ -175,7 +175,7 @@ export default function Footer() {
               </div>
 
               {/* Bottom section with divider */}
-              <div className="mt-6 pt-4 border-t border-gray-100 dark:border-gray-700">
+              <div className="mt-6 pt-4 border-t border-gray-100 dark:border-t-2 dark:border-gray-700">
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                   <p className="text-xs text-gray-400 dark:text-gray-500">
                     © {new Date().getFullYear()} AppNode · {t('footer.allRightsReserved')}

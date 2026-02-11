@@ -96,7 +96,7 @@ export default function ConnectionsPage() {
   const categories = ['All', 'Database', 'Payments', 'AI', 'Hosting', 'Development', 'Communication', 'Authentication'];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-[#1A1A1A]">
       <Header />
       
       <main className="pt-32 pb-20">
@@ -121,7 +121,7 @@ export default function ConnectionsPage() {
             {categories.map((category) => (
               <button
                 key={category}
-                className="px-4 py-2 rounded-full text-sm font-medium bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900 border border-gray-200 transition-all"
+                className="px-4 py-2 rounded-full text-sm font-medium bg-white dark:bg-[#1A1A1A] text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white border border-gray-200 dark:border-2 dark:border-gray-800 transition-all"
               >
                 {category}
               </button>
@@ -135,7 +135,7 @@ export default function ConnectionsPage() {
             {connections.map((connection) => (
               <div
                 key={connection.name}
-                className={`bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all cursor-pointer group ${
+                className={`bg-white dark:bg-[#1A1A1A] rounded-xl border border-gray-200 dark:border-2 dark:border-gray-800 p-6 hover:shadow-lg transition-all cursor-pointer group ${
                   connection.status === 'coming-soon' ? 'opacity-75' : 'hover:border-orange-200'
                 }`}
               >

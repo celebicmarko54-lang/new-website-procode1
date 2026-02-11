@@ -76,7 +76,7 @@ const getDocsContent = (t: (key: string) => string): Record<string, { title: str
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
           {t('reportPage.content.welcomeDescription')}
         </p>
-        <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 mb-8 bg-white dark:bg-[#0a0a0a]">
+        <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-6 mb-8 bg-white dark:bg-[#1A1A1A]">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.whatYouCanBuild')}</h3>
           <ul className="space-y-2">
             <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
@@ -101,19 +101,19 @@ const getDocsContent = (t: (key: string) => string): Record<string, { title: str
           {t('reportPage.content.howItWorksDescription')}
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.steps.describe')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.steps.describeText')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.steps.generate')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.steps.generateText')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.steps.preview')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.steps.previewText')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.steps.deploy')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.steps.deployText')}</p>
           </div>
@@ -131,28 +131,28 @@ const getDocsContent = (t: (key: string) => string): Record<string, { title: str
         </p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.chooseStartingPoint')}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <div className="flex items-center justify-between mb-1">
               <h3 className="font-semibold text-gray-900 dark:text-white">{t('reportPage.items.createAi')}</h3>
               <span className="text-xs text-gray-500">2 {t('reportPage.content.minutes')}</span>
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.bestForBeginners')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <div className="flex items-center justify-between mb-1">
               <h3 className="font-semibold text-gray-900 dark:text-white">{t('reportPage.items.buildScratch')}</h3>
               <span className="text-xs text-gray-500">5 {t('reportPage.content.minutes')}</span>
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.blankCanvas')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <div className="flex items-center justify-between mb-1">
               <h3 className="font-semibold text-gray-900 dark:text-white">{t('reportPage.items.importGithub')}</h3>
               <span className="text-xs text-gray-500">3 {t('reportPage.content.minutes')}</span>
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.bringExisting')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <div className="flex items-center justify-between mb-1">
               <h3 className="font-semibold text-gray-900 dark:text-white">{t('reportPage.content.useTemplate')}</h3>
               <span className="text-xs text-gray-500">1 {t('reportPage.content.minute')}</span>
@@ -162,10 +162,10 @@ const getDocsContent = (t: (key: string) => string): Record<string, { title: str
         </div>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.examplePrompts')}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div className="bg-gray-100 dark:bg-black rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{t('reportPage.content.examplePrompt1')}</div>
-          <div className="bg-gray-100 dark:bg-black rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{t('reportPage.content.examplePrompt2')}</div>
-          <div className="bg-gray-100 dark:bg-black rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{t('reportPage.content.examplePrompt3')}</div>
-          <div className="bg-gray-100 dark:bg-black rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{t('reportPage.content.examplePrompt4')}</div>
+          <div className="bg-gray-100 dark:bg-[#1A1A1A] rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{t('reportPage.content.examplePrompt1')}</div>
+          <div className="bg-gray-100 dark:bg-[#1A1A1A] rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{t('reportPage.content.examplePrompt2')}</div>
+          <div className="bg-gray-100 dark:bg-[#1A1A1A] rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{t('reportPage.content.examplePrompt3')}</div>
+          <div className="bg-gray-100 dark:bg-[#1A1A1A] rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{t('reportPage.content.examplePrompt4')}</div>
         </div>
       </>
     ),
@@ -180,32 +180,32 @@ const getDocsContent = (t: (key: string) => string): Record<string, { title: str
         </p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.stepByStepGuide')}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">1</div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.startNewProject')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.startNewProjectDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">2</div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.describeYourIdea')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.describeYourIdeaDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">3</div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.reviewBlueprint')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.reviewBlueprintDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">4</div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.watchItBuild')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.watchItBuildDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">5</div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.testIterate')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.testIterateDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">6</div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.deployStep')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.deployStepDesc')}</p>
@@ -232,27 +232,27 @@ const getDocsContent = (t: (key: string) => string): Record<string, { title: str
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.chooseTemplate')}</h2>
         <p className="text-gray-600 dark:text-gray-400 mb-6">{t('reportPage.content.chooseTemplateDesc')}</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.reactVite')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.reactViteDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.nextjs')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.nextjsDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.vue3')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.vue3Desc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.svelte')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.svelteDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.astro')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.astroDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.vanillaJs')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.vanillaJsDesc')}</p>
           </div>
@@ -279,22 +279,22 @@ const getDocsContent = (t: (key: string) => string): Record<string, { title: str
         </p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.howToImport')}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">1</div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.connectGithub')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.connectGithubDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">2</div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.selectRepository')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.selectRepositoryDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">3</div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.configureSettings')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.configureSettingsDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">4</div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.importBuild')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.importBuildDesc')}</p>
@@ -330,7 +330,7 @@ const getDocsContent = (t: (key: string) => string): Record<string, { title: str
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
           {t('reportPage.content.trustOverviewDesc')}
         </p>
-        <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 mb-8 bg-white dark:bg-[#0a0a0a]">
+        <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-6 mb-8 bg-white dark:bg-[#1A1A1A]">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.ourCommitment')}</h3>
           <ul className="space-y-2">
             <li className="flex items-start gap-2 text-gray-600 dark:text-gray-400">
@@ -350,19 +350,19 @@ const getDocsContent = (t: (key: string) => string): Record<string, { title: str
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.howWeKeepYouSafe')}</h2>
         <p className="text-gray-600 dark:text-gray-400 mb-6">{t('reportPage.content.howWeKeepYouSafeDesc')}</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.automatedDetection')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.automatedDetectionDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.humanReview')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.humanReviewDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.userReports')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.userReportsDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.swiftAction')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.swiftActionDesc')}</p>
           </div>
@@ -601,19 +601,19 @@ const getDocsContent = (t: (key: string) => string): Record<string, { title: str
         </p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.infrastructureSecurity')}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.encryptionAtRest')}</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.encryptionAtRestDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.encryptionInTransit')}</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.encryptionInTransitDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.isolatedEnvironments')}</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.isolatedEnvironmentsDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.ddosProtection')}</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.ddosProtectionDesc')}</p>
           </div>
@@ -654,10 +654,10 @@ const getDocsContent = (t: (key: string) => string): Record<string, { title: str
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.compliance')}</h2>
         <p className="text-gray-600 dark:text-gray-400 mb-4">{t('reportPage.content.complianceDesc')}</p>
         <div className="flex flex-wrap gap-2 mb-6">
-          <span className="px-3 py-1 bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 rounded-full text-sm">SOC 2 Type II</span>
-          <span className="px-3 py-1 bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 rounded-full text-sm">GDPR</span>
-          <span className="px-3 py-1 bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 rounded-full text-sm">CCPA</span>
-          <span className="px-3 py-1 bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 rounded-full text-sm">ISO 27001</span>
+          <span className="px-3 py-1 bg-gray-100 dark:bg-[#1A1A1A] text-gray-700 dark:text-gray-300 rounded-full text-sm">SOC 2 Type II</span>
+          <span className="px-3 py-1 bg-gray-100 dark:bg-[#1A1A1A] text-gray-700 dark:text-gray-300 rounded-full text-sm">GDPR</span>
+          <span className="px-3 py-1 bg-gray-100 dark:bg-[#1A1A1A] text-gray-700 dark:text-gray-300 rounded-full text-sm">CCPA</span>
+          <span className="px-3 py-1 bg-gray-100 dark:bg-[#1A1A1A] text-gray-700 dark:text-gray-300 rounded-full text-sm">ISO 27001</span>
         </div>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.reportVulnerability')}</h2>
         <p className="text-gray-600 dark:text-gray-400">{t('reportPage.content.reportVulnerabilityDesc')}</p>
@@ -774,19 +774,19 @@ const getDocsContent = (t: (key: string) => string): Record<string, { title: str
         </p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.databasesAvailable')}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.databasesSqlite')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.databasesSqliteDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.databasesPostgres')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.databasesPostgresDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.databasesMongo')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.databasesMongoDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.databasesRedis')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.databasesRedisDesc')}</p>
           </div>
@@ -806,17 +806,17 @@ const getDocsContent = (t: (key: string) => string): Record<string, { title: str
         </p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.deployingSteps')}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">1</div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.deployingStep1')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.deployingStep1Text')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">2</div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.deployingStep2')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.deployingStep2Text')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <div className="text-2xl font-bold text-gray-300 dark:text-gray-700 mb-2">3</div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.deployingStep3')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.deployingStep3Text')}</p>
@@ -837,19 +837,19 @@ const getDocsContent = (t: (key: string) => string): Record<string, { title: str
         </p>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">{t('reportPage.content.teamsFeatures')}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.teamsShared')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.teamsSharedDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.teamsRealtime')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.teamsRealtimeDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.teamsRole')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.teamsRoleDesc')}</p>
           </div>
-          <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#0a0a0a]">
+          <div className="border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg p-4 bg-white dark:bg-[#1A1A1A]">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t('reportPage.content.teamsBilling')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('reportPage.content.teamsBillingDesc')}</p>
           </div>
@@ -1012,7 +1012,7 @@ export default function DocsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-black transition-colors">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
       <Header />
       
       <div className="pt-16 flex">
@@ -1034,8 +1034,8 @@ export default function DocsPage() {
         <aside className={`
           fixed lg:sticky top-0 lg:top-16 z-40 lg:z-auto
           w-[280px] h-screen lg:h-auto lg:min-h-[calc(100vh-64px)]
-          border-r border-gray-200 dark:border-gray-800
-          bg-[#f8fafc] dark:bg-black
+          border-r border-gray-200 dark:border-r-2 dark:border-gray-800
+          bg-[#f8fafc] dark:bg-[#1A1A1A]
           overflow-y-auto flex-shrink-0
           transform transition-transform duration-300 ease-in-out
           ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
@@ -1063,9 +1063,9 @@ export default function DocsPage() {
                 placeholder={t('reportPage.searchPlaceholder')}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-12 py-2 text-sm bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-300 dark:focus:ring-gray-700"
+                className="w-full pl-10 pr-12 py-2 text-sm bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-300 dark:focus:ring-gray-700"
               />
-              <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-gray-400 bg-gray-100 dark:bg-[#1a1a1a] px-1.5 py-0.5 rounded border border-gray-200 dark:border-gray-800">⌘K</span>
+              <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-gray-400 bg-gray-100 dark:bg-[#1a1a1a] px-1.5 py-0.5 rounded border border-gray-200 dark:border-2 dark:border-gray-800">⌘K</span>
             </div>
 
             {/* Navigation */}
@@ -1139,7 +1139,7 @@ export default function DocsPage() {
             {/* Copy button */}
             <button
               onClick={copyPageContent}
-              className="mt-8 flex items-center gap-2 px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white border border-gray-200 dark:border-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
+              className="mt-8 flex items-center gap-2 px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />

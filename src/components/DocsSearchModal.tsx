@@ -135,9 +135,9 @@ export default function DocsSearchModal({ isOpen, onClose }: DocsSearchModalProp
       
       {/* Modal */}
       <div className="relative min-h-screen flex items-start justify-center pt-[15vh] px-4">
-        <div className="relative w-full max-w-xl bg-white dark:bg-[#0a0a0a] rounded-xl shadow-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+        <div className="relative w-full max-w-xl bg-white dark:bg-[#1A1A1A] rounded-xl shadow-2xl border border-gray-200 dark:border-2 dark:border-gray-800 overflow-hidden">
           {/* Search Input */}
-          <div className="flex items-center border-b border-gray-200 dark:border-gray-800 px-4">
+          <div className="flex items-center border-b border-gray-200 dark:border-b-2 dark:border-gray-800 px-4">
             <svg className="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
@@ -199,7 +199,7 @@ export default function DocsSearchModal({ isOpen, onClose }: DocsSearchModalProp
           </div>
 
           {/* Footer */}
-          <div className="flex items-center justify-between px-4 py-3 border-t border-gray-200 dark:border-gray-800 text-xs text-gray-500 dark:text-gray-400">
+          <div className="flex items-center justify-between px-4 py-3 border-t border-gray-200 dark:border-t-2 dark:border-gray-800 text-xs text-gray-500 dark:text-gray-400">
             <div className="flex items-center gap-4">
               <span className="flex items-center gap-1">
                 <kbd className="px-1.5 py-0.5 bg-gray-100 dark:bg-gray-800 rounded">↑</kbd>

@@ -88,7 +88,7 @@ export default function BlockchainSection() {
   }, []);
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-24 bg-white dark:bg-[#1A1A1A] relative overflow-hidden">
       {/* Animated background grid */}
       <div className="absolute inset-0">
         <div className="absolute inset-0" style={{

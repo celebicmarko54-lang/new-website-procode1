@@ -292,21 +292,21 @@ export default function LearnPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black">
+    <div className="min-h-screen bg-white dark:bg-[#1A1A1A]">
       <Header />
       
       {/* Course Modal */}
       {selectedCourse && (
         <div 
-          className="fixed inset-0 bg-black/50 dark:bg-black/70 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/50 dark:bg-[#1A1A1A]/70 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedCourse(null)}
         >
           <div 
-            className="bg-white dark:bg-[#0a0a0a] rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto border border-gray-200 dark:border-gray-800 shadow-2xl"
+            className="bg-white dark:bg-[#1A1A1A] rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto border border-gray-200 dark:border-2 dark:border-gray-800 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="sticky top-0 bg-white dark:bg-[#0a0a0a] border-b border-gray-200 dark:border-gray-800 p-6 flex items-start justify-between">
+            <div className="sticky top-0 bg-white dark:bg-[#1A1A1A] border-b border-gray-200 dark:border-b-2 dark:border-gray-800 p-6 flex items-start justify-between">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center justify-center text-gray-900 dark:text-white">
                   {selectedCourse.icon}
@@ -376,7 +376,7 @@ export default function LearnPage() {
             </div>
             
             {/* Modal Footer */}
-            <div className="sticky bottom-0 bg-white dark:bg-[#0a0a0a] border-t border-gray-200 dark:border-gray-800 p-6">
+            <div className="sticky bottom-0 bg-white dark:bg-[#1A1A1A] border-t border-gray-200 dark:border-t-2 dark:border-gray-800 p-6">
               <button 
                 onClick={() => setSelectedCourse(null)}
                 className="w-full py-3 bg-black dark:bg-white text-white dark:text-black font-medium rounded-xl hover:opacity-90 transition-colors"
@@ -391,7 +391,7 @@ export default function LearnPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-2 dark:border-gray-700 mb-8">
             <svg className="w-4 h-4 text-gray-900 dark:text-gray-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
@@ -443,9 +443,9 @@ export default function LearnPage() {
               <div
                 key={index}
                 onClick={() => setSelectedCourse(course)}
-                className="group bg-white dark:bg-[#0a0a0a] rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="group bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-100 dark:border-2 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
-                <div className="h-40 bg-gray-100 dark:bg-black flex items-center justify-center border-b border-gray-100 dark:border-gray-800">
+                <div className="h-40 bg-gray-100 dark:bg-[#1A1A1A] flex items-center justify-center border-b border-gray-100 dark:border-b-2 dark:border-gray-800">
                   <div className="w-16 h-16 bg-white dark:bg-gray-900 rounded-2xl flex items-center justify-center text-gray-900 dark:text-gray-100 group-hover:scale-110 transition-transform">
                     {course.icon}
                   </div>
@@ -483,7 +483,7 @@ export default function LearnPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-black dark:bg-black border-t border-gray-200 dark:border-gray-800">
+      <section className="py-24 px-6 bg-black dark:bg-[#1A1A1A] border-t border-gray-200 dark:border-t-2 dark:border-gray-800">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             {t('learnPage.cta.title')}

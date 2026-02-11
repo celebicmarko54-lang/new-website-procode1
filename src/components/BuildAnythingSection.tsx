@@ -147,7 +147,7 @@ export default function BuildAnythingSection() {
   }, [isPaused]);
 
   return (
-    <section className="py-12 sm:py-16 md:py-24 overflow-hidden bg-[#f8fafc] dark:bg-black transition-colors">
+    <section className="py-12 sm:py-16 md:py-24 overflow-hidden bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-8 sm:mb-12 md:mb-16 text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 tracking-tight">
@@ -180,7 +180,7 @@ export default function BuildAnythingSection() {
               className="group relative w-[200px] sm:w-[240px] md:w-[280px] flex-shrink-0"
             >
               {/* Card */}
-              <div className="relative rounded-xl sm:rounded-2xl overflow-hidden bg-slate-900 dark:bg-black border border-white/10 dark:border-gray-800 transition-all duration-300 group-hover:border-white/30 group-hover:scale-[1.02] shadow-xl">
+              <div className="relative rounded-xl sm:rounded-2xl overflow-hidden bg-slate-900 dark:bg-[#1A1A1A] border border-white/10 dark:border-2 dark:border-gray-800 transition-all duration-300 group-hover:border-white/30 group-hover:scale-[1.02] shadow-xl">
                 {/* Header with name only */}
                 <div className="absolute top-0 left-0 right-0 z-20 p-3 sm:p-4 bg-gradient-to-b from-black/60 to-transparent">
                   <span className="text-white font-medium drop-shadow-lg text-sm sm:text-base">{category.name}</span>

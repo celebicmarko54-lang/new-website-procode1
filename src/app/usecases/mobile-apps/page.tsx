@@ -74,7 +74,7 @@ export default function MobileAppsPage() {
   ];
   
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-black text-gray-900 dark:text-white transition-colors">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] text-gray-900 dark:text-white transition-colors">
       <Header />
       
       <main className="pt-24 pb-16">
@@ -82,7 +82,7 @@ export default function MobileAppsPage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300 text-base font-medium mb-6">
+              <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-2 dark:border-gray-800 text-gray-700 dark:text-gray-300 text-base font-medium mb-6">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
@@ -107,7 +107,7 @@ export default function MobileAppsPage() {
                 </Link>
                 <Link 
                   href="/gallery" 
-                  className="px-8 py-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300 font-medium rounded-full hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                  className="px-8 py-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-2 dark:border-gray-800 text-gray-700 dark:text-gray-300 font-medium rounded-full hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
                 >
                   {t('useCasesMobileApps.seeExamples')}
                 </Link>
@@ -183,7 +183,7 @@ export default function MobileAppsPage() {
                 </div>
                 
                 {/* Floating elements */}
-                <div className="absolute -right-8 top-20 bg-white dark:bg-gray-800 rounded-xl p-3 shadow-xl border border-gray-200 dark:border-gray-700 animate-bounce" style={{ animationDuration: '3s' }}>
+                <div className="absolute -right-8 top-20 bg-white dark:bg-gray-800 rounded-xl p-3 shadow-xl border border-gray-200 dark:border-2 dark:border-gray-700 animate-bounce" style={{ animationDuration: '3s' }}>
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
                       <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -194,7 +194,7 @@ export default function MobileAppsPage() {
                   </div>
                 </div>
                 
-                <div className="absolute -left-8 bottom-32 bg-white dark:bg-gray-800 rounded-xl p-3 shadow-xl border border-gray-200 dark:border-gray-700 animate-bounce" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}>
+                <div className="absolute -left-8 bottom-32 bg-white dark:bg-gray-800 rounded-xl p-3 shadow-xl border border-gray-200 dark:border-2 dark:border-gray-700 animate-bounce" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}>
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
                       <svg className="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -222,9 +222,9 @@ export default function MobileAppsPage() {
             {features.map((feature, i) => (
               <div 
                 key={i} 
-                className="group p-6 bg-white dark:bg-[#0a0a0a] rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all hover:shadow-xl"
+                className="group p-6 bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-200 dark:border-2 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all hover:shadow-xl"
               >
-                <div className="w-12 h-12 rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-400 mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-2 dark:border-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-400 mb-4 group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">

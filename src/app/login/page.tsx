@@ -75,7 +75,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex bg-[#f8fafc] dark:bg-black transition-colors">
+    <div className="min-h-screen flex bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
       {/* Left Side - Form */}
       <div className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full">
@@ -109,7 +109,7 @@ export default function LoginPage() {
                 required
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#0a0a0a] focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-2 dark:border-gray-700 bg-white dark:bg-[#1A1A1A] focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
                 placeholder="you@example.com"
               />
             </div>
@@ -130,7 +130,7 @@ export default function LoginPage() {
                   required
                   value={formData.password}
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                  className="w-full px-4 py-3 pr-12 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#0a0a0a] focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
+                  className="w-full px-4 py-3 pr-12 rounded-xl border border-gray-300 dark:border-2 dark:border-gray-700 bg-white dark:bg-[#1A1A1A] focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
                   placeholder="••••••••"
                 />
                 <button
@@ -174,10 +174,10 @@ export default function LoginPage() {
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-200 dark:border-gray-800"></div>
+                <div className="w-full border-t border-gray-200 dark:border-t-2 dark:border-gray-800"></div>
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-4 bg-[#f8fafc] dark:bg-black text-gray-500 dark:text-gray-400">{t('auth.login.orContinueWith') || 'Or continue with'}</span>
+                <span className="px-4 bg-[#f8fafc] dark:bg-[#1A1A1A] text-gray-500 dark:text-gray-400">{t('auth.login.orContinueWith') || 'Or continue with'}</span>
               </div>
             </div>
 
@@ -185,7 +185,7 @@ export default function LoginPage() {
               <button 
                 onClick={() => handleOAuthLogin('google')}
                 disabled={oauthLoading !== null}
-                className="flex items-center justify-center gap-2 px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-full bg-white dark:bg-[#0a0a0a] hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center justify-center gap-2 px-4 py-3 border border-gray-300 dark:border-2 dark:border-gray-700 rounded-full bg-white dark:bg-[#1A1A1A] hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {oauthLoading === 'google' ? (
                   <svg className="animate-spin w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24">
@@ -205,7 +205,7 @@ export default function LoginPage() {
               <button 
                 onClick={() => handleOAuthLogin('github')}
                 disabled={oauthLoading !== null}
-                className="flex items-center justify-center gap-2 px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-full bg-white dark:bg-[#0a0a0a] hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center justify-center gap-2 px-4 py-3 border border-gray-300 dark:border-2 dark:border-gray-700 rounded-full bg-white dark:bg-[#1A1A1A] hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {oauthLoading === 'github' ? (
                   <svg className="animate-spin w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24">
@@ -235,8 +235,8 @@ export default function LoginPage() {
       <div className="hidden lg:flex flex-1 relative overflow-hidden">
         <div className="absolute inset-0 bg-black dark:bg-white">
           <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-20 left-20 w-72 h-72 bg-white dark:bg-black rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-20 w-96 h-96 bg-white dark:bg-black rounded-full blur-3xl"></div>
+            <div className="absolute top-20 left-20 w-72 h-72 bg-white dark:bg-[#1A1A1A] rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-20 w-96 h-96 bg-white dark:bg-[#1A1A1A] rounded-full blur-3xl"></div>
           </div>
         </div>
         <div className="relative z-10 flex flex-col items-center justify-center p-12 text-white dark:text-black">
@@ -248,24 +248,24 @@ export default function LoginPage() {
               {t('auth.login.decorativeDescription') || "The world's simplest way to build apps with AI."}
             </p>
             <div className="mt-10 flex flex-col gap-4">
-              <div className="flex items-center gap-3 bg-white/10 dark:bg-black/10 backdrop-blur-sm rounded-xl p-4">
-                <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-black/20 flex items-center justify-center">
+              <div className="flex items-center gap-3 bg-white/10 dark:bg-[#1A1A1A]/10 backdrop-blur-sm rounded-xl p-4">
+                <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-[#1A1A1A]/20 flex items-center justify-center">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <span>{t('auth.features.aiPowered') || 'AI-powered development'}</span>
               </div>
-              <div className="flex items-center gap-3 bg-white/10 dark:bg-black/10 backdrop-blur-sm rounded-xl p-4">
-                <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-black/20 flex items-center justify-center">
+              <div className="flex items-center gap-3 bg-white/10 dark:bg-[#1A1A1A]/10 backdrop-blur-sm rounded-xl p-4">
+                <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-[#1A1A1A]/20 flex items-center justify-center">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <span>{t('auth.features.shipFast') || 'Ship in minutes, not months'}</span>
               </div>
-              <div className="flex items-center gap-3 bg-white/10 dark:bg-black/10 backdrop-blur-sm rounded-xl p-4">
-                <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-black/20 flex items-center justify-center">
+              <div className="flex items-center gap-3 bg-white/10 dark:bg-[#1A1A1A]/10 backdrop-blur-sm rounded-xl p-4">
+                <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-[#1A1A1A]/20 flex items-center justify-center">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>

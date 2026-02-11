@@ -66,12 +66,12 @@ export default function PublishPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-black text-gray-900 dark:text-white transition-colors">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] text-gray-900 dark:text-white transition-colors">
       <Header />
       <main className="pt-24 pb-16">
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-black border border-gray-200 dark:border-gray-800 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800 mb-6">
               <svg className="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
               </svg>
@@ -85,7 +85,7 @@ export default function PublishPage() {
             </p>
             <div className="flex items-center justify-center gap-4">
               <Link href="/signup" className="px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-xl hover:bg-gray-800 dark:hover:bg-gray-100 transition-all shadow-lg">{t('productPublish.deployNow')}</Link>
-              <Link href="/learn/publish" className="px-8 py-4 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300 font-medium rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">{t('common.learnMore')}</Link>
+              <Link href="/learn/publish" className="px-8 py-4 bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800 text-gray-700 dark:text-gray-300 font-medium rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">{t('common.learnMore')}</Link>
             </div>
           </div>
         </section>
@@ -93,8 +93,8 @@ export default function PublishPage() {
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">{t('productPublish.featuresTitle')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, i) => (
-              <div key={i} className="p-6 bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all hover:shadow-lg group">
-                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl flex items-center justify-center mb-4 text-gray-600 dark:text-gray-400 group-hover:scale-110 transition-transform">
+              <div key={i} className="p-6 bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-200 dark:border-2 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all hover:shadow-lg group">
+                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-2 dark:border-gray-800 rounded-xl flex items-center justify-center mb-4 text-gray-600 dark:text-gray-400 group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{feature.title}</h3>
@@ -104,7 +104,7 @@ export default function PublishPage() {
           </div>
         </section>
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <div className="p-8 bg-white dark:bg-black rounded-3xl border border-gray-200 dark:border-gray-800">
+          <div className="p-8 bg-white dark:bg-[#1A1A1A] rounded-3xl border border-gray-200 dark:border-2 dark:border-gray-800">
             <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">{t('productPublish.cta.title')}</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">{t('productPublish.cta.subtitle')}</p>
             <Link href="/signup" className="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-xl hover:bg-gray-800 dark:hover:bg-gray-100 transition-all shadow-lg text-lg">

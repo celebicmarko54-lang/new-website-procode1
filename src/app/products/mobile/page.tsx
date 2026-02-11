@@ -9,14 +9,14 @@ export default function MobilePage() {
   const { t } = useTranslation();
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-black text-gray-900 dark:text-white">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] text-gray-900 dark:text-white">
       <Header />
       
       <main className="pt-24 pb-16">
         {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300 text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800 text-gray-700 dark:text-gray-300 text-sm font-medium mb-6">
               <svg className="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
               </svg>
@@ -70,7 +70,7 @@ export default function MobilePage() {
 
         {/* Coming Soon Explanation */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="bg-white dark:bg-[#0a0a0a] rounded-2xl border border-gray-200 dark:border-gray-800 p-8 text-center">
+          <div className="bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-200 dark:border-2 dark:border-gray-800 p-8 text-center">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Mobile Apps Coming Soon</h2>
             <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
               Our mobile apps are currently in development. In the meantime, our users can access AppNode from any device - desktop, tablet, or phone - through the browser and instantly preview how their applications look on different screen sizes.
@@ -191,8 +191,8 @@ export default function MobilePage() {
                 description: t('productMobile.features.teamCollaboration.description')
               }
             ].map((feature, i) => (
-              <div key={i} className="p-6 bg-white dark:bg-[#0a0a0a] rounded-xl border border-gray-200 dark:border-gray-800">
-                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl flex items-center justify-center mb-4 text-gray-600 dark:text-gray-400">{feature.icon}</div>
+              <div key={i} className="p-6 bg-white dark:bg-[#1A1A1A] rounded-xl border border-gray-200 dark:border-2 dark:border-gray-800">
+                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-2 dark:border-gray-700 rounded-xl flex items-center justify-center mb-4 text-gray-600 dark:text-gray-400">{feature.icon}</div>
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{feature.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
               </div>

@@ -9,7 +9,7 @@ export default function Web3Page() {
   const { t } = useTranslation();
   
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-[#1A1A1A]">
       <Header />
       
       <main className="pt-14">

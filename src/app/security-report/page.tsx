@@ -45,7 +45,7 @@ export default function SecurityReportPage() {
 
   if (submitted) {
     return (
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white dark:bg-[#1A1A1A]">
         <Header />
         <main className="pt-32 pb-20">
           <div className="max-w-2xl mx-auto px-6 text-center">
@@ -82,7 +82,7 @@ export default function SecurityReportPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-[#1A1A1A]">
       <Header />
       
       <main className="pt-32 pb-20">

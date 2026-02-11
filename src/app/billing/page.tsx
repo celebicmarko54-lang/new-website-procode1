@@ -78,16 +78,16 @@ export default function BillingPage() {
 
   if (!user) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center dark:bg-[#1A1A1A]">
         <div className="animate-spin w-8 h-8 border-4 border-gray-900 border-t-transparent rounded-full"></div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-[#1A1A1A]">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200">
+      <header className="bg-white dark:bg-[#1A1A1A] border-b border-gray-200 dark:border-b-2 dark:border-gray-800">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14">
             <div className="flex items-center gap-4">
@@ -104,11 +104,11 @@ export default function BillingPage() {
 
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Current Plan */}
-        <div className="bg-white rounded-2xl border border-gray-200 p-6 mb-8">
+        <div className="bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-200 dark:border-2 dark:border-gray-800 p-6 mb-8">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-500 mb-1">{t('billingPage.currentPlan')}</p>
-              <h2 className="text-2xl font-bold text-gray-900 capitalize">{currentPlan}</h2>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">{t('billingPage.currentPlan')}</p>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white capitalize">{currentPlan}</h2>
               <p className="text-gray-500 mt-1">
                 {currentPlan === 'free' ? t('billingPage.upgradeToUnlock') : t('billingPage.planRenews')}
               </p>
@@ -127,7 +127,7 @@ export default function BillingPage() {
           {plans.map((plan) => (
             <div
               key={plan.id}
-              className={`bg-white rounded-2xl border-2 p-6 relative ${
+              className={`bg-white dark:bg-[#1A1A1A] rounded-2xl border-2 p-6 relative ${
                 plan.popular ? 'border-orange-500' : plan.current ? 'border-orange-300 bg-orange-50' : 'border-gray-200'
               }`}
             >
@@ -172,8 +172,8 @@ export default function BillingPage() {
         </div>
 
         {/* Payment Method */}
-        <div className="bg-white rounded-2xl border border-gray-200 p-6 mb-8">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('billingPage.paymentMethod')}</h3>
+        <div className="bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-200 dark:border-2 dark:border-gray-800 p-6 mb-8">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t('billingPage.paymentMethod')}</h3>
           {currentPlan === 'free' ? (
             <p className="text-gray-500">{t('billingPage.noPaymentRequired')}</p>
           ) : (
@@ -195,7 +195,7 @@ export default function BillingPage() {
         </div>
 
         {/* Billing History */}
-        <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+        <div className="bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-200 dark:border-2 dark:border-gray-800 overflow-hidden">
           <div className="p-6 border-b border-gray-200">
             <h3 className="text-lg font-semibold text-gray-900">{t('billingPage.billingHistory')}</h3>
           </div>
@@ -226,7 +226,7 @@ export default function BillingPage() {
       {/* Upgrade Modal */}
       {showUpgradeModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-          <div className="bg-white rounded-2xl p-6 max-w-md w-full mx-4 shadow-2xl">
+          <div className="bg-white dark:bg-[#1A1A1A] rounded-2xl p-6 max-w-md w-full mx-4 shadow-2xl">
             <div className="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center mx-auto mb-4">
               <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />

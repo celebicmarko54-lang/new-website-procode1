@@ -71,7 +71,7 @@ export default function StatusPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-[#1A1A1A]">
       <Header />
       
       <main className="pt-32 pb-20">
@@ -93,7 +93,7 @@ export default function StatusPage() {
 
         {/* Uptime Overview */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-          <div className="bg-white rounded-xl border border-gray-200 p-6">
+          <div className="bg-white dark:bg-[#1A1A1A] rounded-xl border border-gray-200 dark:border-2 dark:border-gray-800 p-6">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-lg font-semibold text-gray-900">{t('statusPage.uptimeTitle')}</h2>
               <span className="text-2xl font-bold text-green-600">99.98%</span>
@@ -115,7 +115,7 @@ export default function StatusPage() {
         {/* Services Status */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <h2 className="text-xl font-bold text-gray-900 mb-4">{t('statusPage.servicesTitle')}</h2>
-          <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <div className="bg-white dark:bg-[#1A1A1A] rounded-xl border border-gray-200 dark:border-2 dark:border-gray-800 overflow-hidden">
             {services.map((service, index) => (
               <div 
                 key={service.name}
@@ -141,7 +141,7 @@ export default function StatusPage() {
           <h2 className="text-xl font-bold text-gray-900 mb-4">{t('statusPage.incidentsTitle')}</h2>
           <div className="space-y-4">
             {incidents.map((incident) => (
-              <div key={incident.title} className="bg-white rounded-xl border border-gray-200 p-6">
+              <div key={incident.title} className="bg-white dark:bg-[#1A1A1A] rounded-xl border border-gray-200 dark:border-2 dark:border-gray-800 p-6">
                 <div className="flex items-start justify-between mb-2">
                   <div>
                     <h3 className="font-semibold text-gray-900">{incident.title}</h3>
@@ -164,7 +164,7 @@ export default function StatusPage() {
 
         {/* Subscribe to Updates */}
         <div className="max-w-4xl mx-auto px-6">
-          <div className="bg-gray-900 dark:bg-black rounded-2xl p-8 text-center text-white">
+          <div className="bg-gray-900 dark:bg-[#1A1A1A] rounded-2xl p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-3">{t('statusPage.subscribeTitle')}</h2>
             <p className="text-gray-100 mb-6">
               {t('statusPage.subscribeSubtitle')}

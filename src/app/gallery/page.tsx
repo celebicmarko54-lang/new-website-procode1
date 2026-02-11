@@ -21,26 +21,26 @@ const aiAppsProjects = [
 
 // Website projects with actual images
 const websiteProjects = [
-  { id: 9, title: 'Portfolio Site', image: '/templates/WEBSITE1.png', author: 'AppNode Team', category: 'Websites' },
-  { id: 10, title: 'Landing Page', image: '/templates/WEBSITE2.png', author: 'AppNode Team', category: 'Websites' },
+  { id: 9, title: 'Travel Blog', image: '/templates/WEBSITE1.png', author: 'AppNode Team', category: 'Websites' },
+  { id: 10, title: 'Design Studio', image: '/templates/WEBSITE2.png', author: 'AppNode Team', category: 'Websites' },
   { id: 11, title: 'Business Website', image: '/templates/WEBSITE3.png', author: 'AppNode Team', category: 'Websites' },
-  { id: 12, title: 'E-commerce Store', image: '/templates/WEBSITE4.png', author: 'AppNode Team', category: 'Websites' },
-  { id: 13, title: 'Blog Platform', image: '/templates/WEBSITE5NEW.png', author: 'AppNode Team', category: 'Websites' },
-  { id: 14, title: 'Agency Website', image: '/templates/WEBSITE6.png', author: 'AppNode Team', category: 'Websites' },
-  { id: 15, title: 'SaaS Dashboard', image: '/templates/WEBSITE7.png', author: 'AppNode Team', category: 'Websites' },
+  { id: 12, title: 'Art Magazine', image: '/templates/WEBSITE4.png', author: 'AppNode Team', category: 'Websites' },
+  { id: 13, title: 'Fashion Blog', image: '/templates/WEBSITE5NEW.png', author: 'AppNode Team', category: 'Websites' },
+  { id: 14, title: 'Product Landing', image: '/templates/WEBSITE6.png', author: 'AppNode Team', category: 'Websites' },
+  { id: 15, title: 'Fragrance Store', image: '/templates/WEBSITE7.png', author: 'AppNode Team', category: 'Websites' },
   { id: 16, title: 'Restaurant Site', image: '/templates/WEBSITE8.png', author: 'AppNode Team', category: 'Websites' },
 ];
 
 // Business Apps projects with actual images
 const businessAppsProjects = [
   { id: 17, title: 'CRM Dashboard', image: '/templates/biznis1.png', author: 'AppNode Team', category: 'Business Apps' },
-  { id: 18, title: 'Project Manager', image: '/templates/biznis2.png', author: 'AppNode Team', category: 'Business Apps' },
-  { id: 19, title: 'Invoice System', image: '/templates/biznis3.png', author: 'AppNode Team', category: 'Business Apps' },
-  { id: 20, title: 'HR Management', image: '/templates/Biznis4.png', author: 'AppNode Team', category: 'Business Apps' },
-  { id: 21, title: 'Inventory Tracker', image: '/templates/biznis5.png', author: 'AppNode Team', category: 'Business Apps' },
+  { id: 18, title: 'Order Dashboard', image: '/templates/biznis2.png', author: 'AppNode Team', category: 'Business Apps' },
+  { id: 19, title: 'Project Dashboard', image: '/templates/biznis3.png', author: 'AppNode Team', category: 'Business Apps' },
+  { id: 20, title: 'Web Analytics', image: '/templates/Biznis4.png', author: 'AppNode Team', category: 'Business Apps' },
+  { id: 21, title: 'Sales Analytics', image: '/templates/biznis5.png', author: 'AppNode Team', category: 'Business Apps' },
   { id: 22, title: 'Analytics Dashboard', image: '/templates/Biznis6.png', author: 'AppNode Team', category: 'Business Apps' },
-  { id: 23, title: 'Task Management', image: '/templates/biznis7.png', author: 'AppNode Team', category: 'Business Apps' },
-  { id: 24, title: 'Team Collaboration', image: '/templates/biznis8.png', author: 'AppNode Team', category: 'Business Apps' },
+  { id: 23, title: 'Performance Dashboard', image: '/templates/biznis7.png', author: 'AppNode Team', category: 'Business Apps' },
+  { id: 24, title: 'Business Analytics', image: '/templates/biznis8.png', author: 'AppNode Team', category: 'Business Apps' },
 ];
 
 // Personal Software projects with actual images
@@ -49,10 +49,10 @@ const personalSoftwareProjects = [
   { id: 26, title: 'Personal Finance', image: '/templates/personal2.png', author: 'AppNode Team', category: 'Personal Software' },
   { id: 27, title: 'LifeOS Productivity', image: '/templates/personal3.png', author: 'AppNode Team', category: 'Personal Software' },
   { id: 28, title: 'Digital Journal', image: '/templates/personal4.png', author: 'AppNode Team', category: 'Personal Software' },
-  { id: 29, title: 'Fitness Tracker', image: '/templates/personal5.png', author: 'AppNode Team', category: 'Personal Software' },
-  { id: 30, title: 'Recipe Manager', image: '/templates/personal6.png', author: 'AppNode Team', category: 'Personal Software' },
-  { id: 31, title: 'Reading List', image: '/templates/personal7.png', author: 'AppNode Team', category: 'Personal Software' },
-  { id: 32, title: 'Goal Tracker', image: '/templates/Personal8.png', author: 'AppNode Team', category: 'Personal Software' },
+  { id: 29, title: 'Personal Dashboard', image: '/templates/personal5.png', author: 'AppNode Team', category: 'Personal Software' },
+  { id: 30, title: 'Task Dashboard', image: '/templates/personal6.png', author: 'AppNode Team', category: 'Personal Software' },
+  { id: 31, title: 'Finance Dashboard', image: '/templates/personal7.png', author: 'AppNode Team', category: 'Personal Software' },
+  { id: 32, title: 'Daily Planner', image: '/templates/Personal8.png', author: 'AppNode Team', category: 'Personal Software' },
 ];
 
 // Games projects with actual images
@@ -122,7 +122,7 @@ export default function GalleryPage() {
   const emptySlots = Array(emptySlotCount).fill(null);
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-black text-gray-900 dark:text-white transition-colors">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] text-gray-900 dark:text-white transition-colors">
       <Header />
       
       <main className="pt-24 pb-16">
@@ -162,7 +162,7 @@ export default function GalleryPage() {
             {filteredProjects.map((project, index) => (
               <div 
                 key={project.id} 
-                className="group bg-white dark:bg-[#0a0a0a] rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 transition-all hover:shadow-lg"
+                className="group bg-white dark:bg-[#1A1A1A] rounded-xl border border-gray-200 dark:border-2 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 transition-all hover:shadow-lg"
               >
                 {/* Preview Image - Full coverage */}
                 <div className="aspect-[4/3] bg-gray-100 dark:bg-gray-900 relative overflow-hidden">
@@ -206,7 +206,7 @@ export default function GalleryPage() {
             {emptySlots.map((_, i) => (
               <div 
                 key={i} 
-                className="group bg-white dark:bg-[#0a0a0a] rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 transition-all hover:shadow-lg"
+                className="group bg-white dark:bg-[#1A1A1A] rounded-xl border border-gray-200 dark:border-2 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 transition-all hover:shadow-lg"
               >
                 {/* Preview - Empty with pulse animation - same aspect ratio as AI Apps */}
                 <div className="aspect-[4/3] bg-gray-100 dark:bg-gray-900 flex items-center justify-center relative overflow-hidden">
@@ -241,7 +241,7 @@ export default function GalleryPage() {
 
         {/* Submit CTA */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="bg-gray-50 dark:bg-[#0a0a0a] rounded-2xl border border-gray-200 dark:border-gray-800 p-8 md:p-12 text-center">
+          <div className="bg-gray-50 dark:bg-[#1A1A1A] rounded-2xl border border-gray-200 dark:border-2 dark:border-gray-800 p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Share Your Creation</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
               Built something cool with AppNode? Submit it to the gallery and inspire others.
@@ -265,7 +265,7 @@ export default function GalleryPage() {
           onClick={() => setSelectedProject(null)}
         >
           <div 
-            className="relative max-w-6xl w-full max-h-[90vh] bg-white dark:bg-[#0a0a0a] rounded-2xl overflow-hidden shadow-2xl"
+            className="relative max-w-6xl w-full max-h-[90vh] bg-white dark:bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
@@ -292,7 +292,7 @@ export default function GalleryPage() {
             </div>
             
             {/* Project Info */}
-            <div className="p-6 border-t border-gray-200 dark:border-gray-800">
+            <div className="p-6 border-t border-gray-200 dark:border-t-2 dark:border-gray-800">
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">{selectedProject.title}</h3>

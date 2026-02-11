@@ -95,14 +95,14 @@ export default function PlatformRulesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-black">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A]">
       <Header />
       
       <main className="pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-6">
           {/* Header */}
           <div className="mb-16 text-center">
-            <div className="inline-block px-4 py-2 bg-gray-50 dark:bg-black text-gray-900 dark:text-white rounded-full text-sm font-medium mb-4 border border-transparent dark:border-gray-800">
+            <div className="inline-block px-4 py-2 bg-gray-50 dark:bg-[#1A1A1A] text-gray-900 dark:text-white rounded-full text-sm font-medium mb-4 border border-transparent dark:border-2 dark:border-gray-800">
               {t('rulesPage.badge')}
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">{t('rulesPage.title')}</h1>
@@ -116,7 +116,7 @@ export default function PlatformRulesPage() {
             {rules.map((rule, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 p-8 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-lg transition-all"
+                className="bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-100 dark:border-2 dark:border-gray-800 p-8 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-lg transition-all"
               >
                 <div className="flex items-start gap-5">
                   <div className="w-14 h-14 bg-gray-100 dark:bg-[#111] rounded-2xl flex items-center justify-center text-gray-900 dark:text-white flex-shrink-0">
@@ -145,21 +145,21 @@ export default function PlatformRulesPage() {
           </div>
 
           {/* Enforcement Section */}
-          <div className="bg-gray-50 dark:bg-black rounded-2xl border border-gray-100 dark:border-transparent p-8 mb-16">
+          <div className="bg-gray-50 dark:bg-[#1A1A1A] rounded-2xl border border-gray-100 dark:border-transparent p-8 mb-16">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{t('rulesPage.enforcement.title')}</h2>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
               {t('rulesPage.enforcement.description')}
             </p>
             <div className="grid sm:grid-cols-3 gap-4">
-              <div className="bg-white dark:bg-black rounded-xl p-4 text-center">
+              <div className="bg-white dark:bg-[#1A1A1A] rounded-xl p-4 text-center">
                 <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">{t('rulesPage.enforcement.warning.title')}</div>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{t('rulesPage.enforcement.warning.subtitle')}</p>
               </div>
-              <div className="bg-white dark:bg-black rounded-xl p-4 text-center">
+              <div className="bg-white dark:bg-[#1A1A1A] rounded-xl p-4 text-center">
                 <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">{t('rulesPage.enforcement.suspension.title')}</div>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{t('rulesPage.enforcement.suspension.subtitle')}</p>
               </div>
-              <div className="bg-white dark:bg-black rounded-xl p-4 text-center">
+              <div className="bg-white dark:bg-[#1A1A1A] rounded-xl p-4 text-center">
                 <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">{t('rulesPage.enforcement.ban.title')}</div>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{t('rulesPage.enforcement.ban.subtitle')}</p>
               </div>

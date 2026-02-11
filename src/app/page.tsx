@@ -4,11 +4,11 @@ import HeroSection from "@/components/HeroSection";
 
 // Lazy load below-fold components for faster initial page load
 const LovecodeSection = dynamic(() => import("@/components/LovecodeSection"), {
-  loading: () => <div className="h-96 bg-[#f8fafc] dark:bg-black" />,
+  loading: () => <div className="h-96 bg-[#f8fafc] dark:bg-[#1A1A1A]" />,
   ssr: true,
 });
 const BuildAnythingSection = dynamic(() => import("@/components/BuildAnythingSection"), {
-  loading: () => <div className="h-96 bg-[#f8fafc] dark:bg-black" />,
+  loading: () => <div className="h-96 bg-[#f8fafc] dark:bg-[#1A1A1A]" />,
   ssr: true,
 });
 const Footer = dynamic(() => import("@/components/Footer"), {
@@ -17,7 +17,7 @@ const Footer = dynamic(() => import("@/components/Footer"), {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-black transition-colors">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
       {/* Header */}
       <Header />
       
@@ -30,11 +30,11 @@ export default function Home() {
       <LovecodeSection />
 
       {/* How it works Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-[#f8fafc] dark:bg-black transition-colors">
+      <section className="py-12 sm:py-16 md:py-24 bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           {/* Header */}
           <div className="text-center mb-8 sm:mb-12">
-            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-gray-100 dark:bg-black border border-gray-200 dark:border-gray-800 mb-4 sm:mb-6">
+            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-gray-100 dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800 mb-4 sm:mb-6">
               <svg className="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -54,10 +54,10 @@ export default function Home() {
           {/* Video Player */}
           <div className="relative">
             {/* Glow effect */}
-            <div className="absolute -inset-2 sm:-inset-4 bg-gray-200/50 dark:bg-black/50 rounded-2xl sm:rounded-[2.5rem] blur-xl sm:blur-2xl opacity-50"></div>
+            <div className="absolute -inset-2 sm:-inset-4 bg-gray-200/50 dark:bg-[#1A1A1A]/50 rounded-2xl sm:rounded-[2.5rem] blur-xl sm:blur-2xl opacity-50"></div>
             
             {/* Video container */}
-            <div className="relative bg-gray-900 rounded-xl sm:rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-2xl">
+            <div className="relative bg-gray-900 rounded-xl sm:rounded-2xl overflow-hidden border border-gray-200 dark:border-2 dark:border-gray-700 shadow-2xl">
               <div className="aspect-video w-full">
                 <video 
                   className="w-full h-full object-cover"

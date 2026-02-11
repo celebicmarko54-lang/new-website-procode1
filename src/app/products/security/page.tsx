@@ -9,13 +9,13 @@ export default function SecurityPage() {
   const { t } = useTranslation();
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-black text-gray-900 dark:text-white transition-colors">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] text-gray-900 dark:text-white transition-colors">
       <Header />
       
       <main className="pt-24 pb-16">
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-black border border-gray-200 dark:border-gray-800 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800 mb-6">
               <svg className="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
@@ -62,7 +62,7 @@ export default function SecurityPage() {
                 </svg>
               )}
             ].map((badge, i) => (
-              <div key={i} className="flex items-center gap-3 px-5 py-3 bg-white dark:bg-[#0a0a0a] rounded-xl border border-gray-200 dark:border-gray-800">
+              <div key={i} className="flex items-center gap-3 px-5 py-3 bg-white dark:bg-[#1A1A1A] rounded-xl border border-gray-200 dark:border-2 dark:border-gray-800">
                 <div className="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
                   {badge.icon}
                 </div>
@@ -97,8 +97,8 @@ export default function SecurityPage() {
                 </svg>
               ), gradient: 'from-orange-500 to-amber-600', title: t('productSecurity.features.auditLogs.title'), description: t('productSecurity.features.auditLogs.description'), features: [t('productSecurity.features.auditLogs.item1'), t('productSecurity.features.auditLogs.item2'), t('productSecurity.features.auditLogs.item3')] }
             ].map((feature, i) => (
-              <div key={i} className="p-8 bg-white dark:bg-[#0a0a0a] rounded-2xl border border-gray-200 dark:border-gray-800">
-                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl flex items-center justify-center mb-4 text-gray-600 dark:text-gray-400">{feature.icon}</div>
+              <div key={i} className="p-8 bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-200 dark:border-2 dark:border-gray-800">
+                <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-2 dark:border-gray-700 rounded-xl flex items-center justify-center mb-4 text-gray-600 dark:text-gray-400">{feature.icon}</div>
                 <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">{feature.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">{feature.description}</p>
                 <ul className="space-y-2">

@@ -27,7 +27,7 @@ export default function LanguageSelector() {
     <div ref={dropdownRef} className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1 h-7 px-2 text-xs font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded-md hover:border-gray-300 dark:hover:border-gray-700 transition-all"
+        className="flex items-center gap-1 h-7 px-2 text-xs font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800 rounded-md hover:border-gray-300 dark:hover:border-gray-700 transition-all"
         aria-expanded={isOpen}
         aria-haspopup="true"
       >
@@ -47,7 +47,7 @@ export default function LanguageSelector() {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full right-0 mt-2 w-44 max-h-52 overflow-y-auto bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded-md shadow-lg py-1 z-50 animate-fade-in">
+        <div className="absolute top-full right-0 mt-2 w-44 max-h-52 overflow-y-auto bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800 rounded-md shadow-lg py-1 z-50 animate-fade-in">
           {languages.map((lang) => (
             <button
               key={lang.code}

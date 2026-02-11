@@ -8,14 +8,14 @@ export default function PrivacyPolicyPage() {
   const { t } = useTranslation();
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-black transition-colors">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
       <Header />
       
       <main className="pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-6">
           {/* Header */}
           <div className="mb-12 text-center">
-            <div className="inline-block px-4 py-2 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-800 rounded-full text-sm font-medium mb-4">
+            <div className="inline-block px-4 py-2 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white border border-gray-200 dark:border-2 dark:border-gray-800 rounded-full text-sm font-medium mb-4">
               {t('privacyPage.badge')}
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">{t('privacyPage.title')}</h1>
@@ -142,7 +142,7 @@ export default function PrivacyPolicyPage() {
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 {t('privacyPage.contactDescription')}
               </p>
-              <div className="mt-4 p-4 bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800 rounded-lg">
+              <div className="mt-4 p-4 bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800 rounded-lg">
                 <p className="text-gray-700 dark:text-gray-300 font-medium">AppNode Inc.</p>
                 <p className="text-gray-600 dark:text-gray-400">Email: contact@appnode.ai</p>
               </div>

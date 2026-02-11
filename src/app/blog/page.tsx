@@ -122,14 +122,14 @@ export default function BlogPage() {
   );
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#0d1117]">
+    <div className="min-h-screen bg-white dark:bg-[#1A1A1A]">
       <Header />
       
       <main className="pt-24 pb-16">
         {/* Featured Post */}
         <section className="max-w-5xl mx-auto px-6 mb-12">
           <Link href="#" className="group block">
-            <article className="py-8 border-b-2 border-gray-200 dark:border-gray-800">
+            <article className="py-8 border-b-2 border-gray-200 dark:border-b-2 dark:border-gray-800">
               <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-4">
                 <span>{featuredPost.date}</span>
                 <span>•</span>
@@ -158,7 +158,7 @@ export default function BlogPage() {
                   setSearchQuery(e.target.value);
                   setCurrentPage(1);
                 }}
-                className="w-full sm:w-72 px-4 py-2.5 pl-10 bg-gray-50 dark:bg-[#161b22] border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 focus:border-transparent transition-all"
+                className="w-full sm:w-72 px-4 py-2.5 pl-10 bg-gray-50 dark:bg-[#161b22] border border-gray-200 dark:border-2 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 focus:border-transparent transition-all"
               />
               <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />

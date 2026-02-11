@@ -77,7 +77,7 @@ export default function AffiliatesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-[#1A1A1A]">
       <Header />
       
       <main className="pt-32 pb-20">
@@ -123,7 +123,7 @@ export default function AffiliatesPage() {
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-2xl border border-gray-100 p-6 hover:border-gray-300 hover:shadow-lg transition-all"
+                  className="bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-100 dark:border-2 dark:border-gray-800 p-6 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-lg transition-all"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-gray-100 to-gray-100 rounded-xl flex items-center justify-center text-gray-900 mb-4">
                     {benefit.icon}
@@ -151,7 +151,7 @@ export default function AffiliatesPage() {
                   className={`rounded-2xl p-6 ${
                     tier.featured
                       ? 'bg-gradient-to-br from-[#1f2937] to-[#374151] text-white ring-4 ring-gray-300'
-                      : 'bg-white border border-gray-100'
+                      : 'bg-white dark:bg-[#1A1A1A] border border-gray-100 dark:border-2 dark:border-gray-800'
                   }`}
                 >
                   <div className="text-center mb-6">
@@ -191,7 +191,7 @@ export default function AffiliatesPage() {
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">How It Works</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-gray-900 mx-auto mb-4 shadow-sm">
+                <div className="w-16 h-16 bg-white dark:bg-[#1A1A1A] rounded-2xl flex items-center justify-center text-gray-900 dark:text-white mx-auto mb-4 shadow-sm">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
                   </svg>
@@ -202,7 +202,7 @@ export default function AffiliatesPage() {
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-gray-900 mx-auto mb-4 shadow-sm">
+                <div className="w-16 h-16 bg-white dark:bg-[#1A1A1A] rounded-2xl flex items-center justify-center text-gray-900 dark:text-white mx-auto mb-4 shadow-sm">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
                   </svg>
@@ -213,7 +213,7 @@ export default function AffiliatesPage() {
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-gray-900 mx-auto mb-4 shadow-sm">
+                <div className="w-16 h-16 bg-white dark:bg-[#1A1A1A] rounded-2xl flex items-center justify-center text-gray-900 dark:text-white mx-auto mb-4 shadow-sm">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>

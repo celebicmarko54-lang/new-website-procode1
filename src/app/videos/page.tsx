@@ -16,13 +16,13 @@ export default function VideosPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-black">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A]">
       <Header />
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-2 dark:border-gray-700 mb-8">
             <svg className="w-4 h-4 text-gray-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
@@ -87,7 +87,7 @@ export default function VideosPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-black dark:bg-black border-t border-gray-800">
+      <section className="py-24 px-6 bg-black dark:bg-[#1A1A1A] border-t border-gray-800">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             {t('videosPage.cta.title')}

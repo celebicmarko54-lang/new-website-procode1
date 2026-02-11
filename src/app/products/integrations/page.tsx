@@ -146,13 +146,13 @@ export default function IntegrationsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-black text-gray-900 dark:text-white transition-colors">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] text-gray-900 dark:text-white transition-colors">
       <Header />
       
       <main className="pt-24 pb-16">
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-black border border-gray-200 dark:border-gray-800 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800 mb-6">
               <svg className="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
               </svg>
@@ -179,7 +179,7 @@ export default function IntegrationsPage() {
           <h2 className="text-2xl font-bold mb-8 text-gray-900 dark:text-white">{t('productIntegrations.popularIntegrations')}</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {integrations.map((integration, i) => (
-              <div key={i} className="p-5 bg-white dark:bg-[#0a0a0a] rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all hover:shadow-lg cursor-pointer group">
+              <div key={i} className="p-5 bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-200 dark:border-2 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all hover:shadow-lg cursor-pointer group">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 group-hover:scale-110 transition-transform">
                     {integration.icon}
@@ -203,8 +203,8 @@ export default function IntegrationsPage() {
               { step: '2', title: t('productIntegrations.howItWorks.step2.title'), desc: t('productIntegrations.howItWorks.step2.description') },
               { step: '3', title: t('productIntegrations.howItWorks.step3.title'), desc: t('productIntegrations.howItWorks.step3.description') }
             ].map((item, i) => (
-              <div key={i} className="text-center p-6 bg-white dark:bg-[#0a0a0a] rounded-2xl border border-gray-200 dark:border-gray-800">
-                <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <div key={i} className="text-center p-6 bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-200 dark:border-2 dark:border-gray-800">
+                <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-2 dark:border-gray-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-gray-900 dark:text-white">{item.step}</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{item.title}</h3>
@@ -215,7 +215,7 @@ export default function IntegrationsPage() {
         </section>
 
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <div className="p-8 bg-gray-50 dark:bg-[#0a0a0a] rounded-3xl border border-gray-200 dark:border-gray-800">
+          <div className="p-8 bg-gray-50 dark:bg-[#1A1A1A] rounded-3xl border border-gray-200 dark:border-2 dark:border-gray-800">
             <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">{t('productIntegrations.cta.title')}</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">{t('productIntegrations.cta.subtitle')}</p>
             <Link href="/signup" className="inline-flex items-center gap-2 px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-medium rounded-full hover:opacity-90 transition-all shadow-xl shadow-gray-900/20 dark:shadow-none text-lg">

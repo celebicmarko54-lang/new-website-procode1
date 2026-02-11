@@ -109,13 +109,13 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="min-h-screen flex bg-[#f8fafc] dark:bg-black transition-colors">
+    <div className="min-h-screen flex bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
       {/* Left Side - Decorative */}
       <div className="hidden lg:flex flex-1 relative overflow-hidden">
         <div className="absolute inset-0 bg-black dark:bg-white">
           <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-20 left-20 w-72 h-72 bg-white dark:bg-black rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-20 w-96 h-96 bg-white dark:bg-black rounded-full blur-3xl"></div>
+            <div className="absolute top-20 left-20 w-72 h-72 bg-white dark:bg-[#1A1A1A] rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-20 w-96 h-96 bg-white dark:bg-[#1A1A1A] rounded-full blur-3xl"></div>
           </div>
         </div>
         <div className="relative z-10 flex flex-col items-center justify-center p-12 text-white dark:text-black">
@@ -125,24 +125,24 @@ export default function SignupPage() {
               {t('auth.signup.decorativeDescription') || 'Create your free account and start building amazing applications with AI in minutes.'}
             </p>
             <div className="mt-8 flex flex-col gap-4">
-              <div className="flex items-center gap-3 bg-white/10 dark:bg-black/10 backdrop-blur-sm rounded-xl p-4">
-                <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-black/20 flex items-center justify-center">
+              <div className="flex items-center gap-3 bg-white/10 dark:bg-[#1A1A1A]/10 backdrop-blur-sm rounded-xl p-4">
+                <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-[#1A1A1A]/20 flex items-center justify-center">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <span>{t('auth.features.freeGenerations') || '2 free generations to start'}</span>
               </div>
-              <div className="flex items-center gap-3 bg-white/10 dark:bg-black/10 backdrop-blur-sm rounded-xl p-4">
-                <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-black/20 flex items-center justify-center">
+              <div className="flex items-center gap-3 bg-white/10 dark:bg-[#1A1A1A]/10 backdrop-blur-sm rounded-xl p-4">
+                <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-[#1A1A1A]/20 flex items-center justify-center">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <span>{t('auth.features.noCreditCard') || 'No credit card required'}</span>
               </div>
-              <div className="flex items-center gap-3 bg-white/10 dark:bg-black/10 backdrop-blur-sm rounded-xl p-4">
-                <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-black/20 flex items-center justify-center">
+              <div className="flex items-center gap-3 bg-white/10 dark:bg-[#1A1A1A]/10 backdrop-blur-sm rounded-xl p-4">
+                <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-[#1A1A1A]/20 flex items-center justify-center">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
@@ -214,7 +214,7 @@ export default function SignupPage() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#0a0a0a] focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-2 dark:border-gray-700 bg-white dark:bg-[#1A1A1A] focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
                     placeholder="John Doe"
                   />
                 </div>
@@ -229,7 +229,7 @@ export default function SignupPage() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#0a0a0a] focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-2 dark:border-gray-700 bg-white dark:bg-[#1A1A1A] focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
                     placeholder="you@example.com"
                   />
                 </div>
@@ -245,7 +245,7 @@ export default function SignupPage() {
                       required
                       value={formData.password}
                       onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                      className="w-full px-4 py-3 pr-12 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#0a0a0a] focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
+                      className="w-full px-4 py-3 pr-12 rounded-xl border border-gray-300 dark:border-2 dark:border-gray-700 bg-white dark:bg-[#1A1A1A] focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
                       placeholder="••••••••"
                     />
                     <button
@@ -278,7 +278,7 @@ export default function SignupPage() {
                       required
                       value={formData.confirmPassword}
                       onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
-                      className="w-full px-4 py-3 pr-12 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#0a0a0a] focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
+                      className="w-full px-4 py-3 pr-12 rounded-xl border border-gray-300 dark:border-2 dark:border-gray-700 bg-white dark:bg-[#1A1A1A] focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
                       placeholder="••••••••"
                     />
                     <button
@@ -349,7 +349,7 @@ export default function SignupPage() {
                   <button
                     type="button"
                     onClick={() => setStep(1)}
-                    className="flex-1 py-3 px-4 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors"
+                    className="flex-1 py-3 px-4 border border-gray-300 dark:border-2 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors"
                   >
                     {t('common.back')}
                   </button>
@@ -403,7 +403,7 @@ export default function SignupPage() {
                     id="company"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#0a0a0a] focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-2 dark:border-gray-700 bg-white dark:bg-[#1A1A1A] focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
                     placeholder="Acme Inc."
                   />
                 </div>
@@ -412,7 +412,7 @@ export default function SignupPage() {
                   <button
                     type="button"
                     onClick={() => setStep(2)}
-                    className="flex-1 py-3 px-4 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors"
+                    className="flex-1 py-3 px-4 border border-gray-300 dark:border-2 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-full hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors"
                   >
                     {t('common.back')}
                   </button>

@@ -70,14 +70,14 @@ export default function CareersPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-black transition-colors">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
       <Header />
       
       <main className="pt-24 pb-16">
         {/* Hero Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-2 dark:border-gray-800 mb-6">
               <svg className="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
@@ -103,7 +103,7 @@ export default function CareersPage() {
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">{t('careersPage.ourValues')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value) => (
-              <div key={value.title} className="bg-white dark:bg-[#0a0a0a] rounded-xl border border-gray-200 dark:border-gray-800 p-6 text-center hover:shadow-lg transition-all">
+              <div key={value.title} className="bg-white dark:bg-[#1A1A1A] rounded-xl border border-gray-200 dark:border-2 dark:border-gray-800 p-6 text-center hover:shadow-lg transition-all">
                 <span className="text-4xl mb-4 block">{value.emoji}</span>
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{value.title}</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{value.description}</p>
@@ -131,7 +131,7 @@ export default function CareersPage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 mb-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-2 dark:border-gray-800 mb-4">
                 <div className="w-2 h-2 rounded-full bg-black dark:bg-white animate-pulse" />
                 <span className="text-sm font-medium text-gray-900 dark:text-white">{t('careersPage.whyJoinUs')}</span>
               </div>
@@ -139,7 +139,7 @@ export default function CareersPage() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit) => (
-                <div key={benefit.title} className="group bg-white dark:bg-[#0a0a0a] rounded-2xl border border-gray-200 dark:border-gray-800 p-6 text-center hover:shadow-xl hover:shadow-gray-100 dark:hover:shadow-gray-900/50 hover:border-gray-300 dark:hover:border-gray-700 transition-all duration-300">
+                <div key={benefit.title} className="group bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-200 dark:border-2 dark:border-gray-800 p-6 text-center hover:shadow-xl hover:shadow-gray-100 dark:hover:shadow-gray-900/50 hover:border-gray-300 dark:hover:border-gray-700 transition-all duration-300">
                   <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-gray-100 dark:bg-gray-900 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <span className="text-2xl">{benefit.icon}</span>
                   </div>
@@ -158,7 +158,7 @@ export default function CareersPage() {
             {openings.map((job) => (
               <div
                 key={job.title}
-                className="bg-white dark:bg-[#0a0a0a] rounded-xl border border-gray-200 dark:border-gray-800 p-6 hover:shadow-lg hover:border-gray-300 dark:hover:border-gray-700 transition-all cursor-pointer group"
+                className="bg-white dark:bg-[#1A1A1A] rounded-xl border border-gray-200 dark:border-2 dark:border-gray-800 p-6 hover:shadow-lg hover:border-gray-300 dark:hover:border-gray-700 transition-all cursor-pointer group"
               >
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div>
@@ -181,7 +181,7 @@ export default function CareersPage() {
           </div>
 
           {/* Don't see a fit */}
-          <div className="mt-12 text-center bg-gray-50 dark:bg-[#0a0a0a] border border-gray-200 dark:border-gray-800 rounded-xl p-8">
+          <div className="mt-12 text-center bg-gray-50 dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800 rounded-xl p-8">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{t('careersPage.dontSeeAFit')}</h3>
             <p className="text-gray-600 dark:text-gray-400 mb-4">{t('careersPage.dontSeeAFitDescription')}</p>
             <button className="px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full hover:opacity-90 transition-all font-medium">

@@ -48,14 +48,14 @@ export default function RapidPrototypingPage() {
   ];
   
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-black text-gray-900 dark:text-white">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] text-gray-900 dark:text-white">
       <Header />
       
       <main className="pt-24 pb-16">
         {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300 text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800 text-gray-700 dark:text-gray-300 text-sm font-medium mb-6">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
@@ -71,7 +71,7 @@ export default function RapidPrototypingPage() {
               <Link href="/signup" className="px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-xl hover:bg-gray-800 dark:hover:bg-gray-100 transition-all shadow-lg">
                 {t('useCasesRapidPrototyping.startPrototyping')}
               </Link>
-              <Link href="/gallery" className="px-8 py-4 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300 font-medium rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+              <Link href="/gallery" className="px-8 py-4 bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800 text-gray-700 dark:text-gray-300 font-medium rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
                 {t('useCasesRapidPrototyping.seeExamples')}
               </Link>
             </div>
@@ -82,7 +82,7 @@ export default function RapidPrototypingPage() {
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-3xl font-bold text-center mb-12">{t('useCasesRapidPrototyping.comparisonTitle')}</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-6 bg-gray-100 dark:bg-black rounded-xl border border-gray-200 dark:border-gray-800 opacity-70">
+            <div className="p-6 bg-gray-100 dark:bg-[#1A1A1A] rounded-xl border border-gray-200 dark:border-2 dark:border-gray-800 opacity-70">
               <div className="flex items-center gap-2 mb-4">
                 <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -97,7 +97,7 @@ export default function RapidPrototypingPage() {
                   { step: 'Build prototype', time: '2-4 weeks' },
                   { step: 'Testing & iteration', time: '1-2 weeks' },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center justify-between py-2 border-b border-gray-200 dark:border-gray-700">
+                  <div key={i} className="flex items-center justify-between py-2 border-b border-gray-200 dark:border-b-2 dark:border-gray-700">
                     <span>{item.step}</span>
                     <span className="text-sm text-gray-500">{item.time}</span>
                   </div>
@@ -109,7 +109,7 @@ export default function RapidPrototypingPage() {
               </div>
             </div>
             
-            <div className="p-6 bg-white dark:bg-black rounded-xl border-2 border-gray-900 dark:border-white">
+            <div className="p-6 bg-white dark:bg-[#1A1A1A] rounded-xl border-2 border-gray-900 dark:border-white">
               <div className="flex items-center gap-2 mb-4">
                 <svg className="w-5 h-5 text-gray-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -124,7 +124,7 @@ export default function RapidPrototypingPage() {
                   { step: 'Share with stakeholders', time: '1 minute' },
                   { step: 'Iterate based on feedback', time: '15-30 minutes' },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center justify-between py-2 border-b border-gray-200 dark:border-gray-800">
+                  <div key={i} className="flex items-center justify-between py-2 border-b border-gray-200 dark:border-b-2 dark:border-gray-800">
                     <span>{item.step}</span>
                     <span className="text-sm text-gray-600 dark:text-gray-400">{item.time}</span>
                   </div>
@@ -143,8 +143,8 @@ export default function RapidPrototypingPage() {
           <h2 className="text-3xl font-bold text-center mb-12">{t('useCasesRapidPrototyping.benefitsTitle')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((item, i) => (
-              <div key={i} className="text-center p-6 bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-800">
-                <div className="w-14 h-14 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl flex items-center justify-center mx-auto mb-4 text-gray-600 dark:text-gray-400">
+              <div key={i} className="text-center p-6 bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-200 dark:border-2 dark:border-gray-800">
+                <div className="w-14 h-14 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-2 dark:border-gray-800 rounded-xl flex items-center justify-center mx-auto mb-4 text-gray-600 dark:text-gray-400">
                   {item.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
@@ -156,7 +156,7 @@ export default function RapidPrototypingPage() {
 
         {/* CTA */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <div className="p-8 bg-white dark:bg-black rounded-3xl border border-gray-200 dark:border-gray-800">
+          <div className="p-8 bg-white dark:bg-[#1A1A1A] rounded-3xl border border-gray-200 dark:border-2 dark:border-gray-800">
             <h2 className="text-3xl font-bold mb-4">{t('useCasesRapidPrototyping.ctaTitle')}</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
               {t('useCasesRapidPrototyping.ctaSubtitle')}

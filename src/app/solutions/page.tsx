@@ -109,19 +109,19 @@ export default function SolutionsPage() {
   const { t } = useTranslation();
   
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-[#1A1A1A]">
       <Header />
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <div className="inline-block px-4 py-2 bg-gray-50 text-gray-900 rounded-full text-sm font-medium mb-4">
+          <div className="inline-block px-4 py-2 bg-gray-50 dark:bg-[#1A1A1A] text-gray-900 dark:text-white rounded-full text-sm font-medium mb-4 border border-transparent dark:border-2 dark:border-gray-800">
             {t('solutionsPage.badge')}
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
             {t('solutionsPage.titleStart')} {t('solutionsPage.titleHighlight')} {t('solutionsPage.titleEnd')}
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             {t('solutionsPage.subtitle')}
           </p>
         </div>
@@ -135,21 +135,21 @@ export default function SolutionsPage() {
               <Link
                 key={solution.slug}
                 href={`/solutions/${solution.slug}`}
-                className={`group p-8 rounded-3xl bg-gradient-to-br ${solution.bgGradient} border border-gray-200 hover:shadow-2xl transition-all hover:-translate-y-1`}
+                className={`group p-8 rounded-3xl bg-gradient-to-br ${solution.bgGradient} dark:from-[#1A1A1A] dark:to-[#222222] border border-gray-200 dark:border-2 dark:border-gray-800 hover:shadow-2xl transition-all hover:-translate-y-1`}
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${solution.gradient} text-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                   {solution.icon}
                 </div>
                 
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">{solution.title}</h2>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{solution.title}</h2>
                 <p className={`text-lg font-medium bg-gradient-to-r ${solution.gradient} bg-clip-text text-transparent mb-3`}>
                   {solution.subtitle}
                 </p>
-                <p className="text-gray-600 mb-6">{solution.description}</p>
+                <p className="text-gray-600 dark:text-gray-400 mb-6">{solution.description}</p>
                 
                 <ul className="space-y-2 mb-6">
                   {solution.features.map((feature, index) => (
-                    <li key={index} className="flex items-center gap-2 text-gray-700">
+                    <li key={index} className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
                       <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
@@ -158,14 +158,14 @@ export default function SolutionsPage() {
                   ))}
                 </ul>
                 
-                <div className="pt-6 border-t border-gray-200/50">
-                  <p className="text-sm text-gray-600 italic mb-2">&ldquo;{solution.testimonial.quote}&rdquo;</p>
-                  <p className="text-sm font-medium text-gray-900">
+                <div className="pt-6 border-t border-gray-200/50 dark:border-gray-700">
+                  <p className="text-sm text-gray-600 dark:text-gray-400 italic mb-2">&ldquo;{solution.testimonial.quote}&rdquo;</p>
+                  <p className="text-sm font-medium text-gray-900 dark:text-white">
                     {solution.testimonial.author}, {solution.testimonial.role}
                   </p>
                 </div>
                 
-                <div className="mt-6 flex items-center gap-2 text-gray-900 font-medium group-hover:gap-3 transition-all">
+                <div className="mt-6 flex items-center gap-2 text-gray-900 dark:text-white font-medium group-hover:gap-3 transition-all">
                   {t('common.learnMore')}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

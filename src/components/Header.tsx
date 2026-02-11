@@ -13,7 +13,7 @@ export default function Header() {
   const { t } = useTranslation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#f8fafc]/95 dark:bg-black/95 backdrop-blur-sm border-b border-gray-200/50 dark:border-gray-800/50">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#f8fafc]/95 dark:bg-[#1A1A1A]/95 backdrop-blur-sm border-b border-gray-200/50 dark:border-b-2 dark:border-gray-800/50">
       <div className="w-full px-[7.5%]">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -48,7 +48,7 @@ export default function Header() {
                   </svg>
                 </button>
                 {activeDropdown === 'products' && (
-                  <div className="absolute top-full left-0 mt-1 w-48 rounded-lg bg-white dark:bg-black border border-gray-200 dark:border-gray-800 shadow-lg py-1 animate-fade-in">
+                  <div className="absolute top-full left-0 mt-1 w-48 rounded-lg bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800 shadow-lg py-1 animate-fade-in">
                     <Link href="/products/agent" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('products.agent.title')}</Link>
                     <Link href="/products/database" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('products.database.title')}</Link>
                     <Link href="/products/publish" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('products.publish.title')}</Link>
@@ -72,12 +72,12 @@ export default function Header() {
                   </svg>
                 </button>
                 {activeDropdown === 'forwork' && (
-                  <div className="absolute top-full left-0 mt-1 w-64 rounded-lg bg-white dark:bg-black border border-gray-200 dark:border-gray-800 shadow-lg py-2 animate-fade-in">
+                  <div className="absolute top-full left-0 mt-1 w-64 rounded-lg bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800 shadow-lg py-2 animate-fade-in">
                     <Link href="/enterprise" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">
                       <span className="font-medium">{t('nav.enterprise')}</span>
                       <span className="block text-xs text-gray-400">{t('solutions.enterprise.description')}</span>
                     </Link>
-                    <div className="border-t border-gray-200 dark:border-gray-700 my-2 mx-4"></div>
+                    <div className="border-t border-gray-200 dark:border-t-2 dark:border-gray-700 my-2 mx-4"></div>
                     <div className="px-4 py-1 text-xs font-medium text-gray-400 uppercase">{t('useCases.title')}</div>
                     <Link href="/usecases/business-apps" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('useCases.businessApps.title')}</Link>
                     <Link href="/usecases/mobile-apps" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('useCases.mobileApps.title')}</Link>
@@ -99,7 +99,7 @@ export default function Header() {
                   </svg>
                 </button>
                 {activeDropdown === 'resources' && (
-                  <div className="absolute top-full left-0 mt-1 w-48 rounded-lg bg-white dark:bg-black border border-gray-200 dark:border-gray-800 shadow-lg py-1 animate-fade-in">
+                  <div className="absolute top-full left-0 mt-1 w-48 rounded-lg bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800 shadow-lg py-1 animate-fade-in">
                     <Link href="/docs" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('docs.title')}</Link>
                     <Link href="/gallery" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('community.showcase')}</Link>
                     <Link href="/blog" className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#111] hover:text-gray-900 dark:hover:text-white">{t('nav.blog')}</Link>
@@ -160,11 +160,11 @@ export default function Header() {
         
         {/* Mobile Menu */}
         {showMobileMenu && (
-          <div className="lg:hidden py-4 border-t border-gray-200 dark:border-gray-700 animate-fade-in max-h-[calc(100vh-4rem)] overflow-y-auto">
+          <div className="lg:hidden py-4 border-t border-gray-200 dark:border-t-2 dark:border-gray-700 animate-fade-in max-h-[calc(100vh-4rem)] overflow-y-auto">
             <nav className="flex flex-col gap-2 px-2">
               {/* Auth buttons for mobile */}
               <div className="flex gap-2 mb-4">
-                <Link href="/login" className="flex-1 text-center px-4 py-2 text-sm text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">
+                <Link href="/login" className="flex-1 text-center px-4 py-2 text-sm text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-2 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">
                   {t('common.logIn')}
                 </Link>
                 <Link href="/signup" className="flex-1 text-center px-4 py-2 text-sm text-white bg-gray-900 dark:bg-white dark:text-gray-900 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100">
@@ -178,7 +178,7 @@ export default function Header() {
               <Link href="/products/security" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('products.security.title')}</Link>
               <Link href="/products/integrations" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('products.integrations.title')}</Link>
               <Link href="/products/mobile" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('products.mobile.title')}</Link>
-              <div className="border-t border-gray-200 dark:border-gray-700 my-2"></div>
+              <div className="border-t border-gray-200 dark:border-t-2 dark:border-gray-700 my-2"></div>
               <div className="px-3 py-2 text-xs font-medium text-gray-400 uppercase">{t('solutions.title')}</div>
               <Link href="/enterprise" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">
                 <span className="font-medium">{t('nav.enterprise')}</span>
@@ -188,13 +188,13 @@ export default function Header() {
               <Link href="/usecases/business-apps" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('useCases.businessApps.title')}</Link>
               <Link href="/usecases/mobile-apps" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('useCases.mobileApps.title')}</Link>
               <Link href="/usecases/rapid-prototyping" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('useCases.rapidPrototyping.title')}</Link>
-              <div className="border-t border-gray-200 dark:border-gray-700 my-2"></div>
+              <div className="border-t border-gray-200 dark:border-t-2 dark:border-gray-700 my-2"></div>
               <div className="px-3 py-2 text-xs font-medium text-gray-400 uppercase">{t('footer.resources')}</div>
               <Link href="/docs" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('docs.title')}</Link>
               <Link href="/gallery" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('community.showcase')}</Link>
               <Link href="/blog" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('nav.blog')}</Link>
               <Link href="/changelog" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('changelogPage.title')}</Link>
-              <div className="border-t border-gray-200 dark:border-gray-700 my-2"></div>
+              <div className="border-t border-gray-200 dark:border-t-2 dark:border-gray-700 my-2"></div>
               <Link href="/pricing" className="px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white rounded-lg">{t('nav.pricing')}</Link>
               <div className="flex items-center gap-2 px-3 py-2">
                 <LanguageSelector />

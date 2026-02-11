@@ -114,7 +114,7 @@ export default function ChangelogPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-black text-gray-900 dark:text-white transition-colors">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] text-gray-900 dark:text-white transition-colors">
       <Header />
       
       <main className="pt-32 pb-20">
@@ -135,7 +135,7 @@ export default function ChangelogPage() {
 
         {/* Subscribe to Updates */}
         <div className="max-w-4xl mx-auto px-6 mb-12">
-          <div className="bg-gray-50 dark:bg-[#0a0a0a] rounded-2xl border border-gray-200 dark:border-gray-800 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="bg-gray-50 dark:bg-[#1A1A1A] rounded-2xl border border-gray-200 dark:border-2 dark:border-gray-800 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-white">{t('changelogPage.stayUpToDate')}</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">{t('changelogPage.getNotified')}</p>
@@ -144,7 +144,7 @@ export default function ChangelogPage() {
               <input
                 type="email"
                 placeholder={t('changelogPage.emailPlaceholder')}
-                className="flex-1 sm:w-64 px-4 py-2 border border-gray-200 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent bg-white dark:bg-[#0a0a0a] text-gray-900 dark:text-white"
+                className="flex-1 sm:w-64 px-4 py-2 border border-gray-200 dark:border-2 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-400 focus:border-transparent bg-white dark:bg-[#1A1A1A] text-gray-900 dark:text-white"
               />
               <button className="px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl hover:opacity-90 transition-all font-medium">
                 {t('changelogPage.subscribeButton')}
@@ -170,7 +170,7 @@ export default function ChangelogPage() {
                   </div>
                   
                   {/* Content */}
-                  <div className="flex-1 bg-white dark:bg-[#0a0a0a] rounded-xl border border-gray-200 dark:border-gray-800 p-6 hover:shadow-lg transition-all">
+                  <div className="flex-1 bg-white dark:bg-[#1A1A1A] rounded-xl border border-gray-200 dark:border-2 dark:border-gray-800 p-6 hover:shadow-lg transition-all">
                     <div className="flex flex-wrap items-center gap-3 mb-3">
                       <span className="text-sm font-mono text-gray-500 dark:text-gray-400">v{release.version}</span>
                       <span className="text-sm text-gray-400 dark:text-gray-500">{release.date}</span>
@@ -196,7 +196,7 @@ export default function ChangelogPage() {
 
           {/* Load More */}
           <div className="text-center mt-12">
-            <button className="px-6 py-3 bg-white dark:bg-[#0a0a0a] text-gray-700 dark:text-gray-300 rounded-lg border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all font-medium">
+            <button className="px-6 py-3 bg-white dark:bg-[#1A1A1A] text-gray-700 dark:text-gray-300 rounded-lg border border-gray-200 dark:border-2 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all font-medium">
               {t('changelogPage.viewOlder')}
             </button>
           </div>
