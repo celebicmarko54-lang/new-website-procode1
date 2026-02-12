@@ -181,19 +181,19 @@ export default function GalleryPage() {
                 <div className="p-4">
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="font-semibold text-gray-900 dark:text-white">{project.title}</h3>
-                    <span className="text-xs px-2 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full">
+                    <span className="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full">
                       {project.category}
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Built with AppNode</p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600"></div>
+                      <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600"></div>
                       <span className="text-sm text-gray-600 dark:text-gray-400">{project.author}</span>
                     </div>
                     <button 
                       onClick={() => setSelectedProject(project)}
-                      className="text-sm text-emerald-600 dark:text-emerald-400 hover:underline"
+                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
                     >
                       View
                     </button>
@@ -298,7 +298,7 @@ export default function GalleryPage() {
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">{selectedProject.title}</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Built with AppNode by {selectedProject.author}</p>
                 </div>
-                <span className="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-medium">
+                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium">
                   {selectedProject.category}
                 </span>
               </div>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useTranslation } from '@/context/LanguageContext';
 
@@ -233,39 +234,42 @@ export default function LoginPage() {
 
       {/* Right Side - Decorative */}
       <div className="hidden lg:flex flex-1 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black dark:bg-white">
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-20 left-20 w-72 h-72 bg-white dark:bg-[#1A1A1A] rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-20 w-96 h-96 bg-white dark:bg-[#1A1A1A] rounded-full blur-3xl"></div>
-          </div>
-        </div>
-        <div className="relative z-10 flex flex-col items-center justify-center p-12 text-white dark:text-black">
+        <Image
+          src="/templates/mars.jpg"
+          alt="Mars"
+          fill
+          className="object-cover"
+          priority
+          quality={90}
+        />
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="relative z-10 flex flex-col items-center justify-center p-12 text-white">
           <div className="max-w-md text-center">
             <h2 className="text-4xl xl:text-5xl font-bold mb-6 leading-tight">
               {t('auth.login.decorativeTitle') || 'Build anything.'}<br/>{t('auth.login.decorativeSubtitle') || 'Faster than ever.'}
             </h2>
-            <p className="text-xl text-white/80 dark:text-black/70">
+            <p className="text-xl text-white/80">
               {t('auth.login.decorativeDescription') || "The world's simplest way to build apps with AI."}
             </p>
             <div className="mt-10 flex flex-col gap-4">
               <div className="flex items-center gap-3 bg-white/10 dark:bg-[#1A1A1A]/10 backdrop-blur-sm rounded-xl p-4">
-                <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-[#1A1A1A]/20 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <span>{t('auth.features.aiPowered') || 'AI-powered development'}</span>
               </div>
-              <div className="flex items-center gap-3 bg-white/10 dark:bg-[#1A1A1A]/10 backdrop-blur-sm rounded-xl p-4">
-                <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-[#1A1A1A]/20 flex items-center justify-center">
+              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <span>{t('auth.features.shipFast') || 'Ship in minutes, not months'}</span>
               </div>
-              <div className="flex items-center gap-3 bg-white/10 dark:bg-[#1A1A1A]/10 backdrop-blur-sm rounded-xl p-4">
-                <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-[#1A1A1A]/20 flex items-center justify-center">
+              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>

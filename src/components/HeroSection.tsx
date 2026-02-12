@@ -123,9 +123,9 @@ export default function HeroSection() {
 
       {/* Chat Input Box */}
       <div className="relative z-10 w-full max-w-[720px] mx-auto mt-4">
-        <form className="w-full bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-200 dark:border-[#1f1f1f] overflow-hidden">
+        <form className="w-full bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-200 dark:border-[1.5px] dark:border-[#2a2a2a] overflow-hidden">
           {/* Top bar with lightning icon and Ready badge */}
-          <div className="flex items-center justify-between px-5 py-3 border-b border-gray-200 dark:border-[#1f1f1f]">
+          <div className="flex items-center justify-between px-5 py-3 border-b border-gray-200 dark:border-b-[1.5px] dark:border-[#2a2a2a]">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-[10px] flex items-center justify-center bg-black/5 dark:bg-white/10">
                 <svg className="w-4 h-4 text-gray-600 dark:text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -133,8 +133,8 @@ export default function HeroSection() {
                 </svg>
               </div>
             </div>
-            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">
-              <div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-blue-500/20 text-blue-600 dark:text-blue-400">
+              <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
               <span className="text-xs font-medium">{t('hero.ready')}</span>
             </div>
           </div>
@@ -214,13 +214,13 @@ export default function HeroSection() {
           />
 
           {/* Bottom bar */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 px-4 sm:px-5 py-4 border-t border-gray-200 dark:border-[#1f1f1f]">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 px-4 sm:px-5 py-4 border-t border-gray-200 dark:border-t-[1.5px] dark:border-[#2a2a2a]">
             <div className="flex items-center gap-3">
               {/* Attachment button */}
               <button 
                 type="button" 
                 onClick={handleAttachmentClick}
-                className={`p-2 rounded-lg transition-colors hover:bg-black/5 dark:hover:bg-white/10 ${attachments.length > 0 ? 'text-emerald-500' : 'text-gray-500 dark:text-gray-400'}`} 
+                className={`p-2 rounded-lg transition-colors hover:bg-black/5 dark:hover:bg-white/10 ${attachments.length > 0 ? 'text-blue-500' : 'text-gray-500 dark:text-gray-400'}`} 
                 title="Add attachments"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -311,7 +311,7 @@ export default function HeroSection() {
                     <div>
                       <h4 className="text-xs font-medium text-gray-900 dark:text-white truncate">{project.title}</h4>
                       <div className="flex items-center gap-1 mt-0.5">
-                        <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600"></div>
+                        <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-br from-blue-400 to-blue-600"></div>
                         <span className="text-[10px] text-gray-500 dark:text-gray-400">{project.author}</span>
                       </div>
                     </div>

@@ -71,7 +71,7 @@ export default function PricingPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
               {freeFeatures.map((feature, index) => (
                 <div key={index} className="flex items-center gap-2">
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span className="text-xs sm:text-sm text-gray-700 dark:text-gray-300">{feature}</span>
@@ -92,13 +92,13 @@ export default function PricingPage() {
                 key={index}
                 className={`relative rounded-xl sm:rounded-2xl p-3 sm:p-6 ${
                   pkg.popular
-                    ? 'bg-white dark:bg-[#1A1A1A] border-2 border-gray-900 dark:border-white shadow-xl'
+                    ? 'bg-white dark:bg-[#1A1A1A] border-2 border-blue-500 shadow-xl'
                     : 'bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800'
                 }`}
               >
                 {pkg.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="px-2 sm:px-3 py-0.5 sm:py-1 bg-black dark:bg-white text-white dark:text-black text-[10px] sm:text-xs font-semibold rounded-full whitespace-nowrap">
+                    <span className="px-2 sm:px-3 py-0.5 sm:py-1 bg-gradient-to-r from-blue-500 to-blue-400 text-white text-[10px] sm:text-xs font-semibold rounded-full whitespace-nowrap">
                       {t('pricing.mostPopular')}
                     </span>
                   </div>
@@ -109,8 +109,8 @@ export default function PricingPage() {
                 
                 <button className={`w-full py-2 sm:py-3 rounded-full font-semibold transition-all flex items-center justify-center gap-1 sm:gap-2 text-xs sm:text-base ${
                   pkg.popular
-                    ? 'bg-black dark:bg-white text-white dark:text-black hover:opacity-90 shadow-lg'
-                    : 'bg-black dark:bg-white text-white dark:text-black hover:opacity-90'
+                    ? 'bg-gradient-to-r from-blue-500 to-blue-400 text-white hover:opacity-90 shadow-lg'
+                    : 'border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10'
                 }`}>
                   <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
