@@ -5,34 +5,34 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from '@/context/LanguageContext';
 
-// Sample project templates
-const categories = ['AI Apps', 'Websites', 'Business Apps', 'Personal Software', 'Games'];
+// Sample project templates - category keys for internal use
+const categoryKeys = ['aiApps', 'websites', 'businessApps', 'personalSoftware', 'games'] as const;
 
 const projectTemplates = {
-  'AI Apps': [
-    { id: 1, title: 'E-commerce AI', image: '/templates/AIAPPS1.png', author: 'AppNode' },
-    { id: 2, title: 'Customer Support AI', image: '/templates/AIAPPS2.png', author: 'AppNode' },
-    { id: 3, title: 'AI Content Writer', image: '/templates/AIAPPS3.png', author: 'AppNode' },
+  'aiApps': [
+    { id: 1, titleKey: 'ecommerceAI', image: '/templates/AIAPPS1.png', author: 'AppNode' },
+    { id: 2, titleKey: 'customerSupportAI', image: '/templates/AIAPPS2.png', author: 'AppNode' },
+    { id: 3, titleKey: 'aiContentWriter', image: '/templates/AIAPPS3.png', author: 'AppNode' },
   ],
-  'Websites': [
-    { id: 4, title: 'Fashion Blog', image: '/templates/WEBSITE5NEW.png', author: 'AppNode' },
-    { id: 5, title: 'Product Landing', image: '/templates/WEBSITE6.png', author: 'AppNode' },
-    { id: 6, title: 'Fragrance Store', image: '/templates/WEBSITE7.png', author: 'AppNode' },
+  'websites': [
+    { id: 4, titleKey: 'fashionBlog', image: '/templates/WEBSITE5NEW.png', author: 'AppNode' },
+    { id: 5, titleKey: 'productLanding', image: '/templates/WEBSITE6.png', author: 'AppNode' },
+    { id: 6, titleKey: 'fragranceStore', image: '/templates/WEBSITE7.png', author: 'AppNode' },
   ],
-  'Business Apps': [
-    { id: 7, title: 'Order Dashboard', image: '/templates/biznis2.png', author: 'AppNode' },
-    { id: 8, title: 'Sales Analytics', image: '/templates/biznis5.png', author: 'AppNode' },
-    { id: 9, title: 'Business Analytics', image: '/templates/biznis8.png', author: 'AppNode' },
+  'businessApps': [
+    { id: 7, titleKey: 'orderDashboard', image: '/templates/biznis2.png', author: 'AppNode' },
+    { id: 8, titleKey: 'salesAnalytics', image: '/templates/biznis5.png', author: 'AppNode' },
+    { id: 9, titleKey: 'businessAnalytics', image: '/templates/biznis8.png', author: 'AppNode' },
   ],
-  'Personal Software': [
-    { id: 10, title: 'Personal Dashboard', image: '/templates/personal5.png', author: 'AppNode' },
-    { id: 11, title: 'Finance Dashboard', image: '/templates/personal7.png', author: 'AppNode' },
-    { id: 12, title: 'Daily Planner', image: '/templates/Personal8.png', author: 'AppNode' },
+  'personalSoftware': [
+    { id: 10, titleKey: 'personalDashboard', image: '/templates/personal5.png', author: 'AppNode' },
+    { id: 11, titleKey: 'financeDashboard', image: '/templates/personal7.png', author: 'AppNode' },
+    { id: 12, titleKey: 'dailyPlanner', image: '/templates/Personal8.png', author: 'AppNode' },
   ],
-  'Games': [
-    { id: 13, title: 'Cyber Runner', image: '/templates/GAME1.png', author: 'AppNode' },
-    { id: 14, title: 'Mystic Forest', image: '/templates/GAME2.png', author: 'AppNode' },
-    { id: 15, title: 'Space Odyssey', image: '/templates/GAME3.png', author: 'AppNode' },
+  'games': [
+    { id: 13, titleKey: 'cyberRunner', image: '/templates/GAME1.png', author: 'AppNode' },
+    { id: 14, titleKey: 'mysticForest', image: '/templates/GAME2.png', author: 'AppNode' },
+    { id: 15, titleKey: 'spaceOdyssey', image: '/templates/GAME3.png', author: 'AppNode' },
   ],
 };
 
@@ -43,9 +43,12 @@ export default function HeroSection() {
   const [prompt, setPrompt] = useState('');
   const [attachments, setAttachments] = useState<File[]>([]);
   const [images, setImages] = useState<File[]>([]);
-  const [activeCategory, setActiveCategory] = useState('AI Apps');
+  const [activeCategory, setActiveCategory] = useState<typeof categoryKeys[number]>('aiApps');
   const [viewImage, setViewImage] = useState<{image: string; title: string} | null>(null);
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
+  
+  // Debug: log translation output
+  console.log('[HeroSection] language:', language.code, 'startWithIdea:', t('galleryPage.startWithIdea'), 'view:', t('galleryPage.view'), 'aiApps:', t('galleryPage.categories.aiApps'));
   
   const attachmentInputRef = useRef<HTMLInputElement>(null);
   const imageInputRef = useRef<HTMLInputElement>(null);
@@ -261,32 +264,32 @@ export default function HeroSection() {
 
       {/* Start with an idea section - wider than chat */}
       <div className="relative z-10 w-full max-w-[1100px] mx-auto mt-4 mb-4 px-2 sm:px-4">
-        <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">Start with an idea</h3>
+        <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">{t('galleryPage.startWithIdea')}</h3>
           
           {/* Category tabs */}
           <div className="flex flex-nowrap gap-1.5 mb-3 overflow-x-auto pb-1 scrollbar-hide">
-            {categories.map((category) => (
+            {categoryKeys.map((catKey) => (
               <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
+                key={catKey}
+                onClick={() => setActiveCategory(catKey)}
                 className={`px-2.5 py-1 rounded-full text-xs font-medium transition-colors whitespace-nowrap ${
-                  activeCategory === category
+                  activeCategory === catKey
                     ? 'bg-gray-900 dark:bg-white text-white dark:text-black'
                     : 'bg-gray-100 dark:bg-[#1A1A1A] text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-[#1a1a1a]'
                 }`}
               >
-                {category}
+                {t(`galleryPage.categories.${catKey}`)}
               </button>
             ))}
           </div>
 
           {/* Project cards - Render ALL categories, show/hide based on active */}
-          {categories.map((category) => (
+          {categoryKeys.map((catKey) => (
             <div 
-              key={category}
-              className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 ${activeCategory === category ? 'block' : 'hidden'}`}
+              key={catKey}
+              className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 ${activeCategory === catKey ? 'block' : 'hidden'}`}
             >
-              {projectTemplates[category as keyof typeof projectTemplates].map((project, index) => (
+              {projectTemplates[catKey].map((project, index) => (
                 <div
                   key={project.id}
                   className="group bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-[#2a2a2a] rounded-xl p-4 text-left hover:border-gray-300 dark:hover:border-gray-600 transition-all hover:shadow-md"
@@ -294,22 +297,22 @@ export default function HeroSection() {
                   {/* Template image */}
                   <div 
                     className="aspect-[16/10] bg-gray-50 dark:bg-[#111111] rounded-lg mb-3 overflow-hidden cursor-pointer relative"
-                    onClick={() => setPrompt(`Create a ${project.title.toLowerCase()} app`)}
+                    onClick={() => setPrompt(`Create a ${t(`galleryPage.projects.${project.titleKey}`).toLowerCase()} app`)}
                   >
                     <Image 
                       src={project.image} 
-                      alt={project.title}
+                      alt={t(`galleryPage.projects.${project.titleKey}`)}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover object-top"
-                      loading={index === 0 && category === 'AI Apps' ? 'eager' : 'lazy'}
-                      priority={index === 0 && category === 'AI Apps'}
+                      loading={index === 0 && catKey === 'aiApps' ? 'eager' : 'lazy'}
+                      priority={index === 0 && catKey === 'aiApps'}
                       quality={75}
                     />
                   </div>
                   <div className="flex items-center justify-between">
                     <div>
-                      <h4 className="text-xs font-medium text-gray-900 dark:text-white truncate">{project.title}</h4>
+                      <h4 className="text-xs font-medium text-gray-900 dark:text-white truncate">{t(`galleryPage.projects.${project.titleKey}`)}</h4>
                       <div className="flex items-center gap-1 mt-0.5">
                         <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-br from-blue-400 to-blue-600"></div>
                         <span className="text-[10px] text-gray-500 dark:text-gray-400">{project.author}</span>
@@ -318,11 +321,11 @@ export default function HeroSection() {
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
-                        setViewImage({ image: project.image, title: project.title });
+                        setViewImage({ image: project.image, title: t(`galleryPage.projects.${project.titleKey}`) });
                       }}
                       className="px-3 py-1.5 text-xs font-medium bg-gray-100 dark:bg-[#1f1f1f] text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-[#2a2a2a] transition-colors"
                     >
-                      View
+                      {t('galleryPage.view')}
                     </button>
                   </div>
                 </div>
@@ -336,7 +339,7 @@ export default function HeroSection() {
               href="/gallery"
               className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors flex items-center gap-1"
             >
-              See all
+              {t('galleryPage.seeAll')}
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>

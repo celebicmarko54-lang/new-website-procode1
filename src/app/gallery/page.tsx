@@ -9,62 +9,62 @@ import { useTranslation } from '@/context/LanguageContext';
 
 // AI Apps projects with actual images
 const aiAppsProjects = [
-  { id: 1, title: 'E-commerce AI', image: '/templates/AIAPPS1.png', author: 'AppNode Team', category: 'AI Apps' },
-  { id: 2, title: 'Customer Support AI', image: '/templates/AIAPPS2.png', author: 'AppNode Team', category: 'AI Apps' },
-  { id: 3, title: 'AI Content Writer', image: '/templates/AIAPPS3.png', author: 'AppNode Team', category: 'AI Apps' },
-  { id: 4, title: 'AI Image Generator', image: '/templates/AIAPPS4.png', author: 'AppNode Team', category: 'AI Apps' },
-  { id: 5, title: 'Text to Speech AI', image: '/templates/AIAPPRS5.png', author: 'AppNode Team', category: 'AI Apps' },
-  { id: 6, title: 'Data Analytics AI', image: '/templates/AIAPPPS3.png', author: 'AppNode Team', category: 'AI Apps' },
-  { id: 7, title: 'AI Video Creator', image: '/templates/AIAPPS7.png', author: 'AppNode Team', category: 'AI Apps' },
-  { id: 8, title: 'AI Code Assistant', image: '/templates/AIAPPS8.png', author: 'AppNode Team', category: 'AI Apps' },
+  { id: 1, titleKey: 'ecommerceAI', image: '/templates/AIAPPS1.png', author: 'AppNode Team', categoryKey: 'aiApps' },
+  { id: 2, titleKey: 'customerSupportAI', image: '/templates/AIAPPS2.png', author: 'AppNode Team', categoryKey: 'aiApps' },
+  { id: 3, titleKey: 'aiContentWriter', image: '/templates/AIAPPS3.png', author: 'AppNode Team', categoryKey: 'aiApps' },
+  { id: 4, titleKey: 'aiImageGenerator', image: '/templates/AIAPPS4.png', author: 'AppNode Team', categoryKey: 'aiApps' },
+  { id: 5, titleKey: 'textToSpeechAI', image: '/templates/AIAPPRS5.png', author: 'AppNode Team', categoryKey: 'aiApps' },
+  { id: 6, titleKey: 'dataAnalyticsAI', image: '/templates/AIAPPPS3.png', author: 'AppNode Team', categoryKey: 'aiApps' },
+  { id: 7, titleKey: 'aiVideoCreator', image: '/templates/AIAPPS7.png', author: 'AppNode Team', categoryKey: 'aiApps' },
+  { id: 8, titleKey: 'aiCodeAssistant', image: '/templates/AIAPPS8.png', author: 'AppNode Team', categoryKey: 'aiApps' },
 ];
 
 // Website projects with actual images
 const websiteProjects = [
-  { id: 9, title: 'Travel Blog', image: '/templates/WEBSITE1.png', author: 'AppNode Team', category: 'Websites' },
-  { id: 10, title: 'Design Studio', image: '/templates/WEBSITE2.png', author: 'AppNode Team', category: 'Websites' },
-  { id: 11, title: 'Business Website', image: '/templates/WEBSITE3.png', author: 'AppNode Team', category: 'Websites' },
-  { id: 12, title: 'Art Magazine', image: '/templates/WEBSITE4.png', author: 'AppNode Team', category: 'Websites' },
-  { id: 13, title: 'Fashion Blog', image: '/templates/WEBSITE5NEW.png', author: 'AppNode Team', category: 'Websites' },
-  { id: 14, title: 'Product Landing', image: '/templates/WEBSITE6.png', author: 'AppNode Team', category: 'Websites' },
-  { id: 15, title: 'Fragrance Store', image: '/templates/WEBSITE7.png', author: 'AppNode Team', category: 'Websites' },
-  { id: 16, title: 'Restaurant Site', image: '/templates/WEBSITE8.png', author: 'AppNode Team', category: 'Websites' },
+  { id: 9, titleKey: 'travelBlog', image: '/templates/WEBSITE1.png', author: 'AppNode Team', categoryKey: 'websites' },
+  { id: 10, titleKey: 'designStudio', image: '/templates/WEBSITE2.png', author: 'AppNode Team', categoryKey: 'websites' },
+  { id: 11, titleKey: 'businessWebsite', image: '/templates/WEBSITE3.png', author: 'AppNode Team', categoryKey: 'websites' },
+  { id: 12, titleKey: 'artMagazine', image: '/templates/WEBSITE4.png', author: 'AppNode Team', categoryKey: 'websites' },
+  { id: 13, titleKey: 'fashionBlog', image: '/templates/WEBSITE5NEW.png', author: 'AppNode Team', categoryKey: 'websites' },
+  { id: 14, titleKey: 'productLanding', image: '/templates/WEBSITE6.png', author: 'AppNode Team', categoryKey: 'websites' },
+  { id: 15, titleKey: 'fragranceStore', image: '/templates/WEBSITE7.png', author: 'AppNode Team', categoryKey: 'websites' },
+  { id: 16, titleKey: 'restaurantSite', image: '/templates/WEBSITE8.png', author: 'AppNode Team', categoryKey: 'websites' },
 ];
 
 // Business Apps projects with actual images
 const businessAppsProjects = [
-  { id: 17, title: 'CRM Dashboard', image: '/templates/biznis1.png', author: 'AppNode Team', category: 'Business Apps' },
-  { id: 18, title: 'Order Dashboard', image: '/templates/biznis2.png', author: 'AppNode Team', category: 'Business Apps' },
-  { id: 19, title: 'Project Dashboard', image: '/templates/biznis3.png', author: 'AppNode Team', category: 'Business Apps' },
-  { id: 20, title: 'Web Analytics', image: '/templates/Biznis4.png', author: 'AppNode Team', category: 'Business Apps' },
-  { id: 21, title: 'Sales Analytics', image: '/templates/biznis5.png', author: 'AppNode Team', category: 'Business Apps' },
-  { id: 22, title: 'Analytics Dashboard', image: '/templates/Biznis6.png', author: 'AppNode Team', category: 'Business Apps' },
-  { id: 23, title: 'Performance Dashboard', image: '/templates/biznis7.png', author: 'AppNode Team', category: 'Business Apps' },
-  { id: 24, title: 'Business Analytics', image: '/templates/biznis8.png', author: 'AppNode Team', category: 'Business Apps' },
+  { id: 17, titleKey: 'crmDashboard', image: '/templates/biznis1.png', author: 'AppNode Team', categoryKey: 'businessApps' },
+  { id: 18, titleKey: 'orderDashboard', image: '/templates/biznis2.png', author: 'AppNode Team', categoryKey: 'businessApps' },
+  { id: 19, titleKey: 'projectDashboard', image: '/templates/biznis3.png', author: 'AppNode Team', categoryKey: 'businessApps' },
+  { id: 20, titleKey: 'webAnalytics', image: '/templates/Biznis4.png', author: 'AppNode Team', categoryKey: 'businessApps' },
+  { id: 21, titleKey: 'salesAnalytics', image: '/templates/biznis5.png', author: 'AppNode Team', categoryKey: 'businessApps' },
+  { id: 22, titleKey: 'analyticsDashboard', image: '/templates/Biznis6.png', author: 'AppNode Team', categoryKey: 'businessApps' },
+  { id: 23, titleKey: 'performanceDashboard', image: '/templates/biznis7.png', author: 'AppNode Team', categoryKey: 'businessApps' },
+  { id: 24, titleKey: 'businessAnalytics', image: '/templates/biznis8.png', author: 'AppNode Team', categoryKey: 'businessApps' },
 ];
 
 // Personal Software projects with actual images
 const personalSoftwareProjects = [
-  { id: 25, title: 'Wellness & Meditation', image: '/templates/presonal1.png', author: 'AppNode Team', category: 'Personal Software' },
-  { id: 26, title: 'Personal Finance', image: '/templates/personal2.png', author: 'AppNode Team', category: 'Personal Software' },
-  { id: 27, title: 'LifeOS Productivity', image: '/templates/personal3.png', author: 'AppNode Team', category: 'Personal Software' },
-  { id: 28, title: 'Digital Journal', image: '/templates/personal4.png', author: 'AppNode Team', category: 'Personal Software' },
-  { id: 29, title: 'Personal Dashboard', image: '/templates/personal5.png', author: 'AppNode Team', category: 'Personal Software' },
-  { id: 30, title: 'Task Dashboard', image: '/templates/personal6.png', author: 'AppNode Team', category: 'Personal Software' },
-  { id: 31, title: 'Finance Dashboard', image: '/templates/personal7.png', author: 'AppNode Team', category: 'Personal Software' },
-  { id: 32, title: 'Daily Planner', image: '/templates/Personal8.png', author: 'AppNode Team', category: 'Personal Software' },
+  { id: 25, titleKey: 'wellnessMeditation', image: '/templates/presonal1.png', author: 'AppNode Team', categoryKey: 'personalSoftware' },
+  { id: 26, titleKey: 'personalFinance', image: '/templates/personal2.png', author: 'AppNode Team', categoryKey: 'personalSoftware' },
+  { id: 27, titleKey: 'lifeOSProductivity', image: '/templates/personal3.png', author: 'AppNode Team', categoryKey: 'personalSoftware' },
+  { id: 28, titleKey: 'digitalJournal', image: '/templates/personal4.png', author: 'AppNode Team', categoryKey: 'personalSoftware' },
+  { id: 29, titleKey: 'personalDashboard', image: '/templates/personal5.png', author: 'AppNode Team', categoryKey: 'personalSoftware' },
+  { id: 30, titleKey: 'taskDashboard', image: '/templates/personal6.png', author: 'AppNode Team', categoryKey: 'personalSoftware' },
+  { id: 31, titleKey: 'financeDashboard', image: '/templates/personal7.png', author: 'AppNode Team', categoryKey: 'personalSoftware' },
+  { id: 32, titleKey: 'dailyPlanner', image: '/templates/Personal8.png', author: 'AppNode Team', categoryKey: 'personalSoftware' },
 ];
 
 // Games projects with actual images
 const gamesProjects = [
-  { id: 33, title: 'Cyber Runner', image: '/templates/GAME1.png', author: 'AppNode Team', category: 'Games' },
-  { id: 34, title: 'Mystic Forest', image: '/templates/GAME2.png', author: 'AppNode Team', category: 'Games' },
-  { id: 35, title: 'Space Odyssey', image: '/templates/GAME3.png', author: 'AppNode Team', category: 'Games' },
-  { id: 36, title: 'Neon City', image: '/templates/GAME6.png', author: 'AppNode Team', category: 'Games' },
-  { id: 37, title: 'Cell Evolution', image: '/templates/GAME7.png', author: 'AppNode Team', category: 'Games' },
-  { id: 38, title: 'Detective Dashboard', image: '/templates/GAME HOME1.png', author: 'AppNode Team', category: 'Games' },
-  { id: 39, title: 'Party Games', image: '/templates/GAME HOME2.png', author: 'AppNode Team', category: 'Games' },
-  { id: 40, title: 'Drift Rush', image: '/templates/GAME HOME3.png', author: 'AppNode Team', category: 'Games' },
+  { id: 33, titleKey: 'cyberRunner', image: '/templates/GAME1.png', author: 'AppNode Team', categoryKey: 'games' },
+  { id: 34, titleKey: 'mysticForest', image: '/templates/GAME2.png', author: 'AppNode Team', categoryKey: 'games' },
+  { id: 35, titleKey: 'spaceOdyssey', image: '/templates/GAME3.png', author: 'AppNode Team', categoryKey: 'games' },
+  { id: 36, titleKey: 'neonCity', image: '/templates/GAME6.png', author: 'AppNode Team', categoryKey: 'games' },
+  { id: 37, titleKey: 'cellEvolution', image: '/templates/GAME7.png', author: 'AppNode Team', categoryKey: 'games' },
+  { id: 38, titleKey: 'detectiveDashboard', image: '/templates/GAME HOME1.png', author: 'AppNode Team', categoryKey: 'games' },
+  { id: 39, titleKey: 'partyGames', image: '/templates/GAME HOME2.png', author: 'AppNode Team', categoryKey: 'games' },
+  { id: 40, titleKey: 'driftRush', image: '/templates/GAME HOME3.png', author: 'AppNode Team', categoryKey: 'games' },
 ];
 
 // All projects combined for preloading
@@ -72,11 +72,11 @@ const allProjects = [...aiAppsProjects, ...websiteProjects, ...businessAppsProje
 
 export default function GalleryPage() {
   const { t } = useTranslation();
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeCategory, setActiveCategory] = useState('all');
   const [selectedProject, setSelectedProject] = useState<typeof aiAppsProjects[0] | null>(null);
   const [imagesLoaded, setImagesLoaded] = useState(false);
   
-  const categories = ['All', 'AI Apps', 'Websites', 'Business Apps', 'Personal Software', 'Games'];
+  const categoryKeys = ['all', 'aiApps', 'websites', 'businessApps', 'personalSoftware', 'games'] as const;
   
   // Preload all images on mount
   useEffect(() => {
@@ -98,17 +98,17 @@ export default function GalleryPage() {
   // Filter projects based on active category
   const getFilteredProjects = () => {
     switch (activeCategory) {
-      case 'All':
+      case 'all':
         return [...aiAppsProjects, ...websiteProjects, ...businessAppsProjects, ...personalSoftwareProjects, ...gamesProjects];
-      case 'AI Apps':
+      case 'aiApps':
         return aiAppsProjects;
-      case 'Websites':
+      case 'websites':
         return websiteProjects;
-      case 'Business Apps':
+      case 'businessApps':
         return businessAppsProjects;
-      case 'Personal Software':
+      case 'personalSoftware':
         return personalSoftwareProjects;
-      case 'Games':
+      case 'games':
         return gamesProjects;
       default:
         return [];
@@ -118,7 +118,7 @@ export default function GalleryPage() {
   const filteredProjects = getFilteredProjects();
   
   // Calculate remaining empty slots - 8 slots for other categories to match AI Apps
-  const emptySlotCount = ['All', 'AI Apps', 'Websites', 'Business Apps', 'Personal Software', 'Games'].includes(activeCategory) ? 0 : 8;
+  const emptySlotCount = ['all', 'aiApps', 'websites', 'businessApps', 'personalSoftware', 'games'].includes(activeCategory) ? 0 : 8;
   const emptySlots = Array(emptySlotCount).fill(null);
 
   return (
@@ -139,17 +139,17 @@ export default function GalleryPage() {
 
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-2 mb-12">
-            {categories.map((category) => (
+            {categoryKeys.map((catKey) => (
               <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
+                key={catKey}
+                onClick={() => setActiveCategory(catKey)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  activeCategory === category
+                  activeCategory === catKey
                     ? 'bg-gray-900 dark:bg-gray-700 text-white dark:text-white'
                     : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
                 }`}
               >
-                {category}
+                {t(`galleryPage.categories.${catKey}`)}
               </button>
             ))}
           </div>
@@ -168,7 +168,7 @@ export default function GalleryPage() {
                 <div className="aspect-[4/3] bg-gray-100 dark:bg-gray-900 relative overflow-hidden">
                   <Image
                     src={project.image}
-                    alt={project.title}
+                    alt={t(`galleryPage.projects.${project.titleKey}`)}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
@@ -180,12 +180,12 @@ export default function GalleryPage() {
                 {/* Info */}
                 <div className="p-4">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-semibold text-gray-900 dark:text-white">{project.title}</h3>
+                    <h3 className="font-semibold text-gray-900 dark:text-white">{t(`galleryPage.projects.${project.titleKey}`)}</h3>
                     <span className="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full">
-                      {project.category}
+                      {t(`galleryPage.categories.${project.categoryKey}`)}
                     </span>
                   </div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Built with AppNode</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">{t('galleryPage.builtWith')}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600"></div>
@@ -195,7 +195,7 @@ export default function GalleryPage() {
                       onClick={() => setSelectedProject(project)}
                       className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
                     >
-                      View
+                      {t('galleryPage.view')}
                     </button>
                   </div>
                 </div>
@@ -231,7 +231,7 @@ export default function GalleryPage() {
                       <div className="w-6 h-6 rounded-full bg-gray-200 dark:bg-gray-800"></div>
                       <div className="h-3 w-16 bg-gray-200 dark:bg-gray-800 rounded"></div>
                     </div>
-                    <span className="text-sm text-gray-400 dark:text-gray-600">Coming soon</span>
+                    <span className="text-sm text-gray-400 dark:text-gray-600">{t('galleryPage.comingSoon')}</span>
                   </div>
                 </div>
               </div>
@@ -242,12 +242,12 @@ export default function GalleryPage() {
         {/* Submit CTA */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="bg-gray-50 dark:bg-[#1A1A1A] rounded-2xl border border-gray-200 dark:border-2 dark:border-gray-800 p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Share Your Creation</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">{t('galleryPage.shareTitle')}</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-              Built something cool with AppNode? Submit it to the gallery and inspire others.
+              {t('galleryPage.shareSubtitle')}
             </p>
             <Link href="/signup" className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 font-medium rounded-lg transition-colors">
-              Submit Your Project
+              {t('galleryPage.submitProject')}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -282,7 +282,7 @@ export default function GalleryPage() {
             <div className="relative w-full" style={{ height: 'calc(90vh - 100px)' }}>
               <Image
                 src={selectedProject.image}
-                alt={selectedProject.title}
+                alt={t(`galleryPage.projects.${selectedProject.titleKey}`)}
                 fill
                 sizes="90vw"
                 className="object-contain"
@@ -295,11 +295,11 @@ export default function GalleryPage() {
             <div className="p-6 border-t border-gray-200 dark:border-t-2 dark:border-gray-800">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">{selectedProject.title}</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Built with AppNode by {selectedProject.author}</p>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">{t(`galleryPage.projects.${selectedProject.titleKey}`)}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{t('galleryPage.builtWithBy')} {selectedProject.author}</p>
                 </div>
                 <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium">
-                  {selectedProject.category}
+                  {t(`galleryPage.categories.${selectedProject.categoryKey}`)}
                 </span>
               </div>
             </div>

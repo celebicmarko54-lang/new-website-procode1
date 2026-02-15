@@ -79,7 +79,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   const t = useCallback((key: string): string => {
     const currentTranslations = translations[language.code] || translations.en;
-    return getNestedValue(currentTranslations as Record<string, unknown>, key);
+    const result = getNestedValue(currentTranslations as Record<string, unknown>, key);
+    if (key.startsWith('galleryPage') && result === key) {
+      console.log('[t] MISS key:', key, 'lang:', language.code, 'topLevelKeys:', Object.keys(currentTranslations).join(','), 'hasGalleryPage:', 'galleryPage' in currentTranslations);
+    }
+    return result;
   }, [language.code]);
 
   if (!mounted) {
