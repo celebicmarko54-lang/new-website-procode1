@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useTranslation } from '@/context/LanguageContext';
 
 // AI Apps projects with actual images
@@ -67,33 +67,12 @@ const gamesProjects = [
   { id: 40, titleKey: 'driftRush', image: '/templates/GAME HOME3.png', author: 'AppNode Team', categoryKey: 'games' },
 ];
 
-// All projects combined for preloading
-const allProjects = [...aiAppsProjects, ...websiteProjects, ...businessAppsProjects, ...personalSoftwareProjects, ...gamesProjects];
-
 export default function GalleryPage() {
   const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedProject, setSelectedProject] = useState<typeof aiAppsProjects[0] | null>(null);
-  const [imagesLoaded, setImagesLoaded] = useState(false);
   
   const categoryKeys = ['all', 'aiApps', 'websites', 'businessApps', 'personalSoftware', 'games'] as const;
-  
-  // Preload all images on mount
-  useEffect(() => {
-    const preloadImages = async () => {
-      const promises = allProjects.map((project) => {
-        return new Promise<void>((resolve) => {
-          const img = new window.Image();
-          img.src = project.image;
-          img.onload = () => resolve();
-          img.onerror = () => resolve();
-        });
-      });
-      await Promise.all(promises);
-      setImagesLoaded(true);
-    };
-    preloadImages();
-  }, []);
   
   // Filter projects based on active category
   const getFilteredProjects = () => {

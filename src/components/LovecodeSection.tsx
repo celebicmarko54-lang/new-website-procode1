@@ -33,7 +33,7 @@ const shuffleArray = <T,>(array: T[]): T[] => {
 
 export default function LovecodeSection() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [currentImages, setCurrentImages] = useState<string[]>(() => shuffleArray(allTemplates));
+  const [currentImages, setCurrentImages] = useState<string[]>(allTemplates);
   const [positions, setPositions] = useState<Array<{ x: number; y: number }>>(() => 
     allTemplates.map(() => ({ x: 0, y: 0 }))
   );
@@ -43,6 +43,11 @@ export default function LovecodeSection() {
   const animationRef = useRef<number | null>(null);
   const mouseStopTimeout = useRef<NodeJS.Timeout | null>(null);
   const wasMouseMoving = useRef(false);
+
+  // Shuffle images only on client after mount to avoid hydration mismatch
+  useEffect(() => {
+    setCurrentImages(shuffleArray(allTemplates));
+  }, []);
 
   // Smooth snake animation loop
   const animate = useCallback(() => {

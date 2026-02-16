@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from '@/context/LanguageContext';
@@ -36,30 +36,16 @@ const projectTemplates = {
   ],
 };
 
-// Get all images for preloading
-const allTemplateImages = Object.values(projectTemplates).flat().map(p => p.image);
-
 export default function HeroSection() {
   const [prompt, setPrompt] = useState('');
   const [attachments, setAttachments] = useState<File[]>([]);
   const [images, setImages] = useState<File[]>([]);
   const [activeCategory, setActiveCategory] = useState<typeof categoryKeys[number]>('aiApps');
   const [viewImage, setViewImage] = useState<{image: string; title: string} | null>(null);
-  const { t, language } = useTranslation();
-  
-  // Debug: log translation output
-  console.log('[HeroSection] language:', language.code, 'startWithIdea:', t('galleryPage.startWithIdea'), 'view:', t('galleryPage.view'), 'aiApps:', t('galleryPage.categories.aiApps'));
+  const { t } = useTranslation();
   
   const attachmentInputRef = useRef<HTMLInputElement>(null);
   const imageInputRef = useRef<HTMLInputElement>(null);
-
-  // Preload all template images on mount
-  useEffect(() => {
-    allTemplateImages.forEach((src) => {
-      const img = new window.Image();
-      img.src = src;
-    });
-  }, []);
 
   const handleSubmit = () => {
     if (!prompt.trim() && attachments.length === 0 && images.length === 0) return;
@@ -305,8 +291,8 @@ export default function HeroSection() {
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover object-top"
-                      loading={index === 0 && catKey === 'aiApps' ? 'eager' : 'lazy'}
-                      priority={index === 0 && catKey === 'aiApps'}
+                      loading={catKey === 'aiApps' ? 'eager' : 'lazy'}
+                      priority={catKey === 'aiApps'}
                       quality={75}
                     />
                   </div>

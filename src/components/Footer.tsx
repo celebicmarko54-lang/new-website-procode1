@@ -90,8 +90,8 @@ export default function Footer() {
                         width={70} 
                         height={70}
                         className="w-[50px] h-[50px] sm:w-[70px] sm:h-[70px] dark:invert dark:brightness-100"
-                        quality={100}
-                        unoptimized
+                        quality={80}
+                        loading="lazy"
                       />
                       <h2 className="text-lg sm:text-xl text-gray-900 dark:text-white tracking-tight font-medium">
                         AppNode

@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic';
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import RoutePreloader from "@/components/RoutePreloader";
 
 // Lazy load below-fold components for faster initial page load
 const LovecodeSection = dynamic(() => import("@/components/LovecodeSection"), {
@@ -62,11 +63,10 @@ export default function Home() {
                 <video 
                   className="w-full h-full object-cover"
                   controls
-                  autoPlay
                   muted
                   loop
                   playsInline
-                  preload="metadata"
+                  preload="none"
                   poster="/templates/video-poster.jpg"
                 >
                   <source src="/newintro.mp4" type="video/mp4" />
@@ -83,6 +83,9 @@ export default function Home() {
 
       {/* Footer */}
       <Footer />
+      
+      {/* Prefetch routes for instant navigation */}
+      <RoutePreloader />
     </div>
   );
 }

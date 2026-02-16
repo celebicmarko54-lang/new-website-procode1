@@ -105,21 +105,10 @@ const categories: CategoryCard[] = [
   },
 ];
 
-// Get unique images for preloading
-const uniqueImages = [...new Set(categories.map(c => c.image))];
-
 export default function BuildAnythingSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
   const { t } = useTranslation();
-
-  // Preload all images on mount
-  useEffect(() => {
-    uniqueImages.forEach((src) => {
-      const img = new window.Image();
-      img.src = src;
-    });
-  }, []);
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;

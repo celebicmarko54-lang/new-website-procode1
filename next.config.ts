@@ -35,6 +35,10 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@heroicons/react', 'three'],
+    staleTimes: {
+      dynamic: 30,
+      static: 180,
+    },
   },
   // Optimize bundling for faster loads
   modularizeImports: {
