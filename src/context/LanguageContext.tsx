@@ -19,6 +19,19 @@ export const languages: Language[] = [
   { code: 'it', name: 'Italiano', flag: '🇮🇹' },
   { code: 'es', name: 'Español', flag: '🇪🇸' },
   { code: 'id', name: 'Bahasa Indonesia', flag: '🇮🇩' },
+  { code: 'ar', name: 'العربية', flag: '🇸🇦' },
+  { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
+  { code: 'ko', name: '한국어', flag: '🇰🇷' },
+  { code: 'sw', name: 'Kiswahili', flag: '🇰🇪' },
+  { code: 'ta', name: 'தமிழ்', flag: '🇮🇳' },
+  { code: 'ur', name: 'اردو', flag: '🇵🇰' },
+  { code: 'pa', name: 'ਪੰਜਾਬੀ', flag: '🇮🇳' },
+  { code: 'hi', name: 'हिन्दी', flag: '🇮🇳' },
+  { code: 'hr', name: 'Hrvatski', flag: '🇭🇷' },
+  { code: 'bg', name: 'Български', flag: '🇧🇬' },
+  { code: 'ro', name: 'Română', flag: '🇷🇴' },
+  { code: 'el', name: 'Ελληνικά', flag: '🇬🇷' },
+  { code: 'sr', name: 'Српски', flag: '🇷🇸' },
 ];
 
 // Helper type to get nested keys
