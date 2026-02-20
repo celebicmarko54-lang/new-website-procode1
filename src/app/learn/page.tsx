@@ -6,13 +6,14 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useTranslation } from '@/context/LanguageContext';
 
-interface Course {
-  title: string;
-  description: string;
-  duration: string;
-  level: string;
+interface CourseData {
+  titleKey: string;
+  descriptionKey: string;
+  duration: number;
+  levelKey: string;
   lessons: number;
   icon: React.ReactNode;
+  tutorialKey: string;
   tutorialContent: {
     overview: string;
     steps: string[];
@@ -21,16 +22,17 @@ interface Course {
 }
 
 export default function LearnPage() {
-  const { t } = useTranslation();
-  const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+  const { t, language } = useTranslation();
+  const [selectedCourse, setSelectedCourse] = useState<CourseData | null>(null);
   
-  const courses: Course[] = [
+  const courses: CourseData[] = [
     {
-      title: 'Getting Started with AppNode',
-      description: 'Learn the basics of creating apps with AI. Perfect for absolute beginners.',
-      duration: '15 min',
-      level: 'Beginner',
+      titleKey: 'learnPage.courses.gettingStarted.title',
+      descriptionKey: 'learnPage.courses.gettingStarted.description',
+      duration: 15,
+      levelKey: 'beginner',
       lessons: 5,
+      tutorialKey: 'learnPage.tutorials.gettingStarted',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -53,11 +55,12 @@ export default function LearnPage() {
       }
     },
     {
-      title: 'Building Your First Dashboard',
-      description: 'Create a complete analytics dashboard from scratch with real-time data.',
-      duration: '30 min',
-      level: 'Beginner',
+      titleKey: 'learnPage.courses.buildingDashboard.title',
+      descriptionKey: 'learnPage.courses.buildingDashboard.description',
+      duration: 30,
+      levelKey: 'beginner',
       lessons: 8,
+      tutorialKey: 'learnPage.tutorials.buildingDashboard',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -82,11 +85,12 @@ export default function LearnPage() {
       }
     },
     {
-      title: 'Advanced Prompting Techniques',
-      description: 'Master the art of writing effective prompts that generate exactly what you need.',
-      duration: '25 min',
-      level: 'Intermediate',
+      titleKey: 'learnPage.courses.advancedPrompting.title',
+      descriptionKey: 'learnPage.courses.advancedPrompting.description',
+      duration: 25,
+      levelKey: 'intermediate',
       lessons: 6,
+      tutorialKey: 'learnPage.tutorials.advancedPrompting',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -109,11 +113,12 @@ export default function LearnPage() {
       }
     },
     {
-      title: 'E-commerce Store Masterclass',
-      description: 'Build a fully functional online store with payments, inventory, and orders.',
-      duration: '45 min',
-      level: 'Intermediate',
+      titleKey: 'learnPage.courses.ecommerce.title',
+      descriptionKey: 'learnPage.courses.ecommerce.description',
+      duration: 45,
+      levelKey: 'intermediate',
       lessons: 12,
+      tutorialKey: 'learnPage.tutorials.ecommerce',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -138,11 +143,12 @@ export default function LearnPage() {
       }
     },
     {
-      title: 'Custom Components & Styling',
-      description: 'Create reusable components with custom themes that match your brand.',
-      duration: '35 min',
-      level: 'Advanced',
+      titleKey: 'learnPage.courses.customComponents.title',
+      descriptionKey: 'learnPage.courses.customComponents.description',
+      duration: 35,
+      levelKey: 'advanced',
       lessons: 9,
+      tutorialKey: 'learnPage.tutorials.customComponents',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
@@ -166,11 +172,12 @@ export default function LearnPage() {
       }
     },
     {
-      title: 'Deploying to Production',
-      description: 'Launch your app to the world with custom domains and SSL certificates.',
-      duration: '20 min',
-      level: 'Intermediate',
+      titleKey: 'learnPage.courses.deploying.title',
+      descriptionKey: 'learnPage.courses.deploying.description',
+      duration: 20,
+      levelKey: 'intermediate',
       lessons: 5,
+      tutorialKey: 'learnPage.tutorials.deploying',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -193,11 +200,12 @@ export default function LearnPage() {
       }
     },
     {
-      title: 'Building Mobile-First Apps',
-      description: 'Design responsive applications that work beautifully on any device.',
-      duration: '40 min',
-      level: 'Intermediate',
+      titleKey: 'learnPage.courses.mobileFirst.title',
+      descriptionKey: 'learnPage.courses.mobileFirst.description',
+      duration: 40,
+      levelKey: 'intermediate',
       lessons: 10,
+      tutorialKey: 'learnPage.tutorials.mobileFirst',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -221,11 +229,12 @@ export default function LearnPage() {
       }
     },
     {
-      title: 'API Integration Essentials',
-      description: 'Connect your app to external services, databases, and third-party APIs.',
-      duration: '50 min',
-      level: 'Advanced',
+      titleKey: 'learnPage.courses.apiIntegration.title',
+      descriptionKey: 'learnPage.courses.apiIntegration.description',
+      duration: 50,
+      levelKey: 'advanced',
       lessons: 14,
+      tutorialKey: 'learnPage.tutorials.apiIntegration',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -249,11 +258,12 @@ export default function LearnPage() {
       }
     },
     {
-      title: 'Authentication & Security',
-      description: 'Implement secure user authentication and protect your application.',
-      duration: '35 min',
-      level: 'Advanced',
+      titleKey: 'learnPage.courses.authSecurity.title',
+      descriptionKey: 'learnPage.courses.authSecurity.description',
+      duration: 35,
+      levelKey: 'advanced',
       lessons: 8,
+      tutorialKey: 'learnPage.tutorials.authSecurity',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -280,11 +290,11 @@ export default function LearnPage() {
 
   const getLevelColor = (level: string) => {
     switch (level) {
-      case 'Beginner':
+      case 'beginner':
         return 'bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300';
-      case 'Intermediate':
+      case 'intermediate':
         return 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300';
-      case 'Advanced':
+      case 'advanced':
         return 'bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300';
       default:
         return 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300';
@@ -298,6 +308,7 @@ export default function LearnPage() {
       {/* Course Modal */}
       {selectedCourse && (
         <div 
+          key={`modal-${language.code}`}
           className="fixed inset-0 bg-black/50 dark:bg-[#1A1A1A]/70 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedCourse(null)}
         >
@@ -312,12 +323,12 @@ export default function LearnPage() {
                   {selectedCourse.icon}
                 </div>
                 <div>
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">{selectedCourse.title}</h2>
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">{t(selectedCourse.titleKey)}</h2>
                   <div className="flex items-center gap-3 mt-1">
-                    <span className={`text-xs font-medium px-2 py-1 rounded-full ${getLevelColor(selectedCourse.level)}`}>
-                      {selectedCourse.level}
+                    <span className={`text-xs font-medium px-2 py-1 rounded-full ${getLevelColor(selectedCourse.levelKey)}`}>
+                      {t(`learnPage.levels.${selectedCourse.levelKey}`)}
                     </span>
-                    <span className="text-sm text-gray-500 dark:text-gray-400">{selectedCourse.duration}</span>
+                    <span className="text-sm text-gray-500 dark:text-gray-400">{selectedCourse.duration} {t('learnPage.min')}</span>
                   </div>
                 </div>
               </div>
@@ -332,23 +343,32 @@ export default function LearnPage() {
             </div>
             
             {/* Modal Content */}
-            <div className="p-6 space-y-6">
+            <div className="p-6 space-y-6" suppressHydrationWarning>
+              {/* Debug info */}
+              <div className="text-xs text-red-500">
+                DEBUG: language.code = {language.code}, 
+                t(learnPage.modal.overview) = {t('learnPage.modal.overview')}
+              </div>
               {/* Overview */}
               <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Overview</h3>
-                <p className="text-gray-600 dark:text-gray-400">{selectedCourse.tutorialContent.overview}</p>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2" suppressHydrationWarning>
+                  {t('learnPage.modal.overview')}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400" suppressHydrationWarning>
+                  {t(selectedCourse.tutorialKey + '.overview')}
+                </p>
               </div>
               
               {/* Steps */}
               <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-3">How to do it</h3>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-3">{t('learnPage.modal.howToDoIt')}</h3>
                 <ol className="space-y-3">
-                  {selectedCourse.tutorialContent.steps.map((step, index) => (
+                  {selectedCourse.tutorialContent.steps.map((_, index) => (
                     <li key={index} className="flex gap-3">
                       <span className="flex-shrink-0 w-6 h-6 bg-gray-900 dark:bg-white text-white dark:text-black rounded-full flex items-center justify-center text-sm font-medium">
                         {index + 1}
                       </span>
-                      <span className="text-gray-600 dark:text-gray-400 pt-0.5">{step}</span>
+                      <span className="text-gray-600 dark:text-gray-400 pt-0.5">{t(selectedCourse.tutorialKey + '.steps.' + index)}</span>
                     </li>
                   ))}
                 </ol>
@@ -360,15 +380,15 @@ export default function LearnPage() {
                   <svg className="w-5 h-5 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  Pro Tips
+                  {t('learnPage.modal.proTips')}
                 </h3>
                 <ul className="space-y-2">
-                  {selectedCourse.tutorialContent.tips.map((tip, index) => (
+                  {selectedCourse.tutorialContent.tips.map((_, index) => (
                     <li key={index} className="flex items-start gap-2 text-gray-600 dark:text-gray-400 text-sm">
                       <svg className="w-4 h-4 text-gray-400 dark:text-gray-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
-                      {tip}
+                      {t(selectedCourse.tutorialKey + '.tips.' + index)}
                     </li>
                   ))}
                 </ul>
@@ -381,7 +401,7 @@ export default function LearnPage() {
                 onClick={() => setSelectedCourse(null)}
                 className="w-full py-3 bg-black dark:bg-white text-white dark:text-black font-medium rounded-xl hover:opacity-90 transition-colors"
               >
-                Got it!
+                {t('learnPage.modal.gotIt')}
               </button>
             </div>
           </div>
@@ -441,7 +461,7 @@ export default function LearnPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {courses.map((course, index) => (
               <div
-                key={index}
+                key={`${language.code}-${index}`}
                 onClick={() => setSelectedCourse(course)}
                 className="group bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-100 dark:border-2 dark:border-gray-800 overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
@@ -452,23 +472,23 @@ export default function LearnPage() {
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className={`text-xs font-medium px-3 py-1 rounded-full ${getLevelColor(course.level)}`}>
-                      {course.level}
+                    <span className={`text-xs font-medium px-3 py-1 rounded-full ${getLevelColor(course.levelKey)}`} suppressHydrationWarning>
+                      {t(`learnPage.levels.${course.levelKey}`)}
                     </span>
-                    <span className="text-xs text-gray-500 dark:text-gray-400 flex items-center gap-1">
+                    <span className="text-xs text-gray-500 dark:text-gray-400 flex items-center gap-1" suppressHydrationWarning>
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
-                      {course.duration}
+                      {course.duration} {t('learnPage.min')}
                     </span>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
-                    {course.title}
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-gray-900 dark:group-hover:text-white transition-colors" suppressHydrationWarning>
+                    {t(course.titleKey)}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{course.description}</p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-4" suppressHydrationWarning>{t(course.descriptionKey)}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500 dark:text-gray-400">{course.lessons} lessons</span>
-                    <span className="text-gray-900 dark:text-white font-medium text-sm group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                    <span className="text-sm text-gray-500 dark:text-gray-400" suppressHydrationWarning>{course.lessons} {t('learnPage.lessons')}</span>
+                    <span className="text-gray-900 dark:text-white font-medium text-sm group-hover:translate-x-1 transition-transform inline-flex items-center gap-1" suppressHydrationWarning>
                       {t('learnPage.startCourse')}
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

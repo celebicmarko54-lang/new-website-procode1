@@ -50,10 +50,10 @@ export default function AboutPage() {
   ];
 
   const milestones = [
-    { year: '2025', title: 'Founded / Development Kickoff', description: 'AppNode officially started serious work in October 2025 (ideas brewing earlier). Built the core AI engine that combines live coding with AI-powered UI generation. Created X account to start sharing teasers and building early community.' },
-    { year: '2026', title: 'Beta Launch & Seed Funding', description: 'Launched private/public beta with powerful AI for web apps. Raised seed funding ($2-5M range) to grow the team and speed up mobile features. Partnered with key AI providers and dev tools to boost credibility and hype.' },
-    { year: '2026', title: '10K Users', description: 'Reached 10,000 users in just a few months after beta. Early adopters loving the speed – turn ideas into deployable apps in minutes. Started teasing iOS support and built-in App Store for sharing/publishing apps.' },
-    { year: '2026', title: 'Continuing to Grow', description: 'Expanding features, growing our community, and staying updated with the latest AI advancements. Follow us on X for real-time updates on new releases and upcoming features.' },
+    { year: t('aboutPage.journey.milestone1.year'), title: t('aboutPage.journey.milestone1.title'), description: t('aboutPage.journey.milestone1.description') },
+    { year: t('aboutPage.journey.milestone2.year'), title: t('aboutPage.journey.milestone2.title'), description: t('aboutPage.journey.milestone2.description') },
+    { year: t('aboutPage.journey.milestone3.year'), title: t('aboutPage.journey.milestone3.title'), description: t('aboutPage.journey.milestone3.description') },
+    { year: t('aboutPage.journey.milestone4.year'), title: t('aboutPage.journey.milestone4.title'), description: t('aboutPage.journey.milestone4.description') },
   ];
 
   return (

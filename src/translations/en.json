@@ -19,7 +19,19 @@
     "loading": "Loading...",
     "error": "Error",
     "success": "Success",
-    "comingSoon": "Coming Soon"
+    "comingSoon": "Coming Soon",
+    "switchToLightMode": "Switch to light mode",
+    "switchToDarkMode": "Switch to dark mode",
+    "addAttachments": "Add attachments",
+    "addImage": "Add image",
+    "moveMouseToExplore": "Move your mouse to explore"
+  },
+  "homePage": {
+    "videoSection": {
+      "badge": "How It Works",
+      "title": "See AppNode in Action",
+      "subtitle": "Watch how developers build production-ready apps in minutes using natural language."
+    }
   },
   "nav": {
     "products": "Products",
@@ -152,6 +164,7 @@
     "cookieSettings": "Cookie Settings",
     "termsOfService": "Terms of Service",
     "platformRules": "Platform Rules",
+    "documentation": "Documentation",
     "reportAbuse": "Report Abuse",
     "allRightsReserved": "All rights reserved",
     "madeWith": "Made with",
@@ -618,6 +631,7 @@
     "subtitle": "Everything your team needs to build, deploy, and manage applications at scale. Security, compliance, and support built for the enterprise.",
     "viewPricing": "View Pricing",
     "trustedBy": "TRUSTED BY LEADING COMPANIES",
+    "trustedByText": "Trusted by leading teams and companies worldwide",
     "featuresTitle": "Everything you need for enterprise",
     "featuresSubtitle": "Advanced features designed for teams that need security, scalability, and support.",
     "testimonialsTitle": "Loved by enterprise teams",
@@ -1374,6 +1388,202 @@
     "popularCoursesDesc": "Start with our most popular courses, handpicked by our community.",
     "startCourse": "Start Course",
     "viewAllCourses": "View All Courses",
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "lessons": "lessons",
+    "min": "min",
+    "courses": {
+      "gettingStarted": {
+        "title": "Getting Started with AppNode",
+        "description": "Learn the basics of creating apps with AI. Perfect for absolute beginners."
+      },
+      "buildingDashboard": {
+        "title": "Building Your First Dashboard",
+        "description": "Create a complete analytics dashboard from scratch with real-time data."
+      },
+      "advancedPrompting": {
+        "title": "Advanced Prompting Techniques",
+        "description": "Master the art of writing effective prompts that generate exactly what you need."
+      },
+      "ecommerce": {
+        "title": "E-commerce Store Masterclass",
+        "description": "Build a fully functional online store with payments, inventory, and orders."
+      },
+      "customComponents": {
+        "title": "Custom Components & Styling",
+        "description": "Create reusable components with custom themes that match your brand."
+      },
+      "deploying": {
+        "title": "Deploying to Production",
+        "description": "Launch your app to the world with custom domains and SSL certificates."
+      },
+      "mobileFirst": {
+        "title": "Building Mobile-First Apps",
+        "description": "Design responsive applications that work beautifully on any device."
+      },
+      "apiIntegration": {
+        "title": "API Integration Essentials",
+        "description": "Connect your app to external services, databases, and third-party APIs."
+      },
+      "authSecurity": {
+        "title": "Authentication & Security",
+        "description": "Implement secure user authentication and protect your application."
+      }
+    },
+    "modal": {
+      "overview": "Overview",
+      "howToDoIt": "How to do it",
+      "proTips": "Pro Tips",
+      "gotIt": "Got it!"
+    },
+    "tutorials": {
+      "gettingStarted": {
+        "overview": "Get started with AppNode by learning the fundamentals of AI-powered app development.",
+        "steps": [
+          "Sign up for a free AppNode account at appnode.ai",
+          "Navigate to the dashboard and click 'New Project'",
+          "Describe your app idea in the chat interface",
+          "Review the generated code and make adjustments",
+          "Deploy your app with one click"
+        ],
+        "tips": [
+          "Be specific when describing your app requirements",
+          "Start with simple projects to learn the workflow",
+          "Use the preview feature to test changes instantly"
+        ]
+      },
+      "buildingDashboard": {
+        "overview": "Learn to build professional analytics dashboards with charts, metrics, and real-time data.",
+        "steps": [
+          "Start a new project and describe your dashboard needs",
+          "Add chart components (bar, line, pie charts)",
+          "Connect to your data source or use sample data",
+          "Customize colors and layouts to match your brand",
+          "Add interactive filters and date pickers",
+          "Test responsiveness on different screen sizes",
+          "Deploy and share with your team"
+        ],
+        "tips": [
+          "Group related metrics together",
+          "Use consistent color coding for data categories",
+          "Keep the most important metrics at the top"
+        ]
+      },
+      "advancedPrompting": {
+        "overview": "Master prompt engineering to get better results from AppNode AI.",
+        "steps": [
+          "Understand the anatomy of a good prompt",
+          "Use specific technical requirements in your prompts",
+          "Learn to iterate and refine based on output",
+          "Combine multiple features in single prompts",
+          "Use reference examples to guide the AI"
+        ],
+        "tips": [
+          "Always specify the tech stack you want",
+          "Include accessibility requirements",
+          "Mention responsive design needs upfront"
+        ]
+      },
+      "ecommerce": {
+        "overview": "Create a complete e-commerce solution with product catalog, cart, and checkout.",
+        "steps": [
+          "Set up product catalog with categories",
+          "Build shopping cart functionality",
+          "Integrate Stripe for payments",
+          "Create order management system",
+          "Add inventory tracking",
+          "Set up email notifications",
+          "Implement user accounts and order history"
+        ],
+        "tips": [
+          "Start with a simple product catalog first",
+          "Test the checkout flow thoroughly",
+          "Use test payment credentials during development"
+        ]
+      },
+      "customComponents": {
+        "overview": "Learn to create consistent, reusable components with custom styling.",
+        "steps": [
+          "Define your brand colors and typography",
+          "Create a component library structure",
+          "Build reusable button, input, and card components",
+          "Implement dark mode support",
+          "Add animation and transitions",
+          "Document your components"
+        ],
+        "tips": [
+          "Use CSS variables for theming",
+          "Keep components small and focused",
+          "Test components in isolation"
+        ]
+      },
+      "deploying": {
+        "overview": "Learn to deploy your applications to production with confidence.",
+        "steps": [
+          "Prepare your app for production",
+          "Choose a hosting provider",
+          "Configure environment variables",
+          "Set up custom domains",
+          "Enable SSL certificates"
+        ],
+        "tips": [
+          "Always test in a staging environment first",
+          "Set up monitoring and alerts",
+          "Keep your dependencies updated"
+        ]
+      },
+      "mobileFirst": {
+        "overview": "Create responsive, mobile-first applications that work on all devices.",
+        "steps": [
+          "Understand mobile-first design principles",
+          "Use responsive breakpoints effectively",
+          "Optimize touch interactions",
+          "Handle different screen orientations",
+          "Test on real devices",
+          "Optimize performance for mobile networks"
+        ],
+        "tips": [
+          "Design for the smallest screen first",
+          "Use relative units (rem, %) instead of pixels",
+          "Test with throttled network conditions"
+        ]
+      },
+      "apiIntegration": {
+        "overview": "Learn to integrate external APIs and services into your applications.",
+        "steps": [
+          "Understand REST API fundamentals",
+          "Handle API authentication (API keys, OAuth)",
+          "Make GET, POST, PUT, DELETE requests",
+          "Handle errors and edge cases",
+          "Implement rate limiting",
+          "Cache API responses for performance"
+        ],
+        "tips": [
+          "Always handle API errors gracefully",
+          "Use environment variables for API keys",
+          "Implement retry logic for failed requests"
+        ]
+      },
+      "authSecurity": {
+        "overview": "Implement secure authentication and protect your application from threats.",
+        "steps": [
+          "Set up user registration and login",
+          "Implement password hashing",
+          "Add two-factor authentication",
+          "Handle session management",
+          "Protect against common attacks (XSS, CSRF)",
+          "Set up role-based access control"
+        ],
+        "tips": [
+          "Never store passwords in plain text",
+          "Use HTTPS everywhere",
+          "Regularly audit your security practices"
+        ]
+      }
+    },
     "cta": {
       "title": "Start Your Learning Journey Today",
       "subtitle": "Join over 100,000 students who have transformed their skills with AppNode. All courses are completely free.",
@@ -1834,34 +2044,24 @@
       "title": "Our Journey",
       "subtitle": "From an idea to a global platform.",
       "milestone1": {
-        "year": "Jan 2023",
-        "title": "The Idea Is Born",
-        "description": "The first concept of an AI-assisted development platform was born."
+        "year": "2025",
+        "title": "Founded / Development Kickoff",
+        "description": "AppNode officially started serious work in October 2025 (ideas brewing earlier). Built the core AI engine that combines live coding with AI-powered UI generation. Created X account to start sharing teasers and building early community."
       },
       "milestone2": {
-        "year": "Apr 2023",
-        "title": "Private Beta",
-        "description": "The first 100 users began testing AppNode."
+        "year": "2026",
+        "title": "Beta Launch & Seed Funding",
+        "description": "Launched private/public beta with powerful AI for web apps. Raised seed funding ($2-5M range) to grow the team and speed up mobile features. Partnered with key AI providers and dev tools to boost credibility and hype."
       },
       "milestone3": {
-        "year": "Sep 2023",
-        "title": "Public Launch",
-        "description": "Opened to the world. Reached 10,000 users in the first month."
+        "year": "2026",
+        "title": "10K Users",
+        "description": "Reached 10,000 users in just a few months after beta. Early adopters loving the speed – turn ideas into deployable apps in minutes. Started teasing iOS support and built-in App Store for sharing/publishing apps."
       },
       "milestone4": {
-        "year": "Mar 2024",
-        "title": "1 Million Apps",
-        "description": "One million applications built with AppNode."
-      },
-      "milestone5": {
-        "year": "Aug 2024",
-        "title": "Enterprise Launch",
-        "description": "Solutions launched for Fortune 500 companies."
-      },
-      "milestone6": {
-        "year": "Today",
-        "title": "Continuous Innovation",
-        "description": "We continue to build the future of development."
+        "year": "2026",
+        "title": "Continuing to Grow",
+        "description": "Expanding features, growing our community, and staying updated with the latest AI advancements. Follow us on X for real-time updates on new releases and upcoming features."
       }
     },
     "team": {

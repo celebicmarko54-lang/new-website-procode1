@@ -1,16 +1,24 @@
 'use client';
 
 import { useTheme } from '@/context/ThemeContext';
+import { useTranslation } from '@/context/LanguageContext';
 
 export default function ThemeToggle() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme, mounted: themeMounted } = useTheme();
+  const { t, mounted: langMounted } = useTranslation();
+  
+  // Use static labels during SSR and before mounting to prevent hydration mismatch
+  const label = (themeMounted && langMounted) 
+    ? (theme === 'light' ? t('common.switchToDarkMode') : t('common.switchToLightMode'))
+    : 'Toggle theme';
 
   return (
     <button
       onClick={toggleTheme}
       className="flex items-center justify-center w-7 h-7 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-2 dark:border-gray-800 rounded-md hover:border-gray-300 dark:hover:border-gray-700 transition-all"
-      aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
-      title={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
+      aria-label={label}
+      title={label}
+      suppressHydrationWarning
     >
       {theme === 'light' ? (
         // Moon icon for dark mode

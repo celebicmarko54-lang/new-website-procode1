@@ -119,7 +119,7 @@ export default function EnterprisePage() {
             <div className="trusted-marquee">
               {[...Array(4)].map((_, i) => (
                 <span key={i} className="trusted-text-item text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent whitespace-nowrap">
-                  Trusted by leading teams and companies worldwide
+                  {t('enterprisePage.trustedByText')}
                 </span>
               ))}
             </div>

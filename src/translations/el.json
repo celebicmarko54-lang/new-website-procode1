@@ -35,105 +35,105 @@
   },
   "hero": {
     "title": "Δημιουργήστε εφαρμογές με AI σε λίγα λεπτά",
-    "placeholder": "Describe the app you want to build...",
+    "placeholder": "Περιγράψτε την εφαρμογή που θέλετε να δημιουργήσετε...",
     "ready": "Έτοιμο",
-    "pressEnter": "Press Enter to send"
+    "pressEnter": "Πατήστε Enter για αποστολή"
   },
   "features": {
     "title": "Ό,τι χρειάζεστε για να δημιουργήσετε",
-    "subtitle": "AppNode provides all the tools and features you need to create powerful applications without writing code.",
+    "subtitle": "Το AppNode παρέχει όλα τα εργαλεία και τις λειτουργίες που χρειάζεστε για να δημιουργήσετε ισχυρές εφαρμογές χωρίς να γράψετε κώδικα.",
     "aiPowered": {
       "title": "Ανάπτυξη με AI",
-      "description": "Describe your idea in natural language and watch as AI builds your application in real-time."
+      "description": "Περιγράψτε την ιδέα σας σε φυσική γλώσσα και παρακολουθήστε την AI να δημιουργεί την εφαρμογή σας σε πραγματικό χρόνο."
     },
     "visualBuilder": {
       "title": "Οπτικός Δημιουργός",
-      "description": "Drag and drop components, customize layouts, and design beautiful interfaces without code."
+      "description": "Σύρετε και αποθέστε στοιχεία, προσαρμόστε διατάξεις και σχεδιάστε όμορφες διεπαφές χωρίς κώδικα."
     },
     "instantDeploy": {
       "title": "Άμεση Ανάπτυξη",
-      "description": "Deploy your applications with one click. No server configuration needed."
+      "description": "Αναπτύξτε τις εφαρμογές σας με ένα κλικ. Δεν απαιτείται διαμόρφωση διακομιστή."
     },
     "database": {
       "title": "Ενσωματωμένη Βάση Δεδομένων",
-      "description": "Powerful database integration with automatic schema generation and real-time sync."
+      "description": "Ισχυρή ενσωμάτωση βάσης δεδομένων με αυτόματη δημιουργία σχήματος και συγχρονισμό σε πραγματικό χρόνο."
     },
     "auth": {
       "title": "Ταυτοποίηση",
-      "description": "Secure user authentication out of the box. Support for social logins and SSO."
+      "description": "Ασφαλής ταυτοποίηση χρήστη εκτός συσκευασίας. Υποστήριξη για κοινωνικές συνδέσεις και SSO."
     },
     "api": {
-      "title": "API Integration",
-      "description": "Connect to any API with our visual connector. Import OpenAPI specs instantly."
+      "title": "Ενσωμάτωση API",
+      "description": "Συνδεθείτε σε οποιοδήποτε API με τον οπτικό μας σύνδεσμο. Εισαγάγετε προδιαγραφές OpenAPI άμεσα."
     },
     "responsive": {
-      "title": "Responsive Design",
-      "description": "Your apps look great on any device. Automatic responsive layouts and previews."
+      "title": "Αποκρίσιμος Σχεδιασμός",
+      "description": "Οι εφαρμογές σας φαίνονται υπέροχες σε οποιαδήποτε συσκευή. Αυτόματες αποκρίσιμες διατάξεις και προεπισκοπήσεις."
     },
     "collaboration": {
-      "title": "Real-time Collaboration",
-      "description": "Work together with your team in real-time. See changes as they happen."
+      "title": "Συνεργασία σε Πραγματικό Χρόνο",
+      "description": "Εργαστείτε μαζί με την ομάδα σας σε πραγματικό χρόνο. Δείτε τις αλλαγές καθώς συμβαίνουν."
     }
   },
   "buildAnything": {
     "title": "Δημιουργήστε οποιαδήποτε εφαρμογή χωρίς όρια",
-    "subtitle": "Start building. Start earning. Today.",
-    "exploreAll": "Explore all templates",
+    "subtitle": "Ξεκινήστε να δημιουργείτε. Ξεκινήστε να κερδίζετε. Σήμερα.",
+    "exploreAll": "Εξερευνήστε όλα τα πρότυπα",
     "webApps": {
       "title": "Εφαρμογές Web",
-      "description": "Full-featured web apps with authentication, databases, and APIs."
+      "description": "Πλήρεις εφαρμογές web με ταυτοποίηση, βάσεις δεδομένων και API."
     },
     "mobileApps": {
       "title": "Εφαρμογές Κινητών",
-      "description": "Native mobile experiences for iOS and Android from a single codebase."
+      "description": "Εγγενείς εμπειρίες κινητών για iOS και Android από μία ενιαία βάση κώδικα."
     },
     "dashboards": {
-      "title": "Dashboards",
-      "description": "Data visualization and analytics dashboards with real-time updates."
+      "title": "Πίνακες Ελέγχου",
+      "description": "Πίνακες οπτικοποίησης δεδομένων και αναλυτικών με ενημερώσεις σε πραγματικό χρόνο."
     },
     "ecommerce": {
-      "title": "E-commerce",
-      "description": "Online stores with payments, inventory, and order management."
+      "title": "Ηλεκτρονικό Εμπόριο",
+      "description": "Ηλεκτρονικά καταστήματα με πληρωμές, απόθεμα και διαχείριση παραγγελιών."
     },
     "internal": {
-      "title": "Internal Tools",
-      "description": "Custom admin panels, CRMs, and workflow automation tools."
+      "title": "Εσωτερικά Εργαλεία",
+      "description": "Προσαρμοσμένοι πίνακες διαχείρισης, CRM και εργαλεία αυτοματοποίησης ροής εργασίας."
     },
     "marketplace": {
-      "title": "Marketplaces",
-      "description": "Two-sided platforms connecting buyers and sellers."
+      "title": "Αγορές",
+      "description": "Πλατφόρμες δύο πλευρών που συνδέουν αγοραστές και πωλητές."
     }
   },
   "testimonials": {
-    "badge": "Testimonials",
-    "title": "Loved by creators worldwide",
-    "subtitle": "Join thousands of developers, designers, and entrepreneurs who are building with AppNode.",
-    "quote1": "AppNode completely transformed how we prototype. What used to take weeks now takes hours.",
+    "badge": "Μαρτυρίες",
+    "title": "Αγαπημένο από δημιουργούς παγκοσμίως",
+    "subtitle": "Γίνετε μέλος χιλιάδων προγραμματιστών, σχεδιαστών και επιχειρηματιών που δημιουργούν με το AppNode.",
+    "quote1": "Το AppNode μεταμόρφωσε πλήρως τον τρόπο που κάνουμε πρωτότυπα. Αυτό που χρειαζόταν εβδομάδες τώρα παίρνει ώρες.",
     "author1": "Sarah Chen",
-    "role1": "Product Manager at TechCorp",
-    "quote2": "I built my entire startup's MVP using AppNode. The AI understands exactly what I need.",
+    "role1": "Διευθύντρια Προϊόντος στην TechCorp",
+    "quote2": "Έφτιαξα ολόκληρο το MVP της startup μου χρησιμοποιώντας το AppNode. Η AI καταλαβαίνει ακριβώς τι χρειάζομαι.",
     "author2": "Mike Rodriguez",
-    "role2": "Founder of StartupX",
-    "quote3": "As a designer, I can now bring my designs to life without waiting for developers.",
+    "role2": "Ιδρυτής της StartupX",
+    "quote3": "Ως σχεδιαστής, μπορώ τώρα να ζωντανεύω τα σχέδιά μου χωρίς να περιμένω προγραμματιστές.",
     "author3": "Emma Wilson",
-    "role3": "Senior Designer at DesignStudio",
+    "role3": "Ανώτερη Σχεδιάστρια στο DesignStudio",
     "stats": {
-      "activeUsers": "Active Users",
-      "projectsCreated": "Projects Created",
-      "countries": "Countries",
-      "averageRating": "Average Rating"
+      "activeUsers": "Ενεργοί Χρήστες",
+      "projectsCreated": "Δημιουργημένα Έργα",
+      "countries": "Χώρες",
+      "averageRating": "Μέση Βαθμολογία"
     }
   },
   "cta": {
-    "title": "Ready to build something",
-    "titleHighlight": "amazing?",
-    "subtitle": "Start creating your app today. No credit card required.",
-    "description": "Join thousands of creators who are already building the future with AppNode. Start for free, no credit card required.",
-    "button": "Start Building for Free",
-    "emailPlaceholder": "Enter your email",
-    "successMessage": "Check your email to get started!",
-    "newFeatures": "Smart Styles & Auto Layouts",
-    "trustedBy": "Trusted by teams at"
+    "title": "Έτοιμοι να δημιουργήσετε κάτι",
+    "titleHighlight": "εκπληκτικό;",
+    "subtitle": "Ξεκινήστε να δημιουργείτε την εφαρμογή σας σήμερα. Δεν απαιτείται πιστωτική κάρτα.",
+    "description": "Γίνετε μέλος χιλιάδων δημιουργών που ήδη χτίζουν το μέλλον με το AppNode. Ξεκινήστε δωρεάν, χωρίς πιστωτική κάρτα.",
+    "button": "Ξεκινήστε να Δημιουργείτε Δωρεάν",
+    "emailPlaceholder": "Εισάγετε το email σας",
+    "successMessage": "Ελέγξτε το email σας για να ξεκινήσετε!",
+    "newFeatures": "Έξυπνα Στυλ & Αυτόματες Διατάξεις",
+    "trustedBy": "Έμπιστο από ομάδες στο"
   },
   "footer": {
     "company": "Εταιρεία",
@@ -143,829 +143,829 @@
     "enterprise": "Επιχειρήσεις",
     "security": "Ασφάλεια",
     "pricing": "Τιμολόγηση",
-    "learn": "Learn",
-    "guides": "Guides",
-    "videos": "Videos",
+    "learn": "Μάθηση",
+    "guides": "Οδηγοί",
+    "videos": "Βίντεο",
     "blog": "Ιστολόγιο",
     "support": "Υποστήριξη",
     "privacyPolicy": "Πολιτική Απορρήτου",
-    "cookieSettings": "Cookie Settings",
+    "cookieSettings": "Ρυθμίσεις Cookie",
     "termsOfService": "Όροι Υπηρεσίας",
-    "platformRules": "Platform Rules",
-    "reportAbuse": "Report Abuse",
+    "platformRules": "Κανόνες Πλατφόρμας",
+    "reportAbuse": "Αναφορά Κατάχρησης",
     "allRightsReserved": "Με επιφύλαξη παντός δικαιώματος",
-    "madeWith": "Made with",
+    "madeWith": "Φτιάχτηκε με",
     "languageLabel": "Γλώσσα",
-    "tagline": "Build production-ready apps with AI",
-    "connectWithUs": "Connect with us"
+    "tagline": "Δημιουργήστε έτοιμες εφαρμογές με AI",
+    "connectWithUs": "Συνδεθείτε μαζί μας"
   },
   "products": {
     "title": "Προϊόντα",
-    "subtitle": "Powerful tools to build, deploy, and scale your applications",
+    "subtitle": "Ισχυρά εργαλεία για να δημιουργήσετε, να αναπτύξετε και να κλιμακώσετε τις εφαρμογές σας",
     "agent": {
       "title": "AI Agent",
-      "description": "Intelligent AI that understands your requirements and builds applications automatically.",
-      "tagline": "Build with natural language"
+      "description": "Έξυπνη AI που κατανοεί τις απαιτήσεις σας και δημιουργεί εφαρμογές αυτόματα.",
+      "tagline": "Δημιουργήστε με φυσική γλώσσα"
     },
     "database": {
-      "title": "Database",
-      "description": "Scalable, secure database with real-time sync and automatic backups.",
-      "tagline": "Your data, managed"
+      "title": "Βάση Δεδομένων",
+      "description": "Κλιμακούμενη, ασφαλής βάση δεδομένων με συγχρονισμό σε πραγματικό χρόνο και αυτόματα αντίγραφα ασφαλείας.",
+      "tagline": "Τα δεδομένα σας, διαχειριζόμενα"
     },
     "design": {
-      "title": "Design Studio",
-      "description": "Visual design tools to create stunning interfaces without code.",
-      "tagline": "Design beautifully"
+      "title": "Στούντιο Σχεδίασης",
+      "description": "Οπτικά εργαλεία σχεδίασης για να δημιουργήσετε εκπληκτικές διεπαφές χωρίς κώδικα.",
+      "tagline": "Σχεδιάστε όμορφα"
     },
     "integrations": {
-      "title": "Integrations",
-      "description": "Connect to thousands of services and APIs with pre-built connectors.",
-      "tagline": "Connect everything"
+      "title": "Ενσωματώσεις",
+      "description": "Συνδεθείτε με χιλιάδες υπηρεσίες και API με προκατασκευασμένους συνδέσμους.",
+      "tagline": "Συνδέστε τα πάντα"
     },
     "mobile": {
-      "title": "Mobile",
-      "description": "Build native mobile apps for iOS and Android from a single project.",
-      "tagline": "Go mobile"
+      "title": "Κινητά",
+      "description": "Δημιουργήστε εγγενείς εφαρμογές κινητών για iOS και Android από ένα μόνο έργο.",
+      "tagline": "Πηγαίνετε στο κινητό"
     },
     "publish": {
-      "title": "Publish",
-      "description": "One-click deployment to custom domains with SSL and CDN included.",
-      "tagline": "Ship faster"
+      "title": "Δημοσίευση",
+      "description": "Ανάπτυξη με ένα κλικ σε προσαρμοσμένους τομείς με SSL και CDN συμπεριλαμβανόμενα.",
+      "tagline": "Αποστείλετε γρηγορότερα"
     },
     "security": {
       "title": "Ασφάλεια",
-      "description": "Enterprise-grade security with SOC 2 compliance and SSO support.",
-      "tagline": "Stay secure"
+      "description": "Ασφάλεια επιχειρησιακού επιπέδου με συμμόρφωση SOC 2 και υποστήριξη SSO.",
+      "tagline": "Μείνετε ασφαλείς"
     }
   },
   "productAgent": {
     "badge": "Ανάπτυξη με AI",
-    "title": "Meet AppNode",
+    "title": "Γνωρίστε τον AppNode",
     "titleHighlight": "Agent",
-    "subtitle": "Your AI coding companion that writes production-ready code, evolves it as you iterate, and stays out of your way while you build. Describe what you want, and Agent delivers.",
-    "startBuilding": "Start Building Free",
-    "howItWorks": "How Agent Works",
+    "subtitle": "Ο AI σύντροφος προγραμματισμού σας που γράφει κώδικα έτοιμο για παραγωγή, τον εξελίσσει καθώς επαναλαμβάνετε και μένει διακριτικός ενώ δημιουργείτε. Περιγράψτε τι θέλετε και ο Agent παραδίδει.",
+    "startBuilding": "Ξεκινήστε να Δημιουργείτε Δωρεάν",
+    "howItWorks": "Πώς Λειτουργεί ο Agent",
     "demo": {
-      "you": "You",
+      "you": "Εσείς",
       "agent": "Agent",
-      "prompt": "Create a dashboard with user analytics, charts, and real-time data",
-      "response": "I'll create a comprehensive analytics dashboard for you...",
-      "writing": "Agent is writing code...",
-      "creating": "Creating components, setting up data fetching..."
+      "prompt": "Δημιουργήστε έναν πίνακα ελέγχου με αναλυτικά χρηστών, γραφήματα και δεδομένα σε πραγματικό χρόνο",
+      "response": "Θα δημιουργήσω έναν πλήρη πίνακα αναλυτικών για εσάς...",
+      "writing": "Ο Agent γράφει κώδικα...",
+      "creating": "Δημιουργία στοιχείων, ρύθμιση λήψης δεδομένων..."
     },
     "step1": {
-      "title": "Describe Your Vision",
-      "description": "Tell Agent what you want to build in plain English. No need for technical jargon - just describe your app like you would to a colleague."
+      "title": "Περιγράψτε το Όραμά σας",
+      "description": "Πείτε στον Agent τι θέλετε να δημιουργήσετε σε απλά ελληνικά. Δεν χρειάζεται τεχνική ορολογία - απλά περιγράψτε την εφαρμογή σας όπως θα κάνατε σε έναν συνάδελφο."
     },
     "step2": {
-      "title": "Watch It Build",
-      "description": "Agent writes production-ready code in real-time. See files being created, components being structured, and your app taking shape."
+      "title": "Παρακολουθήστε τη Δημιουργία",
+      "description": "Ο Agent γράφει κώδικα έτοιμο για παραγωγή σε πραγματικό χρόνο. Δείτε αρχεία να δημιουργούνται, στοιχεία να δομούνται και την εφαρμογή σας να παίρνει μορφή."
     },
     "step3": {
-      "title": "Iterate & Improve",
-      "description": "Not quite right? Just tell Agent what to change. It understands context and makes smart adjustments while preserving what works."
+      "title": "Επαναλάβετε & Βελτιώστε",
+      "description": "Δεν είναι ακριβώς σωστό; Απλά πείτε στον Agent τι να αλλάξει. Κατανοεί το πλαίσιο και κάνει έξυπνες προσαρμογές διατηρώντας ό,τι λειτουργεί."
     },
     "autonomous": {
-      "title": "Autonomous Long Builds",
-      "description": "Agent doesn't just write snippets - it can build entire applications autonomously. Set up a complex project structure, implement features across multiple files, and handle dependencies automatically.",
-      "item1": "Full-stack applications",
-      "item2": "Multi-file refactoring",
-      "item3": "Test generation",
-      "item4": "Documentation writing",
-      "item5": "Bug fixing & debugging"
+      "title": "Αυτόνομες Μακρές Κατασκευές",
+      "description": "Ο Agent δεν γράφει μόνο αποσπάσματα - μπορεί να δημιουργήσει ολόκληρες εφαρμογές αυτόνομα. Ρυθμίστε μια πολύπλοκη δομή έργου, υλοποιήστε λειτουργίες σε πολλαπλά αρχεία και χειριστείτε εξαρτήσεις αυτόματα.",
+      "item1": "Εφαρμογές πλήρους στοίβας",
+      "item2": "Αναδιαμόρφωση πολλαπλών αρχείων",
+      "item3": "Δημιουργία δοκιμών",
+      "item4": "Συγγραφή τεκμηρίωσης",
+      "item5": "Διόρθωση σφαλμάτων & αποσφαλμάτωση"
     },
     "stats": {
-      "filesCreated": "Files created",
-      "linesOfCode": "Lines of code",
-      "buildTime": "Build time"
+      "filesCreated": "Αρχεία που δημιουργήθηκαν",
+      "linesOfCode": "Γραμμές κώδικα",
+      "buildTime": "Χρόνος κατασκευής"
     },
     "cta": {
-      "title": "Ready to build with AI?",
-      "subtitle": "Start building your next project with AppNode Agent today. Free to start, no credit card required."
+      "title": "Έτοιμοι να δημιουργήσετε με AI;",
+      "subtitle": "Ξεκινήστε να δημιουργείτε το επόμενο έργο σας με τον AppNode Agent σήμερα. Δωρεάν για να ξεκινήσετε, χωρίς πιστωτική κάρτα."
     }
   },
   "productDatabase": {
-    "badge": "Data Management",
-    "title": "Built-in",
-    "titleHighlight": "Database",
-    "subtitle": "Store and manage your data without any setup. AppNode provides a powerful, scalable database ready from day one.",
-    "getStarted": "Get Started Free",
-    "readDocs": "Read the Docs",
+    "badge": "Διαχείριση Δεδομένων",
+    "title": "Ενσωματωμένη",
+    "titleHighlight": "Βάση Δεδομένων",
+    "subtitle": "Αποθηκεύστε και διαχειριστείτε τα δεδομένα σας χωρίς καμία ρύθμιση. Το AppNode παρέχει μια ισχυρή, κλιμακούμενη βάση δεδομένων έτοιμη από την πρώτη μέρα.",
+    "getStarted": "Ξεκινήστε Δωρεάν",
+    "readDocs": "Διαβάστε την Τεκμηρίωση",
     "stats": {
-      "uptime": "Uptime SLA",
-      "latency": "Query latency",
-      "scalability": "Scalability",
-      "configuration": "Configuration"
+      "uptime": "SLA Διαθεσιμότητας",
+      "latency": "Καθυστέρηση ερωτήματος",
+      "scalability": "Κλιμακωσιμότητα",
+      "configuration": "Διαμόρφωση"
     },
     "cta": {
-      "title": "Start storing data today",
-      "subtitle": "Build data-driven applications without the infrastructure headaches."
+      "title": "Ξεκινήστε να αποθηκεύετε δεδομένα σήμερα",
+      "subtitle": "Δημιουργήστε εφαρμογές βασισμένες σε δεδομένα χωρίς πονοκεφάλους υποδομής."
     }
   },
   "productDesign": {
-    "badge": "Visual Development",
-    "title": "Design with",
-    "titleHighlight": "Precision",
-    "subtitle": "Granular controls so your app matches your vision. Import your designs or integrate your design system, refine in a live visual editor, and ship instantly.",
-    "tryDesignTools": "Try Design Tools",
-    "visualEditor": "Visual Editor",
-    "components": "Components",
-    "properties": "Properties",
-    "width": "Width",
-    "background": "Background",
-    "borderRadius": "Border Radius",
-    "featuresTitle": "Design Features",
-    "startDesigning": "Start Designing",
+    "badge": "Οπτική Ανάπτυξη",
+    "title": "Σχεδιάστε με",
+    "titleHighlight": "Ακρίβεια",
+    "subtitle": "Λεπτομερείς έλεγχοι ώστε η εφαρμογή σας να ταιριάζει με το όραμά σας. Εισάγετε τα σχέδιά σας ή ενσωματώστε το σύστημα σχεδίασής σας, βελτιώστε σε ζωντανό οπτικό επεξεργαστή και αποστείλετε άμεσα.",
+    "tryDesignTools": "Δοκιμάστε τα Εργαλεία Σχεδίασης",
+    "visualEditor": "Οπτικός Επεξεργαστής",
+    "components": "Στοιχεία",
+    "properties": "Ιδιότητες",
+    "width": "Πλάτος",
+    "background": "Φόντο",
+    "borderRadius": "Ακτίνα Περιγράμματος",
+    "featuresTitle": "Χαρακτηριστικά Σχεδίασης",
+    "startDesigning": "Ξεκινήστε να Σχεδιάζετε",
     "features": {
       "liveEditor": {
-        "title": "Live Visual Editor",
-        "description": "Edit components visually with real-time preview. What you see is exactly what users get."
+        "title": "Ζωντανός Οπτικός Επεξεργαστής",
+        "description": "Επεξεργαστείτε στοιχεία οπτικά με προεπισκόπηση σε πραγματικό χρόνο. Αυτό που βλέπετε είναι ακριβώς αυτό που θα δουν οι χρήστες."
       },
       "designSystem": {
-        "title": "Design System Import",
-        "description": "Import your existing Figma designs or brand guidelines and apply them instantly."
+        "title": "Εισαγωγή Συστήματος Σχεδίασης",
+        "description": "Εισάγετε τα υπάρχοντα σχέδια Figma ή τις οδηγίες επωνυμίας σας και εφαρμόστε τα άμεσα."
       },
       "componentLibrary": {
-        "title": "Component Library",
-        "description": "Access a rich library of pre-built, customizable components that follow best practices."
+        "title": "Βιβλιοθήκη Στοιχείων",
+        "description": "Αποκτήστε πρόσβαση σε μια πλούσια βιβλιοθήκη προκατασκευασμένων, προσαρμόσιμων στοιχείων που ακολουθούν τις βέλτιστες πρακτικές."
       },
       "responsive": {
-        "title": "Responsive Controls",
-        "description": "Design for all screen sizes with intuitive breakpoint controls and mobile preview."
+        "title": "Αποκρίσιμοι Έλεγχοι",
+        "description": "Σχεδιάστε για όλα τα μεγέθη οθόνης με διαισθητικούς ελέγχους σημείων διακοπής και προεπισκόπηση κινητού."
       },
       "pixelPerfect": {
-        "title": "Pixel-Perfect Editing",
-        "description": "Fine-tune spacing, typography, and colors with precision controls."
+        "title": "Επεξεργασία Ακριβείας Pixel",
+        "description": "Λεπτομερής ρύθμιση αποστάσεων, τυπογραφίας και χρωμάτων με έλεγχο ακριβείας."
       },
       "instantDeploy": {
-        "title": "Instant Deploy",
-        "description": "Ship your designs immediately. No build steps, no deployment configuration needed."
+        "title": "Άμεση Ανάπτυξη",
+        "description": "Αποστείλετε τα σχέδιά σας άμεσα. Χωρίς βήματα κατασκευής, χωρίς διαμόρφωση ανάπτυξης."
       }
     },
     "cta": {
-      "title": "Design beautiful apps faster",
-      "subtitle": "Turn your design vision into reality with AppNode's powerful visual tools."
+      "title": "Σχεδιάστε όμορφες εφαρμογές γρηγορότερα",
+      "subtitle": "Μετατρέψτε το όραμα σχεδίασής σας σε πραγματικότητα με τα ισχυρά οπτικά εργαλεία του AppNode."
     }
   },
   "productIntegrations": {
-    "badge": "Connect Everything",
-    "title": "Powerful",
-    "titleHighlight": "Integrations",
-    "subtitle": "Connect to your favorite tools and services with zero configuration. AppNode integrations plug in cleanly and securely.",
-    "browseAll": "Browse All Integrations",
-    "popularIntegrations": "Popular Integrations",
-    "getStarted": "Get Started Free",
+    "badge": "Συνδέστε τα Πάντα",
+    "title": "Ισχυρές",
+    "titleHighlight": "Ενσωματώσεις",
+    "subtitle": "Συνδεθείτε με τα αγαπημένα σας εργαλεία και υπηρεσίες με μηδενική διαμόρφωση. Οι ενσωματώσεις AppNode συνδέονται καθαρά και ασφαλώς.",
+    "browseAll": "Περιήγηση Όλων των Ενσωματώσεων",
+    "popularIntegrations": "Δημοφιλείς Ενσωματώσεις",
+    "getStarted": "Ξεκινήστε Δωρεάν",
     "categories": {
       "ai": "AI",
-      "payments": "Payments",
-      "communication": "Communication",
+      "payments": "Πληρωμές",
+      "communication": "Επικοινωνία",
       "email": "Email",
       "cdn": "CDN",
-      "versionControl": "Version Control",
+      "versionControl": "Έλεγχος Εκδόσεων",
       "cloud": "Cloud",
-      "deployment": "Deployment",
-      "database": "Database"
+      "deployment": "Ανάπτυξη",
+      "database": "Βάση Δεδομένων"
     },
     "integrations": {
-      "openai": "GPT-4, DALL-E, and more",
-      "stripe": "Accept payments globally",
-      "twilio": "SMS, voice, and video",
-      "sendgrid": "Transactional emails",
-      "cloudflare": "Edge computing and CDN",
-      "github": "Code hosting and CI/CD",
-      "slack": "Team messaging",
-      "googleCloud": "Cloud infrastructure",
+      "openai": "GPT-4, DALL-E και άλλα",
+      "stripe": "Αποδοχή πληρωμών παγκοσμίως",
+      "twilio": "SMS, φωνή και βίντεο",
+      "sendgrid": "Συναλλακτικά email",
+      "cloudflare": "Edge computing και CDN",
+      "github": "Φιλοξενία κώδικα και CI/CD",
+      "slack": "Μηνύματα ομάδας",
+      "googleCloud": "Υποδομή cloud",
       "aws": "Amazon Web Services",
-      "anthropic": "Claude AI assistant",
-      "vercel": "Frontend deployment",
-      "supabase": "Backend as a service"
+      "anthropic": "Βοηθός Claude AI",
+      "vercel": "Ανάπτυξη frontend",
+      "supabase": "Backend ως υπηρεσία"
     },
     "howItWorks": {
-      "title": "How Integrations Work",
+      "title": "Πώς Λειτουργούν οι Ενσωματώσεις",
       "step1": {
-        "title": "Select Integration",
-        "description": "Browse our catalog and click to enable any integration you need."
+        "title": "Επιλέξτε Ενσωμάτωση",
+        "description": "Περιηγηθείτε στον κατάλογό μας και κάντε κλικ για να ενεργοποιήσετε οποιαδήποτε ενσωμάτωση χρειάζεστε."
       },
       "step2": {
-        "title": "Authorize Once",
-        "description": "Connect your account securely with OAuth. Your credentials stay safe."
+        "title": "Εξουσιοδοτήστε Μία Φορά",
+        "description": "Συνδέστε τον λογαριασμό σας ασφαλώς με OAuth. Τα διαπιστευτήριά σας παραμένουν ασφαλή."
       },
       "step3": {
-        "title": "Start Using",
-        "description": "The integration is ready to use in your code immediately."
+        "title": "Ξεκινήστε να Χρησιμοποιείτε",
+        "description": "Η ενσωμάτωση είναι έτοιμη για χρήση στον κώδικά σας αμέσως."
       }
     },
     "cta": {
-      "title": "Connect your tools today",
-      "subtitle": "Build powerful apps that integrate with the services you already use."
+      "title": "Συνδέστε τα εργαλεία σας σήμερα",
+      "subtitle": "Δημιουργήστε ισχυρές εφαρμογές που ενσωματώνονται με τις υπηρεσίες που ήδη χρησιμοποιείτε."
     }
   },
   "productMobile": {
-    "badge": "Build on the Go",
-    "title": "AppNode for",
-    "titleHighlight": "Mobile",
-    "subtitle": "Build, edit, and deploy your apps from anywhere. The full power of AppNode in your pocket, optimized for iOS and Android.",
+    "badge": "Δημιουργήστε εν Κινήσει",
+    "title": "AppNode για",
+    "titleHighlight": "Κινητά",
+    "subtitle": "Δημιουργήστε, επεξεργαστείτε και αναπτύξτε τις εφαρμογές σας από οπουδήποτε. Η πλήρης δύναμη του AppNode στην τσέπη σας, βελτιστοποιημένη για iOS και Android.",
     "appStore": "App Store",
     "playStore": "Play Store",
-    "live": "Live",
-    "run": "Run",
-    "deploy": "Deploy",
-    "output": "Output",
-    "featuresTitle": "Full Power, Anywhere",
-    "downloadIOS": "Download for iOS",
-    "downloadAndroid": "Download for Android",
+    "live": "Ζωντανά",
+    "run": "Εκτέλεση",
+    "deploy": "Ανάπτυξη",
+    "output": "Έξοδος",
+    "featuresTitle": "Πλήρης Δύναμη, Οπουδήποτε",
+    "downloadIOS": "Κατεβάστε για iOS",
+    "downloadAndroid": "Κατεβάστε για Android",
     "features": {
       "codeEditor": {
-        "title": "Full Code Editor",
-        "description": "A complete code editor with syntax highlighting, autocomplete, and multi-file support."
+        "title": "Πλήρης Επεξεργαστής Κώδικα",
+        "description": "Ένας πλήρης επεξεργαστής κώδικα με επισήμανση σύνταξης, αυτοσυμπλήρωση και υποστήριξη πολλαπλών αρχείων."
       },
       "oneTapDeploy": {
-        "title": "One-Tap Deploy",
-        "description": "Deploy your changes instantly from your phone. Watch your app go live in seconds."
+        "title": "Ανάπτυξη με Ένα Πάτημα",
+        "description": "Αναπτύξτε τις αλλαγές σας αμέσως από το τηλέφωνό σας. Δείτε την εφαρμογή σας να γίνεται ζωντανή σε δευτερόλεπτα."
       },
       "realTimeSync": {
-        "title": "Real-time Sync",
-        "description": "Your projects sync across all devices. Start on desktop, continue on mobile."
+        "title": "Συγχρονισμός σε Πραγματικό Χρόνο",
+        "description": "Τα έργα σας συγχρονίζονται σε όλες τις συσκευές. Ξεκινήστε στον υπολογιστή, συνεχίστε στο κινητό."
       },
       "aiAssistant": {
-        "title": "AI Assistant",
-        "description": "Get AI help writing code, even on mobile. Voice input supported."
+        "title": "Βοηθός AI",
+        "description": "Λάβετε βοήθεια AI για τη συγγραφή κώδικα, ακόμα και στο κινητό. Υποστηρίζεται φωνητική εισαγωγή."
       },
       "liveAnalytics": {
-        "title": "Live Analytics",
-        "description": "Monitor your app performance, errors, and user metrics on the go."
+        "title": "Ζωντανά Αναλυτικά",
+        "description": "Παρακολουθήστε την απόδοση της εφαρμογής σας, τα σφάλματα και τις μετρήσεις χρηστών εν κινήσει."
       },
       "teamCollaboration": {
-        "title": "Team Collaboration",
-        "description": "Review PRs, comment on code, and collaborate with your team from anywhere."
+        "title": "Ομαδική Συνεργασία",
+        "description": "Ελέγξτε PR, σχολιάστε κώδικα και συνεργαστείτε με την ομάδα σας από οπουδήποτε."
       }
     },
     "cta": {
-      "title": "Code from anywhere",
-      "subtitle": "Download AppNode mobile and take your development workflow wherever you go."
+      "title": "Γράψτε κώδικα από οπουδήποτε",
+      "subtitle": "Κατεβάστε το AppNode mobile και πάρτε τη ροή εργασίας ανάπτυξης σας όπου κι αν πάτε."
     }
   },
   "productPublish": {
-    "badge": "Deployment",
-    "title": "Instantly",
-    "titleHighlight": "Publish",
-    "subtitle": "Deploy your apps with one click. Get a custom domain, SSL certificates, and global CDN automatically.",
-    "deployNow": "Deploy Now",
-    "featuresTitle": "Everything You Need to Ship",
-    "startDeploying": "Start Deploying",
+    "badge": "Ανάπτυξη",
+    "title": "Άμεση",
+    "titleHighlight": "Δημοσίευση",
+    "subtitle": "Αναπτύξτε τις εφαρμογές σας με ένα κλικ. Αποκτήστε προσαρμοσμένο τομέα, πιστοποιητικά SSL και παγκόσμιο CDN αυτόματα.",
+    "deployNow": "Ανάπτυξη Τώρα",
+    "featuresTitle": "Όλα Όσα Χρειάζεστε για να Αποστείλετε",
+    "startDeploying": "Ξεκινήστε την Ανάπτυξη",
     "features": {
       "oneClick": {
-        "title": "One-Click Deploy",
-        "description": "Deploy directly from your editor."
+        "title": "Ανάπτυξη με Ένα Κλικ",
+        "description": "Αναπτύξτε απευθείας από τον επεξεργαστή σας."
       },
       "customDomains": {
-        "title": "Custom Domains",
-        "description": "Connect your own domain or use our subdomain."
+        "title": "Προσαρμοσμένοι Τομείς",
+        "description": "Συνδέστε τον δικό σας τομέα ή χρησιμοποιήστε τον υποτομέα μας."
       },
       "ssl": {
-        "title": "Automatic SSL",
-        "description": "Every deployment gets a free SSL certificate."
+        "title": "Αυτόματο SSL",
+        "description": "Κάθε ανάπτυξη λαμβάνει δωρεάν πιστοποιητικό SSL."
       },
       "cdn": {
-        "title": "Global CDN",
-        "description": "Your app is served from 34+ edge locations."
+        "title": "Παγκόσμιο CDN",
+        "description": "Η εφαρμογή σας εξυπηρετείται από 34+ τοποθεσίες edge."
       },
       "analytics": {
-        "title": "Analytics Built-in",
-        "description": "Track visitors and performance metrics."
+        "title": "Ενσωματωμένα Αναλυτικά",
+        "description": "Παρακολουθήστε επισκέπτες και μετρήσεις απόδοσης."
       },
       "rollbacks": {
-        "title": "Instant Rollbacks",
-        "description": "Roll back to any previous deployment."
+        "title": "Άμεσες Επαναφορές",
+        "description": "Επαναφέρετε σε οποιαδήποτε προηγούμενη ανάπτυξη."
       }
     },
     "cta": {
-      "title": "Ship your app today",
-      "subtitle": "Go from idea to production in minutes, not days."
+      "title": "Αποστείλετε την εφαρμογή σας σήμερα",
+      "subtitle": "Από την ιδέα στην παραγωγή σε λεπτά, όχι μέρες."
     }
   },
   "productSecurity": {
-    "badge": "Enterprise Security",
+    "badge": "Ασφάλεια Επιχειρήσεων",
     "title": "Ασφάλεια",
-    "titleHighlight": "First",
-    "subtitle": "Build with confidence. AppNode provides enterprise-grade security, pre-deployment screening, and secure defaults to keep your apps protected.",
-    "enterpriseSolutions": "Enterprise Solutions",
-    "securityReport": "Security Report",
-    "featuresTitle": "Security Features",
+    "titleHighlight": "Πρώτα",
+    "subtitle": "Δημιουργήστε με εμπιστοσύνη. Το AppNode παρέχει ασφάλεια επιχειρησιακού επιπέδου, έλεγχο προ-ανάπτυξης και ασφαλείς προεπιλογές για να κρατήσουν τις εφαρμογές σας προστατευμένες.",
+    "enterpriseSolutions": "Λύσεις Επιχειρήσεων",
+    "securityReport": "Αναφορά Ασφάλειας",
+    "featuresTitle": "Χαρακτηριστικά Ασφάλειας",
     "badges": {
       "soc2": "SOC 2 Type II",
-      "gdpr": "GDPR Compliant",
+      "gdpr": "Συμμόρφωση GDPR",
       "iso": "ISO 27001",
-      "hipaa": "HIPAA Ready"
+      "hipaa": "Έτοιμο για HIPAA"
     },
     "features": {
       "sso": {
         "title": "SSO & SAML",
-        "description": "Integrate with your existing identity provider. Support for SAML, OIDC, and all major SSO providers.",
-        "item1": "SAML 2.0 support",
-        "item2": "Just-in-time provisioning",
-        "item3": "Multi-factor authentication"
+        "description": "Ενσωματώστε με τον υπάρχοντα πάροχο ταυτότητας. Υποστήριξη για SAML, OIDC και όλους τους μεγάλους παρόχους SSO.",
+        "item1": "Υποστήριξη SAML 2.0",
+        "item2": "Δημιουργία just-in-time",
+        "item3": "Ταυτοποίηση πολλαπλών παραγόντων"
       },
       "scanning": {
-        "title": "Pre-deployment Scanning",
-        "description": "Every deployment is automatically scanned for vulnerabilities, secrets, and security issues.",
-        "item1": "Dependency vulnerability scanning",
-        "item2": "Secret detection",
-        "item3": "OWASP compliance checks"
+        "title": "Έλεγχος Προ-Ανάπτυξης",
+        "description": "Κάθε ανάπτυξη ελέγχεται αυτόματα για ευπάθειες, μυστικά και ζητήματα ασφάλειας.",
+        "item1": "Έλεγχος ευπάθειας εξαρτήσεων",
+        "item2": "Ανίχνευση μυστικών",
+        "item3": "Έλεγχοι συμμόρφωσης OWASP"
       },
       "encryption": {
-        "title": "Data Encryption",
-        "description": "All data is encrypted at rest and in transit using industry-standard encryption protocols.",
-        "item1": "AES-256 encryption at rest",
-        "item2": "TLS 1.3 in transit",
-        "item3": "Customer-managed keys available"
+        "title": "Κρυπτογράφηση Δεδομένων",
+        "description": "Όλα τα δεδομένα κρυπτογραφούνται σε ηρεμία και σε μεταφορά χρησιμοποιώντας πρωτόκολλα κρυπτογράφησης του κλάδου.",
+        "item1": "Κρυπτογράφηση AES-256 σε ηρεμία",
+        "item2": "TLS 1.3 σε μεταφορά",
+        "item3": "Διαθέσιμα κλειδιά διαχειριζόμενα από πελάτη"
       },
       "auditLogs": {
-        "title": "Audit Logs",
-        "description": "Complete visibility into all actions taken on your account with detailed audit logs.",
-        "item1": "90-day log retention",
-        "item2": "Export to SIEM",
-        "item3": "Real-time alerts"
+        "title": "Αρχεία Ελέγχου",
+        "description": "Πλήρης ορατότητα σε όλες τις ενέργειες στον λογαριασμό σας με λεπτομερή αρχεία ελέγχου.",
+        "item1": "Διατήρηση αρχείου 90 ημερών",
+        "item2": "Εξαγωγή σε SIEM",
+        "item3": "Ειδοποιήσεις σε πραγματικό χρόνο"
       }
     },
     "cta": {
-      "title": "Need enterprise security?",
-      "subtitle": "Talk to our team about custom security requirements and compliance needs."
+      "title": "Χρειάζεστε ασφάλεια επιχειρήσεων;",
+      "subtitle": "Μιλήστε με την ομάδα μας για προσαρμοσμένες απαιτήσεις ασφάλειας και ανάγκες συμμόρφωσης."
     }
   },
   "solutions": {
     "title": "Λύσεις",
-    "subtitle": "Tailored solutions for every industry and use case",
+    "subtitle": "Προσαρμοσμένες λύσεις για κάθε κλάδο και περίπτωση χρήσης",
     "startup": {
-      "title": "For Startups",
-      "description": "Move fast and build your MVP in days, not months."
+      "title": "Για Startups",
+      "description": "Κινηθείτε γρήγορα και δημιουργήστε το MVP σας σε μέρες, όχι μήνες."
     },
     "enterprise": {
-      "title": "For Enterprise",
-      "description": "Scale securely with compliance, SSO, and dedicated support."
+      "title": "Για Επιχειρήσεις",
+      "description": "Κλιμακώστε ασφαλώς με συμμόρφωση, SSO και αφοσιωμένη υποστήριξη."
     },
     "agencies": {
-      "title": "For Agencies",
-      "description": "Deliver client projects faster with white-label solutions."
+      "title": "Για Agencies",
+      "description": "Παραδώστε έργα πελατών γρηγορότερα με λύσεις white-label."
     }
   },
   "useCases": {
     "title": "Περιπτώσεις Χρήσης",
-    "subtitle": "See how teams are using AppNode",
+    "subtitle": "Δείτε πώς οι ομάδες χρησιμοποιούν το AppNode",
     "rapidPrototyping": {
-      "title": "Rapid Prototyping",
-      "description": "Validate ideas quickly with working prototypes in hours."
+      "title": "Γρήγορη Πρωτοτυποποίηση",
+      "description": "Επικυρώστε ιδέες γρήγορα με λειτουργικά πρωτότυπα σε ώρες."
     },
     "businessApps": {
-      "title": "Business Applications",
-      "description": "Build custom CRMs, ERPs, and workflow automation tools."
+      "title": "Επιχειρηματικές Εφαρμογές",
+      "description": "Δημιουργήστε προσαρμοσμένα CRM, ERP και εργαλεία αυτοματοποίησης ροής εργασίας."
     },
     "mobileApps": {
-      "title": "Mobile Applications",
-      "description": "Create native mobile experiences without mobile development expertise."
+      "title": "Εφαρμογές Κινητών",
+      "description": "Δημιουργήστε εγγενείς εμπειρίες κινητών χωρίς εμπειρία ανάπτυξης κινητών."
     }
   },
   "pricing": {
-    "title": "Simple Credit-Based Pricing",
-    "subtitle": "Pay only for what you use. No subscriptions, no hidden fees.",
+    "title": "Απλή Τιμολόγηση Με Βάση Πιστώσεις",
+    "subtitle": "Πληρώστε μόνο για ό,τι χρησιμοποιείτε. Χωρίς συνδρομές, χωρίς κρυφές χρεώσεις.",
     "badge": "Τιμολόγηση",
-    "creditInfo": "1 credit = 1 generation",
+    "creditInfo": "1 πίστωση = 1 δημιουργία",
     "freeTier": {
-      "title": "Free Tier",
-      "subtitle": "Get started without a credit card",
+      "title": "Δωρεάν Επίπεδο",
+      "subtitle": "Ξεκινήστε χωρίς πιστωτική κάρτα",
       "features": [
-        "2 free app generations",
-        "Full access to all templates",
-        "Live preview and deployment",
-        "Export to GitHub"
+        "2 δωρεάν δημιουργίες εφαρμογών",
+        "Πλήρης πρόσβαση σε όλα τα πρότυπα",
+        "Ζωντανή προεπισκόπηση και ανάπτυξη",
+        "Εξαγωγή στο GitHub"
       ]
     },
-    "buyCredits": "Buy Credits",
-    "mostPopular": "Most Popular",
-    "credits": "Credits",
-    "perCredit": "per credit",
-    "buyNow": "Buy Now",
+    "buyCredits": "Αγοράστε Πιστώσεις",
+    "mostPopular": "Πιο Δημοφιλές",
+    "credits": "Πιστώσεις",
+    "perCredit": "ανά πίστωση",
+    "buyNow": "Αγοράστε Τώρα",
     "faq": {
-      "title": "Frequently Asked Questions",
-      "subtitle": "Everything you need to know about our pricing",
-      "q1": "What can I do with credits?",
-      "a1": "Each credit allows you to generate one complete app. You can use credits to create web apps, mobile apps, landing pages, and more using our AI-powered builder.",
-      "q2": "Do credits expire?",
-      "a2": "No! Your purchased credits never expire. Use them whenever you want, at your own pace.",
-      "q3": "Can I get a refund?",
-      "a3": "Yes, we offer a 30-day money-back guarantee for unused credits. Contact our support team for assistance.",
-      "q4": "What payment methods do you accept?",
-      "a4": "We accept all major credit cards (Visa, Mastercard, American Express) and PayPal.",
-      "q5": "How does the free tier work?",
-      "a5": "Every new user gets 2 free generations to try AppNode. No credit card required to get started!"
+      "title": "Συχνές Ερωτήσεις",
+      "subtitle": "Όλα όσα πρέπει να γνωρίζετε για την τιμολόγησή μας",
+      "q1": "Τι μπορώ να κάνω με τις πιστώσεις;",
+      "a1": "Κάθε πίστωση σας επιτρέπει να δημιουργήσετε μία ολοκληρωμένη εφαρμογή. Μπορείτε να χρησιμοποιήσετε πιστώσεις για να δημιουργήσετε εφαρμογές web, εφαρμογές κινητών, σελίδες προορισμού και πολλά άλλα χρησιμοποιώντας το AI builder μας.",
+      "q2": "Λήγουν οι πιστώσεις;",
+      "a2": "Όχι! Οι αγορασμένες πιστώσεις σας δεν λήγουν ποτέ. Χρησιμοποιήστε τες όποτε θέλετε, με το δικό σας ρυθμό.",
+      "q3": "Μπορώ να πάρω επιστροφή χρημάτων;",
+      "a3": "Ναι, προσφέρουμε εγγύηση επιστροφής χρημάτων 30 ημερών για αχρησιμοποίητες πιστώσεις. Επικοινωνήστε με την ομάδα υποστήριξής μας για βοήθεια.",
+      "q4": "Ποιους τρόπους πληρωμής δέχεστε;",
+      "a4": "Δεχόμαστε όλες τις κύριες πιστωτικές κάρτες (Visa, Mastercard, American Express) και PayPal.",
+      "q5": "Πώς λειτουργεί το δωρεάν επίπεδο;",
+      "a5": "Κάθε νέος χρήστης παίρνει 2 δωρεάν δημιουργίες για να δοκιμάσει το AppNode. Δεν απαιτείται πιστωτική κάρτα για να ξεκινήσετε!"
     },
-    "readyToStart": "Ready to get started?",
-    "startWith": "Start building with 2 free generations.",
-    "getStartedFree": "Get Started Free",
+    "readyToStart": "Έτοιμοι να ξεκινήσετε;",
+    "startWith": "Ξεκινήστε να δημιουργείτε με 2 δωρεάν δημιουργίες.",
+    "getStartedFree": "Ξεκινήστε Δωρεάν",
     "free": {
-      "name": "Free",
-      "price": "$0",
-      "period": "forever",
-      "description": "Perfect for learning and personal projects",
+      "name": "Δωρεάν",
+      "price": "0€",
+      "period": "για πάντα",
+      "description": "Ιδανικό για μάθηση και προσωπικά έργα",
       "features": [
-        "3 projects",
-        "1,000 records",
-        "Community support",
-        "Basic analytics"
+        "3 έργα",
+        "1.000 εγγραφές",
+        "Υποστήριξη κοινότητας",
+        "Βασικά αναλυτικά"
       ]
     },
     "pro": {
       "name": "Pro",
-      "price": "$29",
-      "period": "per month",
-      "description": "For professionals and small teams",
+      "price": "29€",
+      "period": "ανά μήνα",
+      "description": "Για επαγγελματίες και μικρές ομάδες",
       "features": [
-        "Unlimited projects",
-        "100,000 records",
-        "Priority support",
-        "Custom domains",
-        "Advanced analytics",
-        "Team collaboration"
+        "Απεριόριστα έργα",
+        "100.000 εγγραφές",
+        "Υποστήριξη προτεραιότητας",
+        "Προσαρμοσμένοι τομείς",
+        "Προηγμένα αναλυτικά",
+        "Ομαδική συνεργασία"
       ]
     },
     "enterprise": {
       "name": "Επιχειρήσεις",
-      "price": "Custom",
+      "price": "Προσαρμοσμένο",
       "period": "",
-      "description": "For large organizations with custom needs",
+      "description": "Για μεγάλους οργανισμούς με προσαρμοσμένες ανάγκες",
       "features": [
-        "Everything in Pro",
-        "Unlimited records",
+        "Όλα τα Pro",
+        "Απεριόριστες εγγραφές",
         "SSO & SAML",
-        "SLA guarantee",
-        "Dedicated support",
-        "On-premise option"
+        "Εγγύηση SLA",
+        "Αφοσιωμένη υποστήριξη",
+        "Επιλογή on-premise"
       ]
     }
   },
   "enterprise": {
-    "title": "AppNode for Enterprise",
-    "subtitle": "Empower your organization with secure, scalable app development",
+    "title": "AppNode για Επιχειρήσεις",
+    "subtitle": "Ενδυναμώστε τον οργανισμό σας με ασφαλή, κλιμακούμενη ανάπτυξη εφαρμογών",
     "features": {
       "security": {
-        "title": "Enterprise Security",
-        "description": "SOC 2 Type II certified with advanced encryption and access controls."
+        "title": "Ασφάλεια Επιχειρήσεων",
+        "description": "Πιστοποιημένο SOC 2 Type II με προηγμένη κρυπτογράφηση και ελέγχους πρόσβασης."
       },
       "sso": {
-        "title": "Single Sign-On",
-        "description": "Integrate with your existing identity provider. SAML and OIDC support."
+        "title": "Ενιαία Σύνδεση",
+        "description": "Ενσωματώστε με τον υπάρχοντα πάροχο ταυτότητας. Υποστήριξη SAML και OIDC."
       },
       "compliance": {
-        "title": "Compliance",
-        "description": "GDPR, HIPAA, and industry-specific compliance built in."
+        "title": "Συμμόρφωση",
+        "description": "Ενσωματωμένη συμμόρφωση GDPR, HIPAA και κλαδική."
       },
       "support": {
-        "title": "Dedicated Support",
-        "description": "24/7 priority support with dedicated account management."
+        "title": "Αφοσιωμένη Υποστήριξη",
+        "description": "Υποστήριξη 24/7 προτεραιότητας με αφοσιωμένη διαχείριση λογαριασμού."
       },
       "sla": {
-        "title": "SLA Guarantee",
-        "description": "99.99% uptime SLA with enterprise-grade infrastructure."
+        "title": "Εγγύηση SLA",
+        "description": "SLA διαθεσιμότητας 99,99% με υποδομή επιχειρησιακού επιπέδου."
       },
       "onpremise": {
         "title": "On-Premise",
-        "description": "Deploy in your own cloud or on-premise environment."
+        "description": "Ανάπτυξη στο δικό σας cloud ή σε περιβάλλον on-premise."
       }
     },
-    "cta": "Talk to Sales"
+    "cta": "Επικοινωνία με Πωλήσεις"
   },
   "enterprisePage": {
-    "badge": "ENTERPRISE",
-    "title": "Build at scale with",
-    "titleHighlight": "enterprise-grade",
-    "titleEnd": "features",
-    "subtitle": "Everything your team needs to build, deploy, and manage applications at scale. Security, compliance, and support built for the enterprise.",
-    "viewPricing": "View Pricing",
-    "trustedBy": "TRUSTED BY LEADING COMPANIES",
-    "featuresTitle": "Everything you need for enterprise",
-    "featuresSubtitle": "Advanced features designed for teams that need security, scalability, and support.",
-    "testimonialsTitle": "Loved by enterprise teams",
-    "testimonialsSubtitle": "See what leaders are saying about AppNode Enterprise.",
-    "contactTitle": "Get in touch",
-    "contactSubtitle": "Tell us about your team and we'll get back to you within 24 hours.",
-    "thankYou": "Thank you!",
-    "thankYouMessage": "We've received your message and will be in touch soon.",
+    "badge": "ΕΠΙΧΕΙΡΗΣΕΙΣ",
+    "title": "Δημιουργήστε σε κλίμακα με",
+    "titleHighlight": "επιχειρησιακού επιπέδου",
+    "titleEnd": "χαρακτηριστικά",
+    "subtitle": "Όλα όσα χρειάζεται η ομάδα σας για να δημιουργήσει, να αναπτύξει και να διαχειριστεί εφαρμογές σε κλίμακα. Ασφάλεια, συμμόρφωση και υποστήριξη για επιχειρήσεις.",
+    "viewPricing": "Δείτε τις Τιμές",
+    "trustedBy": "ΕΜΠΙΣΤΟ ΑΠΟ ΚΟΡΥΦΑΙΕΣ ΕΤΑΙΡΕΙΕΣ",
+    "featuresTitle": "Όλα όσα χρειάζεστε για επιχειρήσεις",
+    "featuresSubtitle": "Προηγμένα χαρακτηριστικά σχεδιασμένα για ομάδες που χρειάζονται ασφάλεια, κλιμακωσιμότητα και υποστήριξη.",
+    "testimonialsTitle": "Αγαπημένο από επιχειρησιακές ομάδες",
+    "testimonialsSubtitle": "Δείτε τι λένε οι ηγέτες για το AppNode Enterprise.",
+    "contactTitle": "Επικοινωνήστε μαζί μας",
+    "contactSubtitle": "Πείτε μας για την ομάδα σας και θα επικοινωνήσουμε εντός 24 ωρών.",
+    "thankYou": "Ευχαριστούμε!",
+    "thankYouMessage": "Λάβαμε το μήνυμά σας και θα επικοινωνήσουμε σύντομα.",
     "features": {
       "security": {
-        "title": "Enterprise-grade Security",
-        "description": "SOC 2 Type II certified with SSO, SAML, and advanced access controls to keep your data safe."
+        "title": "Ασφάλεια Επιχειρησιακού Επιπέδου",
+        "description": "Πιστοποιημένο SOC 2 Type II με SSO, SAML και προηγμένους ελέγχους πρόσβασης για να διατηρήσετε τα δεδομένα σας ασφαλή."
       },
       "collaboration": {
-        "title": "Team Collaboration",
-        "description": "Unlimited team members, shared workspaces, and real-time collaboration features."
+        "title": "Ομαδική Συνεργασία",
+        "description": "Απεριόριστα μέλη ομάδας, κοινόχρηστοι χώροι εργασίας και λειτουργίες συνεργασίας σε πραγματικό χρόνο."
       },
       "performance": {
-        "title": "Priority Performance",
-        "description": "Dedicated infrastructure with guaranteed uptime SLAs and faster build times."
+        "title": "Απόδοση Προτεραιότητας",
+        "description": "Αφοσιωμένη υποδομή με εγγυημένα SLA διαθεσιμότητας και ταχύτερους χρόνους κατασκευής."
       },
       "support": {
-        "title": "Dedicated Support",
-        "description": "24/7 priority support with dedicated customer success manager and onboarding."
+        "title": "Αφοσιωμένη Υποστήριξη",
+        "description": "Υποστήριξη 24/7 προτεραιότητας με αφοσιωμένο διαχειριστή επιτυχίας πελατών και onboarding."
       },
       "integrations": {
-        "title": "Custom Integrations",
-        "description": "API access, custom webhooks, and integrations with your existing tools and workflows."
+        "title": "Προσαρμοσμένες Ενσωματώσεις",
+        "description": "Πρόσβαση API, προσαρμοσμένα webhooks και ενσωματώσεις με τα υπάρχοντα εργαλεία και ροές εργασίας σας."
       },
       "analytics": {
-        "title": "Advanced Analytics",
-        "description": "Detailed usage analytics, audit logs, and compliance reporting for your organization."
+        "title": "Προηγμένα Αναλυτικά",
+        "description": "Λεπτομερή αναλυτικά χρήσης, αρχεία ελέγχου και αναφορές συμμόρφωσης για τον οργανισμό σας."
       }
     },
     "testimonials": {
       "testimonial1": {
-        "quote": "AppNode has transformed how our team builds internal tools. What used to take weeks now takes hours.",
+        "quote": "Το AppNode μεταμόρφωσε τον τρόπο που η ομάδα μας δημιουργεί εσωτερικά εργαλεία. Αυτό που χρειαζόταν εβδομάδες τώρα παίρνει ώρες.",
         "author": "Sarah Chen",
-        "role": "VP of Engineering",
+        "role": "Αντιπρόεδρος Μηχανικής",
         "company": "TechCorp"
       },
       "testimonial2": {
-        "quote": "The enterprise features give us the security and control we need while keeping the developer experience simple.",
+        "quote": "Τα επιχειρησιακά χαρακτηριστικά μας δίνουν την ασφάλεια και τον έλεγχο που χρειαζόμαστε ενώ διατηρούν την εμπειρία προγραμματιστή απλή.",
         "author": "Michael Torres",
         "role": "CTO",
         "company": "FinanceApp"
       },
       "testimonial3": {
-        "quote": "Our design team can now prototype and ship production-ready apps without waiting for engineering resources.",
+        "quote": "Η ομάδα σχεδίασης μας μπορεί τώρα να πρωτοτυποποιεί και να αποστέλλει εφαρμογές έτοιμες για παραγωγή χωρίς να περιμένει πόρους μηχανικής.",
         "author": "Emily Watson",
-        "role": "Head of Design",
+        "role": "Επικεφαλής Σχεδίασης",
         "company": "DesignStudio"
       },
       "testimonial4": {
-        "quote": "We migrated our entire admin panel to AppNode in just 2 weeks. The ROI has been incredible for our operations team.",
+        "quote": "Μεταφέραμε ολόκληρο τον πίνακα διαχείρισης μας στο AppNode σε μόλις 2 εβδομάδες. Η απόδοση επένδυσης ήταν απίστευτη για την ομάδα λειτουργιών μας.",
         "author": "James Kim",
-        "role": "Director of Operations",
+        "role": "Διευθυντής Λειτουργιών",
         "company": "CloudScale"
       },
       "testimonial5": {
-        "quote": "The SSO integration and audit logs were exactly what our compliance team needed. Onboarding was seamless.",
+        "quote": "Η ενσωμάτωση SSO και τα αρχεία ελέγχου ήταν ακριβώς αυτό που χρειαζόταν η ομάδα συμμόρφωσής μας. Η εισαγωγή ήταν απρόσκοπτη.",
         "author": "Anika Larsson",
-        "role": "Chief Security Officer",
+        "role": "Επικεφαλής Ασφάλειας",
         "company": "SecureBank"
       },
       "testimonial6": {
-        "quote": "AppNode's API flexibility allowed us to connect all our existing tools. Our team productivity doubled in the first month.",
+        "quote": "Η ευελιξία API του AppNode μας επέτρεψε να συνδέσουμε όλα τα υπάρχοντα εργαλεία μας. Η παραγωγικότητα της ομάδας μας διπλασιάστηκε τον πρώτο μήνα.",
         "author": "Ryan Park",
-        "role": "Engineering Manager",
+        "role": "Διευθυντής Μηχανικής",
         "company": "DataFlow"
       }
     },
     "form": {
-      "fullName": "Full Name",
-      "namePlaceholder": "John Smith",
-      "workEmail": "Work Email",
-      "emailPlaceholder": "john@company.com",
+      "fullName": "Πλήρες Όνομα",
+      "namePlaceholder": "Γιώργος Παπαδόπουλος",
+      "workEmail": "Email Εργασίας",
+      "emailPlaceholder": "giorgos@company.com",
       "company": "Εταιρεία",
-      "companyPlaceholder": "Acme Inc.",
-      "teamSize": "Team Size",
-      "selectTeamSize": "Select team size",
-      "teamSize1": "1-10 employees",
-      "teamSize2": "11-50 employees",
-      "teamSize3": "51-200 employees",
-      "teamSize4": "201-500 employees",
-      "teamSize5": "500+ employees",
-      "message": "How can we help?",
-      "messagePlaceholder": "Tell us about your use case and requirements...",
-      "sending": "Sending..."
+      "companyPlaceholder": "Acme Α.Ε.",
+      "teamSize": "Μέγεθος Ομάδας",
+      "selectTeamSize": "Επιλέξτε μέγεθος ομάδας",
+      "teamSize1": "1-10 εργαζόμενοι",
+      "teamSize2": "11-50 εργαζόμενοι",
+      "teamSize3": "51-200 εργαζόμενοι",
+      "teamSize4": "201-500 εργαζόμενοι",
+      "teamSize5": "500+ εργαζόμενοι",
+      "message": "Πώς μπορούμε να βοηθήσουμε;",
+      "messagePlaceholder": "Πείτε μας για την περίπτωση χρήσης και τις απαιτήσεις σας...",
+      "sending": "Αποστολή..."
     }
   },
   "auth": {
     "login": {
       "title": "Καλώς ήρθατε ξανά",
-      "subtitle": "Sign in to your AppNode account",
-      "email": "Email address",
-      "password": "Password",
-      "forgotPassword": "Forgot password?",
-      "noAccount": "Don't have an account?",
-      "signUpLink": "Sign up",
-      "invalidCredentials": "Invalid email or password",
-      "loggingIn": "Logging in...",
-      "orContinueWith": "Or continue with",
-      "decorativeTitle": "Build anything.",
-      "decorativeSubtitle": "Faster than ever.",
-      "decorativeDescription": "The world's simplest way to build apps with AI."
+      "subtitle": "Συνδεθείτε στον λογαριασμό AppNode σας",
+      "email": "Διεύθυνση email",
+      "password": "Κωδικός πρόσβασης",
+      "forgotPassword": "Ξεχάσατε τον κωδικό;",
+      "noAccount": "Δεν έχετε λογαριασμό;",
+      "signUpLink": "Εγγραφή",
+      "invalidCredentials": "Μη έγκυρο email ή κωδικός",
+      "loggingIn": "Σύνδεση...",
+      "orContinueWith": "Ή συνεχίστε με",
+      "decorativeTitle": "Δημιουργήστε οτιδήποτε.",
+      "decorativeSubtitle": "Πιο γρήγορα από ποτέ.",
+      "decorativeDescription": "Ο πιο απλός τρόπος στον κόσμο για να δημιουργήσετε εφαρμογές με AI."
     },
     "signup": {
-      "title": "Create your account",
-      "subtitle": "Start building with AppNode today",
-      "name": "Full name",
-      "email": "Email address",
-      "password": "Password",
-      "confirmPassword": "Confirm password",
-      "hasAccount": "Already have an account?",
-      "loginLink": "Log in",
-      "terms": "By signing up, you agree to our Terms of Service and Privacy Policy.",
-      "decorativeTitle": "Start building today",
-      "decorativeDescription": "Create your free account and start building amazing applications with AI in minutes.",
-      "step2Title": "Personalize your profile",
-      "step2Subtitle": "Choose an avatar color that represents you",
-      "step3Title": "Tell us about yourself",
-      "step3Subtitle": "This helps us personalize your experience",
-      "roleQuestion": "What best describes your role?",
-      "company": "Company name",
-      "creatingAccount": "Creating account...",
-      "createAccount": "Create account"
+      "title": "Δημιουργήστε τον λογαριασμό σας",
+      "subtitle": "Ξεκινήστε να δημιουργείτε με το AppNode σήμερα",
+      "name": "Πλήρες όνομα",
+      "email": "Διεύθυνση email",
+      "password": "Κωδικός πρόσβασης",
+      "confirmPassword": "Επιβεβαίωση κωδικού",
+      "hasAccount": "Έχετε ήδη λογαριασμό;",
+      "loginLink": "Σύνδεση",
+      "terms": "Εγγραφόμενοι, συμφωνείτε με τους Όρους Υπηρεσίας και την Πολιτική Απορρήτου μας.",
+      "decorativeTitle": "Ξεκινήστε να δημιουργείτε σήμερα",
+      "decorativeDescription": "Δημιουργήστε τον δωρεάν λογαριασμό σας και αρχίστε να δημιουργείτε εκπληκτικές εφαρμογές με AI σε λεπτά.",
+      "step2Title": "Εξατομικεύστε το προφίλ σας",
+      "step2Subtitle": "Επιλέξτε ένα χρώμα avatar που σας εκπροσωπεί",
+      "step3Title": "Πείτε μας για εσάς",
+      "step3Subtitle": "Αυτό μας βοηθά να εξατομικεύσουμε την εμπειρία σας",
+      "roleQuestion": "Τι περιγράφει καλύτερα τον ρόλο σας;",
+      "company": "Όνομα εταιρείας",
+      "creatingAccount": "Δημιουργία λογαριασμού...",
+      "createAccount": "Δημιουργία λογαριασμού"
     },
     "features": {
-      "aiPowered": "AI-powered development",
-      "shipFast": "Ship in minutes, not months",
-      "freeGenerations": "2 free generations to start",
-      "noCreditCard": "No credit card required",
-      "fullAccess": "Full access to all templates"
+      "aiPowered": "Ανάπτυξη με AI",
+      "shipFast": "Αποστολή σε λεπτά, όχι μήνες",
+      "freeGenerations": "2 δωρεάν δημιουργίες για ξεκίνημα",
+      "noCreditCard": "Δεν απαιτείται πιστωτική κάρτα",
+      "fullAccess": "Πλήρης πρόσβαση σε όλα τα πρότυπα"
     }
   },
   "docs": {
-    "title": "Documentation",
-    "subtitle": "Everything you need to build with AppNode",
-    "gettingStarted": "Getting Started",
-    "tutorials": "Tutorials",
-    "apiReference": "API Reference",
-    "examples": "Examples",
-    "searchPlaceholder": "Search documentation..."
+    "title": "Τεκμηρίωση",
+    "subtitle": "Όλα όσα χρειάζεστε για να δημιουργήσετε με το AppNode",
+    "gettingStarted": "Ξεκινώντας",
+    "tutorials": "Οδηγιες",
+    "apiReference": "Αναφορά API",
+    "examples": "Παραδείγματα",
+    "searchPlaceholder": "Αναζήτηση στην τεκμηρίωση..."
   },
   "blog": {
     "title": "Ιστολόγιο",
-    "subtitle": "News, updates, and insights from the AppNode team",
-    "readTime": "min read",
+    "subtitle": "Νέα, ενημερώσεις και επισημάνσεις από την ομάδα του AppNode",
+    "readTime": "λεπτά ανάγνωση",
     "categories": {
-      "all": "All",
-      "product": "Product",
-      "engineering": "Engineering",
+      "all": "Όλα",
+      "product": "Προϊόν",
+      "engineering": "Μηχανική",
       "community": "Κοινότητα",
-      "tutorials": "Tutorials"
+      "tutorials": "Οδηγίες"
     }
   },
   "careers": {
-    "title": "Join Our Team",
-    "subtitle": "Help us shape the future of app development",
-    "openPositions": "Open Positions",
+    "title": "Γίνετε Μέλος της Ομάδας μας",
+    "subtitle": "Βοηθήστε μας να διαμορφώσουμε το μέλλον της ανάπτυξης εφαρμογών",
+    "openPositions": "Ανοιχτές Θέσεις",
     "benefits": {
-      "title": "Why AppNode?",
-      "remote": "Remote First",
-      "remoteDesc": "Work from anywhere in the world",
-      "equity": "Equity",
-      "equityDesc": "Share in our success",
-      "health": "Health Benefits",
-      "healthDesc": "Comprehensive coverage for you and your family",
-      "learning": "Learning Budget",
-      "learningDesc": "Invest in your growth"
+      "title": "Γιατί AppNode;",
+      "remote": "Πρώτα Απομακρυσμένα",
+      "remoteDesc": "Εργαστείτε από οπουδήποτε στον κόσμο",
+      "equity": "Μετοχές",
+      "equityDesc": "Μοιραστείτε την επιτυχία μας",
+      "health": "Παροχές Υγείας",
+      "healthDesc": "Πλήρης κάλυψη για εσάς και την οικογένειά σας",
+      "learning": "Προϋπολογισμός Μάθησης",
+      "learningDesc": "Επενδύστε στην ανάπτυξή σας"
     },
-    "noPositions": "No open positions at the moment. Check back soon!",
-    "applyNow": "Apply Now"
+    "noPositions": "Καμία ανοιχτή θέση αυτή τη στιγμή. Ελέγξτε ξανά σύντομα!",
+    "applyNow": "Κάντε Αίτηση Τώρα"
   },
   "community": {
     "title": "Κοινότητα",
-    "subtitle": "Connect with AppNode builders around the world",
-    "discord": "Join our Discord",
-    "forum": "Community Forum",
-    "showcase": "Project Showcase",
-    "events": "Upcoming Events"
+    "subtitle": "Συνδεθείτε με δημιουργούς AppNode σε όλο τον κόσμο",
+    "discord": "Γίνετε μέλος στο Discord μας",
+    "forum": "Φόρουμ Κοινότητας",
+    "showcase": "Βιτρίνα Έργων",
+    "events": "Επερχόμενες Εκδηλώσεις"
   },
   "support": {
     "title": "Υποστήριξη",
-    "subtitle": "We're here to help",
-    "helpCenter": "Help Center",
-    "contactUs": "Contact Us",
-    "status": "System Status",
-    "faq": "FAQ"
+    "subtitle": "Είμαστε εδώ για να βοηθήσουμε",
+    "helpCenter": "Κέντρο Βοήθειας",
+    "contactUs": "Επικοινωνήστε",
+    "status": "Κατάσταση Συστήματος",
+    "faq": "Συχνές Ερωτήσεις"
   },
   "legal": {
     "terms": {
       "title": "Όροι Υπηρεσίας",
-      "lastUpdated": "Last updated"
+      "lastUpdated": "Τελευταία ενημέρωση"
     },
     "privacy": {
       "title": "Πολιτική Απορρήτου",
-      "lastUpdated": "Last updated"
+      "lastUpdated": "Τελευταία ενημέρωση"
     },
     "cookies": {
-      "title": "Cookie Policy",
-      "lastUpdated": "Last updated"
+      "title": "Πολιτική Cookies",
+      "lastUpdated": "Τελευταία ενημέρωση"
     }
   },
   "status": {
-    "title": "System Status",
-    "operational": "All Systems Operational",
-    "degraded": "Degraded Performance",
-    "outage": "Service Outage",
-    "maintenance": "Under Maintenance"
+    "title": "Κατάσταση Συστήματος",
+    "operational": "Όλα τα Συστήματα Λειτουργούν",
+    "degraded": "Μειωμένη Απόδοση",
+    "outage": "Διακοπή Υπηρεσίας",
+    "maintenance": "Υπό Συντήρηση"
   },
   "errors": {
     "404": {
       "title": "Η σελίδα δεν βρέθηκε",
-      "description": "The page you're looking for doesn't exist.",
-      "backHome": "Go Back Home"
+      "description": "Η σελίδα που ψάχνετε δεν υπάρχει.",
+      "backHome": "Επιστροφή στην Αρχική"
     },
     "500": {
-      "title": "Something Went Wrong",
-      "description": "We're working on fixing this. Please try again later.",
-      "retry": "Try Again"
+      "title": "Κάτι Πήγε Στραβά",
+      "description": "Εργαζόμαστε για τη διόρθωση. Παρακαλώ δοκιμάστε ξανά αργότερα.",
+      "retry": "Δοκιμάστε Ξανά"
     }
   },
   "supportPage": {
-    "heroTitle": "How can we help?",
-    "heroSubtitle": "Search our knowledge base or browse categories below",
-    "searchPlaceholder": "Search for help...",
-    "browseByCategory": "Browse by Category",
-    "popularArticles": "Popular Articles",
-    "needMoreHelp": "Need more help?",
-    "needMoreHelpDescription": "Can't find what you're looking for? Our support team is here to help.",
-    "chatWithSupport": "Chat with Support",
-    "emailSupport": "Email Support",
-    "faq": "Frequently Asked Questions",
-    "stillHaveQuestions": "Still Have Questions?",
-    "stillHaveQuestionsDescription": "Our team is ready to help you succeed. Reach out anytime.",
-    "viewGallery": "View Gallery",
-    "joinCommunity": "Join Community",
-    "browseGuides": "Browse Guides"
+    "heroTitle": "Πώς μπορούμε να βοηθήσουμε;",
+    "heroSubtitle": "Αναζητήστε στη βάση γνώσεών μας ή περιηγηθείτε στις κατηγορίες παρακάτω",
+    "searchPlaceholder": "Αναζήτηση βοήθειας...",
+    "browseByCategory": "Περιήγηση ανά Κατηγορία",
+    "popularArticles": "Δημοφιλή Άρθρα",
+    "needMoreHelp": "Χρειάζεστε περισσότερη βοήθεια;",
+    "needMoreHelpDescription": "Δεν μπορείτε να βρείτε αυτό που ψάχνετε; Η ομάδα υποστήριξής μας είναι εδώ για να βοηθήσει.",
+    "chatWithSupport": "Συνομιλία με Υποστήριξη",
+    "emailSupport": "Υποστήριξη μέσω Email",
+    "faq": "Συχνές Ερωτήσεις",
+    "stillHaveQuestions": "Έχετε Ακόμα Ερωτήσεις;",
+    "stillHaveQuestionsDescription": "Η ομάδα μας είναι έτοιμη να σας βοηθήσει να επιτύχετε. Επικοινωνήστε οποιαδήποτε στιγμή.",
+    "viewGallery": "Προβολή Συλλογής",
+    "joinCommunity": "Γίνετε Μέλος της Κοινότητας",
+    "browseGuides": "Περιήγηση Οδηγών"
   },
   "docsPage": {
-    "searchPlaceholder": "Search docs...",
-    "welcomeTitle": "Welcome to AppNode",
-    "welcomeDescription": "AppNode is an AI-powered development platform that lets you build complete web applications just by describing what you want. No coding experience required — it feels like having a whole team working for you.",
-    "whatYouCanBuild": "What You Can Build",
-    "howItWorks": "How It Works",
-    "howItWorksDescription": "Simply describe your project in plain language. Our AI understands your requirements, generates a complete blueprint, and builds production-ready code in real-time. Watch your app come to life with instant previews.",
-    "gettingStarted": "Getting Started",
-    "gettingStartedDescription": "Ready to build your first app? Here's how to get started in just a few steps:",
-    "startBuildingFree": "Start Building Free",
-    "viewQuickstartGuide": "View Quickstart Guide",
-    "copyPage": "Copy page"
+    "searchPlaceholder": "Αναζήτηση τεκμηρίωσης...",
+    "welcomeTitle": "Καλώς ήρθατε στο AppNode",
+    "welcomeDescription": "Το AppNode είναι μια πλατφόρμα ανάπτυξης με AI που σας επιτρέπει να δημιουργείτε πλήρεις διαδικτυακές εφαρμογές απλά περιγράφοντας αυτό που θέλετε. Δεν απαιτείται εμπειρία προγραμματισμού — είναι σαν να έχετε μια ολόκληρη ομάδα να εργάζεται για εσάς.",
+    "whatYouCanBuild": "Τι Μπορείτε να Δημιουργήσετε",
+    "howItWorks": "Πώς Λειτουργεί",
+    "howItWorksDescription": "Απλά περιγράψτε το έργο σας σε απλή γλώσσα. Η AI μας κατανοεί τις απαιτήσεις σας, δημιουργεί ένα πλήρες σχέδιο και κατασκευάζει κώδικα έτοιμο για παραγωγή σε πραγματικό χρόνο. Παρακολουθήστε την εφαρμογή σας να ζωντανεύει με άμεσες προεπισκοπήσεις.",
+    "gettingStarted": "Ξεκινώντας",
+    "gettingStartedDescription": "Έτοιμοι να δημιουργήσετε την πρώτη σας εφαρμογή; Δείτε πώς να ξεκινήσετε σε λίγα βήματα:",
+    "startBuildingFree": "Ξεκινήστε να Δημιουργείτε Δωρεάν",
+    "viewQuickstartGuide": "Δείτε τον Οδηγό Γρήγορης Εκκίνησης",
+    "copyPage": "Αντιγραφή σελίδας"
   },
   "blogPage": {
-    "badge": "Insights & Updates",
-    "subtitle": "Insights, tutorials, and updates from the AppNode team. Stay ahead with the latest in AI-powered development.",
-    "searchPlaceholder": "Search the blog...",
-    "noPostsFound": "No posts found matching your criteria.",
-    "latestPosts": "Latest Posts",
-    "loadMorePosts": "Load More Posts",
-    "subscribeTitle": "Subscribe to Our Newsletter",
-    "subscribeDescription": "Get the latest articles, tutorials, and product updates delivered straight to your inbox.",
-    "emailPlaceholder": "Enter your email",
-    "subscribe": "Subscribe",
-    "ctaTitle": "Ready to Build Something?",
-    "ctaDescription": "Turn your ideas into reality with AppNode. Start building today.",
-    "getStartedFree": "Get Started Free",
-    "browseCourses": "Browse Courses"
+    "badge": "Πληροφορίες & Ενημερώσεις",
+    "subtitle": "Πληροφορίες, οδηγοί και ενημερώσεις από την ομάδα του AppNode. Μείνετε μπροστά με τα τελευταία νέα στην ανάπτυξη με AI.",
+    "searchPlaceholder": "Αναζήτηση στο ιστολόγιο...",
+    "noPostsFound": "Δεν βρέθηκαν αναρτήσεις που να ταιριάζουν με τα κριτήριά σας.",
+    "latestPosts": "Τελευταίες Αναρτήσεις",
+    "loadMorePosts": "Φόρτωση Περισσότερων Αναρτήσεων",
+    "subscribeTitle": "Εγγραφείτε στο Ενημερωτικό μας Δελτίο",
+    "subscribeDescription": "Λάβετε τα τελευταία άρθρα, οδηγούς και ενημερώσεις προϊόντων απευθείας στα εισερχόμενά σας.",
+    "emailPlaceholder": "Εισάγετε το email σας",
+    "subscribe": "Εγγραφή",
+    "ctaTitle": "Έτοιμοι να Δημιουργήσετε Κάτι;",
+    "ctaDescription": "Μετατρέψτε τις ιδέες σας σε πραγματικότητα με το AppNode. Ξεκινήστε να δημιουργείτε σήμερα.",
+    "getStartedFree": "Ξεκινήστε Δωρεάν",
+    "browseCourses": "Περιήγηση Μαθημάτων"
   },
   "careersPage": {
     "badge": "Καριέρα",
-    "title": "Join the",
-    "titleEnd": "Team",
-    "subtitle": "Help us build the future of software development. We're looking for passionate people to join our mission.",
-    "viewOpenPositions": "View Open Positions",
-    "ourValues": "Our Values",
-    "whyJoinUs": "Why Join Us",
-    "benefitsAndPerks": "Benefits & Perks",
-    "openPositions": "Open Positions",
-    "applyNow": "Apply Now",
-    "dontSeeAFit": "Don't see a perfect fit?",
-    "dontSeeAFitDescription": "We're always looking for talented people. Send us your resume and we'll keep you in mind.",
-    "sendGeneralApplication": "Send General Application"
+    "title": "Γίνετε μέλος της",
+    "titleEnd": "Ομάδας",
+    "subtitle": "Βοηθήστε μας να χτίσουμε το μέλλον της ανάπτυξης λογισμικού. Αναζητούμε παθιασμένους ανθρώπους για να ενταχθούν στην αποστολή μας.",
+    "viewOpenPositions": "Δείτε τις Ανοιχτές Θέσεις",
+    "ourValues": "Οι Αξίες μας",
+    "whyJoinUs": "Γιατί να Ενταχθείτε",
+    "benefitsAndPerks": "Παροχές & Προνόμια",
+    "openPositions": "Ανοιχτές Θέσεις",
+    "applyNow": "Κάντε Αίτηση Τώρα",
+    "dontSeeAFit": "Δεν βρίσκετε την ιδανική θέση;",
+    "dontSeeAFitDescription": "Πάντα αναζητούμε ταλαντούχους ανθρώπους. Στείλτε μας το βιογραφικό σας και θα σας έχουμε υπόψη.",
+    "sendGeneralApplication": "Αποστολή Γενικής Αίτησης"
   },
   "communityPage": {
-    "exploreThe": "Explore the",
+    "exploreThe": "Εξερευνήστε την",
     "community": "Κοινότητα",
-    "subtitle": "Discover inspiring projects, connect with creators, and share your work with thousands of builders.",
-    "searchPlaceholder": "Search projects, templates, and creators...",
-    "projectsCreated": "Projects Created",
-    "activeBuilders": "Active Builders",
-    "monthlyVisitors": "Monthly Visitors",
-    "loadMoreProjects": "Load More Projects",
-    "topContributors": "Top Contributors",
-    "viewAll": "View All",
-    "recentDiscussions": "Recent Discussions",
-    "joinDiscussion": "Join Discussion",
-    "joinOurDiscord": "Join our Discord",
-    "discordDescription": "Connect with 5,000+ builders, get help, and share your projects.",
-    "joinDiscordButton": "Join Discord",
-    "ctaTitle": "Ready to share your creation?",
-    "ctaDescription": "Build something amazing and showcase it to the community.",
+    "subtitle": "Ανακαλύψτε εμπνευσμένα έργα, συνδεθείτε με δημιουργούς και μοιραστείτε τη δουλειά σας με χιλιάδες κατασκευαστές.",
+    "searchPlaceholder": "Αναζήτηση έργων, προτύπων και δημιουργών...",
+    "projectsCreated": "Έργα που Δημιουργήθηκαν",
+    "activeBuilders": "Ενεργοί Κατασκευαστές",
+    "monthlyVisitors": "Μηνιαίοι Επισκέπτες",
+    "loadMoreProjects": "Φόρτωση Περισσότερων Έργων",
+    "topContributors": "Κορυφαίοι Συνεισφέροντες",
+    "viewAll": "Προβολή Όλων",
+    "recentDiscussions": "Πρόσφατες Συζητήσεις",
+    "joinDiscussion": "Συμμετοχή στη Συζήτηση",
+    "joinOurDiscord": "Γίνετε μέλος στο Discord μας",
+    "discordDescription": "Συνδεθείτε με 5.000+ κατασκευαστές, λάβετε βοήθεια και μοιραστείτε τα έργα σας.",
+    "joinDiscordButton": "Γίνετε μέλος στο Discord",
+    "ctaTitle": "Έτοιμοι να μοιραστείτε τη δημιουργία σας;",
+    "ctaDescription": "Δημιουργήστε κάτι εκπληκτικό και παρουσιάστε το στην κοινότητα.",
     "startBuilding": "Ξεκινήστε να Δημιουργείτε"
   },
   "galleryPage": {
-    "title": "Project Gallery",
-    "subtitle": "Discover amazing projects built with AppNode by our community",
-    "startWithIdea": "Start with an idea",
-    "seeAll": "See all",
-    "view": "View",
-    "builtWith": "Built with AppNode",
-    "builtWithBy": "Built with AppNode by",
-    "comingSoon": "Coming soon",
-    "shareTitle": "Share Your Creation",
-    "shareSubtitle": "Built something cool with AppNode? Submit it to the gallery and inspire others.",
-    "submitProject": "Submit Your Project",
+    "title": "Συλλογή Έργων",
+    "subtitle": "Ανακαλύψτε εκπληκτικά έργα που δημιουργήθηκαν με το AppNode από την κοινότητά μας",
+    "startWithIdea": "Ξεκινήστε με μια ιδέα",
+    "seeAll": "Δείτε όλα",
+    "view": "Προβολή",
+    "builtWith": "Δημιουργήθηκε με AppNode",
+    "builtWithBy": "Δημιουργήθηκε με AppNode από",
+    "comingSoon": "Σύντομα",
+    "shareTitle": "Μοιραστείτε τη Δημιουργία σας",
+    "shareSubtitle": "Δημιουργήσατε κάτι υπέροχο με το AppNode; Υποβάλετέ το στη συλλογή και εμπνεύστε άλλους.",
+    "submitProject": "Υποβολή του Έργου σας",
     "categories": {
-      "all": "All",
-      "aiApps": "AI Apps",
-      "websites": "Websites",
-      "businessApps": "Business Apps",
-      "personalSoftware": "Personal Software",
-      "games": "Games"
+      "all": "Όλα",
+      "aiApps": "Εφαρμογές AI",
+      "websites": "Ιστοσελίδες",
+      "businessApps": "Επιχειρηματικές Εφαρμογές",
+      "personalSoftware": "Προσωπικό Λογισμικό",
+      "games": "Παιχνίδια"
     },
     "projects": {
       "ecommerceAI": "E-commerce AI",
@@ -1012,186 +1012,186 @@
   },
   "solutionsPage": {
     "badge": "Λύσεις",
-    "titleStart": "Built for how",
-    "titleHighlight": "you",
-    "titleEnd": "work",
-    "subtitle": "Whether you're a founder, designer, or marketer, AppNode adapts to your workflow and helps you ship faster.",
-    "ctaTitle": "Not sure which solution fits?",
-    "ctaSubtitle": "Start building for free and discover how AppNode can transform your workflow.",
-    "startBuildingFree": "Start Building Free",
-    "talkToSales": "Talk to Sales"
+    "titleStart": "Φτιαγμένο για το πώς",
+    "titleHighlight": "εσείς",
+    "titleEnd": "εργάζεστε",
+    "subtitle": "Είτε είστε ιδρυτής, σχεδιαστής ή marketer, το AppNode προσαρμόζεται στη ροή εργασίας σας και σας βοηθά να παραδώσετε πιο γρήγορα.",
+    "ctaTitle": "Δεν είστε σίγουροι ποια λύση ταιριάζει;",
+    "ctaSubtitle": "Ξεκινήστε να δημιουργείτε δωρεάν και ανακαλύψτε πώς το AppNode μπορεί να μεταμορφώσει τη ροή εργασίας σας.",
+    "startBuildingFree": "Ξεκινήστε να Δημιουργείτε Δωρεάν",
+    "talkToSales": "Επικοινωνία με Πωλήσεις"
   },
   "solutionsWeb3": {
-    "badge": "Web3 Solutions",
-    "title": "Build for Web3",
-    "subtitle": "Create decentralized applications with blockchain integration"
+    "badge": "Λύσεις Web3",
+    "title": "Δημιουργήστε για Web3",
+    "subtitle": "Δημιουργήστε αποκεντρωμένες εφαρμογές με ενσωμάτωση blockchain"
   },
   "useCasesBusinessApps": {
-    "badge": "Use Case",
-    "titleStart": "Build Business Apps",
-    "titleHighlight": "10x Faster",
-    "subtitle": "From dashboards to internal tools, build the business applications your team needs without waiting for engineering resources.",
-    "seeExamples": "See Examples",
+    "badge": "Περίπτωση Χρήσης",
+    "titleStart": "Δημιουργήστε Επιχειρηματικές Εφαρμογές",
+    "titleHighlight": "10 Φορές Πιο Γρήγορα",
+    "subtitle": "Από πίνακες ελέγχου μέχρι εσωτερικά εργαλεία, δημιουργήστε τις επιχειρηματικές εφαρμογές που χρειάζεται η ομάδα σας χωρίς να περιμένετε πόρους μηχανικής.",
+    "seeExamples": "Δείτε Παραδείγματα",
     "mockup": {
-      "salesDashboard": "Sales Dashboard",
-      "revenue": "Revenue",
-      "customers": "Customers",
-      "retention": "Retention"
+      "salesDashboard": "Πίνακας Πωλήσεων",
+      "revenue": "Έσοδα",
+      "customers": "Πελάτες",
+      "retention": "Διατήρηση"
     },
-    "whatYouCanBuild": "What You Can Build",
+    "whatYouCanBuild": "Τι Μπορείτε να Δημιουργήσετε",
     "useCases": {
       "dashboards": {
-        "title": "Dashboards",
-        "description": "KPI dashboards, analytics views, and reporting tools"
+        "title": "Πίνακες Ελέγχου",
+        "description": "Πίνακες KPI, προβολές αναλυτικών και εργαλεία αναφορών"
       },
       "workflowAutomation": {
-        "title": "Workflow Automation",
-        "description": "Automate repetitive tasks and approval processes"
+        "title": "Αυτοματοποίηση Ροής Εργασίας",
+        "description": "Αυτοματοποιήστε επαναλαμβανόμενες εργασίες και διαδικασίες έγκρισης"
       },
       "adminPanels": {
-        "title": "Admin Panels",
-        "description": "Custom admin interfaces for your data and systems"
+        "title": "Πίνακες Διαχείρισης",
+        "description": "Προσαρμοσμένες διεπαφές διαχείρισης για τα δεδομένα και τα συστήματά σας"
       },
       "crmTools": {
-        "title": "CRM Tools",
-        "description": "Customer management and sales tracking systems"
+        "title": "Εργαλεία CRM",
+        "description": "Συστήματα διαχείρισης πελατών και παρακολούθησης πωλήσεων"
       },
       "inventorySystems": {
-        "title": "Inventory Systems",
-        "description": "Track stock, orders, and supply chain data"
+        "title": "Συστήματα Αποθέματος",
+        "description": "Παρακολούθηση αποθέματος, παραγγελιών και δεδομένων εφοδιαστικής αλυσίδας"
       },
       "formsSurveys": {
-        "title": "Forms & Surveys",
-        "description": "Data collection tools and feedback systems"
+        "title": "Φόρμες & Έρευνες",
+        "description": "Εργαλεία συλλογής δεδομένων και συστήματα ανατροφοδότησης"
       }
     },
-    "ctaTitle": "Build your business app today",
-    "ctaSubtitle": "No engineering team required. Start building in minutes."
+    "ctaTitle": "Δημιουργήστε την επιχειρηματική σας εφαρμογή σήμερα",
+    "ctaSubtitle": "Δεν απαιτείται ομάδα μηχανικής. Ξεκινήστε σε λεπτά."
   },
   "useCasesMobileApps": {
-    "badge": "Use Case",
-    "titleStart": "Build Mobile Apps",
-    "titleHighlight": "Without Code",
-    "subtitle": "Create native-quality mobile experiences that work on iOS and Android. No Swift, Kotlin, or React Native required.",
-    "seeExamples": "See Examples",
-    "featuresTitle": "Mobile App Features",
+    "badge": "Περίπτωση Χρήσης",
+    "titleStart": "Δημιουργήστε Εφαρμογές Κινητών",
+    "titleHighlight": "Χωρίς Κώδικα",
+    "subtitle": "Δημιουργήστε εμπειρίες κινητών εγγενούς ποιότητας που λειτουργούν σε iOS και Android. Δεν απαιτείται Swift, Kotlin ή React Native.",
+    "seeExamples": "Δείτε Παραδείγματα",
+    "featuresTitle": "Χαρακτηριστικά Εφαρμογών Κινητών",
     "features": {
       "nativePerformance": {
-        "title": "Native Performance",
-        "description": "Apps that feel fast and responsive on any device"
+        "title": "Εγγενής Απόδοση",
+        "description": "Εφαρμογές που αισθάνονται γρήγορες και αποκριτικές σε κάθε συσκευή"
       },
       "pushNotifications": {
-        "title": "Push Notifications",
-        "description": "Engage users with timely push notifications"
+        "title": "Ειδοποιήσεις Push",
+        "description": "Εμπλέξτε τους χρήστες με έγκαιρες ειδοποιήσεις push"
       },
       "locationServices": {
-        "title": "Location Services",
-        "description": "Build location-aware features with GPS"
+        "title": "Υπηρεσίες Τοποθεσίας",
+        "description": "Δημιουργήστε λειτουργίες με επίγνωση τοποθεσίας με GPS"
       },
       "cameraMedia": {
-        "title": "Camera & Media",
-        "description": "Access camera, photos, and media libraries"
+        "title": "Κάμερα & Μέσα",
+        "description": "Πρόσβαση σε κάμερα, φωτογραφίες και βιβλιοθήκες μέσων"
       },
       "offlineSupport": {
-        "title": "Offline Support",
-        "description": "Apps that work even without internet"
+        "title": "Υποστήριξη Offline",
+        "description": "Εφαρμογές που λειτουργούν ακόμα και χωρίς διαδίκτυο"
       },
       "crossPlatform": {
-        "title": "Cross-Platform",
-        "description": "One codebase for iOS and Android"
+        "title": "Πολλαπλών Πλατφορμών",
+        "description": "Μία βάση κώδικα για iOS και Android"
       }
     },
-    "ctaTitle": "Build your mobile app today",
-    "ctaSubtitle": "From idea to App Store in record time."
+    "ctaTitle": "Δημιουργήστε την εφαρμογή κινητού σας σήμερα",
+    "ctaSubtitle": "Από την ιδέα στο App Store σε ρεκόρ χρόνο."
   },
   "useCasesRapidPrototyping": {
-    "badge": "Use Case",
-    "titleStart": "From Idea to Prototype in",
-    "titleHighlight": "Minutes",
-    "subtitle": "Validate ideas fast. Build working prototypes that look and feel like the real thing, without writing a single line of code.",
-    "startPrototyping": "Start Prototyping",
-    "seeExamples": "See Examples",
-    "comparisonTitle": "Traditional vs AppNode",
-    "totalTime": "Total time",
+    "badge": "Περίπτωση Χρήσης",
+    "titleStart": "Από Ιδέα σε Πρωτότυπο σε",
+    "titleHighlight": "Λεπτά",
+    "subtitle": "Επικυρώστε ιδέες γρήγορα. Δημιουργήστε λειτουργικά πρωτότυπα που φαίνονται και αισθάνονται σαν το πραγματικό, χωρίς να γράψετε ούτε μία γραμμή κώδικα.",
+    "startPrototyping": "Ξεκινήστε Πρωτοτυποποίηση",
+    "seeExamples": "Δείτε Παραδείγματα",
+    "comparisonTitle": "Παραδοσιακά vs AppNode",
+    "totalTime": "Συνολικός χρόνος",
     "traditional": {
-      "title": "Traditional Prototyping",
-      "totalTime": "6-10 weeks"
+      "title": "Παραδοσιακή Πρωτοτυποποίηση",
+      "totalTime": "6-10 εβδομάδες"
     },
     "appnode": {
-      "title": "AppNode Prototyping",
-      "totalTime": "1-2 hours"
+      "title": "Πρωτοτυποποίηση AppNode",
+      "totalTime": "1-2 ώρες"
     },
-    "benefitsTitle": "Why Rapid Prototyping Matters",
-    "ctaTitle": "Start prototyping today",
-    "ctaSubtitle": "Turn your ideas into working prototypes in minutes, not months."
+    "benefitsTitle": "Γιατί Έχει Σημασία η Γρήγορη Πρωτοτυποποίηση",
+    "ctaTitle": "Ξεκινήστε πρωτοτυποποίηση σήμερα",
+    "ctaSubtitle": "Μετατρέψτε τις ιδέες σας σε λειτουργικά πρωτότυπα σε λεπτά, όχι μήνες."
   },
   "privacyPage": {
     "badge": "Νομικά",
     "title": "Πολιτική Απορρήτου",
-    "lastUpdated": "Last updated: December 1, 2025",
-    "contactTitle": "10. Contact Us",
-    "contactDescription": "If you have any questions about this privacy policy or our privacy practices, please contact us at:"
+    "lastUpdated": "Τελευταία ενημέρωση: 1 Δεκεμβρίου 2025",
+    "contactTitle": "10. Επικοινωνήστε μαζί μας",
+    "contactDescription": "Εάν έχετε ερωτήσεις σχετικά με αυτήν την πολιτική απορρήτου ή τις πρακτικές απορρήτου μας, παρακαλούμε επικοινωνήστε μαζί μας στο:"
   },
   "termsPage": {
     "badge": "Νομικά",
     "title": "Όροι Υπηρεσίας",
-    "lastUpdated": "Last updated: December 1, 2025",
-    "contactTitle": "12. Contact Information",
-    "contactDescription": "If you have any questions about these Terms, please contact us at:"
+    "lastUpdated": "Τελευταία ενημέρωση: 1 Δεκεμβρίου 2025",
+    "contactTitle": "12. Στοιχεία Επικοινωνίας",
+    "contactDescription": "Εάν έχετε ερωτήσεις σχετικά με αυτούς τους Όρους, παρακαλούμε επικοινωνήστε μαζί μας στο:"
   },
   "cookiesPage": {
-    "badge": "Privacy",
-    "title": "Cookie Settings",
-    "subtitle": "Manage your cookie preferences. We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic.",
-    "required": "Required",
-    "saveSuccess": "Cookie preferences saved successfully!",
-    "savePreferences": "Save Preferences",
-    "acceptAll": "Accept All",
-    "aboutTitle": "About Our Cookies",
-    "aboutDescription": "Cookies are small text files that are stored on your device when you visit our website. They help us provide you with a better experience by remembering your preferences and understanding how you use our site.",
-    "moreInfo": "For more information about how we use cookies and your personal data, please read our",
+    "badge": "Απόρρητο",
+    "title": "Ρυθμίσεις Cookies",
+    "subtitle": "Διαχειριστείτε τις προτιμήσεις cookies σας. Χρησιμοποιούμε cookies για να βελτιώσουμε την εμπειρία περιήγησής σας, να εξυπηρετούμε εξατομικευμένο περιεχόμενο και να αναλύουμε την κίνησή μας.",
+    "required": "Απαιτείται",
+    "saveSuccess": "Οι προτιμήσεις cookies αποθηκεύτηκαν επιτυχώς!",
+    "savePreferences": "Αποθήκευση Προτιμήσεων",
+    "acceptAll": "Αποδοχή Όλων",
+    "aboutTitle": "Σχετικά με τα Cookies μας",
+    "aboutDescription": "Τα cookies είναι μικρά αρχεία κειμένου που αποθηκεύονται στη συσκευή σας όταν επισκέπτεστε τον ιστότοπό μας. Μας βοηθούν να σας προσφέρουμε καλύτερη εμπειρία θυμόμαστε τις προτιμήσεις σας και κατανοώντας πώς χρησιμοποιείτε τον ιστότοπό μας.",
+    "moreInfo": "Για περισσότερες πληροφορίες σχετικά με το πώς χρησιμοποιούμε cookies και τα προσωπικά σας δεδομένα, παρακαλούμε διαβάστε την",
     "privacyPolicyLink": "Πολιτική Απορρήτου",
     "essential": {
-      "title": "Essential Cookies",
-      "description": "These cookies are necessary for the website to function properly. They enable core functionality such as security, network management, and accessibility. You cannot disable these cookies."
+      "title": "Απαραίτητα Cookies",
+      "description": "Αυτά τα cookies είναι απαραίτητα για τη σωστή λειτουργία του ιστότοπου. Ενεργοποιούν βασικές λειτουργίες όπως ασφάλεια, διαχείριση δικτύου και προσβασιμότητα. Δεν μπορείτε να απενεργοποιήσετε αυτά τα cookies."
     },
     "analytics": {
-      "title": "Analytics Cookies",
-      "description": "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. This helps us improve our services."
+      "title": "Αναλυτικά Cookies",
+      "description": "Αυτά τα cookies μας βοηθούν να κατανοήσουμε πώς οι επισκέπτες αλληλεπιδρούν με τον ιστότοπό μας συλλέγοντας και αναφέροντας πληροφορίες ανώνυμα. Αυτό μας βοηθά να βελτιώσουμε τις υπηρεσίες μας."
     },
     "marketing": {
-      "title": "Marketing Cookies",
-      "description": "These cookies are used to track visitors across websites. They are used to display ads that are relevant and engaging for the individual user."
+      "title": "Cookies Μάρκετινγκ",
+      "description": "Αυτά τα cookies χρησιμοποιούνται για την παρακολούθηση επισκεπτών σε ιστότοπους. Χρησιμοποιούνται για την προβολή διαφημίσεων που είναι σχετικές και ελκυστικές για τον μεμονωμένο χρήστη."
     },
     "personalization": {
-      "title": "Personalization Cookies",
-      "description": "These cookies allow us to remember your preferences and provide enhanced, personalized features. They may be set by us or by third-party providers."
+      "title": "Cookies Εξατομίκευσης",
+      "description": "Αυτά τα cookies μας επιτρέπουν να θυμόμαστε τις προτιμήσεις σας και να παρέχουμε βελτιωμένες, εξατομικευμένες λειτουργίες. Μπορεί να ορίζονται από εμάς ή από τρίτους παρόχους."
     }
   },
   "statusPage": {
-    "title": "System Status",
-    "subtitle": "Real-time status and uptime information for AppNode services",
-    "allOperational": "All Systems Operational",
-    "uptimeTitle": "Uptime - Last 7 Days",
-    "servicesTitle": "Services",
-    "incidentsTitle": "Recent Incidents",
-    "subscribeTitle": "Get Status Updates",
-    "subscribeSubtitle": "Subscribe to receive notifications about system status and incidents",
-    "emailPlaceholder": "Enter your email",
-    "subscribeButton": "Subscribe"
+    "title": "Κατάσταση Συστήματος",
+    "subtitle": "Πληροφορίες κατάστασης και διαθεσιμότητας σε πραγματικό χρόνο για τις υπηρεσίες του AppNode",
+    "allOperational": "Όλα τα Συστήματα Λειτουργούν",
+    "uptimeTitle": "Διαθεσιμότητα - Τελευταίες 7 Ημέρες",
+    "servicesTitle": "Υπηρεσίες",
+    "incidentsTitle": "Πρόσφατα Περιστατικά",
+    "subscribeTitle": "Λάβετε Ενημερώσεις Κατάστασης",
+    "subscribeSubtitle": "Εγγραφείτε για να λαμβάνετε ειδοποιήσεις σχετικά με την κατάσταση συστήματος και περιστατικά",
+    "emailPlaceholder": "Εισάγετε το email σας",
+    "subscribeButton": "Εγγραφή"
   },
   "securityPage": {
-    "badge": "Enterprise-Grade Security",
+    "badge": "Ασφάλεια Επιχειρησιακού Επιπέδου",
     "titleHighlight": "Ασφάλεια",
-    "titleSuffix": "First",
-    "subtitle": "Your data security is our top priority. Learn about the measures we take to keep your information safe.",
-    "featuresTitle": "Security Features",
-    "practicesTitle": "Our Security Practices",
-    "bugBountyTitle": "Bug Bounty Program",
-    "bugBountyDescription": "Help us improve security and earn rewards for responsibly disclosing vulnerabilities.",
-    "reportTitle": "Report a Security Issue",
-    "reportDescription": "If you believe you've found a security vulnerability in AppNode, please report it to our security team immediately.",
-    "whitepaper": "Security Whitepaper"
+    "titleSuffix": "Πρώτα",
+    "subtitle": "Η ασφάλεια των δεδομένων σας είναι η κορυφαία προτεραιότητά μας. Μάθετε για τα μέτρα που λαμβάνουμε για να κρατήσουμε τις πληροφορίες σας ασφαλείς.",
+    "featuresTitle": "Χαρακτηριστικά Ασφάλειας",
+    "practicesTitle": "Οι Πρακτικές Ασφάλειάς μας",
+    "bugBountyTitle": "Πρόγραμμα Bug Bounty",
+    "bugBountyDescription": "Βοηθήστε μας να βελτιώσουμε την ασφάλεια και κερδίστε ανταμοιβές για υπεύθυνη αποκάλυψη ευπαθειών.",
+    "reportTitle": "Αναφέρετε Ένα Ζήτημα Ασφάλειας",
+    "reportDescription": "Εάν πιστεύετε ότι έχετε βρει μια ευπάθεια ασφάλειας στο AppNode, παρακαλούμε αναφέρετέ την στην ομάδα ασφαλείας μας αμέσως.",
+    "whitepaper": "Λευκή Βίβλος Ασφάλειας"
   },
   "changelogPage": {
     "badge": "Updates",
