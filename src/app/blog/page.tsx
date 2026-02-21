@@ -14,95 +14,107 @@ export default function BlogPage() {
   const postsPerPage = 10;
 
   const featuredPost = {
-    title: 'Introducing AppNode Agent: Build Apps 10x Faster with AI',
-    excerpt: 'We\'re excited to announce AppNode Agent, our most advanced AI development assistant. It understands your vision, generates production-ready code, and deploys your app automatically. With built-in testing, real-time collaboration, and one-click deployment, you can go from idea to live application in minutes. AppNode Agent represents a major leap forward in how software is built, making professional development accessible to everyone.',
+    title: t('blogPage.posts.featured.title'),
+    excerpt: t('blogPage.posts.featured.excerpt'),
     date: 'Mon, Feb 3, 2026',
-    category: 'Featured',
+    category: t('blogPage.categories.featured'),
   };
 
   const posts = [
     {
-      title: 'Building Production Apps with AppNode + Supabase',
-      excerpt: 'Learn how to connect your AppNode projects to Supabase for powerful database functionality. Our new integration makes it easy to add authentication, real-time subscriptions, and PostgreSQL databases to any app you build.',
+      title: t('blogPage.posts.supabase.title'),
+      excerpt: t('blogPage.posts.supabase.excerpt'),
       date: 'Fri, Jan 31, 2026',
       category: 'Product',
+      categoryKey: 'product',
     },
     {
-      title: 'Smart Styles: AI-Powered Design System for Your Apps',
-      excerpt: 'Introducing Smart Styles, our new feature that automatically creates beautiful, consistent designs across your entire application. No more manually adjusting colors, spacing, or typography.',
+      title: t('blogPage.posts.smartStyles.title'),
+      excerpt: t('blogPage.posts.smartStyles.excerpt'),
       date: 'Wed, Jan 22, 2026',
       category: 'Product',
+      categoryKey: 'product',
     },
     {
-      title: 'How AppNode Secures AI-Generated Code',
-      excerpt: 'AI-generated code is changing how software is built, but securing that code raises new challenges. This deep dive explores our hybrid approach combining static analysis with LLM-based reasoning for comprehensive security.',
+      title: t('blogPage.posts.security.title'),
+      excerpt: t('blogPage.posts.security.excerpt'),
       date: 'Mon, Jan 13, 2026',
       category: 'Engineering',
+      categoryKey: 'engineering',
     },
     {
-      title: '10 Prompting Tips for Better AI-Generated Apps',
-      excerpt: 'Master the art of vibe coding with these practical prompting strategies. Learn how to communicate effectively with AppNode Agent to get exactly the app you envision, faster.',
+      title: t('blogPage.posts.prompting.title'),
+      excerpt: t('blogPage.posts.prompting.excerpt'),
       date: 'Fri, Jan 3, 2026',
       category: 'Tips',
+      categoryKey: 'tips',
     },
     {
-      title: 'Community Spotlight: Apps Built This Month',
-      excerpt: 'Showcasing incredible applications built by our community. From SaaS dashboards to mobile apps, see what\'s possible when creativity meets AI-powered development.',
+      title: t('blogPage.posts.spotlight.title'),
+      excerpt: t('blogPage.posts.spotlight.excerpt'),
       date: 'Wed, Dec 25, 2025',
       category: 'Community',
+      categoryKey: 'community',
     },
     {
-      title: 'Real-time Collaboration: Build Together, Ship Faster',
-      excerpt: 'Multiple team members can now edit the same project simultaneously. See changes as they happen, leave comments on components, and manage version history with ease.',
+      title: t('blogPage.posts.collaboration.title'),
+      excerpt: t('blogPage.posts.collaboration.excerpt'),
       date: 'Mon, Dec 15, 2025',
       category: 'Product',
+      categoryKey: 'product',
     },
     {
-      title: 'From Zero to Production in One Day: A Case Study',
-      excerpt: 'How a solo founder built and launched a complete SaaS application using AppNode in under 8 hours. A step-by-step breakdown of the entire process.',
+      title: t('blogPage.posts.caseStudy.title'),
+      excerpt: t('blogPage.posts.caseStudy.excerpt'),
       date: 'Fri, Dec 5, 2025',
       category: 'Community',
+      categoryKey: 'community',
     },
     {
-      title: 'Understanding AppNode\'s Component Architecture',
-      excerpt: 'A technical deep dive into how AppNode structures generated code, manages state, and ensures optimal performance for applications of any scale.',
+      title: t('blogPage.posts.architecture.title'),
+      excerpt: t('blogPage.posts.architecture.excerpt'),
       date: 'Wed, Nov 26, 2025',
       category: 'Engineering',
+      categoryKey: 'engineering',
     },
     {
-      title: 'Mobile Apps on AppNode: iOS and Android Coming Soon',
-      excerpt: 'We\'re working on native mobile experiences so you can build apps without learning Swift or Kotlin. Our upcoming mobile export feature will generate optimized apps ready for the App Store and Google Play. Stay tuned!',
+      title: t('blogPage.posts.mobile.title'),
+      excerpt: t('blogPage.posts.mobile.excerpt'),
       date: 'Mon, Nov 17, 2025',
       category: 'Product',
+      categoryKey: 'product',
     },
     {
-      title: 'AppNode for Enterprise: Security, Compliance, and Scale',
-      excerpt: 'Announcing enterprise-grade features including SSO, audit logs, custom deployment options, and dedicated support for organizations building at scale.',
+      title: t('blogPage.posts.enterprise.title'),
+      excerpt: t('blogPage.posts.enterprise.excerpt'),
       date: 'Fri, Nov 7, 2025',
       category: 'News',
+      categoryKey: 'news',
     },
     {
-      title: 'The Future of No-Code: Where We\'re Headed',
-      excerpt: 'Our vision for the next generation of software development. AI agents, autonomous testing, and the democratization of building.',
+      title: t('blogPage.posts.future.title'),
+      excerpt: t('blogPage.posts.future.excerpt'),
       date: 'Wed, Oct 29, 2025',
       category: 'AI',
+      categoryKey: 'ai',
     },
     {
-      title: 'Performance Optimization Guide for AppNode Apps',
-      excerpt: 'Best practices for building fast, responsive applications. Learn about lazy loading, code splitting, and caching strategies.',
+      title: t('blogPage.posts.performance.title'),
+      excerpt: t('blogPage.posts.performance.excerpt'),
       date: 'Mon, Oct 20, 2025',
       category: 'Engineering',
+      categoryKey: 'engineering',
     },
   ];
 
   const categories = [
-    { name: 'All', slug: 'all' },
-    { name: 'AI', slug: 'ai' },
-    { name: 'Product', slug: 'product' },
-    { name: 'Engineering', slug: 'engineering' },
-    { name: 'Community', slug: 'community' },
-    { name: 'Tips', slug: 'tips' },
-    { name: 'News', slug: 'news' },
+    { name: t('blogPage.categories.all'), slug: 'all', key: 'All' },
+    { name: t('blogPage.categories.ai'), slug: 'ai', key: 'AI' },
+    { name: t('blogPage.categories.product'), slug: 'product', key: 'Product' },
+    { name: t('blogPage.categories.engineering'), slug: 'engineering', key: 'Engineering' },
+    { name: t('blogPage.categories.community'), slug: 'community', key: 'Community' },
+    { name: t('blogPage.categories.tips'), slug: 'tips', key: 'Tips' },
+    { name: t('blogPage.categories.news'), slug: 'news', key: 'News' },
   ];
 
   // Filter posts by category and search
@@ -169,13 +181,13 @@ export default function BlogPage() {
             <nav className="flex flex-wrap items-center gap-1 overflow-x-auto pb-2 sm:pb-0">
               {categories.map((category) => (
                 <button
-                  key={category.name}
+                  key={category.key}
                   onClick={() => {
-                    setActiveCategory(category.name);
+                    setActiveCategory(category.key);
                     setCurrentPage(1);
                   }}
                   className={`px-4 py-2 text-sm font-medium rounded-lg whitespace-nowrap transition-all ${
-                    activeCategory === category.name
+                    activeCategory === category.key
                       ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900'
                       : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
                   }`}

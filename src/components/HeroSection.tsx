@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from '@/context/LanguageContext';
@@ -42,7 +42,7 @@ export default function HeroSection() {
   const [images, setImages] = useState<File[]>([]);
   const [activeCategory, setActiveCategory] = useState<typeof categoryKeys[number]>('aiApps');
   const [viewImage, setViewImage] = useState<{image: string; title: string} | null>(null);
-  const { t } = useTranslation();
+  const { t, language, mounted } = useTranslation();
   
   const attachmentInputRef = useRef<HTMLInputElement>(null);
   const imageInputRef = useRef<HTMLInputElement>(null);
@@ -101,6 +101,7 @@ export default function HeroSection() {
 
   return (
     <section 
+      key={language.code}
       className="relative w-full flex flex-col items-center px-4 sm:px-6 lg:px-8 py-4 overflow-hidden bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors"
     >
       {/* Heading */}
@@ -210,7 +211,8 @@ export default function HeroSection() {
                 type="button" 
                 onClick={handleAttachmentClick}
                 className={`p-2 rounded-lg transition-colors hover:bg-black/5 dark:hover:bg-white/10 ${attachments.length > 0 ? 'text-blue-500' : 'text-gray-500 dark:text-gray-400'}`} 
-                title="Add attachments"
+                title={mounted ? t('common.addAttachments') : ''}
+                suppressHydrationWarning
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
@@ -221,7 +223,8 @@ export default function HeroSection() {
                 type="button" 
                 onClick={handleImageClick}
                 className={`p-2 rounded-lg transition-colors hover:bg-black/5 dark:hover:bg-white/10 ${images.length > 0 ? 'text-blue-500' : 'text-gray-500 dark:text-gray-400'}`} 
-                title="Add image"
+                title={mounted ? t('common.addImage') : ''}
+                suppressHydrationWarning
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>

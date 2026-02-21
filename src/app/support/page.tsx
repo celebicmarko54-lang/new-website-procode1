@@ -82,8 +82,14 @@ const knowledgeBase = [
 ];
 
 export default function SupportPage() {
-  const { t } = useTranslation();
+  const { t, language, mounted } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
+  
+  // Get translated content - recalculates on language change
+  const heroTitle = t('supportPage.heroTitle');
+  const heroSubtitle = t('supportPage.heroSubtitle');
+  const searchPlaceholder = t('supportPage.searchPlaceholder');
+  
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
     {
@@ -249,18 +255,18 @@ ${transcript}
     }
   };
 
-  const quickActions = [
-    { label: 'Getting Started', message: 'How do I get started with AppNode?' },
-    { label: 'Pricing', message: 'What are the pricing options?' },
-    { label: 'Export Code', message: 'Can I export my code?' },
-    { label: 'Live Agent', message: 'I\'d like to speak to a live agent' }
-  ];
+  const quickActions = useMemo(() => [
+    { label: t('supportPage.quickActions.gettingStarted'), message: 'How do I get started with AppNode?' },
+    { label: t('supportPage.quickActions.pricing'), message: 'What are the pricing options?' },
+    { label: t('supportPage.quickActions.exportCode'), message: 'Can I export my code?' },
+    { label: t('supportPage.quickActions.liveAgent'), message: 'I\'d like to speak to a live agent' }
+  ], [t, language.code]);
 
-  const categories = [
+  const categories = useMemo(() => [
     {
-      name: 'Getting Started',
+      name: t('supportPage.categories.gettingStarted.name'),
       articles: 12,
-      description: 'New to AppNode? Start here',
+      description: t('supportPage.categories.gettingStarted.description'),
       icon: (
         <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -268,9 +274,9 @@ ${transcript}
       ),
     },
     {
-      name: 'Account & Billing',
+      name: t('supportPage.categories.accountBilling.name'),
       articles: 8,
-      description: 'Manage your subscription and payments',
+      description: t('supportPage.categories.accountBilling.description'),
       icon: (
         <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
@@ -278,9 +284,9 @@ ${transcript}
       ),
     },
     {
-      name: 'Building Apps',
+      name: t('supportPage.categories.buildingApps.name'),
       articles: 24,
-      description: 'Learn how to create amazing apps',
+      description: t('supportPage.categories.buildingApps.description'),
       icon: (
         <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -288,9 +294,9 @@ ${transcript}
       ),
     },
     {
-      name: 'Customization',
+      name: t('supportPage.categories.customization.name'),
       articles: 15,
-      description: 'Style and personalize your projects',
+      description: t('supportPage.categories.customization.description'),
       icon: (
         <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
@@ -298,9 +304,9 @@ ${transcript}
       ),
     },
     {
-      name: 'Integrations',
+      name: t('supportPage.categories.integrations.name'),
       articles: 10,
-      description: 'Connect with third-party services',
+      description: t('supportPage.categories.integrations.description'),
       icon: (
         <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -308,9 +314,9 @@ ${transcript}
       ),
     },
     {
-      name: 'Troubleshooting',
+      name: t('supportPage.categories.troubleshooting.name'),
       articles: 18,
-      description: 'Fix common issues and errors',
+      description: t('supportPage.categories.troubleshooting.description'),
       icon: (
         <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -318,39 +324,39 @@ ${transcript}
         </svg>
       ),
     },
-  ];
+  ], [t, language.code]);
 
-  const popularArticles = [
-    { title: 'How to create your first app', views: '15.2K' },
-    { title: 'Understanding prompt engineering', views: '12.8K' },
-    { title: 'Connecting a custom domain', views: '9.5K' },
-    { title: 'Exporting your project code', views: '8.7K' },
-    { title: 'Team collaboration features', views: '7.3K' },
-    { title: 'API authentication setup', views: '6.9K' },
-  ];
+  const popularArticles = useMemo(() => [
+    { title: t('supportPage.popularArticlesList.firstApp'), views: '15.2K' },
+    { title: t('supportPage.popularArticlesList.promptEngineering'), views: '12.8K' },
+    { title: t('supportPage.popularArticlesList.customDomain'), views: '9.5K' },
+    { title: t('supportPage.popularArticlesList.exportCode'), views: '8.7K' },
+    { title: t('supportPage.popularArticlesList.teamCollab'), views: '7.3K' },
+    { title: t('supportPage.popularArticlesList.apiAuth'), views: '6.9K' },
+  ], [t, language.code]);
 
-  const faqs = [
+  const faqs = useMemo(() => [
     {
-      question: 'What is AppNode?',
-      answer: 'AppNode is an AI-powered platform that lets you build web applications by simply describing what you want in natural language.',
+      question: t('supportPage.faqs.whatIsAppNode.question'),
+      answer: t('supportPage.faqs.whatIsAppNode.answer'),
     },
     {
-      question: 'Do I need coding experience?',
-      answer: 'No! AppNode is designed for everyone. You can create professional apps without writing any code.',
+      question: t('supportPage.faqs.codingExperience.question'),
+      answer: t('supportPage.faqs.codingExperience.answer'),
     },
     {
-      question: 'Can I export my code?',
-      answer: 'Yes, you can export your complete project code at any time. You own everything you create.',
+      question: t('supportPage.faqs.exportCode.question'),
+      answer: t('supportPage.faqs.exportCode.answer'),
     },
     {
-      question: 'What technologies does AppNode use?',
-      answer: 'AppNode generates modern React/Next.js applications with Tailwind CSS styling.',
+      question: t('supportPage.faqs.technologies.question'),
+      answer: t('supportPage.faqs.technologies.answer'),
     },
     {
-      question: 'Is there a free plan?',
-      answer: 'Yes! We offer a generous free tier that lets you build and deploy apps at no cost.',
+      question: t('supportPage.faqs.freePlan.question'),
+      answer: t('supportPage.faqs.freePlan.answer'),
     },
-  ];
+  ], [t, language.code]);
 
   // Search results computed from all page content
   const searchResults = useMemo(() => {
@@ -388,25 +394,39 @@ ${transcript}
     return { matchedCategories, matchedArticles, matchedFAQs, matchedKB, total };
   }, [searchQuery, categories, popularArticles, faqs]);
 
+  // Show minimal content during SSR, then full translated content after mount
+  if (!mounted) {
+    return (
+      <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A]">
+        <Header />
+        <section className="pt-32 pb-20 px-6 relative z-20">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">&nbsp;</h1>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A]">
+    <div key={language.code} className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A]">
       <Header />
       
       {/* Hero Section with Search */}
       <section className="pt-32 pb-20 px-6 relative z-20">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            {t('supportPage.heroTitle')}
+            {heroTitle}
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
-            {t('supportPage.heroSubtitle')}
+            {heroSubtitle}
           </p>
           <div className="relative z-50" ref={searchRef}>
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder={t('supportPage.searchPlaceholder')}
+              placeholder={searchPlaceholder}
               className="w-full px-6 py-4 rounded-2xl text-gray-900 dark:text-white text-lg border border-gray-200 dark:border-2 dark:border-gray-800 bg-white dark:bg-[#1A1A1A] focus:outline-none focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-800 focus:border-gray-300 dark:focus:border-gray-700 shadow-lg"
             />
             <button className="absolute right-3 top-1/2 -translate-y-1/2 p-2 text-white rounded-xl hover:opacity-90 transition-all" style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}>

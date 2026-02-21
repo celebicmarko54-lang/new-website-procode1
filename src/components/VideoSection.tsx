@@ -5,21 +5,10 @@ import { useTranslation } from '@/context/LanguageContext';
 export default function VideoSection() {
   const { t, mounted } = useTranslation();
   
-  // Don't render translated content until mounted to prevent hydration mismatch
-  if (!mounted) {
-    return (
-      <section className="py-12 sm:py-16 md:py-24 bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12">
-            <div className="h-8 w-32 bg-gray-200 dark:bg-gray-800 rounded-full mx-auto mb-6 animate-pulse"></div>
-            <div className="h-12 w-96 bg-gray-200 dark:bg-gray-800 rounded mx-auto mb-6 animate-pulse"></div>
-            <div className="h-6 w-80 bg-gray-200 dark:bg-gray-800 rounded mx-auto animate-pulse"></div>
-          </div>
-          <div className="aspect-video bg-gray-200 dark:bg-gray-800 rounded-2xl animate-pulse"></div>
-        </div>
-      </section>
-    );
-  }
+  // Use direct translation with fallback to empty string for SSR
+  const badge = mounted ? t('homePage.videoSection.badge') : '';
+  const title = mounted ? t('homePage.videoSection.title') : '';
+  const subtitle = mounted ? t('homePage.videoSection.subtitle') : '';
 
   return (
     <section className="py-12 sm:py-16 md:py-24 bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
@@ -31,15 +20,15 @@ export default function VideoSection() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">{t('homePage.videoSection.badge')}</span>
+            <span className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300" suppressHydrationWarning>{badge}</span>
           </div>
           
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 tracking-tight">
-            {t('homePage.videoSection.title')}
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 tracking-tight" suppressHydrationWarning>
+            {title}
           </h2>
           
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto px-2">
-            {t('homePage.videoSection.subtitle')}
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto px-2" suppressHydrationWarning>
+            {subtitle}
           </p>
         </div>
 

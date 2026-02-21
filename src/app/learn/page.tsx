@@ -344,11 +344,6 @@ export default function LearnPage() {
             
             {/* Modal Content */}
             <div className="p-6 space-y-6" suppressHydrationWarning>
-              {/* Debug info */}
-              <div className="text-xs text-red-500">
-                DEBUG: language.code = {language.code}, 
-                t(learnPage.modal.overview) = {t('learnPage.modal.overview')}
-              </div>
               {/* Overview */}
               <div>
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2" suppressHydrationWarning>

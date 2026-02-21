@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useTranslation } from '@/context/LanguageContext';
 
 // AI Apps projects with actual images
@@ -68,11 +68,41 @@ const gamesProjects = [
 ];
 
 export default function GalleryPage() {
-  const { t } = useTranslation();
+  const { t, mounted, language } = useTranslation();
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedProject, setSelectedProject] = useState<typeof aiAppsProjects[0] | null>(null);
   
   const categoryKeys = ['all', 'aiApps', 'websites', 'businessApps', 'personalSoftware', 'games'] as const;
+
+  // Memoized translations that update when language changes
+  const categoryLabels = useMemo(() => ({
+    all: t('galleryPage.categories.all'),
+    aiApps: t('galleryPage.categories.aiApps'),
+    websites: t('galleryPage.categories.websites'),
+    businessApps: t('galleryPage.categories.businessApps'),
+    personalSoftware: t('galleryPage.categories.personalSoftware'),
+    games: t('galleryPage.categories.games'),
+  }), [t, language.code]);
+  
+  const galleryTitle = useMemo(() => t('galleryPage.title'), [t, language.code]);
+  const gallerySubtitle = useMemo(() => t('galleryPage.subtitle'), [t, language.code]);
+  const viewLabel = useMemo(() => t('galleryPage.view'), [t, language.code]);
+  const builtWithLabel = useMemo(() => t('galleryPage.builtWith'), [t, language.code]);
+
+  // Show skeleton during SSR
+  if (!mounted) {
+    return (
+      <div className="min-h-screen bg-white dark:bg-[#1A1A1A]">
+        <Header />
+        <section className="pt-32 pb-8 text-center">
+          <div className="max-w-3xl mx-auto px-4">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">&nbsp;</h1>
+          </div>
+        </section>
+        <Footer />
+      </div>
+    );
+  }
   
   // Filter projects based on active category
   const getFilteredProjects = () => {
@@ -101,7 +131,7 @@ export default function GalleryPage() {
   const emptySlots = Array(emptySlotCount).fill(null);
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] text-gray-900 dark:text-white transition-colors">
+    <div key={language.code} className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] text-gray-900 dark:text-white transition-colors">
       <Header />
       
       <main className="pt-24 pb-16">
@@ -109,10 +139,10 @@ export default function GalleryPage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-gray-900 dark:text-white">
-              {t('galleryPage.title')}
+              {galleryTitle}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400">
-              {t('galleryPage.subtitle')}
+              {gallerySubtitle}
             </p>
           </div>
 
@@ -128,7 +158,7 @@ export default function GalleryPage() {
                     : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
                 }`}
               >
-                {t(`galleryPage.categories.${catKey}`)}
+                {categoryLabels[catKey]}
               </button>
             ))}
           </div>
@@ -164,7 +194,7 @@ export default function GalleryPage() {
                       {t(`galleryPage.categories.${project.categoryKey}`)}
                     </span>
                   </div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">{t('galleryPage.builtWith')}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">{builtWithLabel}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600"></div>
@@ -174,7 +204,7 @@ export default function GalleryPage() {
                       onClick={() => setSelectedProject(project)}
                       className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
                     >
-                      {t('galleryPage.view')}
+                      {viewLabel}
                     </button>
                   </div>
                 </div>

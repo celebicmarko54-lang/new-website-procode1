@@ -4,13 +4,18 @@ import { useTheme } from '@/context/ThemeContext';
 import { useTranslation } from '@/context/LanguageContext';
 
 export default function ThemeToggle() {
-  const { theme, toggleTheme, mounted: themeMounted } = useTheme();
-  const { t, mounted: langMounted } = useTranslation();
+  const { theme, toggleTheme } = useTheme();
+  const { t, mounted, language } = useTranslation();
   
-  // Use static labels during SSR and before mounting to prevent hydration mismatch
-  const label = (themeMounted && langMounted) 
-    ? (theme === 'light' ? t('common.switchToDarkMode') : t('common.switchToLightMode'))
-    : 'Toggle theme';
+  // Calculate label directly - skip translation during SSR to avoid hydration issues
+  let label: string | undefined = undefined;
+  if (mounted) {
+    label = theme === 'light' ? t('common.switchToDarkMode') : t('common.switchToLightMode');
+    // Debug: log to browser console
+    if (typeof window !== 'undefined') {
+      console.log('[ThemeToggle] mounted=true, theme=', theme, 'language=', language.code, 'label=', label);
+    }
+  }
 
   return (
     <button
@@ -21,7 +26,6 @@ export default function ThemeToggle() {
       suppressHydrationWarning
     >
       {theme === 'light' ? (
-        // Moon icon for dark mode
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path 
             strokeLinecap="round" 
@@ -31,7 +35,6 @@ export default function ThemeToggle() {
           />
         </svg>
       ) : (
-        // Sun icon for light mode
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path 
             strokeLinecap="round" 

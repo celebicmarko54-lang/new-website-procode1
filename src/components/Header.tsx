@@ -10,7 +10,12 @@ import { useTranslation } from '@/context/LanguageContext';
 export default function Header() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
+  
+  // Debug: log translation in Header using console.warn to ensure it shows
+  if (typeof window !== 'undefined') {
+    console.warn('[Header CLIENT] language:', language.code, 't(common.switchToDarkMode):', t('common.switchToDarkMode'));
+  }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#f8fafc]/95 dark:bg-[#1A1A1A]/95 backdrop-blur-sm border-b border-gray-200/50 dark:border-b-2 dark:border-gray-800/50">

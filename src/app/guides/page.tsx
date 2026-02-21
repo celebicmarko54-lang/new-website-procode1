@@ -6,11 +6,20 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useTranslation } from '@/context/LanguageContext';
 
+interface GuideData {
+  translationKey: string;
+  readTimeMinutes: number;
+  categoryKey: string;
+  featured?: boolean;
+  icon: React.ReactNode;
+}
+
 interface Guide {
   title: string;
   description: string;
   readTime: string;
   category: string;
+  categoryKey: string;
   featured?: boolean;
   icon: React.ReactNode;
   guideContent: {
@@ -21,244 +30,127 @@ interface Guide {
 }
 
 export default function GuidesPage() {
-  const { t } = useTranslation();
-  const [activeCategory, setActiveCategory] = useState('All');
+  const { t, tArray } = useTranslation();
+  const [activeCategory, setActiveCategory] = useState('all');
   const [selectedGuide, setSelectedGuide] = useState<Guide | null>(null);
 
-  const guides: Guide[] = [
+  // Guide data with translation keys
+  const guideData: GuideData[] = [
     {
-      title: 'Complete Guide to Building SaaS Apps',
-      description: 'Everything you need to know about creating software-as-a-service applications with AppNode',
-      readTime: '15 min read',
-      category: 'SaaS',
+      translationKey: 'saasApps',
+      readTimeMinutes: 15,
+      categoryKey: 'saas',
       featured: true,
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       ),
-      guideContent: {
-        overview: 'Learn to build a complete SaaS application from scratch, including user authentication, subscription billing, and multi-tenant architecture.',
-        steps: [
-          'Set up your project with authentication (login, signup, password reset)',
-          'Create a dashboard layout with navigation and user settings',
-          'Implement subscription billing with Stripe integration',
-          'Build multi-tenant data isolation for different customer accounts',
-          'Add role-based access control for team members',
-          'Set up email notifications for key events',
-          'Deploy to production with monitoring'
-        ],
-        tips: [
-          'Start with a simple MVP and iterate based on user feedback',
-          'Use environment variables for all API keys and secrets',
-          'Implement proper error handling from the start'
-        ]
-      }
     },
     {
-      title: 'E-commerce Best Practices',
-      description: 'Learn how to build high-converting online stores with payment integration',
-      readTime: '12 min read',
-      category: 'E-commerce',
+      translationKey: 'ecommerce',
+      readTimeMinutes: 12,
+      categoryKey: 'ecommerce',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       ),
-      guideContent: {
-        overview: 'Create a high-converting e-commerce store with product catalog, shopping cart, and secure checkout.',
-        steps: [
-          'Design an attractive product catalog with categories and filters',
-          'Build a persistent shopping cart with local storage',
-          'Integrate Stripe or PayPal for payments',
-          'Create order confirmation and tracking pages',
-          'Set up inventory management',
-          'Implement customer reviews and ratings'
-        ],
-        tips: [
-          'Use high-quality product images',
-          'Keep the checkout process simple (3 steps max)',
-          'Show trust badges and secure payment icons'
-        ]
-      }
     },
     {
-      title: 'Mastering Dashboard Design',
-      description: 'Create beautiful and functional analytics dashboards that users love',
-      readTime: '10 min read',
-      category: 'Design',
+      translationKey: 'dashboard',
+      readTimeMinutes: 10,
+      categoryKey: 'design',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
         </svg>
       ),
-      guideContent: {
-        overview: 'Design professional analytics dashboards with clear data visualization and intuitive layouts.',
-        steps: [
-          'Define the key metrics your users need to see',
-          'Create a wireframe with proper visual hierarchy',
-          'Choose appropriate chart types for each data type',
-          'Implement interactive filters and date ranges',
-          'Add data export functionality',
-          'Optimize for different screen sizes'
-        ],
-        tips: [
-          'Put the most important metrics at the top',
-          'Use consistent color coding across all charts',
-          'Avoid cluttering - less is more'
-        ]
-      }
     },
     {
-      title: 'Authentication & Security',
-      description: 'Implement secure user authentication and protect your applications',
-      readTime: '8 min read',
-      category: 'Security',
+      translationKey: 'authentication',
+      readTimeMinutes: 8,
+      categoryKey: 'security',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
         </svg>
       ),
-      guideContent: {
-        overview: 'Implement robust authentication and security best practices to protect your users and data.',
-        steps: [
-          'Set up secure user registration with email verification',
-          'Implement password hashing with bcrypt or similar',
-          'Add OAuth social login (Google, GitHub)',
-          'Create protected routes and middleware',
-          'Implement session management with secure cookies',
-          'Add rate limiting to prevent brute force attacks'
-        ],
-        tips: [
-          'Never store passwords in plain text',
-          'Use HTTPS for all connections',
-          'Implement proper CORS policies'
-        ]
-      }
     },
     {
-      title: 'Database Integration Guide',
-      description: 'Connect your app to databases and manage data efficiently',
-      readTime: '14 min read',
-      category: 'Backend',
+      translationKey: 'database',
+      readTimeMinutes: 14,
+      categoryKey: 'backend',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
         </svg>
       ),
-      guideContent: {
-        overview: 'Learn to connect your application to databases and implement efficient data management.',
-        steps: [
-          'Choose the right database (SQL vs NoSQL)',
-          'Set up your database connection with environment variables',
-          'Design your data schema and relationships',
-          'Implement CRUD operations (Create, Read, Update, Delete)',
-          'Add data validation before database operations',
-          'Set up database migrations for schema changes'
-        ],
-        tips: [
-          'Always use parameterized queries to prevent SQL injection',
-          'Index frequently queried columns',
-          'Back up your data regularly'
-        ]
-      }
     },
     {
-      title: 'Responsive Design Patterns',
-      description: 'Make your apps look great on all devices with mobile-first design',
-      readTime: '9 min read',
-      category: 'Design',
+      translationKey: 'responsive',
+      readTimeMinutes: 9,
+      categoryKey: 'design',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
         </svg>
       ),
-      guideContent: {
-        overview: 'Create responsive designs that work beautifully across all screen sizes.',
-        steps: [
-          'Start with mobile-first CSS approach',
-          'Use flexible grid layouts (CSS Grid, Flexbox)',
-          'Implement responsive breakpoints (sm, md, lg, xl)',
-          'Optimize images for different screen densities',
-          'Test touch interactions on mobile devices',
-          'Use relative units (rem, %, vh/vw) instead of pixels'
-        ],
-        tips: [
-          'Test on real devices, not just browser dev tools',
-          'Consider thumb-friendly tap targets on mobile',
-          'Prioritize content for smaller screens'
-        ]
-      }
     },
     {
-      title: 'API Integration Masterclass',
-      description: 'Connect to third-party services and APIs seamlessly',
-      readTime: '11 min read',
-      category: 'Backend',
+      translationKey: 'api',
+      readTimeMinutes: 11,
+      categoryKey: 'backend',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
         </svg>
       ),
-      guideContent: {
-        overview: 'Learn to integrate external APIs and third-party services into your applications.',
-        steps: [
-          'Understand REST API fundamentals (endpoints, methods)',
-          'Set up API authentication (API keys, OAuth tokens)',
-          'Make HTTP requests (GET, POST, PUT, DELETE)',
-          'Handle API responses and errors gracefully',
-          'Implement retry logic for failed requests',
-          'Cache responses to improve performance'
-        ],
-        tips: [
-          'Store API keys in environment variables',
-          'Handle rate limiting with exponential backoff',
-          'Log API calls for debugging'
-        ]
-      }
     },
     {
-      title: 'Performance Optimization',
-      description: 'Speed up your apps for better user experience and SEO',
-      readTime: '13 min read',
-      category: 'Performance',
+      translationKey: 'performance',
+      readTimeMinutes: 13,
+      categoryKey: 'performance',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
-      guideContent: {
-        overview: 'Optimize your application for speed, better user experience, and improved SEO.',
-        steps: [
-          'Analyze current performance with Lighthouse',
-          'Optimize and compress images (WebP format, lazy loading)',
-          'Minimize JavaScript and CSS bundles',
-          'Implement code splitting and lazy loading',
-          'Set up proper caching headers',
-          'Use a CDN for static assets'
-        ],
-        tips: [
-          'Aim for < 3 second initial page load',
-          'Use performance budgets to track regressions',
-          'Monitor Core Web Vitals regularly'
-        ]
-      }
     },
   ];
 
-  const categories = [
-    { name: 'All', count: 8 },
-    { name: 'SaaS', count: 1 },
-    { name: 'E-commerce', count: 1 },
-    { name: 'Design', count: 2 },
-    { name: 'Security', count: 1 },
-    { name: 'Backend', count: 2 },
-    { name: 'Performance', count: 1 },
-  ];
+  // Transform guide data to use translations
+  const guides: Guide[] = guideData.map(data => ({
+    title: t(`guidesPage.guides.${data.translationKey}.title`),
+    description: t(`guidesPage.guides.${data.translationKey}.description`),
+    readTime: `${data.readTimeMinutes} ${t('guidesPage.minRead')}`,
+    category: t(`guidesPage.categories.${data.categoryKey}`),
+    categoryKey: data.categoryKey,
+    featured: data.featured,
+    icon: data.icon,
+    guideContent: {
+      overview: t(`guidesPage.guides.${data.translationKey}.overview`),
+      steps: tArray(`guidesPage.guides.${data.translationKey}.steps`),
+      tips: tArray(`guidesPage.guides.${data.translationKey}.tips`),
+    },
+  }));
 
-  const filteredGuides = activeCategory === 'All' 
+  const categories = [
+    { key: 'all', count: 8 },
+    { key: 'saas', count: 1 },
+    { key: 'ecommerce', count: 1 },
+    { key: 'design', count: 2 },
+    { key: 'security', count: 1 },
+    { key: 'backend', count: 2 },
+    { key: 'performance', count: 1 },
+  ].map(cat => ({
+    ...cat,
+    name: t(`guidesPage.categories.${cat.key}`),
+  }));
+
+  const filteredGuides = activeCategory === 'all' 
     ? guides 
-    : guides.filter(g => g.category === activeCategory);
+    : guides.filter(g => g.categoryKey === activeCategory);
 
   const featuredGuide = guides.find(g => g.featured);
 
@@ -306,13 +198,13 @@ export default function GuidesPage() {
             <div className="p-6 space-y-6">
               {/* Overview */}
               <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Overview</h3>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{t('guidesPage.modal.overview')}</h3>
                 <p className="text-gray-600 dark:text-gray-400">{selectedGuide.guideContent.overview}</p>
               </div>
               
               {/* Steps */}
               <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-3">How to do it</h3>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-3">{t('guidesPage.modal.howToDoIt')}</h3>
                 <ol className="space-y-3">
                   {selectedGuide.guideContent.steps.map((step, index) => (
                     <li key={index} className="flex gap-3">
@@ -331,7 +223,7 @@ export default function GuidesPage() {
                   <svg className="w-5 h-5 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  Pro Tips
+                  {t('guidesPage.modal.proTips')}
                 </h3>
                 <ul className="space-y-2">
                   {selectedGuide.guideContent.tips.map((tip, index) => (
@@ -352,7 +244,7 @@ export default function GuidesPage() {
                 onClick={() => setSelectedGuide(null)}
                 className="w-full py-3 bg-black dark:bg-white text-white dark:text-black font-medium rounded-xl hover:opacity-90 transition-colors"
               >
-                Got it!
+                {t('guidesPage.modal.gotIt')}
               </button>
             </div>
           </div>
@@ -417,10 +309,10 @@ export default function GuidesPage() {
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
               <button
-                key={category.name}
-                onClick={() => setActiveCategory(category.name)}
+                key={category.key}
+                onClick={() => setActiveCategory(category.key)}
                 className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
-                  activeCategory === category.name
+                  activeCategory === category.key
                     ? 'bg-black dark:bg-white text-white dark:text-black shadow-lg'
                     : 'bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white border border-gray-200 dark:border-2 dark:border-gray-700 hover:border-gray-300'
                 }`}
