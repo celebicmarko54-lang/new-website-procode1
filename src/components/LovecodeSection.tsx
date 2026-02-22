@@ -43,6 +43,35 @@ export default function LovecodeSection() {
   const animationRef = useRef<number | null>(null);
   const mouseStopTimeout = useRef<NodeJS.Timeout | null>(null);
   const wasMouseMoving = useRef(false);
+  
+  // Direct translations for mouse hint
+  const mouseHintTranslations: Record<string, string> = {
+    ko: '마우스를 움직여 탐색하세요',
+    en: 'Move your mouse to explore'
+  };
+  
+  // Read language from localStorage
+  const [langCode, setLangCode] = useState('en');
+  
+  useEffect(() => {
+    const stored = localStorage.getItem('appnode_language');
+    if (stored) {
+      setLangCode(stored);
+    }
+    
+    // Listen for storage changes (when user switches language)
+    const handleStorage = () => {
+      const updated = localStorage.getItem('appnode_language');
+      if (updated) {
+        setLangCode(updated);
+      }
+    };
+    
+    window.addEventListener('storage', handleStorage);
+    return () => window.removeEventListener('storage', handleStorage);
+  }, []);
+  
+  const mouseHint = mouseHintTranslations[langCode] || mouseHintTranslations.en;
 
   // Shuffle images only on client after mount to avoid hydration mismatch
   useEffect(() => {
@@ -183,7 +212,7 @@ export default function LovecodeSection() {
           isInView ? 'opacity-0' : 'opacity-60'
         }`}
       >
-        <p className="text-gray-500 dark:text-gray-400 text-xs sm:text-sm font-medium tracking-wide">Move your mouse to explore</p>
+        <p className="text-gray-500 dark:text-gray-400 text-xs sm:text-sm font-medium tracking-wide">{mouseHint}</p>
       </div>
     </section>
   );

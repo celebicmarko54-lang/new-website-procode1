@@ -47,6 +47,19 @@ export default function HeroSection() {
   const attachmentInputRef = useRef<HTMLInputElement>(null);
   const imageInputRef = useRef<HTMLInputElement>(null);
 
+  // Debug translations on mount
+  useEffect(() => {
+    if (typeof window !== 'undefined' && mounted) {
+      console.warn('[HeroSection DEBUG]', {
+        language: language.code,
+        mounted,
+        'hero.title': t('hero.title'),
+        'galleryPage.startWithIdea': t('galleryPage.startWithIdea'),
+        'galleryPage.categories.aiApps': t('galleryPage.categories.aiApps'),
+      });
+    }
+  }, [mounted, language.code]);
+
   const handleSubmit = () => {
     if (!prompt.trim() && attachments.length === 0 && images.length === 0) return;
     console.log('Submitting:', prompt);
@@ -211,7 +224,7 @@ export default function HeroSection() {
                 type="button" 
                 onClick={handleAttachmentClick}
                 className={`p-2 rounded-lg transition-colors hover:bg-black/5 dark:hover:bg-white/10 ${attachments.length > 0 ? 'text-blue-500' : 'text-gray-500 dark:text-gray-400'}`} 
-                title={mounted ? t('common.addAttachments') : ''}
+                title={mounted ? t('common.addAttachments') : 'Add attachments'}
                 suppressHydrationWarning
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -223,7 +236,7 @@ export default function HeroSection() {
                 type="button" 
                 onClick={handleImageClick}
                 className={`p-2 rounded-lg transition-colors hover:bg-black/5 dark:hover:bg-white/10 ${images.length > 0 ? 'text-blue-500' : 'text-gray-500 dark:text-gray-400'}`} 
-                title={mounted ? t('common.addImage') : ''}
+                title={mounted ? t('common.addImage') : 'Add image'}
                 suppressHydrationWarning
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -252,8 +265,10 @@ export default function HeroSection() {
       </div>
 
       {/* Start with an idea section - wider than chat */}
-      <div className="relative z-10 w-full max-w-[1100px] mx-auto mt-4 mb-4 px-2 sm:px-4">
-        <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">{t('galleryPage.startWithIdea')}</h3>
+      <div key={`gallery-${language.code}`} className="relative z-10 w-full max-w-[1100px] mx-auto mt-4 mb-4 px-2 sm:px-4">
+        <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">
+          {t('galleryPage.startWithIdea')}
+        </h3>
           
           {/* Category tabs */}
           <div className="flex flex-nowrap gap-1.5 mb-3 overflow-x-auto pb-1 scrollbar-hide">

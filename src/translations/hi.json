@@ -19,7 +19,19 @@
     "loading": "लोड हो रहा है...",
     "error": "त्रुटि",
     "success": "सफलता",
-    "comingSoon": "जल्द आ रहा है"
+    "comingSoon": "जल्द आ रहा है",
+    "switchToLightMode": "Switch to light mode",
+    "switchToDarkMode": "Switch to dark mode",
+    "addAttachments": "Add attachments",
+    "addImage": "Add image",
+    "moveMouseToExplore": "Move your mouse to explore"
+  },
+  "homePage": {
+    "videoSection": {
+      "badge": "How It Works",
+      "title": "See AppNode in Action",
+      "subtitle": "Watch how developers build production-ready apps in minutes using natural language."
+    }
   },
   "nav": {
     "products": "उत्पाद",
@@ -102,6 +114,23 @@
     "marketplace": {
       "title": "मार्केटप्लेस",
       "description": "Two-sided platforms connecting buyers and sellers."
+    },
+    "categories": {
+      "saasplatform": "SaaS Platform",
+      "gamingportal": "Gaming Portal",
+      "mapsnavigation": "Maps & Navigation",
+      "fashionstore": "Fashion Store",
+      "stylecollection": "Style Collection",
+      "beautyproducts": "Beauty Products",
+      "fitnesstracker": "Fitness Tracker",
+      "luxuryfragrance": "Luxury Fragrance",
+      "beautystore": "Beauty Store",
+      "streamingplatform": "Streaming Platform",
+      "gaminggearstore": "Gaming Gear Store",
+      "gamingstore": "Gaming Store",
+      "synthesizer": "Synthesizer",
+      "projectroadmap": "Project Roadmap",
+      "analyticsdashboard": "Analytics Dashboard"
     }
   },
   "testimonials": {
@@ -157,7 +186,8 @@
     "madeWith": "के साथ बनाया गया",
     "languageLabel": "भाषा",
     "tagline": "AI के साथ प्रोडक्शन-रेडी ऐप्स बनाएं",
-    "connectWithUs": "हमसे जुड़ें"
+    "connectWithUs": "हमसे जुड़ें",
+    "documentation": "Documentation"
   },
   "products": {
     "title": "उत्पाद",
@@ -731,7 +761,8 @@
       "message": "How can we help?",
       "messagePlaceholder": "Tell us about your use case and requirements...",
       "sending": "Sending..."
-    }
+    },
+    "trustedByText": "Trusted by leading teams and companies worldwide"
   },
   "auth": {
     "login": {
@@ -881,7 +912,70 @@
     "stillHaveQuestionsDescription": "Our team is ready to help you succeed. Reach out anytime.",
     "viewGallery": "View Gallery",
     "joinCommunity": "Join Community",
-    "browseGuides": "Browse Guides"
+    "browseGuides": "Browse Guides",
+    "articles": "articles",
+    "quickActions": {
+      "gettingStarted": "Getting Started",
+      "pricing": "Pricing",
+      "exportCode": "Export Code",
+      "liveAgent": "Live Agent"
+    },
+    "categories": {
+      "gettingStarted": {
+        "name": "Getting Started",
+        "description": "New to AppNode? Start here"
+      },
+      "accountBilling": {
+        "name": "Account & Billing",
+        "description": "Manage your subscription and payments"
+      },
+      "buildingApps": {
+        "name": "Building Apps",
+        "description": "Learn how to create amazing apps"
+      },
+      "customization": {
+        "name": "Customization",
+        "description": "Style and personalize your projects"
+      },
+      "integrations": {
+        "name": "Integrations",
+        "description": "Connect with third-party services"
+      },
+      "troubleshooting": {
+        "name": "Troubleshooting",
+        "description": "Fix common issues and errors"
+      }
+    },
+    "popularArticlesList": {
+      "firstApp": "How to create your first app",
+      "promptEngineering": "Understanding prompt engineering",
+      "customDomain": "Connecting a custom domain",
+      "exportCode": "Exporting your project code",
+      "teamCollab": "Team collaboration features",
+      "apiAuth": "API authentication setup"
+    },
+    "faqs": {
+      "whatIsAppNode": {
+        "question": "What is AppNode?",
+        "answer": "AppNode is an AI-powered platform that lets you build web applications by simply describing what you want in natural language."
+      },
+      "codingExperience": {
+        "question": "Do I need coding experience?",
+        "answer": "No! AppNode is designed for everyone. You can create professional apps without writing any code."
+      },
+      "exportCode": {
+        "question": "Can I export my code?",
+        "answer": "Yes, you can export your complete project code at any time. You own everything you create."
+      },
+      "technologies": {
+        "question": "What technologies does AppNode use?",
+        "answer": "AppNode generates modern React/Next.js applications with Tailwind CSS styling."
+      },
+      "freePlan": {
+        "question": "Is there a free plan?",
+        "answer": "Yes! We offer a generous free tier that lets you build and deploy apps at no cost."
+      }
+    }
   },
   "docsPage": {
     "searchPlaceholder": "Search docs...",
@@ -910,7 +1004,71 @@
     "ctaTitle": "Ready to Build Something?",
     "ctaDescription": "Turn your ideas into reality with AppNode. Start building today.",
     "getStartedFree": "Get Started Free",
-    "browseCourses": "Browse Courses"
+    "browseCourses": "Browse Courses",
+    "categories": {
+      "all": "All",
+      "featured": "Featured",
+      "ai": "AI",
+      "product": "Product",
+      "engineering": "Engineering",
+      "community": "Community",
+      "tips": "Tips",
+      "news": "News"
+    },
+    "posts": {
+      "featured": {
+        "title": "Introducing AppNode Agent: Build Apps 10x Faster with AI",
+        "excerpt": "We're excited to announce AppNode Agent, our most advanced AI development assistant. It understands your vision, generates production-ready code, and deploys your app automatically."
+      },
+      "supabase": {
+        "title": "Building Production Apps with AppNode + Supabase",
+        "excerpt": "Learn how to connect your AppNode projects to Supabase for powerful database functionality."
+      },
+      "smartStyles": {
+        "title": "Smart Styles: AI-Powered Design System for Your Apps",
+        "excerpt": "Introducing Smart Styles, our new feature that automatically creates beautiful, consistent designs."
+      },
+      "security": {
+        "title": "How AppNode Secures AI-Generated Code",
+        "excerpt": "A deep dive into our hybrid approach combining static analysis with LLM-based reasoning."
+      },
+      "prompting": {
+        "title": "10 Prompting Tips for Better AI-Generated Apps",
+        "excerpt": "Master the art of vibe coding with these practical prompting strategies."
+      },
+      "spotlight": {
+        "title": "Community Spotlight: Apps Built This Month",
+        "excerpt": "Showcasing incredible applications built by our community."
+      },
+      "collaboration": {
+        "title": "Real-time Collaboration: Build Together, Ship Faster",
+        "excerpt": "Multiple team members can now edit the same project simultaneously."
+      },
+      "caseStudy": {
+        "title": "From Zero to Production in One Day: A Case Study",
+        "excerpt": "How a solo founder built and launched a complete SaaS application using AppNode."
+      },
+      "architecture": {
+        "title": "Understanding AppNode's Component Architecture",
+        "excerpt": "A technical deep dive into how AppNode structures generated code."
+      },
+      "mobile": {
+        "title": "Mobile Apps on AppNode: iOS and Android Coming Soon",
+        "excerpt": "We're working on native mobile experiences so you can build apps without learning Swift or Kotlin."
+      },
+      "enterprise": {
+        "title": "AppNode for Enterprise: Security, Compliance, and Scale",
+        "excerpt": "Announcing enterprise-grade features including SSO, audit logs, and dedicated support."
+      },
+      "future": {
+        "title": "The Future of No-Code: Where We're Headed",
+        "excerpt": "Our vision for the next generation of software development."
+      },
+      "performance": {
+        "title": "Performance Optimization Guide for AppNode Apps",
+        "excerpt": "Best practices for building fast, responsive applications."
+      }
+    }
   },
   "careersPage": {
     "badge": "करियर",
@@ -1130,14 +1288,301 @@
     "title": "गोपनीयता नीति",
     "lastUpdated": "Last updated: December 1, 2025",
     "contactTitle": "10. Contact Us",
-    "contactDescription": "If you have any questions about this privacy policy or our privacy practices, please contact us at:"
+    "contactDescription": "If you have any questions about this privacy policy or our privacy practices, please contact us at:",
+    "intro": {
+      "p1": "AppNode Inc. (\"AppNode\", \"we\", \"us\", or \"our\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, store, and protect your personal information when you access or use our website, mobile applications, APIs, AI-powered code generation tools, platform, and related services (collectively, the \"Services\").",
+      "p2": "By using the Services, you consent to the practices described in this Privacy Policy. If you do not agree, please do not use the Services.",
+      "p3": "We may update this Privacy Policy from time to time. We will notify you of material changes by posting the updated policy here and updating the \"Last Updated\" date, and/or by email if the change is significant. Your continued use after changes constitutes acceptance."
+    },
+    "section1": {
+      "title": "1. Information We Collect",
+      "s1Title": "1.1 Information You Provide Directly",
+      "s1Items": [
+        "Account data: name, email, password, username",
+        "Profile data: avatar, bio, preferences, settings",
+        "Payment data: billing details (processed securely via third-party providers like Stripe – we do not store full card numbers)",
+        "User Content: prompts, inputs, code snippets, uploaded files, generated outputs you save or share",
+        "Communications: support tickets, emails, feedback, chat messages"
+      ],
+      "s2Title": "1.2 Automatically Collected Information",
+      "s2Items": [
+        "Device & technical data: IP address, browser type/version, OS, device ID, screen resolution",
+        "Usage data: pages visited, features used, time spent, prompts submitted (metadata), error logs",
+        "Cookies & tracking: session IDs, analytics (Google Analytics, Mixpanel or similar), performance metrics"
+      ],
+      "s3Title": "1.3 AI-Specific Data (Inputs & Outputs)",
+      "s3Items": [
+        "Prompts/Inputs you submit to generate code, apps, workflows",
+        "Generated Outputs (code, text, etc.)",
+        "Feedback/ratings on Outputs (thumbs up/down, comments)"
+      ],
+      "s3Note": "We do not intentionally collect sensitive personal data (health, race, religion, etc.) unless you voluntarily include it in prompts – in which case you assume responsibility."
+    },
+    "section2": {
+      "title": "2. How We Use Your Information",
+      "intro": "We use your information to:",
+      "items": [
+        "Provide, operate, maintain, and improve the Services (including generating AI Outputs)",
+        "Process subscriptions, payments, and billing",
+        "Authenticate accounts and prevent fraud/abuse",
+        "Send service-related communications (updates, security alerts, support responses)",
+        "Analyze usage trends to improve AI models (anonymized/aggregated only – see Section 3)",
+        "Personalize experience (e.g., recommended templates)",
+        "Comply with legal obligations, enforce Terms, protect rights/safety"
+      ],
+      "marketing": "Marketing: We may send promotional emails about AppNode features if you opt-in (you can unsubscribe anytime)."
+    },
+    "section3": {
+      "title": "3. AI Model Training & Improvement (Critical Section)",
+      "intro": "By default, we do not use your personal prompts, inputs, outputs, or User Content to train or fine-tune our foundational AI models unless you explicitly opt-in via account settings.",
+      "items": [
+        "Opt-in for Training: You can enable \"Allow my data to improve AppNode AI\" in Settings → Privacy. If enabled: anonymized/aggregated versions of your prompts, outputs, and feedback may be used to train, fine-tune, evaluate, and improve our AI models and safety systems.",
+        "Opt-out / Default: If not enabled (or if you disable it), your data is never used for model training. We may still use fully anonymized, aggregated usage statistics (no prompts/content) for general system improvements.",
+        "We do not sell your prompts, outputs, or personal data to third parties for their training.",
+        "If you opt-in, you can change your mind anytime – previous data already used cannot be retroactively removed from models, but new data won't be used."
+      ],
+      "note": "This aligns with best practices (e.g., Cursor/Anthropic-style opt-in) and helps comply with GDPR purpose limitation and EU AI Act transparency."
+    },
+    "section4": {
+      "title": "4. Sharing & Disclosure of Information",
+      "noSell": "We do not sell your personal information.",
+      "intro": "We share data only:",
+      "items": [
+        "With service providers (processors): cloud hosting (AWS/GCP), payment processors, analytics tools – bound by strict DPA contracts",
+        "For legal reasons: subpoenas, court orders, protect rights/safety (e.g., abuse detection)",
+        "In business transfers: merger, acquisition, asset sale (your data transferred under same protections)",
+        "With your consent or at your direction (e.g., sharing generated code via public link)"
+      ],
+      "international": "International transfers: Data is primarily stored in the US. For EU/EEA/UK users: we rely on Standard Contractual Clauses (SCCs) or EU-US Data Privacy Framework where applicable. Montenegro aligns closely with GDPR via recent harmonization."
+    },
+    "section5": {
+      "title": "5. Data Retention",
+      "intro": "We retain your data only as long as necessary:",
+      "items": [
+        "Account active → indefinite (until deletion request)",
+        "Prompts/Outputs: retained for your access (unless deleted); anonymized aggregates longer for analytics",
+        "Logs/technical data: up to 12–24 months for security/fraud prevention",
+        "After account deletion: data deleted within 30 days (except legal backups or anonymized aggregates)"
+      ],
+      "note": "You can request deletion anytime (see Rights below)."
+    },
+    "section6": {
+      "title": "6. Your Privacy Rights",
+      "intro": "Depending on your location (GDPR for EU/EEA/UK/Montenegro equivalent, CCPA/CPRA for California, etc.):",
+      "items": [
+        "Access: See what data we hold",
+        "Correction: Update inaccurate data",
+        "Deletion: Erase your data (subject to legal exceptions)",
+        "Opt-out of processing/sale: Including training opt-out",
+        "Restrict processing or object",
+        "Portability: Receive data in structured format",
+        "Withdraw consent anytime (doesn't affect prior processing)"
+      ],
+      "california": "For California residents: \"Do Not Sell or Share My Personal Information\" link on our site (though we don't sell).",
+      "submit": "Submit requests: privacy@appnode.ai",
+      "response": "We respond within 30–45 days (extendable per law). Verification required. No discrimination for exercising rights."
+    },
+    "section7": {
+      "title": "7. Data Security",
+      "p1": "We use industry-standard measures: encryption (TLS 1.3, at-rest AES-256), access controls, regular audits, penetration testing.",
+      "p2": "However, no system is 100% secure. We cannot guarantee absolute security – you use Services at your own risk.",
+      "p3": "In case of breach: we notify affected users and authorities as required by law (e.g., GDPR 72h)."
+    },
+    "section8": {
+      "title": "8. Cookies & Tracking Technologies",
+      "content": "We use essential cookies (for functionality), analytics, and performance cookies. You can manage via browser settings or our cookie banner. Blocking may limit functionality."
+    },
+    "section9": {
+      "title": "9. Children's Privacy",
+      "content": "Services not directed to children under 16 (or 13 in some jurisdictions). We do not knowingly collect data from children. If discovered, we delete immediately."
+    },
+    "section10": {
+      "title": "10. Third-Party Links & Integrations",
+      "content": "Services may link to third parties (e.g., GitHub integration). We are not responsible for their privacy practices."
+    },
+    "section11": {
+      "title": "11. Contact Us",
+      "company": "AppNode Inc.",
+      "privacyEmail": "Email: privacy@appnode.ai (for privacy requests)",
+      "generalEmail": "General: contact@appnode.ai"
+    }
   },
   "termsPage": {
     "badge": "कानूनी",
     "title": "सेवा की शर्तें",
     "lastUpdated": "Last updated: December 1, 2025",
     "contactTitle": "12. Contact Information",
-    "contactDescription": "If you have any questions about these Terms, please contact us at:"
+    "contactDescription": "If you have any questions about these Terms, please contact us at:",
+    "intro": {
+      "p1": "These Terms of Service (\"Terms\") govern your access to and use of the AppNode platform, including but not limited to its website, mobile applications, APIs, software, artificial intelligence tools, documentation, and any related services, features, or content (collectively, the \"Services\") provided by AppNode Inc. (\"AppNode,\" \"Company,\" \"we,\" \"us,\" or \"our\"). The Services are designed to assist users in generating web applications, code, workflows, and other digital outputs through AI-powered tools.",
+      "p2": "By accessing, registering for, or using the Services in any manner, you (the \"User,\" \"you,\" or \"your\") agree to be legally bound by these Terms, our Privacy Policy (incorporated herein by reference), and any additional terms or policies we may provide from time to time. If you do not agree to these Terms, you must immediately cease all use of the Services and are prohibited from accessing them.",
+      "p3": "These Terms form a binding legal agreement between you and AppNode. If you are using the Services on behalf of an organization, entity, or third party (e.g., your employer or client), you represent and warrant that you have the full authority to bind that organization, entity, or third party to these Terms, and \"you\" and \"your\" shall refer to such organization, entity, or third party.",
+      "p4": "We reserve the right to modify these Terms at any time, as detailed in Section 20 below. Your continued use of the Services after any such modifications constitutes your acceptance of the revised Terms."
+    },
+    "section1": {
+      "title": "1. Eligibility and Restrictions",
+      "intro": "To use the Services, you must:",
+      "items": [
+        "Be at least 18 years of age or the age of legal majority in your jurisdiction, whichever is greater.",
+        "Not be located in, or a resident or national of, any country or region subject to comprehensive U.S. sanctions or embargoes (including but not limited to Cuba, Iran, North Korea, Syria, Crimea, Donetsk People's Republic, or Luhansk People's Republic), or otherwise be a person or entity prohibited from receiving U.S. exports under applicable export control laws.",
+        "Not be listed on any U.S. government list of prohibited or restricted parties, including the Specially Designated Nationals List maintained by the U.S. Department of the Treasury."
+      ],
+      "minor": "If you are under 18 years of age or the age of legal majority, you may only use the Services under the direct supervision and with the express written consent of a parent or legal guardian who agrees to be bound by these Terms on your behalf. We may require proof of such consent at any time.",
+      "suspended": "You agree not to use the Services if you have previously been suspended or terminated from the Services."
+    },
+    "section2": {
+      "title": "2. Account Registration, Security, and Responsibilities",
+      "intro": "To access certain features of the Services, you must create an account (\"Account\"). You agree to:",
+      "items": [
+        "Provide accurate, current, and complete information during registration and keep such information updated.",
+        "Maintain the strict confidentiality of your Account credentials (e.g., username, password, API keys) and not share them with any third party.",
+        "Be solely responsible for all activities, actions, and omissions that occur under your Account, whether or not authorized by you.",
+        "Immediately notify us in writing at support@appnode.ai of any unauthorized use, suspected breach, or security incident related to your Account.",
+        "Use strong, unique passwords and enable any available security features (e.g., two-factor authentication)."
+      ],
+      "reserve": "We reserve the right to refuse registration, suspend, or terminate your Account at any time, with or without notice, for any reason or no reason, including but not limited to violations of these Terms, suspected fraud, security risks, legal requirements, or operational concerns. Upon suspension or termination, you must immediately cease all use of the Services.",
+      "acknowledge": "You acknowledge that we are not responsible for any loss or damage arising from your failure to comply with these security obligations. We may, but are not obligated to, monitor Account activity for security, compliance, or abuse prevention purposes."
+    },
+    "section3": {
+      "title": "3. Description of Services",
+      "intro": "The Services include AI-powered tools that enable users to generate, modify, and deploy web applications, code, workflows, scripts, digital content, and related outputs based on natural language prompts or other inputs. Features may include, without limitation:",
+      "items": [
+        "AI-driven code generation and editing.",
+        "Hosting, deployment, and scaling of applications.",
+        "Collaboration and sharing tools.",
+        "APIs, integrations with third-party services, and plugins.",
+        "Pre-built templates, libraries, and frameworks.",
+        "Analytics, debugging, and performance monitoring tools.",
+        "Paid subscription tiers with enhanced features (e.g., priority processing, higher usage limits).",
+        "Usage-based billing for computational resources, API calls, or storage."
+      ],
+      "evolve": "The Services may evolve over time, and we reserve the right to add, modify, suspend, or discontinue any features, functionalities, or aspects of the Services at any time, without notice or liability. We do not guarantee the availability, uptime, or performance of the Services, and access may be subject to scheduled maintenance, unscheduled downtime, or other interruptions.",
+      "thirdParty": "Certain features may require integration with third-party services (e.g., cloud providers, payment processors), and you are responsible for complying with those third parties' terms and policies. We are not liable for any issues arising from such integrations."
+    },
+    "section4": {
+      "title": "4. AI-Generated Output Disclaimer and Risks",
+      "intro": "The Services rely on artificial intelligence models and algorithms (\"AI Systems\") to process inputs and generate outputs (\"AI Outputs\"), which may include code, text, images, designs, or other content.",
+      "acknowledge": "You expressly acknowledge and agree that:",
+      "items": [
+        "AI Outputs are generated algorithmically and may contain errors, bugs, vulnerabilities, inaccuracies, biases, hallucinations, or omissions.",
+        "AI Outputs are not intended to be, and should not be treated as, professional advice, production-ready code, or guaranteed solutions.",
+        "AppNode makes no representations or warranties regarding the accuracy, completeness, security, legality, reliability, originality, non-infringement, or suitability of any AI Outputs for any purpose.",
+        "You are solely responsible for independently reviewing, testing, validating, securing, and auditing all AI Outputs before any use, deployment, or reliance thereon.",
+        "AI Outputs may inadvertently incorporate or resemble third-party intellectual property, and you assume all risks of intellectual property infringement claims arising from your use of AI Outputs.",
+        "The AI Systems may produce unexpected or undesirable results based on your inputs, and we are not responsible for any harmful, offensive, or inappropriate content generated.",
+        "You must comply with all applicable laws when using AI Outputs, including export controls, data protection regulations, and industry-specific standards (e.g., HIPAA for health data)."
+      ],
+      "disclaimer": "AppNode disclaims all liability for any damages, losses, or claims arising from your use of or reliance on AI Outputs, including but not limited to direct, indirect, incidental, consequential, or punitive damages. You agree to use AI Outputs at your own risk and peril."
+    },
+    "section5": {
+      "title": "5. User Content, Data, and Licenses",
+      "definition": "\"User Content\" means any prompts, data, code, text, images, files, or other materials you upload, submit, or input into the Services.",
+      "ownership": "Ownership: You retain all ownership rights in your User Content, subject to the licenses granted herein.",
+      "licenseIntro": "License to AppNode: By submitting User Content, you grant AppNode a perpetual, irrevocable, worldwide, non-exclusive, royalty-free, fully paid-up, sublicensable, and transferable license to:",
+      "licenseItems": [
+        "Host, store, process, reproduce, modify, distribute, display, and perform User Content as necessary to provide, maintain, and improve the Services.",
+        "Use User Content to detect, prevent, and mitigate abuse, fraud, security threats, or violations of these Terms.",
+        "Anonymize, aggregate, or de-identify User Content for analytical purposes, including to train, fine-tune, or improve our AI Systems, models, algorithms, and services.",
+        "Comply with legal obligations, respond to subpoenas, or enforce our rights."
+      ],
+      "represent": "You represent and warrant that: (i) you have all necessary rights, consents, and permissions to submit User Content and grant the above licenses; (ii) User Content does not infringe any third-party rights (e.g., intellectual property, privacy); and (iii) User Content complies with all applicable laws.",
+      "noSell": "We do not sell your User Content to third parties. However, we may share anonymized or aggregated data with partners for research or improvement purposes, provided it cannot be reasonably re-identified to you.",
+      "dataProcessing": "Data Processing: Our processing of User Content is further governed by our Privacy Policy. You consent to the transfer, storage, and processing of User Content in the United States or other jurisdictions where our servers or affiliates are located."
+    },
+    "section6": {
+      "title": "6. Acceptable Use Policy",
+      "intro": "You agree to use the Services only for lawful purposes and in compliance with these Terms. Prohibited activities include, but are not limited to:",
+      "items": [
+        "Violating any local, state, national, or international laws, regulations, or treaties.",
+        "Infringing or misappropriating any intellectual property rights, including copyrights, trademarks, patents, trade secrets, or rights of publicity.",
+        "Generating, distributing, or using the Services to create malicious code, viruses, malware, ransomware, spyware, or other harmful software.",
+        "Engaging in unauthorized access, hacking, probing, scanning, or exploiting vulnerabilities in the Services or any related systems.",
+        "Attempting to scrape, extract, reverse engineer, decompile, disassemble, or otherwise derive source code, algorithms, or proprietary information from the Services or AI Systems.",
+        "Bypassing, circumventing, or interfering with any security measures, rate limits, usage quotas, or access controls.",
+        "Creating multiple Accounts for abusive purposes, automating Account creation, or using bots/scripts to interact with the Services without authorization.",
+        "Uploading or generating content that is illegal, obscene, defamatory, harassing, threatening, discriminatory, hateful, or promotes violence, terrorism, or harm to others.",
+        "Interfering with, disrupting, or overloading the Services, including denial-of-service attacks, spamming, or excessive resource consumption.",
+        "Using the Services for high-risk activities, such as automated decision-making in employment, credit, housing, or legal contexts, without human oversight.",
+        "Exporting or re-exporting the Services or AI Outputs in violation of U.S. export control laws (e.g., EAR, ITAR)."
+      ],
+      "monitor": "We may monitor, review, or analyze your use of the Services to enforce this policy, detect violations, or improve the Services. Violations may result in immediate suspension or termination of your Account, without refund or liability."
+    },
+    "section7": {
+      "title": "7. Subscriptions, Billing, Fees, and Payments",
+      "intro": "Certain Services require a paid subscription (\"Subscription\"). By subscribing, you agree to:",
+      "items": [
+        "Pay all applicable fees, taxes, and charges (\"Fees\") in U.S. dollars via the payment method you provide.",
+        "Authorize automatic recurring billing for Subscriptions, which renew automatically unless canceled at least 24 hours before the renewal date.",
+        "Provide accurate, complete, and current billing information and promptly update it as needed.",
+        "Accept responsibility for any overdraft, insufficient funds, or other charges incurred due to payment failures."
+      ],
+      "fees": "Fees may include fixed subscription costs, usage-based charges (e.g., per API call, compute hour, or storage GB), or overage fees for exceeding plan limits. We may adjust Fees at any time upon notice, and continued use constitutes acceptance.",
+      "failure": "Failure to pay Fees may result in suspension or termination of your Account, with all outstanding balances remaining due and payable.",
+      "refunds": "Refunds: All Fees are non-refundable except as required by applicable law or explicitly stated in a separate Refund Policy. Partial refunds for unused portions of Subscriptions are not provided.",
+      "processors": "We use third-party payment processors (e.g., Stripe) and are not liable for their actions, errors, or security breaches."
+    },
+    "section8": {
+      "title": "8. Rate Limits, Quotas, and Resource Usage",
+      "intro": "To ensure fair usage and system stability, we may impose rate limits, usage quotas, computational restrictions, or other controls on the Services (e.g., maximum API requests per minute, total compute credits per month).",
+      "items": [
+        "Exceeding limits may result in throttling, additional Fees, suspension, or termination.",
+        "You agree not to attempt to circumvent these limits.",
+        "Resource-intensive activities (e.g., large-scale data processing) may be subject to prior approval."
+      ],
+      "noLiability": "We are not liable for any losses arising from enforcement of these limits."
+    },
+    "section9": {
+      "title": "9. Intellectual Property Rights",
+      "ownership": "All rights, title, and interest in and to the Services, including but not limited to software, AI Systems, models, algorithms, databases, user interfaces, branding, trademarks, logos, documentation, and any improvements or derivatives thereof (collectively, \"AppNode IP\"), are and shall remain the exclusive property of AppNode or its licensors.",
+      "license": "You are granted a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to access and use the Services solely for your internal purposes, subject to these Terms. This license terminates upon any violation or termination of these Terms.",
+      "agreeNot": "You agree not to:",
+      "items": [
+        "Copy, modify, adapt, translate, distribute, sell, lease, rent, or create derivative works of any AppNode IP.",
+        "Remove, alter, or obscure any copyright, trademark, or proprietary notices.",
+        "Use AppNode IP in any manner that could confuse consumers or imply endorsement."
+      ],
+      "feedback": "Any feedback, suggestions, or ideas you provide regarding the Services (\"Feedback\") shall be owned by AppNode, and you grant us a perpetual, irrevocable license to use, incorporate, or commercialize such Feedback without compensation or attribution."
+    },
+    "section10": {
+      "title": "10. Confidentiality",
+      "content": "You agree to keep confidential any non-public information disclosed by AppNode, including but not limited to technical specifications, pricing, beta features, and business strategies. This obligation survives termination of these Terms."
+    },
+    "section11": {
+      "title": "11. Disclaimers and Limitations of Liability",
+      "asIs": "THE SERVICES ARE PROVIDED \"AS IS\" AND \"AS AVAILABLE,\" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, ACCURACY, OR RELIABILITY.",
+      "noWarranties": "APPNODE MAKES NO WARRANTIES THAT THE SERVICES WILL BE UNINTERRUPTED, ERROR-FREE, SECURE, OR FREE OF VIRUSES OR HARMFUL COMPONENTS.",
+      "limitation": "TO THE MAXIMUM EXTENT PERMITTED BY LAW, APPNODE'S TOTAL LIABILITY FOR ANY CLAIMS ARISING OUT OF OR RELATED TO THESE TERMS OR THE SERVICES SHALL NOT EXCEED THE GREATER OF (A) THE AMOUNTS PAID BY YOU TO APPNODE IN THE 12 MONTHS PRECEDING THE CLAIM, OR (B) $100.",
+      "exclusion": "IN NO EVENT SHALL APPNODE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, GOODWILL, OR USE."
+    },
+    "section12": {
+      "title": "12. Indemnification",
+      "content": "You agree to indemnify, defend, and hold harmless AppNode, its affiliates, officers, directors, employees, agents, and licensors from and against any claims, liabilities, damages, losses, costs, or expenses (including reasonable attorneys' fees) arising out of or related to: (a) your use of the Services; (b) your User Content; (c) your violation of these Terms; or (d) your violation of any third-party rights."
+    },
+    "section13": {
+      "title": "13. Termination",
+      "byYou": "You may terminate your Account at any time by following the instructions in the Services or contacting support@appnode.ai.",
+      "byUs": "We may suspend or terminate your Account immediately, with or without notice, for any reason, including but not limited to violations of these Terms, non-payment, suspected fraud, or legal requirements.",
+      "effect": "Upon termination: (a) your access to the Services will cease; (b) any outstanding Fees remain due; (c) licenses granted to you terminate; and (d) provisions that by their nature should survive (e.g., indemnification, limitation of liability, confidentiality) shall survive."
+    },
+    "section14": {
+      "title": "14. Governing Law and Dispute Resolution",
+      "law": "These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, USA, without regard to conflict of law principles.",
+      "arbitration": "Any dispute arising out of or relating to these Terms shall be resolved exclusively by binding arbitration administered by the American Arbitration Association (AAA) under its Commercial Arbitration Rules. The arbitration shall be conducted in Wilmington, Delaware.",
+      "classWaiver": "YOU AND APPNODE AGREE TO WAIVE ANY RIGHT TO A JURY TRIAL AND TO PARTICIPATE IN CLASS ACTIONS OR CLASS ARBITRATIONS."
+    },
+    "section15": {
+      "title": "15. Miscellaneous",
+      "entireAgreement": "These Terms, together with the Privacy Policy and any other policies referenced herein, constitute the entire agreement between you and AppNode regarding the Services.",
+      "severability": "If any provision is found to be unenforceable, the remaining provisions shall remain in full force and effect.",
+      "waiver": "Our failure to enforce any provision shall not constitute a waiver of that provision.",
+      "assignment": "You may not assign or transfer these Terms without our prior written consent. We may assign these Terms freely."
+    },
+    "section16": {
+      "title": "16. Contact Information",
+      "company": "AppNode Inc.",
+      "supportEmail": "Email: support@appnode.ai",
+      "legalEmail": "Legal: legal@appnode.ai"
+    }
   },
   "cookiesPage": {
     "badge": "Privacy",
@@ -1403,6 +1848,202 @@
       "subtitle": "Join over 100,000 students who have transformed their skills with AppNode. All courses are completely free.",
       "createFreeAccount": "Create Free Account",
       "browseGuides": "Browse Guides"
+    },
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "lessons": "lessons",
+    "min": "min",
+    "courses": {
+      "gettingStarted": {
+        "title": "Getting Started with AppNode",
+        "description": "Learn the basics of creating apps with AI. Perfect for absolute beginners."
+      },
+      "buildingDashboard": {
+        "title": "Building Your First Dashboard",
+        "description": "Create a complete analytics dashboard from scratch with real-time data."
+      },
+      "advancedPrompting": {
+        "title": "Advanced Prompting Techniques",
+        "description": "Master the art of writing effective prompts that generate exactly what you need."
+      },
+      "ecommerce": {
+        "title": "E-commerce Store Masterclass",
+        "description": "Build a fully functional online store with payments, inventory, and orders."
+      },
+      "customComponents": {
+        "title": "Custom Components & Styling",
+        "description": "Create reusable components with custom themes that match your brand."
+      },
+      "deploying": {
+        "title": "Deploying to Production",
+        "description": "Launch your app to the world with custom domains and SSL certificates."
+      },
+      "mobileFirst": {
+        "title": "Building Mobile-First Apps",
+        "description": "Design responsive applications that work beautifully on any device."
+      },
+      "apiIntegration": {
+        "title": "API Integration Essentials",
+        "description": "Connect your app to external services, databases, and third-party APIs."
+      },
+      "authSecurity": {
+        "title": "Authentication & Security",
+        "description": "Implement secure user authentication and protect your application."
+      }
+    },
+    "modal": {
+      "overview": "Overview",
+      "howToDoIt": "How to do it",
+      "proTips": "Pro Tips",
+      "gotIt": "Got it!"
+    },
+    "tutorials": {
+      "gettingStarted": {
+        "overview": "Get started with AppNode by learning the fundamentals of AI-powered app development.",
+        "steps": [
+          "Sign up for a free AppNode account at appnode.ai",
+          "Navigate to the dashboard and click 'New Project'",
+          "Describe your app idea in the chat interface",
+          "Review the generated code and make adjustments",
+          "Deploy your app with one click"
+        ],
+        "tips": [
+          "Be specific when describing your app requirements",
+          "Start with simple projects to learn the workflow",
+          "Use the preview feature to test changes instantly"
+        ]
+      },
+      "buildingDashboard": {
+        "overview": "Learn to build professional analytics dashboards with charts, metrics, and real-time data.",
+        "steps": [
+          "Start a new project and describe your dashboard needs",
+          "Add chart components (bar, line, pie charts)",
+          "Connect to your data source or use sample data",
+          "Customize colors and layouts to match your brand",
+          "Add interactive filters and date pickers",
+          "Test responsiveness on different screen sizes",
+          "Deploy and share with your team"
+        ],
+        "tips": [
+          "Group related metrics together",
+          "Use consistent color coding for data categories",
+          "Keep the most important metrics at the top"
+        ]
+      },
+      "advancedPrompting": {
+        "overview": "Master prompt engineering to get better results from AppNode AI.",
+        "steps": [
+          "Understand the anatomy of a good prompt",
+          "Use specific technical requirements in your prompts",
+          "Learn to iterate and refine based on output",
+          "Combine multiple features in single prompts",
+          "Use reference examples to guide the AI"
+        ],
+        "tips": [
+          "Always specify the tech stack you want",
+          "Include accessibility requirements",
+          "Mention responsive design needs upfront"
+        ]
+      },
+      "ecommerce": {
+        "overview": "Create a complete e-commerce solution with product catalog, cart, and checkout.",
+        "steps": [
+          "Set up product catalog with categories",
+          "Build shopping cart functionality",
+          "Integrate Stripe for payments",
+          "Create order management system",
+          "Add inventory tracking",
+          "Set up email notifications",
+          "Implement user accounts and order history"
+        ],
+        "tips": [
+          "Start with a simple product catalog first",
+          "Test the checkout flow thoroughly",
+          "Use test payment credentials during development"
+        ]
+      },
+      "customComponents": {
+        "overview": "Learn to create consistent, reusable components with custom styling.",
+        "steps": [
+          "Define your brand colors and typography",
+          "Create a component library structure",
+          "Build reusable button, input, and card components",
+          "Implement dark mode support",
+          "Add animation and transitions",
+          "Document your components"
+        ],
+        "tips": [
+          "Use CSS variables for theming",
+          "Keep components small and focused",
+          "Test components in isolation"
+        ]
+      },
+      "deploying": {
+        "overview": "Learn to deploy your applications to production with confidence.",
+        "steps": [
+          "Prepare your app for production",
+          "Choose a hosting provider",
+          "Configure environment variables",
+          "Set up custom domains",
+          "Enable SSL certificates"
+        ],
+        "tips": [
+          "Always test in a staging environment first",
+          "Set up monitoring and alerts",
+          "Keep your dependencies updated"
+        ]
+      },
+      "mobileFirst": {
+        "overview": "Create responsive, mobile-first applications that work on all devices.",
+        "steps": [
+          "Understand mobile-first design principles",
+          "Use responsive breakpoints effectively",
+          "Optimize touch interactions",
+          "Handle different screen orientations",
+          "Test on real devices",
+          "Optimize performance for mobile networks"
+        ],
+        "tips": [
+          "Design for the smallest screen first",
+          "Use relative units (rem, %) instead of pixels",
+          "Test with throttled network conditions"
+        ]
+      },
+      "apiIntegration": {
+        "overview": "Learn to integrate external APIs and services into your applications.",
+        "steps": [
+          "Understand REST API fundamentals",
+          "Handle API authentication (API keys, OAuth)",
+          "Make GET, POST, PUT, DELETE requests",
+          "Handle errors and edge cases",
+          "Implement rate limiting",
+          "Cache API responses for performance"
+        ],
+        "tips": [
+          "Always handle API errors gracefully",
+          "Use environment variables for API keys",
+          "Implement retry logic for failed requests"
+        ]
+      },
+      "authSecurity": {
+        "overview": "Implement secure authentication and protect your application from threats.",
+        "steps": [
+          "Set up user registration and login",
+          "Implement password hashing",
+          "Add two-factor authentication",
+          "Handle session management",
+          "Protect against common attacks (XSS, CSRF)",
+          "Set up role-based access control"
+        ],
+        "tips": [
+          "Never store passwords in plain text",
+          "Use HTTPS everywhere",
+          "Regularly audit your security practices"
+        ]
+      }
     }
   },
   "guidesPage": {
@@ -1418,6 +2059,169 @@
       "subtitle": "Put what you've learned into practice. Create your first app today.",
       "getStartedFree": "Get Started Free",
       "browseTemplates": "Browse Templates"
+    },
+    "modal": {
+      "overview": "Overview",
+      "howToDoIt": "How to do it",
+      "proTips": "Pro Tips",
+      "gotIt": "Got it!"
+    },
+    "categories": {
+      "all": "All",
+      "saas": "SaaS",
+      "ecommerce": "E-commerce",
+      "design": "Design",
+      "security": "Security",
+      "backend": "Backend",
+      "performance": "Performance"
+    },
+    "minRead": "min read",
+    "guides": {
+      "saasApps": {
+        "title": "Complete Guide to Building SaaS Apps",
+        "description": "Everything you need to know about creating software-as-a-service applications with AppNode",
+        "overview": "Learn to build a complete SaaS application from scratch, including user authentication, subscription billing, and multi-tenant architecture.",
+        "steps": [
+          "Set up your project with authentication (login, signup, password reset)",
+          "Create a dashboard layout with navigation and user settings",
+          "Implement subscription billing with Stripe integration",
+          "Build multi-tenant data isolation for different customer accounts",
+          "Add role-based access control for team members",
+          "Set up email notifications for key events",
+          "Deploy to production with monitoring"
+        ],
+        "tips": [
+          "Start with a simple MVP and iterate based on user feedback",
+          "Use environment variables for all API keys and secrets",
+          "Implement proper error handling from the start"
+        ]
+      },
+      "ecommerce": {
+        "title": "E-commerce Best Practices",
+        "description": "Learn how to build high-converting online stores with payment integration",
+        "overview": "Create a high-converting e-commerce store with product catalog, shopping cart, and secure checkout.",
+        "steps": [
+          "Design an attractive product catalog with categories and filters",
+          "Build a persistent shopping cart with local storage",
+          "Integrate Stripe or PayPal for payments",
+          "Create order confirmation and tracking pages",
+          "Set up inventory management",
+          "Implement customer reviews and ratings"
+        ],
+        "tips": [
+          "Use high-quality product images",
+          "Keep the checkout process simple (3 steps max)",
+          "Show trust badges and secure payment icons"
+        ]
+      },
+      "dashboard": {
+        "title": "Mastering Dashboard Design",
+        "description": "Create beautiful and functional analytics dashboards that users love",
+        "overview": "Design professional analytics dashboards with clear data visualization and intuitive layouts.",
+        "steps": [
+          "Define the key metrics your users need to see",
+          "Create a wireframe with proper visual hierarchy",
+          "Choose appropriate chart types for each data type",
+          "Implement interactive filters and date ranges",
+          "Add data export functionality",
+          "Optimize for different screen sizes"
+        ],
+        "tips": [
+          "Put the most important metrics at the top",
+          "Use consistent color coding across all charts",
+          "Avoid cluttering - less is more"
+        ]
+      },
+      "authentication": {
+        "title": "Authentication & Security",
+        "description": "Implement secure user authentication and protect your applications",
+        "overview": "Implement robust authentication and security best practices to protect your users and data.",
+        "steps": [
+          "Set up secure user registration with email verification",
+          "Implement password hashing with bcrypt or similar",
+          "Add OAuth social login (Google, GitHub)",
+          "Create protected routes and middleware",
+          "Implement session management with secure cookies",
+          "Add rate limiting to prevent brute force attacks"
+        ],
+        "tips": [
+          "Never store passwords in plain text",
+          "Use HTTPS for all connections",
+          "Implement proper CORS policies"
+        ]
+      },
+      "database": {
+        "title": "Database Integration Guide",
+        "description": "Connect your app to databases and manage data efficiently",
+        "overview": "Learn to connect your application to databases and implement efficient data management.",
+        "steps": [
+          "Choose the right database (SQL vs NoSQL)",
+          "Set up your database connection with environment variables",
+          "Design your data schema and relationships",
+          "Implement CRUD operations (Create, Read, Update, Delete)",
+          "Add data validation before database operations",
+          "Set up database migrations for schema changes"
+        ],
+        "tips": [
+          "Always use parameterized queries to prevent SQL injection",
+          "Index frequently queried columns",
+          "Back up your data regularly"
+        ]
+      },
+      "responsive": {
+        "title": "Responsive Design Patterns",
+        "description": "Make your apps look great on all devices with mobile-first design",
+        "overview": "Create responsive designs that work beautifully across all screen sizes.",
+        "steps": [
+          "Start with mobile-first CSS approach",
+          "Use flexible grid layouts (CSS Grid, Flexbox)",
+          "Implement responsive breakpoints (sm, md, lg, xl)",
+          "Optimize images for different screen densities",
+          "Test touch interactions on mobile devices",
+          "Use relative units (rem, %, vh/vw) instead of pixels"
+        ],
+        "tips": [
+          "Test on real devices, not just browser dev tools",
+          "Consider thumb-friendly tap targets on mobile",
+          "Prioritize content for smaller screens"
+        ]
+      },
+      "api": {
+        "title": "API Integration Masterclass",
+        "description": "Connect to third-party services and APIs seamlessly",
+        "overview": "Learn to integrate external APIs and third-party services into your applications.",
+        "steps": [
+          "Understand REST API fundamentals (endpoints, methods)",
+          "Set up API authentication (API keys, OAuth tokens)",
+          "Make HTTP requests (GET, POST, PUT, DELETE)",
+          "Handle API responses and errors gracefully",
+          "Implement retry logic for failed requests",
+          "Cache responses to improve performance"
+        ],
+        "tips": [
+          "Store API keys in environment variables",
+          "Handle rate limiting with exponential backoff",
+          "Log API calls for debugging"
+        ]
+      },
+      "performance": {
+        "title": "Performance Optimization",
+        "description": "Speed up your apps for better user experience and SEO",
+        "overview": "Optimize your application for speed, better user experience, and improved SEO.",
+        "steps": [
+          "Analyze current performance with Lighthouse",
+          "Optimize and compress images (WebP format, lazy loading)",
+          "Minimize JavaScript and CSS bundles",
+          "Implement code splitting and lazy loading",
+          "Set up proper caching headers",
+          "Use a CDN for static assets"
+        ],
+        "tips": [
+          "Aim for < 3 second initial page load",
+          "Use performance budgets to track regressions",
+          "Monitor Core Web Vitals regularly"
+        ]
+      }
     }
   },
   "videosPage": {
@@ -1434,6 +2238,11 @@
       "startBuildingFree": "Start Building Free",
       "browseCourses": "Browse Courses",
       "subscribeYouTube": "Subscribe on YouTube"
+    },
+    "views": "views",
+    "featuredVideo": {
+      "title": "Complete AppNode Tutorial: From Zero to Deployed App",
+      "description": "The ultimate guide to building and deploying your first application with AppNode. Learn everything from account setup to live deployment on Cloudflare, Vercel, or GitHub Pages."
     }
   },
   "reportPage": {

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { useTranslation } from '@/context/LanguageContext';
 
 // Stock images from Unsplash for website/app screenshots
 const stockImages = [
@@ -45,6 +46,7 @@ export default function CommunityProjects() {
   const containerRef = useRef<HTMLDivElement>(null);
   const mouseHistory = useRef<{ x: number; y: number; time: number }[]>([]);
   const animationRef = useRef<number | null>(null);
+  const { t, language } = useTranslation();
 
   // Scroll detection for text animation
   useEffect(() => {
@@ -144,6 +146,7 @@ export default function CommunityProjects() {
 
   return (
     <div
+      key={language.code}
       ref={containerRef}
       className="relative min-h-[600px] overflow-hidden rounded-xl cursor-none"
       style={{ background: '#0a0a0a' }}
@@ -207,7 +210,7 @@ export default function CommunityProjects() {
         }`}
       >
         <p className="text-white/60 text-sm font-medium tracking-wide">
-          Move your mouse to explore
+          {t('common.moveMouseToExplore')}
         </p>
       </div>
 

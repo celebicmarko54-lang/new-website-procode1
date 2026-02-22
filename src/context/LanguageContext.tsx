@@ -3,15 +3,17 @@
 import React, { createContext, useContext, useEffect, useState, useCallback, useRef } from 'react';
 import translations, { TranslationKeys } from '@/translations';
 
-// Expose translations to window immediately at module load time
-// This should run on both server (no-op) and client (sets window property)
-const setWindowTranslations = () => {
-  if (typeof window !== 'undefined') {
-    (window as any).__translations = translations;
-    (window as any).__debug_loaded = true;
-  }
-};
-setWindowTranslations();
+// Debug: Check if translations loaded
+if (typeof window !== 'undefined') {
+  console.log('[LanguageContext Module Load]', {
+    translationsType: typeof translations,
+    translationsKeys: translations ? Object.keys(translations) : 'N/A',
+    hasEn: translations ? !!translations.en : false,
+    hasKo: translations ? !!translations.ko : false
+  });
+  (window as any).__translations = translations;
+  (window as any).__debug_loaded = true;
+}
 
 export interface Language {
   code: string;
@@ -71,23 +73,39 @@ function getNestedValue(obj: Record<string, unknown>, path: string): string {
   const keys = path.split('.');
   let result: unknown = obj;
   
+  // DEBUG: Write to DOM for specific problematic keys
+  const shouldDebug = path.includes('videoSection') || path.includes('switchToDarkMode');
+  if (shouldDebug && typeof window !== 'undefined') {
+    let debugDiv = document.getElementById('__translation_debug');
+    if (!debugDiv) {
+      debugDiv = document.createElement('div');
+      debugDiv.id = '__translation_debug';
+      debugDiv.style.cssText = 'position:fixed;top:0;left:0;background:red;color:white;z-index:99999;padding:10px;max-height:200px;overflow:auto;font-family:monospace;font-size:12px;';
+      document.body.appendChild(debugDiv);
+    }
+    debugDiv.innerHTML += `<div>[${path}] objKeys: ${obj ? Object.keys(obj).slice(0, 5).join(',') : 'null'}</div>`;
+  }
+  
   for (const key of keys) {
     if (result && typeof result === 'object') {
-      // Handle array indices
       if (Array.isArray(result)) {
         const index = parseInt(key, 10);
         if (!isNaN(index) && index >= 0 && index < result.length) {
           result = result[index];
         } else {
-          return path; // Invalid array index
+          return path;
         }
       } else if (key in result) {
         result = (result as Record<string, unknown>)[key];
       } else {
-        return path; // Key not found
+        if (shouldDebug && typeof window !== 'undefined') {
+          const debugDiv = document.getElementById('__translation_debug');
+          if (debugDiv) debugDiv.innerHTML += `<div>KEY NOT FOUND: ${key}</div>`;
+        }
+        return path;
       }
     } else {
-      return path; // Not an object
+      return path;
     }
   }
   
@@ -137,9 +155,15 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   // Load language from localStorage
   useEffect(() => {
+    console.log('[LanguageProvider] Loading from localStorage...');
+    console.log('[LanguageProvider] translations:', typeof translations, Object.keys(translations || {}).slice(0, 5));
+    
     const savedLang = localStorage.getItem('appnode_language');
+    console.log('[LanguageProvider] savedLang:', savedLang);
+    
     if (savedLang) {
       const found = languages.find(l => l.code === savedLang);
+      console.log('[LanguageProvider] found language:', found);
       if (found) {
         setLanguageState(found);
         languageRef.current = found;
@@ -152,6 +176,12 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (languageReady) {
       setMounted(true);
+      // Expose translations for debugging
+      if (typeof window !== 'undefined') {
+        (window as any).__translations = translations;
+        (window as any).__debug_loaded = true;
+        console.log('[LanguageProvider] Mounted, exposing translations');
+      }
     }
   }, [languageReady]);
 
@@ -161,20 +191,28 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem('appnode_language', lang.code);
   };
 
-  // Create translation function - NOT memoized so it always uses current ref value
+  // Translation function - uses ref to get the most current language
   const t = (key: string): string => {
-    // Handle null/undefined keys
     if (!key || typeof key !== 'string') {
       return '';
     }
     
-    // Use the ref to get the current language code - ensures we always have latest
     const langCode = languageRef.current.code;
     const currentTranslations = translations[langCode] || translations.en;
     
+    // DEBUG: Log every translation call on client
+    if (typeof window !== 'undefined') {
+      console.log('[t()]', key, '→', langCode);
+    }
+    
+    if (!currentTranslations) {
+      console.warn('[t()] No translations for:', langCode);
+      return key;
+    }
+    
     const result = getNestedValue(currentTranslations as Record<string, unknown>, key);
     
-    // Fallback to English if key not found in current language
+    // Fallback to English if key not found
     if (result === key && langCode !== 'en') {
       const englishResult = getNestedValue(translations.en as Record<string, unknown>, key);
       if (englishResult !== key) {
@@ -185,7 +223,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     return result;
   };
 
-  // Create translation function for arrays - also not memoized
+  // Translation function for arrays
   const tArray = (key: string): string[] => {
     if (!key || typeof key !== 'string') {
       return [];
@@ -195,13 +233,13 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     
     const result = getNestedArrayValue(currentTranslations as Record<string, unknown>, key);
     
-    // Fallback to English if array is empty
     if (result.length === 0 && langCode !== 'en') {
       return getNestedArrayValue(translations.en as Record<string, unknown>, key);
     }
     
     return result;
   };
+
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t, tArray, mounted }}>

@@ -114,6 +114,23 @@
     "marketplace": {
       "title": "Pazar Yerleri",
       "description": "Alıcıları ve satıcıları birbirine bağlayan çift taraflı platformlar."
+    },
+    "categories": {
+      "saasplatform": "SaaS Platform",
+      "gamingportal": "Gaming Portal",
+      "mapsnavigation": "Maps & Navigation",
+      "fashionstore": "Fashion Store",
+      "stylecollection": "Style Collection",
+      "beautyproducts": "Beauty Products",
+      "fitnesstracker": "Fitness Tracker",
+      "luxuryfragrance": "Luxury Fragrance",
+      "beautystore": "Beauty Store",
+      "streamingplatform": "Streaming Platform",
+      "gaminggearstore": "Gaming Gear Store",
+      "gamingstore": "Gaming Store",
+      "synthesizer": "Synthesizer",
+      "projectroadmap": "Project Roadmap",
+      "analyticsdashboard": "Analytics Dashboard"
     }
   },
   "testimonials": {
@@ -169,7 +186,8 @@
     "madeWith": "Yapılmıştır",
     "languageLabel": "Dil",
     "tagline": "Yapay zeka ile üretime hazır uygulamalar oluşturun",
-    "connectWithUs": "Bizimle bağlantı kurun"
+    "connectWithUs": "Bizimle bağlantı kurun",
+    "documentation": "Documentation"
   },
   "products": {
     "title": "Ürünler",
@@ -743,7 +761,8 @@
       "message": "Size nasıl yardımcı olabiliriz?",
       "messagePlaceholder": "Kullanım senaryonuzu ve gereksinimlerinizi anlatın...",
       "sending": "Gönderiliyor..."
-    }
+    },
+    "trustedByText": "Trusted by leading teams and companies worldwide"
   },
   "auth": {
     "login": {
@@ -902,12 +921,30 @@
       "liveAgent": "Canlı Temsilci"
     },
     "categories": {
-      "gettingStarted": { "name": "Başlarken", "description": "AppNode'da yeni misiniz? Buradan başlayın" },
-      "accountBilling": { "name": "Hesap ve Faturalama", "description": "Aboneliğinizi ve ödemelerinizi yönetin" },
-      "buildingApps": { "name": "Uygulama Oluşturma", "description": "Harika uygulamalar nasıl oluşturulur öğrenin" },
-      "customization": { "name": "Özelleştirme", "description": "Projelerinizi stilize edin ve kişiselleştirin" },
-      "integrations": { "name": "Entegrasyonlar", "description": "Üçüncü taraf hizmetleriyle bağlanın" },
-      "troubleshooting": { "name": "Sorun Giderme", "description": "Yaygın sorunları ve hataları düzeltin" }
+      "gettingStarted": {
+        "name": "Başlarken",
+        "description": "AppNode'da yeni misiniz? Buradan başlayın"
+      },
+      "accountBilling": {
+        "name": "Hesap ve Faturalama",
+        "description": "Aboneliğinizi ve ödemelerinizi yönetin"
+      },
+      "buildingApps": {
+        "name": "Uygulama Oluşturma",
+        "description": "Harika uygulamalar nasıl oluşturulur öğrenin"
+      },
+      "customization": {
+        "name": "Özelleştirme",
+        "description": "Projelerinizi stilize edin ve kişiselleştirin"
+      },
+      "integrations": {
+        "name": "Entegrasyonlar",
+        "description": "Üçüncü taraf hizmetleriyle bağlanın"
+      },
+      "troubleshooting": {
+        "name": "Sorun Giderme",
+        "description": "Yaygın sorunları ve hataları düzeltin"
+      }
     },
     "popularArticlesList": {
       "firstApp": "İlk uygulamanızı nasıl oluşturursunuz",
@@ -918,11 +955,26 @@
       "apiAuth": "API kimlik doğrulama kurulumu"
     },
     "faqs": {
-      "whatIsAppNode": { "question": "AppNode nedir?", "answer": "AppNode, doğal dilde ne istediğinizi tanımlayarak web uygulamaları oluşturmanıza olanak tanıyan yapay zeka destekli bir platformdur." },
-      "codingExperience": { "question": "Kodlama deneyimine ihtiyacım var mı?", "answer": "Hayır! AppNode herkes için tasarlanmıştır. Hiç kod yazmadan profesyonel uygulamalar oluşturabilirsiniz." },
-      "exportCode": { "question": "Kodumu dışa aktarabilir miyim?", "answer": "Evet, tam proje kodunuzu istediğiniz zaman dışa aktarabilirsiniz. Oluşturduğunuz her şeyin sahibi sizsiniz." },
-      "technologies": { "question": "AppNode hangi teknolojileri kullanıyor?", "answer": "AppNode, Tailwind CSS stiliyle modern React/Next.js uygulamaları oluşturur." },
-      "freePlan": { "question": "Ücretsiz plan var mı?", "answer": "Evet! Hiçbir maliyet olmadan uygulama oluşturmanıza ve dağıtmanıza olanak tanıyan cömert bir ücretsiz katman sunuyoruz." }
+      "whatIsAppNode": {
+        "question": "AppNode nedir?",
+        "answer": "AppNode, doğal dilde ne istediğinizi tanımlayarak web uygulamaları oluşturmanıza olanak tanıyan yapay zeka destekli bir platformdur."
+      },
+      "codingExperience": {
+        "question": "Kodlama deneyimine ihtiyacım var mı?",
+        "answer": "Hayır! AppNode herkes için tasarlanmıştır. Hiç kod yazmadan profesyonel uygulamalar oluşturabilirsiniz."
+      },
+      "exportCode": {
+        "question": "Kodumu dışa aktarabilir miyim?",
+        "answer": "Evet, tam proje kodunuzu istediğiniz zaman dışa aktarabilirsiniz. Oluşturduğunuz her şeyin sahibi sizsiniz."
+      },
+      "technologies": {
+        "question": "AppNode hangi teknolojileri kullanıyor?",
+        "answer": "AppNode, Tailwind CSS stiliyle modern React/Next.js uygulamaları oluşturur."
+      },
+      "freePlan": {
+        "question": "Ücretsiz plan var mı?",
+        "answer": "Evet! Hiçbir maliyet olmadan uygulama oluşturmanıza ve dağıtmanıza olanak tanıyan cömert bir ücretsiz katman sunuyoruz."
+      }
     }
   },
   "docsPage": {
@@ -1031,6 +1083,26 @@
       "underTheHood": {
         "title": "Perde Arkası: Yapay Zeka Kodunuzu Nasıl Üretiyor",
         "excerpt": "AppNode'un promptları üretime hazır uygulamalara nasıl dönüştürdüğüne teknik bir bakış."
+      },
+      "architecture": {
+        "title": "Understanding AppNode's Component Architecture",
+        "excerpt": "A technical deep dive into how AppNode structures generated code."
+      },
+      "mobile": {
+        "title": "Mobile Apps on AppNode: iOS and Android Coming Soon",
+        "excerpt": "We're working on native mobile experiences so you can build apps without learning Swift or Kotlin."
+      },
+      "enterprise": {
+        "title": "AppNode for Enterprise: Security, Compliance, and Scale",
+        "excerpt": "Announcing enterprise-grade features including SSO, audit logs, and dedicated support."
+      },
+      "future": {
+        "title": "The Future of No-Code: Where We're Headed",
+        "excerpt": "Our vision for the next generation of software development."
+      },
+      "performance": {
+        "title": "Performance Optimization Guide for AppNode Apps",
+        "excerpt": "Best practices for building fast, responsive applications."
       }
     }
   },
@@ -1259,42 +1331,87 @@
     "section1": {
       "title": "1. Topladığımız Bilgiler",
       "s1Title": "1.1 Doğrudan Sağladığınız Bilgiler",
-      "s1Items": ["Hesap verileri: ad, e-posta, şifre, kullanıcı adı", "Profil verileri: avatar, biyografi, tercihler, ayarlar", "Ödeme verileri: fatura detayları (Stripe gibi üçüncü taraf sağlayıcılar aracılığıyla güvenli bir şekilde işlenir - tam kart numaralarını saklamıyoruz)", "Kullanıcı İçeriği: promptlar, girişler, kod parçacıkları, yüklenen dosyalar, kaydettiğiniz veya paylaştığınız oluşturulan çıktılar", "İletişimler: destek biletleri, e-postalar, geri bildirimler, sohbet mesajları"],
+      "s1Items": [
+        "Hesap verileri: ad, e-posta, şifre, kullanıcı adı",
+        "Profil verileri: avatar, biyografi, tercihler, ayarlar",
+        "Ödeme verileri: fatura detayları (Stripe gibi üçüncü taraf sağlayıcılar aracılığıyla güvenli bir şekilde işlenir - tam kart numaralarını saklamıyoruz)",
+        "Kullanıcı İçeriği: promptlar, girişler, kod parçacıkları, yüklenen dosyalar, kaydettiğiniz veya paylaştığınız oluşturulan çıktılar",
+        "İletişimler: destek biletleri, e-postalar, geri bildirimler, sohbet mesajları"
+      ],
       "s2Title": "1.2 Otomatik Olarak Toplanan Bilgiler",
-      "s2Items": ["Cihaz ve teknik veriler: IP adresi, tarayıcı türü/sürümü, işletim sistemi, cihaz kimliği, ekran çözünürlüğü", "Kullanım verileri: ziyaret edilen sayfalar, kullanılan özellikler, harcanan süre, gönderilen promptlar (meta veriler), hata günlükleri", "Çerezler ve izleme: oturum kimlikleri, analitik (Google Analytics, Mixpanel veya benzeri), performans metrikleri"],
+      "s2Items": [
+        "Cihaz ve teknik veriler: IP adresi, tarayıcı türü/sürümü, işletim sistemi, cihaz kimliği, ekran çözünürlüğü",
+        "Kullanım verileri: ziyaret edilen sayfalar, kullanılan özellikler, harcanan süre, gönderilen promptlar (meta veriler), hata günlükleri",
+        "Çerezler ve izleme: oturum kimlikleri, analitik (Google Analytics, Mixpanel veya benzeri), performans metrikleri"
+      ],
       "s3Title": "1.3 Yapay Zekaya Özgü Veriler (Girişler ve Çıkışlar)",
-      "s3Items": ["Kod, uygulama, iş akışları oluşturmak için gönderdiğiniz Promptlar/Girişler", "Oluşturulan Çıktılar (kod, metin vb.)", "Çıktılar hakkında geri bildirim/derecelendirmeler (beğeni/beğenmeme, yorumlar)"],
+      "s3Items": [
+        "Kod, uygulama, iş akışları oluşturmak için gönderdiğiniz Promptlar/Girişler",
+        "Oluşturulan Çıktılar (kod, metin vb.)",
+        "Çıktılar hakkında geri bildirim/derecelendirmeler (beğeni/beğenmeme, yorumlar)"
+      ],
       "s3Note": "Hassas kişisel verileri (sağlık, ırk, din vb.) gönüllü olarak promptlara dahil etmediğiniz sürece kasıtlı olarak toplamıyoruz - bu durumda sorumluluğu siz üstlenirsiniz."
     },
     "section2": {
       "title": "2. Bilgilerinizi Nasıl Kullanıyoruz",
       "intro": "Bilgilerinizi şunlar için kullanıyoruz:",
-      "items": ["Hizmetleri sağlamak, işletmek, sürdürmek ve geliştirmek (yapay zeka çıktıları oluşturma dahil)", "Abonelikleri, ödemeleri ve faturalandırmayı işlemek", "Hesapları doğrulamak ve dolandırıcılığı/kötüye kullanımı önlemek", "Hizmetle ilgili iletişimler göndermek (güncellemeler, güvenlik uyarıları, destek yanıtları)", "Yapay zeka modellerini geliştirmek için kullanım eğilimlerini analiz etmek (yalnızca anonimleştirilmiş/toplulaştırılmış - Bölüm 3'e bakın)", "Deneyimi kişiselleştirmek (örn. önerilen şablonlar)", "Yasal yükümlülüklere uymak, Şartları uygulamak, hakları/güvenliği korumak"],
+      "items": [
+        "Hizmetleri sağlamak, işletmek, sürdürmek ve geliştirmek (yapay zeka çıktıları oluşturma dahil)",
+        "Abonelikleri, ödemeleri ve faturalandırmayı işlemek",
+        "Hesapları doğrulamak ve dolandırıcılığı/kötüye kullanımı önlemek",
+        "Hizmetle ilgili iletişimler göndermek (güncellemeler, güvenlik uyarıları, destek yanıtları)",
+        "Yapay zeka modellerini geliştirmek için kullanım eğilimlerini analiz etmek (yalnızca anonimleştirilmiş/toplulaştırılmış - Bölüm 3'e bakın)",
+        "Deneyimi kişiselleştirmek (örn. önerilen şablonlar)",
+        "Yasal yükümlülüklere uymak, Şartları uygulamak, hakları/güvenliği korumak"
+      ],
       "marketing": "Pazarlama: Kaydolursanız AppNode özellikleri hakkında tanıtım e-postaları gönderebiliriz (istediğiniz zaman abonelikten çıkabilirsiniz)."
     },
     "section3": {
       "title": "3. Yapay Zeka Model Eğitimi ve İyileştirme (Kritik Bölüm)",
       "intro": "Varsayılan olarak, hesap ayarları aracılığıyla açıkça kaydolmadığınız sürece kişisel promptlarınızı, girişlerinizi, çıkışlarınızı veya Kullanıcı İçeriğinizi temel yapay zeka modellerimizi eğitmek veya ince ayar yapmak için kullanmayız.",
-      "items": ["Eğitim için Kaydolma: Ayarlar → Gizlilik'te \"Verilerimin AppNode AI'yı geliştirmesine izin ver\"i etkinleştirebilirsiniz. Etkinleştirilirse: promptlarınızın, çıkışlarınızın ve geri bildirimlerinizin anonimleştirilmiş/toplulaştırılmış sürümleri yapay zeka modellerimizi ve güvenlik sistemlerimizi eğitmek, ince ayar yapmak, değerlendirmek ve geliştirmek için kullanılabilir.", "Devre Dışı Bırakma / Varsayılan: Etkinleştirilmemişse (veya devre dışı bırakırsanız), verileriniz asla model eğitimi için kullanılmaz. Genel sistem iyileştirmeleri için tamamen anonimleştirilmiş, toplulaştırılmış kullanım istatistiklerini (prompt/içerik olmadan) hala kullanabiliriz.", "Promptlarınızı, çıkışlarınızı veya kişisel verilerinizi eğitimleri için üçüncü taraflara satmıyoruz.", "Kaydolursanız, istediğiniz zaman fikrinizi değiştirebilirsiniz - daha önce kullanılan veriler modellerden geriye dönük olarak kaldırılamaz, ancak yeni veriler kullanılmayacaktır."],
+      "items": [
+        "Eğitim için Kaydolma: Ayarlar → Gizlilik'te \"Verilerimin AppNode AI'yı geliştirmesine izin ver\"i etkinleştirebilirsiniz. Etkinleştirilirse: promptlarınızın, çıkışlarınızın ve geri bildirimlerinizin anonimleştirilmiş/toplulaştırılmış sürümleri yapay zeka modellerimizi ve güvenlik sistemlerimizi eğitmek, ince ayar yapmak, değerlendirmek ve geliştirmek için kullanılabilir.",
+        "Devre Dışı Bırakma / Varsayılan: Etkinleştirilmemişse (veya devre dışı bırakırsanız), verileriniz asla model eğitimi için kullanılmaz. Genel sistem iyileştirmeleri için tamamen anonimleştirilmiş, toplulaştırılmış kullanım istatistiklerini (prompt/içerik olmadan) hala kullanabiliriz.",
+        "Promptlarınızı, çıkışlarınızı veya kişisel verilerinizi eğitimleri için üçüncü taraflara satmıyoruz.",
+        "Kaydolursanız, istediğiniz zaman fikrinizi değiştirebilirsiniz - daha önce kullanılan veriler modellerden geriye dönük olarak kaldırılamaz, ancak yeni veriler kullanılmayacaktır."
+      ],
       "note": "Bu, en iyi uygulamalarla (örn. Cursor/Anthropic tarzı kaydolma) uyumludur ve GDPR amaç sınırlaması ve AB Yapay Zeka Yasası şeffaflığına uymaya yardımcı olur."
     },
     "section4": {
       "title": "4. Bilgilerin Paylaşılması ve İfşası",
       "noSell": "Kişisel bilgilerinizi satmıyoruz.",
       "intro": "Verileri yalnızca şu durumlarda paylaşıyoruz:",
-      "items": ["Hizmet sağlayıcılarla (işleyiciler): bulut barındırma (AWS/GCP), ödeme işlemcileri, analitik araçlar – katı DPA sözleşmeleri ile bağlıdır", "Yasal nedenlerle: mahkeme celpleri, mahkeme kararları, hakları/güvenliği koruma (örn. kötüye kullanım tespiti)", "İş transferlerinde: birleşme, devralma, varlık satışı (verileriniz aynı korumalar altında transfer edilir)", "Onayınızla veya yönlendirmenizle (örn. oluşturulan kodu genel bağlantı aracılığıyla paylaşma)"],
+      "items": [
+        "Hizmet sağlayıcılarla (işleyiciler): bulut barındırma (AWS/GCP), ödeme işlemcileri, analitik araçlar – katı DPA sözleşmeleri ile bağlıdır",
+        "Yasal nedenlerle: mahkeme celpleri, mahkeme kararları, hakları/güvenliği koruma (örn. kötüye kullanım tespiti)",
+        "İş transferlerinde: birleşme, devralma, varlık satışı (verileriniz aynı korumalar altında transfer edilir)",
+        "Onayınızla veya yönlendirmenizle (örn. oluşturulan kodu genel bağlantı aracılığıyla paylaşma)"
+      ],
       "international": "Uluslararası transferler: Veriler öncelikle ABD'de saklanır. AB/AEA/İngiltere kullanıcıları için: uygulanabilir olduğunda Standart Sözleşme Maddeleri (SCC'ler) veya AB-ABD Veri Gizliliği Çerçevesi'ne güveniyoruz."
     },
     "section5": {
       "title": "5. Veri Saklama",
       "intro": "Verilerinizi yalnızca gerekli olduğu sürece saklıyoruz:",
-      "items": ["Hesap aktif → süresiz (silme talebine kadar)", "Promptlar/Çıkışlar: erişiminiz için saklanır (silinmedikçe); anonimleştirilmiş toplamlar analitik için daha uzun süre", "Günlükler/teknik veriler: güvenlik/dolandırıcılık önleme için 12-24 aya kadar", "Hesap silindikten sonra: veriler 30 gün içinde silinir (yasal yedekler veya anonimleştirilmiş toplamlar hariç)"],
+      "items": [
+        "Hesap aktif → süresiz (silme talebine kadar)",
+        "Promptlar/Çıkışlar: erişiminiz için saklanır (silinmedikçe); anonimleştirilmiş toplamlar analitik için daha uzun süre",
+        "Günlükler/teknik veriler: güvenlik/dolandırıcılık önleme için 12-24 aya kadar",
+        "Hesap silindikten sonra: veriler 30 gün içinde silinir (yasal yedekler veya anonimleştirilmiş toplamlar hariç)"
+      ],
       "note": "İstediğiniz zaman silme talep edebilirsiniz (aşağıdaki Haklara bakın)."
     },
     "section6": {
       "title": "6. Gizlilik Haklarınız",
       "intro": "Konumunuza bağlı olarak (AB/AEA/İngiltere için GDPR, Kaliforniya için CCPA/CPRA vb.):",
-      "items": ["Erişim: Hangi verileri tuttuğumuzu görün", "Düzeltme: Yanlış verileri güncelleyin", "Silme: Verilerinizi silin (yasal istisnalara tabidir)", "İşleme/satıştan vazgeçme: Eğitimden vazgeçme dahil", "İşlemeyi kısıtlama veya itiraz etme", "Taşınabilirlik: Verileri yapılandırılmış formatta alın", "Onayı istediğiniz zaman geri çekin (önceki işlemeyi etkilemez)"],
+      "items": [
+        "Erişim: Hangi verileri tuttuğumuzu görün",
+        "Düzeltme: Yanlış verileri güncelleyin",
+        "Silme: Verilerinizi silin (yasal istisnalara tabidir)",
+        "İşleme/satıştan vazgeçme: Eğitimden vazgeçme dahil",
+        "İşlemeyi kısıtlama veya itiraz etme",
+        "Taşınabilirlik: Verileri yapılandırılmış formatta alın",
+        "Onayı istediğiniz zaman geri çekin (önceki işlemeyi etkilemez)"
+      ],
       "california": "Kaliforniya sakinleri için: sitemizde \"Kişisel Bilgilerimi Satma veya Paylaşma\" bağlantısı (satmasak da).",
       "submit": "Talep gönderin: privacy@appnode.ai",
       "response": "30-45 gün içinde yanıtlıyoruz (yasaya göre uzatılabilir). Doğrulama gereklidir. Hakları kullanmak için ayrımcılık yapılmaz."
@@ -1336,78 +1453,229 @@
     },
     "section1": {
       "title": "1. Tanımlar",
-      "items": ["\"Kullanıcı\", \"siz\" veya \"sizin\" bu Şartların tüm tarafları dahil olmak üzere hizmetlerimize erişen veya bunları kullanan herhangi bir kişi, kuruluş veya varlık anlamına gelir.", "\"Kullanıcı İçeriği\" Hizmetler aracılığıyla yüklediğiniz, gönderdiğiniz, oluşturduğunuz, sakladığınız veya paylaştığınız promptlar, girişler, kod parçacıkları, yapılandırmalar ve oluşturulan çıktılar dahil olmak üzere tüm içerik anlamına gelir.", "\"Çıktı\" yapay zeka sistemimiz tarafından promptlarınıza veya komutlarınıza yanıt olarak oluşturulan tüm çıktı (örn. oluşturulan kod, uygulama bileşenleri, metin) anlamına gelir.", "\"Platform\" web sitesi, API'ler ve ilgili teknolojiler dahil olmak üzere Hizmetleri çalıştıran altyapı ve yazılım anlamına gelir."]
+      "items": [
+        "\"Kullanıcı\", \"siz\" veya \"sizin\" bu Şartların tüm tarafları dahil olmak üzere hizmetlerimize erişen veya bunları kullanan herhangi bir kişi, kuruluş veya varlık anlamına gelir.",
+        "\"Kullanıcı İçeriği\" Hizmetler aracılığıyla yüklediğiniz, gönderdiğiniz, oluşturduğunuz, sakladığınız veya paylaştığınız promptlar, girişler, kod parçacıkları, yapılandırmalar ve oluşturulan çıktılar dahil olmak üzere tüm içerik anlamına gelir.",
+        "\"Çıktı\" yapay zeka sistemimiz tarafından promptlarınıza veya komutlarınıza yanıt olarak oluşturulan tüm çıktı (örn. oluşturulan kod, uygulama bileşenleri, metin) anlamına gelir.",
+        "\"Platform\" web sitesi, API'ler ve ilgili teknolojiler dahil olmak üzere Hizmetleri çalıştıran altyapı ve yazılım anlamına gelir."
+      ],
+      "intro": "To use the Services, you must:",
+      "minor": "If you are under 18 years of age or the age of legal majority, you may only use the Services under the direct supervision and with the express written consent of a parent or legal guardian who agrees to be bound by these Terms on your behalf. We may require proof of such consent at any time.",
+      "suspended": "You agree not to use the Services if you have previously been suspended or terminated from the Services."
     },
     "section2": {
       "title": "2. Hesap Kaydı ve Güvenlik",
       "s1Title": "2.1 Hesap Oluşturma",
-      "s1Items": ["Doğru ve eksiksiz kayıt bilgileri sağlamalısınız.", "Hesap başına bir kişi veya varlık (birden fazla kişisel hesap oluşturmak yasaktır).", "Hesap kimlik bilgilerinizin güvenliğinden siz sorumlusunuz."],
+      "s1Items": [
+        "Doğru ve eksiksiz kayıt bilgileri sağlamalısınız.",
+        "Hesap başına bir kişi veya varlık (birden fazla kişisel hesap oluşturmak yasaktır).",
+        "Hesap kimlik bilgilerinizin güvenliğinden siz sorumlusunuz."
+      ],
       "s2Title": "2.2 Hesap Güvenliği",
-      "s2Items": ["Şifrenizi veya erişim kimlik bilgilerinizi asla başkalarıyla paylaşmayın.", "Yapay zeka modellerimizle etkileşime girmek veya hız limitlerini/güvenlik önlemlerini atlatmak için API anahtarlarını paylaşma veya otomatik sistemler kullanma yasaktır.", "Şüpheli aktiviteler için hesabınızı izlemelisiniz.", "Yetkisiz erişimi derhal security@appnode.ai adresine bildirin."]
+      "s2Items": [
+        "Şifrenizi veya erişim kimlik bilgilerinizi asla başkalarıyla paylaşmayın.",
+        "Yapay zeka modellerimizle etkileşime girmek veya hız limitlerini/güvenlik önlemlerini atlatmak için API anahtarlarını paylaşma veya otomatik sistemler kullanma yasaktır.",
+        "Şüpheli aktiviteler için hesabınızı izlemelisiniz.",
+        "Yetkisiz erişimi derhal security@appnode.ai adresine bildirin."
+      ],
+      "intro": "To access certain features of the Services, you must create an account (\"Account\"). You agree to:",
+      "items": [
+        "Provide accurate, current, and complete information during registration and keep such information updated.",
+        "Maintain the strict confidentiality of your Account credentials (e.g., username, password, API keys) and not share them with any third party.",
+        "Be solely responsible for all activities, actions, and omissions that occur under your Account, whether or not authorized by you.",
+        "Immediately notify us in writing at support@appnode.ai of any unauthorized use, suspected breach, or security incident related to your Account.",
+        "Use strong, unique passwords and enable any available security features (e.g., two-factor authentication)."
+      ],
+      "reserve": "We reserve the right to refuse registration, suspend, or terminate your Account at any time, with or without notice, for any reason or no reason, including but not limited to violations of these Terms, suspected fraud, security risks, legal requirements, or operational concerns. Upon suspension or termination, you must immediately cease all use of the Services.",
+      "acknowledge": "You acknowledge that we are not responsible for any loss or damage arising from your failure to comply with these security obligations. We may, but are not obligated to, monitor Account activity for security, compliance, or abuse prevention purposes."
     },
     "section3": {
       "title": "3. Kabul Edilebilir Kullanım ve Yasaklar",
       "s1Title": "3.1 Şunları yapmamalısınız:",
-      "s1Items": ["Kötü amaçlı yazılım, virüs veya zararlı kod oluşturmak veya dağıtmak", "Phishing şemaları, dolandırıcılık veya aldatıcı uygulamalar geliştirmek", "Herhangi bir yasa veya düzenlemeyi ihlal eden içerik oluşturmak", "Fikri mülkiyet haklarını (telif hakları, ticari markalar, patentler) ihlal eden kod oluşturmak", "Yasadışı gözetim, gizlilik ihlalleri veya yetkisiz veri toplama için araçlar oluşturmak", "Platformu servis reddi saldırıları veya güvenlik testleri yoluyla bozmaya çalışmak (yetkilendirilmiş pentest dışında)", "Sınırlara ulaşıldığında birden fazla hesap oluşturarak hız limitlerini veya kullanım kısıtlamalarını atlatmak", "İzin alınmadan Çıktıları ticari yapay zeka modeli eğitimi için yeniden satmak veya kullanmak", "Herhangi bir kısıtlanmış içerik (aşağıya bakın) oluşturmak"],
+      "s1Items": [
+        "Kötü amaçlı yazılım, virüs veya zararlı kod oluşturmak veya dağıtmak",
+        "Phishing şemaları, dolandırıcılık veya aldatıcı uygulamalar geliştirmek",
+        "Herhangi bir yasa veya düzenlemeyi ihlal eden içerik oluşturmak",
+        "Fikri mülkiyet haklarını (telif hakları, ticari markalar, patentler) ihlal eden kod oluşturmak",
+        "Yasadışı gözetim, gizlilik ihlalleri veya yetkisiz veri toplama için araçlar oluşturmak",
+        "Platformu servis reddi saldırıları veya güvenlik testleri yoluyla bozmaya çalışmak (yetkilendirilmiş pentest dışında)",
+        "Sınırlara ulaşıldığında birden fazla hesap oluşturarak hız limitlerini veya kullanım kısıtlamalarını atlatmak",
+        "İzin alınmadan Çıktıları ticari yapay zeka modeli eğitimi için yeniden satmak veya kullanmak",
+        "Herhangi bir kısıtlanmış içerik (aşağıya bakın) oluşturmak"
+      ],
       "s2Title": "3.2 Kısıtlanmış İçerik",
       "s2Intro": "Şunlar için veya şunları içeren içerik oluşturmak için Hizmetleri kullanamazsınız:",
-      "s2Items": ["Pornografi veya cinsel açık içerik", "Şiddet, işkence veya grafik yaralanma tasvirleri", "Terör, aşırılıkçılık veya radikalleştirme materyalleri", "Herhangi bir gruba yönelik nefret söylemi, ayrımcılık veya şiddeti savunma", "Çocuk istismarı içeriği (kesinlikle yasak; yetkililere bildirilir)", "Onay olmadan bireylerin derin sahtelerini veya taklit içeriklerini oluşturma"]
+      "s2Items": [
+        "Pornografi veya cinsel açık içerik",
+        "Şiddet, işkence veya grafik yaralanma tasvirleri",
+        "Terör, aşırılıkçılık veya radikalleştirme materyalleri",
+        "Herhangi bir gruba yönelik nefret söylemi, ayrımcılık veya şiddeti savunma",
+        "Çocuk istismarı içeriği (kesinlikle yasak; yetkililere bildirilir)",
+        "Onay olmadan bireylerin derin sahtelerini veya taklit içeriklerini oluşturma"
+      ],
+      "intro": "The Services include AI-powered tools that enable users to generate, modify, and deploy web applications, code, workflows, scripts, digital content, and related outputs based on natural language prompts or other inputs. Features may include, without limitation:",
+      "items": [
+        "AI-driven code generation and editing.",
+        "Hosting, deployment, and scaling of applications.",
+        "Collaboration and sharing tools.",
+        "APIs, integrations with third-party services, and plugins.",
+        "Pre-built templates, libraries, and frameworks.",
+        "Analytics, debugging, and performance monitoring tools.",
+        "Paid subscription tiers with enhanced features (e.g., priority processing, higher usage limits).",
+        "Usage-based billing for computational resources, API calls, or storage."
+      ],
+      "evolve": "The Services may evolve over time, and we reserve the right to add, modify, suspend, or discontinue any features, functionalities, or aspects of the Services at any time, without notice or liability. We do not guarantee the availability, uptime, or performance of the Services, and access may be subject to scheduled maintenance, unscheduled downtime, or other interruptions.",
+      "thirdParty": "Certain features may require integration with third-party services (e.g., cloud providers, payment processors), and you are responsible for complying with those third parties' terms and policies. We are not liable for any issues arising from such integrations."
     },
     "section4": {
       "title": "4. Fikri Mülkiyet Hakları",
       "s1Title": "4.1 Yapay Zeka Tarafından Oluşturulan Çıktıların Mülkiyeti",
-      "s1Items": ["Çıktıları ticari veya kişisel amaçlarla kullanmak için ücretli/lisanslı abonelik Şartlarına tabi olarak size Çıktılarda geniş bir lisans veriyoruz.", "Hizmetler tarafından üretilen herhangi bir kod, metin veya içeriğin telif hakkı statüsünü garanti etmiyoruz. Yargı alanlarına göre farklılık gösterir; bazı çıktılar telif hakkına uygun olmayabilir.", "Çıktıları kullanmadan önce fikri mülkiyet/telif hakkı konusunda yasal danışmanlık almaktan siz sorumlusunuz - özellikle ticari, dağıtılmış yazılımlar için."],
+      "s1Items": [
+        "Çıktıları ticari veya kişisel amaçlarla kullanmak için ücretli/lisanslı abonelik Şartlarına tabi olarak size Çıktılarda geniş bir lisans veriyoruz.",
+        "Hizmetler tarafından üretilen herhangi bir kod, metin veya içeriğin telif hakkı statüsünü garanti etmiyoruz. Yargı alanlarına göre farklılık gösterir; bazı çıktılar telif hakkına uygun olmayabilir.",
+        "Çıktıları kullanmadan önce fikri mülkiyet/telif hakkı konusunda yasal danışmanlık almaktan siz sorumlusunuz - özellikle ticari, dağıtılmış yazılımlar için."
+      ],
       "s2Title": "4.2 Girdilerin ve Kullanıcı İçeriğinin Mülkiyeti",
       "s2Content": "Girdi materyallerinizin mülkiyetini (promptlar, yüklemeler, orijinal kodunuz) elinizde tutarsınız. Hizmetleri sağlamak, sürdürmek ve geliştirmek için bize lisans verirsiniz (bkz. 4.3).",
       "s3Title": "4.3 AppNode'a Lisans",
       "s3Content": "Gönderilmiş Kullanıcı İçeriğinin toplulaştırılmış, anonimleştirilmiş biçimlerini şu amaçlarla kullanmamız için bize dünya çapında, telifsiz, alt lisanslanabilir bir lisans verirsiniz: (a) Hizmetleri işletmek ve sağlamak; (b) yalnızca kaydolursanız modelleri geliştirmek (bkz. Gizlilik Politikamız); (c) kötüye kullanım/güvenlik sorunlarını izlemek.",
       "s4Title": "4.4 Geri Bildirim Lisansı",
-      "s4Content": "Geri bildirim, öneriler veya iyileştirme fikirleri sağlarsanız, bunları herhangi bir amaçla telif hakkı veya tazminat olmaksızın kullanmamız için bize kalıcı, geri alınamaz bir lisans verirsiniz."
+      "s4Content": "Geri bildirim, öneriler veya iyileştirme fikirleri sağlarsanız, bunları herhangi bir amaçla telif hakkı veya tazminat olmaksızın kullanmamız için bize kalıcı, geri alınamaz bir lisans verirsiniz.",
+      "intro": "The Services rely on artificial intelligence models and algorithms (\"AI Systems\") to process inputs and generate outputs (\"AI Outputs\"), which may include code, text, images, designs, or other content.",
+      "acknowledge": "You expressly acknowledge and agree that:",
+      "items": [
+        "AI Outputs are generated algorithmically and may contain errors, bugs, vulnerabilities, inaccuracies, biases, hallucinations, or omissions.",
+        "AI Outputs are not intended to be, and should not be treated as, professional advice, production-ready code, or guaranteed solutions.",
+        "AppNode makes no representations or warranties regarding the accuracy, completeness, security, legality, reliability, originality, non-infringement, or suitability of any AI Outputs for any purpose.",
+        "You are solely responsible for independently reviewing, testing, validating, securing, and auditing all AI Outputs before any use, deployment, or reliance thereon.",
+        "AI Outputs may inadvertently incorporate or resemble third-party intellectual property, and you assume all risks of intellectual property infringement claims arising from your use of AI Outputs.",
+        "The AI Systems may produce unexpected or undesirable results based on your inputs, and we are not responsible for any harmful, offensive, or inappropriate content generated.",
+        "You must comply with all applicable laws when using AI Outputs, including export controls, data protection regulations, and industry-specific standards (e.g., HIPAA for health data)."
+      ],
+      "disclaimer": "AppNode disclaims all liability for any damages, losses, or claims arising from your use of or reliance on AI Outputs, including but not limited to direct, indirect, incidental, consequential, or punitive damages. You agree to use AI Outputs at your own risk and peril."
     },
     "section5": {
       "title": "5. Üçüncü Taraf Hakları ve Açık Kaynak",
       "s1Title": "5.1 GPL, MIT veya Diğer Lisanslar",
-      "s1Items": ["Çıktılar, GPL, MIT, Apache, BSD vb. gibi açık kaynak lisanslarına tabi kod içerebilir.", "Bu lisansları tanımlamak ve bunlara uymak sizin sorumluluğunuzdadır - uyumluluk için Çıktıları her zaman gözden geçirin.", "AppNode, Çıktıların herhangi bir açık kaynak veya tescilli lisansı ihlal etmediğini garanti etmez."],
+      "s1Items": [
+        "Çıktılar, GPL, MIT, Apache, BSD vb. gibi açık kaynak lisanslarına tabi kod içerebilir.",
+        "Bu lisansları tanımlamak ve bunlara uymak sizin sorumluluğunuzdadır - uyumluluk için Çıktıları her zaman gözden geçirin.",
+        "AppNode, Çıktıların herhangi bir açık kaynak veya tescilli lisansı ihlal etmediğini garanti etmez."
+      ],
       "s2Title": "5.2 Üçüncü Taraf Entegrasyonları",
-      "s2Content": "Üçüncü taraf hizmetlerini (örn. GitHub, veritabanları, API'ler) entegre ederseniz, onların şartlarına uymaktan siz sorumlusunuz."
+      "s2Content": "Üçüncü taraf hizmetlerini (örn. GitHub, veritabanları, API'ler) entegre ederseniz, onların şartlarına uymaktan siz sorumlusunuz.",
+      "definition": "\"User Content\" means any prompts, data, code, text, images, files, or other materials you upload, submit, or input into the Services.",
+      "ownership": "Ownership: You retain all ownership rights in your User Content, subject to the licenses granted herein.",
+      "licenseIntro": "License to AppNode: By submitting User Content, you grant AppNode a perpetual, irrevocable, worldwide, non-exclusive, royalty-free, fully paid-up, sublicensable, and transferable license to:",
+      "licenseItems": [
+        "Host, store, process, reproduce, modify, distribute, display, and perform User Content as necessary to provide, maintain, and improve the Services.",
+        "Use User Content to detect, prevent, and mitigate abuse, fraud, security threats, or violations of these Terms.",
+        "Anonymize, aggregate, or de-identify User Content for analytical purposes, including to train, fine-tune, or improve our AI Systems, models, algorithms, and services.",
+        "Comply with legal obligations, respond to subpoenas, or enforce our rights."
+      ],
+      "represent": "You represent and warrant that: (i) you have all necessary rights, consents, and permissions to submit User Content and grant the above licenses; (ii) User Content does not infringe any third-party rights (e.g., intellectual property, privacy); and (iii) User Content complies with all applicable laws.",
+      "noSell": "We do not sell your User Content to third parties. However, we may share anonymized or aggregated data with partners for research or improvement purposes, provided it cannot be reasonably re-identified to you.",
+      "dataProcessing": "Data Processing: Our processing of User Content is further governed by our Privacy Policy. You consent to the transfer, storage, and processing of User Content in the United States or other jurisdictions where our servers or affiliates are located."
     },
     "section6": {
       "title": "6. Fiyatlandırma, Abonelikler ve Ödemeler",
       "s1Title": "6.1 Ücretler ve Faturalandırma",
-      "s1Items": ["Ödeme koşulları (fiyatlar, fatura dönemleri, para birimleri) satın alma sırasında fiyatlandırma sayfamızda belirtilir.", "Kullandıkça öde kullanıcıları için ayda veya kullanımda; aboneler için aylık veya yıllık fatura kesilir.", "Tüm ücretler iade edilemez (aşağıdaki 6.3'te belirtilenler hariç)."],
+      "s1Items": [
+        "Ödeme koşulları (fiyatlar, fatura dönemleri, para birimleri) satın alma sırasında fiyatlandırma sayfamızda belirtilir.",
+        "Kullandıkça öde kullanıcıları için ayda veya kullanımda; aboneler için aylık veya yıllık fatura kesilir.",
+        "Tüm ücretler iade edilemez (aşağıdaki 6.3'te belirtilenler hariç)."
+      ],
       "s2Title": "6.2 Otomatik Yenileme",
-      "s2Items": ["Yenileme tarihinden önce iptal etmediğiniz sürece abonelikler otomatik olarak yenilenir.", "Hesap ayarlarında veya support@appnode.ai adresinden istediğiniz zaman iptal edebilirsiniz.", "İptal durumunda, ödediğiniz sürenin sonuna kadar erişiminiz devam eder."],
+      "s2Items": [
+        "Yenileme tarihinden önce iptal etmediğiniz sürece abonelikler otomatik olarak yenilenir.",
+        "Hesap ayarlarında veya support@appnode.ai adresinden istediğiniz zaman iptal edebilirsiniz.",
+        "İptal durumunda, ödediğiniz sürenin sonuna kadar erişiminiz devam eder."
+      ],
       "s3Title": "6.3 İade Politikası",
-      "s3Items": ["Yıllık abonelikler: Yıllık aboneliklerde yalnızca satın alma tarihinden itibaren 14 gün içinde talep edilirse tam iade yapılır.", "Aylık abonelikler ve kullandıkça öde: İade yapılmaz.", "Ücretsiz denemeler: Deneme döneminiz sırasında iptal ederseniz ücret alınmaz."]
+      "s3Items": [
+        "Yıllık abonelikler: Yıllık aboneliklerde yalnızca satın alma tarihinden itibaren 14 gün içinde talep edilirse tam iade yapılır.",
+        "Aylık abonelikler ve kullandıkça öde: İade yapılmaz.",
+        "Ücretsiz denemeler: Deneme döneminiz sırasında iptal ederseniz ücret alınmaz."
+      ],
+      "intro": "You agree to use the Services only for lawful purposes and in compliance with these Terms. Prohibited activities include, but are not limited to:",
+      "items": [
+        "Violating any local, state, national, or international laws, regulations, or treaties.",
+        "Infringing or misappropriating any intellectual property rights, including copyrights, trademarks, patents, trade secrets, or rights of publicity.",
+        "Generating, distributing, or using the Services to create malicious code, viruses, malware, ransomware, spyware, or other harmful software.",
+        "Engaging in unauthorized access, hacking, probing, scanning, or exploiting vulnerabilities in the Services or any related systems.",
+        "Attempting to scrape, extract, reverse engineer, decompile, disassemble, or otherwise derive source code, algorithms, or proprietary information from the Services or AI Systems.",
+        "Bypassing, circumventing, or interfering with any security measures, rate limits, usage quotas, or access controls.",
+        "Creating multiple Accounts for abusive purposes, automating Account creation, or using bots/scripts to interact with the Services without authorization.",
+        "Uploading or generating content that is illegal, obscene, defamatory, harassing, threatening, discriminatory, hateful, or promotes violence, terrorism, or harm to others.",
+        "Interfering with, disrupting, or overloading the Services, including denial-of-service attacks, spamming, or excessive resource consumption.",
+        "Using the Services for high-risk activities, such as automated decision-making in employment, credit, housing, or legal contexts, without human oversight.",
+        "Exporting or re-exporting the Services or AI Outputs in violation of U.S. export control laws (e.g., EAR, ITAR)."
+      ],
+      "monitor": "We may monitor, review, or analyze your use of the Services to enforce this policy, detect violations, or improve the Services. Violations may result in immediate suspension or termination of your Account, without refund or liability."
     },
     "section7": {
       "title": "7. Hizmet Düzeyi ve Kullanılabilirlik",
       "s1Title": "7.1 Çalışma Süresi Taahhütleri",
       "s1Content": "Aylık ortalama %99,5 çalışma süresini hedefliyoruz. Kritik iş yükleri için SLA anlaşmaları Enterprise müşterileri için mevcuttur - ayrıntılar için enterprise@appnode.ai ile iletişime geçin.",
       "s2Title": "7.2 Bakım",
-      "s2Content": "Gerekli bakım işlemlerini olabildiğince önceden bildireceğiz; acil güvenlik yamaları önceden bildirim olmadan yapılabilir."
+      "s2Content": "Gerekli bakım işlemlerini olabildiğince önceden bildireceğiz; acil güvenlik yamaları önceden bildirim olmadan yapılabilir.",
+      "intro": "Certain Services require a paid subscription (\"Subscription\"). By subscribing, you agree to:",
+      "items": [
+        "Pay all applicable fees, taxes, and charges (\"Fees\") in U.S. dollars via the payment method you provide.",
+        "Authorize automatic recurring billing for Subscriptions, which renew automatically unless canceled at least 24 hours before the renewal date.",
+        "Provide accurate, complete, and current billing information and promptly update it as needed.",
+        "Accept responsibility for any overdraft, insufficient funds, or other charges incurred due to payment failures."
+      ],
+      "fees": "Fees may include fixed subscription costs, usage-based charges (e.g., per API call, compute hour, or storage GB), or overage fees for exceeding plan limits. We may adjust Fees at any time upon notice, and continued use constitutes acceptance.",
+      "failure": "Failure to pay Fees may result in suspension or termination of your Account, with all outstanding balances remaining due and payable.",
+      "refunds": "Refunds: All Fees are non-refundable except as required by applicable law or explicitly stated in a separate Refund Policy. Partial refunds for unused portions of Subscriptions are not provided.",
+      "processors": "We use third-party payment processors (e.g., Stripe) and are not liable for their actions, errors, or security breaches."
     },
     "section8": {
       "title": "8. Gizlilik ve Veri Koruma",
       "p1": "Kişisel verilerinizi ilgili veri koruma yasalarına (GDPR, CCPA, vb.) uygun olarak Gizlilik Politikamıza göre topluyoruz ve işliyoruz.",
-      "p2": "Hassas Kullanıcı İçeriği gönderirseniz (örn. sağlık, mali veya kişisel veriler içeren promptlar), uyumlu bir şekilde işlenmesini sağlamaktan siz sorumlusunuz."
+      "p2": "Hassas Kullanıcı İçeriği gönderirseniz (örn. sağlık, mali veya kişisel veriler içeren promptlar), uyumlu bir şekilde işlenmesini sağlamaktan siz sorumlusunuz.",
+      "intro": "To ensure fair usage and system stability, we may impose rate limits, usage quotas, computational restrictions, or other controls on the Services (e.g., maximum API requests per minute, total compute credits per month).",
+      "items": [
+        "Exceeding limits may result in throttling, additional Fees, suspension, or termination.",
+        "You agree not to attempt to circumvent these limits.",
+        "Resource-intensive activities (e.g., large-scale data processing) may be subject to prior approval."
+      ],
+      "noLiability": "We are not liable for any losses arising from enforcement of these limits."
     },
     "section9": {
       "title": "9. Garanti Reddi",
       "p1": "HİZMETLER \"OLDUĞU GİBİ\" VE \"MEVCUT OLDUĞU GİBİ\" HERHANGİ BİR AÇIK VEYA ZIMNİ GARANTİ OLMAKSIZIN SUNULMAKTADIR, BU GARANTİLER ARASINDA BUNLARLA SINIRLI OLMAMAK ÜZERE PAZARLANABİLİRLİK, BELİRLİ BİR AMACA UYGUNLUK VE İHLAL ETMEME GARANTİLERİ YER ALMAKTADIR.",
-      "items": ["Çıktıların doğru, güvenli veya amaçlarınız için uygun olacağını", "Hizmetlerin kesintisiz veya hatasız olacağını", "Çıktıların telif hakkı koruması veya ticari hak gereksinimlerini karşılayacağını"]
+      "items": [
+        "Çıktıların doğru, güvenli veya amaçlarınız için uygun olacağını",
+        "Hizmetlerin kesintisiz veya hatasız olacağını",
+        "Çıktıların telif hakkı koruması veya ticari hak gereksinimlerini karşılayacağını"
+      ],
+      "ownership": "All rights, title, and interest in and to the Services, including but not limited to software, AI Systems, models, algorithms, databases, user interfaces, branding, trademarks, logos, documentation, and any improvements or derivatives thereof (collectively, \"AppNode IP\"), are and shall remain the exclusive property of AppNode or its licensors.",
+      "license": "You are granted a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to access and use the Services solely for your internal purposes, subject to these Terms. This license terminates upon any violation or termination of these Terms.",
+      "agreeNot": "You agree not to:",
+      "feedback": "Any feedback, suggestions, or ideas you provide regarding the Services (\"Feedback\") shall be owned by AppNode, and you grant us a perpetual, irrevocable license to use, incorporate, or commercialize such Feedback without compensation or attribution."
     },
     "section10": {
       "title": "10. Sorumluluk Sınırlaması",
       "p1": "YASALARIN İZİN VERDİĞİ AZAMİ ÖLÇÜDE, APPNODE VE BAĞLI KURULUŞLARI, LİSANS VERENLERİ VEYA HİZMET SAĞLAYICILARI HİÇBİR DURUMDA SORUMLU TUTULAMAZ:",
-      "items": ["Bu şartlardan veya Hizmetleri kullanımınızdan kaynaklanan herhangi bir dolaylı, arızi, özel, sonuçsal, cezai veya örnek teşkil eden zararlar", "Kar kaybı, veri kaybı, itibar kaybı, iş kaybı veya fırsat kaybı", "Oluşturulan kodun kalitesi veya güvenliği veya kullanılabilirliği ile ilgili herhangi bir iddia (incelemedeki başarısızlıklar dahil)"],
+      "items": [
+        "Bu şartlardan veya Hizmetleri kullanımınızdan kaynaklanan herhangi bir dolaylı, arızi, özel, sonuçsal, cezai veya örnek teşkil eden zararlar",
+        "Kar kaybı, veri kaybı, itibar kaybı, iş kaybı veya fırsat kaybı",
+        "Oluşturulan kodun kalitesi veya güvenliği veya kullanılabilirliği ile ilgili herhangi bir iddia (incelemedeki başarısızlıklar dahil)"
+      ],
       "p2": "HERHANGİ BİR İDDİA İÇİN TOPLAM YÜKÜMLÜLÜĞÜMÜZ, İDDİANIN OLUŞUMUNDAN ÖNCEKİ 12 AY İÇİNDE BİZE ÖDEDİĞİNİZ TUTARLARLA VEYA BU TUTAR DAHA AZSA 100 ABD DOLARI İLE SINIRLIDIR.",
-      "note": "Bazı yetki alanları zımni garantilerin hariç tutulmasına veya belirli zararların sınırlandırılmasına izin vermez, bu nedenle bazı sınırlamalar sizin için geçerli olmayabilir."
+      "note": "Bazı yetki alanları zımni garantilerin hariç tutulmasına veya belirli zararların sınırlandırılmasına izin vermez, bu nedenle bazı sınırlamalar sizin için geçerli olmayabilir.",
+      "content": "You agree to keep confidential any non-public information disclosed by AppNode, including but not limited to technical specifications, pricing, beta features, and business strategies. This obligation survives termination of these Terms."
     },
     "section11": {
       "title": "11. Tazminat",
       "p1": "Şu durumlardan kaynaklanan veya bunlarla ilgili her türlü iddia, zarar, kayıp, yükümlülük ve masrafa (makul avukat ücretleri dahil) karşı AppNode'u ve görevlilerini, yöneticilerini, çalışanlarını, acentelerini ve haleflerini tazmin etmeyi, savunmayı ve zarar görmemelerini sağlamayı kabul edersiniz: (a) Bu Şartları ihlal etmeniz; (b) Kabul Edilebilir Kullanım Politikasını veya yasaları ihlal etmeniz; (c) Kullanıcı İçeriğiniz (üçüncü taraf hakları iddiaları dahil); (d) İhmaliniz veya kasıtlı suistimaliniz.",
-      "p2": "Uygulanabilir yasaların istediği yerlerde makul avukat ücretlerini karşılayacağız. AppNode uzlaşma müzakerelerini kontrol etme hakkını saklı tutar."
+      "p2": "Uygulanabilir yasaların istediği yerlerde makul avukat ücretlerini karşılayacağız. AppNode uzlaşma müzakerelerini kontrol etme hakkını saklı tutar.",
+      "asIs": "THE SERVICES ARE PROVIDED \"AS IS\" AND \"AS AVAILABLE,\" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, ACCURACY, OR RELIABILITY.",
+      "noWarranties": "APPNODE MAKES NO WARRANTIES THAT THE SERVICES WILL BE UNINTERRUPTED, ERROR-FREE, SECURE, OR FREE OF VIRUSES OR HARMFUL COMPONENTS.",
+      "limitation": "TO THE MAXIMUM EXTENT PERMITTED BY LAW, APPNODE'S TOTAL LIABILITY FOR ANY CLAIMS ARISING OUT OF OR RELATED TO THESE TERMS OR THE SERVICES SHALL NOT EXCEED THE GREATER OF (A) THE AMOUNTS PAID BY YOU TO APPNODE IN THE 12 MONTHS PRECEDING THE CLAIM, OR (B) $100.",
+      "exclusion": "IN NO EVENT SHALL APPNODE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, GOODWILL, OR USE."
     },
     "section12": {
       "title": "12. Fesih",
@@ -1416,7 +1684,8 @@
       "s2Title": "12.2 AppNode Tarafından Fesih",
       "s2Content": "Bu Şartları, Kabul Edilebilir Kullanımı veya yasaları ihlal ederseniz veya kötüye kullanım tespit edilirse erişiminizi askıya alabilir veya sonlandırabiliriz. Ciddi ihlaller için önceden bildirim yapılmayabilir.",
       "s3Title": "12.3 Feshin Etkileri",
-      "s3Content": "Fesih üzerine: dışa aktarılmamış Kullanıcı İçeriğinize erişim kaybedebilirsiniz; tüm bekleyen ücretler derhal ödenir hale gelir; fikri mülkiyet, gizlilik ve tazminata ilişkin hükümler geçerliliğini korur."
+      "s3Content": "Fesih üzerine: dışa aktarılmamış Kullanıcı İçeriğinize erişim kaybedebilirsiniz; tüm bekleyen ücretler derhal ödenir hale gelir; fikri mülkiyet, gizlilik ve tazminata ilişkin hükümler geçerliliğini korur.",
+      "content": "You agree to indemnify, defend, and hold harmless AppNode, its affiliates, officers, directors, employees, agents, and licensors from and against any claims, liabilities, damages, losses, costs, or expenses (including reasonable attorneys' fees) arising out of or related to: (a) your use of the Services; (b) your User Content; (c) your violation of these Terms; or (d) your violation of any third-party rights."
     },
     "section13": {
       "title": "13. Uyuşmazlık Çözümü",
@@ -1425,7 +1694,10 @@
       "s2Title": "13.2 Bağlayıcı Tahkim (ABD Kullanıcıları)",
       "s2Content": "ABD'deki kullanıcılar için: Kişi olarak bağlayıcı tahkimle çözülemeyecek sınırlı istisnalar dışında, bu Şartlardan kaynaklanan uyuşmazlıkları AAA kuralları uyarınca bağlayıcı tahkim yoluyla çözmek için bireysel olarak kabul edersiniz. Toplu dava feragati: Toplu veya konsolide tahkim veya dava konusu olmamayı kabul edersiniz.",
       "s3Title": "13.3 İstisnalar",
-      "s3Content": "Taraflardan her biri yetkili bir mahkemede ihtiyati tedbir talep edebilir (örn. fikri mülkiyet tehditleri için)."
+      "s3Content": "Taraflardan her biri yetkili bir mahkemede ihtiyati tedbir talep edebilir (örn. fikri mülkiyet tehditleri için).",
+      "byYou": "You may terminate your Account at any time by following the instructions in the Services or contacting support@appnode.ai.",
+      "byUs": "We may suspend or terminate your Account immediately, with or without notice, for any reason, including but not limited to violations of these Terms, non-payment, suspected fraud, or legal requirements.",
+      "effect": "Upon termination: (a) your access to the Services will cease; (b) any outstanding Fees remain due; (c) licenses granted to you terminate; and (d) provisions that by their nature should survive (e.g., indemnification, limitation of liability, confidentiality) shall survive."
     },
     "section14": {
       "title": "14. Genel Hükümler",
@@ -1436,12 +1708,19 @@
       "s3Title": "14.3 Feragat Yok",
       "s3Content": "Herhangi bir hakkı veya hükmü uygulamamak, bu hak veya hükümden feragat anlamına gelmez.",
       "s4Title": "14.4 Devir",
-      "s4Content": "Bu Şartları önceden yazılı izin almadan devredemezsiniz. AppNode, bir birleşme, devralma veya varlık satışının bir parçası olarak devredebilir."
+      "s4Content": "Bu Şartları önceden yazılı izin almadan devredemezsiniz. AppNode, bir birleşme, devralma veya varlık satışının bir parçası olarak devredebilir.",
+      "law": "These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, USA, without regard to conflict of law principles.",
+      "arbitration": "Any dispute arising out of or relating to these Terms shall be resolved exclusively by binding arbitration administered by the American Arbitration Association (AAA) under its Commercial Arbitration Rules. The arbitration shall be conducted in Wilmington, Delaware.",
+      "classWaiver": "YOU AND APPNODE AGREE TO WAIVE ANY RIGHT TO A JURY TRIAL AND TO PARTICIPATE IN CLASS ACTIONS OR CLASS ARBITRATIONS."
     },
     "section15": {
       "title": "15. Erişilebilirlik ve Uluslararası Kullanıcılar",
       "p1": "WCAG 2.1 AA'ya uygunluk için çalışıyoruz. Erişilebilirlik sorunlarını lütfen accessibility@appnode.ai adresine bildirin.",
-      "p2": "Uluslararası Kullanıcılar: Verilerinizin ABD sunucularında saklanabileceğini kabul edersiniz. Yerel yasalarınıza ve ihracat kontrollerine uymak sizin sorumluluğunuzdadır."
+      "p2": "Uluslararası Kullanıcılar: Verilerinizin ABD sunucularında saklanabileceğini kabul edersiniz. Yerel yasalarınıza ve ihracat kontrollerine uymak sizin sorumluluğunuzdadır.",
+      "entireAgreement": "These Terms, together with the Privacy Policy and any other policies referenced herein, constitute the entire agreement between you and AppNode regarding the Services.",
+      "severability": "If any provision is found to be unenforceable, the remaining provisions shall remain in full force and effect.",
+      "waiver": "Our failure to enforce any provision shall not constitute a waiver of that provision.",
+      "assignment": "You may not assign or transfer these Terms without our prior written consent. We may assign these Terms freely."
     },
     "section16": {
       "title": "16. Bize Ulaşın",
@@ -1717,6 +1996,202 @@
       "subtitle": "AppNode ile becerilerini dönüştüren 100.000'den fazla öğrenciye katılın. Tüm kurslar tamamen ücretsiz.",
       "createFreeAccount": "Ücretsiz Hesap Oluştur",
       "browseGuides": "Rehberlere Göz At"
+    },
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "lessons": "lessons",
+    "min": "min",
+    "courses": {
+      "gettingStarted": {
+        "title": "Getting Started with AppNode",
+        "description": "Learn the basics of creating apps with AI. Perfect for absolute beginners."
+      },
+      "buildingDashboard": {
+        "title": "Building Your First Dashboard",
+        "description": "Create a complete analytics dashboard from scratch with real-time data."
+      },
+      "advancedPrompting": {
+        "title": "Advanced Prompting Techniques",
+        "description": "Master the art of writing effective prompts that generate exactly what you need."
+      },
+      "ecommerce": {
+        "title": "E-commerce Store Masterclass",
+        "description": "Build a fully functional online store with payments, inventory, and orders."
+      },
+      "customComponents": {
+        "title": "Custom Components & Styling",
+        "description": "Create reusable components with custom themes that match your brand."
+      },
+      "deploying": {
+        "title": "Deploying to Production",
+        "description": "Launch your app to the world with custom domains and SSL certificates."
+      },
+      "mobileFirst": {
+        "title": "Building Mobile-First Apps",
+        "description": "Design responsive applications that work beautifully on any device."
+      },
+      "apiIntegration": {
+        "title": "API Integration Essentials",
+        "description": "Connect your app to external services, databases, and third-party APIs."
+      },
+      "authSecurity": {
+        "title": "Authentication & Security",
+        "description": "Implement secure user authentication and protect your application."
+      }
+    },
+    "modal": {
+      "overview": "Overview",
+      "howToDoIt": "How to do it",
+      "proTips": "Pro Tips",
+      "gotIt": "Got it!"
+    },
+    "tutorials": {
+      "gettingStarted": {
+        "overview": "Get started with AppNode by learning the fundamentals of AI-powered app development.",
+        "steps": [
+          "Sign up for a free AppNode account at appnode.ai",
+          "Navigate to the dashboard and click 'New Project'",
+          "Describe your app idea in the chat interface",
+          "Review the generated code and make adjustments",
+          "Deploy your app with one click"
+        ],
+        "tips": [
+          "Be specific when describing your app requirements",
+          "Start with simple projects to learn the workflow",
+          "Use the preview feature to test changes instantly"
+        ]
+      },
+      "buildingDashboard": {
+        "overview": "Learn to build professional analytics dashboards with charts, metrics, and real-time data.",
+        "steps": [
+          "Start a new project and describe your dashboard needs",
+          "Add chart components (bar, line, pie charts)",
+          "Connect to your data source or use sample data",
+          "Customize colors and layouts to match your brand",
+          "Add interactive filters and date pickers",
+          "Test responsiveness on different screen sizes",
+          "Deploy and share with your team"
+        ],
+        "tips": [
+          "Group related metrics together",
+          "Use consistent color coding for data categories",
+          "Keep the most important metrics at the top"
+        ]
+      },
+      "advancedPrompting": {
+        "overview": "Master prompt engineering to get better results from AppNode AI.",
+        "steps": [
+          "Understand the anatomy of a good prompt",
+          "Use specific technical requirements in your prompts",
+          "Learn to iterate and refine based on output",
+          "Combine multiple features in single prompts",
+          "Use reference examples to guide the AI"
+        ],
+        "tips": [
+          "Always specify the tech stack you want",
+          "Include accessibility requirements",
+          "Mention responsive design needs upfront"
+        ]
+      },
+      "ecommerce": {
+        "overview": "Create a complete e-commerce solution with product catalog, cart, and checkout.",
+        "steps": [
+          "Set up product catalog with categories",
+          "Build shopping cart functionality",
+          "Integrate Stripe for payments",
+          "Create order management system",
+          "Add inventory tracking",
+          "Set up email notifications",
+          "Implement user accounts and order history"
+        ],
+        "tips": [
+          "Start with a simple product catalog first",
+          "Test the checkout flow thoroughly",
+          "Use test payment credentials during development"
+        ]
+      },
+      "customComponents": {
+        "overview": "Learn to create consistent, reusable components with custom styling.",
+        "steps": [
+          "Define your brand colors and typography",
+          "Create a component library structure",
+          "Build reusable button, input, and card components",
+          "Implement dark mode support",
+          "Add animation and transitions",
+          "Document your components"
+        ],
+        "tips": [
+          "Use CSS variables for theming",
+          "Keep components small and focused",
+          "Test components in isolation"
+        ]
+      },
+      "deploying": {
+        "overview": "Learn to deploy your applications to production with confidence.",
+        "steps": [
+          "Prepare your app for production",
+          "Choose a hosting provider",
+          "Configure environment variables",
+          "Set up custom domains",
+          "Enable SSL certificates"
+        ],
+        "tips": [
+          "Always test in a staging environment first",
+          "Set up monitoring and alerts",
+          "Keep your dependencies updated"
+        ]
+      },
+      "mobileFirst": {
+        "overview": "Create responsive, mobile-first applications that work on all devices.",
+        "steps": [
+          "Understand mobile-first design principles",
+          "Use responsive breakpoints effectively",
+          "Optimize touch interactions",
+          "Handle different screen orientations",
+          "Test on real devices",
+          "Optimize performance for mobile networks"
+        ],
+        "tips": [
+          "Design for the smallest screen first",
+          "Use relative units (rem, %) instead of pixels",
+          "Test with throttled network conditions"
+        ]
+      },
+      "apiIntegration": {
+        "overview": "Learn to integrate external APIs and services into your applications.",
+        "steps": [
+          "Understand REST API fundamentals",
+          "Handle API authentication (API keys, OAuth)",
+          "Make GET, POST, PUT, DELETE requests",
+          "Handle errors and edge cases",
+          "Implement rate limiting",
+          "Cache API responses for performance"
+        ],
+        "tips": [
+          "Always handle API errors gracefully",
+          "Use environment variables for API keys",
+          "Implement retry logic for failed requests"
+        ]
+      },
+      "authSecurity": {
+        "overview": "Implement secure authentication and protect your application from threats.",
+        "steps": [
+          "Set up user registration and login",
+          "Implement password hashing",
+          "Add two-factor authentication",
+          "Handle session management",
+          "Protect against common attacks (XSS, CSRF)",
+          "Set up role-based access control"
+        ],
+        "tips": [
+          "Never store passwords in plain text",
+          "Use HTTPS everywhere",
+          "Regularly audit your security practices"
+        ]
+      }
     }
   },
   "guidesPage": {
@@ -1732,6 +2207,169 @@
       "subtitle": "Öğrendiklerinizi uygulamaya koyun. Bugün ilk uygulamanızı oluşturun.",
       "getStartedFree": "Ücretsiz Başlayın",
       "browseTemplates": "Şablonlara Göz At"
+    },
+    "modal": {
+      "overview": "Overview",
+      "howToDoIt": "How to do it",
+      "proTips": "Pro Tips",
+      "gotIt": "Got it!"
+    },
+    "categories": {
+      "all": "All",
+      "saas": "SaaS",
+      "ecommerce": "E-commerce",
+      "design": "Design",
+      "security": "Security",
+      "backend": "Backend",
+      "performance": "Performance"
+    },
+    "minRead": "min read",
+    "guides": {
+      "saasApps": {
+        "title": "Complete Guide to Building SaaS Apps",
+        "description": "Everything you need to know about creating software-as-a-service applications with AppNode",
+        "overview": "Learn to build a complete SaaS application from scratch, including user authentication, subscription billing, and multi-tenant architecture.",
+        "steps": [
+          "Set up your project with authentication (login, signup, password reset)",
+          "Create a dashboard layout with navigation and user settings",
+          "Implement subscription billing with Stripe integration",
+          "Build multi-tenant data isolation for different customer accounts",
+          "Add role-based access control for team members",
+          "Set up email notifications for key events",
+          "Deploy to production with monitoring"
+        ],
+        "tips": [
+          "Start with a simple MVP and iterate based on user feedback",
+          "Use environment variables for all API keys and secrets",
+          "Implement proper error handling from the start"
+        ]
+      },
+      "ecommerce": {
+        "title": "E-commerce Best Practices",
+        "description": "Learn how to build high-converting online stores with payment integration",
+        "overview": "Create a high-converting e-commerce store with product catalog, shopping cart, and secure checkout.",
+        "steps": [
+          "Design an attractive product catalog with categories and filters",
+          "Build a persistent shopping cart with local storage",
+          "Integrate Stripe or PayPal for payments",
+          "Create order confirmation and tracking pages",
+          "Set up inventory management",
+          "Implement customer reviews and ratings"
+        ],
+        "tips": [
+          "Use high-quality product images",
+          "Keep the checkout process simple (3 steps max)",
+          "Show trust badges and secure payment icons"
+        ]
+      },
+      "dashboard": {
+        "title": "Mastering Dashboard Design",
+        "description": "Create beautiful and functional analytics dashboards that users love",
+        "overview": "Design professional analytics dashboards with clear data visualization and intuitive layouts.",
+        "steps": [
+          "Define the key metrics your users need to see",
+          "Create a wireframe with proper visual hierarchy",
+          "Choose appropriate chart types for each data type",
+          "Implement interactive filters and date ranges",
+          "Add data export functionality",
+          "Optimize for different screen sizes"
+        ],
+        "tips": [
+          "Put the most important metrics at the top",
+          "Use consistent color coding across all charts",
+          "Avoid cluttering - less is more"
+        ]
+      },
+      "authentication": {
+        "title": "Authentication & Security",
+        "description": "Implement secure user authentication and protect your applications",
+        "overview": "Implement robust authentication and security best practices to protect your users and data.",
+        "steps": [
+          "Set up secure user registration with email verification",
+          "Implement password hashing with bcrypt or similar",
+          "Add OAuth social login (Google, GitHub)",
+          "Create protected routes and middleware",
+          "Implement session management with secure cookies",
+          "Add rate limiting to prevent brute force attacks"
+        ],
+        "tips": [
+          "Never store passwords in plain text",
+          "Use HTTPS for all connections",
+          "Implement proper CORS policies"
+        ]
+      },
+      "database": {
+        "title": "Database Integration Guide",
+        "description": "Connect your app to databases and manage data efficiently",
+        "overview": "Learn to connect your application to databases and implement efficient data management.",
+        "steps": [
+          "Choose the right database (SQL vs NoSQL)",
+          "Set up your database connection with environment variables",
+          "Design your data schema and relationships",
+          "Implement CRUD operations (Create, Read, Update, Delete)",
+          "Add data validation before database operations",
+          "Set up database migrations for schema changes"
+        ],
+        "tips": [
+          "Always use parameterized queries to prevent SQL injection",
+          "Index frequently queried columns",
+          "Back up your data regularly"
+        ]
+      },
+      "responsive": {
+        "title": "Responsive Design Patterns",
+        "description": "Make your apps look great on all devices with mobile-first design",
+        "overview": "Create responsive designs that work beautifully across all screen sizes.",
+        "steps": [
+          "Start with mobile-first CSS approach",
+          "Use flexible grid layouts (CSS Grid, Flexbox)",
+          "Implement responsive breakpoints (sm, md, lg, xl)",
+          "Optimize images for different screen densities",
+          "Test touch interactions on mobile devices",
+          "Use relative units (rem, %, vh/vw) instead of pixels"
+        ],
+        "tips": [
+          "Test on real devices, not just browser dev tools",
+          "Consider thumb-friendly tap targets on mobile",
+          "Prioritize content for smaller screens"
+        ]
+      },
+      "api": {
+        "title": "API Integration Masterclass",
+        "description": "Connect to third-party services and APIs seamlessly",
+        "overview": "Learn to integrate external APIs and third-party services into your applications.",
+        "steps": [
+          "Understand REST API fundamentals (endpoints, methods)",
+          "Set up API authentication (API keys, OAuth tokens)",
+          "Make HTTP requests (GET, POST, PUT, DELETE)",
+          "Handle API responses and errors gracefully",
+          "Implement retry logic for failed requests",
+          "Cache responses to improve performance"
+        ],
+        "tips": [
+          "Store API keys in environment variables",
+          "Handle rate limiting with exponential backoff",
+          "Log API calls for debugging"
+        ]
+      },
+      "performance": {
+        "title": "Performance Optimization",
+        "description": "Speed up your apps for better user experience and SEO",
+        "overview": "Optimize your application for speed, better user experience, and improved SEO.",
+        "steps": [
+          "Analyze current performance with Lighthouse",
+          "Optimize and compress images (WebP format, lazy loading)",
+          "Minimize JavaScript and CSS bundles",
+          "Implement code splitting and lazy loading",
+          "Set up proper caching headers",
+          "Use a CDN for static assets"
+        ],
+        "tips": [
+          "Aim for < 3 second initial page load",
+          "Use performance budgets to track regressions",
+          "Monitor Core Web Vitals regularly"
+        ]
+      }
     }
   },
   "videosPage": {

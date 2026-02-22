@@ -1,17 +1,38 @@
 'use client';
 
+import { useEffect } from 'react';
 import { useTranslation } from '@/context/LanguageContext';
 
 export default function VideoSection() {
-  const { t, mounted } = useTranslation();
+  const { t, language, mounted } = useTranslation();
   
-  // Use direct translation with fallback to empty string for SSR
-  const badge = mounted ? t('homePage.videoSection.badge') : '';
-  const title = mounted ? t('homePage.videoSection.title') : '';
-  const subtitle = mounted ? t('homePage.videoSection.subtitle') : '';
+  // Use direct translation - always call t() with current language
+  const badge = t('homePage.videoSection.badge');
+  const title = t('homePage.videoSection.title');
+  const subtitle = t('homePage.videoSection.subtitle');
+  
+  // DEBUG: create/update debug element
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      let debugEl = document.getElementById('__video_section_debug');
+      if (!debugEl) {
+        debugEl = document.createElement('div');
+        debugEl.id = '__video_section_debug';
+        debugEl.style.cssText = 'position:fixed;bottom:10px;left:10px;background:blue;color:white;padding:10px;z-index:99999;font-size:12px;max-width:400px;';
+        document.body.appendChild(debugEl);
+      }
+      debugEl.innerHTML = `
+        <strong>[VideoSection Debug]</strong><br/>
+        language.code: ${language.code}<br/>
+        mounted: ${mounted}<br/>
+        badge: ${badge}<br/>
+        title: ${title}<br/>
+      `;
+    }
+  }, [language.code, mounted, badge, title]);
 
   return (
-    <section className="py-12 sm:py-16 md:py-24 bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
+    <section key={language.code} className="py-12 sm:py-16 md:py-24 bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12">

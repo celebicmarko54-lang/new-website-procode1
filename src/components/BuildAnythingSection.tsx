@@ -2,11 +2,51 @@
 
 import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
-import { useTranslation } from '@/context/LanguageContext';
+
+// Category translation map
+const categoryTranslations: Record<string, Record<string, string>> = {
+  ko: {
+    title: '제한 없이 모든 애플리케이션 빌드',
+    subtitle: '빌드를 시작하세요. 수익을 시작하세요. 오늘.',
+    saasplatform: 'SaaS 플랫폼',
+    gamingportal: '게임 포털',
+    mapsnavigation: '지도 & 내비게이션',
+    fashionstore: '패션 스토어',
+    stylecollection: '스타일 컬렉션',
+    beautyproducts: '뷰티 제품',
+    fitnesstracker: '피트니스 트래커',
+    luxuryfragrance: '럭셔리 향수',
+    beautystore: '뷰티 스토어',
+    streamingplatform: '스트리밍 플랫폼',
+    gaminggearstore: '게임 기어 스토어',
+    gamingstore: '게임 스토어',
+    synthesizer: '신디사이저',
+    projectroadmap: '프로젝트 로드맵',
+    analyticsdashboard: '분석 대시보드'
+  },
+  en: {
+    title: 'Build Any Application Without Limits',
+    subtitle: 'Start building. Start earning. Today.',
+    saasplatform: 'SaaS Platform',
+    gamingportal: 'Gaming Portal',
+    mapsnavigation: 'Maps & Navigation',
+    fashionstore: 'Fashion Store',
+    stylecollection: 'Style Collection',
+    beautyproducts: 'Beauty Products',
+    fitnesstracker: 'Fitness Tracker',
+    luxuryfragrance: 'Luxury Fragrance',
+    beautystore: 'Beauty Store',
+    streamingplatform: 'Streaming Platform',
+    gaminggearstore: 'Gaming Gear Store',
+    gamingstore: 'Gaming Store',
+    synthesizer: 'Synthesizer',
+    projectroadmap: 'Project Roadmap',
+    analyticsdashboard: 'Analytics Dashboard'
+  }
+};
 
 interface CategoryCard {
-  nameKey?: string;
-  name?: string;
+  nameKey: string;
   icon: React.ReactNode | null;
   gradient: string;
   image: string;
@@ -14,91 +54,91 @@ interface CategoryCard {
 
 const categories: CategoryCard[] = [
   {
-    name: 'SaaS Platform',
+    nameKey: 'saasplatform',
     gradient: 'from-gray-800 to-gray-900',
     icon: null,
     image: '/templates/1.1.png'
   },
   {
-    name: 'Gaming Portal',
+    nameKey: 'gamingportal',
     gradient: 'from-gray-700 to-gray-800',
     icon: null,
     image: '/templates/1.2.png'
   },
   {
-    name: 'Maps & Navigation',
+    nameKey: 'mapsnavigation',
     gradient: 'from-slate-500 to-slate-700',
     icon: null,
     image: '/templates/1.3.png'
   },
   {
-    name: 'Fashion Store',
+    nameKey: 'fashionstore',
     gradient: 'from-cyan-500 to-blue-600',
     icon: null,
     image: '/templates/1.4.png'
   },
   {
-    name: 'Style Collection',
+    nameKey: 'stylecollection',
     gradient: 'from-emerald-500 to-teal-600',
     icon: null,
     image: '/templates/1.5.png'
   },
   {
-    name: 'Beauty Products',
+    nameKey: 'beautyproducts',
     gradient: 'from-amber-500 to-orange-600',
     icon: null,
     image: '/templates/1.7.png'
   },
   {
-    name: 'Fitness Tracker',
+    nameKey: 'fitnesstracker',
     gradient: 'from-gray-600 to-gray-700',
     icon: null,
     image: '/templates/1.8.png'
   },
   {
-    name: 'Luxury Fragrance',
+    nameKey: 'luxuryfragrance',
     gradient: 'from-blue-500 to-indigo-600',
     icon: null,
     image: '/templates/1.9.png'
   },
   {
-    name: 'Beauty Store',
+    nameKey: 'beautystore',
     gradient: 'from-green-500 to-emerald-600',
     icon: null,
     image: '/templates/1.10.png'
   },
   {
-    name: 'Streaming Platform',
+    nameKey: 'streamingplatform',
     gradient: 'from-blue-600 to-indigo-700',
     icon: null,
     image: '/templates/1.11.png'
   },
   {
-    name: 'Gaming Gear Store',
+    nameKey: 'gaminggearstore',
     gradient: 'from-gray-800 to-gray-900',
     icon: null,
     image: '/templates/1.12.png'
   },
   {
-    name: 'Gaming Store',
+    nameKey: 'gamingstore',
     gradient: 'from-gray-700 to-gray-800',
     icon: null,
     image: '/templates/1.13.png'
   },
   {
-    name: 'Synthesizer',
+    nameKey: 'synthesizer',
     gradient: 'from-teal-500 to-emerald-600',
     icon: null,
     image: '/templates/1.14.png'
   },
   {
-    name: 'Project Roadmap',
+    nameKey: 'projectroadmap',
     gradient: 'from-indigo-500 to-blue-600',
     icon: null,
     image: '/templates/1.15.png'
   },
   {
-    name: 'Analytics Dashboard',
+    nameKey: 'analyticsdashboard',
     gradient: 'from-orange-500 to-red-600',
     icon: null,
     image: '/templates/1.16.png'
@@ -108,7 +148,27 @@ const categories: CategoryCard[] = [
 export default function BuildAnythingSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
-  const { t } = useTranslation();
+  
+  // Read language directly from localStorage for client-side rendering
+  const [langCode, setLangCode] = useState('en');
+  
+  useEffect(() => {
+    const stored = localStorage.getItem('appnode_language');
+    if (stored) {
+      setLangCode(stored);
+    }
+    
+    // Also listen for storage changes (when user switches language)
+    const handleStorage = () => {
+      const updated = localStorage.getItem('appnode_language');
+      if (updated) {
+        setLangCode(updated);
+      }
+    };
+    
+    window.addEventListener('storage', handleStorage);
+    return () => window.removeEventListener('storage', handleStorage);
+  }, []);
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
@@ -140,10 +200,10 @@ export default function BuildAnythingSection() {
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-8 sm:mb-12 md:mb-16 text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 tracking-tight">
-          {t('buildAnything.title')}
+          {categoryTranslations[langCode]?.title || categoryTranslations.en.title}
         </h2>
         <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 px-2">
-          {t('buildAnything.subtitle')}
+          {categoryTranslations[langCode]?.subtitle || categoryTranslations.en.subtitle}
         </p>
       </div>
 
@@ -162,9 +222,12 @@ export default function BuildAnythingSection() {
       >
         <div className="flex gap-3 sm:gap-5 px-4 sm:px-6" style={{ width: 'max-content' }}>
           {/* Double the cards for seamless loop */}
-          {[...categories, ...categories].map((category, index) => (
+          {[...categories, ...categories].map((category, index) => {
+            const langTranslations = categoryTranslations[langCode] || categoryTranslations.en;
+            const name = langTranslations[category.nameKey] || category.nameKey;
+            return (
             <a
-              key={`${category.name}-${index}`}
+              key={`${category.nameKey}-${index}`}
               href="#"
               className="group relative w-[200px] sm:w-[240px] md:w-[280px] flex-shrink-0"
             >
@@ -172,14 +235,14 @@ export default function BuildAnythingSection() {
               <div className="relative rounded-xl sm:rounded-2xl overflow-hidden bg-slate-900 dark:bg-[#1A1A1A] border border-white/10 dark:border-2 dark:border-gray-800 transition-all duration-300 group-hover:border-white/30 group-hover:scale-[1.02] shadow-xl">
                 {/* Header with name only */}
                 <div className="absolute top-0 left-0 right-0 z-20 p-3 sm:p-4 bg-gradient-to-b from-black/60 to-transparent">
-                  <span className="text-white font-medium drop-shadow-lg text-sm sm:text-base">{category.name}</span>
+                  <span className="text-white font-medium drop-shadow-lg text-sm sm:text-base">{name}</span>
                 </div>
 
                 {/* Image */}
                 <div className="h-[220px] sm:h-[280px] md:h-[320px] relative">
                   <Image
                     src={category.image}
-                    alt={category.name || ''}
+                    alt={name || category.nameKey}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                     sizes="(max-width: 640px) 200px, (max-width: 768px) 240px, 280px"
@@ -191,7 +254,7 @@ export default function BuildAnythingSection() {
                 </div>
               </div>
             </a>
-          ))}
+          )})}
         </div>
       </div>
     </section>
