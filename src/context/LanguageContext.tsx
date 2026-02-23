@@ -3,18 +3,6 @@
 import React, { createContext, useContext, useEffect, useState, useCallback, useRef } from 'react';
 import translations, { TranslationKeys } from '@/translations';
 
-// Debug: Check if translations loaded
-if (typeof window !== 'undefined') {
-  console.log('[LanguageContext Module Load]', {
-    translationsType: typeof translations,
-    translationsKeys: translations ? Object.keys(translations) : 'N/A',
-    hasEn: translations ? !!translations.en : false,
-    hasKo: translations ? !!translations.ko : false
-  });
-  (window as any).__translations = translations;
-  (window as any).__debug_loaded = true;
-}
-
 export interface Language {
   code: string;
   name: string;
@@ -74,19 +62,6 @@ function getNestedValue(obj: Record<string, unknown>, path: string): string {
   const keys = path.split('.');
   let result: unknown = obj;
   
-  // DEBUG: Write to DOM for specific problematic keys
-  const shouldDebug = path.includes('videoSection') || path.includes('switchToDarkMode');
-  if (shouldDebug && typeof window !== 'undefined') {
-    let debugDiv = document.getElementById('__translation_debug');
-    if (!debugDiv) {
-      debugDiv = document.createElement('div');
-      debugDiv.id = '__translation_debug';
-      debugDiv.style.cssText = 'position:fixed;top:0;left:0;background:red;color:white;z-index:99999;padding:10px;max-height:200px;overflow:auto;font-family:monospace;font-size:12px;';
-      document.body.appendChild(debugDiv);
-    }
-    debugDiv.innerHTML += `<div>[${path}] objKeys: ${obj ? Object.keys(obj).slice(0, 5).join(',') : 'null'}</div>`;
-  }
-  
   for (const key of keys) {
     if (result && typeof result === 'object') {
       if (Array.isArray(result)) {
@@ -99,10 +74,6 @@ function getNestedValue(obj: Record<string, unknown>, path: string): string {
       } else if (key in result) {
         result = (result as Record<string, unknown>)[key];
       } else {
-        if (shouldDebug && typeof window !== 'undefined') {
-          const debugDiv = document.getElementById('__translation_debug');
-          if (debugDiv) debugDiv.innerHTML += `<div>KEY NOT FOUND: ${key}</div>`;
-        }
         return path;
       }
     } else {
@@ -156,15 +127,9 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   // Load language from localStorage
   useEffect(() => {
-    console.log('[LanguageProvider] Loading from localStorage...');
-    console.log('[LanguageProvider] translations:', typeof translations, Object.keys(translations || {}).slice(0, 5));
-    
     const savedLang = localStorage.getItem('appnode_language');
-    console.log('[LanguageProvider] savedLang:', savedLang);
-    
     if (savedLang) {
       const found = languages.find(l => l.code === savedLang);
-      console.log('[LanguageProvider] found language:', found);
       if (found) {
         setLanguageState(found);
         languageRef.current = found;
@@ -177,12 +142,6 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (languageReady) {
       setMounted(true);
-      // Expose translations for debugging
-      if (typeof window !== 'undefined') {
-        (window as any).__translations = translations;
-        (window as any).__debug_loaded = true;
-        console.log('[LanguageProvider] Mounted, exposing translations');
-      }
     }
   }, [languageReady]);
 
@@ -203,7 +162,6 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     const currentTranslations = translations[langCode] || translations.en;
     
     if (!currentTranslations) {
-      console.warn('[t()] No translations for:', langCode);
       return key;
     }
     
