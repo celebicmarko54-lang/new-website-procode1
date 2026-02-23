@@ -915,65 +915,65 @@
     "browseGuides": "가이드 탐색",
     "articles": "articles",
     "quickActions": {
-      "gettingStarted": "Getting Started",
-      "pricing": "Pricing",
-      "exportCode": "Export Code",
-      "liveAgent": "Live Agent"
+      "gettingStarted": "시작하기",
+      "pricing": "가격",
+      "exportCode": "코드 내보내기",
+      "liveAgent": "실시간 상담"
     },
     "categories": {
       "gettingStarted": {
-        "name": "Getting Started",
-        "description": "New to AppNode? Start here"
+        "name": "시작하기",
+        "description": "AppNode가 처음이신가요? 여기서 시작하세요"
       },
       "accountBilling": {
-        "name": "Account & Billing",
-        "description": "Manage your subscription and payments"
+        "name": "계정 & 결제",
+        "description": "구독 및 결제 관리"
       },
       "buildingApps": {
-        "name": "Building Apps",
-        "description": "Learn how to create amazing apps"
+        "name": "앱 만들기",
+        "description": "놀라운 앱을 만드는 방법 배우기"
       },
       "customization": {
-        "name": "Customization",
-        "description": "Style and personalize your projects"
+        "name": "커스터마이징",
+        "description": "프로젝트 스타일 및 개인화"
       },
       "integrations": {
-        "name": "Integrations",
-        "description": "Connect with third-party services"
+        "name": "통합",
+        "description": "서드파티 서비스와 연결"
       },
       "troubleshooting": {
-        "name": "Troubleshooting",
-        "description": "Fix common issues and errors"
+        "name": "문제 해결",
+        "description": "일반적인 문제 및 오류 수정"
       }
     },
     "popularArticlesList": {
-      "firstApp": "How to create your first app",
-      "promptEngineering": "Understanding prompt engineering",
-      "customDomain": "Connecting a custom domain",
-      "exportCode": "Exporting your project code",
-      "teamCollab": "Team collaboration features",
-      "apiAuth": "API authentication setup"
+      "firstApp": "첫 번째 앱 만드는 방법",
+      "promptEngineering": "프롬프트 엔지니어링 이해하기",
+      "customDomain": "커스텀 도메인 연결하기",
+      "exportCode": "프로젝트 코드 내보내기",
+      "teamCollab": "팀 협업 기능",
+      "apiAuth": "API 인증 설정"
     },
     "faqs": {
       "whatIsAppNode": {
-        "question": "What is AppNode?",
-        "answer": "AppNode is an AI-powered platform that lets you build web applications by simply describing what you want in natural language."
+        "question": "AppNode란 무엇인가요?",
+        "answer": "AppNode는 자연어로 원하는 것을 설명하는 것만으로 웹 애플리케이션을 구축할 수 있는 AI 기반 플랫폼입니다."
       },
       "codingExperience": {
-        "question": "Do I need coding experience?",
-        "answer": "No! AppNode is designed for everyone. You can create professional apps without writing any code."
+        "question": "코딩 경험이 필요한가요?",
+        "answer": "아니요! AppNode는 모든 사람을 위해 설계되었습니다. 코드 작성 없이 전문적인 앱을 만들 수 있습니다."
       },
       "exportCode": {
-        "question": "Can I export my code?",
-        "answer": "Yes, you can export your complete project code at any time. You own everything you create."
+        "question": "코드를 내보낼 수 있나요?",
+        "answer": "네, 언제든지 완전한 프로젝트 코드를 내보낼 수 있습니다. 생성한 모든 것은 여러분의 소유입니다."
       },
       "technologies": {
-        "question": "What technologies does AppNode use?",
-        "answer": "AppNode generates modern React/Next.js applications with Tailwind CSS styling."
+        "question": "AppNode는 어떤 기술을 사용하나요?",
+        "answer": "AppNode는 Tailwind CSS 스타일링을 사용하는 최신 React/Next.js 애플리케이션을 생성합니다."
       },
       "freePlan": {
-        "question": "Is there a free plan?",
-        "answer": "Yes! We offer a generous free tier that lets you build and deploy apps at no cost."
+        "question": "무료 플랜이 있나요?",
+        "answer": "네! 비용 없이 앱을 구축하고 배포할 수 있는 넉넉한 무료 티어를 제공합니다."
       }
     }
   },
@@ -1006,67 +1006,67 @@
     "getStartedFree": "무료로 시작하기",
     "browseCourses": "과정 탐색",
     "categories": {
-      "all": "All",
-      "featured": "Featured",
+      "all": "전체",
+      "featured": "추천",
       "ai": "AI",
-      "product": "Product",
-      "engineering": "Engineering",
-      "community": "Community",
-      "tips": "Tips",
-      "news": "News"
+      "product": "제품",
+      "engineering": "엔지니어링",
+      "community": "커뮤니티",
+      "tips": "팁",
+      "news": "뉴스"
     },
     "posts": {
       "featured": {
-        "title": "Introducing AppNode Agent: Build Apps 10x Faster with AI",
-        "excerpt": "We're excited to announce AppNode Agent, our most advanced AI development assistant. It understands your vision, generates production-ready code, and deploys your app automatically."
+        "title": "AppNode Agent 소개: AI로 10배 빠른 앱 구축",
+        "excerpt": "가장 진보된 AI 개발 어시스턴트인 AppNode Agent를 발표하게 되어 기쁩니다. 여러분의 비전을 이해하고, 프로덕션 준비가 된 코드를 생성하며, 앱을 자동으로 배포합니다."
       },
       "supabase": {
-        "title": "Building Production Apps with AppNode + Supabase",
-        "excerpt": "Learn how to connect your AppNode projects to Supabase for powerful database functionality."
+        "title": "AppNode + Supabase로 프로덕션 앱 구축하기",
+        "excerpt": "강력한 데이터베이스 기능을 위해 AppNode 프로젝트를 Supabase에 연결하는 방법을 배우세요."
       },
       "smartStyles": {
-        "title": "Smart Styles: AI-Powered Design System for Your Apps",
-        "excerpt": "Introducing Smart Styles, our new feature that automatically creates beautiful, consistent designs."
+        "title": "Smart Styles: 앱을 위한 AI 기반 디자인 시스템",
+        "excerpt": "아름답고 일관된 디자인을 자동으로 생성하는 새로운 기능 Smart Styles를 소개합니다."
       },
       "security": {
-        "title": "How AppNode Secures AI-Generated Code",
-        "excerpt": "A deep dive into our hybrid approach combining static analysis with LLM-based reasoning."
+        "title": "AppNode의 AI 생성 코드 보안 방법",
+        "excerpt": "정적 분석과 LLM 기반 추론을 결합한 하이브리드 접근 방식에 대한 심층 분석."
       },
       "prompting": {
-        "title": "10 Prompting Tips for Better AI-Generated Apps",
-        "excerpt": "Master the art of vibe coding with these practical prompting strategies."
+        "title": "더 나은 AI 생성 앱을 위한 10가지 프롬프트 팁",
+        "excerpt": "실용적인 프롬프트 전략으로 바이브 코딩의 기술을 마스터하세요."
       },
       "spotlight": {
-        "title": "Community Spotlight: Apps Built This Month",
-        "excerpt": "Showcasing incredible applications built by our community."
+        "title": "커뮤니티 스포트라이트: 이번 달 구축된 앱",
+        "excerpt": "커뮤니티가 구축한 놀라운 애플리케이션을 소개합니다."
       },
       "collaboration": {
-        "title": "Real-time Collaboration: Build Together, Ship Faster",
-        "excerpt": "Multiple team members can now edit the same project simultaneously."
+        "title": "실시간 협업: 함께 구축하고 더 빨리 배포",
+        "excerpt": "이제 여러 팀원이 동시에 같은 프로젝트를 편집할 수 있습니다."
       },
       "caseStudy": {
-        "title": "From Zero to Production in One Day: A Case Study",
-        "excerpt": "How a solo founder built and launched a complete SaaS application using AppNode."
+        "title": "하루 만에 제로에서 프로덕션까지: 사례 연구",
+        "excerpt": "솔로 창업자가 AppNode를 사용하여 완전한 SaaS 애플리케이션을 구축하고 출시한 방법."
       },
       "architecture": {
-        "title": "Understanding AppNode's Component Architecture",
-        "excerpt": "A technical deep dive into how AppNode structures generated code."
+        "title": "AppNode의 컴포넌트 아키텍처 이해하기",
+        "excerpt": "AppNode가 생성된 코드를 어떻게 구조화하는지에 대한 기술적 심층 분석."
       },
       "mobile": {
-        "title": "Mobile Apps on AppNode: iOS and Android Coming Soon",
-        "excerpt": "We're working on native mobile experiences so you can build apps without learning Swift or Kotlin."
+        "title": "AppNode의 모바일 앱: iOS와 Android 곧 출시",
+        "excerpt": "Swift나 Kotlin을 배우지 않고도 앱을 구축할 수 있도록 네이티브 모바일 경험을 개발 중입니다."
       },
       "enterprise": {
-        "title": "AppNode for Enterprise: Security, Compliance, and Scale",
-        "excerpt": "Announcing enterprise-grade features including SSO, audit logs, and dedicated support."
+        "title": "엔터프라이즈용 AppNode: 보안, 규정 준수, 확장성",
+        "excerpt": "SSO, 감사 로그, 전담 지원을 포함한 엔터프라이즈급 기능 발표."
       },
       "future": {
-        "title": "The Future of No-Code: Where We're Headed",
-        "excerpt": "Our vision for the next generation of software development."
+        "title": "노코드의 미래: 우리가 향하는 곳",
+        "excerpt": "차세대 소프트웨어 개발에 대한 우리의 비전."
       },
       "performance": {
-        "title": "Performance Optimization Guide for AppNode Apps",
-        "excerpt": "Best practices for building fast, responsive applications."
+        "title": "AppNode 앱 성능 최적화 가이드",
+        "excerpt": "빠르고 반응성 좋은 애플리케이션을 구축하기 위한 모범 사례."
       }
     }
   },
@@ -1626,17 +1626,47 @@
     "subscribeButton": "Subscribe"
   },
   "securityPage": {
-    "badge": "Enterprise-Grade Security",
+    "badge": "엔터프라이즈급 보안",
     "titleHighlight": "보안",
-    "titleSuffix": "First",
-    "subtitle": "Your data security is our top priority. Learn about the measures we take to keep your information safe.",
-    "featuresTitle": "Security Features",
-    "practicesTitle": "Our Security Practices",
-    "bugBountyTitle": "Bug Bounty Program",
-    "bugBountyDescription": "Help us improve security and earn rewards for responsibly disclosing vulnerabilities.",
-    "reportTitle": "Report a Security Issue",
-    "reportDescription": "If you believe you've found a security vulnerability in AppNode, please report it to our security team immediately.",
-    "whitepaper": "Security Whitepaper"
+    "titleSuffix": "최우선",
+    "subtitle": "데이터 보안은 우리의 최우선 과제입니다. 귀하의 정보를 안전하게 보호하기 위해 취하는 조치에 대해 알아보세요.",
+    "featuresTitle": "보안 기능",
+    "practicesTitle": "보안 관행",
+    "bugBountyTitle": "버그 바운티 프로그램",
+    "bugBountyDescription": "취약점을 책임감 있게 보고하여 보안 개선에 기여하고 보상을 받으세요.",
+    "reportTitle": "보안 문제 신고",
+    "reportDescription": "AppNode에서 보안 취약점을 발견했다고 생각되시면 즉시 보안팀에 신고해 주세요.",
+    "whitepaper": "보안 백서",
+    "features": [
+      { "icon": "🔐", "title": "휴지 및 전송 중 암호화", "description": "모든 데이터는 휴지 상태에서 AES-256 암호화로, 전송 중에는 TLS 1.3으로 암호화됩니다." },
+      { "icon": "🛡️", "title": "SOC 2 Type II 인증", "description": "독립적인 제3자 감사기관에 의해 검증된 SOC 2 Type II 준수를 유지합니다." },
+      { "icon": "🔒", "title": "2단계 인증", "description": "인증 앱 또는 하드웨어 보안 키를 사용하여 2FA로 계정을 보호하세요." },
+      { "icon": "🌐", "title": "SSO 및 SAML", "description": "SAML 2.0 및 OAuth 제공자를 지원하는 엔터프라이즈급 SSO." },
+      { "icon": "📝", "title": "감사 로그", "description": "모든 계정 활동 및 변경 사항에 대한 포괄적인 감사 로그." },
+      { "icon": "🔍", "title": "취약점 스캔", "description": "지속적인 자동 보안 스캔 및 정기적인 침투 테스트." },
+      { "icon": "💾", "title": "데이터 백업", "description": "시점 복구 기능을 갖춘 자동 일일 백업." },
+      { "icon": "🚨", "title": "사고 대응", "description": "신속한 사고 대응 절차를 갖춘 24/7 보안 모니터링." }
+    ],
+    "certifications": [
+      { "name": "SOC 2 Type II", "icon": "✓", "description": "보안, 가용성 및 기밀성" },
+      { "name": "GDPR", "icon": "✓", "description": "EU 데이터 보호 준수" },
+      { "name": "CCPA", "icon": "✓", "description": "캘리포니아 개인정보보호법" },
+      { "name": "ISO 27001", "icon": "✓", "description": "정보보안 관리체계" }
+    ],
+    "practices": [
+      {
+        "title": "보안 개발",
+        "items": ["모든 변경에 대한 코드 리뷰", "CI/CD에서 자동화된 보안 테스트", "의존성 취약점 스캔", "개발자를 위한 정기 보안 교육"]
+      },
+      {
+        "title": "인프라 보안",
+        "items": ["AWS/GCP의 클라우드 인프라", "네트워크 분할 및 방화벽", "DDoS 보호 및 완화", "침입 탐지 시스템"]
+      },
+      {
+        "title": "접근 제어",
+        "items": ["역할 기반 접근 제어 (RBAC)", "최소 권한 원칙", "정기적인 접근 검토", "안전한 자격 증명 관리"]
+      }
+    ]
   },
   "changelogPage": {
     "badge": "Updates",
@@ -1825,424 +1855,424 @@
     }
   },
   "learnPage": {
-    "badge": "Free Learning Platform",
-    "titleStart": "Learn to Build with",
-    "titleHighlight": "AppNode",
-    "subtitle": "Free courses, tutorials, and hands-on projects to help you master AI-powered app development. Go from beginner to expert at your own pace.",
-    "startLearningFree": "Start Learning Free",
-    "browseCourses": "Browse Courses",
+    "badge": "무료 학습 플랫폼",
+    "titleStart": "AppNode로 배우는",
+    "titleHighlight": "앱 개발",
+    "subtitle": "AI 기반 앱 개발을 마스터하기 위한 무료 강좌, 튜토리얼, 실습 프로젝트. 자신의 속도에 맞춰 초보자에서 전문가로 성장하세요.",
+    "startLearningFree": "무료로 학습 시작",
+    "browseCourses": "강좌 둘러보기",
     "stats": {
-      "freeCourses": "Free Courses",
-      "students": "Students",
+      "freeCourses": "무료 강좌",
+      "students": "수강생",
       "averageRating": "평균 평점",
-      "communitySupport": "Community Support"
+      "communitySupport": "커뮤니티 지원"
     },
-    "chooseLearningPath": "Choose Your Learning Path",
-    "chooseLearningPathDesc": "Curated courses designed for your specific goals and skill level.",
-    "popularCourses": "Popular Courses",
-    "popularCoursesDesc": "Start with our most popular courses, handpicked by our community.",
-    "startCourse": "Start Course",
-    "viewAllCourses": "View All Courses",
+    "chooseLearningPath": "학습 경로 선택",
+    "chooseLearningPathDesc": "목표와 기술 수준에 맞게 설계된 맞춤형 강좌입니다.",
+    "popularCourses": "인기 강좌",
+    "popularCoursesDesc": "커뮤니티에서 선정한 가장 인기 있는 강좌로 시작하세요.",
+    "startCourse": "강좌 시작",
+    "viewAllCourses": "모든 강좌 보기",
     "cta": {
-      "title": "Start Your Learning Journey Today",
-      "subtitle": "Join over 100,000 students who have transformed their skills with AppNode. All courses are completely free.",
-      "createFreeAccount": "Create Free Account",
-      "browseGuides": "Browse Guides"
+      "title": "오늘 학습 여정을 시작하세요",
+      "subtitle": "AppNode로 실력을 향상시킨 100,000명 이상의 수강생과 함께하세요. 모든 강좌는 완전 무료입니다.",
+      "createFreeAccount": "무료 계정 만들기",
+      "browseGuides": "가이드 둘러보기"
     },
     "levels": {
-      "beginner": "Beginner",
-      "intermediate": "Intermediate",
-      "advanced": "Advanced"
+      "beginner": "초급",
+      "intermediate": "중급",
+      "advanced": "고급"
     },
-    "lessons": "lessons",
-    "min": "min",
+    "lessons": "레슨",
+    "min": "분",
     "courses": {
       "gettingStarted": {
-        "title": "Getting Started with AppNode",
-        "description": "Learn the basics of creating apps with AI. Perfect for absolute beginners."
+        "title": "AppNode 시작하기",
+        "description": "AI로 앱을 만드는 기초를 배웁니다. 완전 초보자에게 딱 맞습니다."
       },
       "buildingDashboard": {
-        "title": "Building Your First Dashboard",
-        "description": "Create a complete analytics dashboard from scratch with real-time data."
+        "title": "첫 번째 대시보드 만들기",
+        "description": "실시간 데이터로 완전한 분석 대시보드를 처음부터 만들어보세요."
       },
       "advancedPrompting": {
-        "title": "Advanced Prompting Techniques",
-        "description": "Master the art of writing effective prompts that generate exactly what you need."
+        "title": "고급 프롬프트 기법",
+        "description": "원하는 결과를 정확하게 생성하는 효과적인 프롬프트 작성법을 마스터하세요."
       },
       "ecommerce": {
-        "title": "E-commerce Store Masterclass",
-        "description": "Build a fully functional online store with payments, inventory, and orders."
+        "title": "이커머스 스토어 마스터클래스",
+        "description": "결제, 재고, 주문 기능을 갖춘 완전한 온라인 스토어를 만들어보세요."
       },
       "customComponents": {
-        "title": "Custom Components & Styling",
-        "description": "Create reusable components with custom themes that match your brand."
+        "title": "커스텀 컴포넌트 & 스타일링",
+        "description": "브랜드에 맞는 커스텀 테마로 재사용 가능한 컴포넌트를 만드세요."
       },
       "deploying": {
-        "title": "Deploying to Production",
-        "description": "Launch your app to the world with custom domains and SSL certificates."
+        "title": "프로덕션 배포하기",
+        "description": "커스텀 도메인과 SSL 인증서로 앱을 세상에 공개하세요."
       },
       "mobileFirst": {
-        "title": "Building Mobile-First Apps",
-        "description": "Design responsive applications that work beautifully on any device."
+        "title": "모바일 우선 앱 만들기",
+        "description": "모든 기기에서 아름답게 작동하는 반응형 앱을 설계하세요."
       },
       "apiIntegration": {
-        "title": "API Integration Essentials",
-        "description": "Connect your app to external services, databases, and third-party APIs."
+        "title": "API 통합 기초",
+        "description": "앱을 외부 서비스, 데이터베이스, 서드파티 API에 연결하세요."
       },
       "authSecurity": {
-        "title": "Authentication & Security",
-        "description": "Implement secure user authentication and protect your application."
+        "title": "인증 & 보안",
+        "description": "안전한 사용자 인증을 구현하고 애플리케이션을 보호하세요."
       }
     },
     "modal": {
-      "overview": "Overview",
-      "howToDoIt": "How to do it",
-      "proTips": "Pro Tips",
-      "gotIt": "Got it!"
+      "overview": "개요",
+      "howToDoIt": "방법",
+      "proTips": "프로 팁",
+      "gotIt": "확인!"
     },
     "tutorials": {
       "gettingStarted": {
-        "overview": "Get started with AppNode by learning the fundamentals of AI-powered app development.",
+        "overview": "AI 기반 앱 개발의 기초를 배우며 AppNode를 시작하세요.",
         "steps": [
-          "Sign up for a free AppNode account at appnode.ai",
-          "Navigate to the dashboard and click 'New Project'",
-          "Describe your app idea in the chat interface",
-          "Review the generated code and make adjustments",
-          "Deploy your app with one click"
+          "appnode.ai에서 무료 AppNode 계정을 만드세요",
+          "대시보드로 이동하여 '새 프로젝트'를 클릭하세요",
+          "채팅 인터페이스에서 앱 아이디어를 설명하세요",
+          "생성된 코드를 검토하고 조정하세요",
+          "원클릭으로 앱을 배포하세요"
         ],
         "tips": [
-          "Be specific when describing your app requirements",
-          "Start with simple projects to learn the workflow",
-          "Use the preview feature to test changes instantly"
+          "앱 요구사항을 구체적으로 설명하세요",
+          "간단한 프로젝트부터 시작하여 워크플로우를 익히세요",
+          "미리보기 기능으로 변경사항을 실시간으로 테스트하세요"
         ]
       },
       "buildingDashboard": {
-        "overview": "Learn to build professional analytics dashboards with charts, metrics, and real-time data.",
+        "overview": "차트, 지표, 실시간 데이터로 전문적인 분석 대시보드를 만드는 방법을 배웁니다.",
         "steps": [
-          "Start a new project and describe your dashboard needs",
-          "Add chart components (bar, line, pie charts)",
-          "Connect to your data source or use sample data",
-          "Customize colors and layouts to match your brand",
-          "Add interactive filters and date pickers",
-          "Test responsiveness on different screen sizes",
-          "Deploy and share with your team"
+          "새 프로젝트를 시작하고 대시보드 요구사항을 설명하세요",
+          "차트 컴포넌트(막대, 선, 원형 차트)를 추가하세요",
+          "데이터 소스에 연결하거나 샘플 데이터를 사용하세요",
+          "브랜드에 맞게 색상과 레이아웃을 커스터마이즈하세요",
+          "인터랙티브 필터와 날짜 선택기를 추가하세요",
+          "다양한 화면 크기에서 반응성을 테스트하세요",
+          "배포하고 팀과 공유하세요"
         ],
         "tips": [
-          "Group related metrics together",
-          "Use consistent color coding for data categories",
-          "Keep the most important metrics at the top"
+          "관련 지표를 함께 그룹화하세요",
+          "데이터 카테고리에 일관된 색상 코딩을 사용하세요",
+          "가장 중요한 지표를 상단에 배치하세요"
         ]
       },
       "advancedPrompting": {
-        "overview": "Master prompt engineering to get better results from AppNode AI.",
+        "overview": "AppNode AI에서 더 나은 결과를 얻기 위한 프롬프트 엔지니어링을 마스터하세요.",
         "steps": [
-          "Understand the anatomy of a good prompt",
-          "Use specific technical requirements in your prompts",
-          "Learn to iterate and refine based on output",
-          "Combine multiple features in single prompts",
-          "Use reference examples to guide the AI"
+          "좋은 프롬프트의 구조를 이해하세요",
+          "프롬프트에 구체적인 기술 요구사항을 사용하세요",
+          "출력을 기반으로 반복하고 개선하는 방법을 배우세요",
+          "하나의 프롬프트에 여러 기능을 결합하세요",
+          "AI를 안내하기 위해 참조 예제를 사용하세요"
         ],
         "tips": [
-          "Always specify the tech stack you want",
-          "Include accessibility requirements",
-          "Mention responsive design needs upfront"
+          "원하는 기술 스택을 항상 명시하세요",
+          "접근성 요구사항을 포함하세요",
+          "반응형 디자인 요구사항을 미리 언급하세요"
         ]
       },
       "ecommerce": {
-        "overview": "Create a complete e-commerce solution with product catalog, cart, and checkout.",
+        "overview": "상품 카탈로그, 장바구니, 결제 기능을 갖춘 완전한 이커머스 솔루션을 만드세요.",
         "steps": [
-          "Set up product catalog with categories",
-          "Build shopping cart functionality",
-          "Integrate Stripe for payments",
-          "Create order management system",
-          "Add inventory tracking",
-          "Set up email notifications",
-          "Implement user accounts and order history"
+          "카테고리가 있는 상품 카탈로그를 설정하세요",
+          "장바구니 기능을 구축하세요",
+          "결제를 위해 Stripe를 통합하세요",
+          "주문 관리 시스템을 만드세요",
+          "재고 추적을 추가하세요",
+          "이메일 알림을 설정하세요",
+          "사용자 계정과 주문 내역을 구현하세요"
         ],
         "tips": [
-          "Start with a simple product catalog first",
-          "Test the checkout flow thoroughly",
-          "Use test payment credentials during development"
+          "먼저 간단한 상품 카탈로그부터 시작하세요",
+          "결제 흐름을 철저히 테스트하세요",
+          "개발 중에는 테스트 결제 자격 증명을 사용하세요"
         ]
       },
       "customComponents": {
-        "overview": "Learn to create consistent, reusable components with custom styling.",
+        "overview": "일관되고 재사용 가능한 컴포넌트를 커스텀 스타일링과 함께 만드는 방법을 배웁니다.",
         "steps": [
-          "Define your brand colors and typography",
-          "Create a component library structure",
-          "Build reusable button, input, and card components",
-          "Implement dark mode support",
-          "Add animation and transitions",
-          "Document your components"
+          "브랜드 색상과 타이포그래피를 정의하세요",
+          "컴포넌트 라이브러리 구조를 만드세요",
+          "재사용 가능한 버튼, 입력, 카드 컴포넌트를 구축하세요",
+          "다크 모드 지원을 구현하세요",
+          "애니메이션과 전환 효과를 추가하세요",
+          "컴포넌트를 문서화하세요"
         ],
         "tips": [
-          "Use CSS variables for theming",
-          "Keep components small and focused",
-          "Test components in isolation"
+          "테마에 CSS 변수를 사용하세요",
+          "컴포넌트를 작고 집중적으로 유지하세요",
+          "컴포넌트를 독립적으로 테스트하세요"
         ]
       },
       "deploying": {
-        "overview": "Learn to deploy your applications to production with confidence.",
+        "overview": "자신감을 갖고 애플리케이션을 프로덕션에 배포하는 방법을 배웁니다.",
         "steps": [
-          "Prepare your app for production",
-          "Choose a hosting provider",
-          "Configure environment variables",
-          "Set up custom domains",
-          "Enable SSL certificates"
+          "앱을 프로덕션용으로 준비하세요",
+          "호스팅 제공업체를 선택하세요",
+          "환경 변수를 구성하세요",
+          "커스텀 도메인을 설정하세요",
+          "SSL 인증서를 활성화하세요"
         ],
         "tips": [
-          "Always test in a staging environment first",
-          "Set up monitoring and alerts",
-          "Keep your dependencies updated"
+          "항상 스테이징 환경에서 먼저 테스트하세요",
+          "모니터링과 알림을 설정하세요",
+          "종속성을 최신 상태로 유지하세요"
         ]
       },
       "mobileFirst": {
-        "overview": "Create responsive, mobile-first applications that work on all devices.",
+        "overview": "모든 기기에서 작동하는 반응형 모바일 우선 애플리케이션을 만드세요.",
         "steps": [
-          "Understand mobile-first design principles",
-          "Use responsive breakpoints effectively",
-          "Optimize touch interactions",
-          "Handle different screen orientations",
-          "Test on real devices",
-          "Optimize performance for mobile networks"
+          "모바일 우선 디자인 원칙을 이해하세요",
+          "반응형 브레이크포인트를 효과적으로 사용하세요",
+          "터치 인터랙션을 최적화하세요",
+          "다양한 화면 방향을 처리하세요",
+          "실제 기기에서 테스트하세요",
+          "모바일 네트워크에 맞게 성능을 최적화하세요"
         ],
         "tips": [
-          "Design for the smallest screen first",
-          "Use relative units (rem, %) instead of pixels",
-          "Test with throttled network conditions"
+          "가장 작은 화면부터 먼저 디자인하세요",
+          "픽셀 대신 상대 단위(rem, %)를 사용하세요",
+          "제한된 네트워크 조건에서 테스트하세요"
         ]
       },
       "apiIntegration": {
-        "overview": "Learn to integrate external APIs and services into your applications.",
+        "overview": "외부 API와 서비스를 애플리케이션에 통합하는 방법을 배웁니다.",
         "steps": [
-          "Understand REST API fundamentals",
-          "Handle API authentication (API keys, OAuth)",
-          "Make GET, POST, PUT, DELETE requests",
-          "Handle errors and edge cases",
-          "Implement rate limiting",
-          "Cache API responses for performance"
+          "REST API 기초를 이해하세요",
+          "API 인증(API 키, OAuth)을 처리하세요",
+          "GET, POST, PUT, DELETE 요청을 만드세요",
+          "에러와 엣지 케이스를 처리하세요",
+          "레이트 리미팅을 구현하세요",
+          "성능을 위해 API 응답을 캐시하세요"
         ],
         "tips": [
-          "Always handle API errors gracefully",
-          "Use environment variables for API keys",
-          "Implement retry logic for failed requests"
+          "항상 API 에러를 우아하게 처리하세요",
+          "API 키에는 환경 변수를 사용하세요",
+          "실패한 요청에 대해 재시도 로직을 구현하세요"
         ]
       },
       "authSecurity": {
-        "overview": "Implement secure authentication and protect your application from threats.",
+        "overview": "안전한 인증을 구현하고 위협으로부터 애플리케이션을 보호하세요.",
         "steps": [
-          "Set up user registration and login",
-          "Implement password hashing",
-          "Add two-factor authentication",
-          "Handle session management",
-          "Protect against common attacks (XSS, CSRF)",
-          "Set up role-based access control"
+          "사용자 등록과 로그인을 설정하세요",
+          "비밀번호 해싱을 구현하세요",
+          "2단계 인증을 추가하세요",
+          "세션 관리를 처리하세요",
+          "일반적인 공격(XSS, CSRF)으로부터 보호하세요",
+          "역할 기반 접근 제어를 설정하세요"
         ],
         "tips": [
-          "Never store passwords in plain text",
-          "Use HTTPS everywhere",
-          "Regularly audit your security practices"
+          "비밀번호를 절대 평문으로 저장하지 마세요",
+          "모든 곳에서 HTTPS를 사용하세요",
+          "정기적으로 보안 관행을 감사하세요"
         ]
       }
     }
   },
   "guidesPage": {
-    "badge": "In-Depth Tutorials",
-    "titleStart": "Developer",
+    "badge": "심층 튜토리얼",
+    "titleStart": "개발자",
     "titleHighlight": "가이드",
-    "subtitle": "In-depth tutorials and best practices for building amazing applications. From beginner to advanced, we've got you covered.",
-    "featuredGuide": "Featured Guide",
-    "allGuides": "All Guides",
-    "readGuide": "Read Guide",
+    "subtitle": "놀라운 애플리케이션을 구축하기 위한 심층 튜토리얼과 모범 사례. 초보자부터 고급까지 모두 다룹니다.",
+    "featuredGuide": "추천 가이드",
+    "allGuides": "모든 가이드",
+    "readGuide": "가이드 읽기",
     "cta": {
-      "title": "Ready to Start Building?",
-      "subtitle": "Put what you've learned into practice. Create your first app today.",
-      "getStartedFree": "Get Started Free",
-      "browseTemplates": "Browse Templates"
+      "title": "구축을 시작할 준비가 되셨나요?",
+      "subtitle": "배운 것을 실천에 옮기세요. 오늘 첫 번째 앱을 만드세요.",
+      "getStartedFree": "무료로 시작하기",
+      "browseTemplates": "템플릿 둘러보기"
     },
     "modal": {
-      "overview": "Overview",
-      "howToDoIt": "How to do it",
-      "proTips": "Pro Tips",
-      "gotIt": "Got it!"
+      "overview": "개요",
+      "howToDoIt": "방법",
+      "proTips": "프로 팁",
+      "gotIt": "확인!"
     },
     "categories": {
-      "all": "All",
+      "all": "전체",
       "saas": "SaaS",
-      "ecommerce": "E-commerce",
-      "design": "Design",
-      "security": "Security",
-      "backend": "Backend",
-      "performance": "Performance"
+      "ecommerce": "이커머스",
+      "design": "디자인",
+      "security": "보안",
+      "backend": "백엔드",
+      "performance": "성능"
     },
-    "minRead": "min read",
+    "minRead": "분 읽기",
     "guides": {
       "saasApps": {
-        "title": "Complete Guide to Building SaaS Apps",
-        "description": "Everything you need to know about creating software-as-a-service applications with AppNode",
-        "overview": "Learn to build a complete SaaS application from scratch, including user authentication, subscription billing, and multi-tenant architecture.",
+        "title": "SaaS 앱 구축 완전 가이드",
+        "description": "AppNode로 서비스형 소프트웨어 애플리케이션을 만드는 데 필요한 모든 것",
+        "overview": "사용자 인증, 구독 결제, 멀티테넌트 아키텍처를 포함한 완전한 SaaS 애플리케이션을 처음부터 구축하는 방법을 배웁니다.",
         "steps": [
-          "Set up your project with authentication (login, signup, password reset)",
-          "Create a dashboard layout with navigation and user settings",
-          "Implement subscription billing with Stripe integration",
-          "Build multi-tenant data isolation for different customer accounts",
-          "Add role-based access control for team members",
-          "Set up email notifications for key events",
-          "Deploy to production with monitoring"
+          "인증(로그인, 가입, 비밀번호 재설정)으로 프로젝트 설정하기",
+          "네비게이션과 사용자 설정이 있는 대시보드 레이아웃 만들기",
+          "Stripe 통합으로 구독 결제 구현하기",
+          "다양한 고객 계정을 위한 멀티테넌트 데이터 격리 구축하기",
+          "팀원을 위한 역할 기반 접근 제어 추가하기",
+          "주요 이벤트에 대한 이메일 알림 설정하기",
+          "모니터링과 함께 프로덕션에 배포하기"
         ],
         "tips": [
-          "Start with a simple MVP and iterate based on user feedback",
-          "Use environment variables for all API keys and secrets",
-          "Implement proper error handling from the start"
+          "간단한 MVP로 시작하고 사용자 피드백을 기반으로 반복하세요",
+          "모든 API 키와 시크릿에 환경 변수를 사용하세요",
+          "처음부터 적절한 에러 처리를 구현하세요"
         ]
       },
       "ecommerce": {
-        "title": "E-commerce Best Practices",
-        "description": "Learn how to build high-converting online stores with payment integration",
-        "overview": "Create a high-converting e-commerce store with product catalog, shopping cart, and secure checkout.",
+        "title": "이커머스 모범 사례",
+        "description": "결제 통합으로 높은 전환율의 온라인 스토어를 구축하는 방법을 배웁니다",
+        "overview": "상품 카탈로그, 장바구니, 안전한 결제 기능을 갖춘 높은 전환율의 이커머스 스토어를 만드세요.",
         "steps": [
-          "Design an attractive product catalog with categories and filters",
-          "Build a persistent shopping cart with local storage",
-          "Integrate Stripe or PayPal for payments",
-          "Create order confirmation and tracking pages",
-          "Set up inventory management",
-          "Implement customer reviews and ratings"
+          "카테고리와 필터가 있는 매력적인 상품 카탈로그 디자인하기",
+          "로컬 스토리지를 사용한 지속 가능한 장바구니 구축하기",
+          "결제를 위해 Stripe 또는 PayPal 통합하기",
+          "주문 확인 및 추적 페이지 만들기",
+          "재고 관리 설정하기",
+          "고객 리뷰 및 평점 구현하기"
         ],
         "tips": [
-          "Use high-quality product images",
-          "Keep the checkout process simple (3 steps max)",
-          "Show trust badges and secure payment icons"
+          "고품질 상품 이미지를 사용하세요",
+          "결제 과정을 간단하게 유지하세요 (최대 3단계)",
+          "신뢰 배지와 안전 결제 아이콘을 표시하세요"
         ]
       },
       "dashboard": {
-        "title": "Mastering Dashboard Design",
-        "description": "Create beautiful and functional analytics dashboards that users love",
-        "overview": "Design professional analytics dashboards with clear data visualization and intuitive layouts.",
+        "title": "대시보드 디자인 마스터하기",
+        "description": "사용자가 좋아하는 아름답고 기능적인 분석 대시보드 만들기",
+        "overview": "명확한 데이터 시각화와 직관적인 레이아웃으로 전문적인 분석 대시보드를 디자인하세요.",
         "steps": [
-          "Define the key metrics your users need to see",
-          "Create a wireframe with proper visual hierarchy",
-          "Choose appropriate chart types for each data type",
-          "Implement interactive filters and date ranges",
-          "Add data export functionality",
-          "Optimize for different screen sizes"
+          "사용자가 필요로 하는 핵심 지표 정의하기",
+          "적절한 시각적 계층 구조로 와이어프레임 만들기",
+          "각 데이터 유형에 적합한 차트 유형 선택하기",
+          "인터랙티브 필터와 날짜 범위 구현하기",
+          "데이터 내보내기 기능 추가하기",
+          "다양한 화면 크기에 맞게 최적화하기"
         ],
         "tips": [
-          "Put the most important metrics at the top",
-          "Use consistent color coding across all charts",
-          "Avoid cluttering - less is more"
+          "가장 중요한 지표를 상단에 배치하세요",
+          "모든 차트에 일관된 색상 코딩을 사용하세요",
+          "복잡하게 만들지 마세요 - 적을수록 좋습니다"
         ]
       },
       "authentication": {
-        "title": "Authentication & Security",
-        "description": "Implement secure user authentication and protect your applications",
-        "overview": "Implement robust authentication and security best practices to protect your users and data.",
+        "title": "인증 & 보안",
+        "description": "안전한 사용자 인증을 구현하고 애플리케이션을 보호하세요",
+        "overview": "사용자와 데이터를 보호하기 위한 강력한 인증과 보안 모범 사례를 구현하세요.",
         "steps": [
-          "Set up secure user registration with email verification",
-          "Implement password hashing with bcrypt or similar",
-          "Add OAuth social login (Google, GitHub)",
-          "Create protected routes and middleware",
-          "Implement session management with secure cookies",
-          "Add rate limiting to prevent brute force attacks"
+          "이메일 인증이 있는 안전한 사용자 등록 설정하기",
+          "bcrypt 또는 유사한 것으로 비밀번호 해싱 구현하기",
+          "OAuth 소셜 로그인(Google, GitHub) 추가하기",
+          "보호된 라우트와 미들웨어 만들기",
+          "안전한 쿠키로 세션 관리 구현하기",
+          "무차별 대입 공격 방지를 위한 레이트 리미팅 추가하기"
         ],
         "tips": [
-          "Never store passwords in plain text",
-          "Use HTTPS for all connections",
-          "Implement proper CORS policies"
+          "비밀번호를 절대 평문으로 저장하지 마세요",
+          "모든 연결에 HTTPS를 사용하세요",
+          "적절한 CORS 정책을 구현하세요"
         ]
       },
       "database": {
-        "title": "Database Integration Guide",
-        "description": "Connect your app to databases and manage data efficiently",
-        "overview": "Learn to connect your application to databases and implement efficient data management.",
+        "title": "데이터베이스 통합 가이드",
+        "description": "앱을 데이터베이스에 연결하고 데이터를 효율적으로 관리하세요",
+        "overview": "애플리케이션을 데이터베이스에 연결하고 효율적인 데이터 관리를 구현하는 방법을 배웁니다.",
         "steps": [
-          "Choose the right database (SQL vs NoSQL)",
-          "Set up your database connection with environment variables",
-          "Design your data schema and relationships",
-          "Implement CRUD operations (Create, Read, Update, Delete)",
-          "Add data validation before database operations",
-          "Set up database migrations for schema changes"
+          "올바른 데이터베이스 선택하기 (SQL vs NoSQL)",
+          "환경 변수로 데이터베이스 연결 설정하기",
+          "데이터 스키마와 관계 설계하기",
+          "CRUD 작업(생성, 읽기, 업데이트, 삭제) 구현하기",
+          "데이터베이스 작업 전 데이터 유효성 검사 추가하기",
+          "스키마 변경을 위한 데이터베이스 마이그레이션 설정하기"
         ],
         "tips": [
-          "Always use parameterized queries to prevent SQL injection",
-          "Index frequently queried columns",
-          "Back up your data regularly"
+          "SQL 인젝션 방지를 위해 항상 매개변수화된 쿼리를 사용하세요",
+          "자주 쿼리되는 컬럼에 인덱스를 추가하세요",
+          "데이터를 정기적으로 백업하세요"
         ]
       },
       "responsive": {
-        "title": "Responsive Design Patterns",
-        "description": "Make your apps look great on all devices with mobile-first design",
-        "overview": "Create responsive designs that work beautifully across all screen sizes.",
+        "title": "반응형 디자인 패턴",
+        "description": "모바일 우선 디자인으로 모든 기기에서 앱이 멋지게 보이도록 하세요",
+        "overview": "모든 화면 크기에서 아름답게 작동하는 반응형 디자인을 만드세요.",
         "steps": [
-          "Start with mobile-first CSS approach",
-          "Use flexible grid layouts (CSS Grid, Flexbox)",
-          "Implement responsive breakpoints (sm, md, lg, xl)",
-          "Optimize images for different screen densities",
-          "Test touch interactions on mobile devices",
-          "Use relative units (rem, %, vh/vw) instead of pixels"
+          "모바일 우선 CSS 접근 방식으로 시작하기",
+          "유연한 그리드 레이아웃(CSS Grid, Flexbox) 사용하기",
+          "반응형 브레이크포인트(sm, md, lg, xl) 구현하기",
+          "다양한 화면 밀도에 맞게 이미지 최적화하기",
+          "모바일 기기에서 터치 인터랙션 테스트하기",
+          "픽셀 대신 상대 단위(rem, %, vh/vw) 사용하기"
         ],
         "tips": [
-          "Test on real devices, not just browser dev tools",
-          "Consider thumb-friendly tap targets on mobile",
-          "Prioritize content for smaller screens"
+          "브라우저 개발 도구뿐만 아니라 실제 기기에서 테스트하세요",
+          "모바일에서 엄지손가락이 닿기 쉬운 탭 타겟을 고려하세요",
+          "작은 화면에서 콘텐츠 우선순위를 정하세요"
         ]
       },
       "api": {
-        "title": "API Integration Masterclass",
-        "description": "Connect to third-party services and APIs seamlessly",
-        "overview": "Learn to integrate external APIs and third-party services into your applications.",
+        "title": "API 통합 마스터클래스",
+        "description": "서드파티 서비스와 API를 원활하게 연결하세요",
+        "overview": "외부 API와 서드파티 서비스를 애플리케이션에 통합하는 방법을 배웁니다.",
         "steps": [
-          "Understand REST API fundamentals (endpoints, methods)",
-          "Set up API authentication (API keys, OAuth tokens)",
-          "Make HTTP requests (GET, POST, PUT, DELETE)",
-          "Handle API responses and errors gracefully",
-          "Implement retry logic for failed requests",
-          "Cache responses to improve performance"
+          "REST API 기초(엔드포인트, 메서드) 이해하기",
+          "API 인증(API 키, OAuth 토큰) 설정하기",
+          "HTTP 요청(GET, POST, PUT, DELETE) 만들기",
+          "API 응답과 에러를 우아하게 처리하기",
+          "실패한 요청에 대한 재시도 로직 구현하기",
+          "성능 향상을 위해 응답 캐시하기"
         ],
         "tips": [
-          "Store API keys in environment variables",
-          "Handle rate limiting with exponential backoff",
-          "Log API calls for debugging"
+          "API 키는 환경 변수에 저장하세요",
+          "지수 백오프로 레이트 리미팅을 처리하세요",
+          "디버깅을 위해 API 호출을 로깅하세요"
         ]
       },
       "performance": {
-        "title": "Performance Optimization",
-        "description": "Speed up your apps for better user experience and SEO",
-        "overview": "Optimize your application for speed, better user experience, and improved SEO.",
+        "title": "성능 최적화",
+        "description": "더 나은 사용자 경험과 SEO를 위해 앱 속도를 높이세요",
+        "overview": "속도, 더 나은 사용자 경험, 향상된 SEO를 위해 애플리케이션을 최적화하세요.",
         "steps": [
-          "Analyze current performance with Lighthouse",
-          "Optimize and compress images (WebP format, lazy loading)",
-          "Minimize JavaScript and CSS bundles",
-          "Implement code splitting and lazy loading",
-          "Set up proper caching headers",
-          "Use a CDN for static assets"
+          "Lighthouse로 현재 성능 분석하기",
+          "이미지 최적화 및 압축(WebP 형식, 지연 로딩)",
+          "JavaScript와 CSS 번들 최소화하기",
+          "코드 분할과 지연 로딩 구현하기",
+          "적절한 캐싱 헤더 설정하기",
+          "정적 자산에 CDN 사용하기"
         ],
         "tips": [
-          "Aim for < 3 second initial page load",
-          "Use performance budgets to track regressions",
-          "Monitor Core Web Vitals regularly"
+          "초기 페이지 로드 3초 미만을 목표로 하세요",
+          "성능 예산을 사용하여 회귀를 추적하세요",
+          "Core Web Vitals를 정기적으로 모니터링하세요"
         ]
       }
     }
   },
   "videosPage": {
-    "badge": "Video Learning",
-    "titleStart": "How it",
-    "titleHighlight": "works",
-    "subtitle": "Learn everything about AppNode with our comprehensive video tutorials. From your first project to deploying on Cloudflare, Vercel, or GitHub.",
-    "featured": "Featured",
-    "playlists": "Playlists",
-    "viewAll": "View all",
+    "badge": "비디오 학습",
+    "titleStart": "작동",
+    "titleHighlight": "방식",
+    "subtitle": "포괄적인 비디오 튜토리얼로 AppNode의 모든 것을 배우세요. 첫 번째 프로젝트부터 Cloudflare, Vercel 또는 GitHub 배포까지.",
+    "featured": "추천",
+    "playlists": "재생목록",
+    "viewAll": "전체 보기",
     "cta": {
-      "title": "Ready to Start Building?",
-      "subtitle": "Join thousands of creators who are building amazing applications with AppNode.",
-      "startBuildingFree": "Start Building Free",
-      "browseCourses": "Browse Courses",
-      "subscribeYouTube": "Subscribe on YouTube"
+      "title": "구축을 시작할 준비가 되셨나요?",
+      "subtitle": "AppNode로 놀라운 애플리케이션을 구축하는 수천 명의 크리에이터와 함께하세요.",
+      "startBuildingFree": "무료로 구축 시작",
+      "browseCourses": "강좌 둘러보기",
+      "subscribeYouTube": "YouTube 구독하기"
     },
-    "views": "views",
+    "views": "조회수",
     "featuredVideo": {
-      "title": "Complete AppNode Tutorial: From Zero to Deployed App",
-      "description": "The ultimate guide to building and deploying your first application with AppNode. Learn everything from account setup to live deployment on Cloudflare, Vercel, or GitHub Pages."
+      "title": "완전한 AppNode 튜토리얼: 제로에서 배포된 앱까지",
+      "description": "AppNode로 첫 번째 애플리케이션을 구축하고 배포하는 완벽한 가이드. 계정 설정부터 Cloudflare, Vercel 또는 GitHub Pages에 라이브 배포까지 모든 것을 배우세요."
     }
   },
   "reportPage": {
@@ -2617,97 +2647,97 @@
     }
   },
   "aboutPage": {
-    "badge": "About Us",
-    "title": "Empowering creators to build anything",
-    "subtitle": "AppNode is on a mission to democratize software development. We believe everyone should have the power to bring their ideas to life, regardless of technical background.",
+    "badge": "회사 소개",
+    "title": "누구나 무엇이든 만들 수 있도록",
+    "subtitle": "AppNode는 소프트웨어 개발을 민주화하는 미션을 가지고 있습니다. 기술적 배경과 관계없이 누구나 아이디어를 현실로 만들 수 있어야 한다고 믿습니다.",
     "stats": {
-      "developers": "Developers",
-      "appsBuilt": "Apps Built",
+      "developers": "개발자",
+      "appsBuilt": "빌드된 앱",
       "countries": "국가",
-      "uptime": "Uptime"
+      "uptime": "가동률"
     },
     "ourStory": {
-      "title": "Our Story",
-      "p1": "AppNode started with a simple observation: building software is too hard. Too many great ideas never see the light of day because creating apps requires years of technical training.",
-      "p2": "We founded AppNode to change that. Using the latest advances in AI and intuitive design, we've created a platform where anyone can build production-ready applications in minutes, not months.",
-      "p3": "Today, AppNode is loved by developers worldwide. From personal hobby projects to enterprise-scale products, we help people build and deploy powerful applications in minutes.",
-      "p4": "We're just getting started. Our vision is a world where technology creation is as accessible as writing an email. Join us on this journey.",
-      "quote": "\"The best way to predict the future is to create it.\"",
-      "quoteAttribution": "— Our founding principle"
+      "title": "우리의 이야기",
+      "p1": "AppNode는 간단한 관찰에서 시작되었습니다: 소프트웨어를 만드는 것은 너무 어렵습니다. 앱을 만들려면 수년간의 기술 교육이 필요하기 때문에 너무 많은 좋은 아이디어가 빛을 보지 못합니다.",
+      "p2": "우리는 이를 바꾸기 위해 AppNode를 설립했습니다. AI의 최신 발전과 직관적인 디자인을 사용하여, 누구나 몇 달이 아닌 몇 분 만에 프로덕션 준비가 된 애플리케이션을 빌드할 수 있는 플랫폼을 만들었습니다.",
+      "p3": "오늘날 AppNode는 전 세계 개발자들에게 사랑받고 있습니다. 개인 취미 프로젝트부터 엔터프라이즈급 제품까지, 우리는 사람들이 몇 분 만에 강력한 애플리케이션을 빌드하고 배포할 수 있도록 돕습니다.",
+      "p4": "우리는 이제 시작입니다. 우리의 비전은 기술 창작이 이메일 작성처럼 쉬운 세상입니다. 이 여정에 함께해 주세요.",
+      "quote": "\"미래를 예측하는 가장 좋은 방법은 창조하는 것이다.\"",
+      "quoteAttribution": "— 우리의 창립 원칙"
     },
     "values": {
-      "title": "Our Values",
-      "subtitle": "These principles guide everything we do at AppNode.",
+      "title": "우리의 가치",
+      "subtitle": "이 원칙들이 AppNode에서 우리가 하는 모든 일을 이끕니다.",
       "innovationFirst": {
-        "title": "Innovation First",
-        "description": "We push boundaries and embrace cutting-edge technology to solve real problems."
+        "title": "혁신 우선",
+        "description": "우리는 경계를 넓히고 실제 문제를 해결하기 위해 최첨단 기술을 수용합니다."
       },
       "developerFocused": {
-        "title": "Developer Focused",
-        "description": "Every decision we make starts with our users. Their success is our success."
+        "title": "개발자 중심",
+        "description": "우리의 모든 결정은 사용자로부터 시작됩니다. 그들의 성공이 우리의 성공입니다."
       },
       "simplicityMatters": {
-        "title": "Simplicity Matters",
-        "description": "We take security seriously. Your data and code are protected by industry-leading practices."
+        "title": "단순함의 중요성",
+        "description": "우리는 보안을 진지하게 생각합니다. 당신의 데이터와 코드는 업계 최고의 관행으로 보호됩니다."
       },
       "quality": {
-        "title": "Quality Obsession",
-        "description": "We're building tools that empower creators everywhere, regardless of background."
+        "title": "품질에 대한 집착",
+        "description": "우리는 배경에 관계없이 모든 곳의 창작자에게 힘을 실어주는 도구를 만들고 있습니다."
       },
       "transparency": {
-        "title": "Transparency",
-        "description": "We believe in open communication with our community and being honest about our roadmap."
+        "title": "투명성",
+        "description": "우리는 커뮤니티와 열린 소통을 믿으며 로드맵에 대해 정직합니다."
       },
       "communityDriven": {
-        "title": "Community Driven",
-        "description": "Our community shapes our product. We listen, learn, and build together."
+        "title": "커뮤니티 중심",
+        "description": "우리 커뮤니티가 제품을 형성합니다. 우리는 함께 듣고, 배우고, 만들어갑니다."
       }
     },
     "journey": {
-      "title": "Our Journey",
-      "subtitle": "From an idea to a global platform.",
+      "title": "우리의 여정",
+      "subtitle": "아이디어에서 글로벌 플랫폼으로.",
       "milestone1": {
-        "year": "Jan 2023",
-        "title": "The Idea Is Born",
-        "description": "The first concept of an AI-assisted development platform was born."
+        "year": "2023년 1월",
+        "title": "아이디어 탄생",
+        "description": "AI 지원 개발 플랫폼의 첫 번째 컨셉이 탄생했습니다."
       },
       "milestone2": {
-        "year": "Apr 2023",
-        "title": "Private Beta",
-        "description": "The first 100 users began testing AppNode."
+        "year": "2023년 4월",
+        "title": "프라이빗 베타",
+        "description": "최초 100명의 사용자가 AppNode 테스트를 시작했습니다."
       },
       "milestone3": {
-        "year": "Sep 2023",
-        "title": "Public Launch",
-        "description": "Opened to the world. Reached 10,000 users in the first month."
+        "year": "2023년 9월",
+        "title": "퍼블릭 런칭",
+        "description": "세계에 공개되었습니다. 첫 달에 10,000명의 사용자에 도달했습니다."
       },
       "milestone4": {
-        "year": "Mar 2024",
-        "title": "1 Million Apps",
-        "description": "One million applications built with AppNode."
+        "year": "2024년 3월",
+        "title": "100만 앱",
+        "description": "AppNode로 100만 개의 애플리케이션이 빌드되었습니다."
       },
       "milestone5": {
-        "year": "Aug 2024",
-        "title": "Enterprise Launch",
-        "description": "Solutions launched for Fortune 500 companies."
+        "year": "2024년 8월",
+        "title": "엔터프라이즈 런칭",
+        "description": "Fortune 500 기업을 위한 솔루션이 출시되었습니다."
       },
       "milestone6": {
-        "year": "Today",
-        "title": "Continuous Innovation",
-        "description": "We continue to build the future of development."
+        "year": "오늘",
+        "title": "지속적인 혁신",
+        "description": "우리는 개발의 미래를 계속 만들어가고 있습니다."
       }
     },
     "team": {
-      "title": "Meet Our Team",
-      "subtitle": "Powered by a talented team passionate about AppNode's mission.",
-      "joinTeam": "Join the Team",
-      "viewOpenings": "View Open Positions"
+      "title": "팀 소개",
+      "subtitle": "AppNode의 미션에 열정을 가진 재능 있는 팀이 함께합니다.",
+      "joinTeam": "팀에 합류하기",
+      "viewOpenings": "채용 공고 보기"
     },
     "cta": {
-      "title": "Build with us?",
-      "subtitle": "Join hundreds of thousands of creators building amazing apps with AppNode.",
-      "getStartedFree": "Get Started Free",
-      "contactUs": "Contact Us",
+      "title": "함께 만들어볼까요?",
+      "subtitle": "AppNode로 놀라운 앱을 만드는 수십만 명의 창작자와 함께하세요.",
+      "getStartedFree": "무료로 시작하기",
+      "contactUs": "문의하기",
       "logIn": "로그인",
       "getStarted": "시작하기"
     }

@@ -5,85 +5,70 @@ import Footer from '@/components/Footer';
 import { useTranslation } from '@/context/LanguageContext';
 
 export default function SecurityPage() {
-  const { t } = useTranslation();
+  const { t, tArray } = useTranslation();
 
   const securityFeatures = [
     {
       icon: '🔐',
-      title: 'Encryption at Rest & Transit',
-      description: 'All data is encrypted using AES-256 encryption at rest and TLS 1.3 for data in transit.',
+      titleKey: 'securityPage.features.0.title',
+      descKey: 'securityPage.features.0.description',
     },
     {
       icon: '🛡️',
-      title: 'SOC 2 Type II Certified',
-      description: 'We maintain SOC 2 Type II compliance, verified by independent third-party auditors.',
+      titleKey: 'securityPage.features.1.title',
+      descKey: 'securityPage.features.1.description',
     },
     {
       icon: '🔒',
-      title: 'Two-Factor Authentication',
-      description: 'Secure your account with 2FA using authenticator apps or hardware security keys.',
+      titleKey: 'securityPage.features.2.title',
+      descKey: 'securityPage.features.2.description',
     },
     {
       icon: '🌐',
-      title: 'SSO & SAML',
-      description: 'Enterprise-grade single sign-on with support for SAML 2.0 and OAuth providers.',
+      titleKey: 'securityPage.features.3.title',
+      descKey: 'securityPage.features.3.description',
     },
     {
       icon: '📝',
-      title: 'Audit Logs',
-      description: 'Comprehensive audit logs for all account activities and changes.',
+      titleKey: 'securityPage.features.4.title',
+      descKey: 'securityPage.features.4.description',
     },
     {
       icon: '🔍',
-      title: 'Vulnerability Scanning',
-      description: 'Continuous automated security scanning and regular penetration testing.',
+      titleKey: 'securityPage.features.5.title',
+      descKey: 'securityPage.features.5.description',
     },
     {
       icon: '💾',
-      title: 'Data Backup',
-      description: 'Automated daily backups with point-in-time recovery capabilities.',
+      titleKey: 'securityPage.features.6.title',
+      descKey: 'securityPage.features.6.description',
     },
     {
       icon: '🚨',
-      title: 'Incident Response',
-      description: '24/7 security monitoring with rapid incident response procedures.',
+      titleKey: 'securityPage.features.7.title',
+      descKey: 'securityPage.features.7.description',
     },
   ];
 
   const certifications = [
-    { name: 'SOC 2 Type II', icon: '✓', description: 'Security, Availability & Confidentiality' },
-    { name: 'GDPR', icon: '✓', description: 'EU Data Protection Compliance' },
-    { name: 'CCPA', icon: '✓', description: 'California Privacy Rights Act' },
-    { name: 'ISO 27001', icon: '✓', description: 'Information Security Management' },
+    { nameKey: 'securityPage.certifications.0.name', icon: '✓', descKey: 'securityPage.certifications.0.description' },
+    { nameKey: 'securityPage.certifications.1.name', icon: '✓', descKey: 'securityPage.certifications.1.description' },
+    { nameKey: 'securityPage.certifications.2.name', icon: '✓', descKey: 'securityPage.certifications.2.description' },
+    { nameKey: 'securityPage.certifications.3.name', icon: '✓', descKey: 'securityPage.certifications.3.description' },
   ];
 
   const practices = [
     {
-      title: 'Secure Development',
-      items: [
-        'Code reviews for all changes',
-        'Automated security testing in CI/CD',
-        'Dependency vulnerability scanning',
-        'Regular security training for developers',
-      ],
+      titleKey: 'securityPage.practices.0.title',
+      itemsKey: 'securityPage.practices.0.items',
     },
     {
-      title: 'Infrastructure Security',
-      items: [
-        'Cloud infrastructure on AWS/GCP',
-        'Network segmentation and firewalls',
-        'DDoS protection and mitigation',
-        'Intrusion detection systems',
-      ],
+      titleKey: 'securityPage.practices.1.title',
+      itemsKey: 'securityPage.practices.1.items',
     },
     {
-      title: 'Access Control',
-      items: [
-        'Role-based access control (RBAC)',
-        'Principle of least privilege',
-        'Regular access reviews',
-        'Secure credential management',
-      ],
+      titleKey: 'securityPage.practices.2.title',
+      itemsKey: 'securityPage.practices.2.items',
     },
   ];
 
@@ -111,13 +96,13 @@ export default function SecurityPage() {
         {/* Certifications */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {certifications.map((cert) => (
-              <div key={cert.name} className="bg-white dark:bg-[#1A1A1A] rounded-xl border border-gray-200 dark:border-2 dark:border-gray-800 p-6 text-center hover:shadow-lg dark:hover:border-gray-700 transition-all">
+            {certifications.map((cert, index) => (
+              <div key={index} className="bg-white dark:bg-[#1A1A1A] rounded-xl border border-gray-200 dark:border-2 dark:border-gray-800 p-6 text-center hover:shadow-lg dark:hover:border-gray-700 transition-all">
                 <div className="w-12 h-12 bg-gray-100 dark:bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-gray-900 dark:text-white text-xl font-bold">{cert.icon}</span>
                 </div>
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{cert.name}</h3>
-                <p className="text-xs text-gray-500 dark:text-gray-400">{cert.description}</p>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{t(cert.nameKey)}</h3>
+                <p className="text-xs text-gray-500 dark:text-gray-400">{t(cert.descKey)}</p>
               </div>
             ))}
           </div>
@@ -127,11 +112,11 @@ export default function SecurityPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">{t('securityPage.featuresTitle')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {securityFeatures.map((feature) => (
-              <div key={feature.title} className="bg-white dark:bg-[#1A1A1A] rounded-xl border border-gray-200 dark:border-2 dark:border-gray-800 p-6 hover:shadow-lg hover:border-gray-300 dark:hover:border-gray-700 transition-all">
+            {securityFeatures.map((feature, index) => (
+              <div key={index} className="bg-white dark:bg-[#1A1A1A] rounded-xl border border-gray-200 dark:border-2 dark:border-gray-800 p-6 hover:shadow-lg hover:border-gray-300 dark:hover:border-gray-700 transition-all">
                 <span className="text-3xl mb-4 block">{feature.icon}</span>
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{feature.title}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{feature.description}</p>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{t(feature.titleKey)}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{t(feature.descKey)}</p>
               </div>
             ))}
           </div>
@@ -142,12 +127,12 @@ export default function SecurityPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-white mb-8 text-center">{t('securityPage.practicesTitle')}</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              {practices.map((practice) => (
-                <div key={practice.title} className="bg-[#0a0a0a] dark:bg-[#1A1A1A] backdrop-blur rounded-xl p-6 border border-gray-800">
-                  <h3 className="font-semibold text-white text-lg mb-4">{practice.title}</h3>
+              {practices.map((practice, index) => (
+                <div key={index} className="bg-[#0a0a0a] dark:bg-[#1A1A1A] backdrop-blur rounded-xl p-6 border border-gray-800">
+                  <h3 className="font-semibold text-white text-lg mb-4">{t(practice.titleKey)}</h3>
                   <ul className="space-y-3">
-                    {practice.items.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-gray-300 text-sm">
+                    {tArray(practice.itemsKey).map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start gap-2 text-gray-300 text-sm">
                         <svg className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>

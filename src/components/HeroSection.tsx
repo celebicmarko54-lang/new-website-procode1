@@ -47,24 +47,8 @@ export default function HeroSection() {
   const attachmentInputRef = useRef<HTMLInputElement>(null);
   const imageInputRef = useRef<HTMLInputElement>(null);
 
-  // Debug translations on mount
-  useEffect(() => {
-    if (typeof window !== 'undefined' && mounted) {
-      console.warn('[HeroSection DEBUG]', {
-        language: language.code,
-        mounted,
-        'hero.title': t('hero.title'),
-        'galleryPage.startWithIdea': t('galleryPage.startWithIdea'),
-        'galleryPage.categories.aiApps': t('galleryPage.categories.aiApps'),
-      });
-    }
-  }, [mounted, language.code]);
-
   const handleSubmit = () => {
     if (!prompt.trim() && attachments.length === 0 && images.length === 0) return;
-    console.log('Submitting:', prompt);
-    console.log('Attachments:', attachments);
-    console.log('Images:', images);
     // Clear after submit
     setPrompt('');
     setAttachments([]);

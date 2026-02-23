@@ -1784,7 +1784,100 @@
     "bugBountyDescription": "Güvenliği iyileştirmemize yardımcı olun ve güvenlik açıklarını sorumlu bir şekilde bildirerek ödüller kazanın.",
     "reportTitle": "Güvenlik Sorunu Bildirin",
     "reportDescription": "AppNode'da bir güvenlik açığı bulduğunuzu düşünüyorsanız, lütfen derhal güvenlik ekibimize bildirin.",
-    "whitepaper": "Güvenlik Teknik Dökümanı"
+    "whitepaper": "Güvenlik Teknik Dökümanı",
+    "features": [
+      {
+        "icon": "🔐",
+        "title": "Encryption at Rest & Transit",
+        "description": "All data is encrypted using AES-256 encryption at rest and TLS 1.3 for data in transit."
+      },
+      {
+        "icon": "🛡️",
+        "title": "SOC 2 Type II Certified",
+        "description": "We maintain SOC 2 Type II compliance, verified by independent third-party auditors."
+      },
+      {
+        "icon": "🔒",
+        "title": "Two-Factor Authentication",
+        "description": "Secure your account with 2FA using authenticator apps or hardware security keys."
+      },
+      {
+        "icon": "🌐",
+        "title": "SSO & SAML",
+        "description": "Enterprise-grade single sign-on with support for SAML 2.0 and OAuth providers."
+      },
+      {
+        "icon": "📝",
+        "title": "Audit Logs",
+        "description": "Comprehensive audit logs for all account activities and changes."
+      },
+      {
+        "icon": "🔍",
+        "title": "Vulnerability Scanning",
+        "description": "Continuous automated security scanning and regular penetration testing."
+      },
+      {
+        "icon": "💾",
+        "title": "Data Backup",
+        "description": "Automated daily backups with point-in-time recovery capabilities."
+      },
+      {
+        "icon": "🚨",
+        "title": "Incident Response",
+        "description": "24/7 security monitoring with rapid incident response procedures."
+      }
+    ],
+    "certifications": [
+      {
+        "name": "SOC 2 Type II",
+        "icon": "✓",
+        "description": "Security, Availability & Confidentiality"
+      },
+      {
+        "name": "GDPR",
+        "icon": "✓",
+        "description": "EU Data Protection Compliance"
+      },
+      {
+        "name": "CCPA",
+        "icon": "✓",
+        "description": "California Privacy Rights Act"
+      },
+      {
+        "name": "ISO 27001",
+        "icon": "✓",
+        "description": "Information Security Management"
+      }
+    ],
+    "practices": [
+      {
+        "title": "Secure Development",
+        "items": [
+          "Code reviews for all changes",
+          "Automated security testing in CI/CD",
+          "Dependency vulnerability scanning",
+          "Regular security training for developers"
+        ]
+      },
+      {
+        "title": "Infrastructure Security",
+        "items": [
+          "Cloud infrastructure on AWS/GCP",
+          "Network segmentation and firewalls",
+          "DDoS protection and mitigation",
+          "Intrusion detection systems"
+        ]
+      },
+      {
+        "title": "Access Control",
+        "items": [
+          "Role-based access control (RBAC)",
+          "Principle of least privilege",
+          "Regular access reviews",
+          "Secure credential management"
+        ]
+      }
+    ]
   },
   "changelogPage": {
     "badge": "Güncellemeler",

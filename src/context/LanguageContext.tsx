@@ -64,6 +64,7 @@ interface LanguageContextType {
   t: (key: string) => string;
   tArray: (key: string) => string[];
   mounted: boolean;
+  _langKey: string; // Force re-render key
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -191,19 +192,15 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem('appnode_language', lang.code);
   };
 
-  // Translation function - uses ref to get the most current language
+  // Translation function - uses state to trigger re-renders when language changes
   const t = (key: string): string => {
     if (!key || typeof key !== 'string') {
       return '';
     }
     
-    const langCode = languageRef.current.code;
+    // Use state variable (not ref) to ensure re-render when language changes
+    const langCode = language.code;
     const currentTranslations = translations[langCode] || translations.en;
-    
-    // DEBUG: Log every translation call on client
-    if (typeof window !== 'undefined') {
-      console.log('[t()]', key, '→', langCode);
-    }
     
     if (!currentTranslations) {
       console.warn('[t()] No translations for:', langCode);
@@ -223,12 +220,13 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     return result;
   };
 
-  // Translation function for arrays
+  // Translation function for arrays - uses state to trigger re-renders
   const tArray = (key: string): string[] => {
     if (!key || typeof key !== 'string') {
       return [];
     }
-    const langCode = languageRef.current.code;
+    // Use state variable (not ref) to ensure re-render when language changes
+    const langCode = language.code;
     const currentTranslations = translations[langCode] || translations.en;
     
     const result = getNestedArrayValue(currentTranslations as Record<string, unknown>, key);
@@ -242,7 +240,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t, tArray, mounted }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, tArray, mounted, _langKey: language.code }}>
       {children}
     </LanguageContext.Provider>
   );
@@ -258,6 +256,6 @@ export function useLanguage() {
 
 // Convenience hook for translations only
 export function useTranslation() {
-  const { t, tArray, language, mounted } = useLanguage();
-  return { t, tArray, language, mounted };
+  const { t, tArray, language, mounted, _langKey } = useLanguage();
+  return { t, tArray, language, mounted, _langKey };
 }

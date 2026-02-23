@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -22,8 +22,14 @@ interface CourseData {
 }
 
 export default function LearnPage() {
-  const { t, language } = useTranslation();
+  const { t, language, mounted } = useTranslation();
   const [selectedCourse, setSelectedCourse] = useState<CourseData | null>(null);
+  
+  // Debug logging
+  useEffect(() => {
+    console.log('[LearnPage] language.code:', language.code, 'mounted:', mounted);
+    console.log('[LearnPage] t("learnPage.badge"):', t('learnPage.badge'));
+  }, [language.code, mounted, t]);
   
   const courses: CourseData[] = [
     {
@@ -301,14 +307,15 @@ export default function LearnPage() {
     }
   };
 
+  // Remove loading check - use suppressHydrationWarning instead
+  
   return (
-    <div className="min-h-screen bg-white dark:bg-[#1A1A1A]">
+    <div className="min-h-screen bg-white dark:bg-[#1A1A1A]" suppressHydrationWarning>
       <Header />
       
       {/* Course Modal */}
       {selectedCourse && (
         <div 
-          key={`modal-${language.code}`}
           className="fixed inset-0 bg-black/50 dark:bg-[#1A1A1A]/70 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedCourse(null)}
         >
@@ -404,23 +411,23 @@ export default function LearnPage() {
       )}
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
+      <section className="pt-32 pb-20 px-6" suppressHydrationWarning>
         <div className="max-w-6xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-2 dark:border-gray-700 mb-8">
             <svg className="w-4 h-4 text-gray-900 dark:text-gray-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
-            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('learnPage.badge')}</span>
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300" suppressHydrationWarning>{t('learnPage.badge')}</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight" suppressHydrationWarning>
             {t('learnPage.titleStart')}
-            <span className="block text-gray-900 dark:text-white">
+            <span className="block text-gray-900 dark:text-white" suppressHydrationWarning>
               {t('learnPage.titleHighlight')}
             </span>
           </h1>
           
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed" suppressHydrationWarning>
             {t('learnPage.subtitle')}
           </p>
           
@@ -429,20 +436,20 @@ export default function LearnPage() {
               href="/signup"
               className="px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg"
             >
-              {t('learnPage.startLearningFree')}
+              <span suppressHydrationWarning>{t('learnPage.startLearningFree')}</span>
             </Link>
             <Link
               href="#courses"
               className="px-8 py-4 border-2 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:border-gray-400 dark:hover:border-gray-500 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
             >
-              {t('learnPage.browseCourses')}
+              <span suppressHydrationWarning>{t('learnPage.browseCourses')}</span>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Courses Grid */}
-      <section id="courses" className="py-20 px-6">
+      <section id="courses" className="py-20 px-6" suppressHydrationWarning>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
