@@ -310,7 +310,7 @@ export default function LearnPage() {
   // Remove loading check - use suppressHydrationWarning instead
   
   return (
-    <div className="min-h-screen bg-white dark:bg-[#1A1A1A]" suppressHydrationWarning>
+    <div key={language.code} className="min-h-screen bg-white dark:bg-[#1A1A1A]" suppressHydrationWarning>
       <Header />
       
       {/* Course Modal */}

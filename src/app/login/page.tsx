@@ -8,7 +8,7 @@ import { useTranslation } from '@/context/LanguageContext';
 
 export default function LoginPage() {
   const router = useRouter();
-  const { t } = useTranslation();
+  const { t, language} = useTranslation();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -76,7 +76,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
+    <div key={language.code} className="min-h-screen flex bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
       {/* Left Side - Form */}
       <div className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full">

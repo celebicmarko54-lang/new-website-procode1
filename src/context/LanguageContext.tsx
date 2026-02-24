@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useEffect, useState, useCallback, useRef } from 'react';
+import React, { createContext, useContext, useEffect, useState, useRef } from 'react';
 import translations, { TranslationKeys } from '@/translations';
 
 export interface Language {
@@ -52,16 +52,16 @@ interface LanguageContextType {
   t: (key: string) => string;
   tArray: (key: string) => string[];
   mounted: boolean;
-  _langKey: string; // Force re-render key
+  _langKey: string;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-// Helper function to get nested value from object (supports array indices)
+// Simple nested value lookup by dot-separated path
 function getNestedValue(obj: Record<string, unknown>, path: string): string {
   const keys = path.split('.');
   let result: unknown = obj;
-  
+
   for (const key of keys) {
     if (result && typeof result === 'object') {
       if (Array.isArray(result)) {
@@ -80,15 +80,15 @@ function getNestedValue(obj: Record<string, unknown>, path: string): string {
       return path;
     }
   }
-  
+
   return typeof result === 'string' ? result : path;
 }
 
-// Helper function to get array value from translations
+// Simple nested array lookup by dot-separated path
 function getNestedArrayValue(obj: Record<string, unknown>, path: string): string[] {
   const keys = path.split('.');
   let result: unknown = obj;
-  
+
   for (const key of keys) {
     if (result && typeof result === 'object') {
       if (Array.isArray(result)) {
@@ -107,7 +107,7 @@ function getNestedArrayValue(obj: Record<string, unknown>, path: string): string
       return [];
     }
   }
-  
+
   if (Array.isArray(result) && result.every(item => typeof item === 'string')) {
     return result as string[];
   }
@@ -119,7 +119,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
   const [languageReady, setLanguageReady] = useState(false);
   const languageRef = useRef(language);
-  
+
   // Keep ref in sync with state
   useEffect(() => {
     languageRef.current = language;
@@ -137,7 +137,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     }
     setLanguageReady(true);
   }, []);
-  
+
   // Set mounted only after language is ready AND we're on client side
   useEffect(() => {
     if (languageReady) {
@@ -151,22 +151,21 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem('appnode_language', lang.code);
   };
 
-  // Translation function - uses state to trigger re-renders when language changes
+  // Translation function - uses language state to trigger re-renders
   const t = (key: string): string => {
     if (!key || typeof key !== 'string') {
       return '';
     }
-    
-    // Use state variable (not ref) to ensure re-render when language changes
+
     const langCode = language.code;
     const currentTranslations = translations[langCode] || translations.en;
-    
+
     if (!currentTranslations) {
       return key;
     }
-    
+
     const result = getNestedValue(currentTranslations as Record<string, unknown>, key);
-    
+
     // Fallback to English if key not found
     if (result === key && langCode !== 'en') {
       const englishResult = getNestedValue(translations.en as Record<string, unknown>, key);
@@ -174,28 +173,27 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
         return englishResult;
       }
     }
-    
+
     return result;
   };
 
-  // Translation function for arrays - uses state to trigger re-renders
+  // Translation function for arrays
   const tArray = (key: string): string[] => {
     if (!key || typeof key !== 'string') {
       return [];
     }
-    // Use state variable (not ref) to ensure re-render when language changes
+
     const langCode = language.code;
     const currentTranslations = translations[langCode] || translations.en;
-    
+
     const result = getNestedArrayValue(currentTranslations as Record<string, unknown>, key);
-    
+
     if (result.length === 0 && langCode !== 'en') {
       return getNestedArrayValue(translations.en as Record<string, unknown>, key);
     }
-    
+
     return result;
   };
-
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t, tArray, mounted, _langKey: language.code }}>

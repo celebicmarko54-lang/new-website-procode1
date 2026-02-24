@@ -969,7 +969,7 @@ const getDocsContent = (t: (key: string) => string): Record<string, { title: str
 });
 
 export default function DocsPage() {
-  const { t } = useTranslation();
+  const { t, language} = useTranslation();
   const docsSections = getDocsSections(t);
   const docsContent = getDocsContent(t);
   const [activeSection, setActiveSection] = useState('introduction');
@@ -1012,7 +1012,7 @@ export default function DocsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
+    <div key={language.code} className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
       <Header />
       
       <div className="pt-16 flex">

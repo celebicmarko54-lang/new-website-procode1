@@ -6,10 +6,10 @@ import Footer from "@/components/Footer";
 import { useTranslation } from '@/context/LanguageContext';
 
 export default function Web3Page() {
-  const { t } = useTranslation();
+  const { t, language} = useTranslation();
   
   return (
-    <div className="min-h-screen bg-white dark:bg-[#1A1A1A]">
+    <div key={language.code} className="min-h-screen bg-white dark:bg-[#1A1A1A]">
       <Header />
       
       <main className="pt-14">

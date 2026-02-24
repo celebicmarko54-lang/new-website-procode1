@@ -17,7 +17,7 @@ interface User {
 
 export default function SettingsPage() {
   const router = useRouter();
-  const { t } = useTranslation();
+  const { t, language} = useTranslation();
   const [user, setUser] = useState<User | null>(null);
   const [activeTab, setActiveTab] = useState('general');
   
@@ -26,7 +26,7 @@ export default function SettingsPage() {
   const [pushNotifications, setPushNotifications] = useState(true);
   const [marketingEmails, setMarketingEmails] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
-  const [language, setLanguage] = useState('en');
+  const [selectedLanguage, setSelectedLanguage] = useState('en');
   const [timezone, setTimezone] = useState('UTC');
   const [showDeleteModal, setShowDeleteModal] = useState(false);
 
@@ -56,7 +56,7 @@ export default function SettingsPage() {
 
   if (!user) {
     return (
-      <div className="min-h-screen flex items-center justify-center dark:bg-[#1A1A1A]">
+      <div key={language.code} className="min-h-screen flex items-center justify-center dark:bg-[#1A1A1A]">
         <div className="animate-spin w-8 h-8 border-4 border-orange-500 border-t-transparent rounded-full"></div>
       </div>
     );
@@ -124,8 +124,8 @@ export default function SettingsPage() {
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">{t('settingsPage.language')}</label>
                         <select
-                          value={language}
-                          onChange={(e) => setLanguage(e.target.value)}
+                          value={selectedLanguage}
+                          onChange={(e) => setSelectedLanguage(e.target.value)}
                           className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none"
                         >
                           <option value="en">English</option>

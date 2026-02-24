@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { useTranslation } from '@/context/LanguageContext';
 
 const blockchains = [
   { name: 'Ethereum', symbol: 'ETH', color: '#627EEA' },
@@ -13,58 +14,24 @@ const blockchains = [
   { name: 'BNB Chain', symbol: 'BNB', color: '#F0B90B' },
 ];
 
-const features = [
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
-    title: 'Lightning Fast',
-    description: 'Deploy across any chain in seconds, not hours',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-      </svg>
-    ),
-    title: 'No Code Required',
-    description: 'Build complex dApps with natural language',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
-    title: 'Battle Tested',
-    description: 'Smart contracts audited and production-ready',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-      </svg>
-    ),
-    title: 'Multi-Chain Native',
-    description: 'One codebase, every blockchain supported',
-  },
-];
-
-const useCases = [
-  'Landing Pages',
-  'Token Presales',
-  'NFT Drops',
-  'DeFi Dashboards',
-  'Web3 Apps',
-  'DAO Tools',
-  'Staking Platforms',
-  'Meme Tokens',
+const featureIcons = [
+  <svg key="f0" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+  </svg>,
+  <svg key="f1" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+  </svg>,
+  <svg key="f2" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+  </svg>,
+  <svg key="f3" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+  </svg>,
 ];
 
 export default function BlockchainSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
@@ -109,11 +76,11 @@ export default function BlockchainSection() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gray-50 to-gray-100 border border-gray-300 mb-6">
             <div className="w-2 h-2 rounded-full bg-[#1f2937] animate-pulse" />
-            <span className="text-sm font-medium text-gray-700">Multi-Chain Ecosystem</span>
+            <span className="text-sm font-medium text-gray-700">{t('blockchainSection.badge')}</span>
           </div>
 
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
-            BUILD ANYTHING ON{' '}
+            {t('blockchainSection.titleLine1')}{' '}
             <span 
               className="bg-clip-text text-transparent"
               style={{ 
@@ -121,7 +88,7 @@ export default function BlockchainSection() {
                 WebkitBackgroundClip: 'text' 
               }}
             >
-              ANY BLOCKCHAIN
+              {t('blockchainSection.titleLine2')}
             </span>
             <br />
             <span 
@@ -131,14 +98,12 @@ export default function BlockchainSection() {
                 WebkitBackgroundClip: 'text' 
               }}
             >
-              FASTER THAN EVER BEFORE
+              {t('blockchainSection.titleLine3')}
             </span>
           </h2>
 
           <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Love Code unlocks the entire on-chain ecosystem with zero friction. From L1 giants to the newest L2s, 
-            you get the power to create anything: landing pages, meme token presales, NFT drops, dashboards, 
-            full Web3 apps, whatever you imagine. <span className="text-gray-900 font-medium">No limits. No complexity. Just pure creation.</span>
+            {t('blockchainSection.description')} <span className="text-gray-900 font-medium">{t('blockchainSection.descriptionHighlight')}</span>
           </p>
         </div>
 
@@ -173,30 +138,30 @@ export default function BlockchainSection() {
 
         {/* Use cases pills */}
         <div className="flex flex-wrap justify-center gap-3 mb-16">
-          {useCases.map((useCase) => (
+          {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
             <div 
-              key={useCase}
+              key={i}
               className="px-5 py-2.5 rounded-full bg-gradient-to-r from-gray-50 to-gray-100 border border-gray-300 text-gray-800 font-medium hover:from-gray-100 hover:to-gray-200 transition-all cursor-pointer"
             >
-              {useCase}
+              {t(`blockchainSection.useCases.${i}`)}
             </div>
           ))}
         </div>
 
         {/* Features grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {features.map((feature) => (
+          {[0, 1, 2, 3].map((i) => (
             <div 
-              key={feature.title}
+              key={i}
               className="group p-6 rounded-2xl bg-white border border-gray-200 hover:border-gray-400 transition-all hover:shadow-lg hover:shadow-gray-100 shadow-sm"
             >
               <div 
                 className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-gray-700 bg-gray-100 group-hover:scale-110 transition-transform"
               >
-                {feature.icon}
+                {featureIcons[i]}
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
-              <p className="text-gray-600 text-sm">{feature.description}</p>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">{t(`blockchainSection.features.${i}.title`)}</h3>
+              <p className="text-gray-600 text-sm">{t(`blockchainSection.features.${i}.description`)}</p>
             </div>
           ))}
         </div>
@@ -204,7 +169,7 @@ export default function BlockchainSection() {
         {/* Bottom statement */}
         <div className="text-center">
           <p className="text-xl md:text-2xl text-gray-600 mb-8">
-            If it exists on a blockchain, you can build it here — <br className="hidden md:block" />
+            {t('blockchainSection.bottomText')} <br className="hidden md:block" />
             <span 
               className="font-bold bg-clip-text text-transparent"
               style={{ 
@@ -212,7 +177,7 @@ export default function BlockchainSection() {
                 WebkitBackgroundClip: 'text' 
               }}
             >
-              easier, faster, and on a completely new level.
+              {t('blockchainSection.bottomHighlight')}
             </span>
           </p>
 
@@ -221,7 +186,7 @@ export default function BlockchainSection() {
             className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-2xl hover:shadow-lg hover:shadow-gray-500/25 transition-all duration-300 hover:scale-105 text-lg"
             style={{ background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)' }}
           >
-            Start Building on Web3
+            {t('blockchainSection.ctaButton')}
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>

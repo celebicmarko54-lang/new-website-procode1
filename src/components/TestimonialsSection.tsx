@@ -27,10 +27,10 @@ const testimonials = [
 ];
 
 export default function TestimonialsSection() {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
   
   return (
-    <section className="py-24 px-4 relative overflow-hidden bg-[#f8fafc] dark:bg-[#1A1A1A]">
+    <section key={language.code} className="py-24 px-4 relative overflow-hidden bg-[#f8fafc] dark:bg-[#1A1A1A]">
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}

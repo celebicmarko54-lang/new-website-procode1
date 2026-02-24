@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 import { useTranslation } from '@/context/LanguageContext';
 
 export default function BlogPage() {
-  const { t } = useTranslation();
+  const { t, language, mounted } = useTranslation();
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
@@ -134,7 +134,7 @@ export default function BlogPage() {
   );
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#1A1A1A]">
+    <div key={language.code} className="min-h-screen bg-white dark:bg-[#1A1A1A]">
       <Header />
       
       <main className="pt-24 pb-16">
@@ -148,7 +148,7 @@ export default function BlogPage() {
                 <span className="text-orange-500 dark:text-orange-400 font-medium">{featuredPost.category}</span>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors">
-                {featuredPost.title}
+                {t('blogPage.posts.featured.title')}
               </h1>
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-4xl">
                 {featuredPost.excerpt}

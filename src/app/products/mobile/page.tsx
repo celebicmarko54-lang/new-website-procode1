@@ -6,10 +6,10 @@ import Link from 'next/link';
 import { useTranslation } from '@/context/LanguageContext';
 
 export default function MobilePage() {
-  const { t } = useTranslation();
+  const { t, language} = useTranslation();
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] text-gray-900 dark:text-white">
+    <div key={language.code} className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] text-gray-900 dark:text-white">
       <Header />
       
       <main className="pt-24 pb-16">

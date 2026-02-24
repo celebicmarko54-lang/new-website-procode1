@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import { useTranslation } from '@/context/LanguageContext';
 
 export default function SecurityPage() {
-  const { t, tArray } = useTranslation();
+  const { t, tArray, language} = useTranslation();
 
   const securityFeatures = [
     {
@@ -73,7 +73,7 @@ export default function SecurityPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
+    <div key={language.code} className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
       <Header />
       
       <main className="pt-24 pb-16">

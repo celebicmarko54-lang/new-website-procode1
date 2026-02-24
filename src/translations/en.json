@@ -1634,33 +1634,96 @@
     "reportDescription": "If you believe you've found a security vulnerability in AppNode, please report it to our security team immediately.",
     "whitepaper": "Security Whitepaper",
     "features": [
-      { "icon": "🔐", "title": "Encryption at Rest & Transit", "description": "All data is encrypted using AES-256 encryption at rest and TLS 1.3 for data in transit." },
-      { "icon": "🛡️", "title": "SOC 2 Type II Certified", "description": "We maintain SOC 2 Type II compliance, verified by independent third-party auditors." },
-      { "icon": "🔒", "title": "Two-Factor Authentication", "description": "Secure your account with 2FA using authenticator apps or hardware security keys." },
-      { "icon": "🌐", "title": "SSO & SAML", "description": "Enterprise-grade single sign-on with support for SAML 2.0 and OAuth providers." },
-      { "icon": "📝", "title": "Audit Logs", "description": "Comprehensive audit logs for all account activities and changes." },
-      { "icon": "🔍", "title": "Vulnerability Scanning", "description": "Continuous automated security scanning and regular penetration testing." },
-      { "icon": "💾", "title": "Data Backup", "description": "Automated daily backups with point-in-time recovery capabilities." },
-      { "icon": "🚨", "title": "Incident Response", "description": "24/7 security monitoring with rapid incident response procedures." }
+      {
+        "icon": "🔐",
+        "title": "Encryption at Rest & Transit",
+        "description": "All data is encrypted using AES-256 encryption at rest and TLS 1.3 for data in transit."
+      },
+      {
+        "icon": "🛡️",
+        "title": "SOC 2 Type II Certified",
+        "description": "We maintain SOC 2 Type II compliance, verified by independent third-party auditors."
+      },
+      {
+        "icon": "🔒",
+        "title": "Two-Factor Authentication",
+        "description": "Secure your account with 2FA using authenticator apps or hardware security keys."
+      },
+      {
+        "icon": "🌐",
+        "title": "SSO & SAML",
+        "description": "Enterprise-grade single sign-on with support for SAML 2.0 and OAuth providers."
+      },
+      {
+        "icon": "📝",
+        "title": "Audit Logs",
+        "description": "Comprehensive audit logs for all account activities and changes."
+      },
+      {
+        "icon": "🔍",
+        "title": "Vulnerability Scanning",
+        "description": "Continuous automated security scanning and regular penetration testing."
+      },
+      {
+        "icon": "💾",
+        "title": "Data Backup",
+        "description": "Automated daily backups with point-in-time recovery capabilities."
+      },
+      {
+        "icon": "🚨",
+        "title": "Incident Response",
+        "description": "24/7 security monitoring with rapid incident response procedures."
+      }
     ],
     "certifications": [
-      { "name": "SOC 2 Type II", "icon": "✓", "description": "Security, Availability & Confidentiality" },
-      { "name": "GDPR", "icon": "✓", "description": "EU Data Protection Compliance" },
-      { "name": "CCPA", "icon": "✓", "description": "California Privacy Rights Act" },
-      { "name": "ISO 27001", "icon": "✓", "description": "Information Security Management" }
+      {
+        "name": "SOC 2 Type II",
+        "icon": "✓",
+        "description": "Security, Availability & Confidentiality"
+      },
+      {
+        "name": "GDPR",
+        "icon": "✓",
+        "description": "EU Data Protection Compliance"
+      },
+      {
+        "name": "CCPA",
+        "icon": "✓",
+        "description": "California Privacy Rights Act"
+      },
+      {
+        "name": "ISO 27001",
+        "icon": "✓",
+        "description": "Information Security Management"
+      }
     ],
     "practices": [
       {
         "title": "Secure Development",
-        "items": ["Code reviews for all changes", "Automated security testing in CI/CD", "Dependency vulnerability scanning", "Regular security training for developers"]
+        "items": [
+          "Code reviews for all changes",
+          "Automated security testing in CI/CD",
+          "Dependency vulnerability scanning",
+          "Regular security training for developers"
+        ]
       },
       {
         "title": "Infrastructure Security",
-        "items": ["Cloud infrastructure on AWS/GCP", "Network segmentation and firewalls", "DDoS protection and mitigation", "Intrusion detection systems"]
+        "items": [
+          "Cloud infrastructure on AWS/GCP",
+          "Network segmentation and firewalls",
+          "DDoS protection and mitigation",
+          "Intrusion detection systems"
+        ]
       },
       {
         "title": "Access Control",
-        "items": ["Role-based access control (RBAC)", "Principle of least privilege", "Regular access reviews", "Secure credential management"]
+        "items": [
+          "Role-based access control (RBAC)",
+          "Principle of least privilege",
+          "Regular access reviews",
+          "Secure credential management"
+        ]
       }
     ]
   },
@@ -2815,5 +2878,344 @@
       "description": "If you encounter content or behavior that violates our platform rules, please report it so we can take action.",
       "button": "Report Abuse"
     }
+  },
+  "affiliatesPage": {
+    "badge": "Affiliate Program",
+    "title": "Earn Money Sharing AppNode",
+    "subtitle": "Join our affiliate program and earn up to 40% recurring commission for every customer you refer.",
+    "emailPlaceholder": "Enter your email",
+    "joinButton": "Join Now",
+    "alertMessage": "Application submitted! Check your email for next steps.",
+    "benefits": {
+      "title": "Why Join Our Program?",
+      "items": [
+        {
+          "title": "30% Commission",
+          "description": "Earn 30% recurring commission on every customer you refer for their first 12 months."
+        },
+        {
+          "title": "90-Day Cookie",
+          "description": "Extended cookie window means you get credit even if they sign up later."
+        },
+        {
+          "title": "Real-Time Dashboard",
+          "description": "Track clicks, conversions, and earnings in real-time with our affiliate dashboard."
+        },
+        {
+          "title": "Monthly Payouts",
+          "description": "Get paid every month via PayPal or bank transfer. $50 minimum threshold."
+        }
+      ]
+    },
+    "tiers": {
+      "title": "Commission Tiers",
+      "subtitle": "The more you refer, the more you earn. Unlock higher commission rates as you grow.",
+      "referralsPerMonth": "referrals/month",
+      "recurringCommission": "recurring commission",
+      "items": [
+        {
+          "name": "Starter",
+          "perks": [
+            "Basic dashboard",
+            "Email support",
+            "Standard links"
+          ]
+        },
+        {
+          "name": "Pro",
+          "perks": [
+            "Advanced analytics",
+            "Priority support",
+            "Custom links",
+            "Promotional assets"
+          ]
+        },
+        {
+          "name": "Elite",
+          "perks": [
+            "Dedicated manager",
+            "Co-marketing",
+            "Early access",
+            "Custom campaigns"
+          ]
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "steps": [
+        {
+          "title": "1. Sign Up",
+          "description": "Create your free affiliate account and get your unique referral link."
+        },
+        {
+          "title": "2. Share",
+          "description": "Share your link with your audience, followers, or community."
+        },
+        {
+          "title": "3. Earn",
+          "description": "Earn recurring commission every month for each paying customer."
+        }
+      ]
+    },
+    "stats": {
+      "title": "Affiliate Success",
+      "paidToAffiliates": "Paid to Affiliates",
+      "activeAffiliates": "Active Affiliates",
+      "avgMonthlyEarnings": "Avg. Monthly Earnings",
+      "avgPayoutTime": "Avg. Payout Time"
+    }
+  },
+  "connectionsPage": {
+    "badge": "Integrations",
+    "title": "Connections & Integrations",
+    "subtitle": "Supercharge your apps by connecting to powerful third-party services",
+    "comingSoon": "Coming Soon",
+    "requestTitle": "Need a different integration?",
+    "requestDescription": "Let us know what services you'd like to connect with AppNode",
+    "requestButton": "Request Integration",
+    "categories": {
+      "all": "All",
+      "database": "Database",
+      "payments": "Payments",
+      "ai": "AI",
+      "hosting": "Hosting",
+      "development": "Development",
+      "communication": "Communication",
+      "authentication": "Authentication",
+      "search": "Search",
+      "ecommerce": "E-commerce",
+      "productivity": "Productivity"
+    },
+    "connections": [
+      {
+        "name": "Supabase",
+        "description": "Open source Firebase alternative with PostgreSQL database"
+      },
+      {
+        "name": "Stripe",
+        "description": "Payment processing and subscription management"
+      },
+      {
+        "name": "OpenAI",
+        "description": "Add AI capabilities to your applications"
+      },
+      {
+        "name": "Vercel",
+        "description": "Deploy and host your applications globally"
+      },
+      {
+        "name": "GitHub",
+        "description": "Version control and code collaboration"
+      },
+      {
+        "name": "Resend",
+        "description": "Email API for developers"
+      },
+      {
+        "name": "Cloudflare",
+        "description": "CDN, security, and performance optimization"
+      },
+      {
+        "name": "Twilio",
+        "description": "SMS, voice, and messaging APIs"
+      },
+      {
+        "name": "Auth0",
+        "description": "Authentication and authorization platform"
+      },
+      {
+        "name": "Algolia",
+        "description": "Search and discovery platform"
+      },
+      {
+        "name": "Shopify",
+        "description": "E-commerce platform integration"
+      },
+      {
+        "name": "Notion",
+        "description": "Connect to Notion databases and pages"
+      }
+    ]
+  },
+  "securityReportPage": {
+    "badge": "Security",
+    "title": "Report Security Concerns",
+    "subtitle": "Found a security vulnerability? We appreciate responsible disclosure and will work with you to address the issue.",
+    "bugBounty": {
+      "title": "Bug Bounty Program",
+      "description": "We offer rewards for valid security reports. Bounty amounts depend on severity and impact. Critical vulnerabilities may qualify for rewards up to $5,000."
+    },
+    "severityLabel": "Severity Level",
+    "severity": {
+      "critical": {
+        "label": "Critical",
+        "description": "Complete system compromise, data breach"
+      },
+      "high": {
+        "label": "High",
+        "description": "Significant security impact"
+      },
+      "medium": {
+        "label": "Medium",
+        "description": "Limited security impact"
+      },
+      "low": {
+        "label": "Low",
+        "description": "Minimal security impact"
+      }
+    },
+    "descriptionLabel": "Vulnerability Description",
+    "descriptionHint": "Describe the vulnerability in detail. Include the affected component or feature.",
+    "descriptionPlaceholder": "Describe the security vulnerability...",
+    "stepsLabel": "Steps to Reproduce",
+    "stepsHint": "Provide clear steps to reproduce the vulnerability.",
+    "stepsPlaceholder": "1. Go to...\n2. Click on...\n3. Observe that...",
+    "emailLabel": "Your Email",
+    "emailHint": "Required for us to follow up and coordinate disclosure.",
+    "emailPlaceholder": "security-researcher@example.com",
+    "submitButton": "Submit Security Report",
+    "submitted": {
+      "title": "Report Received",
+      "description": "Thank you for responsibly disclosing this security concern. Our security team has been notified and will review your report promptly.",
+      "responseTime": "Expected Response Time:",
+      "critical": "Critical: Within 24 hours",
+      "high": "High: Within 48 hours",
+      "mediumLow": "Medium/Low: Within 5 business days",
+      "returnHome": "Return Home"
+    },
+    "guidelines": {
+      "title": "Responsible Disclosure Guidelines",
+      "items": [
+        "Do not access, modify, or delete data belonging to other users.",
+        "Do not perform denial of service attacks or degrade our services.",
+        "Allow us reasonable time to fix the issue before public disclosure.",
+        "Only test against accounts you own or have permission to access."
+      ]
+    },
+    "contactNote": "For urgent security matters, you can also reach us at"
+  },
+  "learnPublishPage": {
+    "badge": "How It Works",
+    "title": "Build & Publish with AppNode",
+    "subtitle": "Learn how to use AppNode's AI-powered code generator to create and deploy applications. From idea to live website in minutes, not months.",
+    "steps": {
+      "title": "Four Simple Steps",
+      "subtitle": "Creating and publishing your app has never been easier. Follow these steps to go from idea to live application.",
+      "items": [
+        {
+          "title": "Describe Your App",
+          "description": "Start by telling AppNode what you want to build. Use natural language to describe your app's features, design, and functionality. The more specific you are, the better the result."
+        },
+        {
+          "title": "Watch It Build",
+          "description": "AppNode's AI generates your application in real-time. You'll see the code being written and your app taking shape with instant previews. Make changes by simply asking for them."
+        },
+        {
+          "title": "Preview & Iterate",
+          "description": "Test your app directly in the browser. See how it looks on desktop, tablet, and mobile. Request changes, add features, or adjust styling until it's perfect."
+        },
+        {
+          "title": "Deploy Instantly",
+          "description": "When you're ready, publish your app with one click. Get a custom domain, SSL certificate, and global CDN automatically. Your app is live in seconds."
+        }
+      ]
+    },
+    "features": {
+      "title": "Deployment Features",
+      "subtitle": "Everything you need to publish professional applications is included out of the box.",
+      "items": [
+        {
+          "title": "One-Click Deployment",
+          "description": "No complex setup or configuration. Just click deploy and your app is live."
+        },
+        {
+          "title": "Custom Domains",
+          "description": "Connect your own domain or use our free subdomain for instant publishing."
+        },
+        {
+          "title": "SSL Certificates",
+          "description": "Automatic HTTPS for all your apps. Security comes standard."
+        },
+        {
+          "title": "Global CDN",
+          "description": "Your app is served from edge locations worldwide for blazing fast speeds."
+        },
+        {
+          "title": "Instant Rollbacks",
+          "description": "Made a mistake? Roll back to any previous version with one click."
+        },
+        {
+          "title": "Built-in Analytics",
+          "description": "Track visitors, page views, and performance metrics out of the box."
+        }
+      ]
+    },
+    "tips": {
+      "title": "Tips for Best Results",
+      "items": [
+        {
+          "bold": "Be specific:",
+          "text": "Describe colors, layouts, and functionality you want"
+        },
+        {
+          "bold": "Start simple:",
+          "text": "Begin with core features, then add more over time"
+        },
+        {
+          "bold": "Use references:",
+          "text": "Share examples of apps or websites you like"
+        },
+        {
+          "bold": "Test on all devices:",
+          "text": "Check desktop, tablet, and mobile views"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Build?",
+      "subtitle": "Start creating your application today. No coding experience required.",
+      "startButton": "Start Building Free",
+      "docsButton": "View Documentation"
+    }
+  },
+  "blockchainSection": {
+    "badge": "Multi-Chain Ecosystem",
+    "titleLine1": "BUILD ANYTHING ON",
+    "titleLine2": "ANY BLOCKCHAIN",
+    "titleLine3": "FASTER THAN EVER BEFORE",
+    "description": "Love Code unlocks the entire on-chain ecosystem with zero friction. From L1 giants to the newest L2s, you get the power to create anything: landing pages, meme token presales, NFT drops, dashboards, full Web3 apps, whatever you imagine.",
+    "descriptionHighlight": "No limits. No complexity. Just pure creation.",
+    "useCases": [
+      "Landing Pages",
+      "Token Presales",
+      "NFT Drops",
+      "DeFi Dashboards",
+      "Web3 Apps",
+      "DAO Tools",
+      "Staking Platforms",
+      "Meme Tokens"
+    ],
+    "features": [
+      {
+        "title": "Lightning Fast",
+        "description": "Deploy across any chain in seconds, not hours"
+      },
+      {
+        "title": "No Code Required",
+        "description": "Build complex dApps with natural language"
+      },
+      {
+        "title": "Battle Tested",
+        "description": "Smart contracts audited and production-ready"
+      },
+      {
+        "title": "Multi-Chain Native",
+        "description": "One codebase, every blockchain supported"
+      }
+    ],
+    "bottomText": "If it exists on a blockchain, you can build it here —",
+    "bottomHighlight": "easier, faster, and on a completely new level.",
+    "ctaButton": "Start Building on Web3"
   }
 }

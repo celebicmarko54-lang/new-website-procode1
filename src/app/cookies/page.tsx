@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 import { useTranslation } from '@/context/LanguageContext';
 
 export default function CookieSettingsPage() {
-  const { t } = useTranslation();
+  const { t, language} = useTranslation();
 
   const [preferences, setPreferences] = useState({
     essential: true,
@@ -26,7 +26,7 @@ export default function CookieSettingsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A]">
+    <div key={language.code} className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A]">
       <Header />
       
       <main className="pt-32 pb-20">

@@ -8,7 +8,7 @@ import { useTranslation } from '@/context/LanguageContext';
 
 export default function SignupPage() {
   const router = useRouter();
-  const { t } = useTranslation();
+  const { t, language} = useTranslation();
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     name: '',
@@ -110,7 +110,7 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="min-h-screen flex bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
+    <div key={language.code} className="min-h-screen flex bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
       {/* Left Side - Decorative */}
       <div className="hidden lg:flex flex-1 relative overflow-hidden">
         <Image

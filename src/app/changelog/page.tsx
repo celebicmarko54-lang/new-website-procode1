@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import { useTranslation } from '@/context/LanguageContext';
 
 export default function ChangelogPage() {
-  const { t } = useTranslation();
+  const { t, language, mounted } = useTranslation();
 
   const releases = [
     {
@@ -114,7 +114,7 @@ export default function ChangelogPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] text-gray-900 dark:text-white transition-colors">
+    <div key={language.code} className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] text-gray-900 dark:text-white transition-colors">
       <Header />
       
       <main className="pt-32 pb-20">

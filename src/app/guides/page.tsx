@@ -30,7 +30,7 @@ interface Guide {
 }
 
 export default function GuidesPage() {
-  const { t, tArray } = useTranslation();
+  const { t, tArray, language} = useTranslation();
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedGuide, setSelectedGuide] = useState<Guide | null>(null);
 
@@ -155,7 +155,7 @@ export default function GuidesPage() {
   const featuredGuide = guides.find(g => g.featured);
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A]">
+    <div key={language.code} className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A]">
       <Header />
       
       {/* Guide Modal */}

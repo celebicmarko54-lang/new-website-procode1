@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useTranslation } from '@/context/LanguageContext';
 
 export default function AboutPage() {
-  const { t } = useTranslation();
+  const { t, language, mounted } = useTranslation();
 
   const stats = [
     { number: '100K+', label: t('aboutPage.stats.developers') },
@@ -57,7 +57,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] text-gray-900 dark:text-white transition-colors">
+    <div key={language.code} className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] text-gray-900 dark:text-white transition-colors">
       <Header />
       
       <main className="pt-24 pb-16">

@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import { useTranslation } from '@/context/LanguageContext';
 
 export default function CareersPage() {
-  const { t } = useTranslation();
+  const { t, language} = useTranslation();
   const openings = [
     {
       title: 'Senior Full Stack Engineer',
@@ -70,7 +70,7 @@ export default function CareersPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
+    <div key={language.code} className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
       <Header />
       
       <main className="pt-24 pb-16">

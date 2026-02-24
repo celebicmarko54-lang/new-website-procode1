@@ -17,7 +17,7 @@ interface User {
 
 export default function BillingPage() {
   const router = useRouter();
-  const { t } = useTranslation();
+  const { t, language} = useTranslation();
   const [user, setUser] = useState<User | null>(null);
   const [currentPlan, setCurrentPlan] = useState('free');
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
@@ -78,7 +78,7 @@ export default function BillingPage() {
 
   if (!user) {
     return (
-      <div className="min-h-screen flex items-center justify-center dark:bg-[#1A1A1A]">
+      <div key={language.code} className="min-h-screen flex items-center justify-center dark:bg-[#1A1A1A]">
         <div className="animate-spin w-8 h-8 border-4 border-gray-900 border-t-transparent rounded-full"></div>
       </div>
     );

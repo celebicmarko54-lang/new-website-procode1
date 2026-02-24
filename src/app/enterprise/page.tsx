@@ -64,7 +64,7 @@ const testimonialData = [
 ];
 
 export default function EnterprisePage() {
-  const { t } = useTranslation();
+  const { t, language} = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -84,7 +84,7 @@ export default function EnterprisePage() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#1A1A1A]">
+    <div key={language.code} className="min-h-screen bg-white dark:bg-[#1A1A1A]">
       <Header />
       
       {/* Hero Section */}

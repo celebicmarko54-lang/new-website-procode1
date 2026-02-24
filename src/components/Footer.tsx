@@ -61,7 +61,7 @@ const socialMediaLinks = [
 
 export default function Footer() {
   const [cookieModalOpen, setCookieModalOpen] = useState(false);
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
 
   const handleLinkClick = (link: FooterLink) => {
     if (link.action === 'cookies') {
@@ -72,7 +72,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="w-full relative overflow-hidden">
+      <footer key={language.code} className="w-full relative overflow-hidden">
         {/* Main Footer - Transparent to show gradient */}
         <div className="relative">
           <div className="max-w-6xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 relative z-10">

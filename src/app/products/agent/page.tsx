@@ -152,7 +152,7 @@ function TypingAnimation() {
 }
 
 export default function AgentPage() {
-  const { t } = useTranslation();
+  const { t, language} = useTranslation();
   return (
     <div className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] text-gray-900 dark:text-white transition-colors">
       <Header />
