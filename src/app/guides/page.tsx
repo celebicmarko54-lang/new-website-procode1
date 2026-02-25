@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useTranslation } from '@/context/LanguageContext';
+import { getTranslationArray } from '@/translations/helpers';
 
 interface GuideData {
   translationKey: string;
@@ -30,7 +31,7 @@ interface Guide {
 }
 
 export default function GuidesPage() {
-  const { t, tArray, language} = useTranslation();
+  const { t, language} = useTranslation();
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedGuide, setSelectedGuide] = useState<Guide | null>(null);
 
@@ -130,8 +131,8 @@ export default function GuidesPage() {
     icon: data.icon,
     guideContent: {
       overview: t(`guidesPage.guides.${data.translationKey}.overview`),
-      steps: tArray(`guidesPage.guides.${data.translationKey}.steps`),
-      tips: tArray(`guidesPage.guides.${data.translationKey}.tips`),
+      steps: getTranslationArray(language.code, `guidesPage.guides.${data.translationKey}.steps`),
+      tips: getTranslationArray(language.code, `guidesPage.guides.${data.translationKey}.tips`),
     },
   }));
 

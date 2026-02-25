@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useTranslation } from '@/context/LanguageContext';
+import { getTranslationData } from '@/translations/helpers';
 
 interface User {
   id: number;
@@ -32,38 +33,41 @@ export default function BillingPage() {
     setUser(JSON.parse(currentUser));
   }, [router]);
 
+  const translatedPlans = getTranslationData(language.code, 'billingPage.plans') as Array<{name: string; price: string; period: string; features: string[]}>;
+
   const plans = [
     {
       id: 'free',
-      name: 'Free',
-      price: '$0',
-      period: 'forever',
-      features: ['3 projects', 'Basic AI features', 'Community support', 'Export to code'],
+      name: translatedPlans?.[0]?.name || 'Free',
+      price: translatedPlans?.[0]?.price || '$0',
+      period: translatedPlans?.[0]?.period || 'forever',
+      features: translatedPlans?.[0]?.features || ['3 projects', 'Basic AI features', 'Community support', 'Export to code'],
       current: currentPlan === 'free',
     },
     {
       id: 'pro',
-      name: 'Pro',
-      price: '$20',
-      period: 'per month',
-      features: ['Unlimited projects', 'Advanced AI features', 'Priority support', 'Custom domains', 'Team collaboration', 'Analytics dashboard'],
+      name: translatedPlans?.[1]?.name || 'Pro',
+      price: translatedPlans?.[1]?.price || '$20',
+      period: translatedPlans?.[1]?.period || 'per month',
+      features: translatedPlans?.[1]?.features || ['Unlimited projects', 'Advanced AI features', 'Priority support', 'Custom domains', 'Team collaboration', 'Analytics dashboard'],
       popular: true,
       current: currentPlan === 'pro',
     },
     {
       id: 'team',
-      name: 'Team',
-      price: '$49',
-      period: 'per month',
-      features: ['Everything in Pro', 'Up to 10 team members', 'Admin controls', 'SSO integration', 'Dedicated support', 'Custom branding'],
+      name: translatedPlans?.[2]?.name || 'Team',
+      price: translatedPlans?.[2]?.price || '$49',
+      period: translatedPlans?.[2]?.period || 'per month',
+      features: translatedPlans?.[2]?.features || ['Everything in Pro', 'Up to 10 team members', 'Admin controls', 'SSO integration', 'Dedicated support', 'Custom branding'],
       current: currentPlan === 'team',
     },
   ];
 
+  const translatedInvoices = getTranslationData(language.code, 'billingPage.invoices') as Array<{date: string; amount: string; status: string; plan: string}>;
   const invoices = [
-    { id: 1, date: 'Nov 1, 2025', amount: '$0.00', status: 'Paid', plan: 'Free' },
-    { id: 2, date: 'Oct 1, 2025', amount: '$0.00', status: 'Paid', plan: 'Free' },
-    { id: 3, date: 'Sep 1, 2025', amount: '$0.00', status: 'Paid', plan: 'Free' },
+    { id: 1, date: translatedInvoices?.[0]?.date || 'Nov 1, 2025', amount: '$0.00', status: translatedInvoices?.[0]?.status || 'Paid', plan: translatedInvoices?.[0]?.plan || 'Free' },
+    { id: 2, date: translatedInvoices?.[1]?.date || 'Oct 1, 2025', amount: '$0.00', status: translatedInvoices?.[1]?.status || 'Paid', plan: translatedInvoices?.[1]?.plan || 'Free' },
+    { id: 3, date: translatedInvoices?.[2]?.date || 'Sep 1, 2025', amount: '$0.00', status: translatedInvoices?.[2]?.status || 'Paid', plan: translatedInvoices?.[2]?.plan || 'Free' },
   ];
 
   const handleUpgrade = (planId: string) => {

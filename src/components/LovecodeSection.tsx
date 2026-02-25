@@ -1,6 +1,12 @@
 'use client';
 
 import { useState, useRef, useEffect, useCallback } from 'react';
+import { useTranslation } from '@/context/LanguageContext';
+
+// Turbopack workaround: 'language' must exist in scope due to compiled chunk cross-references
+// It is defined globally in layout.tsx's head script
+// eslint-disable-next-line @typescript-eslint/no-explicit-any, no-var
+declare var language: any;
 
 // All available template images
 const allTemplates = [
@@ -43,35 +49,17 @@ export default function LovecodeSection() {
   const animationRef = useRef<number | null>(null);
   const mouseStopTimeout = useRef<NodeJS.Timeout | null>(null);
   const wasMouseMoving = useRef(false);
+  const { language: ctxLanguage } = useTranslation();
   
   // Direct translations for mouse hint
-  const mouseHintTranslations: Record<string, string> = {
+  const mouseHintMap: Record<string, string> = {
     ko: '마우스를 움직여 탐색하세요',
+    sw: 'Sogeza kipanya chako kuchunguza',
+    ta: 'ஆராய உங்கள் சுட்டியை நகர்த்தவும்',
     en: 'Move your mouse to explore'
   };
   
-  // Read language from localStorage
-  const [langCode, setLangCode] = useState('en');
-  
-  useEffect(() => {
-    const stored = localStorage.getItem('appnode_language');
-    if (stored) {
-      setLangCode(stored);
-    }
-    
-    // Listen for storage changes (when user switches language)
-    const handleStorage = () => {
-      const updated = localStorage.getItem('appnode_language');
-      if (updated) {
-        setLangCode(updated);
-      }
-    };
-    
-    window.addEventListener('storage', handleStorage);
-    return () => window.removeEventListener('storage', handleStorage);
-  }, []);
-  
-  const mouseHint = mouseHintTranslations[langCode] || mouseHintTranslations.en;
+  const mouseHint = mouseHintMap[ctxLanguage.code] || mouseHintMap.en;
 
   // Shuffle images only on client after mount to avoid hydration mismatch
   useEffect(() => {

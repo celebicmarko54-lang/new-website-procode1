@@ -21,7 +21,7 @@ import ro from './ro.json';
 import el from './el.json';
 import sr from './sr.json';
 
-// Force re-import of JSON modules
+// Translation registry - last updated 2025-06-26
 export type TranslationKeys = typeof en;
 
 export const translations: Record<string, TranslationKeys> = {

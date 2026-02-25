@@ -4,8 +4,9 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { useTranslation } from '@/context/LanguageContext';
+import { getTranslationData } from '@/translations/helpers';
 
 // AI Apps projects with actual images
 const aiAppsProjects = [
@@ -72,22 +73,28 @@ export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedProject, setSelectedProject] = useState<typeof aiAppsProjects[0] | null>(null);
   
+  // Use getTranslationData as the primary lookup since t() has issues with some keys
+  const gt = (key: string): string => {
+    const val = getTranslationData(language.code, key);
+    return typeof val === 'string' ? val : t(key);
+  };
+  
   const categoryKeys = ['all', 'aiApps', 'websites', 'businessApps', 'personalSoftware', 'games'] as const;
 
-  // Memoized translations that update when language changes
-  const categoryLabels = useMemo(() => ({
-    all: t('galleryPage.categories.all'),
-    aiApps: t('galleryPage.categories.aiApps'),
-    websites: t('galleryPage.categories.websites'),
-    businessApps: t('galleryPage.categories.businessApps'),
-    personalSoftware: t('galleryPage.categories.personalSoftware'),
-    games: t('galleryPage.categories.games'),
-  }), [t, language.code]);
+  // Direct translations using reliable helper
+  const categoryLabels: Record<string, string> = {
+    all: gt('galleryPage.categories.all'),
+    aiApps: gt('galleryPage.categories.aiApps'),
+    websites: gt('galleryPage.categories.websites'),
+    businessApps: gt('galleryPage.categories.businessApps'),
+    personalSoftware: gt('galleryPage.categories.personalSoftware'),
+    games: gt('galleryPage.categories.games'),
+  };
   
-  const galleryTitle = useMemo(() => t('galleryPage.title'), [t, language.code]);
-  const gallerySubtitle = useMemo(() => t('galleryPage.subtitle'), [t, language.code]);
-  const viewLabel = useMemo(() => t('galleryPage.view'), [t, language.code]);
-  const builtWithLabel = useMemo(() => t('galleryPage.builtWith'), [t, language.code]);
+  const galleryTitle = gt('galleryPage.title');
+  const gallerySubtitle = gt('galleryPage.subtitle');
+  const viewLabel = gt('galleryPage.view');
+  const builtWithLabel = gt('galleryPage.builtWith');
 
   // Show skeleton during SSR
   if (!mounted) {
@@ -158,7 +165,7 @@ export default function GalleryPage() {
                     : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
                 }`}
               >
-                {categoryLabels[catKey]}
+                {gt(`galleryPage.categories.${catKey}`)}
               </button>
             ))}
           </div>
@@ -177,7 +184,7 @@ export default function GalleryPage() {
                 <div className="aspect-[4/3] bg-gray-100 dark:bg-gray-900 relative overflow-hidden">
                   <Image
                     src={project.image}
-                    alt={t(`galleryPage.projects.${project.titleKey}`)}
+                    alt={gt(`galleryPage.projects.${project.titleKey}`)}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
@@ -189,12 +196,12 @@ export default function GalleryPage() {
                 {/* Info */}
                 <div className="p-4">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-semibold text-gray-900 dark:text-white">{t(`galleryPage.projects.${project.titleKey}`)}</h3>
+                    <h3 className="font-semibold text-gray-900 dark:text-white">{gt(`galleryPage.projects.${project.titleKey}`)}</h3>
                     <span className="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full">
-                      {t(`galleryPage.categories.${project.categoryKey}`)}
+                      {gt(`galleryPage.categories.${project.categoryKey}`)}
                     </span>
                   </div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">{builtWithLabel}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">{gt('galleryPage.builtWith')}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600"></div>
@@ -204,7 +211,7 @@ export default function GalleryPage() {
                       onClick={() => setSelectedProject(project)}
                       className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
                     >
-                      {viewLabel}
+                      {gt('galleryPage.view')}
                     </button>
                   </div>
                 </div>
@@ -240,7 +247,7 @@ export default function GalleryPage() {
                       <div className="w-6 h-6 rounded-full bg-gray-200 dark:bg-gray-800"></div>
                       <div className="h-3 w-16 bg-gray-200 dark:bg-gray-800 rounded"></div>
                     </div>
-                    <span className="text-sm text-gray-400 dark:text-gray-600">{t('galleryPage.comingSoon')}</span>
+                    <span className="text-sm text-gray-400 dark:text-gray-600">{gt('galleryPage.comingSoon')}</span>
                   </div>
                 </div>
               </div>
@@ -251,12 +258,12 @@ export default function GalleryPage() {
         {/* Submit CTA */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="bg-gray-50 dark:bg-[#1A1A1A] rounded-2xl border border-gray-200 dark:border-2 dark:border-gray-800 p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">{t('galleryPage.shareTitle')}</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">{gt('galleryPage.shareTitle')}</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-              {t('galleryPage.shareSubtitle')}
+              {gt('galleryPage.shareSubtitle')}
             </p>
             <Link href="/signup" className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 font-medium rounded-lg transition-colors">
-              {t('galleryPage.submitProject')}
+              {gt('galleryPage.submitProject')}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -291,7 +298,7 @@ export default function GalleryPage() {
             <div className="relative w-full" style={{ height: 'calc(90vh - 100px)' }}>
               <Image
                 src={selectedProject.image}
-                alt={t(`galleryPage.projects.${selectedProject.titleKey}`)}
+                alt={gt(`galleryPage.projects.${selectedProject.titleKey}`)}
                 fill
                 sizes="90vw"
                 className="object-contain"
@@ -304,11 +311,11 @@ export default function GalleryPage() {
             <div className="p-6 border-t border-gray-200 dark:border-t-2 dark:border-gray-800">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">{t(`galleryPage.projects.${selectedProject.titleKey}`)}</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">{t('galleryPage.builtWithBy')} {selectedProject.author}</p>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">{gt(`galleryPage.projects.${selectedProject.titleKey}`)}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{gt('galleryPage.builtWithBy')} {selectedProject.author}</p>
                 </div>
                 <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium">
-                  {t(`galleryPage.categories.${selectedProject.categoryKey}`)}
+                  {gt(`galleryPage.categories.${selectedProject.categoryKey}`)}
                 </span>
               </div>
             </div>

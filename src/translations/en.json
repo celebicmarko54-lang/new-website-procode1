@@ -401,6 +401,14 @@
     "run": "Run",
     "deploy": "Deploy",
     "output": "Output",
+    "comingSoonOn": "Coming Soon on",
+    "googlePlay": "Google Play",
+    "soonBadge": "SOON",
+    "comingSoonTitle": "Mobile Apps Coming Soon",
+    "comingSoonDescription": "Our mobile apps are currently in development. In the meantime, our users can access AppNode from any device - desktop, tablet, or phone - through the browser and instantly preview how their applications look on different screen sizes.",
+    "tabletPreview": "Tablet Preview",
+    "phonePreview": "Phone Preview",
+    "tryAppNodeNow": "Try AppNode Now",
     "featuresTitle": "Full Power, Anywhere",
     "downloadIOS": "Download for iOS",
     "downloadAndroid": "Download for Android",
@@ -544,7 +552,25 @@
     "subtitle": "See how teams are using AppNode",
     "rapidPrototyping": {
       "title": "Rapid Prototyping",
-      "description": "Validate ideas quickly with working prototypes in hours."
+      "description": "Validate ideas quickly with working prototypes in hours.",
+      "benefitsList": [
+        {
+          "title": "Save Money",
+          "description": "Validate ideas before investing in full development"
+        },
+        {
+          "title": "Save Time",
+          "description": "Build prototypes in hours instead of weeks"
+        },
+        {
+          "title": "Reduce Risk",
+          "description": "Test with users early to avoid costly pivots"
+        },
+        {
+          "title": "Align Teams",
+          "description": "Give everyone a tangible vision to rally around"
+        }
+      ]
     },
     "businessApps": {
       "title": "Business Applications",
@@ -975,7 +1001,175 @@
         "question": "Is there a free plan?",
         "answer": "Yes! We offer a generous free tier that lets you build and deploy apps at no cost."
       }
-    }
+    },
+    "botGreeting": "Hi! 👋 I'm AppNode's support assistant. How can I help you today?",
+    "liveAgentMessage": "I'd be happy to connect you with our support team! You can reach us at support@appnode.com or click the button below to start a live chat during business hours (9 AM - 6 PM EST).",
+    "fallbackMessage": "I'm not sure I have the right answer for that. Would you like to talk to a live agent?",
+    "talkToLiveAgent": "Talk to Live Agent",
+    "askSomething": "Ask something...",
+    "emailLabel": "Email us at",
+    "knowledgeBase": [
+      {
+        "keywords": [
+          "what is appnode",
+          "about appnode",
+          "appnode"
+        ],
+        "answer": "AppNode is an AI-powered platform that lets you build full-stack web applications through natural language prompts. Simply describe what you want to build, and our AI will generate the code, design, and functionality for you."
+      },
+      {
+        "keywords": [
+          "pricing",
+          "cost",
+          "price",
+          "free",
+          "plan"
+        ],
+        "answer": "AppNode offers a generous free plan to get started. Our pricing includes: Free Plan (3 projects, basic AI features), Pro Plan ($20/month for unlimited projects and advanced AI), and Team Plan ($49/month for collaboration features). Visit our pricing page for more details."
+      },
+      {
+        "keywords": [
+          "deploy",
+          "deployment",
+          "publish",
+          "hosting",
+          "live"
+        ],
+        "answer": "Deploying with AppNode is simple! Click the \"Deploy\" button in your project editor, and your app will be live in seconds with a unique URL. Pro users can connect custom domains. We handle all the hosting infrastructure for you."
+      },
+      {
+        "keywords": [
+          "ai",
+          "artificial intelligence",
+          "generate",
+          "prompt"
+        ],
+        "answer": "Our AI understands natural language descriptions of what you want to build. You can describe features, layouts, functionality, and even complex logic. The AI generates clean, production-ready code that you can further customize."
+      },
+      {
+        "keywords": [
+          "database",
+          "data",
+          "storage",
+          "backend"
+        ],
+        "answer": "AppNode includes built-in database support. You can create tables, define relationships, and manage data through our visual interface. We support SQLite for development and can scale to PostgreSQL for production."
+      },
+      {
+        "keywords": [
+          "team",
+          "collaborate",
+          "collaboration",
+          "share"
+        ],
+        "answer": "Our Teams plan supports real-time collaboration. Multiple team members can work on the same project simultaneously. Features include role-based access, shared workspaces, team chat, and centralized billing."
+      },
+      {
+        "keywords": [
+          "export",
+          "download",
+          "code",
+          "source"
+        ],
+        "answer": "Yes! You can export your full source code at any time. AppNode generates clean React/Next.js code that you can run independently. Pro users get access to GitHub integration for seamless version control."
+      },
+      {
+        "keywords": [
+          "mobile",
+          "ios",
+          "android",
+          "responsive"
+        ],
+        "answer": "All apps built with AppNode are responsive by default. We're also working on native mobile app development features for iOS and Android, coming soon!"
+      },
+      {
+        "keywords": [
+          "security",
+          "secure",
+          "safe",
+          "privacy"
+        ],
+        "answer": "Security is our top priority. We use industry-standard encryption, SOC 2 Type II certified infrastructure, and regular security audits. Your code and data are always protected."
+      },
+      {
+        "keywords": [
+          "bug",
+          "error",
+          "problem",
+          "issue",
+          "help"
+        ],
+        "answer": "If you're experiencing issues, try refreshing the page first. Check our status page for any ongoing incidents. You can also describe your specific issue here, and I'll try to help, or connect you with our support team."
+      },
+      {
+        "keywords": [
+          "cancel",
+          "subscription",
+          "refund",
+          "billing"
+        ],
+        "answer": "You can cancel your subscription at any time from your account settings. Your access continues until the end of the billing period. For refunds, please contact our support team at support@appnode.com."
+      },
+      {
+        "keywords": [
+          "api",
+          "integration",
+          "connect",
+          "webhook"
+        ],
+        "answer": "AppNode supports integrations with popular services like Stripe, OpenAI, Twilio, and more. You can also use our API to connect with external services. Check our documentation for available integrations."
+      },
+      {
+        "keywords": [
+          "custom domain",
+          "domain",
+          "url"
+        ],
+        "answer": "Pro and Team plan users can connect custom domains to their deployed apps. Go to your project settings > Domains to add and configure your custom domain. DNS configuration instructions are provided."
+      }
+    ],
+    "faqAnswers": {
+      "appnode": "AppNode is an AI-powered platform that lets you build web applications by simply describing what you want in natural language. No coding experience required!",
+      "pricing": "We offer a generous free tier that lets you build and deploy apps at no cost. Our Pro plan starts at $19/month with unlimited projects, and Enterprise plans are available for larger teams. Visit our pricing page for full details!",
+      "export": "Yes! You can export your complete project code at any time. You own everything you create on AppNode. Just go to your project settings and click \"Export Code\" to download the full source code.",
+      "coding": "No coding experience is required! AppNode is designed for everyone - from complete beginners to experienced developers. Simply describe what you want to build in plain English, and our AI will generate the code for you.",
+      "techStack": "AppNode generates modern React/Next.js applications with Tailwind CSS styling. Your apps are built with production-ready code following best practices.",
+      "deploy": "You can deploy your app with one click! AppNode provides free hosting for your projects. Once deployed, you'll get a shareable URL. You can also connect a custom domain.",
+      "customDomain": "Yes, you can connect your own custom domain to any AppNode project! Go to your project settings, click \"Domains\", and follow the instructions to add your domain. DNS changes typically take 24-48 hours to propagate.",
+      "team": "AppNode supports team collaboration! You can invite team members to your projects, set different permission levels, and work together in real-time. Team features are available on Pro and Enterprise plans.",
+      "api": "AppNode supports integrations with popular services and APIs. You can connect databases, authentication providers, payment systems, and more. Check our Integrations documentation for the full list.",
+      "deleteAccount": "You can delete your account from Settings > Account > Delete Account. Please note this action is irreversible and all your projects will be permanently removed. Consider exporting your code first.",
+      "password": "To reset your password, click \"Forgot Password\" on the login page and enter your email. You'll receive a reset link within a few minutes. Check your spam folder if you don't see it.",
+      "bug": "I'm sorry to hear you're experiencing issues. Could you describe what's happening in more detail? Common fixes include: clearing your browser cache, trying a different browser, or refreshing the page. If the issue persists, I can connect you with a live agent.",
+      "billing": "For billing inquiries or refund requests, please contact our billing team at contact@appnode.ai. We offer a 14-day money-back guarantee on all paid plans.",
+      "greeting": "Hello! 👋 Welcome to AppNode Support. How can I help you today? Feel free to ask me anything about our platform!",
+      "thanks": "You're welcome! Is there anything else I can help you with? 😊",
+      "goodbye": "Thank you for chatting with us! If you have any more questions in the future, don't hesitate to reach out. Have a great day! 👋"
+    },
+    "quickActionMessages": {
+      "gettingStartedMsg": "How do I get started with AppNode?",
+      "pricingMsg": "What are the pricing options?",
+      "exportCodeMsg": "Can I export my code?",
+      "liveAgentMsg": "I'd like to speak to a live agent"
+    },
+    "chatUi": {
+      "noDescription": "No additional description provided",
+      "confirmationMsg": "✅ Your conversation has been sent to our support team at contact@appnode.ai. We'll get back to you as soon as possible!\n\nTypical response time: Within 24 hours (often much faster during business hours).",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "Your email address",
+      "problemPlaceholder": "Describe your problem or question...",
+      "chatPlaceholder": "Type your message...",
+      "sendToSupportTeam": "Send to Support Team",
+      "conversationWillBeSent": "Your conversation will be sent to contact@appnode.ai",
+      "chatTitle": "AppNode Support",
+      "online": "Online",
+      "liveAgentConnected": "Live Agent Connected",
+      "quickQuestions": "Quick questions:"
+    },
+    "searchNoResults": "No results found for",
+    "searchCategories": "Categories",
+    "searchViews": "views",
+    "searchHelpTopics": "Help Topics"
   },
   "docsPage": {
     "searchPlaceholder": "Search docs...",
@@ -1083,7 +1277,115 @@
     "applyNow": "Apply Now",
     "dontSeeAFit": "Don't see a perfect fit?",
     "dontSeeAFitDescription": "We're always looking for talented people. Send us your resume and we'll keep you in mind.",
-    "sendGeneralApplication": "Send General Application"
+    "sendGeneralApplication": "Send General Application",
+    "openings": [
+      {
+        "title": "Senior Full Stack Engineer",
+        "department": "Engineering",
+        "location": "San Francisco, CA / Remote",
+        "type": "Full-time",
+        "description": "Build and scale our AI-powered development platform."
+      },
+      {
+        "title": "Machine Learning Engineer",
+        "department": "AI",
+        "location": "San Francisco, CA / Remote",
+        "type": "Full-time",
+        "description": "Develop and improve our AI code generation models."
+      },
+      {
+        "title": "Product Designer",
+        "department": "Design",
+        "location": "Remote",
+        "type": "Full-time",
+        "description": "Design intuitive experiences for our platform."
+      },
+      {
+        "title": "Developer Advocate",
+        "department": "Developer Relations",
+        "location": "Remote",
+        "type": "Full-time",
+        "description": "Build community and create educational content."
+      },
+      {
+        "title": "Technical Writer",
+        "department": "Documentation",
+        "location": "Remote",
+        "type": "Full-time",
+        "description": "Create world-class documentation and tutorials."
+      },
+      {
+        "title": "Growth Marketing Manager",
+        "department": "Marketing",
+        "location": "San Francisco, CA / Remote",
+        "type": "Full-time",
+        "description": "Drive user acquisition and growth initiatives."
+      }
+    ],
+    "benefits": [
+      {
+        "icon": "💰",
+        "title": "Competitive Salary",
+        "description": "Top-of-market compensation packages"
+      },
+      {
+        "icon": "📈",
+        "title": "Equity",
+        "description": "Ownership stake in the company"
+      },
+      {
+        "icon": "🏥",
+        "title": "Health & Wellness",
+        "description": "Comprehensive medical, dental, and vision"
+      },
+      {
+        "icon": "🏠",
+        "title": "Remote First",
+        "description": "Work from anywhere in the world"
+      },
+      {
+        "icon": "🌴",
+        "title": "Unlimited PTO",
+        "description": "Take the time you need to recharge"
+      },
+      {
+        "icon": "📚",
+        "title": "Learning Budget",
+        "description": "$2,000 annual learning stipend"
+      },
+      {
+        "icon": "💻",
+        "title": "Equipment",
+        "description": "Latest MacBook and gear of your choice"
+      },
+      {
+        "icon": "🎉",
+        "title": "Team Retreats",
+        "description": "Annual company-wide gatherings"
+      }
+    ],
+    "companyValues": [
+      {
+        "emoji": "🚀",
+        "title": "Move Fast",
+        "description": "We ship quickly and iterate based on feedback"
+      },
+      {
+        "emoji": "🎯",
+        "title": "User Obsessed",
+        "description": "Every decision starts with the user"
+      },
+      {
+        "emoji": "🔓",
+        "title": "Default Open",
+        "description": "Transparency in everything we do"
+      },
+      {
+        "emoji": "🤝",
+        "title": "One Team",
+        "description": "We succeed and fail together"
+      }
+    ]
   },
   "communityPage": {
     "exploreThe": "Explore the",
@@ -1177,7 +1479,65 @@
     "ctaTitle": "Not sure which solution fits?",
     "ctaSubtitle": "Start building for free and discover how AppNode can transform your workflow.",
     "startBuildingFree": "Start Building Free",
-    "talkToSales": "Talk to Sales"
+    "talkToSales": "Talk to Sales",
+    "solutionCards": [
+      {
+        "title": "For Founders",
+        "subtitle": "Launch faster, iterate smarter",
+        "description": "Turn your vision into a working product in days, not months. AppNode's AI-powered platform lets you build, test, and launch without a technical co-founder.",
+        "features": [
+          "Launch MVPs in days",
+          "Rapid prototyping",
+          "Integrated analytics",
+          "One-click deployment"
+        ],
+        "testimonialQuote": "We built our entire MVP in 2 weeks with AppNode. What would have cost us $50K in development was done for a fraction of the cost.",
+        "testimonialAuthor": "Jason Park",
+        "testimonialRole": "Founder, TechStartup"
+      },
+      {
+        "title": "For Designers",
+        "subtitle": "Design to production in minutes",
+        "description": "Bridge the gap between design and development. Import your designs and watch them transform into pixel-perfect, responsive applications.",
+        "features": [
+          "Figma import",
+          "Design-to-code",
+          "Component library",
+          "Responsive layouts"
+        ],
+        "testimonialQuote": "As a designer, I can now ship my own ideas without waiting for engineering. It's incredibly empowering.",
+        "testimonialAuthor": "Emma Chen",
+        "testimonialRole": "Lead Designer, DesignCo"
+      },
+      {
+        "title": "For Marketers",
+        "subtitle": "Build landing pages that convert",
+        "description": "Create stunning landing pages, microsites, and marketing tools without coding. A/B test, iterate, and optimize at the speed of thought.",
+        "features": [
+          "Landing page builder",
+          "A/B testing",
+          "SEO tools",
+          "Analytics dashboard"
+        ],
+        "testimonialQuote": "We've increased our conversion rate by 40% since switching to AppNode for our landing pages.",
+        "testimonialAuthor": "Michael Torres",
+        "testimonialRole": "Head of Growth, ScaleUp"
+      },
+      {
+        "title": "Prototyping",
+        "subtitle": "From idea to prototype in minutes",
+        "description": "The fastest way to validate ideas. Build interactive prototypes that look and feel like real applications, powered by AI.",
+        "features": [
+          "AI-assisted building",
+          "Interactive previews",
+          "Share & collaborate",
+          "Export code"
+        ],
+        "testimonialQuote": "AppNode replaced our entire prototyping workflow. We can test ideas in hours instead of weeks.",
+        "testimonialAuthor": "Lisa Wang",
+        "testimonialRole": "Product Lead, InnovateCo"
+      }
+    ]
   },
   "solutionsWeb3": {
     "badge": "Web3 Solutions",
@@ -1260,7 +1620,14 @@
       }
     },
     "ctaTitle": "Build your mobile app today",
-    "ctaSubtitle": "From idea to App Store in record time."
+    "ctaSubtitle": "From idea to App Store in record time.",
+    "comingSoon": "Coming Soon",
+    "welcomeBack": "Welcome back",
+    "dashboard": "Dashboard",
+    "getStarted": "Get Started",
+    "featuresSubtitle": "Everything you need to create professional mobile applications",
+    "iosReady": "iOS Ready",
+    "androidReady": "Android Ready"
   },
   "useCasesRapidPrototyping": {
     "badge": "Use Case",
@@ -1273,11 +1640,55 @@
     "totalTime": "Total time",
     "traditional": {
       "title": "Traditional Prototyping",
-      "totalTime": "6-10 weeks"
+      "totalTime": "6-10 weeks",
+      "steps": [
+        {
+          "step": "Wireframes",
+          "time": "2-3 days"
+        },
+        {
+          "step": "Design mockups",
+          "time": "1-2 weeks"
+        },
+        {
+          "step": "Developer handoff",
+          "time": "1-2 days"
+        },
+        {
+          "step": "Build prototype",
+          "time": "2-4 weeks"
+        },
+        {
+          "step": "Testing & iteration",
+          "time": "1-2 weeks"
+        }
+      ]
     },
     "appnode": {
       "title": "AppNode Prototyping",
-      "totalTime": "1-2 hours"
+      "totalTime": "1-2 hours",
+      "steps": [
+        {
+          "step": "Describe your idea",
+          "time": "5 minutes"
+        },
+        {
+          "step": "AI generates prototype",
+          "time": "2-10 minutes"
+        },
+        {
+          "step": "Customize & refine",
+          "time": "30-60 minutes"
+        },
+        {
+          "step": "Share with stakeholders",
+          "time": "1 minute"
+        },
+        {
+          "step": "Iterate based on feedback",
+          "time": "15-30 minutes"
+        }
+      ]
     },
     "benefitsTitle": "Why Rapid Prototyping Matters",
     "ctaTitle": "Start prototyping today",
@@ -1619,7 +2030,80 @@
     "subscribeTitle": "Get Status Updates",
     "subscribeSubtitle": "Subscribe to receive notifications about system status and incidents",
     "emailPlaceholder": "Enter your email",
-    "subscribeButton": "Subscribe"
+    "subscribeButton": "Subscribe",
+    "services": [
+      {
+        "name": "API",
+        "status": "operational"
+      },
+      {
+        "name": "Web Application",
+        "status": "operational"
+      },
+      {
+        "name": "Code Generation",
+        "status": "operational"
+      },
+      {
+        "name": "Deployment Services",
+        "status": "operational"
+      },
+      {
+        "name": "Database Connections",
+        "status": "operational"
+      },
+      {
+        "name": "Authentication",
+        "status": "operational"
+      },
+      {
+        "name": "CDN & Assets",
+        "status": "operational"
+      },
+      {
+        "name": "Real-time Collaboration",
+        "status": "operational"
+      }
+    ],
+    "incidents": [
+      {
+        "date": "November 25, 2025",
+        "title": "Elevated API Response Times",
+        "status": "resolved",
+        "duration": "23 minutes",
+        "description": "We experienced elevated API response times due to a database connection pool issue. The issue was identified and resolved by scaling up the connection pool and optimizing query patterns."
+      },
+      {
+        "date": "November 18, 2025",
+        "title": "Deployment Service Degradation",
+        "status": "resolved",
+        "duration": "45 minutes",
+        "description": "Some deployments experienced delays due to increased queue depth. We implemented auto-scaling for our deployment pipeline to prevent future occurrences."
+      },
+      {
+        "date": "November 10, 2025",
+        "title": "Scheduled Maintenance",
+        "status": "completed",
+        "duration": "2 hours",
+        "description": "Planned maintenance window for database migration and infrastructure upgrades. All services were restored on schedule."
+      }
+    ],
+    "uptimeDays": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    "operational": "Operational",
+    "degraded": "Degraded Performance",
+    "outage": "Major Outage",
+    "resolved": "Resolved",
+    "completed": "Completed",
+    "duration": "Duration:",
+    "uptime": "uptime"
   },
   "securityPage": {
     "badge": "Enterprise-Grade Security",
@@ -1852,7 +2336,13 @@
     "deleteAccount": "Delete Account",
     "deleteAccountDesc": "Permanently delete your account and all data",
     "deleteAccountConfirm": "Delete Account?",
-    "deleteAccountWarning": "This action cannot be undone. All your data will be permanently deleted."
+    "deleteAccountWarning": "This action cannot be undone. All your data will be permanently deleted.",
+    "tabs": [
+      "General",
+      "Notifications",
+      "Security",
+      "Danger Zone"
+    ]
   },
   "profilePage": {
     "title": "Profile",
@@ -1888,7 +2378,66 @@
     "upgradeToTitle": "Upgrade to",
     "upgradeAccessMessage": "You'll get access to all",
     "featuresImmediately": "features immediately.",
-    "confirmUpgrade": "Confirm Upgrade"
+    "confirmUpgrade": "Confirm Upgrade",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "period": "forever",
+        "features": [
+          "3 projects",
+          "Basic AI features",
+          "Community support",
+          "1GB storage"
+        ]
+      },
+      {
+        "name": "Pro",
+        "price": "$20",
+        "period": "per month",
+        "features": [
+          "Unlimited projects",
+          "Advanced AI",
+          "Priority support",
+          "10GB storage",
+          "Custom domains",
+          "Team collaboration"
+        ]
+      },
+      {
+        "name": "Team",
+        "price": "$49",
+        "period": "per month",
+        "features": [
+          "Everything in Pro",
+          "Unlimited members",
+          "Admin controls",
+          "100GB storage",
+          "SSO/SAML",
+          "Dedicated support"
+        ]
+      }
+    ],
+    "invoices": [
+      {
+        "date": "Nov 1, 2025",
+        "amount": "$0.00",
+        "status": "Paid",
+        "plan": "Free"
+      },
+      {
+        "date": "Oct 1, 2025",
+        "amount": "$0.00",
+        "status": "Paid",
+        "plan": "Free"
+      },
+      {
+        "date": "Sep 1, 2025",
+        "amount": "$0.00",
+        "status": "Paid",
+        "plan": "Free"
+      }
+    ]
   },
   "teamsPage": {
     "badge": "Team Collaboration",
@@ -1900,18 +2449,71 @@
     "teamWorkspace": "Team Workspace",
     "online": "online",
     "teamProjects": "Team Projects",
-    "activity": "Activity",
+    "activityTitle": "Activity",
+    "activity": [
+      {
+        "user": "Alex",
+        "action": "pushed to main",
+        "time": "2m ago"
+      },
+      {
+        "user": "Blake",
+        "action": "deployed to prod",
+        "time": "15m ago"
+      },
+      {
+        "user": "Casey",
+        "action": "reviewed PR #42",
+        "time": "1h ago"
+      }
+    ],
     "teamFeatures": "Team Features",
     "startFreeTeamTrial": "Start Free Team Trial",
     "pricing": {
       "title": "Teams Pricing",
       "subtitle": "Simple, transparent pricing for teams of all sizes.",
-      "billedAnnually": "Billed annually"
+      "billedAnnually": "Billed annually",
+      "features": [
+        "Everything in Core",
+        "$40/mo in usage credits included",
+        "50 Viewer seats",
+        "Centralized billing",
+        "Role-based access control",
+        "Private deployments",
+        "Priority support"
+      ],
+      "perUserMonth": "per user/month"
     },
     "cta": {
       "title": "Ready to build together?",
       "subtitle": "Get your team on AppNode and ship faster than ever."
-    }
+    },
+    "features": [
+      {
+        "title": "Real-time Collaboration",
+        "description": "Work on the same project simultaneously. See cursors, edits, and changes in real-time."
+      },
+      {
+        "title": "Role-based Access",
+        "description": "Control who can view, edit, and deploy with granular permissions."
+      },
+      {
+        "title": "Shared Workspaces",
+        "description": "Organize projects, templates, and resources in shared team spaces."
+      },
+      {
+        "title": "Built-in Chat",
+        "description": "Communicate with your team directly within the editor context."
+      },
+      {
+        "title": "Team Analytics",
+        "description": "Track productivity, deployment frequency, and project health."
+      },
+      {
+        "title": "Centralized Billing",
+        "description": "Manage all team subscriptions and usage from a single dashboard."
+      }
+    ]
   },
   "learnPage": {
     "badge": "Free Learning Platform",
@@ -3217,5 +3819,60 @@
     "bottomText": "If it exists on a blockchain, you can build it here —",
     "bottomHighlight": "easier, faster, and on a completely new level.",
     "ctaButton": "Start Building on Web3"
+  },
+  "signupPage": {
+    "roles": [
+      "Founder / Entrepreneur",
+      "Designer",
+      "Developer",
+      "Marketer",
+      "Product Manager",
+      "Other"
+    ],
+    "passwordsDoNotMatch": "Passwords do not match",
+    "passwordTooShort": "Password must be at least 6 characters",
+    "emailExists": "An account with this email already exists",
+    "selectAvatar": "Please select an avatar color",
+    "selectRole": "Please select your role"
+  },
+  "docsSearchModal": {
+    "noResults": "No results found",
+    "tryAgain": "Try searching for something else",
+    "navigate": "Navigate",
+    "select": "Select",
+    "close": "Close",
+    "searchPlaceholder": "Search documentation...",
+    "sections": {
+      "gettingStarted": "Getting Started",
+      "trustSafety": "Trust & Safety",
+      "legal": "Legal",
+      "security": "Security",
+      "tutorials": "Tutorials",
+      "teamsEnterprise": "Teams & Enterprise",
+      "changelog": "Changelog"
+    },
+    "items": {
+      "introduction": "Introduction",
+      "quickstartGuides": "Quickstart Guides",
+      "createWithAi": "Create with AI",
+      "buildFromScratch": "Build from Scratch",
+      "importFromGithub": "Import from GitHub",
+      "contentPolicy": "Content Policy",
+      "communityGuidelines": "Community Guidelines",
+      "termsOfService": "Terms of Service",
+      "privacyPolicy": "Privacy Policy",
+      "cookiePolicy": "Cookie Policy",
+      "securityOverview": "Security Overview",
+      "dataProtection": "Data Protection",
+      "vulnerabilityDisclosure": "Vulnerability Disclosure",
+      "buildingFirstApp": "Building Your First App",
+      "workingWithApis": "Working with APIs",
+      "databaseIntegration": "Database Integration",
+      "authentication": "Authentication",
+      "teamManagement": "Team Management",
+      "ssoSetup": "SSO Setup",
+      "enterpriseFeatures": "Enterprise Features",
+      "latestUpdates": "Latest Updates"
+    }
   }
 }

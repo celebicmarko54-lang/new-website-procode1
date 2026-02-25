@@ -15,70 +15,22 @@ interface ChatMessage {
 
 // Knowledge base for the AI agent
 const knowledgeBase = [
-  {
-    keywords: ['what is appnode', 'what\'s appnode', 'appnode'],
-    answer: 'AppNode is an AI-powered platform that lets you build web applications by simply describing what you want in natural language. No coding experience required!'
-  },
-  {
-    keywords: ['pricing', 'cost', 'price', 'how much', 'free plan', 'subscription'],
-    answer: 'We offer a generous free tier that lets you build and deploy apps at no cost. Our Pro plan starts at $19/month with unlimited projects, and Enterprise plans are available for larger teams. Visit our pricing page for full details!'
-  },
-  {
-    keywords: ['export', 'download code', 'get my code', 'own code'],
-    answer: 'Yes! You can export your complete project code at any time. You own everything you create on AppNode. Just go to your project settings and click "Export Code" to download the full source code.'
-  },
-  {
-    keywords: ['coding', 'programming', 'code experience', 'developer', 'beginner'],
-    answer: 'No coding experience is required! AppNode is designed for everyone - from complete beginners to experienced developers. Simply describe what you want to build in plain English, and our AI will generate the code for you.'
-  },
-  {
-    keywords: ['technology', 'tech stack', 'react', 'next.js', 'framework'],
-    answer: 'AppNode generates modern React/Next.js applications with Tailwind CSS styling. Your apps are built with production-ready code following best practices.'
-  },
-  {
-    keywords: ['deploy', 'publish', 'hosting', 'live', 'go live'],
-    answer: 'You can deploy your app with one click! AppNode provides free hosting for your projects. Once deployed, you\'ll get a shareable URL. You can also connect a custom domain.'
-  },
-  {
-    keywords: ['custom domain', 'domain', 'my domain', 'url'],
-    answer: 'Yes, you can connect your own custom domain to any AppNode project! Go to your project settings, click "Domains", and follow the instructions to add your domain. DNS changes typically take 24-48 hours to propagate.'
-  },
-  {
-    keywords: ['team', 'collaboration', 'share', 'invite', 'members'],
-    answer: 'AppNode supports team collaboration! You can invite team members to your projects, set different permission levels, and work together in real-time. Team features are available on Pro and Enterprise plans.'
-  },
-  {
-    keywords: ['api', 'integration', 'connect', 'third-party', 'database'],
-    answer: 'AppNode supports integrations with popular services and APIs. You can connect databases, authentication providers, payment systems, and more. Check our Integrations documentation for the full list.'
-  },
-  {
-    keywords: ['delete', 'cancel', 'remove account', 'close account'],
-    answer: 'You can delete your account from Settings > Account > Delete Account. Please note this action is irreversible and all your projects will be permanently removed. Consider exporting your code first.'
-  },
-  {
-    keywords: ['password', 'reset password', 'forgot password', 'login issue'],
-    answer: 'To reset your password, click "Forgot Password" on the login page and enter your email. You\'ll receive a reset link within a few minutes. Check your spam folder if you don\'t see it.'
-  },
-  {
-    keywords: ['bug', 'error', 'not working', 'broken', 'issue', 'problem'],
-    answer: 'I\'m sorry to hear you\'re experiencing issues. Could you describe what\'s happening in more detail? Common fixes include: clearing your browser cache, trying a different browser, or refreshing the page. If the issue persists, I can connect you with a live agent.'
-  },
-  {
-    keywords: ['refund', 'money back', 'charge', 'billing issue'],
-    answer: 'For billing inquiries or refund requests, please contact our billing team at contact@appnode.ai. We offer a 14-day money-back guarantee on all paid plans.'
-  },
-  {
-    keywords: ['hello', 'hi', 'hey', 'good morning', 'good afternoon'],
-    answer: 'Hello! 👋 Welcome to AppNode Support. How can I help you today? Feel free to ask me anything about our platform!'
-  },
-  {
-    keywords: ['thank', 'thanks', 'appreciate'],
-    answer: 'You\'re welcome! Is there anything else I can help you with? 😊'
-  },
-  {
-    keywords: ['bye', 'goodbye', 'see you', 'that\'s all'],
-    answer: 'Thank you for chatting with us! If you have any more questions in the future, don\'t hesitate to reach out. Have a great day! 👋'
-  }
+  { key: 'appnode', keywords: ['what is appnode', 'what\'s appnode', 'appnode', 'என்றால் என்ன'] },
+  { key: 'pricing', keywords: ['pricing', 'cost', 'price', 'how much', 'free plan', 'subscription', 'விலை', 'செலவு', 'கட்டணம்'] },
+  { key: 'export', keywords: ['export', 'download code', 'get my code', 'own code', 'ஏற்றுமதி', 'குறியீட்டை'] },
+  { key: 'coding', keywords: ['coding', 'programming', 'code experience', 'developer', 'beginner', 'குறியீட்டு', 'புரோகிராமிங்'] },
+  { key: 'techStack', keywords: ['technology', 'tech stack', 'react', 'next.js', 'framework', 'தொழில்நுட்பம்'] },
+  { key: 'deploy', keywords: ['deploy', 'publish', 'hosting', 'live', 'go live', 'நிலைநிறுத்த', 'ஹோஸ்டிங்'] },
+  { key: 'customDomain', keywords: ['custom domain', 'domain', 'my domain', 'url', 'டொமைன்'] },
+  { key: 'team', keywords: ['team', 'collaboration', 'share', 'invite', 'members', 'குழு', 'ஒத்துழைப்பு'] },
+  { key: 'api', keywords: ['api', 'integration', 'connect', 'third-party', 'database', 'ஒருங்கிணைப்பு', 'தரவுத்தளம்'] },
+  { key: 'deleteAccount', keywords: ['delete', 'cancel', 'remove account', 'close account', 'நீக்கு', 'கணக்கை நீக்கு'] },
+  { key: 'password', keywords: ['password', 'reset password', 'forgot password', 'login issue', 'கடவுச்சொல்', 'மீட்டமை'] },
+  { key: 'bug', keywords: ['bug', 'error', 'not working', 'broken', 'issue', 'problem', 'பிழை', 'சிக்கல்', 'வேலை செய்யவில்லை'] },
+  { key: 'billing', keywords: ['refund', 'money back', 'charge', 'billing issue', 'பணம் திரும்ப', 'பில்லிங்'] },
+  { key: 'greeting', keywords: ['hello', 'hi', 'hey', 'good morning', 'good afternoon', 'வணக்கம்', 'நல்ல காலை'] },
+  { key: 'thanks', keywords: ['thank', 'thanks', 'appreciate', 'நன்றி'] },
+  { key: 'goodbye', keywords: ['bye', 'goodbye', 'see you', 'that\'s all', 'விடை', 'போய்வருகிறேன்'] }
 ];
 
 export default function SupportPage() {
@@ -91,14 +43,7 @@ export default function SupportPage() {
   const searchPlaceholder = t('supportPage.searchPlaceholder');
   
   const [isChatOpen, setIsChatOpen] = useState(false);
-  const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
-    {
-      id: 1,
-      text: 'Hi! 👋 I\'m AppNode\'s support assistant. How can I help you today?',
-      sender: 'bot',
-      timestamp: new Date()
-    }
-  ]);
+  const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
   const [inputMessage, setInputMessage] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [waitingForLiveAgent, setWaitingForLiveAgent] = useState(false);
@@ -110,6 +55,18 @@ export default function SupportPage() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const searchRef = useRef<HTMLDivElement>(null);
+
+  // Initialize greeting message when language is ready
+  useEffect(() => {
+    if (mounted) {
+      setChatMessages([{
+        id: 1,
+        text: t('supportPage.botGreeting'),
+        sender: 'bot',
+        timestamp: new Date()
+      }]);
+    }
+  }, [mounted, language.code]);
 
   // Close search results when clicking outside
   useEffect(() => {
@@ -142,7 +99,7 @@ export default function SupportPage() {
     for (const item of knowledgeBase) {
       for (const keyword of item.keywords) {
         if (lowerMessage.includes(keyword.toLowerCase())) {
-          return item.answer;
+          return t(`supportPage.faqAnswers.${item.key}`);
         }
       }
     }
@@ -165,7 +122,7 @@ Date: ${new Date().toLocaleString()}
 
 --- Problem Description ---
 
-${userProblem || 'No additional description provided'}
+${userProblem || t('supportPage.chatUi.noDescription')}
 
 --- Conversation Transcript ---
 
@@ -182,7 +139,7 @@ ${transcript}
     
     const confirmMessage: ChatMessage = {
       id: chatMessages.length + 1,
-      text: `✅ Your conversation has been sent to our support team at contact@appnode.ai. We'll get back to you at ${email} as soon as possible!\n\nTypical response time: Within 24 hours (often much faster during business hours).`,
+      text: t('supportPage.chatUi.confirmationMsg'),
       sender: 'system',
       timestamp: new Date()
     };
@@ -215,7 +172,7 @@ ${transcript}
       if (wantsLiveAgent || waitingForLiveAgent) {
         const liveAgentMessage: ChatMessage = {
           id: chatMessages.length + 2,
-          text: 'I\'d be happy to connect you with our support team! 🙋‍♂️\n\nPlease provide your contact details below so we can send your conversation to a live agent who will respond via email.',
+          text: t('supportPage.liveAgentMessage') || 'I\'d be happy to connect you with our support team! 🙋‍♂️\n\nPlease provide your contact details below so we can send your conversation to a live agent who will respond via email.',
           sender: 'bot',
           timestamp: new Date()
         };
@@ -239,7 +196,7 @@ ${transcript}
         // No match found - offer to connect with live agent
         const fallbackMessage: ChatMessage = {
           id: chatMessages.length + 2,
-          text: 'I\'m not sure I have the right answer for that specific question. Would you like me to connect you with a live support agent who can help you better? Just say "live agent" or I can try to help with something else!',
+          text: t('supportPage.fallbackMessage') || 'I\'m not sure I have the right answer for that specific question. Would you like me to connect you with a live support agent who can help you better? Just say "live agent" or I can try to help with something else!',
           sender: 'bot',
           timestamp: new Date()
         };
@@ -256,10 +213,10 @@ ${transcript}
   };
 
   const quickActions = useMemo(() => [
-    { label: t('supportPage.quickActions.gettingStarted'), message: 'How do I get started with AppNode?' },
-    { label: t('supportPage.quickActions.pricing'), message: 'What are the pricing options?' },
-    { label: t('supportPage.quickActions.exportCode'), message: 'Can I export my code?' },
-    { label: t('supportPage.quickActions.liveAgent'), message: 'I\'d like to speak to a live agent' }
+    { label: t('supportPage.quickActions.gettingStarted'), message: t('supportPage.quickActionMessages.gettingStartedMsg') },
+    { label: t('supportPage.quickActions.pricing'), message: t('supportPage.quickActionMessages.pricingMsg') },
+    { label: t('supportPage.quickActions.exportCode'), message: t('supportPage.quickActionMessages.exportCodeMsg') },
+    { label: t('supportPage.quickActions.liveAgent'), message: t('supportPage.quickActionMessages.liveAgentMsg') }
   ], [t, language.code]);
 
   const categories = useMemo(() => [
@@ -382,7 +339,7 @@ ${transcript}
     const matchedKB = knowledgeBase.filter(
       (kb) =>
         kb.keywords.some((k) => k.toLowerCase().includes(q)) ||
-        kb.answer.toLowerCase().includes(q)
+        t(`supportPage.faqAnswers.${kb.key}`).toLowerCase().includes(q)
     );
 
     const total =
@@ -443,14 +400,14 @@ ${transcript}
                     <svg className="w-10 h-10 mx-auto mb-3 text-gray-300 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
-                    No results found for &ldquo;{searchQuery.trim()}&rdquo;
+                    {t('supportPage.searchNoResults')} &ldquo;{searchQuery.trim()}&rdquo;
                   </div>
                 ) : (
                   <>
                     {/* Matched Categories */}
                     {searchResults.matchedCategories.length > 0 && (
                       <div className="px-4 pt-4 pb-2">
-                        <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 px-2 mb-2">Categories</p>
+                        <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 px-2 mb-2">{t('supportPage.searchCategories')}</p>
                         {searchResults.matchedCategories.map((cat, i) => (
                           <div key={i} className="flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer transition-colors" onClick={() => { setSearchQuery(''); document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>
                             <div className="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center justify-center text-gray-500 dark:text-gray-400 shrink-0">
@@ -458,7 +415,7 @@ ${transcript}
                             </div>
                             <div>
                               <p className="font-medium text-gray-900 dark:text-white text-sm">{cat.name}</p>
-                              <p className="text-xs text-gray-500 dark:text-gray-400">{cat.description} &middot; {cat.articles} articles</p>
+                              <p className="text-xs text-gray-500 dark:text-gray-400">{cat.description} &middot; {cat.articles} {t('supportPage.articles')}</p>
                             </div>
                           </div>
                         ))}
@@ -468,7 +425,7 @@ ${transcript}
                     {/* Matched Articles */}
                     {searchResults.matchedArticles.length > 0 && (
                       <div className="px-4 pt-3 pb-2 border-t border-gray-100 dark:border-t-2 dark:border-gray-800 first:border-0">
-                        <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 px-2 mb-2">Articles</p>
+                        <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 px-2 mb-2">{t('supportPage.articles')}</p>
                         {searchResults.matchedArticles.map((art, i) => (
                           <div key={i} className="flex items-center justify-between px-3 py-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer transition-colors" onClick={() => { setSearchQuery(''); document.getElementById('articles')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>
                             <div className="flex items-center gap-3">
@@ -477,7 +434,7 @@ ${transcript}
                               </svg>
                               <span className="text-sm font-medium text-gray-900 dark:text-white">{art.title}</span>
                             </div>
-                            <span className="text-xs text-gray-400 dark:text-gray-500">{art.views} views</span>
+                            <span className="text-xs text-gray-400 dark:text-gray-500">{art.views} {t('supportPage.searchViews')}</span>
                           </div>
                         ))}
                       </div>
@@ -502,10 +459,10 @@ ${transcript}
                     {/* Matched Knowledge Base */}
                     {searchResults.matchedKB.length > 0 && (
                       <div className="px-4 pt-3 pb-3 border-t border-gray-100 dark:border-t-2 dark:border-gray-800">
-                        <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 px-2 mb-2">Help Topics</p>
+                        <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 px-2 mb-2">{t('supportPage.searchHelpTopics')}</p>
                         {searchResults.matchedKB.slice(0, 3).map((kb, i) => (
                           <div key={i} className="px-3 py-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer transition-colors" onClick={() => { setSearchQuery(''); setIsChatOpen(true); }}>
-                            <p className="text-sm text-gray-700 dark:text-gray-300 line-clamp-2">{kb.answer}</p>
+                            <p className="text-sm text-gray-700 dark:text-gray-300 line-clamp-2">{t(`supportPage.faqAnswers.${kb.key}`)}</p>
                           </div>
                         ))}
                       </div>
@@ -535,7 +492,7 @@ ${transcript}
                   {category.name}
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{category.description}</p>
-                <span className="text-xs text-gray-400 dark:text-gray-500">{category.articles} articles</span>
+                <span className="text-xs text-gray-400 dark:text-gray-500">{category.articles} {t('supportPage.articles')}</span>
               </div>
             ))}
           </div>
@@ -673,9 +630,9 @@ ${transcript}
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold">AppNode Support</h3>
+                  <h3 className="font-semibold">{t('supportPage.chatUi.chatTitle')}</h3>
                   <p className="text-xs text-gray-300">
-                    {waitingForLiveAgent ? '🟢 Live Agent Connected' : '🟢 Online'}
+                    {waitingForLiveAgent ? `🟢 ${t('supportPage.chatUi.liveAgentConnected')}` : `🟢 ${t('supportPage.chatUi.online')}`}
                   </p>
                 </div>
               </div>
@@ -734,7 +691,7 @@ ${transcript}
             {/* Quick Actions */}
             {chatMessages.length <= 2 && (
               <div className="px-4 py-2 border-t border-gray-200 dark:border-t-2 dark:border-gray-700 bg-white dark:bg-[#1A1A1A]">
-                <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">Quick questions:</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">{t('supportPage.chatUi.quickQuestions')}</p>
                 <div className="flex flex-wrap gap-2">
                   {quickActions.map((action, index) => (
                     <button
@@ -761,20 +718,20 @@ ${transcript}
                     type="text"
                     value={userName}
                     onChange={(e) => setUserName(e.target.value)}
-                    placeholder="Your name"
+                    placeholder={t('supportPage.chatUi.namePlaceholder')}
                     className="w-full px-4 py-2.5 bg-gray-100 dark:bg-[#1A1A1A] rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 border border-gray-200 dark:border-2 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
                   />
                   <input
                     type="email"
                     value={userEmail}
                     onChange={(e) => setUserEmail(e.target.value)}
-                    placeholder="Your email address"
+                    placeholder={t('supportPage.chatUi.emailPlaceholder')}
                     className="w-full px-4 py-2.5 bg-gray-100 dark:bg-[#1A1A1A] rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 border border-gray-200 dark:border-2 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
                   />
                   <textarea
                     value={userProblem}
                     onChange={(e) => setUserProblem(e.target.value)}
-                    placeholder="Describe your problem or question..."
+                    placeholder={t('supportPage.chatUi.problemPlaceholder')}
                     rows={3}
                     className="w-full px-4 py-2.5 bg-gray-100 dark:bg-[#1A1A1A] rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 border border-gray-200 dark:border-2 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 resize-none"
                   />
@@ -786,10 +743,10 @@ ${transcript}
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    Send to Support Team
+                    {t('supportPage.chatUi.sendToSupportTeam')}
                   </button>
                   <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
-                    Your conversation will be sent to contact@appnode.ai
+                    {t('supportPage.chatUi.conversationWillBeSent')}
                   </p>
                 </div>
               </div>
@@ -805,7 +762,7 @@ ${transcript}
                     value={inputMessage}
                     onChange={(e) => setInputMessage(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    placeholder="Type your message..."
+                    placeholder={t('supportPage.chatUi.chatPlaceholder')}
                     className="flex-1 px-4 py-3 bg-gray-100 dark:bg-[#1A1A1A] rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 border border-transparent dark:border-2 dark:border-gray-700"
                   />
                   <button

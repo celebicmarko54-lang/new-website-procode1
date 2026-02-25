@@ -3,11 +3,12 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useTranslation } from '@/context/LanguageContext';
+import { getTranslationData } from '@/translations/helpers';
 
 export default function StatusPage() {
   const { t, language} = useTranslation();
 
-  const services = [
+  const defaultServices = [
     { name: 'API', status: 'operational', uptime: '99.99%' },
     { name: 'Web Application', status: 'operational', uptime: '99.98%' },
     { name: 'Code Generation', status: 'operational', uptime: '99.95%' },
@@ -18,38 +19,31 @@ export default function StatusPage() {
     { name: 'Real-time Collaboration', status: 'operational', uptime: '99.90%' },
   ];
 
-  const incidents = [
-    {
-      date: 'November 25, 2025',
-      title: 'Elevated API Response Times',
-      status: 'resolved',
-      duration: '23 minutes',
-      description: 'Some users experienced slower than normal API response times. The issue was identified and resolved.',
-    },
-    {
-      date: 'November 18, 2025',
-      title: 'Deployment Service Degradation',
-      status: 'resolved',
-      duration: '45 minutes',
-      description: 'Deployments were delayed due to high traffic. Additional capacity was added to resolve the issue.',
-    },
-    {
-      date: 'November 5, 2025',
-      title: 'Scheduled Maintenance',
-      status: 'completed',
-      duration: '2 hours',
-      description: 'Planned infrastructure upgrade to improve performance and reliability.',
-    },
+  const defaultIncidents = [
+    { date: 'November 25, 2025', title: 'Elevated API Response Times', status: 'resolved', duration: '23 minutes', description: 'Some users experienced slower than normal API response times. The issue was identified and resolved.' },
+    { date: 'November 18, 2025', title: 'Deployment Service Degradation', status: 'resolved', duration: '45 minutes', description: 'Deployments were delayed due to high traffic. Additional capacity was added to resolve the issue.' },
+    { date: 'November 5, 2025', title: 'Scheduled Maintenance', status: 'completed', duration: '2 hours', description: 'Planned infrastructure upgrade to improve performance and reliability.' },
   ];
 
+  const defaultUptimeDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
+  const translatedServices = getTranslationData(language.code, 'statusPage.services') as typeof defaultServices;
+  const services = (translatedServices || defaultServices).map((s, i) => ({
+    ...s,
+    uptime: defaultServices[i]?.uptime || '99.99%',
+  }));
+
+  const incidents = (getTranslationData(language.code, 'statusPage.incidents') as typeof defaultIncidents) || defaultIncidents;
+  const uptimeDays = (getTranslationData(language.code, 'statusPage.uptimeDays') as string[]) || defaultUptimeDays;
+
   const uptimeData = [
-    { day: 'Mon', uptime: 100 },
-    { day: 'Tue', uptime: 100 },
-    { day: 'Wed', uptime: 99.9 },
-    { day: 'Thu', uptime: 100 },
-    { day: 'Fri', uptime: 100 },
-    { day: 'Sat', uptime: 100 },
-    { day: 'Sun', uptime: 100 },
+    { day: uptimeDays[0], uptime: 100 },
+    { day: uptimeDays[1], uptime: 100 },
+    { day: uptimeDays[2], uptime: 99.9 },
+    { day: uptimeDays[3], uptime: 100 },
+    { day: uptimeDays[4], uptime: 100 },
+    { day: uptimeDays[5], uptime: 100 },
+    { day: uptimeDays[6], uptime: 100 },
   ];
 
   const getStatusColor = (status: string) => {
@@ -63,10 +57,10 @@ export default function StatusPage() {
 
   const getStatusText = (status: string) => {
     switch (status) {
-      case 'operational': return 'Operational';
-      case 'degraded': return 'Degraded Performance';
-      case 'outage': return 'Major Outage';
-      default: return 'Unknown';
+      case 'operational': return t('statusPage.operational');
+      case 'degraded': return t('statusPage.degraded');
+      case 'outage': return t('statusPage.outage');
+      default: return status;
     }
   };
 
@@ -103,7 +97,7 @@ export default function StatusPage() {
                 <div key={day.day} className="flex-1">
                   <div 
                     className={`h-10 rounded ${day.uptime === 100 ? 'bg-green-500' : 'bg-green-400'}`}
-                    title={`${day.day}: ${day.uptime}% uptime`}
+                    title={`${day.day}: ${day.uptime}% ${t('statusPage.uptime')}`}
                   ></div>
                   <p className="text-xs text-gray-500 text-center mt-1">{day.day}</p>
                 </div>
@@ -128,7 +122,7 @@ export default function StatusPage() {
                   <span className="font-medium text-gray-900">{service.name}</span>
                 </div>
                 <div className="flex items-center gap-4">
-                  <span className="text-sm text-gray-500">{service.uptime} uptime</span>
+                  <span className="text-sm text-gray-500">{service.uptime} {t('statusPage.uptime')}</span>
                   <span className="text-sm text-green-600 font-medium">{getStatusText(service.status)}</span>
                 </div>
               </div>
@@ -152,11 +146,11 @@ export default function StatusPage() {
                     incident.status === 'completed' ? 'bg-blue-100 text-blue-700' :
                     'bg-yellow-100 text-yellow-700'
                   }`}>
-                    {incident.status.charAt(0).toUpperCase() + incident.status.slice(1)}
+                    {incident.status === 'resolved' ? t('statusPage.resolved') : incident.status === 'completed' ? t('statusPage.completed') : incident.status}
                   </span>
                 </div>
                 <p className="text-gray-600 text-sm mb-2">{incident.description}</p>
-                <p className="text-xs text-gray-400">Duration: {incident.duration}</p>
+                <p className="text-xs text-gray-400">{t('statusPage.duration')} {incident.duration}</p>
               </div>
             ))}
           </div>

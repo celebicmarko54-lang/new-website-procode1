@@ -37,12 +37,12 @@ export default function MobilePage() {
                     <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                   </svg>
                   <div className="text-left">
-                    <div className="text-[10px] text-gray-300 dark:text-gray-600 uppercase tracking-wide">Coming Soon on</div>
-                    <div className="text-lg font-semibold text-white dark:text-black -mt-1">App Store</div>
+                    <div className="text-[10px] text-gray-300 dark:text-gray-600 uppercase tracking-wide">{t('productMobile.comingSoonOn')}</div>
+                    <div className="text-lg font-semibold text-white dark:text-black -mt-1">{t('productMobile.appStore')}</div>
                   </div>
                 </div>
                 <div className="absolute -top-2 -right-2 px-2 py-0.5 bg-emerald-500 text-white text-xs font-bold rounded-full">
-                  SOON
+                  {t('productMobile.soonBadge')}
                 </div>
               </div>
               
@@ -56,12 +56,12 @@ export default function MobilePage() {
                     <path fill="#34A853" d="M3.609 22.186L14.282 12l2.545 2.917-11.11 6.378a.996.996 0 0 1-.108.891z"/>
                   </svg>
                   <div className="text-left">
-                    <div className="text-[10px] text-gray-300 dark:text-gray-600 uppercase tracking-wide">Coming Soon on</div>
-                    <div className="text-lg font-semibold text-white dark:text-black -mt-1">Google Play</div>
+                    <div className="text-[10px] text-gray-300 dark:text-gray-600 uppercase tracking-wide">{t('productMobile.comingSoonOn')}</div>
+                    <div className="text-lg font-semibold text-white dark:text-black -mt-1">{t('productMobile.googlePlay')}</div>
                   </div>
                 </div>
                 <div className="absolute -top-2 -right-2 px-2 py-0.5 bg-emerald-500 text-white text-xs font-bold rounded-full">
-                  SOON
+                  {t('productMobile.soonBadge')}
                 </div>
               </div>
             </div>
@@ -71,9 +71,9 @@ export default function MobilePage() {
         {/* Coming Soon Explanation */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="bg-white dark:bg-[#1A1A1A] rounded-2xl border border-gray-200 dark:border-2 dark:border-gray-800 p-8 text-center">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Mobile Apps Coming Soon</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{t('productMobile.comingSoonTitle')}</h2>
             <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-              Our mobile apps are currently in development. In the meantime, our users can access AppNode from any device - desktop, tablet, or phone - through the browser and instantly preview how their applications look on different screen sizes.
+              {t('productMobile.comingSoonDescription')}
             </p>
             
             {/* Device Preview Mockups */}
@@ -97,7 +97,7 @@ export default function MobilePage() {
                     </div>
                   </div>
                 </div>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mt-3 font-medium">Tablet Preview</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-3 font-medium">{t('productMobile.tabletPreview')}</p>
               </div>
               
               {/* Phone Mockup */}
@@ -119,7 +119,7 @@ export default function MobilePage() {
                     </div>
                   </div>
                 </div>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mt-3 font-medium">Phone Preview</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-3 font-medium">{t('productMobile.phonePreview')}</p>
               </div>
             </div>
           </div>
@@ -208,7 +208,7 @@ export default function MobilePage() {
           </p>
           <div className="flex items-center justify-center gap-4">
             <Link href="/signup" className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 text-white font-medium rounded-lg transition-colors">
-              Try AppNode Now
+              {t('productMobile.tryAppNodeNow')}
             </Link>
           </div>
         </section>

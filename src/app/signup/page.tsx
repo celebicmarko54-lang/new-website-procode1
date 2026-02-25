@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useTranslation } from '@/context/LanguageContext';
+import { getTranslationData } from '@/translations/helpers';
 
 export default function SignupPage() {
   const router = useRouter();
@@ -33,13 +34,15 @@ export default function SignupPage() {
     'from-rose-400 to-red-500',
   ];
 
+  const roleLabels = (getTranslationData(language.code, 'signupPage.roles') as string[]) || ['Founder / Entrepreneur', 'Designer', 'Developer', 'Marketer', 'Product Manager', 'Other'];
+
   const roles = [
-    { id: 'founder', label: 'Founder / Entrepreneur', icon: '🚀' },
-    { id: 'designer', label: 'Designer', icon: '🎨' },
-    { id: 'developer', label: 'Developer', icon: '💻' },
-    { id: 'marketer', label: 'Marketer', icon: '📈' },
-    { id: 'product', label: 'Product Manager', icon: '📋' },
-    { id: 'other', label: 'Other', icon: '✨' },
+    { id: 'founder', label: roleLabels[0], icon: '🚀' },
+    { id: 'designer', label: roleLabels[1], icon: '🎨' },
+    { id: 'developer', label: roleLabels[2], icon: '💻' },
+    { id: 'marketer', label: roleLabels[3], icon: '📈' },
+    { id: 'product', label: roleLabels[4], icon: '📋' },
+    { id: 'other', label: roleLabels[5], icon: '✨' },
   ];
 
   const handleStep1Submit = (e: React.FormEvent) => {
@@ -47,19 +50,19 @@ export default function SignupPage() {
     setError('');
 
     if (formData.password !== formData.confirmPassword) {
-      setError('Passwords do not match');
+      setError(t('signupPage.passwordsDoNotMatch'));
       return;
     }
 
     if (formData.password.length < 6) {
-      setError('Password must be at least 6 characters');
+      setError(t('signupPage.passwordTooShort'));
       return;
     }
 
     // Check if email already exists
     const users = JSON.parse(localStorage.getItem('AppNode_users') || '[]');
     if (users.some((u: { email: string }) => u.email === formData.email)) {
-      setError('An account with this email already exists');
+      setError(t('signupPage.emailExists'));
       return;
     }
 
@@ -69,7 +72,7 @@ export default function SignupPage() {
   const handleStep2Submit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.avatar) {
-      setError('Please select an avatar color');
+      setError(t('signupPage.selectAvatar'));
       return;
     }
     setStep(3);
@@ -78,7 +81,7 @@ export default function SignupPage() {
   const handleFinalSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.role) {
-      setError('Please select your role');
+      setError(t('signupPage.selectRole'));
       return;
     }
 

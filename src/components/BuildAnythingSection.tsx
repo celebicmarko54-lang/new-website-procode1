@@ -2,9 +2,29 @@
 
 import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useTranslation } from '@/context/LanguageContext';
 
 // Category translation map
 const categoryTranslations: Record<string, Record<string, string>> = {
+  sw: {
+    title: 'Jenga Programu Yoyote Bila Vikwazo',
+    subtitle: 'Anza kujenga. Anza kupata mapato. Leo.',
+    saasplatform: 'Jukwaa la SaaS',
+    gamingportal: 'Lango la Michezo',
+    mapsnavigation: 'Ramani na Urambazaji',
+    fashionstore: 'Duka la Mitindo',
+    stylecollection: 'Mkusanyiko wa Mitindo',
+    beautyproducts: 'Bidhaa za Urembo',
+    fitnesstracker: 'Kifuatiliaji cha Mazoezi',
+    luxuryfragrance: 'Manukato ya Kifahari',
+    beautystore: 'Duka la Urembo',
+    streamingplatform: 'Jukwaa la Utiririshaji',
+    gaminggearstore: 'Duka la Vifaa vya Michezo',
+    gamingstore: 'Duka la Michezo',
+    synthesizer: 'Synthesizer',
+    projectroadmap: 'Ramani ya Mradi',
+    analyticsdashboard: 'Dashibodi ya Uchambuzi'
+  },
   ko: {
     title: '제한 없이 모든 애플리케이션 빌드',
     subtitle: '빌드를 시작하세요. 수익을 시작하세요. 오늘.',
@@ -23,6 +43,25 @@ const categoryTranslations: Record<string, Record<string, string>> = {
     synthesizer: '신디사이저',
     projectroadmap: '프로젝트 로드맵',
     analyticsdashboard: '분석 대시보드'
+  },
+  ta: {
+    title: 'வரம்புகள் இல்லாமல் எந்த பயன்பாட்டையும் உருவாக்குங்கள்',
+    subtitle: 'உருவாக்கத் தொடங்குங்கள். சம்பாதிக்கத் தொடங்குங்கள். இன்றே.',
+    saasplatform: 'SaaS தளம்',
+    gamingportal: 'கேமிங் போர்டல்',
+    mapsnavigation: 'வரைபடங்கள் & வழிசெலுத்தல்',
+    fashionstore: 'ஃபேஷன் கடை',
+    stylecollection: 'பாணி தொகுப்பு',
+    beautyproducts: 'அழகு பொருட்கள்',
+    fitnesstracker: 'ஃபிட்னஸ் டிராக்கர்',
+    luxuryfragrance: 'சொகுசு நறுமணம்',
+    beautystore: 'அழகு கடை',
+    streamingplatform: 'ஸ்ட்ரீமிங் தளம்',
+    gaminggearstore: 'கேமிங் கியர் கடை',
+    gamingstore: 'கேமிங் கடை',
+    synthesizer: 'சின்தசைசர்',
+    projectroadmap: 'திட்ட வரைபடம்',
+    analyticsdashboard: 'பகுப்பாய்வு டாஷ்போர்டு'
   },
   en: {
     title: 'Build Any Application Without Limits',
@@ -148,27 +187,8 @@ const categories: CategoryCard[] = [
 export default function BuildAnythingSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
-  
-  // Read language directly from localStorage for client-side rendering
-  const [langCode, setLangCode] = useState('en');
-  
-  useEffect(() => {
-    const stored = localStorage.getItem('appnode_language');
-    if (stored) {
-      setLangCode(stored);
-    }
-    
-    // Also listen for storage changes (when user switches language)
-    const handleStorage = () => {
-      const updated = localStorage.getItem('appnode_language');
-      if (updated) {
-        setLangCode(updated);
-      }
-    };
-    
-    window.addEventListener('storage', handleStorage);
-    return () => window.removeEventListener('storage', handleStorage);
-  }, []);
+  const { language } = useTranslation();
+  const langCode = language.code;
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;

@@ -46,6 +46,8 @@ export default function RootLayout({
             __html: `
               (function() {
                 try {
+                  // Define global language object for Turbopack compatibility
+                  window.language = { code: localStorage.getItem('appnode_language') || 'en' };
                   var theme = localStorage.getItem('theme');
                   if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                     document.documentElement.classList.add('dark');

@@ -87,7 +87,7 @@ export default function MobileAppsPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
                 {t('useCasesMobileApps.badge')}
-                <span className="px-3 py-1 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full text-sm font-bold animate-pulse">Coming Soon</span>
+                <span className="px-3 py-1 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full text-sm font-bold animate-pulse">{t('useCasesMobileApps.comingSoon')}</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-gray-900 dark:text-white">
                 {t('useCasesMobileApps.titleStart')}{' '}
@@ -138,8 +138,8 @@ export default function MobileAppsPage() {
                       {/* Hero card */}
                       <div className="h-36 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl mb-5 flex items-end p-4">
                         <div className="text-white">
-                          <div className="text-xs opacity-80 mb-1">Welcome back</div>
-                          <div className="font-semibold">Dashboard</div>
+                          <div className="text-xs opacity-80 mb-1">{t('useCasesMobileApps.welcomeBack')}</div>
+                          <div className="font-semibold">{t('useCasesMobileApps.dashboard')}</div>
                         </div>
                       </div>
                       
@@ -176,7 +176,7 @@ export default function MobileAppsPage() {
                       
                       {/* Bottom CTA */}
                       <div className="h-14 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center text-white font-medium text-sm">
-                        Get Started
+                        {t('useCasesMobileApps.getStarted')}
                       </div>
                     </div>
                   </div>
@@ -190,7 +190,7 @@ export default function MobileAppsPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <span className="text-xs font-medium text-gray-700 dark:text-gray-300">iOS Ready</span>
+                    <span className="text-xs font-medium text-gray-700 dark:text-gray-300">{t('useCasesMobileApps.iosReady')}</span>
                   </div>
                 </div>
                 
@@ -201,7 +201,7 @@ export default function MobileAppsPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <span className="text-xs font-medium text-gray-700 dark:text-gray-300">Android Ready</span>
+                    <span className="text-xs font-medium text-gray-700 dark:text-gray-300">{t('useCasesMobileApps.androidReady')}</span>
                   </div>
                 </div>
               </div>
@@ -214,7 +214,7 @@ export default function MobileAppsPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">{t('useCasesMobileApps.featuresTitle')}</h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Everything you need to create professional mobile applications
+              {t('useCasesMobileApps.featuresSubtitle')}
             </p>
           </div>
           

@@ -1,0 +1,274 @@
+const fs = require('fs');
+const path = require('path');
+
+const sw = JSON.parse(fs.readFileSync(path.join(__dirname, 'src/translations/sw.json'), 'utf8'));
+
+function setByPath(obj, pathStr, value) {
+  const keys = pathStr.split('.');
+  let current = obj;
+  for (let i = 0; i < keys.length - 1; i++) {
+    if (!current[keys[i]]) current[keys[i]] = {};
+    current = current[keys[i]];
+  }
+  current[keys[keys.length - 1]] = value;
+}
+
+const t = {};
+
+// === PRICING (remaining) ===
+t["pricing.freeTier.features.0"] = "Uzalishaji 2 wa programu bure";
+t["pricing.freeTier.features.1"] = "Ufikiaji kamili wa violezo vyote";
+t["pricing.freeTier.features.2"] = "Hakiki ya moja kwa moja na usambazaji";
+t["pricing.freeTier.features.3"] = "Hamisha kwenda GitHub";
+t["pricing.free.features.0"] = "Miradi 3";
+t["pricing.free.features.1"] = "Rekodi 1,000";
+t["pricing.free.features.2"] = "Msaada wa jumuiya";
+t["pricing.free.features.3"] = "Uchambuzi wa msingi";
+t["pricing.pro.features.0"] = "Miradi isiyo na kikomo";
+t["pricing.pro.features.1"] = "Rekodi 100,000";
+t["pricing.pro.features.2"] = "Msaada wa kipaumbele";
+t["pricing.pro.features.3"] = "Vikoa maalum";
+t["pricing.pro.features.4"] = "Uchambuzi wa hali ya juu";
+t["pricing.pro.features.5"] = "Ushirikiano wa timu";
+t["pricing.enterprise.features.0"] = "Kila kitu katika Pro";
+t["pricing.enterprise.features.1"] = "Rekodi zisizo na kikomo";
+t["pricing.enterprise.features.2"] = "SSO na SAML";
+t["pricing.enterprise.features.3"] = "Dhamana ya SLA";
+t["pricing.enterprise.features.4"] = "Msaada maalum";
+t["pricing.enterprise.features.5"] = "Chaguo la ndani ya shirika";
+
+// === ENTERPRISE PAGE (remaining) ===
+t["enterprisePage.form.namePlaceholder"] = "John Smith";
+t["enterprisePage.form.emailPlaceholder"] = "john@kampuni.com";
+t["enterprisePage.form.companyPlaceholder"] = "Kampuni Yako";
+
+// === PRIVACY PAGE ===
+t["privacyPage.lastUpdated"] = "Ilisasishwa mwisho: Desemba 1, 2025";
+t["privacyPage.intro.p1"] = "AppNode Inc. (\"AppNode\", \"sisi\", \"yetu\") imejitolea kulinda faragha yako. Sera hii ya Faragha inaelezea jinsi tunavyokusanya, kutumia, kushiriki, na kulinda taarifa zako unapotumia jukwaa letu.";
+t["privacyPage.intro.p2"] = "Kwa kutumia Huduma, unakubali mazoea yaliyoelezwa katika Sera hii ya Faragha. Ikiwa hukubali, tafadhali usitumie Huduma zetu.";
+t["privacyPage.intro.p3"] = "Tunaweza kusasisha Sera hii ya Faragha mara kwa mara. Tutakujulisha mabadiliko muhimu kwa kuchapisha sera iliyosasishwa kwenye tovuti yetu.";
+t["privacyPage.section1.title"] = "1. Taarifa Tunazokusanya";
+t["privacyPage.section1.s1Title"] = "1.1 Taarifa Unazotoa Moja kwa Moja";
+t["privacyPage.section1.s1Items.0"] = "Data ya akaunti: jina, barua pepe, nenosiri, jina la mtumiaji";
+t["privacyPage.section1.s1Items.1"] = "Data ya wasifu: avatar, wasifu mfupi, mapendekezo, mipangilio";
+t["privacyPage.section1.s1Items.2"] = "Data ya malipo: maelezo ya malipo (yanashughulikiwa kwa usalama kupitia watoa huduma wa watu wengine kama Stripe - hatuhifadhi nambari kamili za kadi)";
+t["privacyPage.section1.s1Items.3"] = "Maudhui ya Mtumiaji: maagizo, ingizo, vipande vya msimbo, faili zilizopakiwa, matokeo yaliyozalishwa unayohifadhi au kushiriki";
+t["privacyPage.section1.s1Items.4"] = "Mawasiliano: tiketi za msaada, barua pepe, maoni, ujumbe wa mazungumzo";
+t["privacyPage.section1.s2Title"] = "1.2 Taarifa Zinazokusanywa Kiotomatiki";
+t["privacyPage.section1.s2Items.0"] = "Data ya kifaa na kiufundi: anwani ya IP, aina/toleo la kivinjari, mfumo wa uendeshaji, kitambulisho cha kifaa, ubora wa skrini";
+t["privacyPage.section1.s2Items.1"] = "Data ya matumizi: kurasa zilizotembelewa, vipengele vilivyotumika, muda uliotumika, maagizo yaliyowasilishwa (metadata), kumbukumbu za hitilafu";
+t["privacyPage.section1.s2Items.2"] = "Kuki na ufuatiliaji: vitambulisho vya kikao, uchambuzi (Google Analytics, Mixpanel au sawa), vipimo vya utendaji";
+t["privacyPage.section1.s3Title"] = "1.3 Data Maalum ya AI (Ingizo na Matokeo)";
+t["privacyPage.section1.s3Items.0"] = "Maagizo/Ingizo unaloleta kuzalisha msimbo, programu, mtiririko wa kazi";
+t["privacyPage.section1.s3Items.1"] = "Matokeo Yaliyozalishwa (msimbo, maandishi, n.k.)";
+t["privacyPage.section1.s3Items.2"] = "Maoni/kiwango kwenye Matokeo (vidole juu/chini, maoni)";
+t["privacyPage.section1.s3Note"] = "Hatukusanyi kimakusudi data nyeti ya kibinafsi (afya, rangi, dini, n.k.) isipokuwa uijumuishe kwa hiari kwenye ingizo lako.";
+t["privacyPage.section2.title"] = "2. Jinsi Tunavyotumia Taarifa Zako";
+t["privacyPage.section2.intro"] = "Tunatumia taarifa zako:";
+t["privacyPage.section2.items.0"] = "Kutoa, kuendesha, kudumisha, na kuboresha Huduma (ikiwemo kuzalisha Matokeo ya AI)";
+t["privacyPage.section2.items.1"] = "Kushughulikia usajili, malipo, na ankara";
+t["privacyPage.section2.items.2"] = "Kuthibitisha akaunti na kuzuia ulaghai/matumizi mabaya";
+t["privacyPage.section2.items.3"] = "Kutuma mawasiliano yanayohusiana na huduma (masasisho, tahadhari za usalama, majibu ya msaada)";
+t["privacyPage.section2.items.4"] = "Kuchambua mwenendo wa matumizi kuboresha modeli za AI (zisizotambuliwa/zilizojumlishwa pekee - tazama Sehemu ya 3)";
+t["privacyPage.section2.items.5"] = "Kubinafsisha uzoefu (k.m., violezo vilivyopendekezwa)";
+t["privacyPage.section2.items.6"] = "Kutii wajibu wa kisheria, kutekeleza Masharti, kulinda haki/usalama";
+t["privacyPage.section2.marketing"] = "Uuzaji: Tunaweza kutuma barua pepe za uendelezaji kuhusu vipengele vya AppNode ukichagua kujiunga (unaweza kujiondoa wakati wowote).";
+t["privacyPage.section3.title"] = "3. Mafunzo na Uboreshaji wa Modeli ya AI (Sehemu Muhimu)";
+t["privacyPage.section3.intro"] = "Kwa chaguo-msingi, hatutumii maagizo yako binafsi, ingizo, matokeo, au Maudhui ya Mtumiaji kufundisha au kurekebisha modeli zetu za msingi.";
+t["privacyPage.section3.items.0"] = "Chaguo la Kujiunga kwa Mafunzo: Unaweza kuwezesha \"Ruhusu data yangu kuboresha AI ya AppNode\" katika Mipangilio → Faragha. Ikiwezeshwa: data zisizotambuliwa/zilizojumlishwa zinaweza kutumika.";
+t["privacyPage.section3.items.1"] = "Kutojiunga / Chaguo-msingi: Ikiwa haijawezeshwa (au ukiizima), data yako haitumiki kamwe kwa mafunzo ya modeli. Tunaweza bado kutumia takwimu zilizojumlishwa.";
+t["privacyPage.section3.items.2"] = "Hatuuzi maagizo yako, matokeo, au data ya kibinafsi kwa watu wengine kwa mafunzo yao.";
+t["privacyPage.section3.items.3"] = "Ukichagua kujiunga, unaweza kubadili maoni yako wakati wowote - data iliyotumika hapo awali haiwezi kuondolewa kwa nyuma kutoka kwa modeli.";
+t["privacyPage.section3.note"] = "Hii inalingana na mazoea bora (k.m., mtindo wa kuchagua kujiunga wa Cursor/Anthropic) na kusaidia kutii mapunguzo ya madhumuni ya GDPR.";
+t["privacyPage.section4.title"] = "4. Kushiriki na Ufichuzi wa Taarifa";
+t["privacyPage.section4.noSell"] = "Hatuuzi taarifa zako za kibinafsi.";
+t["privacyPage.section4.intro"] = "Tunashiriki data tu:";
+t["privacyPage.section4.items.0"] = "Na watoa huduma (wasindikaji): uhifadhi wa wingu (AWS/GCP), wasindikaji wa malipo, zana za uchambuzi - wamefungwa na DPA kali.";
+t["privacyPage.section4.items.1"] = "Kwa sababu za kisheria: amri za mahakama, kulinda haki/usalama (k.m., ugundaji wa matumizi mabaya)";
+t["privacyPage.section4.items.2"] = "Katika uhamisho wa biashara: muunganiko, ununuzi, uuzaji wa mali (data yako inahamishwa chini ya ulinzi sawa)";
+t["privacyPage.section4.items.3"] = "Kwa idhini yako au kwa maelekezo yako (k.m., kushiriki msimbo uliozalishwa kupitia kiungo cha umma)";
+t["privacyPage.section4.international"] = "Uhamisho wa kimataifa: Data kimsingi huhifadhiwa katika Marekani. Kwa watumiaji wa EU/EEA/UK: tunategemea Vifungu vya Mkataba vya Kawaida.";
+t["privacyPage.section5.title"] = "5. Uhifadhi wa Data";
+t["privacyPage.section5.intro"] = "Tunahifadhi data yako kwa muda wa lazima tu:";
+t["privacyPage.section5.items.0"] = "Akaunti hai → bila kikomo (hadi ombi la kufuta)";
+t["privacyPage.section5.items.1"] = "Maagizo/Matokeo: yanahifadhiwa kwa ufikiaji wako (isipokuwa yakifutwa); takwimu zilizojumlishwa zisizotambuliwa kwa muda mrefu kwa uchambuzi";
+t["privacyPage.section5.items.2"] = "Kumbukumbu/data ya kiufundi: hadi miezi 12-24 kwa usalama/kuzuia ulaghai";
+t["privacyPage.section5.items.3"] = "Baada ya kufuta akaunti: data hufutwa ndani ya siku 30 (isipokuwa nakala rudufu za kisheria au takwimu zilizojumlishwa zisizotambuliwa)";
+t["privacyPage.section5.note"] = "Unaweza kuomba kufutwa wakati wowote (tazama Haki hapa chini).";
+t["privacyPage.section6.title"] = "6. Haki Zako za Faragha";
+t["privacyPage.section6.intro"] = "Kutegemea eneo lako (GDPR kwa EU/EEA/UK, CCPA/CPRA kwa California, n.k.):";
+t["privacyPage.section6.items.0"] = "Ufikiaji: Ona data tunayohifadhi";
+t["privacyPage.section6.items.1"] = "Marekebisho: Sasisha data isiyo sahihi";
+t["privacyPage.section6.items.2"] = "Kufutwa: Futa data yako (inategemea ubaguzi wa kisheria)";
+t["privacyPage.section6.items.3"] = "Kukataa usindikaji/uuzaji: Ikiwemo kukataa mafunzo";
+t["privacyPage.section6.items.4"] = "Zuia usindikaji au pinga";
+t["privacyPage.section6.items.5"] = "Uhamishaji: Pokea data katika muundo uliopangwa";
+t["privacyPage.section6.items.6"] = "Ondoa idhini wakati wowote (haiathiri usindikaji wa awali)";
+t["privacyPage.section6.california"] = "Kwa wakazi wa California: Kiungo cha \"Usiuze au Kushiriki Taarifa Zangu za Kibinafsi\" kwenye tovuti yetu (ingawa hatuuzi).";
+t["privacyPage.section6.submit"] = "Wasilisha maombi: privacy@appnode.ai";
+t["privacyPage.section6.response"] = "Tunajibu ndani ya siku 30-45 (inaweza kurefushwa kwa sheria). Uthibitishaji unahitajika. Hakuna ubaguzi kwa kutumia haki.";
+t["privacyPage.section7.title"] = "7. Usalama wa Data";
+t["privacyPage.section7.p1"] = "Tunatumia hatua za kiwango cha tasnia: usimbaji (TLS 1.3, AES-256 wakati wa kupumzika), vidhibiti vya ufikiaji, ukaguzi wa mara kwa mara, upimaji wa kupenya.";
+t["privacyPage.section7.p2"] = "Hata hivyo, hakuna mfumo ulio salama 100%. Hatuwezi kudhamini usalama kamili - unatumia Huduma kwa hatari yako mwenyewe.";
+t["privacyPage.section7.p3"] = "Kwa kisa cha ukiukaji: tunawajulisha watumiaji walioathirika na mamlaka kama inavyotakiwa na sheria (k.m., GDPR masaa 72).";
+t["privacyPage.section8.title"] = "8. Kuki na Teknolojia za Ufuatiliaji";
+t["privacyPage.section8.content"] = "Tunatumia kuki muhimu (kwa utendaji), uchambuzi, na kuki za utendaji. Unaweza kusimamia kupitia mipangilio ya kivinjari au bango letu la idhini la kuki.";
+t["privacyPage.section9.title"] = "9. Faragha ya Watoto";
+t["privacyPage.section9.content"] = "Huduma hazielekezwi kwa watoto chini ya miaka 16 (au 13 katika baadhi ya maeneo). Hatukusanyi kimakusudi data kutoka kwa watoto.";
+t["privacyPage.section10.title"] = "10. Viungo na Ujumuishaji wa Watu Wengine";
+t["privacyPage.section10.content"] = "Huduma zinaweza kuunganisha na watu wengine (k.m., ujumuishaji wa GitHub). Hatuhusiki na mazoea yao ya faragha.";
+t["privacyPage.section11.title"] = "11. Wasiliana Nasi";
+t["privacyPage.section11.company"] = "AppNode Inc.";
+t["privacyPage.section11.privacyEmail"] = "Barua pepe: privacy@appnode.ai (kwa maombi ya faragha)";
+t["privacyPage.section11.generalEmail"] = "Kwa jumla: contact@appnode.ai";
+
+// === TERMS PAGE ===
+t["termsPage.lastUpdated"] = "Ilisasishwa mwisho: Desemba 1, 2025";
+t["termsPage.intro.p1"] = "Masharti haya ya Huduma (\"Masharti\") yanasimamia ufikiaji wako na matumizi ya tovuti ya AppNode, programu, API, na huduma zote zinazohusiana (\"Huduma\").";
+t["termsPage.intro.p3"] = "Masharti haya yanaunda makubaliano ya kisheria yanayofunga kati yako na AppNode. Ikiwa unatumia Huduma kwa niaba ya shirika, unadai na kudhamini kuwa una mamlaka ya kufunga shirika hilo.";
+t["termsPage.intro.p4"] = "Tunahifadhi haki ya kurekebisha Masharti haya wakati wowote, kama ilivyoelezwa katika Sehemu ya 20 hapa chini. Matumizi yako endelevu ya Huduma baada ya mabadiliko yanaashiria kukubali kwako.";
+t["termsPage.section1.title"] = "1. Ustahikiaji na Vikwazo";
+t["termsPage.section1.intro"] = "Ili kutumia Huduma, lazima:";
+t["termsPage.section1.items.0"] = "Uwe na umri wa miaka 18 au zaidi au umri wa kukomaa kisheria katika eneo lako, popote iwe kubwa zaidi.";
+t["termsPage.section1.items.1"] = "Usiwe katika, au mkazi au raia wa, nchi au eneo lolote linalofuatwa na vikwazo kamili vya Marekani au marufuku.";
+t["termsPage.section1.items.2"] = "Usiwe kwenye orodha yoyote ya serikali ya Marekani ya wahusika waliokatazwa au waliozuiwa.";
+t["termsPage.section1.minor"] = "Ikiwa una umri chini ya miaka 18, unaweza kutumia Huduma chini ya usimamizi wa moja kwa moja wa mzazi au mlezi.";
+t["termsPage.section1.suspended"] = "Unakubali kutotumia Huduma ikiwa umesimamishwa au kuondolewa hapo awali.";
+t["termsPage.section2.title"] = "2. Usajili wa Akaunti, Usalama, na Wajibu";
+t["termsPage.section2.intro"] = "Ili kufikia vipengele fulani vya Huduma, lazima uunde akaunti (\"Akaunti\"). Unakubali:";
+t["termsPage.section2.items.0"] = "Kutoa taarifa sahihi, za sasa, na kamili wakati wa usajili na kuzihifadhi zilizosasishwa.";
+t["termsPage.section2.items.1"] = "Kudumisha usiri mkali wa stakabadhi za Akaunti yako (k.m., jina la mtumiaji, nenosiri, funguo za API) na kutoshiriki na mtu yeyote.";
+t["termsPage.section2.items.2"] = "Kuwa na wajibu peke yako kwa shughuli zote, vitendo, na mapungufu yanayotokea chini ya Akaunti yako.";
+t["termsPage.section2.items.3"] = "Kutuarifu mara moja kwa maandishi kwenye support@appnode.ai kuhusu matumizi yoyote yasiyoidhinishwa.";
+t["termsPage.section2.items.4"] = "Kutumia nywila zenye nguvu, za kipekee na kuwezesha vipengele vyote vinavyopatikana vya usalama (k.m., uthibitishaji wa hatua mbili).";
+t["termsPage.section2.reserve"] = "Tunahifadhi haki ya kukataa usajili, kusimamisha, au kufunga Akaunti yako wakati wowote, na au bila notisi.";
+t["termsPage.section2.acknowledge"] = "Unakubali kuwa hatuhusiki na hasara au uharibifu wowote unaotokana na kushindwa kwako kutii masharti haya ya usalama.";
+t["termsPage.section3.title"] = "3. Maelezo ya Huduma";
+t["termsPage.section3.intro"] = "Huduma zinajumuisha zana zinazotumia AI zinazowawezeshwa watumiaji kuzalisha, kurekebisha, na kusambaza programu za wavuti, msimbo, na mtiririko wa kazi.";
+t["termsPage.section3.items.0"] = "Uzalishaji na uhariri wa msimbo unaotumia AI.";
+t["termsPage.section3.items.1"] = "Uhifadhi, usambazaji, na upanuzi wa programu.";
+t["termsPage.section3.items.2"] = "Zana za ushirikiano na kushiriki.";
+t["termsPage.section3.items.3"] = "API, ujumuishaji na huduma za watu wengine, na programu-jalizi.";
+t["termsPage.section3.items.4"] = "Violezo, maktaba, na mifumo vilivyojengwa tayari.";
+t["termsPage.section3.items.5"] = "Zana za uchambuzi, uondoaji wa hitilafu, na ufuatiliaji wa utendaji.";
+t["termsPage.section3.items.6"] = "Viwango vya usajili wa malipo vyenye vipengele vilivyoimarishwa (k.m., usindikaji wa kipaumbele, vikomo vya juu vya matumizi).";
+t["termsPage.section3.items.7"] = "Malipo kulingana na matumizi kwa rasilimali za hesabu, simu za API, au hifadhi.";
+t["termsPage.section3.evolve"] = "Huduma zinaweza kubadilika baada ya muda, na tunahifadhi haki ya kuongeza, kurekebisha, kusimamisha, au kuacha vipengele vyovyote.";
+t["termsPage.section3.thirdParty"] = "Vipengele fulani vinaweza kuhitaji ujumuishaji na huduma za watu wengine (k.m., watoa huduma wa wingu, wasindikaji wa malipo).";
+t["termsPage.section4.title"] = "4. Matokeo Yaliyozalishwa na AI: Kanusho na Hatari";
+t["termsPage.section4.intro"] = "Huduma zinategemea modeli za akili bandia na algorithms (\"Mifumo ya AI\") kusindika ingizo na kuzalisha matokeo (\"Matokeo ya AI\").";
+t["termsPage.section4.acknowledge"] = "Unakubali na kukubaliana wazi kuwa:";
+t["termsPage.section4.items.0"] = "Matokeo ya AI yanazalishwa kwa algorithm na yanaweza kuwa na hitilafu, kasoro, udhaifu, kutokuwa sahihi, au yaliyopitwa na wakati.";
+t["termsPage.section4.items.1"] = "Matokeo ya AI hayakusudiwi kuwa, na hayapaswi kuchukuliwa kama, ushauri wa kitaalamu, msimbo ulio tayari kwa uzalishaji, au udhamini.";
+t["termsPage.section4.items.2"] = "AppNode haitoi uwakilishi au dhamana kuhusu usahihi, ukamilifu, usalama, uhalali, kuaminika, au ufaafu wa Matokeo ya AI.";
+t["termsPage.section4.items.3"] = "Wewe peke yako una wajibu wa kukagua kwa kujitegemea, kupima, kuthibitisha, kulinda, na kukagua Matokeo yote ya AI kabla ya matumizi.";
+t["termsPage.section4.items.4"] = "Matokeo ya AI yanaweza kwa bahati mbaya kujumuisha au kufanana na mali za kiakili za watu wengine, na unachukua hatari zote.";
+t["termsPage.section4.items.5"] = "Mifumo ya AI inaweza kuzalisha matokeo yasiyotarajiwa au yasiyotakikana kulingana na ingizo lako.";
+t["termsPage.section4.items.6"] = "Lazima utii sheria zote zinazotumika unapotumia Matokeo ya AI, ikiwemo vidhibiti vya usafirishaji na kanuni za ulinzi wa data.";
+t["termsPage.section4.disclaimer"] = "AppNode inakataa dhima yote kwa uharibifu wowote, hasara, au madai yanayotokana na matumizi yako au kutegemea Matokeo ya AI.";
+t["termsPage.section5.title"] = "5. Maudhui ya Mtumiaji, Data, na Leseni";
+t["termsPage.section5.definition"] = "\"Maudhui ya Mtumiaji\" inamaanisha maagizo, data, msimbo, maandishi, picha, faili, au nyenzo nyingine yoyote unayopakia, kuwasilisha, au kuingiza kwenye Huduma.";
+t["termsPage.section5.ownership"] = "Umiliki: Unahifadhi haki zote za umiliki katika Maudhui yako ya Mtumiaji, kulingana na leseni zilizotolewa hapa.";
+t["termsPage.section5.licenseIntro"] = "Leseni kwa AppNode: Kwa kuwasilisha Maudhui ya Mtumiaji, unatoa AppNode leseni ya kudumu, isiyoweza kubatilishwa, ya ulimwengu wote, isiyo ya kipekee.";
+t["termsPage.section5.licenseItems.0"] = "Kuhifadhi, kuhifadhi, kusindika, kuzalisha tena, kurekebisha, kusambaza, kuonyesha, na kutekeleza Maudhui ya Mtumiaji kama inavyohitajika kutoa Huduma.";
+t["termsPage.section5.licenseItems.1"] = "Kutumia Maudhui ya Mtumiaji kugundua, kuzuia, na kupunguza matumizi mabaya, ulaghai, vitisho vya usalama, au ukiukaji wa Masharti haya.";
+t["termsPage.section5.licenseItems.2"] = "Kutotambulia, kujumlisha, au kufuta utambulisho wa Maudhui ya Mtumiaji kwa madhumuni ya uchambuzi, ikiwemo kufundisha au kuboresha modeli zetu za AI.";
+t["termsPage.section5.licenseItems.3"] = "Kutii wajibu wa kisheria, kujibu hati za kisheria, au kutekeleza haki zetu.";
+t["termsPage.section5.represent"] = "Unawakilisha na kudhamini kuwa: (i) una haki, idhini, na ruhusa zote muhimu kuwasilisha Maudhui ya Mtumiaji.";
+t["termsPage.section5.noSell"] = "Hatuuzi Maudhui yako ya Mtumiaji kwa watu wengine. Hata hivyo, tunaweza kushiriki data zisizotambuliwa au zilizojumlishwa na washirika.";
+t["termsPage.section5.dataProcessing"] = "Usindikaji wa Data: Usindikaji wetu wa Maudhui ya Mtumiaji unaongozwa zaidi na Sera yetu ya Faragha.";
+t["termsPage.section6.title"] = "6. Sera ya Matumizi Yanayokubalika";
+t["termsPage.section6.intro"] = "Unakubali kutumia Huduma kwa madhumuni ya kisheria tu na kwa kuzingatia Masharti haya. Shughuli zilizopigwa marufuku ni pamoja na:";
+t["termsPage.section6.items.0"] = "Kukiuka sheria, kanuni, au mikataba yoyote ya ndani, kitaifa, au kimataifa.";
+t["termsPage.section6.items.1"] = "Kukiuka au kutumia vibaya haki za mali ya kiakili, ikiwemo hakimiliki, alama za biashara, hataza, na siri za kibiashara.";
+t["termsPage.section6.items.2"] = "Kuzalisha, kusambaza, au kutumia Huduma kuunda msimbo mbaya, virusi, malware, ransomware, spyware, au programu nyingine hatari.";
+t["termsPage.section6.items.3"] = "Kushiriki katika ufikiaji usioidhinishwa, udukuzi, uchunguzi, au kutumia udhaifu katika Huduma au mifumo inayohusiana.";
+t["termsPage.section6.items.4"] = "Kujaribu kukusanya, kutoa, kubadilisha uhandisi, kuvunja, kutenganisha, au vinginevyo kupata msimbo chanzo au algorithms.";
+t["termsPage.section6.items.5"] = "Kupita, kukwepa, au kuingilia hatua za usalama, vikomo vya kiwango, au vidhibiti vya ufikiaji.";
+t["termsPage.section6.items.6"] = "Kuunda akaunti nyingi kwa madhumuni mabaya, kuotomatisha uundaji wa akaunti, au kutumia boti/hati kwa Huduma.";
+t["termsPage.section6.items.7"] = "Kupakia au kuzalisha maudhui ambayo ni haramu, machafu, ya kashfa, ya kusumbua, ya kutishia, ya ubaguzi, ya chuki, au ya unyanyasaji.";
+t["termsPage.section6.items.8"] = "Kuingilia, kuvuruga, au kupakia kupita kiasi Huduma, ikiwemo mashambulizi ya kukataa huduma au taka pepe.";
+t["termsPage.section6.items.9"] = "Kutumia Huduma kwa shughuli za hatari kubwa, kama vile kufanya maamuzi ya kiotomatiki katika ajira, mkopo, makazi, au masuala ya kisheria.";
+t["termsPage.section6.items.10"] = "Kuhamisha au kuuza nje Huduma au Matokeo ya AI kwa kukiuka sheria za udhibiti wa usafirishaji wa Marekani.";
+t["termsPage.section6.monitor"] = "Tunaweza kufuatilia, kukagua, au kuchambua matumizi yako ya Huduma kutekeleza sera hii, kugundua ukiukaji, au kuboresha Huduma.";
+t["termsPage.section7.title"] = "7. Usajili, Malipo, Ada, na Malipo";
+t["termsPage.section7.intro"] = "Huduma fulani zinahitaji usajili wa malipo (\"Usajili\"). Kwa kujisajili, unakubali:";
+t["termsPage.section7.items.0"] = "Kulipa ada zote zinazotumika, kodi, na gharama (\"Ada\") kwa dola za Marekani kupitia njia ya malipo unayotoa.";
+t["termsPage.section7.items.1"] = "Kuidhinisha malipo ya mara kwa mara ya kiotomatiki kwa Usajili, ambayo yanasasishwa kiotomatiki isipokuwa yakibatilishwa.";
+t["termsPage.section7.items.2"] = "Kutoa taarifa sahihi, kamili, na za sasa za malipo na kuzisasisha kama inavyohitajika.";
+t["termsPage.section7.items.3"] = "Kukubali wajibu kwa overdraft au ada nyingine zinazotokana na kushindwa kwa malipo.";
+t["termsPage.section7.fees"] = "Ada zinaweza kujumuisha gharama za usajili zisizobadilika, gharama kulingana na matumizi, au ada za ziada.";
+t["termsPage.section7.failure"] = "Kushindwa kulipa Ada kunaweza kusababisha kusimamishwa au kufungwa kwa Akaunti yako.";
+t["termsPage.section7.refunds"] = "Kurudisha Pesa: Ada zote hazirejeshwi isipokuwa kunavyotakiwa na sheria inayotumika.";
+t["termsPage.section7.processors"] = "Tunatumia wasindikaji wa malipo wa watu wengine (k.m., Stripe) na hatuhusiki kwa vitendo vyao, hitilafu, au ukiukaji wa usalama.";
+t["termsPage.section8.title"] = "8. Vikomo vya Kiwango, Mgawo, na Matumizi ya Rasilimali";
+t["termsPage.section8.intro"] = "Ili kuhakikisha matumizi ya haki na utulivu wa mfumo, tunaweza kuweka vikomo vya kiwango, mgawo wa matumizi, au vizuizi.";
+t["termsPage.section8.items.0"] = "Kuzidi vikomo kunaweza kusababisha kupunguza kasi, Ada za ziada, kusimamishwa, au kufungwa.";
+t["termsPage.section8.items.1"] = "Unakubali kutojaribu kupita vikomo hivi.";
+t["termsPage.section8.items.2"] = "Shughuli zinazohitaji rasilimali nyingi zinaweza kuhitaji idhini ya awali.";
+t["termsPage.section8.noLiability"] = "Hatuhusiki kwa hasara yoyote inayotokana na utekelezaji wa vikomo hivi.";
+t["termsPage.section9.title"] = "9. Haki za Mali ya Kiakili";
+t["termsPage.section9.ownership"] = "Haki zote, kichwa, na maslahi katika na kwa Huduma, ikiwemo programu, Mifumo ya AI, modeli, na algorithms, ni mali ya AppNode.";
+t["termsPage.section9.license"] = "Unapewa leseni ndogo, isiyo ya kipekee, isiyohamishika, isiyoweza kupewa wengine, inayoweza kubatilishwa ya kufikia na kutumia Huduma.";
+t["termsPage.section9.agreeNot"] = "Unakubali kutofanya:";
+t["termsPage.section9.items.0"] = "Kunakili, kurekebisha, kubadilisha, kutafsiri, kusambaza, kuuza, kukodisha, au kuunda kazi zinazotokana na Mali yoyote ya AppNode.";
+t["termsPage.section9.items.1"] = "Kuondoa, kubadilisha, au kuficha notisi yoyote ya hakimiliki, alama ya biashara, au mali.";
+t["termsPage.section9.items.2"] = "Kutumia Mali ya AppNode kwa njia inayoweza kuchanganya watumiaji au kuashiria idhini.";
+t["termsPage.section9.feedback"] = "Maoni, mapendekezo, au mawazo yoyote unayotoa kuhusu Huduma (\"Maoni\") yatamilikiwa na AppNode.";
+t["termsPage.section10.title"] = "10. Usiri";
+t["termsPage.section10.content"] = "Unakubali kuhifadhi kwa siri taarifa yoyote isiyochapishwa na AppNode, ikiwemo nyaraka za kiufundi na data binafsi.";
+t["termsPage.section11.title"] = "11. Kanusho na Vikomo vya Dhima";
+t["termsPage.section11.asIs"] = "HUDUMA ZINATOLEWA \"KAMA ZILIVYO\" NA \"KAMA ZINAVYOPATIKANA,\" BILA DHAMANA YA AINA YOYOTE, WAZI AU INAYODHANIWA.";
+t["termsPage.section11.noWarranties"] = "APPNODE HAITOI DHAMANA KUWA HUDUMA ZITAKUWA BILA USUMBUFU, BILA HITILAFU, SALAMA, AU BILA VIRUSI AU VIPENGELE HATARI.";
+t["termsPage.section11.limitation"] = "KWA KIWANGO CHA JUU KINACHORUHUSIWA NA SHERIA, DHIMA YA JUMLA YA APPNODE KWA MADAI YOYOTE HAITAZIDI KIASI KILICHOLIPWA NA WEWE.";
+t["termsPage.section11.exclusion"] = "KWA HAKUNA TUKIO APPNODE ITAWAJIBIKA KWA UHARIBIFU WOWOTE USIO WA MOJA KWA MOJA, WA BAHATI MBAYA, MAALUM, AU WA ADHABU.";
+t["termsPage.section12.title"] = "12. Fidia";
+t["termsPage.section12.content"] = "Unakubali kufidia, kulinda, na kuhifadhi AppNode, washirika wake, maafisa, wakurugenzi, wafanyakazi, mawakala, na walioidhinishwa kutofaa kwa madai yoyote.";
+t["termsPage.section13.title"] = "13. Kusitishwa";
+t["termsPage.section13.byYou"] = "Unaweza kusitisha Akaunti yako wakati wowote kwa kufuata maagizo katika Huduma au kuwasiliana na support@appnode.ai.";
+t["termsPage.section13.byUs"] = "Tunaweza kusimamisha au kusitisha Akaunti yako mara moja, na au bila notisi, kwa sababu yoyote.";
+t["termsPage.section13.effect"] = "Baada ya kusitishwa: (a) ufikiaji wako wa Huduma utaisha; (b) Ada zozote zinazobaki zinaendelea kudaiwa; (c) leseni zilizotolewa zinabatilishwa.";
+t["termsPage.section14.title"] = "14. Sheria Inayoongoza na Utatuzi wa Migogoro";
+t["termsPage.section14.law"] = "Masharti haya yataongozwa na kutafsiriwa kwa mujibu wa sheria za Jimbo la Delaware, Marekani.";
+t["termsPage.section14.arbitration"] = "Mgogoro wowote unaotokana na au kuhusiana na Masharti haya utatatuliwa pekee na usuluhishi wa lazima.";
+t["termsPage.section14.classWaiver"] = "WEWE NA APPNODE MNAKUBALI KUACHA HAKI YOYOTE YA KESI YA MABARAZA NA KUSHIRIKI KATIKA KESI ZA KUNDI.";
+t["termsPage.section15.title"] = "15. Mengineyo";
+t["termsPage.section15.entireAgreement"] = "Masharti haya, pamoja na Sera ya Faragha na sera nyingine zozote zilizorejelewa, yanaunda makubaliano yote kati yako na AppNode.";
+t["termsPage.section15.severability"] = "Ikiwa kipengele chochote kinapatikana kuwa hakitekelezeki, vipengele vilivyobaki vitaendelea kuwa na nguvu kamili.";
+t["termsPage.section15.waiver"] = "Kushindwa kwetu kutekeleza kipengele chochote hakutakuwa kwa kuacha kipengele hicho.";
+t["termsPage.section15.assignment"] = "Huwezi kukabidhia au kuhamisha Masharti haya bila idhini yetu ya maandishi. Tunaweza kukabidhia Masharti haya kwa uhuru.";
+t["termsPage.section16.title"] = "16. Taarifa za Mawasiliano";
+t["termsPage.section16.company"] = "AppNode Inc.";
+t["termsPage.section16.supportEmail"] = "Barua pepe: support@appnode.ai";
+t["termsPage.section16.legalEmail"] = "Kisheria: legal@appnode.ai";
+
+// === COOKIES PAGE ===
+t["cookiesPage.badge"] = "Faragha";
+t["cookiesPage.subtitle"] = "Simamia mapendekezo yako ya kuki. Tunatumia kuki kuboresha uzoefu wako wa kuvinjari, kutoa maudhui yaliyobinafsishwa, na kuchambua trafiki yetu.";
+t["cookiesPage.required"] = "Inahitajika";
+t["cookiesPage.saveSuccess"] = "Mapendekezo ya kuki yamehifadhiwa kwa mafanikio!";
+t["cookiesPage.savePreferences"] = "Hifadhi Mapendekezo";
+t["cookiesPage.acceptAll"] = "Kubali Yote";
+t["cookiesPage.aboutTitle"] = "Kuhusu Kuki Zetu";
+t["cookiesPage.aboutDescription"] = "Kuki ni faili ndogo za maandishi zinazohifadhiwa kwenye kifaa chako unapotembelea tovuti yetu. Zinatusaidia kukutoa uzoefu bora.";
+t["cookiesPage.moreInfo"] = "Kwa taarifa zaidi kuhusu jinsi tunavyotumia kuki na data yako ya kibinafsi, tafadhali soma";
+t["cookiesPage.essential.title"] = "Kuki Muhimu";
+t["cookiesPage.essential.description"] = "Kuki hizi ni muhimu ili tovuti ifanye kazi vizuri. Zinawezesha utendaji wa msingi kama usalama na usimamizi wa mtandao.";
+t["cookiesPage.analytics.title"] = "Kuki za Uchambuzi";
+t["cookiesPage.analytics.description"] = "Kuki hizi zinatusaidia kuelewa jinsi wageni wanavyoingiliana na tovuti yetu kwa kukusanya na kuripoti taarifa bila utambulisho.";
+t["cookiesPage.marketing.title"] = "Kuki za Uuzaji";
+t["cookiesPage.marketing.description"] = "Kuki hizi hutumika kufuatilia wageni kwenye tovuti mbalimbali. Zinatumika kuonyesha matangazo yanayofaa na ya kuvutia.";
+t["cookiesPage.personalization.title"] = "Kuki za Ubinafsishaji";
+t["cookiesPage.personalization.description"] = "Kuki hizi zinaturuhusu kukumbuka mapendekezo yako na kutoa vipengele vilivyoimarishwa, vilivyobinafsishwa.";
+
+// Apply all
+for (const [pathStr, value] of Object.entries(t)) {
+  setByPath(sw, pathStr, value);
+}
+
+fs.writeFileSync(
+  path.join(__dirname, 'src/translations/sw.json'),
+  JSON.stringify(sw, null, 2) + '\n'
+);
+
+console.log('Phase 3 done! Applied', Object.keys(t).length, 'translations');

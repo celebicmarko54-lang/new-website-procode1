@@ -3,9 +3,10 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useTranslation } from '@/context/LanguageContext';
+import { getTranslationArray } from '@/translations/helpers';
 
 export default function SecurityPage() {
-  const { t, tArray, language} = useTranslation();
+  const { t, language} = useTranslation();
 
   const securityFeatures = [
     {
@@ -131,7 +132,7 @@ export default function SecurityPage() {
                 <div key={index} className="bg-[#0a0a0a] dark:bg-[#1A1A1A] backdrop-blur rounded-xl p-6 border border-gray-800">
                   <h3 className="font-semibold text-white text-lg mb-4">{t(practice.titleKey)}</h3>
                   <ul className="space-y-3">
-                    {tArray(practice.itemsKey).map((item, itemIndex) => (
+                    {getTranslationArray(language.code, practice.itemsKey).map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start gap-2 text-gray-300 text-sm">
                         <svg className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />

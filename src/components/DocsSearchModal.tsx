@@ -1,7 +1,14 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
+import { useTranslation } from '@/context/LanguageContext';
+
+interface DocItemDef {
+  nameKey: string;
+  href: string;
+  sectionKey: string;
+}
 
 interface DocItem {
   name: string;
@@ -14,43 +21,50 @@ interface DocsSearchModalProps {
   onClose: () => void;
 }
 
-const allDocItems: DocItem[] = [
+const docItemDefs: DocItemDef[] = [
   // Getting Started
-  { name: 'Introduction', href: '/docs', section: 'Getting Started' },
-  { name: 'Quickstart Guides', href: '/docs/quickstart', section: 'Getting Started' },
-  { name: 'Create with AI', href: '/docs/create-with-ai', section: 'Getting Started' },
-  { name: 'Build from Scratch', href: '/docs/build-from-scratch', section: 'Getting Started' },
-  { name: 'Import from GitHub', href: '/docs/import-github', section: 'Getting Started' },
+  { nameKey: 'introduction', href: '/docs', sectionKey: 'gettingStarted' },
+  { nameKey: 'quickstartGuides', href: '/docs/quickstart', sectionKey: 'gettingStarted' },
+  { nameKey: 'createWithAi', href: '/docs/create-with-ai', sectionKey: 'gettingStarted' },
+  { nameKey: 'buildFromScratch', href: '/docs/build-from-scratch', sectionKey: 'gettingStarted' },
+  { nameKey: 'importFromGithub', href: '/docs/import-github', sectionKey: 'gettingStarted' },
   // Trust & Safety
-  { name: 'Content Policy', href: '/docs/content-policy', section: 'Trust & Safety' },
-  { name: 'Community Guidelines', href: '/docs/community-guidelines', section: 'Trust & Safety' },
+  { nameKey: 'contentPolicy', href: '/docs/content-policy', sectionKey: 'trustSafety' },
+  { nameKey: 'communityGuidelines', href: '/docs/community-guidelines', sectionKey: 'trustSafety' },
   // Legal
-  { name: 'Terms of Service', href: '/terms', section: 'Legal' },
-  { name: 'Privacy Policy', href: '/privacy', section: 'Legal' },
-  { name: 'Cookie Policy', href: '/cookies', section: 'Legal' },
+  { nameKey: 'termsOfService', href: '/terms', sectionKey: 'legal' },
+  { nameKey: 'privacyPolicy', href: '/privacy', sectionKey: 'legal' },
+  { nameKey: 'cookiePolicy', href: '/cookies', sectionKey: 'legal' },
   // Security
-  { name: 'Security Overview', href: '/security', section: 'Security' },
-  { name: 'Data Protection', href: '/docs/data-protection', section: 'Security' },
-  { name: 'Vulnerability Disclosure', href: '/security-report', section: 'Security' },
+  { nameKey: 'securityOverview', href: '/security', sectionKey: 'security' },
+  { nameKey: 'dataProtection', href: '/docs/data-protection', sectionKey: 'security' },
+  { nameKey: 'vulnerabilityDisclosure', href: '/security-report', sectionKey: 'security' },
   // Tutorials
-  { name: 'Building Your First App', href: '/docs/tutorials/first-app', section: 'Tutorials' },
-  { name: 'Working with APIs', href: '/docs/tutorials/apis', section: 'Tutorials' },
-  { name: 'Database Integration', href: '/docs/tutorials/databases', section: 'Tutorials' },
-  { name: 'Authentication', href: '/docs/tutorials/auth', section: 'Tutorials' },
+  { nameKey: 'buildingFirstApp', href: '/docs/tutorials/first-app', sectionKey: 'tutorials' },
+  { nameKey: 'workingWithApis', href: '/docs/tutorials/apis', sectionKey: 'tutorials' },
+  { nameKey: 'databaseIntegration', href: '/docs/tutorials/databases', sectionKey: 'tutorials' },
+  { nameKey: 'authentication', href: '/docs/tutorials/auth', sectionKey: 'tutorials' },
   // Teams & Enterprise
-  { name: 'Team Management', href: '/docs/teams', section: 'Teams & Enterprise' },
-  { name: 'SSO Setup', href: '/docs/sso', section: 'Teams & Enterprise' },
-  { name: 'Enterprise Features', href: '/enterprise', section: 'Teams & Enterprise' },
+  { nameKey: 'teamManagement', href: '/docs/teams', sectionKey: 'teamsEnterprise' },
+  { nameKey: 'ssoSetup', href: '/docs/sso', sectionKey: 'teamsEnterprise' },
+  { nameKey: 'enterpriseFeatures', href: '/enterprise', sectionKey: 'teamsEnterprise' },
   // Changelog
-  { name: 'Latest Updates', href: '/changelog', section: 'Changelog' },
+  { nameKey: 'latestUpdates', href: '/changelog', sectionKey: 'changelog' },
 ];
 
 export default function DocsSearchModal({ isOpen, onClose }: DocsSearchModalProps) {
+  const { t, language } = useTranslation();
   const [query, setQuery] = useState('');
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
   const resultsRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
+
+  const allDocItems: DocItem[] = useMemo(() => docItemDefs.map(def => ({
+    name: t(`docsSearchModal.items.${def.nameKey}`),
+    href: def.href,
+    section: t(`docsSearchModal.sections.${def.sectionKey}`),
+  })), [t, language.code]);
 
   const filteredItems = query.trim() === ''
     ? allDocItems.slice(0, 8) // Show first 8 items when no query
@@ -144,7 +158,7 @@ export default function DocsSearchModal({ isOpen, onClose }: DocsSearchModalProp
             <input
               ref={inputRef}
               type="text"
-              placeholder="Search documentation..."
+              placeholder={t('docsSearchModal.searchPlaceholder')}
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               className="flex-1 px-4 py-4 text-base bg-transparent text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none"
@@ -161,8 +175,8 @@ export default function DocsSearchModal({ isOpen, onClose }: DocsSearchModalProp
                 <svg className="w-12 h-12 mx-auto mb-4 text-gray-300 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <p className="font-medium">No results found</p>
-                <p className="text-sm mt-1">Try searching for something else</p>
+                <p className="font-medium">{t('docsSearchModal.noResults')}</p>
+                <p className="text-sm mt-1">{t('docsSearchModal.tryAgain')}</p>
               </div>
             ) : (
               filteredItems.map((item, index) => (
@@ -204,16 +218,16 @@ export default function DocsSearchModal({ isOpen, onClose }: DocsSearchModalProp
               <span className="flex items-center gap-1">
                 <kbd className="px-1.5 py-0.5 bg-gray-100 dark:bg-gray-800 rounded">↑</kbd>
                 <kbd className="px-1.5 py-0.5 bg-gray-100 dark:bg-gray-800 rounded">↓</kbd>
-                <span className="ml-1">Navigate</span>
+                <span className="ml-1">{t('docsSearchModal.navigate')}</span>
               </span>
               <span className="flex items-center gap-1">
                 <kbd className="px-1.5 py-0.5 bg-gray-100 dark:bg-gray-800 rounded">↵</kbd>
-                <span className="ml-1">Select</span>
+                <span className="ml-1">{t('docsSearchModal.select')}</span>
               </span>
             </div>
             <span className="flex items-center gap-1">
               <kbd className="px-1.5 py-0.5 bg-gray-100 dark:bg-gray-800 rounded">ESC</kbd>
-              <span className="ml-1">Close</span>
+              <span className="ml-1">{t('docsSearchModal.close')}</span>
             </span>
           </div>
         </div>

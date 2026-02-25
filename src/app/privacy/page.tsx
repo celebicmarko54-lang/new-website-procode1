@@ -3,9 +3,10 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useTranslation } from '@/context/LanguageContext';
+import { getTranslationArray } from '@/translations/helpers';
 
 export default function PrivacyPolicyPage() {
-  const { t, tArray, language} = useTranslation();
+  const { t, language} = useTranslation();
 
   return (
     <div key={language.code} className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
@@ -43,21 +44,21 @@ export default function PrivacyPolicyPage() {
 
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">{t('privacyPage.section1.s1Title')}</h3>
               <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-2 mb-6">
-                {tArray('privacyPage.section1.s1Items').map((item, idx) => (
+                {getTranslationArray(language.code, 'privacyPage.section1.s1Items').map((item, idx) => (
                   <li key={idx} dangerouslySetInnerHTML={{ __html: item.replace(/^([^:]+):/, '<strong>$1:</strong>') }} />
                 ))}
               </ul>
 
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">{t('privacyPage.section1.s2Title')}</h3>
               <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-2 mb-6">
-                {tArray('privacyPage.section1.s2Items').map((item, idx) => (
+                {getTranslationArray(language.code, 'privacyPage.section1.s2Items').map((item, idx) => (
                   <li key={idx} dangerouslySetInnerHTML={{ __html: item.replace(/^([^:]+):/, '<strong>$1:</strong>') }} />
                 ))}
               </ul>
 
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">{t('privacyPage.section1.s3Title')}</h3>
               <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-2 mb-4">
-                {tArray('privacyPage.section1.s3Items').map((item, idx) => (
+                {getTranslationArray(language.code, 'privacyPage.section1.s3Items').map((item, idx) => (
                   <li key={idx}>{item}</li>
                 ))}
               </ul>
@@ -73,7 +74,7 @@ export default function PrivacyPolicyPage() {
                 {t('privacyPage.section2.intro')}
               </p>
               <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-2 mb-4">
-                {tArray('privacyPage.section2.items').map((item, idx) => (
+                {getTranslationArray(language.code, 'privacyPage.section2.items').map((item, idx) => (
                   <li key={idx}>{item}</li>
                 ))}
               </ul>
@@ -89,7 +90,7 @@ export default function PrivacyPolicyPage() {
                 {t('privacyPage.section3.intro')}
               </p>
               <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-2 mb-4">
-                {tArray('privacyPage.section3.items').map((item, idx) => (
+                {getTranslationArray(language.code, 'privacyPage.section3.items').map((item, idx) => (
                   <li key={idx} dangerouslySetInnerHTML={{ __html: item.replace(/^([^:]+):/, '<strong>$1:</strong>') }} />
                 ))}
               </ul>
@@ -108,7 +109,7 @@ export default function PrivacyPolicyPage() {
                 {t('privacyPage.section4.intro')}
               </p>
               <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-2 mb-4">
-                {tArray('privacyPage.section4.items').map((item, idx) => (
+                {getTranslationArray(language.code, 'privacyPage.section4.items').map((item, idx) => (
                   <li key={idx} dangerouslySetInnerHTML={{ __html: item.replace(/^([^:]+):/, '<strong>$1:</strong>') }} />
                 ))}
               </ul>
@@ -124,7 +125,7 @@ export default function PrivacyPolicyPage() {
                 {t('privacyPage.section5.intro')}
               </p>
               <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-2 mb-4">
-                {tArray('privacyPage.section5.items').map((item, idx) => (
+                {getTranslationArray(language.code, 'privacyPage.section5.items').map((item, idx) => (
                   <li key={idx} dangerouslySetInnerHTML={{ __html: item.replace(/^([^:]+):?→?/, '<strong>$1</strong>') }} />
                 ))}
               </ul>
@@ -140,7 +141,7 @@ export default function PrivacyPolicyPage() {
                 {t('privacyPage.section6.intro')}
               </p>
               <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-2 mb-4">
-                {tArray('privacyPage.section6.items').map((item, idx) => (
+                {getTranslationArray(language.code, 'privacyPage.section6.items').map((item, idx) => (
                   <li key={idx} dangerouslySetInnerHTML={{ __html: item.replace(/^([^:]+):/, '<strong>$1:</strong>') }} />
                 ))}
               </ul>

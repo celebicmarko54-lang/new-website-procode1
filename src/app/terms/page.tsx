@@ -3,9 +3,10 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useTranslation } from '@/context/LanguageContext';
+import { getTranslationArray } from '@/translations/helpers';
 
 export default function TermsOfServicePage() {
-  const { t, tArray, language} = useTranslation();
+  const { t, language} = useTranslation();
 
   return (
     <div key={language.code} className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
@@ -47,7 +48,7 @@ export default function TermsOfServicePage() {
                 {t('termsPage.section1.intro')}
               </p>
               <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-2 mb-4">
-                {tArray('termsPage.section1.items').map((item, idx) => (
+                {getTranslationArray(language.code, 'termsPage.section1.items').map((item, idx) => (
                   <li key={idx}>{item}</li>
                 ))}
               </ul>
@@ -66,7 +67,7 @@ export default function TermsOfServicePage() {
                 {t('termsPage.section2.intro')}
               </p>
               <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-2 mb-4">
-                {tArray('termsPage.section2.items').map((item, idx) => (
+                {getTranslationArray(language.code, 'termsPage.section2.items').map((item, idx) => (
                   <li key={idx}>{item}</li>
                 ))}
               </ul>
@@ -85,7 +86,7 @@ export default function TermsOfServicePage() {
                 {t('termsPage.section3.intro')}
               </p>
               <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-2 mb-4">
-                {tArray('termsPage.section3.items').map((item, idx) => (
+                {getTranslationArray(language.code, 'termsPage.section3.items').map((item, idx) => (
                   <li key={idx}>{item}</li>
                 ))}
               </ul>
@@ -107,7 +108,7 @@ export default function TermsOfServicePage() {
                 {t('termsPage.section4.acknowledge')}
               </p>
               <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-2 mb-4">
-                {tArray('termsPage.section4.items').map((item, idx) => (
+                {getTranslationArray(language.code, 'termsPage.section4.items').map((item, idx) => (
                   <li key={idx}>{item}</li>
                 ))}
               </ul>
@@ -129,7 +130,7 @@ export default function TermsOfServicePage() {
                 <strong>{t('termsPage.section5.licenseIntro')}</strong>
               </p>
               <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-2 mb-4">
-                {tArray('termsPage.section5.licenseItems').map((item, idx) => (
+                {getTranslationArray(language.code, 'termsPage.section5.licenseItems').map((item, idx) => (
                   <li key={idx}>{item}</li>
                 ))}
               </ul>
@@ -151,7 +152,7 @@ export default function TermsOfServicePage() {
                 {t('termsPage.section6.intro')}
               </p>
               <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-2 mb-4">
-                {tArray('termsPage.section6.items').map((item, idx) => (
+                {getTranslationArray(language.code, 'termsPage.section6.items').map((item, idx) => (
                   <li key={idx}>{item}</li>
                 ))}
               </ul>
@@ -167,7 +168,7 @@ export default function TermsOfServicePage() {
                 {t('termsPage.section7.intro')}
               </p>
               <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-2 mb-4">
-                {tArray('termsPage.section7.items').map((item, idx) => (
+                {getTranslationArray(language.code, 'termsPage.section7.items').map((item, idx) => (
                   <li key={idx}>{item}</li>
                 ))}
               </ul>
@@ -192,7 +193,7 @@ export default function TermsOfServicePage() {
                 {t('termsPage.section8.intro')}
               </p>
               <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-2 mb-4">
-                {tArray('termsPage.section8.items').map((item, idx) => (
+                {getTranslationArray(language.code, 'termsPage.section8.items').map((item, idx) => (
                   <li key={idx}>{item}</li>
                 ))}
               </ul>
@@ -214,7 +215,7 @@ export default function TermsOfServicePage() {
                 {t('termsPage.section9.agreeNot')}
               </p>
               <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-2 mb-4">
-                {tArray('termsPage.section9.items').map((item, idx) => (
+                {getTranslationArray(language.code, 'termsPage.section9.items').map((item, idx) => (
                   <li key={idx}>{item}</li>
                 ))}
               </ul>

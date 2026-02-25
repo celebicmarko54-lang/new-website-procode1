@@ -114,6 +114,33 @@ function getNestedArrayValue(obj: Record<string, unknown>, path: string): string
   return [];
 }
 
+// Raw nested value lookup - returns any type (objects, arrays of objects, etc.)
+function getNestedRawValue(obj: Record<string, unknown>, path: string): unknown {
+  const keys = path.split('.');
+  let result: unknown = obj;
+
+  for (const key of keys) {
+    if (result && typeof result === 'object') {
+      if (Array.isArray(result)) {
+        const index = parseInt(key, 10);
+        if (!isNaN(index) && index >= 0 && index < result.length) {
+          result = result[index];
+        } else {
+          return undefined;
+        }
+      } else if (key in (result as Record<string, unknown>)) {
+        result = (result as Record<string, unknown>)[key];
+      } else {
+        return undefined;
+      }
+    } else {
+      return undefined;
+    }
+  }
+
+  return result;
+}
+
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>(languages[0]);
   const [mounted, setMounted] = useState(false);

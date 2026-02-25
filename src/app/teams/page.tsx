@@ -4,9 +4,30 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { useTranslation } from '@/context/LanguageContext';
+import { getTranslationData } from '@/translations/helpers';
 
 export default function TeamsPage() {
   const { t, language} = useTranslation();
+
+  const defaultActivity = [
+    { user: 'Alex', action: 'pushed to main', time: '2m ago' },
+    { user: 'Blake', action: 'deployed to prod', time: '15m ago' },
+    { user: 'Casey', action: 'reviewed PR #42', time: '1h ago' },
+  ];
+
+  const defaultFeatures = [
+    { title: 'Real-time Collaboration', description: 'Work on the same project simultaneously. See cursors, edits, and changes in real-time.' },
+    { title: 'Role-based Access', description: 'Control who can view, edit, and deploy projects with granular permissions.' },
+    { title: 'Shared Workspaces', description: 'Organize projects into shared workspaces. Keep everything in one place.' },
+    { title: 'Built-in Chat', description: 'Discuss code, share feedback, and communicate without leaving the editor.' },
+    { title: 'Team Analytics', description: 'Track team productivity, deployment frequency, and project health.' },
+    { title: 'Centralized Billing', description: 'One invoice for your entire team. Easy expense tracking and management.' },
+  ];
+
+  const featureIcons = ['👥', '🔐', '📁', '💬', '📊', '💳'];
+
+  const activityData = (getTranslationData(language.code, 'teamsPage.activity') as typeof defaultActivity) || defaultActivity;
+  const featuresData = (getTranslationData(language.code, 'teamsPage.features') as typeof defaultFeatures) || defaultFeatures;
   
   return (
     <div key={language.code} className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] text-gray-900 dark:text-white">
@@ -87,13 +108,9 @@ export default function TeamsPage() {
               
               {/* Activity */}
               <div className="border-l border-gray-200 dark:border-l-2 dark:border-gray-700 p-4">
-                <div className="text-xs font-medium text-gray-500 uppercase mb-3">{t('teamsPage.activity')}</div>
+                <div className="text-xs font-medium text-gray-500 uppercase mb-3">{t('teamsPage.activityTitle')}</div>
                 <div className="space-y-3">
-                  {[
-                    { user: 'Alex', action: 'pushed to main', time: '2m ago' },
-                    { user: 'Blake', action: 'deployed to prod', time: '15m ago' },
-                    { user: 'Casey', action: 'reviewed PR #42', time: '1h ago' },
-                  ].map((activity, i) => (
+                  {activityData.map((activity, i) => (
                     <div key={i} className="flex items-start gap-2 text-sm">
                       <div className={`w-6 h-6 rounded-full flex items-center justify-center text-white text-xs ${['bg-blue-500', 'bg-green-500', 'bg-purple-500'][i]}`}>
                         {activity.user[0]}
@@ -115,40 +132,9 @@ export default function TeamsPage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-3xl font-bold text-center mb-12">{t('teamsPage.teamFeatures')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: '👥',
-                title: 'Real-time Collaboration',
-                description: 'Work on the same project simultaneously. See cursors, edits, and changes in real-time.'
-              },
-              {
-                icon: '🔐',
-                title: 'Role-based Access',
-                description: 'Control who can view, edit, and deploy projects with granular permissions.'
-              },
-              {
-                icon: '📁',
-                title: 'Shared Workspaces',
-                description: 'Organize projects into shared workspaces. Keep everything in one place.'
-              },
-              {
-                icon: '💬',
-                title: 'Built-in Chat',
-                description: 'Discuss code, share feedback, and communicate without leaving the editor.'
-              },
-              {
-                icon: '📊',
-                title: 'Team Analytics',
-                description: 'Track team productivity, deployment frequency, and project health.'
-              },
-              {
-                icon: '💳',
-                title: 'Centralized Billing',
-                description: 'One invoice for your entire team. Easy expense tracking and management.'
-              }
-            ].map((feature, i) => (
+            {featuresData.map((feature, i) => (
               <div key={i} className="p-6 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-2 dark:border-gray-800">
-                <div className="text-3xl mb-4">{feature.icon}</div>
+                <div className="text-3xl mb-4">{featureIcons[i]}</div>
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
               </div>
@@ -166,11 +152,11 @@ export default function TeamsPage() {
             <div className="bg-white dark:bg-gray-900 rounded-xl p-8 shadow-lg">
               <div className="flex items-baseline justify-center gap-2 mb-4">
                 <span className="text-5xl font-bold">$35</span>
-                <span className="text-gray-500">per user/month</span>
+                <span className="text-gray-500">{t('teamsPage.pricing.perUserMonth')}</span>
               </div>
               <p className="text-center text-gray-600 dark:text-gray-400 mb-6">{t('teamsPage.pricing.billedAnnually')}</p>
               <ul className="space-y-3 mb-8">
-                {[
+                {((getTranslationData(language.code, 'teamsPage.pricing.features') as string[]) || [
                   'Everything in Core',
                   '$40/mo in usage credits included',
                   '50 Viewer seats',
@@ -178,7 +164,7 @@ export default function TeamsPage() {
                   'Role-based access control',
                   'Private deployments',
                   'Priority support'
-                ].map((feature, i) => (
+                ]).map((feature, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <svg className="w-5 h-5 text-violet-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />

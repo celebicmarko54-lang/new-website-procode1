@@ -3,55 +3,21 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useTranslation } from '@/context/LanguageContext';
+import { getTranslationData } from '@/translations/helpers';
 
 export default function CareersPage() {
   const { t, language} = useTranslation();
-  const openings = [
-    {
-      title: 'Senior Full Stack Engineer',
-      department: 'Engineering',
-      location: 'San Francisco, CA / Remote',
-      type: 'Full-time',
-      description: 'Build and scale our AI-powered development platform.',
-    },
-    {
-      title: 'Machine Learning Engineer',
-      department: 'AI',
-      location: 'San Francisco, CA / Remote',
-      type: 'Full-time',
-      description: 'Develop and improve our AI code generation models.',
-    },
-    {
-      title: 'Product Designer',
-      department: 'Design',
-      location: 'Remote',
-      type: 'Full-time',
-      description: 'Design intuitive experiences for our platform.',
-    },
-    {
-      title: 'Developer Advocate',
-      department: 'Developer Relations',
-      location: 'Remote',
-      type: 'Full-time',
-      description: 'Build community and create educational content.',
-    },
-    {
-      title: 'Technical Writer',
-      department: 'Documentation',
-      location: 'Remote',
-      type: 'Full-time',
-      description: 'Create world-class documentation and tutorials.',
-    },
-    {
-      title: 'Growth Marketing Manager',
-      department: 'Marketing',
-      location: 'San Francisco, CA / Remote',
-      type: 'Full-time',
-      description: 'Drive user acquisition and growth initiatives.',
-    },
+
+  const defaultOpenings = [
+    { title: 'Senior Full Stack Engineer', department: 'Engineering', location: 'San Francisco, CA / Remote', type: 'Full-time', description: 'Build and scale our AI-powered development platform.' },
+    { title: 'Machine Learning Engineer', department: 'AI', location: 'San Francisco, CA / Remote', type: 'Full-time', description: 'Develop and improve our AI code generation models.' },
+    { title: 'Product Designer', department: 'Design', location: 'Remote', type: 'Full-time', description: 'Design intuitive experiences for our platform.' },
+    { title: 'Developer Advocate', department: 'Developer Relations', location: 'Remote', type: 'Full-time', description: 'Build community and create educational content.' },
+    { title: 'Technical Writer', department: 'Documentation', location: 'Remote', type: 'Full-time', description: 'Create world-class documentation and tutorials.' },
+    { title: 'Growth Marketing Manager', department: 'Marketing', location: 'San Francisco, CA / Remote', type: 'Full-time', description: 'Drive user acquisition and growth initiatives.' },
   ];
 
-  const benefits = [
+  const defaultBenefits = [
     { icon: '💰', title: 'Competitive Salary', description: 'Top-of-market compensation packages' },
     { icon: '📈', title: 'Equity', description: 'Ownership stake in the company' },
     { icon: '🏥', title: 'Health & Wellness', description: 'Comprehensive medical, dental, and vision' },
@@ -62,12 +28,16 @@ export default function CareersPage() {
     { icon: '🎉', title: 'Team Retreats', description: 'Annual company-wide gatherings' },
   ];
 
-  const values = [
+  const defaultValues = [
     { emoji: '🚀', title: 'Move Fast', description: 'We ship quickly and iterate based on feedback' },
     { emoji: '🎯', title: 'User Obsessed', description: 'Every decision starts with the user' },
     { emoji: '🔓', title: 'Default Open', description: 'Transparency in everything we do' },
     { emoji: '🤝', title: 'One Team', description: 'We succeed and fail together' },
   ];
+
+  const openings = (getTranslationData(language.code, 'careersPage.openings') as typeof defaultOpenings) || defaultOpenings;
+  const benefits = (getTranslationData(language.code, 'careersPage.benefits') as typeof defaultBenefits) || defaultBenefits;
+  const values = (getTranslationData(language.code, 'careersPage.companyValues') as typeof defaultValues) || defaultValues;
 
   return (
     <div key={language.code} className="min-h-screen bg-[#f8fafc] dark:bg-[#1A1A1A] transition-colors">
