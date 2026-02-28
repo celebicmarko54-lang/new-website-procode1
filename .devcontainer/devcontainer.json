@@ -1,0 +1,12 @@
+{
+  "name": "new-website-procode1",
+  "forwardPorts": [3001],
+  "portsAttributes": {
+    "3001": {
+      "label": "Next.js Dev",
+      "onAutoForward": "notify",
+      "protocol": "http"
+    }
+  },
+  "postStartCommand": "cd /workspaces/new-website-procode1 && npm run dev -- -p 3001"
+}

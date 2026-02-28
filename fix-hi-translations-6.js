@@ -1,0 +1,181 @@
+var fs = require('fs');
+var hi = JSON.parse(fs.readFileSync('./src/translations/hi.json', 'utf8'));
+function setValue(obj, path, value) {
+  var parts = path.split('.');
+  var current = obj;
+  for (var i = 0; i < parts.length - 1; i++) {
+    if (!current[parts[i]] || typeof current[parts[i]] !== 'object') { current[parts[i]] = {}; }
+    current = current[parts[i]];
+  }
+  current[parts[parts.length - 1]] = value;
+}
+var translations = {
+  // Cookies Page
+  "cookiesPage.badge": "गोपनीयता",
+  "cookiesPage.subtitle": "अपनी कुकी प्राथमिकताएँ प्रबंधित करें। हम आपके ब्राउज़िंग अनुभव को बेहतर बनाने, व्यक्तिगत सामग्री प्रदान करने और हमारे ट्रैफ़िक का विश्लेषण करने के लिए कुकीज़ का उपयोग करते हैं।",
+  "cookiesPage.required": "आवश्यक",
+  "cookiesPage.saveSuccess": "कुकी प्राथमिकताएँ सफलतापूर्वक सहेजी गईं!",
+  "cookiesPage.savePreferences": "प्राथमिकताएँ सहेजें",
+  "cookiesPage.acceptAll": "सभी स्वीकार करें",
+  "cookiesPage.aboutTitle": "हमारी कुकीज़ के बारे में",
+  "cookiesPage.aboutDescription": "कुकीज़ छोटी टेक्स्ट फ़ाइलें हैं जो हमारी वेबसाइट पर आने पर आपके डिवाइस पर संग्रहीत होती हैं। ये आपकी प्राथमिकताओं को याद रखकर और यह समझकर कि आप हमारी साइट का कैसे उपयोग करते हैं, आपको बेहतर अनुभव प्रदान करने में हमारी मदद करती हैं।",
+  "cookiesPage.moreInfo": "हम कुकीज़ और आपके व्यक्तिगत डेटा का कैसे उपयोग करते हैं, इसके बारे में अधिक जानकारी के लिए कृपया हमारी पढ़ें",
+  "cookiesPage.essential.title": "आवश्यक कुकीज़",
+  "cookiesPage.essential.description": "ये कुकीज़ वेबसाइट के सही ढंग से काम करने के लिए आवश्यक हैं। ये सुरक्षा, नेटवर्क प्रबंधन और पहुँच जैसी मुख्य कार्यक्षमता सक्षम करती हैं। आप इन कुकीज़ को अक्षम नहीं कर सकते।",
+  "cookiesPage.analytics.title": "एनालिटिक्स कुकीज़",
+  "cookiesPage.analytics.description": "ये कुकीज़ हमें यह समझने में मदद करती हैं कि विज़िटर हमारी वेबसाइट के साथ कैसे इंटरैक्ट करते हैं, गुमनाम रूप से जानकारी एकत्र और रिपोर्ट करके। इससे हमें अपनी सेवाओं को बेहतर बनाने में मदद मिलती है।",
+  "cookiesPage.marketing.title": "मार्केटिंग कुकीज़",
+  "cookiesPage.marketing.description": "ये कुकीज़ वेबसाइटों पर विज़िटर्स को ट्रैक करने के लिए उपयोग की जाती हैं। इनका उपयोग ऐसे विज्ञापन दिखाने के लिए किया जाता है जो व्यक्तिगत उपयोगकर्ता के लिए प्रासंगिक और आकर्षक हों।",
+  "cookiesPage.personalization.title": "वैयक्तिकरण कुकीज़",
+  "cookiesPage.personalization.description": "ये कुकीज़ हमें आपकी प्राथमिकताओं को याद रखने और उन्नत, वैयक्तिकृत सुविधाएँ प्रदान करने की अनुमति देती हैं। ये हमारे द्वारा या तृतीय-पक्ष प्रदाताओं द्वारा सेट की जा सकती हैं।",
+
+  // Status Page
+  "statusPage.subtitle": "AppNode सेवाओं के लिए रीयल-टाइम स्थिति और अपटाइम जानकारी",
+  "statusPage.allOperational": "सभी सिस्टम चालू हैं",
+  "statusPage.uptimeTitle": "अपटाइम - पिछले 7 दिन",
+  "statusPage.servicesTitle": "सेवाएँ",
+  "statusPage.incidentsTitle": "हाल की घटनाएँ",
+  "statusPage.subscribeTitle": "स्थिति अपडेट प्राप्त करें",
+  "statusPage.subscribeSubtitle": "सिस्टम स्थिति और घटनाओं के बारे में सूचनाएँ प्राप्त करने के लिए सदस्यता लें",
+  "statusPage.subscribeButton": "सदस्यता लें",
+  "statusPage.operational": "चालू",
+  "statusPage.degraded": "प्रदर्शन में गिरावट",
+  "statusPage.outage": "प्रमुख आउटेज",
+  "statusPage.resolved": "हल किया गया",
+  "statusPage.completed": "पूर्ण",
+  "statusPage.duration": "अवधि:",
+  "statusPage.uptime": "अपटाइम",
+
+  // Security Page
+  "securityPage.badge": "एंटरप्राइज़-ग्रेड सुरक्षा",
+  "securityPage.titleSuffix": "प्रथम",
+  "securityPage.subtitle": "आपके डेटा की सुरक्षा हमारी सर्वोच्च प्राथमिकता है। जानें कि हम आपकी जानकारी को सुरक्षित रखने के लिए क्या उपाय करते हैं।",
+  "securityPage.featuresTitle": "सुरक्षा सुविधाएँ",
+  "securityPage.practicesTitle": "हमारी सुरक्षा प्रथाएँ",
+  "securityPage.bugBountyTitle": "बग बाउंटी प्रोग्राम",
+  "securityPage.bugBountyDescription": "सुरक्षा में सुधार करने में हमारी मदद करें और कमजोरियों की जिम्मेदारी से रिपोर्ट करने पर पुरस्कार अर्जित करें।",
+  "securityPage.reportTitle": "सुरक्षा समस्या की रिपोर्ट करें",
+  "securityPage.reportDescription": "यदि आपको लगता है कि आपने AppNode में कोई सुरक्षा कमजोरी पाई है, तो कृपया तुरंत हमारी सुरक्षा टीम को इसकी रिपोर्ट करें।",
+  "securityPage.whitepaper": "सुरक्षा श्वेतपत्र",
+
+  // Changelog Page
+  "changelogPage.badge": "अपडेट",
+  "changelogPage.title": "चेंजलॉग",
+  "changelogPage.subtitle": "AppNode के सभी नवीनतम अपडेट, सुधार और फ़िक्स",
+  "changelogPage.stayUpToDate": "अपडेट रहें",
+  "changelogPage.getNotified": "जब हम नई सुविधाएँ जारी करें तो सूचना प्राप्त करें",
+  "changelogPage.subscribeButton": "सदस्यता लें",
+  "changelogPage.viewOlder": "पुराने रिलीज़ देखें",
+  "changelogPage.changeTypes.new": "नया",
+  "changelogPage.changeTypes.improved": "सुधारा गया",
+  "changelogPage.changeTypes.fixed": "ठीक किया गया",
+  "changelogPage.releases.v250.date": "28 नवंबर, 2025",
+  "changelogPage.releases.v250.title": "स्मार्ट स्टाइल्स और ऑटो लेआउट्स",
+  "changelogPage.releases.v250.description": "AI-संचालित स्टाइलिंग पेश है जो आपके एप्लिकेशन के लिए स्वचालित रूप से सुंदर, सुसंगत डिज़ाइन बनाती है।",
+  "changelogPage.releases.v242.date": "15 नवंबर, 2025",
+  "changelogPage.releases.v242.title": "प्रदर्शन सुधार",
+  "changelogPage.releases.v242.description": "प्रमुख प्रदर्शन अनुकूलन और बग फ़िक्स।",
+  "changelogPage.releases.v240.date": "1 नवंबर, 2025",
+  "changelogPage.releases.v240.title": "टीम सहयोग",
+  "changelogPage.releases.v240.description": "अपनी टीम के साथ रीयल-टाइम में मिलकर काम करें।",
+  "changelogPage.releases.v230.date": "15 अक्टूबर, 2025",
+  "changelogPage.releases.v230.title": "डेटाबेस इंटीग्रेशन",
+  "changelogPage.releases.v230.description": "अपने ऐप्स को आसानी से डेटाबेस से कनेक्ट करें।",
+  "changelogPage.releases.v220.date": "28 सितंबर, 2025",
+  "changelogPage.releases.v220.title": "कंपोनेंट लाइब्रेरी",
+  "changelogPage.releases.v220.description": "100+ नए कंपोनेंट्स के साथ विस्तारित कंपोनेंट लाइब्रेरी।",
+  "changelogPage.releases.v210.date": "10 सितंबर, 2025",
+  "changelogPage.releases.v210.title": "आसान प्रमाणीकरण",
+  "changelogPage.releases.v210.description": "अपने ऐप्स में सेकंडों में उपयोगकर्ता प्रमाणीकरण जोड़ें।",
+
+  // Dashboard Page
+  "dashboardPage.welcome": "स्वागत है",
+  "dashboardPage.loggedInAs": "आप इस रूप में लॉग इन हैं",
+  "dashboardPage.comingSoon": "जल्द आ रहा है",
+  "dashboardPage.buildingMagic": "हम आपके लिए कुछ अद्भुत बना रहे हैं",
+  "dashboardPage.signOut": "साइन आउट",
+
+  // Settings Page
+  "settingsPage.generalSettings": "सामान्य सेटिंग्स",
+  "settingsPage.timezone": "समय क्षेत्र",
+  "settingsPage.darkMode": "डार्क मोड",
+  "settingsPage.darkModeDesc": "पूरे ऐप में डार्क थीम का उपयोग करें",
+  "settingsPage.notificationPreferences": "सूचना प्राथमिकताएँ",
+  "settingsPage.emailNotifications": "ईमेल सूचनाएँ",
+  "settingsPage.emailNotificationsDesc": "ईमेल के माध्यम से प्रोजेक्ट अपडेट प्राप्त करें",
+  "settingsPage.pushNotifications": "पुश सूचनाएँ",
+  "settingsPage.pushNotificationsDesc": "ब्राउज़र में पुश सूचनाएँ प्राप्त करें",
+  "settingsPage.marketingEmails": "मार्केटिंग ईमेल",
+  "settingsPage.marketingEmailsDesc": "टिप्स, अपडेट और ऑफ़र प्राप्त करें",
+  "settingsPage.securitySettings": "सुरक्षा सेटिंग्स",
+  "settingsPage.passwordLastChanged": "30 दिन पहले बदला गया",
+  "settingsPage.changePassword": "पासवर्ड बदलें",
+  "settingsPage.twoFactorAuth": "दो-कारक प्रमाणीकरण",
+  "settingsPage.twoFactorAuthDesc": "सुरक्षा की एक अतिरिक्त परत जोड़ें",
+  "settingsPage.enable2FA": "2FA सक्षम करें",
+  "settingsPage.activeSessions": "सक्रिय सत्र",
+  "settingsPage.activeSessionsDesc": "अपने सक्रिय सत्रों को प्रबंधित करें",
+  "settingsPage.viewSessions": "सत्र देखें",
+  "settingsPage.dangerZone": "खतरनाक क्षेत्र",
+  "settingsPage.deleteAccount": "खाता हटाएँ",
+  "settingsPage.deleteAccountDesc": "अपना खाता और सभी डेटा स्थायी रूप से हटाएँ",
+  "settingsPage.deleteAccountConfirm": "खाता हटाएँ?",
+  "settingsPage.deleteAccountWarning": "यह क्रिया पूर्ववत नहीं की जा सकती। आपका सभी डेटा स्थायी रूप से हटा दिया जाएगा।",
+
+  // Profile Page
+  "profilePage.editProfile": "प्रोफ़ाइल संपादित करें",
+  "profilePage.fullName": "पूरा नाम",
+  "profilePage.email": "ईमेल",
+  "profilePage.role": "भूमिका",
+  "profilePage.companyOptional": "कंपनी (वैकल्पिक)",
+  "profilePage.companyPlaceholder": "आपकी कंपनी का नाम",
+  "profilePage.avatarColor": "अवतार रंग",
+  "profilePage.memberSince": "सदस्यता तिथि",
+  "profilePage.notSpecified": "निर्दिष्ट नहीं",
+  "profilePage.saveChanges": "परिवर्तन सहेजें",
+  "profilePage.saving": "सहेज रहे हैं...",
+
+  // Billing Page
+  "billingPage.currentPlan": "वर्तमान योजना",
+  "billingPage.upgradeToUnlock": "अधिक सुविधाएँ अनलॉक करने के लिए अपग्रेड करें",
+  "billingPage.planRenews": "आपकी योजना 1 दिसंबर, 2025 को नवीनीकृत होती है",
+  "billingPage.freePlan": "मुफ़्त योजना",
+  "billingPage.active": "सक्रिय",
+  "billingPage.availablePlans": "उपलब्ध योजनाएँ",
+  "billingPage.mostPopular": "सबसे लोकप्रिय",
+  "billingPage.currentPlanLabel": "वर्तमान योजना",
+  "billingPage.upgrade": "अपग्रेड",
+  "billingPage.downgrade": "डाउनग्रेड",
+  "billingPage.paymentMethod": "भुगतान विधि",
+  "billingPage.noPaymentRequired": "मुफ़्त योजना के लिए किसी भुगतान विधि की आवश्यकता नहीं है।",
+  "billingPage.edit": "संपादित करें",
+  "billingPage.billingHistory": "बिलिंग इतिहास",
+  "billingPage.upgradeToTitle": "अपग्रेड करें",
+  "billingPage.upgradeAccessMessage": "आपको सभी सुविधाओं तक तुरंत पहुँच मिलेगी",
+  "billingPage.featuresImmediately": "तुरंत।",
+  "billingPage.confirmUpgrade": "अपग्रेड की पुष्टि करें",
+
+  // Teams Page
+  "teamsPage.badge": "टीम सहयोग",
+  "teamsPage.titleStart": "साथ मिलकर बनाएँ",
+  "teamsPage.titleHighlight": "टीम्स",
+  "teamsPage.subtitle": "अपनी पूरी टीम के लिए AppNode की शक्ति लाएँ। रीयल-टाइम में सहयोग करें, प्रोजेक्ट साझा करें और साथ मिलकर तेज़ी से शिप करें।",
+  "teamsPage.startTeamTrial": "टीम ट्रायल शुरू करें",
+  "teamsPage.enterpriseOptions": "एंटरप्राइज़ विकल्प",
+  "teamsPage.teamWorkspace": "टीम वर्कस्पेस",
+  "teamsPage.online": "ऑनलाइन",
+  "teamsPage.teamProjects": "टीम प्रोजेक्ट्स",
+  "teamsPage.activityTitle": "गतिविधि",
+  "teamsPage.teamFeatures": "टीम सुविधाएँ",
+  "teamsPage.startFreeTeamTrial": "मुफ़्त टीम ट्रायल शुरू करें",
+  "teamsPage.pricing.title": "टीम्स मूल्य निर्धारण",
+  "teamsPage.pricing.subtitle": "सभी आकार की टीमों के लिए सरल, पारदर्शी मूल्य निर्धारण।",
+  "teamsPage.pricing.billedAnnually": "वार्षिक बिलिंग",
+  "teamsPage.pricing.perUserMonth": "प्रति उपयोगकर्ता/माह",
+  "teamsPage.cta.title": "साथ मिलकर बनाने के लिए तैयार हैं?",
+  "teamsPage.cta.subtitle": "अपनी टीम को AppNode पर लाएँ और पहले से कहीं तेज़ी से शिप करें।"
+};
+var count = 0;
+for (var key in translations) { setValue(hi, key, translations[key]); count++; }
+fs.writeFileSync('./src/translations/hi.json', JSON.stringify(hi, null, 2), 'utf8');
+console.log('Phase 6 complete: Updated ' + count + ' translations');

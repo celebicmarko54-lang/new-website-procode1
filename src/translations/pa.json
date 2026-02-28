@@ -365,7 +365,7 @@
       "github": "ਕੋਡ ਹੋਸਟਿੰਗ ਅਤੇ CI/CD",
       "slack": "ਟੀਮ ਮੈਸੇਜਿੰਗ",
       "googleCloud": "ਕਲਾਊਡ ਇਨਫ੍ਰਾਸਟ੍ਰਕਚਰ",
-      "aws": "Amazon Web Services",
+      "aws": "ਐਮਾਜ਼ੋਨ ਵੈੱਬ ਸਰਵਿਸਿਜ਼",
       "anthropic": "Claude AI ਅਸਿਸਟੈਂਟ",
       "vercel": "ਫਰੰਟਐਂਡ ਡਿਪਲੌਇਮੈਂਟ",
       "supabase": "ਬੈਕਐਂਡ ਐਜ਼ ਏ ਸਰਵਿਸ"
@@ -448,9 +448,9 @@
     "title": "ਤੁਰੰਤ ਪਬਲਿਸ਼ ਕਰੋ",
     "titleHighlight": "ਤੁਰੰਤ",
     "subtitle": "ਇੱਕ ਕਲਿੱਕ ਨਾਲ ਆਪਣੀਆਂ ਐਪਸ ਡਿਪਲੌਇ ਕਰੋ। ਕਸਟਮ ਡੋਮੇਨ, SSL ਸਰਟੀਫਿਕੇਟ ਅਤੇ CDN ਪ੍ਰਾਪਤ ਕਰੋ।",
-    "deployNow": "Deploy Now",
+    "deployNow": "ਹੁਣੇ ਡਿਪਲੌਇ ਕਰੋ",
     "featuresTitle": "ਸ਼ਿਪ ਕਰਨ ਲਈ ਸਭ ਕੁਝ",
-    "startDeploying": "Start Deploying",
+    "startDeploying": "ਡਿਪਲੌਇ ਕਰਨਾ ਸ਼ੁਰੂ ਕਰੋ",
     "features": {
       "oneClick": {
         "title": "ਇੱਕ-ਕਲਿੱਕ ਡਿਪਲੌਇ",
@@ -461,12 +461,12 @@
         "description": "ਆਪਣਾ ਡੋਮੇਨ ਜੋੜੋ ਜਾਂ ਸਾਡਾ ਸਬਡੋਮੇਨ ਵਰਤੋ।"
       },
       "ssl": {
-        "title": "Automatic SSL",
-        "description": "Every deployment gets a free SSL certificate."
+        "title": "ਆਟੋਮੈਟਿਕ SSL",
+        "description": "ਹਰ ਡਿਪਲੌਇਮੈਂਟ ਨੂੰ ਮੁਫ਼ਤ SSL ਸਰਟੀਫਿਕੇਟ ਮਿਲਦਾ ਹੈ।"
       },
       "cdn": {
-        "title": "Global CDN",
-        "description": "Your app is served from 34+ edge locations."
+        "title": "ਗਲੋਬਲ CDN",
+        "description": "ਤੁਹਾਡੀ ਐਪ 34+ ਐਜ ਲੋਕੇਸ਼ਨਾਂ ਤੋਂ ਸਰਵ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।"
       },
       "analytics": {
         "title": "ਐਨਾਲਿਟਿਕਸ",
@@ -497,43 +497,43 @@
     "title": "ਸੁਰੱਖਿਆ ਪਹਿਲਾਂ",
     "titleHighlight": "ਪਹਿਲਾਂ",
     "subtitle": "ਭਰੋਸੇ ਨਾਲ ਬਣਾਓ। AppNode ਐਂਟਰਪ੍ਰਾਈਜ਼ ਗ੍ਰੇਡ ਸੁਰੱਖਿਆ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ ਤਾਂ ਜੋ ਤੁਹਾਡਾ ਡੇਟਾ ਸੁਰੱਖਿਅਤ ਰਹੇ।",
-    "enterpriseSolutions": "Enterprise Solutions",
+    "enterpriseSolutions": "ਐਂਟਰਪ੍ਰਾਈਜ਼ ਹੱਲ",
     "securityReport": "ਸੁਰੱਖਿਆ ਰਿਪੋਰਟ",
     "featuresTitle": "ਸੁਰੱਖਿਆ ਫੀਚਰ",
     "badges": {
-      "soc2": "SOC 2 Type II",
-      "gdpr": "GDPR Compliant",
+      "soc2": "SOC 2 ਟਾਈਪ II",
+      "gdpr": "GDPR ਅਨੁਕੂਲ",
       "iso": "ISO 27001",
-      "hipaa": "HIPAA Ready"
+      "hipaa": "HIPAA ਤਿਆਰ"
     },
     "features": {
       "sso": {
         "title": "SSO ਇੰਟੀਗ੍ਰੇਸ਼ਨ",
         "description": "SAML ਅਤੇ OAuth ਨਾਲ ਸਿੰਗਲ ਸਾਈਨ-ਆਨ ਸਪੋਰਟ।",
-        "item1": "SAML 2.0 support",
-        "item2": "Just-in-time provisioning",
-        "item3": "Multi-factor authentication"
+        "item1": "SAML 2.0 ਸਹਾਇਤਾ",
+        "item2": "ਜਸਟ-ਇਨ-ਟਾਈਮ ਪ੍ਰੋਵਿਜ਼ਨਿੰਗ",
+        "item3": "ਮਲਟੀ-ਫੈਕਟਰ ਪ੍ਰਮਾਣੀਕਰਨ"
       },
       "scanning": {
         "title": "ਕਮਜ਼ੋਰੀ ਸਕੈਨਿੰਗ",
         "description": "ਡਿਪੈਂਡੈਂਸੀ ਅਤੇ ਕੋਡ ਦੀ ਆਟੋਮੈਟਿਕ ਸੁਰੱਖਿਆ ਸਕੈਨਿੰਗ।",
-        "item1": "Dependency vulnerability scanning",
-        "item2": "Secret detection",
-        "item3": "OWASP compliance checks"
+        "item1": "ਨਿਰਭਰਤਾ ਕਮਜ਼ੋਰੀ ਸਕੈਨਿੰਗ",
+        "item2": "ਗੁਪਤ ਖੋਜ",
+        "item3": "OWASP ਅਨੁਕੂਲਤਾ ਜਾਂਚ"
       },
       "encryption": {
         "title": "ਐਂਡ-ਟੂ-ਐਂਡ ਇੰਕ੍ਰਿਪਸ਼ਨ",
         "description": "ਤੁਹਾਡਾ ਸਾਰਾ ਡੇਟਾ ਟ੍ਰਾਂਜ਼ਿਟ ਅਤੇ ਰੈਸਟ ਵਿੱਚ ਐਂਕ੍ਰਿਪਟ ਕੀਤਾ ਜਾਂਦਾ ਹੈ।",
-        "item1": "AES-256 encryption at rest",
-        "item2": "TLS 1.3 in transit",
-        "item3": "Customer-managed keys available"
+        "item1": "ਆਰਾਮ ਵਿੱਚ AES-256 ਐਨਕ੍ਰਿਪਸ਼ਨ",
+        "item2": "ਟ੍ਰਾਂਜ਼ਿਟ ਵਿੱਚ TLS 1.3",
+        "item3": "ਗਾਹਕ-ਪ੍ਰਬੰਧਿਤ ਕੁੰਜੀਆਂ ਉਪਲਬਧ"
       },
       "auditLogs": {
-        "title": "Audit Logs",
-        "description": "Complete visibility into all actions taken on your account with detailed audit logs.",
-        "item1": "90-day log retention",
-        "item2": "Export to SIEM",
-        "item3": "Real-time alerts"
+        "title": "ਆਡਿਟ ਲੌਗ",
+        "description": "ਵਿਸਤ੍ਰਿਤ ਆਡਿਟ ਲੌਗ ਨਾਲ ਤੁਹਾਡੇ ਖਾਤੇ 'ਤੇ ਕੀਤੀਆਂ ਸਾਰੀਆਂ ਕਾਰਵਾਈਆਂ ਦੀ ਪੂਰੀ ਦਿੱਖ।",
+        "item1": "90-ਦਿਨ ਲੌਗ ਰੱਖਣ",
+        "item2": "SIEM ਵਿੱਚ ਐਕਸਪੋਰਟ ਕਰੋ",
+        "item3": "ਰੀਅਲ-ਟਾਈਮ ਅਲਰਟ"
       },
       "audit": {
         "title": "ਆਡਿਟ ਲੌਗ",
@@ -558,18 +558,18 @@
   },
   "solutions": {
     "title": "ਹੱਲ",
-    "subtitle": "Tailored solutions for every industry and use case",
+    "subtitle": "ਹਰ ਉਦਯੋਗ ਅਤੇ ਵਰਤੋਂ ਦੇ ਮਾਮਲੇ ਲਈ ਅਨੁਕੂਲਿਤ ਹੱਲ",
     "startup": {
-      "title": "For Startups",
-      "description": "Move fast and build your MVP in days, not months."
+      "title": "ਸਟਾਰਟਅੱਪ ਲਈ",
+      "description": "ਤੇਜ਼ੀ ਨਾਲ ਅੱਗੇ ਵਧੋ ਅਤੇ ਆਪਣਾ MVP ਦਿਨਾਂ ਵਿੱਚ ਬਣਾਓ, ਮਹੀਨਿਆਂ ਵਿੱਚ ਨਹੀਂ।"
     },
     "enterprise": {
-      "title": "For Enterprise",
+      "title": "ਐਂਟਰਪ੍ਰਾਈਜ਼ ਲਈ",
       "description": "ਤਾਮੀਲ, SSO ਅਤੇ ਸਮਰਪਿਤ ਸਹਾਇਤਾ ਨਾਲ ਸੁਰੱਖਿਅਤ ਤਰੀਕੇ ਨਾਲ ਸਕੇਲ ਕਰੋ।"
     },
     "agencies": {
-      "title": "For Agencies",
-      "description": "Deliver client projects faster with white-label solutions."
+      "title": "ਏਜੰਸੀਆਂ ਲਈ",
+      "description": "ਵ੍ਹਾਈਟ-ਲੇਬਲ ਹੱਲਾਂ ਨਾਲ ਕਲਾਇੰਟ ਪ੍ਰੋਜੈਕਟ ਤੇਜ਼ੀ ਨਾਲ ਡਿਲੀਵਰ ਕਰੋ।"
     },
     "founders": {
       "title": "ਬਾਨੀਆਂ ਲਈ",
@@ -605,10 +605,10 @@
     "title": "ਕੀਮਤਾਂ",
     "subtitle": "ਮੁਫ਼ਤ ਸ਼ੁਰੂ ਕਰੋ। ਵਧਣ 'ਤੇ ਅੱਪਗ੍ਰੇਡ ਕਰੋ।",
     "badge": "ਸਧਾਰਨ, ਪਾਰਦਰਸ਼ੀ",
-    "creditInfo": "1 credit = 1 generation",
+    "creditInfo": "1 ਕ੍ਰੈਡਿਟ = 1 ਜਨਰੇਸ਼ਨ",
     "freeTier": {
-      "title": "Free Tier",
-      "subtitle": "Get started without a credit card",
+      "title": "ਮੁਫ਼ਤ ਪੱਧਰ",
+      "subtitle": "ਕ੍ਰੈਡਿਟ ਕਾਰਡ ਤੋਂ ਬਿਨਾਂ ਸ਼ੁਰੂ ਕਰੋ",
       "features": [
         "2 free app generations",
         "Full access to all templates",
@@ -616,28 +616,28 @@
         "Export to GitHub"
       ]
     },
-    "buyCredits": "Buy Credits",
-    "mostPopular": "Most Popular",
-    "credits": "Credits",
-    "perCredit": "per credit",
-    "buyNow": "Buy Now",
+    "buyCredits": "ਕ੍ਰੈਡਿਟ ਖਰੀਦੋ",
+    "mostPopular": "ਸਭ ਤੋਂ ਪ੍ਰਸਿੱਧ",
+    "credits": "ਕ੍ਰੈਡਿਟ",
+    "perCredit": "ਪ੍ਰਤੀ ਕ੍ਰੈਡਿਟ",
+    "buyNow": "ਹੁਣੇ ਖਰੀਦੋ",
     "faq": {
       "title": "ਅਕਸਰ ਪੁੱਛੇ ਜਾਣ ਵਾਲੇ ਸਵਾਲ",
-      "subtitle": "Everything you need to know about our pricing",
-      "q1": "What can I do with credits?",
-      "a1": "Each credit allows you to generate one complete app. You can use credits to create web apps, mobile apps, landing pages, and more using our AI-powered builder.",
-      "q2": "Do credits expire?",
-      "a2": "No! Your purchased credits never expire. Use them whenever you want, at your own pace.",
-      "q3": "Can I get a refund?",
-      "a3": "Yes, we offer a 30-day money-back guarantee for unused credits. Contact our support team for assistance.",
-      "q4": "What payment methods do you accept?",
+      "subtitle": "ਸਾਡੀ ਕੀਮਤ ਬਾਰੇ ਤੁਹਾਨੂੰ ਲੋੜੀਂਦੀ ਹਰ ਚੀਜ਼",
+      "q1": "ਮੈਂ ਕ੍ਰੈਡਿਟ ਨਾਲ ਕੀ ਕਰ ਸਕਦਾ ਹਾਂ?",
+      "a1": "ਹਰ ਕ੍ਰੈਡਿਟ ਤੁਹਾਨੂੰ ਇੱਕ ਪੂਰੀ ਐਪ ਜਨਰੇਟ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਦਿੰਦਾ ਹੈ। ਤੁਸੀਂ ਕ੍ਰੈਡਿਟ ਦੀ ਵਰਤੋਂ ਵੈੱਬ ਐਪਸ, ਮੋਬਾਈਲ ਐਪਸ, ਲੈਂਡਿੰਗ ਪੇਜ, ਅਤੇ ਹੋਰ ਬਣਾਉਣ ਲਈ ਕਰ ਸਕਦੇ ਹੋ।",
+      "q2": "ਕੀ ਕ੍ਰੈਡਿਟ ਦੀ ਮਿਆਦ ਖਤਮ ਹੁੰਦੀ ਹੈ?",
+      "a2": "ਨਹੀਂ! ਤੁਹਾਡੇ ਖਰੀਦੇ ਕ੍ਰੈਡਿਟ ਕਦੇ ਖਤਮ ਨਹੀਂ ਹੁੰਦੇ। ਜਦੋਂ ਚਾਹੋ ਵਰਤੋ, ਆਪਣੀ ਰਫ਼ਤਾਰ ਨਾਲ।",
+      "q3": "ਕੀ ਮੈਨੂੰ ਰਿਫੰਡ ਮਿਲ ਸਕਦਾ ਹੈ?",
+      "a3": "ਹਾਂ, ਅਸੀਂ ਅਣਵਰਤੇ ਕ੍ਰੈਡਿਟ ਲਈ 30-ਦਿਨ ਦੀ ਮਨੀ-ਬੈਕ ਗਾਰੰਟੀ ਦਿੰਦੇ ਹਾਂ। ਸਹਾਇਤਾ ਲਈ ਸਾਡੀ ਸਹਾਇਤਾ ਟੀਮ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।",
+      "q4": "ਤੁਸੀਂ ਕਿਹੜੇ ਭੁਗਤਾਨ ਤਰੀਕੇ ਸਵੀਕਾਰ ਕਰਦੇ ਹੋ?",
       "a4": "We accept all major credit cards (Visa, Mastercard, American Express) and PayPal.",
-      "q5": "How does the free tier work?",
+      "q5": "ਮੁਫ਼ਤ ਪੱਧਰ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ?",
       "a5": "Every new user gets 2 free generations to try AppNode. No credit card required to get started!"
     },
-    "readyToStart": "Ready to get started?",
-    "startWith": "Start building with 2 free generations.",
-    "getStartedFree": "Get Started Free",
+    "readyToStart": "ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਤਿਆਰ ਹੋ?",
+    "startWith": "2 ਮੁਫ਼ਤ ਜਨਰੇਸ਼ਨਾਂ ਨਾਲ ਬਣਾਉਣਾ ਸ਼ੁਰੂ ਕਰੋ।",
+    "getStartedFree": "ਮੁਫ਼ਤ ਸ਼ੁਰੂ ਕਰੋ",
     "free": {
       "name": "ਮੁਫ਼ਤ ਟੀਅਰ",
       "price": "$0",
@@ -692,8 +692,8 @@
     "subtitle": "ਐਂਟਰਪ੍ਰਾਈਜ਼-ਗ੍ਰੇਡ ਸੁਰੱਖਿਆ, ਤਾਮੀਲ ਅਤੇ ਸਮਰਪਿਤ ਸਹਾਇਤਾ।",
     "features": {
       "security": {
-        "title": "Enterprise Security",
-        "description": "SOC 2 Type II certified with advanced encryption and access controls."
+        "title": "ਐਂਟਰਪ੍ਰਾਈਜ਼ ਸੁਰੱਖਿਆ",
+        "description": "ਐਡਵਾਂਸਡ ਐਨਕ੍ਰਿਪਸ਼ਨ ਅਤੇ ਪਹੁੰਚ ਕੰਟਰੋਲ ਨਾਲ SOC 2 ਟਾਈਪ II ਪ੍ਰਮਾਣਿਤ।"
       },
       "sso": {
         "title": "SSO ਅਤੇ SAML",
@@ -708,19 +708,19 @@
         "description": "ਤਰਜੀਹੀ ਸਮਰਪਿਤ ਅਕਾਊਂਟ ਮੈਨੇਜਰ"
       },
       "sla": {
-        "title": "SLA Guarantee",
-        "description": "99.99% uptime SLA with enterprise-grade infrastructure."
+        "title": "SLA ਗਾਰੰਟੀ",
+        "description": "ਐਂਟਰਪ੍ਰਾਈਜ਼-ਗ੍ਰੇਡ ਢਾਂਚੇ ਨਾਲ 99.99% ਅੱਪਟਾਈਮ SLA।"
       },
       "onpremise": {
-        "title": "On-Premise",
-        "description": "Deploy in your own cloud or on-premise environment."
+        "title": "ਆਨ-ਪ੍ਰੈਮਿਸ",
+        "description": "ਆਪਣੇ ਖੁਦ ਦੇ ਕਲਾਊਡ ਜਾਂ ਆਨ-ਪ੍ਰੈਮਿਸ ਵਾਤਾਵਰਨ ਵਿੱਚ ਡਿਪਲੌਇ ਕਰੋ।"
       },
       "deployment": {
         "title": "ਕਸਟਮ ਡਿਪਲੌਇਮੈਂਟ",
         "description": "ਆਪਣੇ ਇਨਫ੍ਰਾ 'ਤੇ ਤੈਨਾਤ ਕਰੋ"
       }
     },
-    "cta": "Talk to Sales",
+    "cta": "ਵਿਕਰੀ ਨਾਲ ਗੱਲ ਕਰੋ",
     "badge": "ਐਂਟਰਪ੍ਰਾਈਜ਼",
     "contactSales": "ਵਿਕਰੀ ਨਾਲ ਸੰਪਰਕ ਕਰੋ",
     "bookDemo": "ਡੈਮੋ ਬੁੱਕ ਕਰੋ",
@@ -729,43 +729,43 @@
   "enterprisePage": {
     "badge": "ਐਂਟਰਪ੍ਰਾਈਜ਼ ਹੱਲ",
     "title": "ਐਂਟਰਪ੍ਰਾਈਜ਼ ਲਈ ਬਣਾਇਆ",
-    "titleHighlight": "enterprise-grade",
-    "titleEnd": "features",
+    "titleHighlight": "ਐਂਟਰਪ੍ਰਾਈਜ਼-ਗ੍ਰੇਡ",
+    "titleEnd": "ਫੀਚਰਸ",
     "subtitle": "ਐਂਟਰਪ੍ਰਾਈਜ਼-ਗ੍ਰੇਡ ਸੁਰੱਖਿਆ, ਤਾਮੀਲ ਅਤੇ ਸਮਰਪਿਤ ਸਹਾਇਤਾ ਨਾਲ ਆਪਣੀ ਸੰਸਥਾ ਨੂੰ ਤਾਕਤ ਦਿਓ।",
-    "viewPricing": "View Pricing",
-    "trustedBy": "TRUSTED BY LEADING COMPANIES",
+    "viewPricing": "ਕੀਮਤ ਵੇਖੋ",
+    "trustedBy": "ਮੋਹਰੀ ਕੰਪਨੀਆਂ ਦੁਆਰਾ ਭਰੋਸੇਯੋਗ",
     "featuresTitle": "ਐਂਟਰਪ੍ਰਾਈਜ਼ ਫੀਚਰ",
     "featuresSubtitle": "ਐਂਟਰਪ੍ਰਾਈਜ਼ ਲੋੜਾਂ ਲਈ ਬਣਾਈ ਗਈ ਸ਼ਕਤੀਸ਼ਾਲੀ ਸਮਰੱਥਾਵਾਂ।",
     "testimonialsTitle": "ਐਂਟਰਪ੍ਰਾਈਜ਼ ਕਲਾਇੰਟ ਕੀ ਕਹਿੰਦੇ ਹਨ",
     "testimonialsSubtitle": "ਦੁਨੀਆ ਭਰ ਦੀਆਂ ਸੰਸਥਾਵਾਂ ਦੁਆਰਾ ਭਰੋਸੇਯੋਗ",
-    "contactTitle": "Get in touch",
-    "contactSubtitle": "Tell us about your team and we'll get back to you within 24 hours.",
-    "thankYou": "Thank you!",
-    "thankYouMessage": "We've received your message and will be in touch soon.",
+    "contactTitle": "ਸੰਪਰਕ ਕਰੋ",
+    "contactSubtitle": "ਸਾਨੂੰ ਆਪਣੀ ਟੀਮ ਬਾਰੇ ਦੱਸੋ ਅਤੇ ਅਸੀਂ 24 ਘੰਟਿਆਂ ਦੇ ਅੰਦਰ ਤੁਹਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰਾਂਗੇ।",
+    "thankYou": "ਧੰਨਵਾਦ!",
+    "thankYouMessage": "ਸਾਨੂੰ ਤੁਹਾਡਾ ਸੁਨੇਹਾ ਮਿਲ ਗਿਆ ਹੈ ਅਤੇ ਅਸੀਂ ਜਲਦੀ ਸੰਪਰਕ ਕਰਾਂਗੇ।",
     "features": {
       "security": {
-        "title": "Enterprise-grade Security",
-        "description": "SOC 2 Type II certified with SSO, SAML, and advanced access controls to keep your data safe."
+        "title": "ਐਂਟਰਪ੍ਰਾਈਜ਼-ਗ੍ਰੇਡ ਸੁਰੱਖਿਆ",
+        "description": "ਤੁਹਾਡੇ ਡਾਟਾ ਨੂੰ ਸੁਰੱਖਿਅਤ ਰੱਖਣ ਲਈ SSO, SAML, ਅਤੇ ਐਡਵਾਂਸਡ ਪਹੁੰਚ ਕੰਟਰੋਲ ਨਾਲ SOC 2 ਟਾਈਪ II ਪ੍ਰਮਾਣਿਤ।"
       },
       "collaboration": {
-        "title": "Team Collaboration",
-        "description": "Unlimited team members, shared workspaces, and real-time collaboration features."
+        "title": "ਟੀਮ ਸਹਿਯੋਗ",
+        "description": "ਅਸੀਮਤ ਟੀਮ ਮੈਂਬਰ, ਸਾਂਝੇ ਵਰਕਸਪੇਸ, ਅਤੇ ਰੀਅਲ-ਟਾਈਮ ਸਹਿਯੋਗ ਫੀਚਰਸ।"
       },
       "performance": {
-        "title": "Priority Performance",
-        "description": "Dedicated infrastructure with guaranteed uptime SLAs and faster build times."
+        "title": "ਤਰਜੀਹੀ ਪ੍ਰਦਰਸ਼ਨ",
+        "description": "ਗਾਰੰਟੀਸ਼ੁਦਾ ਅੱਪਟਾਈਮ SLA ਅਤੇ ਤੇਜ਼ ਬਿਲਡ ਸਮੇਂ ਨਾਲ ਸਮਰਪਿਤ ਢਾਂਚਾ।"
       },
       "support": {
-        "title": "Dedicated Support",
-        "description": "24/7 priority support with dedicated customer success manager and onboarding."
+        "title": "ਸਮਰਪਿਤ ਸਹਾਇਤਾ",
+        "description": "ਸਮਰਪਿਤ ਗਾਹਕ ਸਫਲਤਾ ਮੈਨੇਜਰ ਅਤੇ ਔਨਬੋਰਡਿੰਗ ਨਾਲ 24/7 ਤਰਜੀਹੀ ਸਹਾਇਤਾ।"
       },
       "integrations": {
-        "title": "Custom Integrations",
-        "description": "API access, custom webhooks, and integrations with your existing tools and workflows."
+        "title": "ਕਸਟਮ ਇੰਟੀਗ੍ਰੇਸ਼ਨਾਂ",
+        "description": "API ਪਹੁੰਚ, ਕਸਟਮ ਵੈੱਬਹੁੱਕ, ਅਤੇ ਤੁਹਾਡੇ ਮੌਜੂਦਾ ਟੂਲ ਅਤੇ ਵਰਕਫਲੋ ਨਾਲ ਇੰਟੀਗ੍ਰੇਸ਼ਨਾਂ।"
       },
       "analytics": {
-        "title": "Advanced Analytics",
-        "description": "Detailed usage analytics, audit logs, and compliance reporting for your organization."
+        "title": "ਐਡਵਾਂਸਡ ਵਿਸ਼ਲੇਸ਼ਣ",
+        "description": "ਤੁਹਾਡੀ ਸੰਸਥਾ ਲਈ ਵਿਸਤ੍ਰਿਤ ਵਰਤੋਂ ਵਿਸ਼ਲੇਸ਼ਣ, ਆਡਿਟ ਲੌਗ, ਅਤੇ ਅਨੁਕੂਲਤਾ ਰਿਪੋਰਟਿੰਗ।"
       },
       "teamManagement": {
         "title": "ਟੀਮ ਪ੍ਰਬੰਧਨ",
@@ -795,38 +795,38 @@
     "testimonials": {
       "testimonial1": {
         "quote": "AppNode has transformed how our team builds internal tools. What used to take weeks now takes hours.",
-        "author": "Sarah Chen",
-        "role": "VP of Engineering",
+        "author": "ਸਾਰਾ ਚੇਨ",
+        "role": "ਇੰਜੀਨੀਅਰਿੰਗ ਦੀ VP",
         "company": "TechCorp"
       },
       "testimonial2": {
-        "quote": "The enterprise features give us the security and control we need while keeping the developer experience simple.",
-        "author": "Michael Torres",
+        "quote": "ਐਂਟਰਪ੍ਰਾਈਜ਼ ਫੀਚਰਸ ਸਾਨੂੰ ਲੋੜੀਂਦੀ ਸੁਰੱਖਿਆ ਅਤੇ ਕੰਟਰੋਲ ਦਿੰਦੇ ਹਨ ਜਦੋਂ ਕਿ ਡਿਵੈਲਪਰ ਅਨੁਭਵ ਨੂੰ ਸਰਲ ਰੱਖਦੇ ਹਨ।",
+        "author": "ਮਾਈਕਲ ਟੋਰੇਸ",
         "role": "CTO",
         "company": "FinanceApp"
       },
       "testimonial3": {
-        "quote": "Our design team can now prototype and ship production-ready apps without waiting for engineering resources.",
-        "author": "Emily Watson",
-        "role": "Head of Design",
+        "quote": "ਸਾਡੀ ਡਿਜ਼ਾਈਨ ਟੀਮ ਹੁਣ ਇੰਜੀਨੀਅਰਿੰਗ ਸਰੋਤਾਂ ਦੀ ਉਡੀਕ ਕੀਤੇ ਬਿਨਾਂ ਪ੍ਰੋਡਕਸ਼ਨ-ਰੈਡੀ ਐਪਸ ਦਾ ਪ੍ਰੋਟੋਟਾਈਪ ਅਤੇ ਸ਼ਿਪ ਕਰ ਸਕਦੀ ਹੈ।",
+        "author": "ਐਮਿਲੀ ਵਾਟਸਨ",
+        "role": "ਡਿਜ਼ਾਈਨ ਦੀ ਮੁਖੀ",
         "company": "DesignStudio"
       },
       "testimonial4": {
         "quote": "We migrated our entire admin panel to AppNode in just 2 weeks. The ROI has been incredible for our operations team.",
-        "author": "James Kim",
-        "role": "Director of Operations",
+        "author": "ਜੇਮਜ਼ ਕਿਮ",
+        "role": "ਓਪਰੇਸ਼ਨ ਡਾਇਰੈਕਟਰ",
         "company": "CloudScale"
       },
       "testimonial5": {
-        "quote": "The SSO integration and audit logs were exactly what our compliance team needed. Onboarding was seamless.",
-        "author": "Anika Larsson",
-        "role": "Chief Security Officer",
+        "quote": "SSO ਇੰਟੀਗ੍ਰੇਸ਼ਨ ਅਤੇ ਆਡਿਟ ਲੌਗ ਬਿਲਕੁਲ ਉਹੀ ਸਨ ਜੋ ਸਾਡੀ ਅਨੁਕੂਲਤਾ ਟੀਮ ਨੂੰ ਚਾਹੀਦੇ ਸਨ। ਔਨਬੋਰਡਿੰਗ ਸਹਿਜ ਸੀ।",
+        "author": "ਅਨਿਕਾ ਲਾਰਸਨ",
+        "role": "ਮੁੱਖ ਸੁਰੱਖਿਆ ਅਧਿਕਾਰੀ",
         "company": "SecureBank"
       },
       "testimonial6": {
         "quote": "AppNode's API flexibility allowed us to connect all our existing tools. Our team productivity doubled in the first month.",
-        "author": "Ryan Park",
-        "role": "Engineering Manager",
+        "author": "ਰਾਇਨ ਪਾਰਕ",
+        "role": "ਇੰਜੀਨੀਅਰਿੰਗ ਮੈਨੇਜਰ",
         "company": "DataFlow"
       },
       "t1": {
@@ -846,22 +846,22 @@
       }
     },
     "form": {
-      "fullName": "Full Name",
-      "namePlaceholder": "John Smith",
-      "workEmail": "Work Email",
+      "fullName": "ਪੂਰਾ ਨਾਮ",
+      "namePlaceholder": "ਜੌਨ ਸਮਿਥ",
+      "workEmail": "ਕੰਮ ਦੀ ਈਮੇਲ",
       "emailPlaceholder": "john@company.com",
       "company": "ਕੰਪਨੀ ਦਾ ਨਾਮ",
-      "companyPlaceholder": "Acme Inc.",
+      "companyPlaceholder": "ਐਕਮੀ ਇੰਕ.",
       "teamSize": "ਟੀਮ ਦਾ ਆਕਾਰ",
-      "selectTeamSize": "Select team size",
-      "teamSize1": "1-10 employees",
-      "teamSize2": "11-50 employees",
-      "teamSize3": "51-200 employees",
-      "teamSize4": "201-500 employees",
-      "teamSize5": "500+ employees",
+      "selectTeamSize": "ਟੀਮ ਦਾ ਆਕਾਰ ਚੁਣੋ",
+      "teamSize1": "1-10 ਕਰਮਚਾਰੀ",
+      "teamSize2": "11-50 ਕਰਮਚਾਰੀ",
+      "teamSize3": "51-200 ਕਰਮਚਾਰੀ",
+      "teamSize4": "201-500 ਕਰਮਚਾਰੀ",
+      "teamSize5": "500+ ਕਰਮਚਾਰੀ",
       "message": "ਸੁਨੇਹਾ",
-      "messagePlaceholder": "Tell us about your use case and requirements...",
-      "sending": "Sending...",
+      "messagePlaceholder": "ਸਾਨੂੰ ਆਪਣੇ ਵਰਤੋਂ ਦੇ ਮਾਮਲੇ ਅਤੇ ਲੋੜਾਂ ਬਾਰੇ ਦੱਸੋ...",
+      "sending": "ਭੇਜਿਆ ਜਾ ਰਿਹਾ ਹੈ...",
       "title": "ਐਂਟਰਪ੍ਰਾਈਜ਼ ਰਜਿਸਟ੍ਰੇਸ਼ਨ",
       "subtitle": "ਆਪਣੀ ਜਾਣਕਾਰੀ ਭਰੋ ਅਤੇ ਸਾਡੀ ਟੀਮ 24 ਘੰਟਿਆਂ ਵਿੱਚ ਸੰਪਰਕ ਕਰੇਗੀ।",
       "firstName": "ਪਹਿਲਾ ਨਾਮ",
@@ -876,7 +876,7 @@
         "enterprise": "1000+ ਕਰਮਚਾਰੀ"
       }
     },
-    "trustedByText": "Trusted by leading teams and companies worldwide",
+    "trustedByText": "ਦੁਨੀਆ ਭਰ ਦੀਆਂ ਮੋਹਰੀ ਟੀਮਾਂ ਅਤੇ ਕੰਪਨੀਆਂ ਦੁਆਰਾ ਭਰੋਸੇਯੋਗ",
     "contactSales": "ਵਿਕਰੀ ਨਾਲ ਸੰਪਰਕ ਕਰੋ",
     "bookDemo": "ਡੈਮੋ ਬੁੱਕ ਕਰੋ",
     "trustedTitle": "ਅਗਾਂਹਵਧੂ ਕੰਪਨੀਆਂ ਦੁਆਰਾ ਭਰੋਸੇਯੋਗ",
@@ -923,34 +923,48 @@
     }
   },
   "auth": {
-    "login": "ਲੌਗ ਇਨ",
+    "login": {
+      "title": "ਵਾਪਸ ਸੁਆਗਤ ਹੈ",
+      "subtitle": "ਆਪਣੇ AppNode ਖਾਤੇ ਵਿੱਚ ਸਾਈਨ ਇਨ ਕਰੋ",
+      "email": "ਈਮੇਲ ਪਤਾ",
+      "password": "ਪਾਸਵਰਡ",
+      "forgotPassword": "ਪਾਸਵਰਡ ਭੁੱਲ ਗਏ?",
+      "noAccount": "ਖਾਤਾ ਨਹੀਂ ਹੈ?",
+      "signUpLink": "ਸਾਈਨ ਅੱਪ ਕਰੋ",
+      "invalidCredentials": "ਗਲਤ ਈਮੇਲ ਜਾਂ ਪਾਸਵਰਡ",
+      "loggingIn": "ਲੌਗ ਇਨ ਹੋ ਰਿਹਾ ਹੈ...",
+      "orContinueWith": "ਜਾਂ ਇਸ ਨਾਲ ਜਾਰੀ ਰੱਖੋ",
+      "decorativeTitle": "ਕੁਝ ਵੀ ਬਣਾਓ।",
+      "decorativeSubtitle": "ਪਹਿਲਾਂ ਨਾਲੋਂ ਤੇਜ਼।",
+      "decorativeDescription": "AI ਨਾਲ ਐਪਸ ਬਣਾਉਣ ਦਾ ਦੁਨੀਆ ਦਾ ਸਭ ਤੋਂ ਸਰਲ ਤਰੀਕਾ।"
+    },
     "signup": {
-      "title": "Create your account",
+      "title": "ਆਪਣਾ ਖਾਤਾ ਬਣਾਓ",
       "subtitle": "Start building with AppNode today",
-      "name": "Full name",
-      "email": "Email address",
-      "password": "Password",
-      "confirmPassword": "Confirm password",
-      "hasAccount": "Already have an account?",
-      "loginLink": "Log in",
-      "terms": "By signing up, you agree to our Terms of Service and Privacy Policy.",
-      "decorativeTitle": "Start building today",
-      "decorativeDescription": "Create your free account and start building amazing applications with AI in minutes.",
-      "step2Title": "Personalize your profile",
-      "step2Subtitle": "Choose an avatar color that represents you",
-      "step3Title": "Tell us about yourself",
-      "step3Subtitle": "This helps us personalize your experience",
-      "roleQuestion": "What best describes your role?",
-      "company": "Company name",
-      "creatingAccount": "Creating account...",
-      "createAccount": "Create account"
+      "name": "ਪੂਰਾ ਨਾਮ",
+      "email": "ਈਮੇਲ ਪਤਾ",
+      "password": "ਪਾਸਵਰਡ",
+      "confirmPassword": "ਪਾਸਵਰਡ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ",
+      "hasAccount": "ਪਹਿਲਾਂ ਹੀ ਖਾਤਾ ਹੈ?",
+      "loginLink": "ਲੌਗ ਇਨ ਕਰੋ",
+      "terms": "ਸਾਈਨ ਅੱਪ ਕਰਕੇ, ਤੁਸੀਂ ਸਾਡੀਆਂ ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ ਅਤੇ ਗੋਪਨੀਯਤਾ ਨੀਤੀ ਨਾਲ ਸਹਿਮਤ ਹੁੰਦੇ ਹੋ।",
+      "decorativeTitle": "ਅੱਜ ਹੀ ਬਣਾਉਣਾ ਸ਼ੁਰੂ ਕਰੋ",
+      "decorativeDescription": "ਆਪਣਾ ਮੁਫ਼ਤ ਖਾਤਾ ਬਣਾਓ ਅਤੇ ਮਿੰਟਾਂ ਵਿੱਚ AI ਨਾਲ ਸ਼ਾਨਦਾਰ ਐਪਲੀਕੇਸ਼ਨਾਂ ਬਣਾਉਣਾ ਸ਼ੁਰੂ ਕਰੋ।",
+      "step2Title": "ਆਪਣੀ ਪ੍ਰੋਫਾਈਲ ਨੂੰ ਨਿੱਜੀ ਬਣਾਓ",
+      "step2Subtitle": "ਇੱਕ ਅਵਤਾਰ ਰੰਗ ਚੁਣੋ ਜੋ ਤੁਹਾਨੂੰ ਦਰਸਾਉਂਦਾ ਹੈ",
+      "step3Title": "ਸਾਨੂੰ ਆਪਣੇ ਬਾਰੇ ਦੱਸੋ",
+      "step3Subtitle": "ਇਹ ਸਾਨੂੰ ਤੁਹਾਡੇ ਅਨੁਭਵ ਨੂੰ ਨਿੱਜੀ ਬਣਾਉਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ",
+      "roleQuestion": "ਤੁਹਾਡੀ ਭੂਮਿਕਾ ਨੂੰ ਸਭ ਤੋਂ ਵਧੀਆ ਕੀ ਦੱਸਦਾ ਹੈ?",
+      "company": "ਕੰਪਨੀ ਦਾ ਨਾਮ",
+      "creatingAccount": "ਖਾਤਾ ਬਣਾਇਆ ਜਾ ਰਿਹਾ ਹੈ...",
+      "createAccount": "ਖਾਤਾ ਬਣਾਓ"
     },
     "features": {
-      "aiPowered": "AI-powered development",
-      "shipFast": "Ship in minutes, not months",
-      "freeGenerations": "2 free generations to start",
-      "noCreditCard": "No credit card required",
-      "fullAccess": "Full access to all templates"
+      "aiPowered": "AI-ਸੰਚਾਲਿਤ ਡਿਵੈਲਪਮੈਂਟ",
+      "shipFast": "ਮਿੰਟਾਂ ਵਿੱਚ ਸ਼ਿਪ ਕਰੋ, ਮਹੀਨਿਆਂ ਵਿੱਚ ਨਹੀਂ",
+      "freeGenerations": "ਸ਼ੁਰੂ ਕਰਨ ਲਈ 2 ਮੁਫ਼ਤ ਜਨਰੇਸ਼ਨਾਂ",
+      "noCreditCard": "ਕ੍ਰੈਡਿਟ ਕਾਰਡ ਦੀ ਲੋੜ ਨਹੀਂ",
+      "fullAccess": "ਸਾਰੇ ਟੈਂਪਲੇਟਾਂ ਤੱਕ ਪੂਰੀ ਪਹੁੰਚ"
     },
     "welcome": "ਵਾਪਸੀ 'ਤੇ ਜੀ ਆਇਆਂ ਨੂੰ",
     "loginSubtitle": "ਆਪਣੇ AppNode ਖਾਤੇ ਵਿੱਚ ਲੌਗ ਇਨ ਕਰੋ",
@@ -994,20 +1008,20 @@
     "gettingStarted": "ਸ਼ੁਰੂ ਕਰਨਾ",
     "tutorials": "ਟਿਊਟੋਰੀਅਲ",
     "apiReference": "API ਹਵਾਲਾ",
-    "examples": "Examples",
+    "examples": "ਉਦਾਹਰਨਾਂ",
     "searchPlaceholder": "ਦਸਤਾਵੇਜ਼ ਖੋਜੋ...",
     "changelog": "ਤਬਦੀਲੀ ਲੌਗ"
   },
   "blog": {
     "title": "ਬਲਾਗ",
     "subtitle": "ਨਵੀਨਤਮ ਖ਼ਬਰਾਂ, ਟਿਊਟੋਰੀਅਲ ਅਤੇ ਅੱਪਡੇਟ",
-    "readTime": "min read",
+    "readTime": "ਮਿੰਟ ਪੜ੍ਹੋ",
     "categories": {
       "all": "ਸਭ",
-      "product": "Product",
-      "engineering": "Engineering",
+      "product": "ਉਤਪਾਦ",
+      "engineering": "ਇੰਜੀਨੀਅਰਿੰਗ",
       "community": "ਭਾਈਚਾਰਾ",
-      "tutorials": "Tutorials"
+      "tutorials": "ਟਿਊਟੋਰੀਅਲ"
     },
     "readMore": "ਹੋਰ ਪੜ੍ਹੋ",
     "featured": "ਫੀਚਰਡ",
@@ -1020,18 +1034,18 @@
     "benefits": {
       "title": "ਫਾਇਦੇ",
       "remote": "ਰਿਮੋਟ-ਫਸਟ ਕੰਮ",
-      "remoteDesc": "Work from anywhere in the world",
+      "remoteDesc": "ਦੁਨੀਆ ਵਿੱਚ ਕਿਤੋਂ ਵੀ ਕੰਮ ਕਰੋ",
       "equity": "ਇਕੁਇਟੀ ਤਨਖ਼ਾਹ",
-      "equityDesc": "Share in our success",
+      "equityDesc": "ਸਾਡੀ ਸਫਲਤਾ ਵਿੱਚ ਹਿੱਸਾ ਲਓ",
       "health": "ਸਿਹਤ ਬੀਮਾ",
-      "healthDesc": "Comprehensive coverage for you and your family",
+      "healthDesc": "ਤੁਹਾਡੇ ਅਤੇ ਤੁਹਾਡੇ ਪਰਿਵਾਰ ਲਈ ਵਿਆਪਕ ਕਵਰੇਜ",
       "learning": "ਸਿੱਖਣ ਦਾ ਬਜਟ",
-      "learningDesc": "Invest in your growth",
+      "learningDesc": "ਆਪਣੇ ਵਿਕਾਸ ਵਿੱਚ ਨਿਵੇਸ਼ ਕਰੋ",
       "vacation": "ਅਸੀਮਤ PTO",
       "equipment": "ਉਪਕਰਨ ਭੱਤਾ"
     },
     "noPositions": "ਇਸ ਸਮੇਂ ਕੋਈ ਅਸਾਮੀ ਉਪਲਬਧ ਨਹੀਂ",
-    "applyNow": "Apply Now",
+    "applyNow": "ਹੁਣੇ ਅਰਜ਼ੀ ਦਿਓ",
     "department": "ਵਿਭਾਗ",
     "location": "ਸਥਾਨ",
     "type": "ਕਿਸਮ"
@@ -1041,24 +1055,33 @@
     "subtitle": "ਜੁੜੋ, ਸਿੱਖੋ ਅਤੇ ਹੋਰ ਬਿਲਡਰਾਂ ਨਾਲ ਮਿਲ ਕੇ ਬਣਾਓ",
     "discord": "Join our Discord",
     "forum": "ਫੋਰਮ",
-    "showcase": "Project Showcase",
-    "events": "Upcoming Events",
+    "showcase": "ਪ੍ਰੋਜੈਕਟ ਸ਼ੋਅਕੇਸ",
+    "events": "ਆਉਣ ਵਾਲੇ ਇਵੈਂਟ",
     "joinDiscord": "Discord ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ",
     "contribute": "ਯੋਗਦਾਨ ਦਿਓ"
   },
   "support": {
     "title": "ਸਹਾਇਤਾ",
     "subtitle": "ਅਸੀਂ ਕਿਵੇਂ ਮਦਦ ਕਰ ਸਕਦੇ ਹਾਂ?",
-    "helpCenter": "Help Center",
+    "helpCenter": "ਮਦਦ ਕੇਂਦਰ",
     "contactUs": "ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ",
-    "status": "System Status",
+    "status": "ਸਿਸਟਮ ਸਥਿਤੀ",
     "faq": "ਅਕਸਰ ਪੁੱਛੇ ਜਾਣ ਵਾਲੇ ਸਵਾਲ",
     "searchPlaceholder": "ਮਦਦ ਖੋਜੋ..."
   },
   "legal": {
-    "terms": "ਸ਼ਰਤਾਂ",
-    "privacy": "ਗੋਪਨੀਯਤਾ",
-    "cookies": "ਕੂਕੀਜ਼",
+    "terms": {
+      "title": "ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ",
+      "lastUpdated": "ਆਖਰੀ ਅੱਪਡੇਟ"
+    },
+    "privacy": {
+      "title": "ਗੋਪਨੀਯਤਾ ਨੀਤੀ",
+      "lastUpdated": "ਆਖਰੀ ਅੱਪਡੇਟ"
+    },
+    "cookies": {
+      "title": "ਕੂਕੀ ਨੀਤੀ",
+      "lastUpdated": "ਆਖਰੀ ਅੱਪਡੇਟ"
+    },
     "rules": "ਨਿਯਮ",
     "lastUpdated": "ਆਖਰੀ ਅੱਪਡੇਟ",
     "effectiveDate": "ਪ੍ਰਭਾਵੀ ਤਾਰੀਖ"
@@ -1067,21 +1090,21 @@
     "title": "ਸਿਸਟਮ ਸਥਿਤੀ",
     "operational": "ਚਾਲੂ",
     "degraded": "ਘਟੀ ਕਾਰਗੁਜ਼ਾਰੀ",
-    "outage": "Service Outage",
-    "maintenance": "Under Maintenance",
+    "outage": "ਸੇਵਾ ਬੰਦ",
+    "maintenance": "ਮੇਨਟੇਨੈਂਸ ਅਧੀਨ",
     "down": "ਬੰਦ",
     "allOperational": "ਸਾਰੇ ਸਿਸਟਮ ਚਾਲੂ ਹਨ"
   },
   "errors": {
     "404": {
       "title": "ਪੰਨਾ ਨਹੀਂ ਮਿਲਿਆ",
-      "description": "The page you're looking for doesn't exist.",
-      "backHome": "Go Back Home"
+      "description": "ਜੋ ਪੰਨਾ ਤੁਸੀਂ ਲੱਭ ਰਹੇ ਹੋ ਉਹ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।",
+      "backHome": "ਘਰ ਵਾਪਸ ਜਾਓ"
     },
     "500": {
-      "title": "Something Went Wrong",
-      "description": "We're working on fixing this. Please try again later.",
-      "retry": "Try Again"
+      "title": "ਕੁਝ ਗਲਤ ਹੋ ਗਿਆ",
+      "description": "ਅਸੀਂ ਇਸਨੂੰ ਠੀਕ ਕਰਨ 'ਤੇ ਕੰਮ ਕਰ ਰਹੇ ਹਾਂ। ਕਿਰਪਾ ਕਰਕੇ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+      "retry": "ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ"
     },
     "notFound": "ਪੇਜ ਨਹੀਂ ਮਿਲਿਆ",
     "serverError": "ਸਰਵਰ ਗਲਤੀ",
@@ -1090,65 +1113,52 @@
     "tryAgain": "ਫੇਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ"
   },
   "supportPage": {
-    "heroTitle": "How can we help?",
-    "heroSubtitle": "Search our knowledge base or browse categories below",
+    "heroTitle": "ਅਸੀਂ ਕਿਵੇਂ ਮਦਦ ਕਰ ਸਕਦੇ ਹਾਂ?",
+    "heroSubtitle": "ਸਾਡੇ ਗਿਆਨ ਅਧਾਰ ਵਿੱਚ ਖੋਜੋ ਜਾਂ ਹੇਠਾਂ ਸ਼੍ਰੇਣੀਆਂ ਬ੍ਰਾਊਜ਼ ਕਰੋ",
     "searchPlaceholder": "ਕੋਈ ਸਵਾਲ ਪੁੱਛੋ ਜਾਂ ਵਿਸ਼ਾ ਖੋਜੋ...",
-    "browseByCategory": "Browse by Category",
-    "popularArticles": "Popular Articles",
-    "needMoreHelp": "Need more help?",
-    "needMoreHelpDescription": "Can't find what you're looking for? Our support team is here to help.",
-    "chatWithSupport": "Chat with Support",
-    "emailSupport": "Email Support",
-    "faq": {
-      "title": "ਅਕਸਰ ਪੁੱਛੇ ਜਾਣ ਵਾਲੇ ਸਵਾਲ",
-      "q1": "AppNode ਕੀ ਹੈ?",
-      "q2": "ਕੀਮਤ ਕਿੰਨੀ ਹੈ?",
-      "q3": "ਕੀ ਮੈਂ ਆਪਣਾ ਕੋਡ ਐਕਸਪੋਰਟ ਕਰ ਸਕਦਾ/ਸਕਦੀ ਹਾਂ?",
-      "q4": "ਕੀ ਮੈਨੂੰ ਕੋਡਿੰਗ ਦਾ ਤਜਰਬਾ ਚਾਹੀਦਾ ਹੈ?",
-      "q5": "ਕਿਹੜੀ ਤਕਨਾਲੋਜੀ ਸਟੈਕ ਵਰਤੀ ਜਾਂਦੀ ਹੈ?",
-      "q6": "ਕੀ ਮੈਂ ਆਪਣੀ ਐਪ ਡਿਪਲੌਇ ਕਰ ਸਕਦਾ/ਸਕਦੀ ਹਾਂ?",
-      "q7": "ਕੀ ਕਸਟਮ ਡੋਮੇਨ ਸਹਿਯੋਗੀ ਹਨ?",
-      "q8": "ਕੀ ਟੀਮ ਸਹਿਯੋਗ ਉਪਲਬਧ ਹੈ?",
-      "q9": "ਕੀ ਕੋਈ API ਹੈ?",
-      "q10": "ਮੈਂ ਆਪਣਾ ਖਾਤਾ ਕਿਵੇਂ ਮਿਟਾਵਾਂ?",
-      "q11": "ਮੈਂ ਪਾਸਵਰਡ ਕਿਵੇਂ ਰੀਸੈੱਟ ਕਰਾਂ?",
-      "q12": "ਮੈਂ ਬੱਗ ਕਿਵੇਂ ਰਿਪੋਰਟ ਕਰਾਂ?",
-      "q13": "ਬਿਲਿੰਗ ਬਾਰੇ ਕੀ?",
-      "q14": "ਕੀ ਕੋਈ ਸਵਾਗਤ ਸੁਨੇਹਾ ਹੈ?"
-    },
-    "stillHaveQuestions": "Still Have Questions?",
-    "stillHaveQuestionsDescription": "Our team is ready to help you succeed. Reach out anytime.",
-    "viewGallery": "View Gallery",
-    "joinCommunity": "Join Community",
-    "browseGuides": "Browse Guides",
-    "articles": "articles",
+    "browseByCategory": "ਸ਼੍ਰੇਣੀ ਅਨੁਸਾਰ ਬ੍ਰਾਊਜ਼ ਕਰੋ",
+    "popularArticles": "ਪ੍ਰਸਿੱਧ ਲੇਖ",
+    "needMoreHelp": "ਹੋਰ ਮਦਦ ਚਾਹੀਦੀ ਹੈ?",
+    "needMoreHelpDescription": "ਜੋ ਲੱਭ ਰਹੇ ਹੋ ਨਹੀਂ ਮਿਲ ਰਿਹਾ? ਸਾਡੀ ਸਹਾਇਤਾ ਟੀਮ ਮਦਦ ਲਈ ਤਿਆਰ ਹੈ।",
+    "chatWithSupport": "ਸਹਾਇਤਾ ਨਾਲ ਚੈਟ ਕਰੋ",
+    "emailSupport": "ਈਮੇਲ ਸਹਾਇਤਾ",
+    "faq": "ਅਕਸਰ ਪੁੱਛੇ ਜਾਣ ਵਾਲੇ ਸਵਾਲ",
+    "stillHaveQuestions": "ਅਜੇ ਵੀ ਸਵਾਲ ਹਨ?",
+    "stillHaveQuestionsDescription": "ਸਾਡੀ ਟੀਮ ਤੁਹਾਡੀ ਸਫਲਤਾ ਵਿੱਚ ਮਦਦ ਕਰਨ ਲਈ ਤਿਆਰ ਹੈ। ਕਿਸੇ ਵੀ ਸਮੇਂ ਸੰਪਰਕ ਕਰੋ।",
+    "viewGallery": "ਗੈਲਰੀ ਵੇਖੋ",
+    "joinCommunity": "ਭਾਈਚਾਰੇ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ",
+    "browseGuides": "ਗਾਈਡ ਬ੍ਰਾਊਜ਼ ਕਰੋ",
+    "articles": "ਲੇਖ",
     "quickActions": {
-      "gettingStarted": "Getting Started",
-      "pricing": "Pricing",
-      "exportCode": "Export Code",
-      "liveAgent": "Live Agent"
+      "gettingStarted": "ਸ਼ੁਰੂਆਤ ਕਰੋ",
+      "pricing": "ਕੀਮਤ",
+      "exportCode": "ਕੋਡ ਐਕਸਪੋਰਟ ਕਰੋ",
+      "liveAgent": "ਲਾਈਵ ਏਜੰਟ"
     },
     "categories": {
-      "gettingStarted": "ਸ਼ੁਰੂ ਕਰਨਾ",
+      "gettingStarted": {
+        "name": "ਸ਼ੁਰੂਆਤ ਕਰੋ",
+        "description": "AppNode ਵਿੱਚ ਨਵੇਂ ਹੋ? ਇੱਥੋਂ ਸ਼ੁਰੂ ਕਰੋ"
+      },
       "accountBilling": {
-        "name": "Account & Billing",
-        "description": "Manage your subscription and payments"
+        "name": "ਖਾਤਾ ਅਤੇ ਬਿਲਿੰਗ",
+        "description": "ਆਪਣੀ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਅਤੇ ਭੁਗਤਾਨ ਪ੍ਰਬੰਧਿਤ ਕਰੋ"
       },
       "buildingApps": {
-        "name": "Building Apps",
-        "description": "Learn how to create amazing apps"
+        "name": "ਐਪਸ ਬਣਾਉਣਾ",
+        "description": "ਸ਼ਾਨਦਾਰ ਐਪਸ ਬਣਾਉਣਾ ਸਿੱਖੋ"
       },
       "customization": {
-        "name": "Customization",
-        "description": "Style and personalize your projects"
+        "name": "ਕਸਟਮਾਈਜ਼ੇਸ਼ਨ",
+        "description": "ਆਪਣੇ ਪ੍ਰੋਜੈਕਟਾਂ ਨੂੰ ਸਟਾਈਲ ਅਤੇ ਨਿੱਜੀ ਬਣਾਓ"
       },
       "integrations": {
-        "name": "Integrations",
-        "description": "Connect with third-party services"
+        "name": "ਇੰਟੀਗ੍ਰੇਸ਼ਨਾਂ",
+        "description": "ਤੀਜੀ-ਧਿਰ ਸੇਵਾਵਾਂ ਨਾਲ ਜੁੜੋ"
       },
       "troubleshooting": {
-        "name": "Troubleshooting",
-        "description": "Fix common issues and errors"
+        "name": "ਸਮੱਸਿਆ ਹੱਲ",
+        "description": "ਆਮ ਸਮੱਸਿਆਵਾਂ ਅਤੇ ਗਲਤੀਆਂ ਠੀਕ ਕਰੋ"
       },
       "gettingStartedDesc": "ਮੂਲ ਗੱਲਾਂ ਅਤੇ ਆਪਣੀ ਪਹਿਲੀ ਐਪ ਬਣਾਉਣਾ ਸਿੱਖੋ",
       "billing": "ਬਿਲਿੰਗ ਅਤੇ ਯੋਜਨਾਵਾਂ",
@@ -1163,12 +1173,12 @@
       "deploymentDesc": "ਆਪਣੀ ਐਪ ਲਾਂਚ ਅਤੇ ਹੋਸਟ ਕਰਨਾ"
     },
     "popularArticlesList": {
-      "firstApp": "How to create your first app",
-      "promptEngineering": "Understanding prompt engineering",
-      "customDomain": "Connecting a custom domain",
-      "exportCode": "Exporting your project code",
-      "teamCollab": "Team collaboration features",
-      "apiAuth": "API authentication setup"
+      "firstApp": "ਆਪਣੀ ਪਹਿਲੀ ਐਪ ਕਿਵੇਂ ਬਣਾਈਏ",
+      "promptEngineering": "ਪ੍ਰੌਂਪਟ ਇੰਜੀਨੀਅਰਿੰਗ ਨੂੰ ਸਮਝਣਾ",
+      "customDomain": "ਕਸਟਮ ਡੋਮੇਨ ਜੋੜਨਾ",
+      "exportCode": "ਆਪਣੇ ਪ੍ਰੋਜੈਕਟ ਕੋਡ ਨੂੰ ਐਕਸਪੋਰਟ ਕਰਨਾ",
+      "teamCollab": "ਟੀਮ ਸਹਿਯੋਗ ਫੀਚਰਸ",
+      "apiAuth": "API ਪ੍ਰਮਾਣੀਕਰਨ ਸੈੱਟਅੱਪ"
     },
     "faqs": {
       "whatIsAppNode": {
@@ -1176,20 +1186,20 @@
         "answer": "AppNode is an AI-powered platform that lets you build web applications by simply describing what you want in natural language."
       },
       "codingExperience": {
-        "question": "Do I need coding experience?",
+        "question": "ਕੀ ਮੈਨੂੰ ਕੋਡਿੰਗ ਅਨੁਭਵ ਦੀ ਲੋੜ ਹੈ?",
         "answer": "No! AppNode is designed for everyone. You can create professional apps without writing any code."
       },
       "exportCode": {
-        "question": "Can I export my code?",
-        "answer": "Yes, you can export your complete project code at any time. You own everything you create."
+        "question": "ਕੀ ਮੈਂ ਆਪਣਾ ਕੋਡ ਐਕਸਪੋਰਟ ਕਰ ਸਕਦਾ ਹਾਂ?",
+        "answer": "ਹਾਂ, ਤੁਸੀਂ ਕਿਸੇ ਵੀ ਸਮੇਂ ਆਪਣਾ ਪੂਰਾ ਪ੍ਰੋਜੈਕਟ ਕੋਡ ਐਕਸਪੋਰਟ ਕਰ ਸਕਦੇ ਹੋ। ਤੁਸੀਂ ਜੋ ਵੀ ਬਣਾਉਂਦੇ ਹੋ ਉਸ ਦੇ ਮਾਲਕ ਹੋ।"
       },
       "technologies": {
         "question": "What technologies does AppNode use?",
         "answer": "AppNode generates modern React/Next.js applications with Tailwind CSS styling."
       },
       "freePlan": {
-        "question": "Is there a free plan?",
-        "answer": "Yes! We offer a generous free tier that lets you build and deploy apps at no cost."
+        "question": "ਕੀ ਕੋਈ ਮੁਫ਼ਤ ਯੋਜਨਾ ਹੈ?",
+        "answer": "ਹਾਂ! ਅਸੀਂ ਇੱਕ ਵਧੀਆ ਮੁਫ਼ਤ ਪੱਧਰ ਦਿੰਦੇ ਹਾਂ ਜੋ ਤੁਹਾਨੂੰ ਬਿਨਾਂ ਕਿਸੇ ਲਾਗਤ ਦੇ ਐਪਸ ਬਣਾਉਣ ਅਤੇ ਡਿਪਲੌਇ ਕਰਨ ਦਿੰਦਾ ਹੈ।"
       }
     },
     "badge": "ਸਹਾਇਤਾ ਕੇਂਦਰ",
@@ -1231,21 +1241,167 @@
       "password": "ਲੌਗਿਨ ਪੇਜ 'ਤੇ 'ਪਾਸਵਰਡ ਭੁੱਲ ਗਏ?' 'ਤੇ ਕਲਿੱਕ ਕਰੋ।",
       "bug": "support@appnode.ai 'ਤੇ ਬੱਗ ਰਿਪੋਰਟ ਕਰੋ।",
       "billing": "ਸਾਰੇ ਬਿਲਿੰਗ ਸਵਾਲ billing@appnode.ai 'ਤੇ ਭੇਜੋ।",
-      "greeting": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ! ਅੱਜ ਮੈਂ ਤੁਹਾਡੀ ਕਿਵੇਂ ਮਦਦ ਕਰ ਸਕਦਾ ਹਾਂ?"
-    }
+      "greeting": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ! ਅੱਜ ਮੈਂ ਤੁਹਾਡੀ ਕਿਵੇਂ ਮਦਦ ਕਰ ਸਕਦਾ ਹਾਂ?",
+      "thanks": "ਤੁਹਾਡਾ ਸੁਆਗਤ ਹੈ! ਕੀ ਮੈਂ ਤੁਹਾਡੀ ਕਿਸੇ ਹੋਰ ਚੀਜ਼ ਵਿੱਚ ਮਦਦ ਕਰ ਸਕਦਾ ਹਾਂ? 😊",
+      "goodbye": "ਸਾਡੇ ਨਾਲ ਗੱਲ ਕਰਨ ਲਈ ਧੰਨਵਾਦ! ਜੇ ਭਵਿੱਖ ਵਿੱਚ ਤੁਹਾਡੇ ਕੋਈ ਹੋਰ ਸਵਾਲ ਹਨ, ਤਾਂ ਸੰਪਰਕ ਕਰਨ ਤੋਂ ਨਾ ਝਿਜਕੋ। ਸ਼ੁਭ ਦਿਨ! 👋"
+    },
+    "quickActionMessages": {
+      "gettingStartedMsg": "ਮੈਂ AppNode ਨਾਲ ਕਿਵੇਂ ਸ਼ੁਰੂ ਕਰਾਂ?",
+      "pricingMsg": "ਕੀਮਤ ਦੇ ਕੀ ਵਿਕਲਪ ਹਨ?",
+      "exportCodeMsg": "ਕੀ ਮੈਂ ਆਪਣਾ ਕੋਡ ਐਕਸਪੋਰਟ ਕਰ ਸਕਦਾ ਹਾਂ?",
+      "liveAgentMsg": "ਮੈਂ ਇੱਕ ਲਾਈਵ ਏਜੰਟ ਨਾਲ ਗੱਲ ਕਰਨਾ ਚਾਹੁੰਦਾ ਹਾਂ"
+    },
+    "chatUi": {
+      "noDescription": "ਕੋਈ ਵਾਧੂ ਵੇਰਵਾ ਨਹੀਂ ਦਿੱਤਾ ਗਿਆ",
+      "confirmationMsg": "✅ ਤੁਹਾਡੀ ਗੱਲਬਾਤ ਸਾਡੀ ਸਹਾਇਤਾ ਟੀਮ ਨੂੰ contact@appnode.ai 'ਤੇ ਭੇਜ ਦਿੱਤੀ ਗਈ ਹੈ। ਅਸੀਂ ਜਲਦੀ ਤੋਂ ਜਲਦੀ ਤੁਹਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰਾਂਗੇ!\n\nਆਮ ਜਵਾਬ ਸਮਾਂ: 24 ਘੰਟਿਆਂ ਦੇ ਅੰਦਰ (ਕਾਰੋਬਾਰੀ ਸਮੇਂ ਦੌਰਾਨ ਅਕਸਰ ਬਹੁਤ ਤੇਜ਼)।",
+      "namePlaceholder": "ਤੁਹਾਡਾ ਨਾਮ",
+      "emailPlaceholder": "ਤੁਹਾਡਾ ਈਮੇਲ ਪਤਾ",
+      "problemPlaceholder": "ਆਪਣੀ ਸਮੱਸਿਆ ਜਾਂ ਸਵਾਲ ਦੱਸੋ...",
+      "chatPlaceholder": "ਆਪਣਾ ਸੁਨੇਹਾ ਟਾਈਪ ਕਰੋ...",
+      "sendToSupportTeam": "ਸਹਾਇਤਾ ਟੀਮ ਨੂੰ ਭੇਜੋ",
+      "conversationWillBeSent": "ਤੁਹਾਡੀ ਗੱਲਬਾਤ contact@appnode.ai ਨੂੰ ਭੇਜੀ ਜਾਵੇਗੀ",
+      "chatTitle": "AppNode ਸਹਾਇਤਾ",
+      "online": "ਆਨਲਾਈਨ",
+      "liveAgentConnected": "ਲਾਈਵ ਏਜੰਟ ਜੁੜਿਆ",
+      "quickQuestions": "ਤੁਰੰਤ ਸਵਾਲ:"
+    },
+    "searchNoResults": "ਲਈ ਕੋਈ ਨਤੀਜੇ ਨਹੀਂ ਮਿਲੇ",
+    "searchCategories": "ਸ਼੍ਰੇਣੀਆਂ",
+    "searchViews": "ਦ੍ਰਿਸ਼",
+    "searchHelpTopics": "ਮਦਦ ਵਿਸ਼ੇ",
+    "knowledgeBase": [
+      {
+        "keywords": [
+          "what is appnode",
+          "about appnode",
+          "appnode"
+        ],
+        "answer": "AppNode ਇੱਕ AI-ਸੰਚਾਲਿਤ ਪਲੇਟਫਾਰਮ ਹੈ ਜੋ ਤੁਹਾਨੂੰ ਕੁਦਰਤੀ ਭਾਸ਼ਾ ਪ੍ਰੌਂਪਟਾਂ ਰਾਹੀਂ ਫੁੱਲ-ਸਟੈਕ ਵੈੱਬ ਐਪਲੀਕੇਸ਼ਨਾਂ ਬਣਾਉਣ ਦਿੰਦਾ ਹੈ। ਬੱਸ ਦੱਸੋ ਤੁਸੀਂ ਕੀ ਬਣਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ, ਅਤੇ ਸਾਡੀ AI ਤੁਹਾਡੇ ਲਈ ਕੋਡ, ਡਿਜ਼ਾਈਨ, ਅਤੇ ਕਾਰਜਕੁਸ਼ਲਤਾ ਜਨਰੇਟ ਕਰੇਗੀ।"
+      },
+      {
+        "keywords": [
+          "pricing",
+          "cost",
+          "price",
+          "free",
+          "plan"
+        ],
+        "answer": "AppNode ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਉਦਾਰ ਮੁਫ਼ਤ ਯੋਜਨਾ ਪੇਸ਼ ਕਰਦਾ ਹੈ। ਸਾਡੀ ਕੀਮਤ ਵਿੱਚ ਸ਼ਾਮਲ ਹਨ: ਮੁਫ਼ਤ ਯੋਜਨਾ (3 ਪ੍ਰੋਜੈਕਟ, ਬੁਨਿਆਦੀ AI ਫੀਚਰਸ), ਪ੍ਰੋ ਯੋਜਨਾ ($20/ਮਹੀਨਾ ਅਸੀਮਤ ਪ੍ਰੋਜੈਕਟ ਅਤੇ ਐਡਵਾਂਸਡ AI ਲਈ), ਅਤੇ ਟੀਮ ਯੋਜਨਾ ($49/ਮਹੀਨਾ ਸਹਿਯੋਗ ਫੀਚਰਸ ਲਈ)। ਵਧੇਰੇ ਜਾਣਕਾਰੀ ਲਈ ਸਾਡਾ ਕੀਮਤ ਪੇਜ ਵੇਖੋ।"
+      },
+      {
+        "keywords": [
+          "deploy",
+          "deployment",
+          "publish",
+          "hosting",
+          "live"
+        ],
+        "answer": "AppNode ਨਾਲ ਡਿਪਲੌਇ ਕਰਨਾ ਸਧਾਰਨ ਹੈ! ਆਪਣੇ ਪ੍ਰੋਜੈਕਟ ਐਡੀਟਰ ਵਿੱਚ \"ਡਿਪਲੌਇ\" ਬਟਨ 'ਤੇ ਕਲਿੱਕ ਕਰੋ, ਅਤੇ ਤੁਹਾਡੀ ਐਪ ਇੱਕ ਵਿਲੱਖਣ URL ਨਾਲ ਸਕਿੰਟਾਂ ਵਿੱਚ ਲਾਈਵ ਹੋ ਜਾਵੇਗੀ। ਪ੍ਰੋ ਯੂਜ਼ਰ ਕਸਟਮ ਡੋਮੇਨ ਜੋੜ ਸਕਦੇ ਹਨ। ਅਸੀਂ ਸਾਰਾ ਹੋਸਟਿੰਗ ਢਾਂਚਾ ਸੰਭਾਲਦੇ ਹਾਂ।"
+      },
+      {
+        "keywords": [
+          "ai",
+          "artificial intelligence",
+          "generate",
+          "prompt"
+        ],
+        "answer": "ਸਾਡੀ AI ਕੁਦਰਤੀ ਭਾਸ਼ਾ ਦੇ ਵਰਣਨ ਸਮਝਦੀ ਹੈ ਕਿ ਤੁਸੀਂ ਕੀ ਬਣਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ। ਤੁਸੀਂ ਫੀਚਰਜ਼, ਲੇਆਉਟ, ਕਾਰਜਕੁਸ਼ਲਤਾ, ਅਤੇ ਗੁੰਝਲਦਾਰ ਲੌਜਿਕ ਵੀ ਦੱਸ ਸਕਦੇ ਹੋ। AI ਸਾਫ਼, ਉਤਪਾਦਨ-ਯੋਗ ਕੋਡ ਜਨਰੇਟ ਕਰਦੀ ਹੈ ਜੋ ਤੁਸੀਂ ਹੋਰ ਅਨੁਕੂਲ ਕਰ ਸਕਦੇ ਹੋ।"
+      },
+      {
+        "keywords": [
+          "database",
+          "data",
+          "storage",
+          "backend"
+        ],
+        "answer": "AppNode ਵਿੱਚ ਬਿਲਟ-ਇਨ ਡੇਟਾਬੇਸ ਸਹਾਇਤਾ ਸ਼ਾਮਲ ਹੈ। ਤੁਸੀਂ ਸਾਡੇ ਵਿਜ਼ੂਅਲ ਇੰਟਰਫੇਸ ਰਾਹੀਂ ਟੇਬਲ ਬਣਾ ਸਕਦੇ ਹੋ, ਸੰਬੰਧ ਪਰਿਭਾਸ਼ਿਤ ਕਰ ਸਕਦੇ ਹੋ, ਅਤੇ ਡਾਟਾ ਪ੍ਰਬੰਧਿਤ ਕਰ ਸਕਦੇ ਹੋ। ਅਸੀਂ ਵਿਕਾਸ ਲਈ SQLite ਅਤੇ ਉਤਪਾਦਨ ਲਈ PostgreSQL ਤੱਕ ਸਕੇਲ ਕਰਨ ਦੀ ਸਹਾਇਤਾ ਕਰਦੇ ਹਾਂ।"
+      },
+      {
+        "keywords": [
+          "team",
+          "collaborate",
+          "collaboration",
+          "share"
+        ],
+        "answer": "ਸਾਡੀ ਟੀਮਜ਼ ਯੋਜਨਾ ਰੀਅਲ-ਟਾਈਮ ਸਹਿਯੋਗ ਦੀ ਸਹਾਇਤਾ ਕਰਦੀ ਹੈ। ਕਈ ਟੀਮ ਮੈਂਬਰ ਇੱਕੋ ਪ੍ਰੋਜੈਕਟ 'ਤੇ ਇੱਕੋ ਸਮੇਂ ਕੰਮ ਕਰ ਸਕਦੇ ਹਨ। ਫੀਚਰਸ ਵਿੱਚ ਸ਼ਾਮਲ ਹਨ ਭੂਮਿਕਾ-ਅਧਾਰਿਤ ਪਹੁੰਚ, ਸਾਂਝੇ ਵਰਕਸਪੇਸ, ਟੀਮ ਚੈਟ, ਅਤੇ ਏਕੀਕ੍ਰਿਤ ਬਿਲਿੰਗ।"
+      },
+      {
+        "keywords": [
+          "export",
+          "download",
+          "code",
+          "source"
+        ],
+        "answer": "ਹਾਂ! ਤੁਸੀਂ ਕਿਸੇ ਵੀ ਸਮੇਂ ਆਪਣਾ ਪੂਰਾ ਸੋਰਸ ਕੋਡ ਐਕਸਪੋਰਟ ਕਰ ਸਕਦੇ ਹੋ। AppNode ਸਾਫ਼ React/Next.js ਕੋਡ ਜਨਰੇਟ ਕਰਦਾ ਹੈ ਜੋ ਤੁਸੀਂ ਸੁਤੰਤਰ ਤੌਰ 'ਤੇ ਚਲਾ ਸਕਦੇ ਹੋ। ਪ੍ਰੋ ਯੂਜ਼ਰਾਂ ਨੂੰ ਸਹਿਜ ਵਰਜ਼ਨ ਕੰਟਰੋਲ ਲਈ GitHub ਇੰਟੀਗ੍ਰੇਸ਼ਨ ਮਿਲਦੀ ਹੈ।"
+      },
+      {
+        "keywords": [
+          "mobile",
+          "ios",
+          "android",
+          "responsive"
+        ],
+        "answer": "AppNode ਨਾਲ ਬਣੀਆਂ ਸਾਰੀਆਂ ਐਪਸ ਡਿਫਾਲਟ ਤੌਰ 'ਤੇ ਰਿਸਪਾਂਸਿਵ ਹਨ। ਅਸੀਂ iOS ਅਤੇ Android ਲਈ ਨੇਟਿਵ ਮੋਬਾਈਲ ਐਪ ਵਿਕਾਸ ਫੀਚਰਸ 'ਤੇ ਵੀ ਕੰਮ ਕਰ ਰਹੇ ਹਾਂ, ਜਲਦੀ ਆ ਰਿਹਾ ਹੈ!"
+      },
+      {
+        "keywords": [
+          "security",
+          "secure",
+          "safe",
+          "privacy"
+        ],
+        "answer": "ਸੁਰੱਖਿਆ ਸਾਡੀ ਪਹਿਲੀ ਤਰਜੀਹ ਹੈ। ਅਸੀਂ ਉਦਯੋਗ-ਮਿਆਰੀ ਐਨਕ੍ਰਿਪਸ਼ਨ, SOC 2 Type II ਪ੍ਰਮਾਣਿਤ ਢਾਂਚਾ, ਅਤੇ ਨਿਯਮਤ ਸੁਰੱਖਿਆ ਆਡਿਟ ਵਰਤਦੇ ਹਾਂ। ਤੁਹਾਡਾ ਕੋਡ ਅਤੇ ਡਾਟਾ ਹਮੇਸ਼ਾ ਸੁਰੱਖਿਅਤ ਹੈ।"
+      },
+      {
+        "keywords": [
+          "bug",
+          "error",
+          "problem",
+          "issue",
+          "help"
+        ],
+        "answer": "ਜੇਕਰ ਤੁਹਾਨੂੰ ਸਮੱਸਿਆਵਾਂ ਆ ਰਹੀਆਂ ਹਨ, ਤਾਂ ਪਹਿਲਾਂ ਪੇਜ ਰਿਫ੍ਰੈਸ਼ ਕਰੋ। ਕਿਸੇ ਵੀ ਚੱਲ ਰਹੀ ਘਟਨਾ ਲਈ ਸਾਡਾ ਸਟੇਟਸ ਪੇਜ ਵੇਖੋ। ਤੁਸੀਂ ਇੱਥੇ ਆਪਣੀ ਖ਼ਾਸ ਸਮੱਸਿਆ ਵੀ ਦੱਸ ਸਕਦੇ ਹੋ, ਅਤੇ ਮੈਂ ਮਦਦ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰਾਂਗਾ, ਜਾਂ ਤੁਹਾਨੂੰ ਸਾਡੀ ਸਹਾਇਤਾ ਟੀਮ ਨਾਲ ਜੋੜਾਂਗਾ।"
+      },
+      {
+        "keywords": [
+          "cancel",
+          "subscription",
+          "refund",
+          "billing"
+        ],
+        "answer": "ਤੁਸੀਂ ਆਪਣੀ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਕਿਸੇ ਵੀ ਸਮੇਂ ਆਪਣੇ ਖਾਤਾ ਸੈਟਿੰਗਾਂ ਤੋਂ ਰੱਦ ਕਰ ਸਕਦੇ ਹੋ। ਤੁਹਾਡੀ ਪਹੁੰਚ ਬਿਲਿੰਗ ਮਿਆਦ ਦੇ ਅੰਤ ਤੱਕ ਜਾਰੀ ਰਹੇਗੀ। ਰਿਫੰਡ ਲਈ, ਕਿਰਪਾ ਕਰਕੇ support@appnode.com 'ਤੇ ਸਾਡੀ ਸਹਾਇਤਾ ਟੀਮ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।"
+      },
+      {
+        "keywords": [
+          "api",
+          "integration",
+          "connect",
+          "webhook"
+        ],
+        "answer": "AppNode Stripe, OpenAI, Twilio, ਅਤੇ ਹੋਰ ਪ੍ਰਸਿੱਧ ਸੇਵਾਵਾਂ ਨਾਲ ਇੰਟੀਗ੍ਰੇਸ਼ਨ ਦੀ ਸਹਾਇਤਾ ਕਰਦਾ ਹੈ। ਤੁਸੀਂ ਬਾਹਰੀ ਸੇਵਾਵਾਂ ਨਾਲ ਜੋੜਨ ਲਈ ਸਾਡੀ API ਵੀ ਵਰਤ ਸਕਦੇ ਹੋ। ਉਪਲਬਧ ਇੰਟੀਗ੍ਰੇਸ਼ਨਾਂ ਲਈ ਸਾਡੀ ਡਾਕੂਮੈਂਟੇਸ਼ਨ ਵੇਖੋ।"
+      },
+      {
+        "keywords": [
+          "custom domain",
+          "domain",
+          "url"
+        ],
+        "answer": "ਪ੍ਰੋ ਅਤੇ ਟੀਮ ਯੋਜਨਾ ਯੂਜ਼ਰ ਆਪਣੀਆਂ ਡਿਪਲੌਇ ਕੀਤੀਆਂ ਐਪਸ ਨਾਲ ਕਸਟਮ ਡੋਮੇਨ ਜੋੜ ਸਕਦੇ ਹਨ। ਆਪਣੇ ਪ੍ਰੋਜੈਕਟ ਸੈਟਿੰਗਾਂ > ਡੋਮੇਨ 'ਤੇ ਜਾਓ ਅਪਣਾ ਕਸਟਮ ਡੋਮੇਨ ਜੋੜਨ ਅਤੇ ਕੌਂਫਿਗਰ ਕਰਨ ਲਈ। DNS ਕੌਂਫਿਗਰੇਸ਼ਨ ਨਿਰਦੇਸ਼ ਦਿੱਤੇ ਗਏ ਹਨ।"
+      }
+    ]
   },
   "docsPage": {
     "searchPlaceholder": "ਦਸਤਾਵੇਜ਼ ਖੋਜੋ...",
     "welcomeTitle": "Welcome to AppNode",
     "welcomeDescription": "AppNode is an AI-powered development platform that lets you build complete web applications just by describing what you want. No coding experience required — it feels like having a whole team working for you.",
-    "whatYouCanBuild": "What You Can Build",
-    "howItWorks": "How It Works",
-    "howItWorksDescription": "Simply describe your project in plain language. Our AI understands your requirements, generates a complete blueprint, and builds production-ready code in real-time. Watch your app come to life with instant previews.",
-    "gettingStarted": "Getting Started",
-    "gettingStartedDescription": "Ready to build your first app? Here's how to get started in just a few steps:",
-    "startBuildingFree": "Start Building Free",
-    "viewQuickstartGuide": "View Quickstart Guide",
-    "copyPage": "Copy page",
+    "whatYouCanBuild": "ਤੁਸੀਂ ਕੀ ਬਣਾ ਸਕਦੇ ਹੋ",
+    "howItWorks": "ਇਹ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ",
+    "howItWorksDescription": "ਬੱਸ ਆਪਣੇ ਪ੍ਰੋਜੈਕਟ ਨੂੰ ਸਧਾਰਨ ਭਾਸ਼ਾ ਵਿੱਚ ਦੱਸੋ। ਸਾਡੀ AI ਤੁਹਾਡੀਆਂ ਲੋੜਾਂ ਨੂੰ ਸਮਝਦੀ ਹੈ, ਇੱਕ ਪੂਰਾ ਬਲੂਪ੍ਰਿੰਟ ਬਣਾਉਂਦੀ ਹੈ, ਅਤੇ ਰੀਅਲ-ਟਾਈਮ ਵਿੱਚ ਪ੍ਰੋਡਕਸ਼ਨ-ਰੈਡੀ ਕੋਡ ਬਣਾਉਂਦੀ ਹੈ।",
+    "gettingStarted": "ਸ਼ੁਰੂਆਤ ਕਰੋ",
+    "gettingStartedDescription": "ਆਪਣੀ ਪਹਿਲੀ ਐਪ ਬਣਾਉਣ ਲਈ ਤਿਆਰ ਹੋ? ਕੁਝ ਸਧਾਰਨ ਕਦਮਾਂ ਵਿੱਚ ਸ਼ੁਰੂ ਕਰੋ:",
+    "startBuildingFree": "ਮੁਫ਼ਤ ਬਣਾਉਣਾ ਸ਼ੁਰੂ ਕਰੋ",
+    "viewQuickstartGuide": "ਤੁਰੰਤ ਸ਼ੁਰੂਆਤ ਗਾਈਡ ਵੇਖੋ",
+    "copyPage": "ਪੰਨਾ ਕਾਪੀ ਕਰੋ",
     "badge": "ਦਸਤਾਵੇਜ਼",
     "title": "ਦਸਤਾਵੇਜ਼",
     "subtitle": "AppNode ਸਿੱਖਣ ਅਤੇ ਬਣਾਉਣ ਲਈ ਤੁਹਾਡੀ ਗਾਈਡ",
@@ -1263,26 +1419,26 @@
     "badge": "ਬਲਾਗ",
     "subtitle": "AppNode ਟੀਮ ਤੋਂ ਖ਼ਬਰਾਂ, ਟਿਊਟੋਰੀਅਲ ਅਤੇ ਇਨਸਾਈਟਸ",
     "searchPlaceholder": "ਬਲਾਗ ਵਿੱਚ ਖੋਜੋ...",
-    "noPostsFound": "No posts found matching your criteria.",
-    "latestPosts": "Latest Posts",
-    "loadMorePosts": "Load More Posts",
-    "subscribeTitle": "Subscribe to Our Newsletter",
-    "subscribeDescription": "Get the latest articles, tutorials, and product updates delivered straight to your inbox.",
-    "emailPlaceholder": "Enter your email",
-    "subscribe": "Subscribe",
-    "ctaTitle": "Ready to Build Something?",
+    "noPostsFound": "ਤੁਹਾਡੇ ਮਾਪਦੰਡਾਂ ਨਾਲ ਮੇਲ ਖਾਂਦੀਆਂ ਕੋਈ ਪੋਸਟਾਂ ਨਹੀਂ ਮਿਲੀਆਂ।",
+    "latestPosts": "ਤਾਜ਼ਾ ਪੋਸਟਾਂ",
+    "loadMorePosts": "ਹੋਰ ਪੋਸਟਾਂ ਲੋਡ ਕਰੋ",
+    "subscribeTitle": "ਸਾਡੇ ਨਿਊਜ਼ਲੈਟਰ ਦੀ ਗਾਹਕੀ ਲਓ",
+    "subscribeDescription": "ਨਵੀਨਤਮ ਲੇਖ, ਟਿਊਟੋਰੀਅਲ, ਅਤੇ ਉਤਪਾਦ ਅੱਪਡੇਟ ਸਿੱਧੇ ਤੁਹਾਡੇ ਇਨਬਾਕਸ ਵਿੱਚ ਪ੍ਰਾਪਤ ਕਰੋ।",
+    "emailPlaceholder": "ਆਪਣੀ ਈਮੇਲ ਦਾਖਲ ਕਰੋ",
+    "subscribe": "ਗਾਹਕੀ ਲਓ",
+    "ctaTitle": "ਕੁਝ ਬਣਾਉਣ ਲਈ ਤਿਆਰ ਹੋ?",
     "ctaDescription": "Turn your ideas into reality with AppNode. Start building today.",
-    "getStartedFree": "Get Started Free",
-    "browseCourses": "Browse Courses",
+    "getStartedFree": "ਮੁਫ਼ਤ ਸ਼ੁਰੂ ਕਰੋ",
+    "browseCourses": "ਕੋਰਸ ਬ੍ਰਾਊਜ਼ ਕਰੋ",
     "categories": {
       "all": "ਸਭ",
-      "featured": "Featured",
+      "featured": "ਫੀਚਰਡ",
       "ai": "AI",
-      "product": "Product",
+      "product": "ਉਤਪਾਦ",
       "engineering": "ਇੰਜੀਨੀਅਰਿੰਗ",
       "community": "ਕਮਿਊਨਿਟੀ",
-      "tips": "Tips",
-      "news": "News",
+      "tips": "ਸੁਝਾਅ",
+      "news": "ਖ਼ਬਰਾਂ",
       "updates": "ਅੱਪਡੇਟ",
       "tutorials": "ਟਿਊਟੋਰੀਅਲ"
     },
@@ -1296,27 +1452,27 @@
         "excerpt": "Learn how to connect your AppNode projects to Supabase for powerful database functionality."
       },
       "smartStyles": {
-        "title": "Smart Styles: AI-Powered Design System for Your Apps",
-        "excerpt": "Introducing Smart Styles, our new feature that automatically creates beautiful, consistent designs."
+        "title": "ਸਮਾਰਟ ਸਟਾਈਲਜ਼: ਤੁਹਾਡੀਆਂ ਐਪਸ ਲਈ AI-ਸੰਚਾਲਿਤ ਡਿਜ਼ਾਈਨ ਸਿਸਟਮ",
+        "excerpt": "ਸਮਾਰਟ ਸਟਾਈਲਜ਼ ਪੇਸ਼ ਕਰ ਰਹੇ ਹਾਂ, ਸਾਡਾ ਨਵਾਂ ਫੀਚਰ ਜੋ ਆਟੋਮੈਟਿਕਲੀ ਸੁੰਦਰ, ਇਕਸਾਰ ਡਿਜ਼ਾਈਨ ਬਣਾਉਂਦਾ ਹੈ।"
       },
       "security": {
         "title": "How AppNode Secures AI-Generated Code",
-        "excerpt": "A deep dive into our hybrid approach combining static analysis with LLM-based reasoning."
+        "excerpt": "ਸਟੈਟਿਕ ਵਿਸ਼ਲੇਸ਼ਣ ਨੂੰ LLM-ਅਧਾਰਿਤ ਤਰਕ ਨਾਲ ਮਿਲਾਉਂਦੇ ਸਾਡੇ ਹਾਈਬ੍ਰਿਡ ਪਹੁੰਚ ਦੀ ਡੂੰਘੀ ਜਾਣਕਾਰੀ।"
       },
       "prompting": {
-        "title": "10 Prompting Tips for Better AI-Generated Apps",
-        "excerpt": "Master the art of vibe coding with these practical prompting strategies."
+        "title": "ਬਿਹਤਰ AI-ਜਨਰੇਟਿਡ ਐਪਸ ਲਈ 10 ਪ੍ਰੌਂਪਟਿੰਗ ਸੁਝਾਅ",
+        "excerpt": "ਇਹਨਾਂ ਵਿਹਾਰਕ ਪ੍ਰੌਂਪਟਿੰਗ ਰਣਨੀਤੀਆਂ ਨਾਲ ਵਾਈਬ ਕੋਡਿੰਗ ਦੀ ਕਲਾ ਵਿੱਚ ਮਾਹਰ ਬਣੋ।"
       },
       "spotlight": {
-        "title": "Community Spotlight: Apps Built This Month",
-        "excerpt": "Showcasing incredible applications built by our community."
+        "title": "ਕਮਿਊਨਿਟੀ ਸਪੌਟਲਾਈਟ: ਇਸ ਮਹੀਨੇ ਬਣਾਈਆਂ ਐਪਸ",
+        "excerpt": "ਸਾਡੇ ਭਾਈਚਾਰੇ ਦੁਆਰਾ ਬਣਾਈਆਂ ਸ਼ਾਨਦਾਰ ਐਪਲੀਕੇਸ਼ਨਾਂ ਦਾ ਪ੍ਰਦਰਸ਼ਨ।"
       },
       "collaboration": {
-        "title": "Real-time Collaboration: Build Together, Ship Faster",
-        "excerpt": "Multiple team members can now edit the same project simultaneously."
+        "title": "ਰੀਅਲ-ਟਾਈਮ ਸਹਿਯੋਗ: ਮਿਲ ਕੇ ਬਣਾਓ, ਤੇਜ਼ੀ ਨਾਲ ਸ਼ਿਪ ਕਰੋ",
+        "excerpt": "ਕਈ ਟੀਮ ਮੈਂਬਰ ਹੁਣ ਇੱਕੋ ਸਮੇਂ ਇੱਕੋ ਪ੍ਰੋਜੈਕਟ ਨੂੰ ਸੰਪਾਦਿਤ ਕਰ ਸਕਦੇ ਹਨ।"
       },
       "caseStudy": {
-        "title": "From Zero to Production in One Day: A Case Study",
+        "title": "ਜ਼ੀਰੋ ਤੋਂ ਪ੍ਰੋਡਕਸ਼ਨ ਇੱਕ ਦਿਨ ਵਿੱਚ: ਇੱਕ ਕੇਸ ਸਟੱਡੀ",
         "excerpt": "How a solo founder built and launched a complete SaaS application using AppNode."
       },
       "architecture": {
@@ -1325,19 +1481,19 @@
       },
       "mobile": {
         "title": "Mobile Apps on AppNode: iOS and Android Coming Soon",
-        "excerpt": "We're working on native mobile experiences so you can build apps without learning Swift or Kotlin."
+        "excerpt": "ਅਸੀਂ ਨੇਟਿਵ ਮੋਬਾਈਲ ਅਨੁਭਵ 'ਤੇ ਕੰਮ ਕਰ ਰਹੇ ਹਾਂ ਤਾਂ ਜੋ ਤੁਸੀਂ ਬਿਨਾਂ Swift ਜਾਂ Kotlin ਸਿੱਖੇ ਐਪਸ ਬਣਾ ਸਕੋ।"
       },
       "enterprise": {
         "title": "AppNode for Enterprise: Security, Compliance, and Scale",
-        "excerpt": "Announcing enterprise-grade features including SSO, audit logs, and dedicated support."
+        "excerpt": "SSO, ਆਡਿਟ ਲੌਗ, ਅਤੇ ਸਮਰਪਿਤ ਸਹਾਇਤਾ ਸਮੇਤ ਐਂਟਰਪ੍ਰਾਈਜ਼-ਗ੍ਰੇਡ ਫੀਚਰਸ ਦੀ ਘੋਸ਼ਣਾ।"
       },
       "future": {
-        "title": "The Future of No-Code: Where We're Headed",
-        "excerpt": "Our vision for the next generation of software development."
+        "title": "ਨੋ-ਕੋਡ ਦਾ ਭਵਿੱਖ: ਅਸੀਂ ਕਿੱਥੇ ਜਾ ਰਹੇ ਹਾਂ",
+        "excerpt": "ਸਾਫਟਵੇਅਰ ਡਿਵੈਲਪਮੈਂਟ ਦੀ ਅਗਲੀ ਪੀੜ੍ਹੀ ਲਈ ਸਾਡਾ ਦ੍ਰਿਸ਼ਟੀਕੋਣ।"
       },
       "performance": {
         "title": "Performance Optimization Guide for AppNode Apps",
-        "excerpt": "Best practices for building fast, responsive applications."
+        "excerpt": "ਤੇਜ਼, ਜਵਾਬਦੇਹ ਐਪਲੀਕੇਸ਼ਨਾਂ ਬਣਾਉਣ ਲਈ ਵਧੀਆ ਅਭਿਆਸ।"
       },
       "post1": {
         "title": "AppNode Agent ਪੇਸ਼: AI ਨਾਲ 10 ਗੁਣਾ ਤੇਜ਼ ਐਪਸ ਬਣਾਓ",
@@ -1391,17 +1547,17 @@
   "careersPage": {
     "badge": "ਨੌਕਰੀਆਂ",
     "title": "ਸ਼ਾਮਲ ਹੋਵੋ AppNode ਟੀਮ",
-    "titleEnd": "Team",
+    "titleEnd": "ਟੀਮ",
     "subtitle": "ਸਾਫਟਵੇਅਰ ਡਿਵੈਲਪਮੈਂਟ ਦਾ ਭਵਿੱਖ ਬਣਾਉਣ ਵਿੱਚ ਸਾਡੀ ਮਦਦ ਕਰੋ।",
-    "viewOpenPositions": "View Open Positions",
-    "ourValues": "Our Values",
-    "whyJoinUs": "Why Join Us",
-    "benefitsAndPerks": "Benefits & Perks",
-    "openPositions": "Open Positions",
+    "viewOpenPositions": "ਖੁੱਲ੍ਹੀਆਂ ਅਸਾਮੀਆਂ ਵੇਖੋ",
+    "ourValues": "ਸਾਡੀਆਂ ਕਦਰਾਂ-ਕੀਮਤਾਂ",
+    "whyJoinUs": "ਸਾਡੇ ਨਾਲ ਕਿਉਂ ਜੁੜੋ",
+    "benefitsAndPerks": "ਲਾਭ ਅਤੇ ਸੁਵਿਧਾਵਾਂ",
+    "openPositions": "ਖੁੱਲ੍ਹੀਆਂ ਅਸਾਮੀਆਂ",
     "applyNow": "ਹੁਣ ਅਰਜ਼ੀ ਦਿਓ",
-    "dontSeeAFit": "Don't see a perfect fit?",
-    "dontSeeAFitDescription": "We're always looking for talented people. Send us your resume and we'll keep you in mind.",
-    "sendGeneralApplication": "Send General Application",
+    "dontSeeAFit": "ਸਹੀ ਮੇਲ ਨਹੀਂ ਦਿਖ ਰਿਹਾ?",
+    "dontSeeAFitDescription": "ਅਸੀਂ ਹਮੇਸ਼ਾ ਪ੍ਰਤਿਭਾਸ਼ਾਲੀ ਲੋਕਾਂ ਦੀ ਭਾਲ ਵਿੱਚ ਹਾਂ। ਸਾਨੂੰ ਆਪਣਾ ਰਿਜ਼ਿਊਮ ਭੇਜੋ ਅਤੇ ਅਸੀਂ ਤੁਹਾਨੂੰ ਯਾਦ ਰੱਖਾਂਗੇ।",
+    "sendGeneralApplication": "ਆਮ ਅਰਜ਼ੀ ਭੇਜੋ",
     "viewOpenings": "ਖੁੱਲ੍ਹੀਆਂ ਅਸਾਮੀਆਂ ਦੇਖੋ",
     "valuesTitle": "ਸਾਡੀਆਂ ਕਦਰਾਂ-ਕੀਮਤਾਂ",
     "valuesSubtitle": "ਉਹ ਸਿਧਾਂਤ ਜੋ ਸਾਡੇ ਕੰਮ ਅਤੇ ਸੱਭਿਆਚਾਰ ਦੀ ਅਗਵਾਈ ਕਰਦੇ ਹਨ।",
@@ -1496,23 +1652,23 @@
     ]
   },
   "communityPage": {
-    "exploreThe": "Explore the",
+    "exploreThe": "ਖੋਜੋ",
     "community": "ਭਾਈਚਾਰਾ",
     "subtitle": "ਦੁਨੀਆ ਭਰ ਦੇ ਡਿਵੈਲਪਰਾਂ ਅਤੇ ਸਿਰਜਣਹਾਰਾਂ ਨਾਲ ਜੁੜੋ, ਸਿੱਖੋ ਅਤੇ ਸ਼ੇਅਰ ਕਰੋ।",
-    "searchPlaceholder": "Search projects, templates, and creators...",
-    "projectsCreated": "Projects Created",
-    "activeBuilders": "Active Builders",
-    "monthlyVisitors": "Monthly Visitors",
-    "loadMoreProjects": "Load More Projects",
-    "topContributors": "Top Contributors",
-    "viewAll": "View All",
-    "recentDiscussions": "Recent Discussions",
-    "joinDiscussion": "Join Discussion",
+    "searchPlaceholder": "ਪ੍ਰੋਜੈਕਟ, ਟੈਂਪਲੇਟ, ਅਤੇ ਰਚਨਾਕਾਰ ਖੋਜੋ...",
+    "projectsCreated": "ਬਣਾਏ ਗਏ ਪ੍ਰੋਜੈਕਟ",
+    "activeBuilders": "ਸਰਗਰਮ ਬਿਲਡਰ",
+    "monthlyVisitors": "ਮਾਸਿਕ ਵਿਜ਼ਿਟਰ",
+    "loadMoreProjects": "ਹੋਰ ਪ੍ਰੋਜੈਕਟ ਲੋਡ ਕਰੋ",
+    "topContributors": "ਚੋਟੀ ਦੇ ਯੋਗਦਾਨੀ",
+    "viewAll": "ਸਭ ਵੇਖੋ",
+    "recentDiscussions": "ਤਾਜ਼ਾ ਚਰਚਾਵਾਂ",
+    "joinDiscussion": "ਚਰਚਾ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ",
     "joinOurDiscord": "Join our Discord",
-    "discordDescription": "Connect with 5,000+ builders, get help, and share your projects.",
+    "discordDescription": "5,000+ ਬਿਲਡਰਾਂ ਨਾਲ ਜੁੜੋ, ਮਦਦ ਲਓ, ਅਤੇ ਆਪਣੇ ਪ੍ਰੋਜੈਕਟ ਸਾਂਝੇ ਕਰੋ।",
     "joinDiscordButton": "Join Discord",
-    "ctaTitle": "Ready to share your creation?",
-    "ctaDescription": "Build something amazing and showcase it to the community.",
+    "ctaTitle": "ਆਪਣੀ ਰਚਨਾ ਸਾਂਝੀ ਕਰਨ ਲਈ ਤਿਆਰ ਹੋ?",
+    "ctaDescription": "ਕੁਝ ਸ਼ਾਨਦਾਰ ਬਣਾਓ ਅਤੇ ਇਸਨੂੰ ਭਾਈਚਾਰੇ ਨਾਲ ਸਾਂਝਾ ਕਰੋ।",
     "startBuilding": "ਬਣਾਉਣਾ ਸ਼ੁਰੂ ਕਰੋ",
     "badge": "ਕਮਿਊਨਿਟੀ",
     "title": "ਬਿਲਡਰ ਕਮਿਊਨਿਟੀ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ",
@@ -1537,15 +1693,15 @@
   "galleryPage": {
     "title": "ਪ੍ਰੋਜੈਕਟ ਗੈਲਰੀ",
     "subtitle": "ਸਾਡੀ ਕਮਿਊਨਿਟੀ ਦੁਆਰਾ AppNode ਨਾਲ ਬਣਾਏ ਸ਼ਾਨਦਾਰ ਪ੍ਰੋਜੈਕਟ ਖੋਜੋ",
-    "startWithIdea": "Start with an idea",
-    "seeAll": "See all",
-    "view": "View",
+    "startWithIdea": "ਇੱਕ ਵਿਚਾਰ ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ",
+    "seeAll": "ਸਭ ਵੇਖੋ",
+    "view": "ਵੇਖੋ",
     "builtWith": "Built with AppNode",
     "builtWithBy": "Built with AppNode by",
-    "comingSoon": "Coming soon",
-    "shareTitle": "Share Your Creation",
+    "comingSoon": "ਜਲਦੀ ਆ ਰਿਹਾ ਹੈ",
+    "shareTitle": "ਆਪਣੀ ਰਚਨਾ ਸਾਂਝੀ ਕਰੋ",
     "shareSubtitle": "Built something cool with AppNode? Submit it to the gallery and inspire others.",
-    "submitProject": "Submit Your Project",
+    "submitProject": "ਆਪਣਾ ਪ੍ਰੋਜੈਕਟ ਜਮ੍ਹਾਂ ਕਰੋ",
     "categories": {
       "all": "ਸਭ",
       "aiApps": "AI ਐਪਸ",
@@ -1555,46 +1711,46 @@
       "games": "ਗੇਮਾਂ"
     },
     "projects": {
-      "ecommerceAI": "E-commerce AI",
-      "customerSupportAI": "Customer Support AI",
-      "aiContentWriter": "AI Content Writer",
-      "aiImageGenerator": "AI Image Generator",
-      "textToSpeechAI": "Text to Speech AI",
-      "dataAnalyticsAI": "Data Analytics AI",
-      "aiVideoCreator": "AI Video Creator",
-      "aiCodeAssistant": "AI Code Assistant",
-      "travelBlog": "Travel Blog",
-      "designStudio": "Design Studio",
-      "businessWebsite": "Business Website",
-      "artMagazine": "Art Magazine",
-      "fashionBlog": "Fashion Blog",
-      "productLanding": "Product Landing",
-      "fragranceStore": "Fragrance Store",
-      "restaurantSite": "Restaurant Site",
-      "crmDashboard": "CRM Dashboard",
-      "orderDashboard": "Order Dashboard",
-      "projectDashboard": "Project Dashboard",
-      "webAnalytics": "Web Analytics",
-      "salesAnalytics": "Sales Analytics",
-      "analyticsDashboard": "Analytics Dashboard",
-      "performanceDashboard": "Performance Dashboard",
-      "businessAnalytics": "Business Analytics",
-      "wellnessMeditation": "Wellness & Meditation",
-      "personalFinance": "Personal Finance",
-      "lifeOSProductivity": "LifeOS Productivity",
-      "digitalJournal": "Digital Journal",
-      "personalDashboard": "Personal Dashboard",
-      "taskDashboard": "Task Dashboard",
-      "financeDashboard": "Finance Dashboard",
-      "dailyPlanner": "Daily Planner",
-      "cyberRunner": "Cyber Runner",
-      "mysticForest": "Mystic Forest",
-      "spaceOdyssey": "Space Odyssey",
-      "neonCity": "Neon City",
-      "cellEvolution": "Cell Evolution",
-      "detectiveDashboard": "Detective Dashboard",
-      "partyGames": "Party Games",
-      "driftRush": "Drift Rush",
+      "ecommerceAI": "ਈ-ਕਾਮਰਸ AI",
+      "customerSupportAI": "ਗਾਹਕ ਸਹਾਇਤਾ AI",
+      "aiContentWriter": "AI ਸਮੱਗਰੀ ਲੇਖਕ",
+      "aiImageGenerator": "AI ਚਿੱਤਰ ਜਨਰੇਟਰ",
+      "textToSpeechAI": "ਟੈਕਸਟ ਟੂ ਸਪੀਚ AI",
+      "dataAnalyticsAI": "ਡਾਟਾ ਵਿਸ਼ਲੇਸ਼ਣ AI",
+      "aiVideoCreator": "AI ਵੀਡੀਓ ਬਣਾਉਣ ਵਾਲਾ",
+      "aiCodeAssistant": "AI ਕੋਡ ਸਹਾਇਕ",
+      "travelBlog": "ਯਾਤਰਾ ਬਲੌਗ",
+      "designStudio": "ਡਿਜ਼ਾਈਨ ਸਟੂਡੀਓ",
+      "businessWebsite": "ਵਪਾਰਕ ਵੈੱਬਸਾਈਟ",
+      "artMagazine": "ਕਲਾ ਮੈਗਜ਼ੀਨ",
+      "fashionBlog": "ਫੈਸ਼ਨ ਬਲੌਗ",
+      "productLanding": "ਉਤਪਾਦ ਲੈਂਡਿੰਗ",
+      "fragranceStore": "ਖ਼ੁਸ਼ਬੂ ਸਟੋਰ",
+      "restaurantSite": "ਰੈਸਟੋਰੈਂਟ ਸਾਈਟ",
+      "crmDashboard": "CRM ਡੈਸ਼ਬੋਰਡ",
+      "orderDashboard": "ਆਰਡਰ ਡੈਸ਼ਬੋਰਡ",
+      "projectDashboard": "ਪ੍ਰੋਜੈਕਟ ਡੈਸ਼ਬੋਰਡ",
+      "webAnalytics": "ਵੈੱਬ ਵਿਸ਼ਲੇਸ਼ਣ",
+      "salesAnalytics": "ਵਿਕਰੀ ਵਿਸ਼ਲੇਸ਼ਣ",
+      "analyticsDashboard": "ਵਿਸ਼ਲੇਸ਼ਣ ਡੈਸ਼ਬੋਰਡ",
+      "performanceDashboard": "ਪ੍ਰਦਰਸ਼ਨ ਡੈਸ਼ਬੋਰਡ",
+      "businessAnalytics": "ਵਪਾਰਕ ਵਿਸ਼ਲੇਸ਼ਣ",
+      "wellnessMeditation": "ਤੰਦਰੁਸਤੀ ਅਤੇ ਧਿਆਨ",
+      "personalFinance": "ਨਿੱਜੀ ਵਿੱਤ",
+      "lifeOSProductivity": "LifeOS ਉਤਪਾਦਕਤਾ",
+      "digitalJournal": "ਡਿਜੀਟਲ ਜਰਨਲ",
+      "personalDashboard": "ਨਿੱਜੀ ਡੈਸ਼ਬੋਰਡ",
+      "taskDashboard": "ਕੰਮ ਡੈਸ਼ਬੋਰਡ",
+      "financeDashboard": "ਵਿੱਤ ਡੈਸ਼ਬੋਰਡ",
+      "dailyPlanner": "ਰੋਜ਼ਾਨਾ ਯੋਜਨਾਕਾਰ",
+      "cyberRunner": "ਸਾਈਬਰ ਰਨਰ",
+      "mysticForest": "ਰਹੱਸਮਈ ਜੰਗਲ",
+      "spaceOdyssey": "ਪੁਲਾੜ ਯਾਤਰਾ",
+      "neonCity": "ਨੀਓਨ ਸ਼ਹਿਰ",
+      "cellEvolution": "ਸੈੱਲ ਵਿਕਾਸ",
+      "detectiveDashboard": "ਜਾਸੂਸ ਡੈਸ਼ਬੋਰਡ",
+      "partyGames": "ਪਾਰਟੀ ਗੇਮਜ਼",
+      "driftRush": "ਡ੍ਰਿਫਟ ਰਸ਼",
       "project1": {
         "title": "AI ਚੈਟ ਬੌਟ",
         "description": "ਬੁੱਧੀਮਾਨ ਗਾਹਕ ਸੇਵਾ ਬੌਟ",
@@ -1662,14 +1818,14 @@
   },
   "solutionsPage": {
     "badge": "ਹੱਲ",
-    "titleStart": "Built for how",
+    "titleStart": "ਤੁਸੀਂ ਕਿਵੇਂ ਕੰਮ ਕਰਦੇ ਹੋ ਉਸ ਲਈ ਬਣਾਇਆ",
     "titleHighlight": "you",
-    "titleEnd": "work",
+    "titleEnd": "ਕੰਮ",
     "subtitle": "ਚਾਹੇ ਤੁਸੀਂ ਬਾਨੀ ਹੋ, ਡਿਜ਼ਾਈਨਰ, ਜਾਂ ਮਾਰਕੀਟਰ, AppNode ਤੁਹਾਡੇ ਵਰਕਫਲੋ ਅਨੁਸਾਰ ਢਲਦਾ ਹੈ।",
-    "ctaTitle": "Not sure which solution fits?",
+    "ctaTitle": "ਪੱਕਾ ਨਹੀਂ ਕਿ ਕਿਹੜਾ ਹੱਲ ਫਿੱਟ ਹੈ?",
     "ctaSubtitle": "Start building for free and discover how AppNode can transform your workflow.",
-    "startBuildingFree": "Start Building Free",
-    "talkToSales": "Talk to Sales",
+    "startBuildingFree": "ਮੁਫ਼ਤ ਬਣਾਉਣਾ ਸ਼ੁਰੂ ਕਰੋ",
+    "talkToSales": "ਵਿਕਰੀ ਨਾਲ ਗੱਲ ਕਰੋ",
     "title": "ਤੁਹਾਡੇ ਕੰਮ ਦੇ ਤਰੀਕੇ ਲਈ ਬਣਾਇਆ",
     "founders": {
       "tagline": "ਤੇਜ਼ੀ ਨਾਲ ਲਾਂਚ ਕਰੋ, ਸਮਝਦਾਰੀ ਨਾਲ ਸੁਧਾਰੋ",
@@ -1746,45 +1902,45 @@
   },
   "useCasesBusinessApps": {
     "badge": "ਵਰਤੋਂ ਦਾ ਮਾਮਲਾ",
-    "titleStart": "Build Business Apps",
-    "titleHighlight": "10x Faster",
+    "titleStart": "ਵਪਾਰਕ ਐਪਸ ਬਣਾਓ",
+    "titleHighlight": "10 ਗੁਣਾ ਤੇਜ਼",
     "subtitle": "ਡੈਸ਼ਬੋਰਡ ਤੋਂ ਅੰਦਰੂਨੀ ਟੂਲਾਂ ਤੱਕ, ਕਾਰੋਬਾਰੀ ਐਪਲੀਕੇਸ਼ਨਾਂ ਬਣਾਓ ਜੋ ਤੁਹਾਡੀ ਟੀਮ ਨੂੰ ਚਾਹੀਦੀਆਂ ਹਨ।",
-    "seeExamples": "See Examples",
+    "seeExamples": "ਉਦਾਹਰਨਾਂ ਵੇਖੋ",
     "mockup": {
-      "salesDashboard": "Sales Dashboard",
-      "revenue": "Revenue",
-      "customers": "Customers",
-      "retention": "Retention"
+      "salesDashboard": "ਵਿਕਰੀ ਡੈਸ਼ਬੋਰਡ",
+      "revenue": "ਆਮਦਨ",
+      "customers": "ਗਾਹਕ",
+      "retention": "ਧਾਰਨ"
     },
-    "whatYouCanBuild": "What You Can Build",
+    "whatYouCanBuild": "ਤੁਸੀਂ ਕੀ ਬਣਾ ਸਕਦੇ ਹੋ",
     "useCases": {
       "dashboards": {
-        "title": "Dashboards",
-        "description": "KPI dashboards, analytics views, and reporting tools"
+        "title": "ਡੈਸ਼ਬੋਰਡ",
+        "description": "KPI ਡੈਸ਼ਬੋਰਡ, ਵਿਸ਼ਲੇਸ਼ਣ ਦ੍ਰਿਸ਼, ਅਤੇ ਰਿਪੋਰਟਿੰਗ ਟੂਲ"
       },
       "workflowAutomation": {
-        "title": "Workflow Automation",
-        "description": "Automate repetitive tasks and approval processes"
+        "title": "ਵਰਕਫਲੋ ਆਟੋਮੇਸ਼ਨ",
+        "description": "ਦੁਹਰਾਏ ਜਾਣ ਵਾਲੇ ਕੰਮਾਂ ਅਤੇ ਮਨਜ਼ੂਰੀ ਪ੍ਰਕਿਰਿਆਵਾਂ ਨੂੰ ਆਟੋਮੈਟ ਕਰੋ"
       },
       "adminPanels": {
-        "title": "Admin Panels",
-        "description": "Custom admin interfaces for your data and systems"
+        "title": "ਐਡਮਿਨ ਪੈਨਲ",
+        "description": "ਤੁਹਾਡੇ ਡਾਟਾ ਅਤੇ ਸਿਸਟਮਾਂ ਲਈ ਕਸਟਮ ਐਡਮਿਨ ਇੰਟਰਫੇਸ"
       },
       "crmTools": {
-        "title": "CRM Tools",
-        "description": "Customer management and sales tracking systems"
+        "title": "CRM ਟੂਲ",
+        "description": "ਗਾਹਕ ਪ੍ਰਬੰਧਨ ਅਤੇ ਵਿਕਰੀ ਟ੍ਰੈਕਿੰਗ ਸਿਸਟਮ"
       },
       "inventorySystems": {
-        "title": "Inventory Systems",
-        "description": "Track stock, orders, and supply chain data"
+        "title": "ਇਨਵੈਂਟਰੀ ਸਿਸਟਮ",
+        "description": "ਸਟਾਕ, ਆਰਡਰ, ਅਤੇ ਸਪਲਾਈ ਚੇਨ ਡਾਟਾ ਟ੍ਰੈਕ ਕਰੋ"
       },
       "formsSurveys": {
-        "title": "Forms & Surveys",
-        "description": "Data collection tools and feedback systems"
+        "title": "ਫਾਰਮ ਅਤੇ ਸਰਵੇਖਣ",
+        "description": "ਡਾਟਾ ਇਕੱਠਾ ਕਰਨ ਦੇ ਟੂਲ ਅਤੇ ਫੀਡਬੈਕ ਸਿਸਟਮ"
       }
     },
-    "ctaTitle": "Build your business app today",
-    "ctaSubtitle": "No engineering team required. Start building in minutes.",
+    "ctaTitle": "ਅੱਜ ਹੀ ਆਪਣੀ ਵਪਾਰਕ ਐਪ ਬਣਾਓ",
+    "ctaSubtitle": "ਕਿਸੇ ਇੰਜੀਨੀਅਰਿੰਗ ਟੀਮ ਦੀ ਲੋੜ ਨਹੀਂ। ਮਿੰਟਾਂ ਵਿੱਚ ਬਣਾਉਣਾ ਸ਼ੁਰੂ ਕਰੋ।",
     "title": "ਕਾਰੋਬਾਰੀ ਐਪਸ 10 ਗੁਣਾ ਤੇਜ਼ ਬਣਾਓ",
     "startBuilding": "ਬਣਾਉਣਾ ਸ਼ੁਰੂ ਕਰੋ",
     "viewExamples": "ਉਦਾਹਰਣਾਂ ਦੇਖੋ",
@@ -1824,11 +1980,11 @@
   },
   "useCasesMobileApps": {
     "badge": "ਵਰਤੋਂ ਦਾ ਮਾਮਲਾ",
-    "titleStart": "Build Mobile Apps",
-    "titleHighlight": "Without Code",
+    "titleStart": "ਮੋਬਾਈਲ ਐਪਸ ਬਣਾਓ",
+    "titleHighlight": "ਕੋਡ ਤੋਂ ਬਿਨਾਂ",
     "subtitle": "ਇੱਕ ਸਿੰਗਲ ਕੋਡਬੇਸ ਤੋਂ ਕਰਾਸ-ਪਲੇਟਫਾਰਮ ਮੋਬਾਈਲ ਅਨੁਭਵ ਬਣਾਓ।",
-    "seeExamples": "See Examples",
-    "featuresTitle": "Mobile App Features",
+    "seeExamples": "ਉਦਾਹਰਨਾਂ ਵੇਖੋ",
+    "featuresTitle": "ਮੋਬਾਈਲ ਐਪ ਫੀਚਰਸ",
     "features": {
       "nativePerformance": {
         "title": "ਨੇਟਿਵ ਪਰਫਾਰਮੈਂਸ",
@@ -1839,12 +1995,12 @@
         "description": "ਬਿਲਟ-ਇਨ ਪੁਸ਼ ਨੋਟੀਫਿਕੇਸ਼ਨ ਸਪੋਰਟ।"
       },
       "locationServices": {
-        "title": "Location Services",
-        "description": "Build location-aware features with GPS"
+        "title": "ਲੋਕੇਸ਼ਨ ਸੇਵਾਵਾਂ",
+        "description": "GPS ਨਾਲ ਲੋਕੇਸ਼ਨ-ਅਵੇਅਰ ਫੀਚਰ ਬਣਾਓ"
       },
       "cameraMedia": {
-        "title": "Camera & Media",
-        "description": "Access camera, photos, and media libraries"
+        "title": "ਕੈਮਰਾ ਅਤੇ ਮੀਡੀਆ",
+        "description": "ਕੈਮਰਾ, ਫੋਟੋਆਂ, ਅਤੇ ਮੀਡੀਆ ਲਾਇਬ੍ਰੇਰੀਆਂ ਐਕਸੈਸ ਕਰੋ"
       },
       "offlineSupport": {
         "title": "ਆਫ਼ਲਾਈਨ ਸਪੋਰਟ",
@@ -1856,8 +2012,8 @@
       },
       "title": "ਮੋਬਾਈਲ ਫੀਚਰ"
     },
-    "ctaTitle": "Build your mobile app today",
-    "ctaSubtitle": "From idea to App Store in record time.",
+    "ctaTitle": "ਅੱਜ ਹੀ ਆਪਣੀ ਮੋਬਾਈਲ ਐਪ ਬਣਾਓ",
+    "ctaSubtitle": "ਵਿਚਾਰ ਤੋਂ ਐਪ ਸਟੋਰ ਤੱਕ ਰਿਕਾਰਡ ਸਮੇਂ ਵਿੱਚ।",
     "title": "ਮੋਬਾਈਲ ਐਪਸ ਬਣਾਓ ਤੇਜ਼ੀ ਨਾਲ",
     "startBuilding": "ਬਣਾਉਣਾ ਸ਼ੁਰੂ ਕਰੋ",
     "viewExamples": "ਉਦਾਹਰਣਾਂ ਦੇਖੋ",
@@ -1875,20 +2031,27 @@
     "cta": {
       "title": "ਆਪਣੀ ਮੋਬਾਈਲ ਐਪ ਬਣਾਉਣ ਲਈ ਤਿਆਰ?",
       "subtitle": "ਅੱਜ ਹੀ ਮੁਫ਼ਤ ਸ਼ੁਰੂ ਕਰੋ ਅਤੇ ਮਿੰਟਾਂ ਵਿੱਚ ਆਪਣੀ ਮੋਬਾਈਲ ਐਪ ਡਿਪਲੌਇ ਕਰੋ।"
-    }
+    },
+    "comingSoon": "ਜਲਦੀ ਆ ਰਿਹਾ ਹੈ",
+    "welcomeBack": "ਵਾਪਸ ਸੁਆਗਤ ਹੈ",
+    "dashboard": "ਡੈਸ਼ਬੋਰਡ",
+    "getStarted": "ਸ਼ੁਰੂ ਕਰੋ",
+    "featuresSubtitle": "ਪੇਸ਼ੇਵਰ ਮੋਬਾਈਲ ਐਪਲੀਕੇਸ਼ਨਾਂ ਬਣਾਉਣ ਲਈ ਤੁਹਾਨੂੰ ਲੋੜੀਂਦੀ ਹਰ ਚੀਜ਼",
+    "iosReady": "iOS ਤਿਆਰ",
+    "androidReady": "Android ਤਿਆਰ"
   },
   "useCasesRapidPrototyping": {
     "badge": "ਵਰਤੋਂ ਦਾ ਮਾਮਲਾ",
-    "titleStart": "From Idea to Prototype in",
-    "titleHighlight": "Minutes",
+    "titleStart": "ਵਿਚਾਰ ਤੋਂ ਪ੍ਰੋਟੋਟਾਈਪ",
+    "titleHighlight": "ਮਿੰਟਾਂ ਵਿੱਚ",
     "subtitle": "ਤੇਜ਼ੀ ਨਾਲ ਵਿਚਾਰਾਂ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ। ਕੰਮ ਕਰਦੇ ਪ੍ਰੋਟੋਟਾਈਪ ਬਣਾਓ ਜੋ ਅਸਲੀ ਦਿਖਦੇ ਅਤੇ ਮਹਿਸੂਸ ਹੁੰਦੇ ਹਨ।",
     "startPrototyping": "ਪ੍ਰੋਟੋਟਾਈਪਿੰਗ ਸ਼ੁਰੂ ਕਰੋ",
-    "seeExamples": "See Examples",
+    "seeExamples": "ਉਦਾਹਰਨਾਂ ਵੇਖੋ",
     "comparisonTitle": "ਰਵਾਇਤੀ ਬਨਾਮ AppNode",
-    "totalTime": "Total time",
+    "totalTime": "ਕੁੱਲ ਸਮਾਂ",
     "traditional": {
       "title": "ਰਵਾਇਤੀ ਪ੍ਰੋਟੋਟਾਈਪਿੰਗ",
-      "totalTime": "6-10 weeks",
+      "totalTime": "6-10 ਹਫ਼ਤੇ",
       "steps": [
         {
           "name": "ਵਾਇਰਫ੍ਰੇਮ",
@@ -1910,7 +2073,7 @@
     },
     "appnode": {
       "title": "AppNode ਪ੍ਰੋਟੋਟਾਈਪਿੰਗ",
-      "totalTime": "1-2 hours",
+      "totalTime": "1-2 ਘੰਟੇ",
       "steps": [
         {
           "name": "ਵਰਣਨ ਕਰੋ",
@@ -1930,9 +2093,9 @@
         }
       ]
     },
-    "benefitsTitle": "Why Rapid Prototyping Matters",
-    "ctaTitle": "Start prototyping today",
-    "ctaSubtitle": "Turn your ideas into working prototypes in minutes, not months.",
+    "benefitsTitle": "ਤੇਜ਼ ਪ੍ਰੋਟੋਟਾਈਪਿੰਗ ਮਹੱਤਵਪੂਰਨ ਕਿਉਂ ਹੈ",
+    "ctaTitle": "ਅੱਜ ਪ੍ਰੋਟੋਟਾਈਪਿੰਗ ਸ਼ੁਰੂ ਕਰੋ",
+    "ctaSubtitle": "ਆਪਣੇ ਵਿਚਾਰਾਂ ਨੂੰ ਮਿੰਟਾਂ ਵਿੱਚ ਕੰਮ ਕਰਨ ਵਾਲੇ ਪ੍ਰੋਟੋਟਾਈਪ ਵਿੱਚ ਬਦਲੋ, ਮਹੀਨਿਆਂ ਵਿੱਚ ਨਹੀਂ।",
     "title": "ਵਿਚਾਰ ਤੋਂ ਪ੍ਰੋਟੋਟਾਈਪ ਮਿੰਟਾਂ ਵਿੱਚ",
     "viewExamples": "ਉਦਾਹਰਣਾਂ ਦੇਖੋ",
     "cta": {
@@ -1946,10 +2109,14 @@
     "lastUpdated": "ਆਖਰੀ ਅੱਪਡੇਟ: 1 ਦਸੰਬਰ 2025",
     "contactTitle": "10. Contact Us",
     "contactDescription": "If you have any questions about this privacy policy or our privacy practices, please contact us at:",
-    "intro": "AppNode ('ਅਸੀਂ', 'ਸਾਡਾ') ਤੁਹਾਡੀ ਗੋਪਨੀਯਤਾ ਨੂੰ ਗੰਭੀਰਤਾ ਨਾਲ ਲੈਂਦਾ ਹੈ। ਇਹ ਨੀਤੀ ਦੱਸਦੀ ਹੈ ਕਿ ਅਸੀਂ ਤੁਹਾਡੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਕਿਵੇਂ ਇਕੱਤਰ, ਵਰਤਦੇ ਅਤੇ ਸੁਰੱਖਿਅਤ ਕਰਦੇ ਹਾਂ।",
+    "intro": {
+      "p1": "AppNode Inc. (\"AppNode\", \"ਅਸੀਂ\", \"ਸਾਨੂੰ\", ਜਾਂ \"ਸਾਡਾ\") ਤੁਹਾਡੀ ਗੋਪਨੀਯਤਾ ਦੀ ਰੱਖਿਆ ਲਈ ਵਚਨਬੱਧ ਹੈ। ਇਹ ਗੋਪਨੀਯਤਾ ਨੀਤੀ ਦੱਸਦੀ ਹੈ ਕਿ ਅਸੀਂ ਤੁਹਾਡੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਨੂੰ ਕਿਵੇਂ ਇਕੱਠਾ, ਵਰਤਦੇ, ਖੁਲਾਸਾ, ਸਟੋਰ ਅਤੇ ਸੁਰੱਖਿਅਤ ਕਰਦੇ ਹਾਂ।",
+      "p2": "ਸੇਵਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰਕੇ, ਤੁਸੀਂ ਇਸ ਗੋਪਨੀਯਤਾ ਨੀਤੀ ਵਿੱਚ ਦੱਸੀਆਂ ਕਾਰਵਾਈਆਂ ਨਾਲ ਸਹਿਮਤੀ ਦਿੰਦੇ ਹੋ। ਜੇ ਤੁਸੀਂ ਸਹਿਮਤ ਨਹੀਂ ਹੋ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਸੇਵਾਵਾਂ ਦੀ ਵਰਤੋਂ ਨਾ ਕਰੋ।",
+      "p3": "ਅਸੀਂ ਸਮੇਂ-ਸਮੇਂ 'ਤੇ ਇਸ ਗੋਪਨੀਯਤਾ ਨੀਤੀ ਨੂੰ ਅੱਪਡੇਟ ਕਰ ਸਕਦੇ ਹਾਂ। ਅਸੀਂ ਤੁਹਾਨੂੰ ਮਹੱਤਵਪੂਰਨ ਤਬਦੀਲੀਆਂ ਬਾਰੇ ਸੂਚਿਤ ਕਰਾਂਗੇ। ਤਬਦੀਲੀਆਂ ਤੋਂ ਬਾਅਦ ਤੁਹਾਡੀ ਨਿਰੰਤਰ ਵਰਤੋਂ ਸਵੀਕ੍ਰਿਤੀ ਮੰਨੀ ਜਾਵੇਗੀ।"
+    },
     "section1": {
-      "title": "1. Information We Collect",
-      "s1Title": "1.1 Information You Provide Directly",
+      "title": "1. ਜਾਣਕਾਰੀ ਜੋ ਅਸੀਂ ਇਕੱਠੀ ਕਰਦੇ ਹਾਂ",
+      "s1Title": "1.1 ਜਾਣਕਾਰੀ ਜੋ ਤੁਸੀਂ ਸਿੱਧੇ ਦਿੰਦੇ ਹੋ",
       "s1Items": [
         "Account data: name, email, password, username",
         "Profile data: avatar, bio, preferences, settings",
@@ -1957,23 +2124,23 @@
         "User Content: prompts, inputs, code snippets, uploaded files, generated outputs you save or share",
         "Communications: support tickets, emails, feedback, chat messages"
       ],
-      "s2Title": "1.2 Automatically Collected Information",
+      "s2Title": "1.2 ਆਟੋਮੈਟਿਕਲੀ ਇਕੱਠੀ ਕੀਤੀ ਜਾਣਕਾਰੀ",
       "s2Items": [
         "Device & technical data: IP address, browser type/version, OS, device ID, screen resolution",
         "Usage data: pages visited, features used, time spent, prompts submitted (metadata), error logs",
         "Cookies & tracking: session IDs, analytics (Google Analytics, Mixpanel or similar), performance metrics"
       ],
-      "s3Title": "1.3 AI-Specific Data (Inputs & Outputs)",
+      "s3Title": "1.3 AI-ਵਿਸ਼ੇਸ਼ ਡਾਟਾ (ਇੰਪੁੱਟ ਅਤੇ ਆਊਟਪੁੱਟ)",
       "s3Items": [
         "Prompts/Inputs you submit to generate code, apps, workflows",
         "Generated Outputs (code, text, etc.)",
         "Feedback/ratings on Outputs (thumbs up/down, comments)"
       ],
-      "s3Note": "We do not intentionally collect sensitive personal data (health, race, religion, etc.) unless you voluntarily include it in prompts – in which case you assume responsibility."
+      "s3Note": "ਅਸੀਂ ਜਾਣਬੁੱਝ ਕੇ ਸੰਵੇਦਨਸ਼ੀਲ ਨਿੱਜੀ ਡਾਟਾ (ਸਿਹਤ, ਨਸਲ, ਧਰਮ, ਆਦਿ) ਇਕੱਠਾ ਨਹੀਂ ਕਰਦੇ ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ ਆਪਣੀ ਮਰਜ਼ੀ ਨਾਲ ਇਸਨੂੰ ਪ੍ਰੌਂਪਟਸ ਵਿੱਚ ਸ਼ਾਮਲ ਨਹੀਂ ਕਰਦੇ — ਉਸ ਸਥਿਤੀ ਵਿੱਚ ਤੁਸੀਂ ਜ਼ਿੰਮੇਵਾਰੀ ਲੈਂਦੇ ਹੋ।"
     },
     "section2": {
-      "title": "2. How We Use Your Information",
-      "intro": "We use your information to:",
+      "title": "2. ਅਸੀਂ ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਕਿਵੇਂ ਵਰਤਦੇ ਹਾਂ",
+      "intro": "ਅਸੀਂ ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਇਸ ਲਈ ਵਰਤਦੇ ਹਾਂ:",
       "items": [
         "Provide, operate, maintain, and improve the Services (including generating AI Outputs)",
         "Process subscriptions, payments, and billing",
@@ -1986,42 +2153,42 @@
       "marketing": "Marketing: We may send promotional emails about AppNode features if you opt-in (you can unsubscribe anytime)."
     },
     "section3": {
-      "title": "3. AI Model Training & Improvement (Critical Section)",
-      "intro": "By default, we do not use your personal prompts, inputs, outputs, or User Content to train or fine-tune our foundational AI models unless you explicitly opt-in via account settings.",
+      "title": "3. AI ਮਾਡਲ ਸਿਖਲਾਈ ਅਤੇ ਸੁਧਾਰ (ਮਹੱਤਵਪੂਰਨ ਭਾਗ)",
+      "intro": "ਡਿਫੌਲਟ ਰੂਪ ਵਿੱਚ, ਅਸੀਂ ਤੁਹਾਡੇ ਨਿੱਜੀ ਪ੍ਰੌਂਪਟ, ਇੰਪੁੱਟ, ਆਊਟਪੁੱਟ, ਜਾਂ ਯੂਜ਼ਰ ਸਮੱਗਰੀ ਦੀ ਵਰਤੋਂ ਸਾਡੇ ਬੁਨਿਆਦੀ AI ਮਾਡਲਾਂ ਨੂੰ ਸਿਖਲਾਈ ਦੇਣ ਲਈ ਨਹੀਂ ਕਰਦੇ ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ ਖਾਤਾ ਸੈਟਿੰਗਾਂ ਰਾਹੀਂ ਸਪੱਸ਼ਟ ਤੌਰ 'ਤੇ ਆਪਟ-ਇਨ ਨਹੀਂ ਕਰਦੇ।",
       "items": [
         "Opt-in for Training: You can enable \"Allow my data to improve AppNode AI\" in Settings → Privacy. If enabled: anonymized/aggregated versions of your prompts, outputs, and feedback may be used to train, fine-tune, evaluate, and improve our AI models and safety systems.",
         "Opt-out / Default: If not enabled (or if you disable it), your data is never used for model training. We may still use fully anonymized, aggregated usage statistics (no prompts/content) for general system improvements.",
         "We do not sell your prompts, outputs, or personal data to third parties for their training.",
         "If you opt-in, you can change your mind anytime – previous data already used cannot be retroactively removed from models, but new data won't be used."
       ],
-      "note": "This aligns with best practices (e.g., Cursor/Anthropic-style opt-in) and helps comply with GDPR purpose limitation and EU AI Act transparency."
+      "note": "ਇਹ ਵਧੀਆ ਅਭਿਆਸਾਂ ਨਾਲ ਮੇਲ ਖਾਂਦਾ ਹੈ ਅਤੇ GDPR ਉਦੇਸ਼ ਸੀਮਤਤਾ ਅਤੇ EU AI ਐਕਟ ਪਾਰਦਰਸ਼ਤਾ ਦੀ ਪਾਲਣਾ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।"
     },
     "section4": {
-      "title": "4. Sharing & Disclosure of Information",
-      "noSell": "We do not sell your personal information.",
-      "intro": "We share data only:",
+      "title": "4. ਜਾਣਕਾਰੀ ਦਾ ਸਾਂਝਾ ਅਤੇ ਖੁਲਾਸਾ",
+      "noSell": "ਅਸੀਂ ਤੁਹਾਡੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਨਹੀਂ ਵੇਚਦੇ।",
+      "intro": "ਅਸੀਂ ਡਾਟਾ ਸਿਰਫ਼ ਇਸ ਸਥਿਤੀ ਵਿੱਚ ਸਾਂਝਾ ਕਰਦੇ ਹਾਂ:",
       "items": [
         "With service providers (processors): cloud hosting (AWS/GCP), payment processors, analytics tools – bound by strict DPA contracts",
         "For legal reasons: subpoenas, court orders, protect rights/safety (e.g., abuse detection)",
         "In business transfers: merger, acquisition, asset sale (your data transferred under same protections)",
         "With your consent or at your direction (e.g., sharing generated code via public link)"
       ],
-      "international": "International transfers: Data is primarily stored in the US. For EU/EEA/UK users: we rely on Standard Contractual Clauses (SCCs) or EU-US Data Privacy Framework where applicable. Montenegro aligns closely with GDPR via recent harmonization."
+      "international": "ਅੰਤਰਰਾਸ਼ਟਰੀ ਤਬਾਦਲੇ: ਡਾਟਾ ਮੁੱਖ ਤੌਰ 'ਤੇ ਅਮਰੀਕਾ ਵਿੱਚ ਸਟੋਰ ਕੀਤਾ ਜਾਂਦਾ ਹੈ। EU/EEA/UK ਯੂਜ਼ਰਾਂ ਲਈ: ਅਸੀਂ ਸਟੈਂਡਰਡ ਕੰਟ੍ਰੈਕਚੁਅਲ ਕਲਾਜ਼ (SCCs) ਜਾਂ EU-US ਡਾਟਾ ਪ੍ਰਾਈਵੇਸੀ ਫਰੇਮਵਰਕ 'ਤੇ ਨਿਰਭਰ ਕਰਦੇ ਹਾਂ।"
     },
     "section5": {
-      "title": "5. Data Retention",
-      "intro": "We retain your data only as long as necessary:",
+      "title": "5. ਡਾਟਾ ਧਾਰਨ",
+      "intro": "ਅਸੀਂ ਤੁਹਾਡਾ ਡਾਟਾ ਸਿਰਫ਼ ਲੋੜ ਮੁਤਾਬਕ ਰੱਖਦੇ ਹਾਂ:",
       "items": [
         "Account active → indefinite (until deletion request)",
         "Prompts/Outputs: retained for your access (unless deleted); anonymized aggregates longer for analytics",
         "Logs/technical data: up to 12–24 months for security/fraud prevention",
         "After account deletion: data deleted within 30 days (except legal backups or anonymized aggregates)"
       ],
-      "note": "You can request deletion anytime (see Rights below)."
+      "note": "ਤੁਸੀਂ ਕਿਸੇ ਵੀ ਸਮੇਂ ਡਿਲੀਟ ਕਰਨ ਦੀ ਬੇਨਤੀ ਕਰ ਸਕਦੇ ਹੋ (ਹੇਠਾਂ ਅਧਿਕਾਰ ਵੇਖੋ)।"
     },
     "section6": {
-      "title": "6. Your Privacy Rights",
-      "intro": "Depending on your location (GDPR for EU/EEA/UK/Montenegro equivalent, CCPA/CPRA for California, etc.):",
+      "title": "6. ਤੁਹਾਡੇ ਗੋਪਨੀਯਤਾ ਅਧਿਕਾਰ",
+      "intro": "ਤੁਹਾਡੀ ਸਥਿਤੀ ਦੇ ਆਧਾਰ 'ਤੇ (EU/EEA/UK ਲਈ GDPR, ਕੈਲੀਫੋਰਨੀਆ ਲਈ CCPA/CPRA, ਆਦਿ):",
       "items": [
         "Access: See what data we hold",
         "Correction: Update inaccurate data",
@@ -2031,30 +2198,30 @@
         "Portability: Receive data in structured format",
         "Withdraw consent anytime (doesn't affect prior processing)"
       ],
-      "california": "For California residents: \"Do Not Sell or Share My Personal Information\" link on our site (though we don't sell).",
+      "california": "ਕੈਲੀਫੋਰਨੀਆ ਦੇ ਨਿਵਾਸੀਆਂ ਲਈ: ਸਾਡੀ ਸਾਈਟ 'ਤੇ \"ਮੇਰੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਨਾ ਵੇਚੋ ਜਾਂ ਸਾਂਝੀ ਨਾ ਕਰੋ\" ਲਿੰਕ (ਹਾਲਾਂਕਿ ਅਸੀਂ ਵੇਚਦੇ ਨਹੀਂ)।",
       "submit": "Submit requests: privacy@appnode.ai",
-      "response": "We respond within 30–45 days (extendable per law). Verification required. No discrimination for exercising rights."
+      "response": "ਅਸੀਂ 30-45 ਦਿਨਾਂ ਦੇ ਅੰਦਰ ਜਵਾਬ ਦਿੰਦੇ ਹਾਂ (ਕਾਨੂੰਨ ਅਨੁਸਾਰ ਵਧਾਇਆ ਜਾ ਸਕਦਾ ਹੈ)। ਤਸਦੀਕ ਲੋੜੀਂਦੀ ਹੈ। ਅਧਿਕਾਰਾਂ ਦੀ ਵਰਤੋਂ ਲਈ ਕੋਈ ਵਿਤਕਰਾ ਨਹੀਂ।"
     },
     "section7": {
-      "title": "7. Data Security",
-      "p1": "We use industry-standard measures: encryption (TLS 1.3, at-rest AES-256), access controls, regular audits, penetration testing.",
-      "p2": "However, no system is 100% secure. We cannot guarantee absolute security – you use Services at your own risk.",
-      "p3": "In case of breach: we notify affected users and authorities as required by law (e.g., GDPR 72h)."
+      "title": "7. ਡਾਟਾ ਸੁਰੱਖਿਆ",
+      "p1": "ਅਸੀਂ ਉਦਯੋਗ-ਮਿਆਰੀ ਉਪਾਅ ਵਰਤਦੇ ਹਾਂ: ਐਨਕ੍ਰਿਪਸ਼ਨ (TLS 1.3, ਆਰਾਮ ਵਿੱਚ AES-256), ਪਹੁੰਚ ਕੰਟਰੋਲ, ਨਿਯਮਤ ਆਡਿਟ, ਪੈਨੀਟ੍ਰੇਸ਼ਨ ਟੈਸਟਿੰਗ।",
+      "p2": "ਹਾਲਾਂਕਿ, ਕੋਈ ਵੀ ਸਿਸਟਮ 100% ਸੁਰੱਖਿਅਤ ਨਹੀਂ ਹੈ। ਅਸੀਂ ਪੂਰੀ ਸੁਰੱਖਿਆ ਦੀ ਗਾਰੰਟੀ ਨਹੀਂ ਦੇ ਸਕਦੇ — ਤੁਸੀਂ ਸੇਵਾਵਾਂ ਦੀ ਵਰਤੋਂ ਆਪਣੇ ਜੋਖਮ 'ਤੇ ਕਰਦੇ ਹੋ।",
+      "p3": "ਉਲੰਘਣਾ ਦੀ ਸਥਿਤੀ ਵਿੱਚ: ਅਸੀਂ ਪ੍ਰਭਾਵਿਤ ਯੂਜ਼ਰਾਂ ਅਤੇ ਅਧਿਕਾਰੀਆਂ ਨੂੰ ਕਾਨੂੰਨ ਅਨੁਸਾਰ ਸੂਚਿਤ ਕਰਦੇ ਹਾਂ (ਜਿਵੇਂ GDPR 72 ਘੰਟੇ)।"
     },
     "section8": {
-      "title": "8. Cookies & Tracking Technologies",
-      "content": "We use essential cookies (for functionality), analytics, and performance cookies. You can manage via browser settings or our cookie banner. Blocking may limit functionality."
+      "title": "8. ਕੂਕੀਜ਼ ਅਤੇ ਟ੍ਰੈਕਿੰਗ ਤਕਨੀਕਾਂ",
+      "content": "ਅਸੀਂ ਜ਼ਰੂਰੀ ਕੂਕੀਜ਼ (ਕਾਰਜਸ਼ੀਲਤਾ ਲਈ), ਵਿਸ਼ਲੇਸ਼ਣ, ਅਤੇ ਪ੍ਰਦਰਸ਼ਨ ਕੂਕੀਜ਼ ਵਰਤਦੇ ਹਾਂ। ਤੁਸੀਂ ਬ੍ਰਾਊਜ਼ਰ ਸੈਟਿੰਗਾਂ ਜਾਂ ਸਾਡੇ ਕੂਕੀ ਬੈਨਰ ਰਾਹੀਂ ਪ੍ਰਬੰਧਿਤ ਕਰ ਸਕਦੇ ਹੋ।"
     },
     "section9": {
-      "title": "9. Children's Privacy",
-      "content": "Services not directed to children under 16 (or 13 in some jurisdictions). We do not knowingly collect data from children. If discovered, we delete immediately."
+      "title": "9. ਬੱਚਿਆਂ ਦੀ ਗੋਪਨੀਯਤਾ",
+      "content": "ਸੇਵਾਵਾਂ 16 ਸਾਲ ਤੋਂ ਘੱਟ (ਕੁਝ ਅਧਿਕਾਰ ਖੇਤਰਾਂ ਵਿੱਚ 13) ਦੇ ਬੱਚਿਆਂ ਲਈ ਨਹੀਂ ਹਨ। ਅਸੀਂ ਜਾਣਬੁੱਝ ਕੇ ਬੱਚਿਆਂ ਤੋਂ ਡਾਟਾ ਇਕੱਠਾ ਨਹੀਂ ਕਰਦੇ। ਪਤਾ ਲੱਗਣ 'ਤੇ ਅਸੀਂ ਤੁਰੰਤ ਡਿਲੀਟ ਕਰਦੇ ਹਾਂ।"
     },
     "section10": {
-      "title": "10. Third-Party Links & Integrations",
+      "title": "10. ਤੀਜੀ-ਧਿਰ ਦੇ ਲਿੰਕ ਅਤੇ ਇੰਟੀਗ੍ਰੇਸ਼ਨਾਂ",
       "content": "Services may link to third parties (e.g., GitHub integration). We are not responsible for their privacy practices."
     },
     "section11": {
-      "title": "11. Contact Us",
+      "title": "11. ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ",
       "company": "AppNode Inc.",
       "privacyEmail": "Email: privacy@appnode.ai (for privacy requests)",
       "generalEmail": "General: contact@appnode.ai"
@@ -2132,24 +2299,24 @@
     "contactDescription": "If you have any questions about these Terms, please contact us at:",
     "intro": {
       "p1": "These Terms of Service (\"Terms\") govern your access to and use of the AppNode platform, including but not limited to its website, mobile applications, APIs, software, artificial intelligence tools, documentation, and any related services, features, or content (collectively, the \"Services\") provided by AppNode Inc. (\"AppNode,\" \"Company,\" \"we,\" \"us,\" or \"our\"). The Services are designed to assist users in generating web applications, code, workflows, and other digital outputs through AI-powered tools.",
-      "p2": "By accessing, registering for, or using the Services in any manner, you (the \"User,\" \"you,\" or \"your\") agree to be legally bound by these Terms, our Privacy Policy (incorporated herein by reference), and any additional terms or policies we may provide from time to time. If you do not agree to these Terms, you must immediately cease all use of the Services and are prohibited from accessing them.",
+      "p2": "ਸੇਵਾਵਾਂ ਨੂੰ ਕਿਸੇ ਵੀ ਤਰੀਕੇ ਨਾਲ ਐਕਸੈਸ ਕਰਕੇ, ਰਜਿਸਟਰ ਕਰਕੇ, ਜਾਂ ਵਰਤ ਕੇ, ਤੁਸੀਂ (\"ਯੂਜ਼ਰ,\" \"ਤੁਸੀਂ,\" ਜਾਂ \"ਤੁਹਾਡਾ\") ਇਹਨਾਂ ਸ਼ਰਤਾਂ, ਸਾਡੀ ਗੋਪਨੀਯਤਾ ਨੀਤੀ (ਇੱਥੇ ਹਵਾਲੇ ਰਾਹੀਂ ਸ਼ਾਮਲ), ਅਤੇ ਕਿਸੇ ਵੀ ਵਾਧੂ ਸ਼ਰਤਾਂ ਜਾਂ ਨੀਤੀਆਂ ਨਾਲ ਕਾਨੂੰਨੀ ਤੌਰ 'ਤੇ ਬੱਝੇ ਹੋਣ ਲਈ ਸਹਿਮਤ ਹੁੰਦੇ ਹੋ। ਜੇਕਰ ਤੁਸੀਂ ਇਹਨਾਂ ਸ਼ਰਤਾਂ ਨਾਲ ਸਹਿਮਤ ਨਹੀਂ ਹੋ, ਤਾਂ ਤੁਹਾਨੂੰ ਤੁਰੰਤ ਸੇਵਾਵਾਂ ਦੀ ਸਾਰੀ ਵਰਤੋਂ ਬੰਦ ਕਰਨੀ ਚਾਹੀਦੀ ਹੈ ਅਤੇ ਇਹਨਾਂ ਨੂੰ ਐਕਸੈਸ ਕਰਨ ਤੋਂ ਮਨ੍ਹਾ ਕੀਤਾ ਜਾਂਦਾ ਹੈ।",
       "p3": "These Terms form a binding legal agreement between you and AppNode. If you are using the Services on behalf of an organization, entity, or third party (e.g., your employer or client), you represent and warrant that you have the full authority to bind that organization, entity, or third party to these Terms, and \"you\" and \"your\" shall refer to such organization, entity, or third party.",
-      "p4": "We reserve the right to modify these Terms at any time, as detailed in Section 20 below. Your continued use of the Services after any such modifications constitutes your acceptance of the revised Terms."
+      "p4": "ਅਸੀਂ ਇਹਨਾਂ ਸ਼ਰਤਾਂ ਨੂੰ ਕਿਸੇ ਵੀ ਸਮੇਂ ਸੋਧਣ ਦਾ ਅਧਿਕਾਰ ਰੱਖਦੇ ਹਾਂ, ਜਿਵੇਂ ਕਿ ਹੇਠਾਂ ਭਾਗ 20 ਵਿੱਚ ਦੱਸਿਆ ਗਿਆ ਹੈ। ਅਜਿਹੀਆਂ ਸੋਧਾਂ ਤੋਂ ਬਾਅਦ ਸੇਵਾਵਾਂ ਦੀ ਤੁਹਾਡੀ ਨਿਰੰਤਰ ਵਰਤੋਂ ਸੋਧੀਆਂ ਸ਼ਰਤਾਂ ਦੀ ਤੁਹਾਡੀ ਸਵੀਕ੍ਰਿਤੀ ਹੈ।"
     },
     "section1": {
-      "title": "1. Eligibility and Restrictions",
-      "intro": "To use the Services, you must:",
+      "title": "1. ਯੋਗਤਾ ਅਤੇ ਪਾਬੰਦੀਆਂ",
+      "intro": "ਸੇਵਾਵਾਂ ਵਰਤਣ ਲਈ, ਤੁਹਾਨੂੰ ਲਾਜ਼ਮੀ ਤੌਰ 'ਤੇ:",
       "items": [
         "Be at least 18 years of age or the age of legal majority in your jurisdiction, whichever is greater.",
         "Not be located in, or a resident or national of, any country or region subject to comprehensive U.S. sanctions or embargoes (including but not limited to Cuba, Iran, North Korea, Syria, Crimea, Donetsk People's Republic, or Luhansk People's Republic), or otherwise be a person or entity prohibited from receiving U.S. exports under applicable export control laws.",
         "Not be listed on any U.S. government list of prohibited or restricted parties, including the Specially Designated Nationals List maintained by the U.S. Department of the Treasury."
       ],
-      "minor": "If you are under 18 years of age or the age of legal majority, you may only use the Services under the direct supervision and with the express written consent of a parent or legal guardian who agrees to be bound by these Terms on your behalf. We may require proof of such consent at any time.",
-      "suspended": "You agree not to use the Services if you have previously been suspended or terminated from the Services."
+      "minor": "ਜੇਕਰ ਤੁਸੀਂ 18 ਸਾਲ ਤੋਂ ਘੱਟ ਉਮਰ ਦੇ ਹੋ ਜਾਂ ਕਾਨੂੰਨੀ ਬਾਲਗਤਾ ਦੀ ਉਮਰ ਤੋਂ ਘੱਟ ਹੋ, ਤਾਂ ਤੁਸੀਂ ਸੇਵਾਵਾਂ ਸਿਰਫ਼ ਮਾਪੇ ਜਾਂ ਕਾਨੂੰਨੀ ਸਰਪ੍ਰਸਤ ਦੀ ਸਿੱਧੀ ਨਿਗਰਾਨੀ ਹੇਠ ਅਤੇ ਉਹਨਾਂ ਦੀ ਸਪੱਸ਼ਟ ਲਿਖਤੀ ਸਹਿਮਤੀ ਨਾਲ ਵਰਤ ਸਕਦੇ ਹੋ ਜੋ ਤੁਹਾਡੀ ਤਰਫ਼ੋਂ ਇਹਨਾਂ ਸ਼ਰਤਾਂ ਨਾਲ ਬੱਝੇ ਹੋਣ ਲਈ ਸਹਿਮਤ ਹੁੰਦੇ ਹਨ। ਅਸੀਂ ਕਿਸੇ ਵੀ ਸਮੇਂ ਅਜਿਹੀ ਸਹਿਮਤੀ ਦਾ ਸਬੂਤ ਮੰਗ ਸਕਦੇ ਹਾਂ।",
+      "suspended": "ਤੁਸੀਂ ਸਹਿਮਤ ਹੋ ਕਿ ਜੇਕਰ ਤੁਹਾਨੂੰ ਪਹਿਲਾਂ ਸੇਵਾਵਾਂ ਤੋਂ ਮੁਅੱਤਲ ਜਾਂ ਬਰਖ਼ਾਸਤ ਕੀਤਾ ਗਿਆ ਹੈ ਤਾਂ ਤੁਸੀਂ ਸੇਵਾਵਾਂ ਨਹੀਂ ਵਰਤੋਗੇ।"
     },
     "section2": {
-      "title": "2. Account Registration, Security, and Responsibilities",
-      "intro": "To access certain features of the Services, you must create an account (\"Account\"). You agree to:",
+      "title": "2. ਖਾਤਾ ਰਜਿਸਟ੍ਰੇਸ਼ਨ, ਸੁਰੱਖਿਆ, ਅਤੇ ਜ਼ਿੰਮੇਵਾਰੀਆਂ",
+      "intro": "ਸੇਵਾਵਾਂ ਦੀਆਂ ਕੁਝ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਲਈ, ਤੁਹਾਨੂੰ ਇੱਕ ਖਾਤਾ (\"ਖਾਤਾ\") ਬਣਾਉਣਾ ਚਾਹੀਦਾ ਹੈ। ਤੁਸੀਂ ਸਹਿਮਤ ਹੋ:",
       "items": [
         "Provide accurate, current, and complete information during registration and keep such information updated.",
         "Maintain the strict confidentiality of your Account credentials (e.g., username, password, API keys) and not share them with any third party.",
@@ -2157,12 +2324,12 @@
         "Immediately notify us in writing at support@appnode.ai of any unauthorized use, suspected breach, or security incident related to your Account.",
         "Use strong, unique passwords and enable any available security features (e.g., two-factor authentication)."
       ],
-      "reserve": "We reserve the right to refuse registration, suspend, or terminate your Account at any time, with or without notice, for any reason or no reason, including but not limited to violations of these Terms, suspected fraud, security risks, legal requirements, or operational concerns. Upon suspension or termination, you must immediately cease all use of the Services.",
-      "acknowledge": "You acknowledge that we are not responsible for any loss or damage arising from your failure to comply with these security obligations. We may, but are not obligated to, monitor Account activity for security, compliance, or abuse prevention purposes."
+      "reserve": "ਅਸੀਂ ਕਿਸੇ ਵੀ ਸਮੇਂ, ਨੋਟਿਸ ਨਾਲ ਜਾਂ ਬਿਨਾਂ, ਕਿਸੇ ਵੀ ਕਾਰਨ ਜਾਂ ਬਿਨਾਂ ਕਾਰਨ, ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਤੋਂ ਇਨਕਾਰ ਕਰਨ, ਤੁਹਾਡੇ ਖਾਤੇ ਨੂੰ ਮੁਅੱਤਲ ਕਰਨ, ਜਾਂ ਬੰਦ ਕਰਨ ਦਾ ਅਧਿਕਾਰ ਰੱਖਦੇ ਹਾਂ, ਜਿਸ ਵਿੱਚ ਇਹਨਾਂ ਸ਼ਰਤਾਂ ਦੀ ਉਲੰਘਣਾ, ਸ਼ੱਕੀ ਧੋਖਾਧੜੀ, ਸੁਰੱਖਿਆ ਖ਼ਤਰੇ, ਕਾਨੂੰਨੀ ਲੋੜਾਂ, ਜਾਂ ਸੰਚਾਲਨ ਚਿੰਤਾਵਾਂ ਸ਼ਾਮਲ ਹਨ। ਮੁਅੱਤਲੀ ਜਾਂ ਬਰਖ਼ਾਸਤਗੀ 'ਤੇ, ਤੁਹਾਨੂੰ ਤੁਰੰਤ ਸੇਵਾਵਾਂ ਦੀ ਸਾਰੀ ਵਰਤੋਂ ਬੰਦ ਕਰਨੀ ਚਾਹੀਦੀ ਹੈ।",
+      "acknowledge": "ਤੁਸੀਂ ਸਵੀਕਾਰ ਕਰਦੇ ਹੋ ਕਿ ਇਹਨਾਂ ਸੁਰੱਖਿਆ ਜ਼ਿੰਮੇਵਾਰੀਆਂ ਦੀ ਪਾਲਣਾ ਕਰਨ ਵਿੱਚ ਤੁਹਾਡੀ ਅਸਫ਼ਲਤਾ ਕਾਰਨ ਹੋਣ ਵਾਲੇ ਕਿਸੇ ਵੀ ਨੁਕਸਾਨ ਲਈ ਅਸੀਂ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹਾਂ। ਅਸੀਂ ਸੁਰੱਖਿਆ, ਅਨੁਕੂਲਤਾ, ਜਾਂ ਦੁਰਵਰਤੋਂ ਰੋਕਥਾਮ ਲਈ ਖਾਤੇ ਦੀ ਗਤੀਵਿਧੀ ਦੀ ਨਿਗਰਾਨੀ ਕਰ ਸਕਦੇ ਹਾਂ, ਪਰ ਇਹ ਸਾਡੀ ਜ਼ਿੰਮੇਵਾਰੀ ਨਹੀਂ ਹੈ।"
     },
     "section3": {
-      "title": "3. Description of Services",
-      "intro": "The Services include AI-powered tools that enable users to generate, modify, and deploy web applications, code, workflows, scripts, digital content, and related outputs based on natural language prompts or other inputs. Features may include, without limitation:",
+      "title": "3. ਸੇਵਾਵਾਂ ਦਾ ਵਰਣਨ",
+      "intro": "ਸੇਵਾਵਾਂ ਵਿੱਚ AI-ਸੰਚਾਲਿਤ ਟੂਲ ਸ਼ਾਮਲ ਹਨ ਜੋ ਯੂਜ਼ਰਾਂ ਨੂੰ ਕੁਦਰਤੀ ਭਾਸ਼ਾ ਪ੍ਰੌਂਪਟਾਂ ਜਾਂ ਹੋਰ ਇਨਪੁੱਟਾਂ ਦੇ ਆਧਾਰ 'ਤੇ ਵੈੱਬ ਐਪਲੀਕੇਸ਼ਨਾਂ, ਕੋਡ, ਵਰਕਫ਼ਲੋਅ, ਸਕ੍ਰਿਪਟਾਂ, ਡਿਜੀਟਲ ਸਮੱਗਰੀ, ਅਤੇ ਸੰਬੰਧਿਤ ਆਉਟਪੁੱਟ ਜਨਰੇਟ, ਸੋਧ, ਅਤੇ ਡਿਪਲੌਇ ਕਰਨ ਦੇ ਯੋਗ ਬਣਾਉਂਦੇ ਹਨ। ਫੀਚਰਸ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋ ਸਕਦੇ ਹਨ, ਬਿਨਾਂ ਸੀਮਾ ਦੇ:",
       "items": [
         "AI-driven code generation and editing.",
         "Hosting, deployment, and scaling of applications.",
@@ -2173,13 +2340,13 @@
         "Paid subscription tiers with enhanced features (e.g., priority processing, higher usage limits).",
         "Usage-based billing for computational resources, API calls, or storage."
       ],
-      "evolve": "The Services may evolve over time, and we reserve the right to add, modify, suspend, or discontinue any features, functionalities, or aspects of the Services at any time, without notice or liability. We do not guarantee the availability, uptime, or performance of the Services, and access may be subject to scheduled maintenance, unscheduled downtime, or other interruptions.",
-      "thirdParty": "Certain features may require integration with third-party services (e.g., cloud providers, payment processors), and you are responsible for complying with those third parties' terms and policies. We are not liable for any issues arising from such integrations."
+      "evolve": "ਸੇਵਾਵਾਂ ਸਮੇਂ ਨਾਲ ਵਿਕਸਿਤ ਹੋ ਸਕਦੀਆਂ ਹਨ, ਅਤੇ ਅਸੀਂ ਕਿਸੇ ਵੀ ਸਮੇਂ, ਬਿਨਾਂ ਨੋਟਿਸ ਜਾਂ ਜ਼ਿੰਮੇਵਾਰੀ ਦੇ, ਸੇਵਾਵਾਂ ਦੀਆਂ ਕਿਸੇ ਵੀ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ, ਕਾਰਜਕੁਸ਼ਲਤਾ, ਜਾਂ ਪਹਿਲੂਆਂ ਨੂੰ ਜੋੜਨ, ਸੋਧਣ, ਮੁਅੱਤਲ ਕਰਨ, ਜਾਂ ਬੰਦ ਕਰਨ ਦਾ ਅਧਿਕਾਰ ਰੱਖਦੇ ਹਾਂ। ਅਸੀਂ ਸੇਵਾਵਾਂ ਦੀ ਉਪਲਬਧਤਾ, ਅੱਪਟਾਈਮ, ਜਾਂ ਪ੍ਰਦਰਸ਼ਨ ਦੀ ਗਾਰੰਟੀ ਨਹੀਂ ਦਿੰਦੇ।",
+      "thirdParty": "ਕੁਝ ਫੀਚਰਾਂ ਲਈ ਤੀਜੀ-ਧਿਰ ਸੇਵਾਵਾਂ (ਜਿਵੇਂ ਕਿ ਕਲਾਊਡ ਪ੍ਰਦਾਤਾ, ਭੁਗਤਾਨ ਪ੍ਰੋਸੈਸਰ) ਨਾਲ ਇੰਟੀਗ੍ਰੇਸ਼ਨ ਦੀ ਲੋੜ ਹੋ ਸਕਦੀ ਹੈ, ਅਤੇ ਤੁਸੀਂ ਉਹਨਾਂ ਤੀਜੀਆਂ ਧਿਰਾਂ ਦੀਆਂ ਸ਼ਰਤਾਂ ਅਤੇ ਨੀਤੀਆਂ ਦੀ ਪਾਲਣਾ ਕਰਨ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਹੋ। ਅਸੀਂ ਅਜਿਹੇ ਇੰਟੀਗ੍ਰੇਸ਼ਨਾਂ ਤੋਂ ਪੈਦਾ ਹੋਣ ਵਾਲੇ ਕਿਸੇ ਵੀ ਮੁੱਦੇ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹਾਂ।"
     },
     "section4": {
-      "title": "4. AI-Generated Output Disclaimer and Risks",
-      "intro": "The Services rely on artificial intelligence models and algorithms (\"AI Systems\") to process inputs and generate outputs (\"AI Outputs\"), which may include code, text, images, designs, or other content.",
-      "acknowledge": "You expressly acknowledge and agree that:",
+      "title": "4. AI-ਜਨਰੇਟਿਡ ਆਉਟਪੁੱਟ ਬੇਦਾਅਵਾ ਅਤੇ ਖ਼ਤਰੇ",
+      "intro": "ਸੇਵਾਵਾਂ ਇਨਪੁੱਟ ਪ੍ਰੋਸੈਸ ਕਰਨ ਅਤੇ ਆਉਟਪੁੱਟ ਜਨਰੇਟ ਕਰਨ ਲਈ ਨਕਲੀ ਬੁੱਧੀ ਮਾਡਲਾਂ ਅਤੇ ਐਲਗੋਰਿਦਮਾਂ (\"AI ਸਿਸਟਮ\") 'ਤੇ ਨਿਰਭਰ ਕਰਦੀਆਂ ਹਨ (\"AI ਆਉਟਪੁੱਟ\"), ਜਿਸ ਵਿੱਚ ਕੋਡ, ਟੈਕਸਟ, ਚਿੱਤਰ, ਡਿਜ਼ਾਈਨ, ਜਾਂ ਹੋਰ ਸਮੱਗਰੀ ਸ਼ਾਮਲ ਹੋ ਸਕਦੀ ਹੈ।",
+      "acknowledge": "ਤੁਸੀਂ ਸਪੱਸ਼ਟ ਤੌਰ 'ਤੇ ਸਵੀਕਾਰ ਕਰਦੇ ਹੋ ਅਤੇ ਸਹਿਮਤ ਹੋ ਕਿ:",
       "items": [
         "AI Outputs are generated algorithmically and may contain errors, bugs, vulnerabilities, inaccuracies, biases, hallucinations, or omissions.",
         "AI Outputs are not intended to be, and should not be treated as, professional advice, production-ready code, or guaranteed solutions.",
@@ -2192,9 +2359,9 @@
       "disclaimer": "AppNode disclaims all liability for any damages, losses, or claims arising from your use of or reliance on AI Outputs, including but not limited to direct, indirect, incidental, consequential, or punitive damages. You agree to use AI Outputs at your own risk and peril."
     },
     "section5": {
-      "title": "5. User Content, Data, and Licenses",
-      "definition": "\"User Content\" means any prompts, data, code, text, images, files, or other materials you upload, submit, or input into the Services.",
-      "ownership": "Ownership: You retain all ownership rights in your User Content, subject to the licenses granted herein.",
+      "title": "5. ਯੂਜ਼ਰ ਸਮੱਗਰੀ, ਡਾਟਾ, ਅਤੇ ਲਾਇਸੈਂਸ",
+      "definition": "\"ਯੂਜ਼ਰ ਸਮੱਗਰੀ\" ਦਾ ਮਤਲਬ ਹੈ ਕੋਈ ਵੀ ਪ੍ਰੌਂਪਟ, ਡਾਟਾ, ਕੋਡ, ਟੈਕਸਟ, ਚਿੱਤਰ, ਫਾਈਲਾਂ, ਜਾਂ ਹੋਰ ਸਮੱਗਰੀ ਜੋ ਤੁਸੀਂ ਸੇਵਾਵਾਂ ਵਿੱਚ ਅੱਪਲੋਡ, ਜਮ੍ਹਾਂ, ਜਾਂ ਇਨਪੁੱਟ ਕਰਦੇ ਹੋ।",
+      "ownership": "ਮਾਲਕੀ: ਤੁਸੀਂ ਆਪਣੀ ਯੂਜ਼ਰ ਸਮੱਗਰੀ ਵਿੱਚ ਸਾਰੇ ਮਾਲਕੀ ਅਧਿਕਾਰ ਰੱਖਦੇ ਹੋ, ਇੱਥੇ ਦਿੱਤੇ ਗਏ ਲਾਇਸੈਂਸਾਂ ਦੇ ਅਧੀਨ।",
       "licenseIntro": "License to AppNode: By submitting User Content, you grant AppNode a perpetual, irrevocable, worldwide, non-exclusive, royalty-free, fully paid-up, sublicensable, and transferable license to:",
       "licenseItems": [
         "Host, store, process, reproduce, modify, distribute, display, and perform User Content as necessary to provide, maintain, and improve the Services.",
@@ -2202,13 +2369,13 @@
         "Anonymize, aggregate, or de-identify User Content for analytical purposes, including to train, fine-tune, or improve our AI Systems, models, algorithms, and services.",
         "Comply with legal obligations, respond to subpoenas, or enforce our rights."
       ],
-      "represent": "You represent and warrant that: (i) you have all necessary rights, consents, and permissions to submit User Content and grant the above licenses; (ii) User Content does not infringe any third-party rights (e.g., intellectual property, privacy); and (iii) User Content complies with all applicable laws.",
-      "noSell": "We do not sell your User Content to third parties. However, we may share anonymized or aggregated data with partners for research or improvement purposes, provided it cannot be reasonably re-identified to you.",
-      "dataProcessing": "Data Processing: Our processing of User Content is further governed by our Privacy Policy. You consent to the transfer, storage, and processing of User Content in the United States or other jurisdictions where our servers or affiliates are located."
+      "represent": "ਤੁਸੀਂ ਪ੍ਰਤੀਨਿਧਤਾ ਅਤੇ ਵਾਰੰਟੀ ਦਿੰਦੇ ਹੋ ਕਿ: (i) ਤੁਹਾਡੇ ਕੋਲ ਯੂਜ਼ਰ ਸਮੱਗਰੀ ਜਮ੍ਹਾਂ ਕਰਨ ਅਤੇ ਉਪਰੋਕਤ ਲਾਇਸੈਂਸ ਦੇਣ ਲਈ ਸਾਰੇ ਜ਼ਰੂਰੀ ਅਧਿਕਾਰ, ਸਹਿਮਤੀਆਂ, ਅਤੇ ਅਧਿਕਾਰ ਹਨ; (ii) ਯੂਜ਼ਰ ਸਮੱਗਰੀ ਕਿਸੇ ਤੀਜੀ-ਧਿਰ ਦੇ ਅਧਿਕਾਰਾਂ ਦੀ ਉਲੰਘਣਾ ਨਹੀਂ ਕਰਦੀ; ਅਤੇ (iii) ਯੂਜ਼ਰ ਸਮੱਗਰੀ ਸਾਰੇ ਲਾਗੂ ਕਾਨੂੰਨਾਂ ਦੀ ਪਾਲਣਾ ਕਰਦੀ ਹੈ।",
+      "noSell": "ਅਸੀਂ ਤੁਹਾਡੀ ਯੂਜ਼ਰ ਸਮੱਗਰੀ ਤੀਜੀਆਂ ਧਿਰਾਂ ਨੂੰ ਨਹੀਂ ਵੇਚਦੇ। ਹਾਲਾਂਕਿ, ਅਸੀਂ ਖੋਜ ਜਾਂ ਸੁਧਾਰ ਦੇ ਉਦੇਸ਼ਾਂ ਲਈ ਭਾਈਵਾਲਾਂ ਨਾਲ ਅਗਿਆਤ ਜਾਂ ਸੰਯੁਕਤ ਡਾਟਾ ਸਾਂਝਾ ਕਰ ਸਕਦੇ ਹਾਂ, ਬਸ਼ਰਤੇ ਇਸਨੂੰ ਤੁਹਾਡੇ ਨਾਲ ਵਾਜਬ ਤੌਰ 'ਤੇ ਦੁਬਾਰਾ ਪਛਾਣਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ।",
+      "dataProcessing": "ਡਾਟਾ ਪ੍ਰੋਸੈਸਿੰਗ: ਯੂਜ਼ਰ ਸਮੱਗਰੀ ਦੀ ਸਾਡੀ ਪ੍ਰੋਸੈਸਿੰਗ ਸਾਡੀ ਗੋਪਨੀਯਤਾ ਨੀਤੀ ਦੁਆਰਾ ਸ਼ਾਸਿਤ ਹੈ। ਤੁਸੀਂ ਸੰਯੁਕਤ ਰਾਜ ਜਾਂ ਹੋਰ ਅਧਿਕਾਰ ਖੇਤਰਾਂ ਵਿੱਚ ਯੂਜ਼ਰ ਸਮੱਗਰੀ ਦੇ ਤਬਾਦਲੇ, ਸਟੋਰੇਜ, ਅਤੇ ਪ੍ਰੋਸੈਸਿੰਗ ਲਈ ਸਹਿਮਤੀ ਦਿੰਦੇ ਹੋ ਜਿੱਥੇ ਸਾਡੇ ਸਰਵਰ ਜਾਂ ਸਹਿਯੋਗੀ ਸਥਿਤ ਹਨ।"
     },
     "section6": {
-      "title": "6. Acceptable Use Policy",
-      "intro": "You agree to use the Services only for lawful purposes and in compliance with these Terms. Prohibited activities include, but are not limited to:",
+      "title": "6. ਸਵੀਕਾਰਯੋਗ ਵਰਤੋਂ ਨੀਤੀ",
+      "intro": "ਤੁਸੀਂ ਸੇਵਾਵਾਂ ਸਿਰਫ਼ ਕਾਨੂੰਨੀ ਉਦੇਸ਼ਾਂ ਲਈ ਅਤੇ ਇਹਨਾਂ ਸ਼ਰਤਾਂ ਦੀ ਪਾਲਣਾ ਵਿੱਚ ਵਰਤਣ ਲਈ ਸਹਿਮਤ ਹੋ। ਮਨਾਹੀ ਗਤੀਵਿਧੀਆਂ ਵਿੱਚ ਸ਼ਾਮਲ ਹਨ, ਪਰ ਸੀਮਿਤ ਨਹੀਂ:",
       "items": [
         "Violating any local, state, national, or international laws, regulations, or treaties.",
         "Infringing or misappropriating any intellectual property rights, including copyrights, trademarks, patents, trade secrets, or rights of publicity.",
@@ -2222,37 +2389,37 @@
         "Using the Services for high-risk activities, such as automated decision-making in employment, credit, housing, or legal contexts, without human oversight.",
         "Exporting or re-exporting the Services or AI Outputs in violation of U.S. export control laws (e.g., EAR, ITAR)."
       ],
-      "monitor": "We may monitor, review, or analyze your use of the Services to enforce this policy, detect violations, or improve the Services. Violations may result in immediate suspension or termination of your Account, without refund or liability."
+      "monitor": "ਅਸੀਂ ਇਸ ਨੀਤੀ ਨੂੰ ਲਾਗੂ ਕਰਨ, ਉਲੰਘਣਾਵਾਂ ਦਾ ਪਤਾ ਲਗਾਉਣ, ਜਾਂ ਸੇਵਾਵਾਂ ਨੂੰ ਬਿਹਤਰ ਕਰਨ ਲਈ ਤੁਹਾਡੀ ਸੇਵਾਵਾਂ ਦੀ ਵਰਤੋਂ ਦੀ ਨਿਗਰਾਨੀ, ਸਮੀਖਿਆ, ਜਾਂ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰ ਸਕਦੇ ਹਾਂ। ਉਲੰਘਣਾਵਾਂ ਦੇ ਨਤੀਜੇ ਵਜੋਂ ਤੁਰੰਤ ਖਾਤਾ ਮੁਅੱਤਲ ਜਾਂ ਬਰਖ਼ਾਸਤਗੀ ਹੋ ਸਕਦੀ ਹੈ, ਬਿਨਾਂ ਰਿਫੰਡ ਜਾਂ ਜ਼ਿੰਮੇਵਾਰੀ।"
     },
     "section7": {
-      "title": "7. Subscriptions, Billing, Fees, and Payments",
-      "intro": "Certain Services require a paid subscription (\"Subscription\"). By subscribing, you agree to:",
+      "title": "7. ਸਬਸਕ੍ਰਿਪਸ਼ਨ, ਬਿਲਿੰਗ, ਫ਼ੀਸਾਂ, ਅਤੇ ਭੁਗਤਾਨ",
+      "intro": "ਕੁਝ ਸੇਵਾਵਾਂ ਲਈ ਭੁਗਤਾਨ ਸਬਸਕ੍ਰਿਪਸ਼ਨ (\"ਸਬਸਕ੍ਰਿਪਸ਼ਨ\") ਦੀ ਲੋੜ ਹੈ। ਸਬਸਕ੍ਰਾਈਬ ਕਰਕੇ, ਤੁਸੀਂ ਸਹਿਮਤ ਹੋ:",
       "items": [
         "Pay all applicable fees, taxes, and charges (\"Fees\") in U.S. dollars via the payment method you provide.",
         "Authorize automatic recurring billing for Subscriptions, which renew automatically unless canceled at least 24 hours before the renewal date.",
         "Provide accurate, complete, and current billing information and promptly update it as needed.",
         "Accept responsibility for any overdraft, insufficient funds, or other charges incurred due to payment failures."
       ],
-      "fees": "Fees may include fixed subscription costs, usage-based charges (e.g., per API call, compute hour, or storage GB), or overage fees for exceeding plan limits. We may adjust Fees at any time upon notice, and continued use constitutes acceptance.",
-      "failure": "Failure to pay Fees may result in suspension or termination of your Account, with all outstanding balances remaining due and payable.",
-      "refunds": "Refunds: All Fees are non-refundable except as required by applicable law or explicitly stated in a separate Refund Policy. Partial refunds for unused portions of Subscriptions are not provided.",
+      "fees": "ਫ਼ੀਸਾਂ ਵਿੱਚ ਸਥਿਰ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਲਾਗਤ, ਵਰਤੋਂ-ਅਧਾਰਿਤ ਖ਼ਰਚੇ (ਜਿਵੇਂ ਪ੍ਰਤੀ API ਕਾਲ, ਕੰਪਿਊਟ ਘੰਟਾ, ਜਾਂ ਸਟੋਰੇਜ GB), ਜਾਂ ਯੋਜਨਾ ਸੀਮਾਵਾਂ ਤੋਂ ਵੱਧ ਜਾਣ ਲਈ ਓਵਰੇਜ ਫ਼ੀਸਾਂ ਸ਼ਾਮਲ ਹੋ ਸਕਦੀਆਂ ਹਨ। ਅਸੀਂ ਨੋਟਿਸ 'ਤੇ ਕਿਸੇ ਵੀ ਸਮੇਂ ਫ਼ੀਸਾਂ ਨੂੰ ਅਡਜਸਟ ਕਰ ਸਕਦੇ ਹਾਂ।",
+      "failure": "ਫ਼ੀਸਾਂ ਦੇ ਭੁਗਤਾਨ ਵਿੱਚ ਅਸਫ਼ਲਤਾ ਦੇ ਨਤੀਜੇ ਵਜੋਂ ਤੁਹਾਡੇ ਖਾਤੇ ਦੀ ਮੁਅੱਤਲੀ ਜਾਂ ਬਰਖ਼ਾਸਤਗੀ ਹੋ ਸਕਦੀ ਹੈ, ਸਾਰੇ ਬਕਾਇਆ ਬੈਲੇਂਸ ਬਕਾਇਆ ਅਤੇ ਦੇਣਯੋਗ ਰਹਿੰਦੇ ਹਨ।",
+      "refunds": "ਰਿਫੰਡ: ਲਾਗੂ ਕਾਨੂੰਨ ਦੁਆਰਾ ਲੋੜੀਂਦੇ ਜਾਂ ਵੱਖਰੀ ਰਿਫੰਡ ਨੀਤੀ ਵਿੱਚ ਸਪੱਸ਼ਟ ਤੌਰ 'ਤੇ ਦੱਸੇ ਗਏ ਤੋਂ ਇਲਾਵਾ ਸਾਰੀਆਂ ਫ਼ੀਸਾਂ ਗੈਰ-ਵਾਪਸੀਯੋਗ ਹਨ। ਸਬਸਕ੍ਰਿਪਸ਼ਨਾਂ ਦੇ ਅਣਵਰਤੇ ਹਿੱਸਿਆਂ ਲਈ ਅੰਸ਼ਕ ਰਿਫੰਡ ਨਹੀਂ ਦਿੱਤੇ ਜਾਂਦੇ।",
       "processors": "We use third-party payment processors (e.g., Stripe) and are not liable for their actions, errors, or security breaches."
     },
     "section8": {
-      "title": "8. Rate Limits, Quotas, and Resource Usage",
-      "intro": "To ensure fair usage and system stability, we may impose rate limits, usage quotas, computational restrictions, or other controls on the Services (e.g., maximum API requests per minute, total compute credits per month).",
+      "title": "8. ਰੇਟ ਸੀਮਾਵਾਂ, ਕੋਟੇ, ਅਤੇ ਸਰੋਤ ਵਰਤੋਂ",
+      "intro": "ਨਿਰਪੱਖ ਵਰਤੋਂ ਅਤੇ ਸਿਸਟਮ ਸਥਿਰਤਾ ਯਕੀਨੀ ਬਣਾਉਣ ਲਈ, ਅਸੀਂ ਸੇਵਾਵਾਂ 'ਤੇ ਰੇਟ ਸੀਮਾਵਾਂ, ਵਰਤੋਂ ਕੋਟੇ, ਕੰਪਿਊਟੇਸ਼ਨਲ ਪਾਬੰਦੀਆਂ, ਜਾਂ ਹੋਰ ਕੰਟਰੋਲ ਲਗਾ ਸਕਦੇ ਹਾਂ (ਜਿਵੇਂ ਪ੍ਰਤੀ ਮਿੰਟ ਵੱਧ ਤੋਂ ਵੱਧ API ਬੇਨਤੀਆਂ, ਪ੍ਰਤੀ ਮਹੀਨਾ ਕੁੱਲ ਕੰਪਿਊਟ ਕ੍ਰੈਡਿਟ)।",
       "items": [
         "Exceeding limits may result in throttling, additional Fees, suspension, or termination.",
         "You agree not to attempt to circumvent these limits.",
         "Resource-intensive activities (e.g., large-scale data processing) may be subject to prior approval."
       ],
-      "noLiability": "We are not liable for any losses arising from enforcement of these limits."
+      "noLiability": "ਅਸੀਂ ਇਹਨਾਂ ਸੀਮਾਵਾਂ ਦੇ ਲਾਗੂ ਹੋਣ ਤੋਂ ਪੈਦਾ ਹੋਣ ਵਾਲੇ ਕਿਸੇ ਵੀ ਨੁਕਸਾਨ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹਾਂ।"
     },
     "section9": {
-      "title": "9. Intellectual Property Rights",
+      "title": "9. ਬੌਧਿਕ ਸੰਪੱਤੀ ਅਧਿਕਾਰ",
       "ownership": "All rights, title, and interest in and to the Services, including but not limited to software, AI Systems, models, algorithms, databases, user interfaces, branding, trademarks, logos, documentation, and any improvements or derivatives thereof (collectively, \"AppNode IP\"), are and shall remain the exclusive property of AppNode or its licensors.",
-      "license": "You are granted a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to access and use the Services solely for your internal purposes, subject to these Terms. This license terminates upon any violation or termination of these Terms.",
-      "agreeNot": "You agree not to:",
+      "license": "ਤੁਹਾਨੂੰ ਇਹਨਾਂ ਸ਼ਰਤਾਂ ਦੇ ਅਧੀਨ, ਸਿਰਫ਼ ਤੁਹਾਡੇ ਅੰਦਰੂਨੀ ਉਦੇਸ਼ਾਂ ਲਈ ਸੇਵਾਵਾਂ ਤੱਕ ਪਹੁੰਚ ਅਤੇ ਵਰਤੋਂ ਲਈ ਸੀਮਤ, ਗੈਰ-ਵਿਸ਼ੇਸ਼, ਗੈਰ-ਤਬਦੀਲੀਯੋਗ, ਗੈਰ-ਸਬ-ਲਾਇਸੈਂਸਯੋਗ, ਰੱਦ ਕਰਨਯੋਗ ਲਾਇਸੈਂਸ ਦਿੱਤਾ ਗਿਆ ਹੈ। ਇਹ ਲਾਇਸੈਂਸ ਕਿਸੇ ਉਲੰਘਣਾ ਜਾਂ ਇਹਨਾਂ ਸ਼ਰਤਾਂ ਦੀ ਬਰਖ਼ਾਸਤਗੀ 'ਤੇ ਖ਼ਤਮ ਹੋ ਜਾਂਦਾ ਹੈ।",
+      "agreeNot": "ਤੁਸੀਂ ਸਹਿਮਤ ਹੋ ਕਿ ਤੁਸੀਂ ਅਜਿਹਾ ਨਹੀਂ ਕਰੋਗੇ:",
       "items": [
         "Copy, modify, adapt, translate, distribute, sell, lease, rent, or create derivative works of any AppNode IP.",
         "Remove, alter, or obscure any copyright, trademark, or proprietary notices.",
@@ -2261,41 +2428,41 @@
       "feedback": "Any feedback, suggestions, or ideas you provide regarding the Services (\"Feedback\") shall be owned by AppNode, and you grant us a perpetual, irrevocable license to use, incorporate, or commercialize such Feedback without compensation or attribution."
     },
     "section10": {
-      "title": "10. Confidentiality",
+      "title": "10. ਗੁਪਤਤਾ",
       "content": "You agree to keep confidential any non-public information disclosed by AppNode, including but not limited to technical specifications, pricing, beta features, and business strategies. This obligation survives termination of these Terms."
     },
     "section11": {
-      "title": "11. Disclaimers and Limitations of Liability",
-      "asIs": "THE SERVICES ARE PROVIDED \"AS IS\" AND \"AS AVAILABLE,\" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, ACCURACY, OR RELIABILITY.",
-      "noWarranties": "APPNODE MAKES NO WARRANTIES THAT THE SERVICES WILL BE UNINTERRUPTED, ERROR-FREE, SECURE, OR FREE OF VIRUSES OR HARMFUL COMPONENTS.",
-      "limitation": "TO THE MAXIMUM EXTENT PERMITTED BY LAW, APPNODE'S TOTAL LIABILITY FOR ANY CLAIMS ARISING OUT OF OR RELATED TO THESE TERMS OR THE SERVICES SHALL NOT EXCEED THE GREATER OF (A) THE AMOUNTS PAID BY YOU TO APPNODE IN THE 12 MONTHS PRECEDING THE CLAIM, OR (B) $100.",
-      "exclusion": "IN NO EVENT SHALL APPNODE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, GOODWILL, OR USE."
+      "title": "11. ਬੇਦਾਅਵੇ ਅਤੇ ਜ਼ਿੰਮੇਵਾਰੀ ਦੀਆਂ ਸੀਮਾਵਾਂ",
+      "asIs": "ਸੇਵਾਵਾਂ \"ਜਿਵੇਂ ਹੈ\" ਅਤੇ \"ਜਿਵੇਂ ਉਪਲਬਧ ਹੈ\" ਦੇ ਆਧਾਰ 'ਤੇ ਪ੍ਰਦਾਨ ਕੀਤੀਆਂ ਜਾਂਦੀਆਂ ਹਨ, ਬਿਨਾਂ ਕਿਸੇ ਕਿਸਮ ਦੀ ਵਾਰੰਟੀ, ਸਪੱਸ਼ਟ ਜਾਂ ਅਸਪੱਸ਼ਟ, ਜਿਸ ਵਿੱਚ ਵਪਾਰਯੋਗਤਾ, ਕਿਸੇ ਖ਼ਾਸ ਮਕਸਦ ਲਈ ਯੋਗਤਾ, ਗੈਰ-ਉਲੰਘਣਾ, ਸ਼ੁੱਧਤਾ, ਜਾਂ ਭਰੋਸੇਯੋਗਤਾ ਦੀਆਂ ਵਾਰੰਟੀਆਂ ਸ਼ਾਮਲ ਹਨ ਪਰ ਸੀਮਿਤ ਨਹੀਂ।",
+      "noWarranties": "APPNODE ਕੋਈ ਵਾਰੰਟੀ ਨਹੀਂ ਦਿੰਦਾ ਕਿ ਸੇਵਾਵਾਂ ਨਿਰਵਿਘਨ, ਤਰੁੱਟੀ-ਮੁਕਤ, ਸੁਰੱਖਿਅਤ, ਜਾਂ ਵਾਇਰਸ ਜਾਂ ਹਾਨੀਕਾਰਕ ਤੱਤਾਂ ਤੋਂ ਮੁਕਤ ਹੋਣਗੀਆਂ।",
+      "limitation": "ਕਾਨੂੰਨ ਦੁਆਰਾ ਮਨਜ਼ੂਰ ਵੱਧ ਤੋਂ ਵੱਧ ਹੱਦ ਤੱਕ, ਇਹਨਾਂ ਸ਼ਰਤਾਂ ਜਾਂ ਸੇਵਾਵਾਂ ਨਾਲ ਸੰਬੰਧਿਤ ਕਿਸੇ ਵੀ ਦਾਅਵੇ ਲਈ APPNODE ਦੀ ਕੁੱਲ ਜ਼ਿੰਮੇਵਾਰੀ (A) ਦਾਅਵੇ ਤੋਂ ਪਹਿਲਾਂ 12 ਮਹੀਨਿਆਂ ਵਿੱਚ ਤੁਹਾਡੇ ਦੁਆਰਾ APPNODE ਨੂੰ ਅਦਾ ਕੀਤੀ ਰਕਮ, ਜਾਂ (B) $100 ਤੋਂ ਵੱਧ ਨਹੀਂ ਹੋਵੇਗੀ।",
+      "exclusion": "ਕਿਸੇ ਵੀ ਸਥਿਤੀ ਵਿੱਚ APPNODE ਕਿਸੇ ਅਸਿੱਧੇ, ਦੁਰਘਟਨਾ, ਵਿਸ਼ੇਸ਼, ਨਤੀਜੇ ਵਜੋਂ, ਜਾਂ ਦੰਡ ਹਰਜਾਨੇ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੋਵੇਗਾ, ਜਿਸ ਵਿੱਚ ਮੁਨਾਫ਼ੇ, ਡਾਟਾ, ਸਾਖ, ਜਾਂ ਵਰਤੋਂ ਦਾ ਨੁਕਸਾਨ ਸ਼ਾਮਲ ਹੈ ਪਰ ਸੀਮਿਤ ਨਹੀਂ।"
     },
     "section12": {
-      "title": "12. Indemnification",
+      "title": "12. ਹਰਜਾਨਾ ਭਰਪਾਈ",
       "content": "You agree to indemnify, defend, and hold harmless AppNode, its affiliates, officers, directors, employees, agents, and licensors from and against any claims, liabilities, damages, losses, costs, or expenses (including reasonable attorneys' fees) arising out of or related to: (a) your use of the Services; (b) your User Content; (c) your violation of these Terms; or (d) your violation of any third-party rights."
     },
     "section13": {
-      "title": "13. Termination",
+      "title": "13. ਬਰਖ਼ਾਸਤਗੀ",
       "byYou": "You may terminate your Account at any time by following the instructions in the Services or contacting support@appnode.ai.",
-      "byUs": "We may suspend or terminate your Account immediately, with or without notice, for any reason, including but not limited to violations of these Terms, non-payment, suspected fraud, or legal requirements.",
-      "effect": "Upon termination: (a) your access to the Services will cease; (b) any outstanding Fees remain due; (c) licenses granted to you terminate; and (d) provisions that by their nature should survive (e.g., indemnification, limitation of liability, confidentiality) shall survive."
+      "byUs": "ਅਸੀਂ ਕਿਸੇ ਵੀ ਕਾਰਨ, ਨੋਟਿਸ ਨਾਲ ਜਾਂ ਬਿਨਾਂ, ਤੁਰੰਤ ਤੁਹਾਡੇ ਖਾਤੇ ਨੂੰ ਮੁਅੱਤਲ ਜਾਂ ਬੰਦ ਕਰ ਸਕਦੇ ਹਾਂ, ਜਿਸ ਵਿੱਚ ਇਹਨਾਂ ਸ਼ਰਤਾਂ ਦੀ ਉਲੰਘਣਾ, ਗੈਰ-ਭੁਗਤਾਨ, ਸ਼ੱਕੀ ਧੋਖਾਧੜੀ, ਜਾਂ ਕਾਨੂੰਨੀ ਲੋੜਾਂ ਸ਼ਾਮਲ ਹਨ ਪਰ ਸੀਮਿਤ ਨਹੀਂ।",
+      "effect": "ਬਰਖ਼ਾਸਤਗੀ 'ਤੇ: (a) ਸੇਵਾਵਾਂ ਤੱਕ ਤੁਹਾਡੀ ਪਹੁੰਚ ਬੰਦ ਹੋ ਜਾਵੇਗੀ; (b) ਕੋਈ ਵੀ ਬਕਾਇਆ ਫ਼ੀਸ ਦੇਣਯੋਗ ਰਹੇਗੀ; (c) ਤੁਹਾਨੂੰ ਦਿੱਤੇ ਲਾਇਸੈਂਸ ਖ਼ਤਮ ਹੋ ਜਾਣਗੇ; ਅਤੇ (d) ਉਹ ਧਾਰਾਵਾਂ ਜੋ ਆਪਣੇ ਸੁਭਾਅ ਅਨੁਸਾਰ ਬਚੀਆਂ ਰਹਿਣੀਆਂ ਚਾਹੀਦੀਆਂ ਹਨ (ਜਿਵੇਂ ਹਰਜਾਨਾ ਭਰਪਾਈ, ਜ਼ਿੰਮੇਵਾਰੀ ਦੀ ਸੀਮਾ, ਗੁਪਤਤਾ) ਬਚੀਆਂ ਰਹਿਣਗੀਆਂ।"
     },
     "section14": {
-      "title": "14. Governing Law and Dispute Resolution",
-      "law": "These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, USA, without regard to conflict of law principles.",
-      "arbitration": "Any dispute arising out of or relating to these Terms shall be resolved exclusively by binding arbitration administered by the American Arbitration Association (AAA) under its Commercial Arbitration Rules. The arbitration shall be conducted in Wilmington, Delaware.",
-      "classWaiver": "YOU AND APPNODE AGREE TO WAIVE ANY RIGHT TO A JURY TRIAL AND TO PARTICIPATE IN CLASS ACTIONS OR CLASS ARBITRATIONS."
+      "title": "14. ਲਾਗੂ ਕਾਨੂੰਨ ਅਤੇ ਵਿਵਾਦ ਨਿਪਟਾਰਾ",
+      "law": "ਇਹ ਸ਼ਰਤਾਂ ਡੈਲਾਵੇਅਰ ਰਾਜ, ਅਮਰੀਕਾ ਦੇ ਕਾਨੂੰਨਾਂ ਦੁਆਰਾ ਸ਼ਾਸਿਤ ਅਤੇ ਵਿਆਖਿਆ ਕੀਤੀਆਂ ਜਾਣਗੀਆਂ, ਕਾਨੂੰਨ ਦੇ ਟਕਰਾਅ ਦੇ ਸਿਧਾਂਤਾਂ ਦੀ ਪਰਵਾਹ ਕੀਤੇ ਬਿਨਾਂ।",
+      "arbitration": "ਇਹਨਾਂ ਸ਼ਰਤਾਂ ਤੋਂ ਪੈਦਾ ਹੋਣ ਵਾਲਾ ਜਾਂ ਸੰਬੰਧਿਤ ਕੋਈ ਵੀ ਵਿਵਾਦ ਅਮਰੀਕੀ ਆਰਬਿਟ੍ਰੇਸ਼ਨ ਐਸੋਸੀਏਸ਼ਨ (AAA) ਦੁਆਰਾ ਇਸਦੇ ਵਪਾਰਕ ਆਰਬਿਟ੍ਰੇਸ਼ਨ ਨਿਯಮਾਂ ਤਹਿਤ ਪ੍ਰਬੰਧਿਤ ਬਾਈਡਿੰਗ ਆਰਬਿਟ੍ਰੇਸ਼ਨ ਦੁਆਰਾ ਵਿਸ਼ੇਸ਼ ਤੌਰ 'ਤੇ ਹੱਲ ਕੀਤਾ ਜਾਵੇਗਾ। ਆਰਬਿਟ੍ਰੇਸ਼ਨ ਵਿਲਮਿੰਗਟਨ, ਡੈਲਾਵੇਅਰ ਵਿੱਚ ਹੋਵੇਗੀ।",
+      "classWaiver": "ਤੁਸੀਂ ਅਤੇ APPNODE ਜਿਊਰੀ ਟ੍ਰਾਇਲ ਦੇ ਕਿਸੇ ਵੀ ਅਧਿਕਾਰ ਅਤੇ ਕਲਾਸ ਐਕਸ਼ਨਾਂ ਜਾਂ ਕਲਾਸ ਆਰਬਿਟ੍ਰੇਸ਼ਨਾਂ ਵਿੱਚ ਭਾਗ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਦੇਣ ਲਈ ਸਹਿਮਤ ਹੋ।"
     },
     "section15": {
-      "title": "15. Miscellaneous",
+      "title": "15. ਹੋਰ ਧਾਰਾਵਾਂ",
       "entireAgreement": "These Terms, together with the Privacy Policy and any other policies referenced herein, constitute the entire agreement between you and AppNode regarding the Services.",
-      "severability": "If any provision is found to be unenforceable, the remaining provisions shall remain in full force and effect.",
-      "waiver": "Our failure to enforce any provision shall not constitute a waiver of that provision.",
-      "assignment": "You may not assign or transfer these Terms without our prior written consent. We may assign these Terms freely."
+      "severability": "ਜੇਕਰ ਕੋਈ ਧਾਰਾ ਲਾਗੂ ਨਾ ਹੋਣ ਯੋਗ ਪਾਈ ਜਾਂਦੀ ਹੈ, ਤਾਂ ਬਾਕੀ ਧਾਰਾਵਾਂ ਪੂਰੀ ਤਰ੍ਹਾਂ ਲਾਗੂ ਰਹਿਣਗੀਆਂ।",
+      "waiver": "ਕਿਸੇ ਧਾਰਾ ਨੂੰ ਲਾਗੂ ਕਰਨ ਵਿੱਚ ਸਾਡੀ ਅਸਫ਼ਲਤਾ ਉਸ ਧਾਰਾ ਤੋਂ ਛੁੱਟੀ ਨਹੀਂ ਮੰਨੀ ਜਾਵੇਗੀ।",
+      "assignment": "ਤੁਸੀਂ ਸਾਡੀ ਪੂਰਵ ਲਿਖਤੀ ਸਹਿਮਤੀ ਤੋਂ ਬਿਨਾਂ ਇਹਨਾਂ ਸ਼ਰਤਾਂ ਨੂੰ ਤਬਦੀਲ ਜਾਂ ਟ੍ਰਾਂਸਫ਼ਰ ਨਹੀਂ ਕਰ ਸਕਦੇ। ਅਸੀਂ ਇਹਨਾਂ ਸ਼ਰਤਾਂ ਨੂੰ ਸੁਤੰਤਰ ਤੌਰ 'ਤੇ ਤਬਦੀਲ ਕਰ ਸਕਦੇ ਹਾਂ।"
     },
     "section16": {
-      "title": "16. Contact Information",
+      "title": "16. ਸੰਪਰਕ ਜਾਣਕਾਰੀ",
       "company": "AppNode Inc.",
       "supportEmail": "Email: support@appnode.ai",
       "legalEmail": "Legal: legal@appnode.ai"
@@ -2346,30 +2513,30 @@
   "cookiesPage": {
     "badge": "ਕਾਨੂੰਨੀ",
     "title": "ਕੂਕੀ ਨੀਤੀ",
-    "subtitle": "Manage your cookie preferences. We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic.",
-    "required": "Required",
-    "saveSuccess": "Cookie preferences saved successfully!",
-    "savePreferences": "Save Preferences",
-    "acceptAll": "Accept All",
-    "aboutTitle": "About Our Cookies",
-    "aboutDescription": "Cookies are small text files that are stored on your device when you visit our website. They help us provide you with a better experience by remembering your preferences and understanding how you use our site.",
-    "moreInfo": "For more information about how we use cookies and your personal data, please read our",
-    "privacyPolicyLink": "Privacy Policy",
+    "subtitle": "ਆਪਣੀਆਂ ਕੂਕੀ ਤਰਜੀਹਾਂ ਪ੍ਰਬੰਧਿਤ ਕਰੋ। ਅਸੀਂ ਤੁਹਾਡੇ ਬ੍ਰਾਊਜ਼ਿੰਗ ਅਨੁਭਵ ਨੂੰ ਵਧਾਉਣ, ਵਿਅਕਤੀਗਤ ਸਮੱਗਰੀ ਪੇਸ਼ ਕਰਨ, ਅਤੇ ਸਾਡੇ ਟ੍ਰੈਫਿਕ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰਨ ਲਈ ਕੂਕੀਜ਼ ਵਰਤਦੇ ਹਾਂ।",
+    "required": "ਲੋੜੀਂਦੀ",
+    "saveSuccess": "ਕੂਕੀ ਤਰਜੀਹਾਂ ਸਫਲਤਾਪੂਰਵਕ ਸੇਵ ਹੋ ਗਈਆਂ!",
+    "savePreferences": "ਤਰਜੀਹਾਂ ਸੇਵ ਕਰੋ",
+    "acceptAll": "ਸਭ ਸਵੀਕਾਰ ਕਰੋ",
+    "aboutTitle": "ਸਾਡੀਆਂ ਕੂਕੀਜ਼ ਬਾਰੇ",
+    "aboutDescription": "ਕੂਕੀਜ਼ ਛੋਟੀਆਂ ਟੈਕਸਟ ਫਾਈਲਾਂ ਹਨ ਜੋ ਸਾਡੀ ਵੈੱਬਸਾਈਟ 'ਤੇ ਆਉਣ 'ਤੇ ਤੁਹਾਡੀ ਡਿਵਾਈਸ 'ਤੇ ਸਟੋਰ ਹੁੰਦੀਆਂ ਹਨ। ਇਹ ਸਾਨੂੰ ਤੁਹਾਡੀਆਂ ਤਰਜੀਹਾਂ ਯਾਦ ਰੱਖ ਕੇ ਅਤੇ ਤੁਹਾਡੀ ਵਰਤੋਂ ਨੂੰ ਸਮਝ ਕੇ ਬਿਹਤਰ ਅਨੁਭਵ ਦੇਣ ਵਿੱਚ ਮਦਦ ਕਰਦੀਆਂ ਹਨ।",
+    "moreInfo": "ਅਸੀਂ ਕੂਕੀਜ਼ ਅਤੇ ਤੁਹਾਡੇ ਨਿੱਜੀ ਡਾਟਾ ਨੂੰ ਕਿਵੇਂ ਵਰਤਦੇ ਹਾਂ ਇਸ ਬਾਰੇ ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ, ਕਿਰਪਾ ਕਰਕੇ ਸਾਡੀ ਪੜ੍ਹੋ",
+    "privacyPolicyLink": "ਗੋਪਨੀਯਤਾ ਨੀਤੀ",
     "essential": {
-      "title": "Essential Cookies",
-      "description": "These cookies are necessary for the website to function properly. They enable core functionality such as security, network management, and accessibility. You cannot disable these cookies."
+      "title": "ਜ਼ਰੂਰੀ ਕੂਕੀਜ਼",
+      "description": "ਇਹ ਕੂਕੀਜ਼ ਵੈੱਬਸਾਈਟ ਦੇ ਸਹੀ ਕੰਮ ਕਰਨ ਲਈ ਜ਼ਰੂਰੀ ਹਨ। ਇਹ ਸੁਰੱਖਿਆ, ਨੈੱਟਵਰਕ ਪ੍ਰਬੰਧਨ, ਅਤੇ ਪਹੁੰਚਯੋਗਤਾ ਵਰਗੀ ਮੁੱਖ ਕਾਰਜਸ਼ੀਲਤਾ ਨੂੰ ਸਮਰੱਥ ਬਣਾਉਂਦੀਆਂ ਹਨ।"
     },
     "analytics": {
-      "title": "Analytics Cookies",
-      "description": "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. This helps us improve our services."
+      "title": "ਵਿਸ਼ਲੇਸ਼ਣ ਕੂਕੀਜ਼",
+      "description": "ਇਹ ਕੂਕੀਜ਼ ਸਾਨੂੰ ਸਮਝਣ ਵਿੱਚ ਮਦਦ ਕਰਦੀਆਂ ਹਨ ਕਿ ਵਿਜ਼ਿਟਰ ਸਾਡੀ ਵੈੱਬਸਾਈਟ ਨਾਲ ਕਿਵੇਂ ਇੰਟਰੈਕਟ ਕਰਦੇ ਹਨ। ਇਹ ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਨੂੰ ਬਿਹਤਰ ਬਣਾਉਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।"
     },
     "marketing": {
-      "title": "Marketing Cookies",
-      "description": "These cookies are used to track visitors across websites. They are used to display ads that are relevant and engaging for the individual user."
+      "title": "ਮਾਰਕੀਟਿੰਗ ਕੂਕੀਜ਼",
+      "description": "ਇਹ ਕੂਕੀਜ਼ ਵੈੱਬਸਾਈਟਾਂ 'ਤੇ ਵਿਜ਼ਿਟਰਾਂ ਨੂੰ ਟ੍ਰੈਕ ਕਰਨ ਲਈ ਵਰਤੀਆਂ ਜਾਂਦੀਆਂ ਹਨ। ਇਹ ਵਿਅਕਤੀਗਤ ਯੂਜ਼ਰ ਲਈ ਢੁਕਵੇਂ ਅਤੇ ਆਕਰਸ਼ਕ ਇਸ਼ਤਿਹਾਰ ਦਿਖਾਉਣ ਲਈ ਵਰਤੀਆਂ ਜਾਂਦੀਆਂ ਹਨ।"
     },
     "personalization": {
-      "title": "Personalization Cookies",
-      "description": "These cookies allow us to remember your preferences and provide enhanced, personalized features. They may be set by us or by third-party providers."
+      "title": "ਨਿੱਜੀਕਰਨ ਕੂਕੀਜ਼",
+      "description": "ਇਹ ਕੂਕੀਜ਼ ਸਾਨੂੰ ਤੁਹਾਡੀਆਂ ਤਰਜੀਹਾਂ ਯਾਦ ਰੱਖਣ ਅਤੇ ਵਧੀਆ, ਨਿੱਜੀ ਫੀਚਰ ਪ੍ਰਦਾਨ ਕਰਨ ਦਿੰਦੀਆਂ ਹਨ।"
     },
     "lastUpdated": "ਆਖਰੀ ਅੱਪਡੇਟ: 1 ਦਸੰਬਰ 2025",
     "intro": "ਇਹ ਨੀਤੀ ਦੱਸਦੀ ਹੈ ਕਿ AppNode ਤੁਹਾਡੇ ਅਨੁਭਵ ਨੂੰ ਬਿਹਤਰ ਬਣਾਉਣ ਲਈ ਕੂਕੀਜ਼ ਅਤੇ ਸਮਾਨ ਤਕਨਾਲੋਜੀਆਂ ਕਿਵੇਂ ਵਰਤਦਾ ਹੈ।",
@@ -2900,80 +3067,80 @@
     ]
   },
   "learnPage": {
-    "badge": "Free Learning Platform",
-    "titleStart": "Learn to Build with",
+    "badge": "ਮੁਫ਼ਤ ਸਿੱਖਣ ਪਲੇਟਫਾਰਮ",
+    "titleStart": "ਨਾਲ ਬਣਾਉਣਾ ਸਿੱਖੋ",
     "titleHighlight": "AppNode",
-    "subtitle": "Free courses, tutorials, and hands-on projects to help you master AI-powered app development. Go from beginner to expert at your own pace.",
-    "startLearningFree": "Start Learning Free",
-    "browseCourses": "Browse Courses",
+    "subtitle": "ਮੁਫ਼ਤ ਕੋਰਸ, ਟਿਊਟੋਰੀਅਲ, ਅਤੇ ਹੱਥੀਂ ਪ੍ਰੋਜੈਕਟ ਜੋ AI-ਸੰਚਾਲਿਤ ਐਪ ਡਿਵੈਲਪਮੈਂਟ ਵਿੱਚ ਮਾਹਰ ਬਣਨ ਵਿੱਚ ਮਦਦ ਕਰਦੇ ਹਨ।",
+    "startLearningFree": "ਮੁਫ਼ਤ ਸਿੱਖਣਾ ਸ਼ੁਰੂ ਕਰੋ",
+    "browseCourses": "ਕੋਰਸ ਬ੍ਰਾਊਜ਼ ਕਰੋ",
     "stats": {
-      "freeCourses": "Free Courses",
-      "students": "Students",
-      "averageRating": "Average Rating",
-      "communitySupport": "Community Support"
+      "freeCourses": "ਮੁਫ਼ਤ ਕੋਰਸ",
+      "students": "ਵਿਦਿਆਰਥੀ",
+      "averageRating": "ਔਸਤ ਰੇਟਿੰਗ",
+      "communitySupport": "ਕਮਿਊਨਿਟੀ ਸਹਾਇਤਾ"
     },
-    "chooseLearningPath": "Choose Your Learning Path",
-    "chooseLearningPathDesc": "Curated courses designed for your specific goals and skill level.",
-    "popularCourses": "Popular Courses",
-    "popularCoursesDesc": "Start with our most popular courses, handpicked by our community.",
-    "startCourse": "Start Course",
-    "viewAllCourses": "View All Courses",
+    "chooseLearningPath": "ਆਪਣਾ ਸਿੱਖਣ ਦਾ ਰਸਤਾ ਚੁਣੋ",
+    "chooseLearningPathDesc": "ਤੁਹਾਡੇ ਖਾਸ ਟੀਚਿਆਂ ਅਤੇ ਹੁਨਰ ਪੱਧਰ ਲਈ ਤਿਆਰ ਕੀਤੇ ਕੋਰਸ।",
+    "popularCourses": "ਪ੍ਰਸਿੱਧ ਕੋਰਸ",
+    "popularCoursesDesc": "ਸਾਡੇ ਕਮਿਊਨਿਟੀ ਦੁਆਰਾ ਚੁਣੇ ਸਭ ਤੋਂ ਪ੍ਰਸਿੱਧ ਕੋਰਸਾਂ ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ।",
+    "startCourse": "ਕੋਰਸ ਸ਼ੁਰੂ ਕਰੋ",
+    "viewAllCourses": "ਸਾਰੇ ਕੋਰਸ ਵੇਖੋ",
     "cta": {
-      "title": "Start Your Learning Journey Today",
+      "title": "ਅੱਜ ਹੀ ਆਪਣੀ ਸਿੱਖਣ ਦੀ ਯਾਤਰਾ ਸ਼ੁਰੂ ਕਰੋ",
       "subtitle": "Join over 100,000 students who have transformed their skills with AppNode. All courses are completely free.",
-      "createFreeAccount": "Create Free Account",
-      "browseGuides": "Browse Guides"
+      "createFreeAccount": "ਮੁਫ਼ਤ ਖਾਤਾ ਬਣਾਓ",
+      "browseGuides": "ਗਾਈਡ ਬ੍ਰਾਊਜ਼ ਕਰੋ"
     },
     "levels": {
-      "beginner": "Beginner",
-      "intermediate": "Intermediate",
-      "advanced": "Advanced"
+      "beginner": "ਸ਼ੁਰੂਆਤੀ",
+      "intermediate": "ਮੱਧਮ",
+      "advanced": "ਐਡਵਾਂਸਡ"
     },
-    "lessons": "lessons",
+    "lessons": "ਪਾਠ",
     "min": "min",
     "courses": {
       "gettingStarted": {
         "title": "Getting Started with AppNode",
-        "description": "Learn the basics of creating apps with AI. Perfect for absolute beginners."
+        "description": "AI ਨਾਲ ਐਪਸ ਬਣਾਉਣ ਦੀਆਂ ਮੁੱਢਲੀਆਂ ਗੱਲਾਂ ਸਿੱਖੋ। ਬਿਲਕੁਲ ਸ਼ੁਰੂਆਤ ਕਰਨ ਵਾਲਿਆਂ ਲਈ ਸੰਪੂਰਨ।"
       },
       "buildingDashboard": {
-        "title": "Building Your First Dashboard",
-        "description": "Create a complete analytics dashboard from scratch with real-time data."
+        "title": "ਆਪਣਾ ਪਹਿਲਾ ਡੈਸ਼ਬੋਰਡ ਬਣਾਉਣਾ",
+        "description": "ਰੀਅਲ-ਟਾਈਮ ਡਾਟਾ ਨਾਲ ਸ਼ੁਰੂ ਤੋਂ ਪੂਰਾ ਵਿਸ਼ਲੇਸ਼ਣ ਡੈਸ਼ਬੋਰਡ ਬਣਾਓ।"
       },
       "advancedPrompting": {
-        "title": "Advanced Prompting Techniques",
-        "description": "Master the art of writing effective prompts that generate exactly what you need."
+        "title": "ਐਡਵਾਂਸਡ ਪ੍ਰੌਂਪਟਿੰਗ ਤਕਨੀਕਾਂ",
+        "description": "ਪ੍ਰਭਾਵਸ਼ਾਲੀ ਪ੍ਰੌਂਪਟ ਲਿਖਣ ਦੀ ਕਲਾ ਵਿੱਚ ਮੁਹਾਰਤ ਹਾਸਲ ਕਰੋ ਜੋ ਬਿਲਕੁਲ ਉਹੀ ਬਣਾਉਂਦੇ ਹਨ ਜੋ ਤੁਹਾਨੂੰ ਚਾਹੀਦਾ ਹੈ।"
       },
       "ecommerce": {
-        "title": "E-commerce Store Masterclass",
-        "description": "Build a fully functional online store with payments, inventory, and orders."
+        "title": "ਈ-ਕਾਮਰਸ ਸਟੋਰ ਮਾਸਟਰਕਲਾਸ",
+        "description": "ਭੁਗਤਾਨ, ਇਨਵੈਂਟਰੀ, ਅਤੇ ਆਰਡਰ ਨਾਲ ਪੂਰੀ ਤਰ੍ਹਾਂ ਕਾਰਜਸ਼ੀਲ ਔਨਲਾਈਨ ਸਟੋਰ ਬਣਾਓ।"
       },
       "customComponents": {
-        "title": "Custom Components & Styling",
-        "description": "Create reusable components with custom themes that match your brand."
+        "title": "ਕਸਟਮ ਕੰਪੋਨੈਂਟਸ ਅਤੇ ਸਟਾਈਲਿੰਗ",
+        "description": "ਕਸਟਮ ਥੀਮ ਨਾਲ ਮੁੜ ਵਰਤੋਂ ਯੋਗ ਕੰਪੋਨੈਂਟਸ ਬਣਾਓ ਜੋ ਤੁਹਾਡੇ ਬ੍ਰਾਂਡ ਨਾਲ ਮੇਲ ਖਾਂਦੇ ਹਨ।"
       },
       "deploying": {
-        "title": "Deploying to Production",
-        "description": "Launch your app to the world with custom domains and SSL certificates."
+        "title": "ਪ੍ਰੋਡਕਸ਼ਨ ਵਿੱਚ ਡਿਪਲੌਇ ਕਰਨਾ",
+        "description": "ਕਸਟਮ ਡੋਮੇਨ ਅਤੇ SSL ਸਰਟੀਫਿਕੇਟ ਨਾਲ ਆਪਣੀ ਐਪ ਦੁਨੀਆ ਲਈ ਲਾਂਚ ਕਰੋ।"
       },
       "mobileFirst": {
-        "title": "Building Mobile-First Apps",
-        "description": "Design responsive applications that work beautifully on any device."
+        "title": "ਮੋਬਾਈਲ-ਫਰਸਟ ਐਪਸ ਬਣਾਉਣਾ",
+        "description": "ਜਵਾਬਦੇਹ ਐਪਲੀਕੇਸ਼ਨਾਂ ਡਿਜ਼ਾਈਨ ਕਰੋ ਜੋ ਕਿਸੇ ਵੀ ਡਿਵਾਈਸ 'ਤੇ ਸੁੰਦਰ ਕੰਮ ਕਰਦੀਆਂ ਹਨ।"
       },
       "apiIntegration": {
-        "title": "API Integration Essentials",
-        "description": "Connect your app to external services, databases, and third-party APIs."
+        "title": "API ਇੰਟੀਗ੍ਰੇਸ਼ਨ ਜ਼ਰੂਰੀ ਗੱਲਾਂ",
+        "description": "ਆਪਣੀ ਐਪ ਨੂੰ ਬਾਹਰੀ ਸੇਵਾਵਾਂ, ਡੇਟਾਬੇਸ, ਅਤੇ ਤੀਜੀ-ਧਿਰ ਦੀਆਂ APIs ਨਾਲ ਜੋੜੋ।"
       },
       "authSecurity": {
-        "title": "Authentication & Security",
-        "description": "Implement secure user authentication and protect your application."
+        "title": "ਪ੍ਰਮਾਣੀਕਰਨ ਅਤੇ ਸੁਰੱਖਿਆ",
+        "description": "ਸੁਰੱਖਿਅਤ ਯੂਜ਼ਰ ਪ੍ਰਮਾਣੀਕਰਨ ਲਾਗੂ ਕਰੋ ਅਤੇ ਆਪਣੀ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰੋ।"
       }
     },
     "modal": {
-      "overview": "Overview",
-      "howToDoIt": "How to do it",
-      "proTips": "Pro Tips",
-      "gotIt": "Got it!"
+      "overview": "ਸੰਖੇਪ ਜਾਣਕਾਰੀ",
+      "howToDoIt": "ਇਹ ਕਿਵੇਂ ਕਰੀਏ",
+      "proTips": "ਪ੍ਰੋ ਸੁਝਾਅ",
+      "gotIt": "ਸਮਝ ਗਏ!"
     },
     "tutorials": {
       "gettingStarted": {
@@ -2992,7 +3159,7 @@
         ]
       },
       "buildingDashboard": {
-        "overview": "Learn to build professional analytics dashboards with charts, metrics, and real-time data.",
+        "overview": "ਚਾਰਟ, ਮੈਟ੍ਰਿਕਸ, ਅਤੇ ਰੀਅਲ-ਟਾਈਮ ਡਾਟਾ ਨਾਲ ਪੇਸ਼ੇਵਰ ਵਿਸ਼ਲੇਸ਼ਣ ਡੈਸ਼ਬੋਰਡ ਬਣਾਉਣਾ ਸਿੱਖੋ।",
         "steps": [
           "Start a new project and describe your dashboard needs",
           "Add chart components (bar, line, pie charts)",
@@ -3024,7 +3191,7 @@
         ]
       },
       "ecommerce": {
-        "overview": "Create a complete e-commerce solution with product catalog, cart, and checkout.",
+        "overview": "ਉਤਪਾਦ ਕੈਟਾਲੌਗ, ਕਾਰਟ, ਅਤੇ ਚੈੱਕਆਊਟ ਨਾਲ ਪੂਰਾ ਈ-ਕਾਮਰਸ ਹੱਲ ਬਣਾਓ।",
         "steps": [
           "Set up product catalog with categories",
           "Build shopping cart functionality",
@@ -3041,7 +3208,7 @@
         ]
       },
       "customComponents": {
-        "overview": "Learn to create consistent, reusable components with custom styling.",
+        "overview": "ਕਸਟਮ ਸਟਾਈਲਿੰਗ ਨਾਲ ਇਕਸਾਰ, ਮੁੜ ਵਰਤੋਂ ਯੋਗ ਕੰਪੋਨੈਂਟਸ ਬਣਾਉਣਾ ਸਿੱਖੋ।",
         "steps": [
           "Define your brand colors and typography",
           "Create a component library structure",
@@ -3057,7 +3224,7 @@
         ]
       },
       "deploying": {
-        "overview": "Learn to deploy your applications to production with confidence.",
+        "overview": "ਭਰੋਸੇ ਨਾਲ ਆਪਣੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੂੰ ਪ੍ਰੋਡਕਸ਼ਨ ਵਿੱਚ ਡਿਪਲੌਇ ਕਰਨਾ ਸਿੱਖੋ।",
         "steps": [
           "Prepare your app for production",
           "Choose a hosting provider",
@@ -3072,7 +3239,7 @@
         ]
       },
       "mobileFirst": {
-        "overview": "Create responsive, mobile-first applications that work on all devices.",
+        "overview": "ਸਾਰੀਆਂ ਡਿਵਾਈਸਾਂ 'ਤੇ ਕੰਮ ਕਰਨ ਵਾਲੀਆਂ ਜਵਾਬਦੇਹ, ਮੋਬਾਈਲ-ਫਰਸਟ ਐਪਲੀਕੇਸ਼ਨਾਂ ਬਣਾਓ।",
         "steps": [
           "Understand mobile-first design principles",
           "Use responsive breakpoints effectively",
@@ -3088,7 +3255,7 @@
         ]
       },
       "apiIntegration": {
-        "overview": "Learn to integrate external APIs and services into your applications.",
+        "overview": "ਬਾਹਰੀ APIs ਅਤੇ ਸੇਵਾਵਾਂ ਨੂੰ ਆਪਣੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਵਿੱਚ ਇੰਟੀਗ੍ਰੇਟ ਕਰਨਾ ਸਿੱਖੋ।",
         "steps": [
           "Understand REST API fundamentals",
           "Handle API authentication (API keys, OAuth)",
@@ -3104,7 +3271,7 @@
         ]
       },
       "authSecurity": {
-        "overview": "Implement secure authentication and protect your application from threats.",
+        "overview": "ਸੁਰੱਖਿਅਤ ਪ੍ਰਮਾਣੀਕਰਨ ਲਾਗੂ ਕਰੋ ਅਤੇ ਆਪਣੀ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਖਤਰਿਆਂ ਤੋਂ ਬਚਾਓ।",
         "steps": [
           "Set up user registration and login",
           "Implement password hashing",
@@ -3122,40 +3289,40 @@
     }
   },
   "guidesPage": {
-    "badge": "In-Depth Tutorials",
-    "titleStart": "Developer",
-    "titleHighlight": "Guides",
-    "subtitle": "In-depth tutorials and best practices for building amazing applications. From beginner to advanced, we've got you covered.",
-    "featuredGuide": "Featured Guide",
-    "allGuides": "All Guides",
-    "readGuide": "Read Guide",
+    "badge": "ਡੂੰਘੇ ਟਿਊਟੋਰੀਅਲ",
+    "titleStart": "ਡਿਵੈਲਪਰ",
+    "titleHighlight": "ਗਾਈਡ",
+    "subtitle": "ਸ਼ਾਨਦਾਰ ਐਪਲੀਕੇਸ਼ਨਾਂ ਬਣਾਉਣ ਲਈ ਡੂੰਘੇ ਟਿਊਟੋਰੀਅਲ ਅਤੇ ਵਧੀਆ ਅਭਿਆਸ। ਸ਼ੁਰੂਆਤੀ ਤੋਂ ਐਡਵਾਂਸਡ ਤੱਕ, ਅਸੀਂ ਤੁਹਾਨੂੰ ਕਵਰ ਕੀਤਾ ਹੈ।",
+    "featuredGuide": "ਫੀਚਰਡ ਗਾਈਡ",
+    "allGuides": "ਸਾਰੀਆਂ ਗਾਈਡ",
+    "readGuide": "ਗਾਈਡ ਪੜ੍ਹੋ",
     "cta": {
-      "title": "Ready to Start Building?",
-      "subtitle": "Put what you've learned into practice. Create your first app today.",
-      "getStartedFree": "Get Started Free",
-      "browseTemplates": "Browse Templates"
+      "title": "ਬਣਾਉਣਾ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਤਿਆਰ ਹੋ?",
+      "subtitle": "ਜੋ ਸਿੱਖਿਆ ਹੈ ਉਸਨੂੰ ਅਮਲ ਵਿੱਚ ਲਿਆਓ। ਅੱਜ ਹੀ ਆਪਣੀ ਪਹਿਲੀ ਐਪ ਬਣਾਓ।",
+      "getStartedFree": "ਮੁਫ਼ਤ ਸ਼ੁਰੂ ਕਰੋ",
+      "browseTemplates": "ਟੈਂਪਲੇਟ ਬ੍ਰਾਊਜ਼ ਕਰੋ"
     },
     "modal": {
-      "overview": "Overview",
-      "howToDoIt": "How to do it",
-      "proTips": "Pro Tips",
-      "gotIt": "Got it!"
+      "overview": "ਸੰਖੇਪ ਜਾਣਕਾਰੀ",
+      "howToDoIt": "ਇਹ ਕਿਵੇਂ ਕਰੀਏ",
+      "proTips": "ਪ੍ਰੋ ਸੁਝਾਅ",
+      "gotIt": "ਸਮਝ ਗਏ!"
     },
     "categories": {
       "all": "All",
       "saas": "SaaS",
-      "ecommerce": "E-commerce",
-      "design": "Design",
-      "security": "Security",
-      "backend": "Backend",
-      "performance": "Performance"
+      "ecommerce": "ਈ-ਕਾਮਰਸ",
+      "design": "ਡਿਜ਼ਾਈਨ",
+      "security": "ਸੁਰੱਖਿਆ",
+      "backend": "ਬੈਕਐਂਡ",
+      "performance": "ਪ੍ਰਦਰਸ਼ਨ"
     },
-    "minRead": "min read",
+    "minRead": "ਮਿੰਟ ਪੜ੍ਹੋ",
     "guides": {
       "saasApps": {
-        "title": "Complete Guide to Building SaaS Apps",
+        "title": "SaaS ਐਪਸ ਬਣਾਉਣ ਦੀ ਪੂਰੀ ਗਾਈਡ",
         "description": "Everything you need to know about creating software-as-a-service applications with AppNode",
-        "overview": "Learn to build a complete SaaS application from scratch, including user authentication, subscription billing, and multi-tenant architecture.",
+        "overview": "ਯੂਜ਼ਰ ਪ੍ਰਮਾਣੀਕਰਨ, ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਬਿਲਿੰਗ, ਅਤੇ ਮਲਟੀ-ਟੈਨੈਂਟ ਆਰਕੀਟੈਕਚਰ ਸਮੇਤ ਸ਼ੁਰੂ ਤੋਂ ਪੂਰੀ SaaS ਐਪ ਬਣਾਉਣਾ ਸਿੱਖੋ।",
         "steps": [
           "Set up your project with authentication (login, signup, password reset)",
           "Create a dashboard layout with navigation and user settings",
@@ -3172,9 +3339,9 @@
         ]
       },
       "ecommerce": {
-        "title": "E-commerce Best Practices",
-        "description": "Learn how to build high-converting online stores with payment integration",
-        "overview": "Create a high-converting e-commerce store with product catalog, shopping cart, and secure checkout.",
+        "title": "ਈ-ਕਾਮਰਸ ਵਧੀਆ ਅਭਿਆਸ",
+        "description": "ਭੁਗਤਾਨ ਇੰਟੀਗ੍ਰੇਸ਼ਨ ਨਾਲ ਉੱਚ-ਕਨਵਰਟਿੰਗ ਔਨਲਾਈਨ ਸਟੋਰ ਬਣਾਉਣਾ ਸਿੱਖੋ",
+        "overview": "ਉਤਪਾਦ ਕੈਟਾਲੌਗ, ਸ਼ਾਪਿੰਗ ਕਾਰਟ, ਅਤੇ ਸੁਰੱਖਿਅਤ ਚੈੱਕਆਊਟ ਨਾਲ ਉੱਚ-ਕਨਵਰਟਿੰਗ ਈ-ਕਾਮਰਸ ਸਟੋਰ ਬਣਾਓ।",
         "steps": [
           "Design an attractive product catalog with categories and filters",
           "Build a persistent shopping cart with local storage",
@@ -3190,9 +3357,9 @@
         ]
       },
       "dashboard": {
-        "title": "Mastering Dashboard Design",
-        "description": "Create beautiful and functional analytics dashboards that users love",
-        "overview": "Design professional analytics dashboards with clear data visualization and intuitive layouts.",
+        "title": "ਡੈਸ਼ਬੋਰਡ ਡਿਜ਼ਾਈਨ ਵਿੱਚ ਮਾਹਰ ਬਣੋ",
+        "description": "ਸੁੰਦਰ ਅਤੇ ਕਾਰਜਸ਼ੀਲ ਵਿਸ਼ਲੇਸ਼ਣ ਡੈਸ਼ਬੋਰਡ ਬਣਾਓ ਜੋ ਯੂਜ਼ਰ ਪਸੰਦ ਕਰਦੇ ਹਨ",
+        "overview": "ਸਪੱਸ਼ਟ ਡਾਟਾ ਵਿਜ਼ੂਅਲਾਈਜ਼ੇਸ਼ਨ ਅਤੇ ਸਹਿਜ ਲੇਆਉਟ ਨਾਲ ਪੇਸ਼ੇਵਰ ਵਿਸ਼ਲੇਸ਼ਣ ਡੈਸ਼ਬੋਰਡ ਡਿਜ਼ਾਈਨ ਕਰੋ।",
         "steps": [
           "Define the key metrics your users need to see",
           "Create a wireframe with proper visual hierarchy",
@@ -3208,9 +3375,9 @@
         ]
       },
       "authentication": {
-        "title": "Authentication & Security",
-        "description": "Implement secure user authentication and protect your applications",
-        "overview": "Implement robust authentication and security best practices to protect your users and data.",
+        "title": "ਪ੍ਰਮਾਣੀਕਰਨ ਅਤੇ ਸੁਰੱਖਿਆ",
+        "description": "ਸੁਰੱਖਿਅਤ ਯੂਜ਼ਰ ਪ੍ਰਮਾਣੀਕਰਨ ਲਾਗੂ ਕਰੋ ਅਤੇ ਆਪਣੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰੋ",
+        "overview": "ਆਪਣੇ ਯੂਜ਼ਰਾਂ ਅਤੇ ਡਾਟਾ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰਨ ਲਈ ਮਜ਼ਬੂਤ ਪ੍ਰਮਾਣੀਕਰਨ ਅਤੇ ਸੁਰੱਖਿਆ ਵਧੀਆ ਅਭਿਆਸ ਲਾਗੂ ਕਰੋ।",
         "steps": [
           "Set up secure user registration with email verification",
           "Implement password hashing with bcrypt or similar",
@@ -3226,9 +3393,9 @@
         ]
       },
       "database": {
-        "title": "Database Integration Guide",
-        "description": "Connect your app to databases and manage data efficiently",
-        "overview": "Learn to connect your application to databases and implement efficient data management.",
+        "title": "ਡੇਟਾਬੇਸ ਇੰਟੀਗ੍ਰੇਸ਼ਨ ਗਾਈਡ",
+        "description": "ਆਪਣੀ ਐਪ ਨੂੰ ਡੇਟਾਬੇਸ ਨਾਲ ਜੋੜੋ ਅਤੇ ਡਾਟਾ ਨੂੰ ਕੁਸ਼ਲਤਾ ਨਾਲ ਪ੍ਰਬੰਧਿਤ ਕਰੋ",
+        "overview": "ਆਪਣੀ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਡੇਟਾਬੇਸ ਨਾਲ ਜੋੜਨਾ ਅਤੇ ਕੁਸ਼ਲ ਡਾਟਾ ਪ੍ਰਬੰਧਨ ਲਾਗੂ ਕਰਨਾ ਸਿੱਖੋ।",
         "steps": [
           "Choose the right database (SQL vs NoSQL)",
           "Set up your database connection with environment variables",
@@ -3244,9 +3411,9 @@
         ]
       },
       "responsive": {
-        "title": "Responsive Design Patterns",
-        "description": "Make your apps look great on all devices with mobile-first design",
-        "overview": "Create responsive designs that work beautifully across all screen sizes.",
+        "title": "ਜਵਾਬਦੇਹ ਡਿਜ਼ਾਈਨ ਪੈਟਰਨ",
+        "description": "ਮੋਬਾਈਲ-ਫਰਸਟ ਡਿਜ਼ਾਈਨ ਨਾਲ ਆਪਣੀਆਂ ਐਪਸ ਨੂੰ ਸਾਰੀਆਂ ਡਿਵਾਈਸਾਂ 'ਤੇ ਸ਼ਾਨਦਾਰ ਬਣਾਓ",
+        "overview": "ਸਾਰੇ ਸਕ੍ਰੀਨ ਆਕਾਰਾਂ 'ਤੇ ਸੁੰਦਰਤਾ ਨਾਲ ਕੰਮ ਕਰਨ ਵਾਲੇ ਜਵਾਬਦੇਹ ਡਿਜ਼ਾਈਨ ਬਣਾਓ।",
         "steps": [
           "Start with mobile-first CSS approach",
           "Use flexible grid layouts (CSS Grid, Flexbox)",
@@ -3262,9 +3429,9 @@
         ]
       },
       "api": {
-        "title": "API Integration Masterclass",
-        "description": "Connect to third-party services and APIs seamlessly",
-        "overview": "Learn to integrate external APIs and third-party services into your applications.",
+        "title": "API ਇੰਟੀਗ੍ਰੇਸ਼ਨ ਮਾਸਟਰਕਲਾਸ",
+        "description": "ਤੀਜੀ-ਧਿਰ ਸੇਵਾਵਾਂ ਅਤੇ APIs ਨਾਲ ਸਹਿਜ ਤੌਰ 'ਤੇ ਜੁੜੋ",
+        "overview": "ਬਾਹਰੀ APIs ਅਤੇ ਤੀਜੀ-ਧਿਰ ਸੇਵਾਵਾਂ ਨੂੰ ਆਪਣੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਵਿੱਚ ਇੰਟੀਗ੍ਰੇਟ ਕਰਨਾ ਸਿੱਖੋ।",
         "steps": [
           "Understand REST API fundamentals (endpoints, methods)",
           "Set up API authentication (API keys, OAuth tokens)",
@@ -3280,9 +3447,9 @@
         ]
       },
       "performance": {
-        "title": "Performance Optimization",
-        "description": "Speed up your apps for better user experience and SEO",
-        "overview": "Optimize your application for speed, better user experience, and improved SEO.",
+        "title": "ਪ੍ਰਦਰਸ਼ਨ ਅਨੁਕੂਲਨ",
+        "description": "ਬਿਹਤਰ ਯੂਜ਼ਰ ਅਨੁਭਵ ਅਤੇ SEO ਲਈ ਆਪਣੀਆਂ ਐਪਸ ਨੂੰ ਤੇਜ਼ ਕਰੋ",
+        "overview": "ਗਤੀ, ਬਿਹਤਰ ਯੂਜ਼ਰ ਅਨੁਭਵ, ਅਤੇ ਸੁਧਰੀ SEO ਲਈ ਆਪਣੀ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਅਨੁਕੂਲ ਬਣਾਓ।",
         "steps": [
           "Analyze current performance with Lighthouse",
           "Optimize and compress images (WebP format, lazy loading)",
@@ -3321,426 +3488,426 @@
     }
   },
   "reportPage": {
-    "searchPlaceholder": "Search docs...",
-    "copyPage": "Copy page",
+    "searchPlaceholder": "ਦਸਤਾਵੇਜ਼ ਖੋਜੋ...",
+    "copyPage": "ਪੰਨਾ ਕਾਪੀ ਕਰੋ",
     "sections": {
-      "gettingStarted": "Getting Started",
-      "trustSafety": "Trust & Safety",
+      "gettingStarted": "ਸ਼ੁਰੂਆਤ ਕਰੋ",
+      "trustSafety": "ਭਰੋਸਾ ਅਤੇ ਸੁਰੱਖਿਆ",
       "legal": "ਕਾਨੂੰਨੀ",
       "security": "ਸੁਰੱਖਿਆ",
-      "tutorials": "Tutorials",
-      "teamsEnterprise": "Teams & Enterprise",
-      "changelog": "Changelog"
+      "tutorials": "ਟਿਊਟੋਰੀਅਲ",
+      "teamsEnterprise": "ਟੀਮਾਂ ਅਤੇ ਐਂਟਰਪ੍ਰਾਈਜ਼",
+      "changelog": "ਬਦਲਾਅ ਲੌਗ"
     },
     "items": {
-      "introduction": "Introduction",
-      "quickstart": "Quickstart Guides",
-      "createAi": "Create with AI",
-      "buildScratch": "Build from Scratch",
+      "introduction": "ਜਾਣ-ਪਛਾਣ",
+      "quickstart": "ਤੁਰੰਤ ਸ਼ੁਰੂਆਤ ਗਾਈਡ",
+      "createAi": "AI ਨਾਲ ਬਣਾਓ",
+      "buildScratch": "ਸ਼ੁਰੂ ਤੋਂ ਬਣਾਓ",
       "importGithub": "Import from GitHub",
-      "trustOverview": "Overview",
-      "reportingAbuse": "Reporting Abuse",
-      "copyrightClaims": "Copyright Claims",
-      "terms": "Terms of Service",
-      "privacy": "Privacy Policy",
-      "platformRules": "Platform Rules",
-      "securityOverview": "Security Overview",
-      "dataProtection": "Data Protection",
-      "generateCode": "How to Generate Code",
-      "firstApp": "Building Your First App",
-      "databases": "Building with Databases",
-      "deploying": "Deploying Your App",
-      "teamsOverview": "Teams Overview",
-      "enterpriseFeatures": "Enterprise Features",
-      "collaboration": "Collaboration",
-      "recentUpdates": "Recent Updates",
-      "roadmap": "Roadmap"
+      "trustOverview": "ਸੰਖੇਪ ਜਾਣਕਾਰੀ",
+      "reportingAbuse": "ਦੁਰਵਰਤੋਂ ਦੀ ਰਿਪੋਰਟ ਕਰੋ",
+      "copyrightClaims": "ਕਾਪੀਰਾਈਟ ਦਾਅਵੇ",
+      "terms": "ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ",
+      "privacy": "ਗੋਪਨੀਯਤਾ ਨੀਤੀ",
+      "platformRules": "ਪਲੇਟਫਾਰਮ ਨਿਯਮ",
+      "securityOverview": "ਸੁਰੱਖਿਆ ਸੰਖੇਪ",
+      "dataProtection": "ਡਾਟਾ ਸੁਰੱਖਿਆ",
+      "generateCode": "ਕੋਡ ਕਿਵੇਂ ਜਨਰੇਟ ਕਰੀਏ",
+      "firstApp": "ਆਪਣੀ ਪਹਿਲੀ ਐਪ ਬਣਾਉਣਾ",
+      "databases": "ਡੇਟਾਬੇਸ ਨਾਲ ਬਣਾਉਣਾ",
+      "deploying": "ਆਪਣੀ ਐਪ ਡਿਪਲੌਇ ਕਰਨਾ",
+      "teamsOverview": "ਟੀਮ ਸੰਖੇਪ",
+      "enterpriseFeatures": "ਐਂਟਰਪ੍ਰਾਈਜ਼ ਫੀਚਰਸ",
+      "collaboration": "ਸਹਿਯੋਗ",
+      "recentUpdates": "ਤਾਜ਼ਾ ਅੱਪਡੇਟ",
+      "roadmap": "ਰੋਡਮੈਪ"
     },
     "content": {
       "welcomeTitle": "Welcome to AppNode",
       "welcomeDescription": "AppNode is an AI-powered development platform that lets you build complete web applications just by describing what you want. No coding experience required — it feels like having a whole team working for you.",
-      "whatYouCanBuild": "What You Can Build",
+      "whatYouCanBuild": "ਤੁਸੀਂ ਕੀ ਬਣਾ ਸਕਦੇ ਹੋ",
       "whatYouCanBuildItems": {
-        "fullStack": "Full-stack web applications with databases",
-        "landingPages": "Landing pages and marketing websites",
-        "dashboards": "Dashboards and admin panels",
-        "ecommerce": "E-commerce stores and portfolios",
-        "saas": "SaaS products and internal tools"
+        "fullStack": "ਡੇਟਾਬੇਸ ਨਾਲ ਫੁੱਲ-ਸਟੈਕ ਵੈੱਬ ਐਪਲੀਕੇਸ਼ਨਾਂ",
+        "landingPages": "ਲੈਂਡਿੰਗ ਪੇਜ ਅਤੇ ਮਾਰਕੀਟਿੰਗ ਵੈੱਬਸਾਈਟਾਂ",
+        "dashboards": "ਡੈਸ਼ਬੋਰਡ ਅਤੇ ਐਡਮਿਨ ਪੈਨਲ",
+        "ecommerce": "ਈ-ਕਾਮਰਸ ਸਟੋਰ ਅਤੇ ਪੋਰਟਫੋਲੀਓ",
+        "saas": "SaaS ਉਤਪਾਦ ਅਤੇ ਅੰਦਰੂਨੀ ਟੂਲ"
       },
-      "howItWorks": "How It Works",
-      "howItWorksDescription": "Simply describe your project in plain language. Our AI understands your requirements, generates a complete blueprint, and builds production-ready code in real-time. Watch your app come to life with instant previews.",
+      "howItWorks": "ਇਹ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ",
+      "howItWorksDescription": "ਬੱਸ ਆਪਣੇ ਪ੍ਰੋਜੈਕਟ ਨੂੰ ਸਧਾਰਨ ਭਾਸ਼ਾ ਵਿੱਚ ਦੱਸੋ। ਸਾਡੀ AI ਤੁਹਾਡੀਆਂ ਲੋੜਾਂ ਨੂੰ ਸਮਝਦੀ ਹੈ, ਪੂਰਾ ਬਲੂਪ੍ਰਿੰਟ ਬਣਾਉਂਦੀ ਹੈ, ਅਤੇ ਰੀਅਲ-ਟਾਈਮ ਵਿੱਚ ਪ੍ਰੋਡਕਸ਼ਨ-ਰੈਡੀ ਕੋਡ ਬਣਾਉਂਦੀ ਹੈ।",
       "steps": {
-        "describe": "Describe",
-        "describeText": "Tell AI what you want to build",
-        "generate": "Generate",
-        "generateText": "AI writes production-ready code",
-        "preview": "Preview",
-        "previewText": "See your app live instantly",
-        "deploy": "Deploy",
-        "deployText": "One-click deployment to production"
+        "describe": "ਦੱਸੋ",
+        "describeText": "AI ਨੂੰ ਦੱਸੋ ਕਿ ਤੁਸੀਂ ਕੀ ਬਣਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ",
+        "generate": "ਜਨਰੇਟ ਕਰੋ",
+        "generateText": "AI ਪ੍ਰੋਡਕਸ਼ਨ-ਰੈਡੀ ਕੋਡ ਲਿਖਦੀ ਹੈ",
+        "preview": "ਪ੍ਰੀਵਿਊ",
+        "previewText": "ਆਪਣੀ ਐਪ ਤੁਰੰਤ ਲਾਈਵ ਵੇਖੋ",
+        "deploy": "ਡਿਪਲੌਇ ਕਰੋ",
+        "deployText": "ਇੱਕ-ਕਲਿੱਕ ਡਿਪਲੌਇਮੈਂਟ ਪ੍ਰੋਡਕਸ਼ਨ ਲਈ"
       },
-      "quickstartTitle": "Quickstart Guides",
+      "quickstartTitle": "ਤੁਰੰਤ ਸ਼ੁਰੂਆਤ ਗਾਈਡ",
       "quickstartDescription": "Get up and running with AppNode in minutes. Choose your path based on how you want to start building.",
-      "chooseStartingPoint": "Choose Your Starting Point",
-      "examplePrompts": "Example Prompts to Try",
-      "createWithAiTitle": "Create with AI",
-      "createWithAiDescription": "The fastest way to build. Just describe what you want in plain language and watch AI create your complete application in real-time.",
-      "stepByStepGuide": "Step-by-Step Guide",
-      "startNewProject": "Start a New Project",
-      "startNewProjectDesc": "Click \"Create New\" from your dashboard or the homepage",
-      "describeYourIdea": "Describe Your Idea",
-      "describeYourIdeaDesc": "Write a detailed description of what you want to build. The more context, the better results.",
-      "reviewBlueprint": "Review the Blueprint",
-      "reviewBlueprintDesc": "AI generates a project blueprint with features, design, and architecture. You can refine it.",
-      "watchItBuild": "Watch It Build",
-      "watchItBuildDesc": "AI writes code for each component. See files appear in real-time with live preview.",
-      "testIterate": "Test & Iterate",
-      "testIterateDesc": "Try your app in the preview. Ask AI to make changes or add features.",
-      "deployStep": "Deploy",
-      "deployStepDesc": "When ready, deploy with one click to get a live URL.",
-      "tipsForBetterResults": "Tips for Better Results",
-      "tipSpecific": "Be specific:",
-      "tipSpecificDesc": "Instead of \"make a website\", say \"create a portfolio website with a dark theme, project gallery, and contact form\"",
-      "tipFeatures": "Describe features:",
-      "tipFeaturesDesc": "List the key features you need — authentication, database, file uploads, etc.",
-      "tipDesign": "Mention design preferences:",
-      "tipDesignDesc": "Colors, style (minimal, bold, playful), and layout preferences help AI match your vision",
-      "tipIterate": "Iterate:",
-      "tipIterateDesc": "Start simple, then ask AI to add more features incrementally",
-      "buildFromScratchTitle": "Build from Scratch",
-      "buildFromScratchDesc": "Start with a blank canvas and full control. Perfect for developers who want to structure their project their way while still leveraging AI assistance.",
-      "chooseTemplate": "Choose Your Template",
-      "chooseTemplateDesc": "Select a base template to start with. Each template comes pre-configured with the framework, build tools, and dependencies you need.",
-      "workspaceFeatures": "Workspace Features",
-      "codeEditor": "Code Editor:",
-      "codeEditorDesc": "Full-featured editor with syntax highlighting, autocomplete, and multi-file editing",
-      "fileExplorer": "File Explorer:",
-      "fileExplorerDesc": "Navigate and manage your project files and folders",
-      "terminal": "Terminal:",
-      "terminalDesc": "Run commands, install packages, and manage your environment",
-      "livePreview": "Live Preview:",
-      "livePreviewDesc": "See changes instantly as you code",
-      "aiChat": "AI Chat:",
-      "aiChatDesc": "Ask for help, generate code snippets, or debug issues",
-      "versionControl": "Version Control:",
-      "versionControlDesc": "Built-in git integration to track changes",
+      "chooseStartingPoint": "ਆਪਣਾ ਸ਼ੁਰੂਆਤੀ ਪੁਆਇੰਟ ਚੁਣੋ",
+      "examplePrompts": "ਅਜ਼ਮਾਉਣ ਲਈ ਉਦਾਹਰਨ ਪ੍ਰੌਂਪਟ",
+      "createWithAiTitle": "AI ਨਾਲ ਬਣਾਓ",
+      "createWithAiDescription": "ਬਣਾਉਣ ਦਾ ਸਭ ਤੋਂ ਤੇਜ਼ ਤਰੀਕਾ। ਬੱਸ ਸਧਾਰਨ ਭਾਸ਼ਾ ਵਿੱਚ ਦੱਸੋ ਅਤੇ AI ਨੂੰ ਰੀਅਲ-ਟਾਈਮ ਵਿੱਚ ਤੁਹਾਡੀ ਪੂਰੀ ਐਪਲੀਕੇਸ਼ਨ ਬਣਾਉਂਦੇ ਦੇਖੋ।",
+      "stepByStepGuide": "ਕਦਮ-ਦਰ-ਕਦਮ ਗਾਈਡ",
+      "startNewProject": "ਨਵਾਂ ਪ੍ਰੋਜੈਕਟ ਸ਼ੁਰੂ ਕਰੋ",
+      "startNewProjectDesc": "ਆਪਣੇ ਡੈਸ਼ਬੋਰਡ ਜਾਂ ਹੋਮਪੇਜ ਤੋਂ \"ਨਵਾਂ ਬਣਾਓ\" 'ਤੇ ਕਲਿੱਕ ਕਰੋ",
+      "describeYourIdea": "ਆਪਣਾ ਵਿਚਾਰ ਦੱਸੋ",
+      "describeYourIdeaDesc": "ਜੋ ਤੁਸੀਂ ਬਣਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ ਉਸਦਾ ਵਿਸਤ੍ਰਿਤ ਵਰਣਨ ਲਿਖੋ। ਜਿੰਨਾ ਵੱਧ ਸੰਦਰਭ, ਉੰਨੇ ਵਧੀਆ ਨਤੀਜੇ।",
+      "reviewBlueprint": "ਬਲੂਪ੍ਰਿੰਟ ਦੀ ਸਮੀਖਿਆ ਕਰੋ",
+      "reviewBlueprintDesc": "AI ਫੀਚਰਸ, ਡਿਜ਼ਾਈਨ, ਅਤੇ ਆਰਕੀਟੈਕਚਰ ਨਾਲ ਪ੍ਰੋਜੈਕਟ ਬਲੂਪ੍ਰਿੰਟ ਬਣਾਉਂਦੀ ਹੈ। ਤੁਸੀਂ ਇਸਨੂੰ ਸੁਧਾਰ ਸਕਦੇ ਹੋ।",
+      "watchItBuild": "ਬਣਦੇ ਦੇਖੋ",
+      "watchItBuildDesc": "AI ਹਰ ਕੰਪੋਨੈਂਟ ਲਈ ਕੋਡ ਲਿਖਦੀ ਹੈ। ਰੀਅਲ-ਟਾਈਮ ਵਿੱਚ ਫਾਈਲਾਂ ਬਣਦੀਆਂ ਦੇਖੋ।",
+      "testIterate": "ਟੈਸਟ ਕਰੋ ਅਤੇ ਦੁਹਰਾਓ",
+      "testIterateDesc": "ਪ੍ਰੀਵਿਊ ਵਿੱਚ ਆਪਣੀ ਐਪ ਅਜ਼ਮਾਓ। AI ਨੂੰ ਬਦਲਾਅ ਕਰਨ ਜਾਂ ਫੀਚਰ ਜੋੜਨ ਲਈ ਕਹੋ।",
+      "deployStep": "ਡਿਪਲੌਇ ਕਰੋ",
+      "deployStepDesc": "ਤਿਆਰ ਹੋਣ 'ਤੇ, ਲਾਈਵ URL ਲੈਣ ਲਈ ਇੱਕ ਕਲਿੱਕ ਨਾਲ ਡਿਪਲੌਇ ਕਰੋ।",
+      "tipsForBetterResults": "ਵਧੀਆ ਨਤੀਜਿਆਂ ਲਈ ਸੁਝਾਅ",
+      "tipSpecific": "ਖਾਸ ਰਹੋ:",
+      "tipSpecificDesc": "\"ਵੈੱਬਸਾਈਟ ਬਣਾਓ\" ਦੀ ਬਜਾਏ, ਕਹੋ \"ਡਾਰਕ ਥੀਮ, ਪ੍ਰੋਜੈਕਟ ਗੈਲਰੀ, ਅਤੇ ਸੰਪਰਕ ਫਾਰਮ ਨਾਲ ਪੋਰਟਫੋਲੀਓ ਵੈੱਬਸਾਈਟ ਬਣਾਓ\"",
+      "tipFeatures": "ਫੀਚਰ ਦੱਸੋ:",
+      "tipFeaturesDesc": "ਤੁਹਾਨੂੰ ਲੋੜੀਂਦੇ ਮੁੱਖ ਫੀਚਰ ਸੂਚੀਬੱਧ ਕਰੋ — ਪ੍ਰਮਾਣੀਕਰਨ, ਡੇਟਾਬੇਸ, ਫਾਈਲ ਅੱਪਲੋਡ, ਆਦਿ।",
+      "tipDesign": "ਡਿਜ਼ਾਈਨ ਤਰਜੀਹਾਂ ਦੱਸੋ:",
+      "tipDesignDesc": "ਰੰਗ, ਸਟਾਈਲ (ਸਧਾਰਨ, ਬੋਲਡ, ਖੇਡਣ ਵਾਲਾ), ਅਤੇ ਲੇਆਉਟ ਤਰਜੀਹਾਂ AI ਨੂੰ ਤੁਹਾਡੇ ਦ੍ਰਿਸ਼ਟੀਕੋਣ ਨਾਲ ਮੇਲ ਖਾਣ ਵਿੱਚ ਮਦਦ ਕਰਦੀਆਂ ਹਨ",
+      "tipIterate": "ਦੁਹਰਾਓ:",
+      "tipIterateDesc": "ਸਧਾਰਨ ਸ਼ੁਰੂ ਕਰੋ, ਫਿਰ AI ਨੂੰ ਹੋਰ ਫੀਚਰ ਜੋੜਨ ਲਈ ਕਹੋ",
+      "buildFromScratchTitle": "ਸ਼ੁਰੂ ਤੋਂ ਬਣਾਓ",
+      "buildFromScratchDesc": "ਖਾਲੀ ਕੈਨਵਸ ਅਤੇ ਪੂਰੇ ਕੰਟਰੋਲ ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ। ਉਹ ਡਿਵੈਲਪਰ ਲਈ ਸੰਪੂਰਨ ਜੋ ਆਪਣੇ ਪ੍ਰੋਜੈਕਟ ਨੂੰ ਆਪਣੇ ਤਰੀਕੇ ਨਾਲ ਢਾਂਚਾ ਬਣਾਉਣਾ ਚਾਹੁੰਦੇ ਹਨ।",
+      "chooseTemplate": "ਆਪਣਾ ਟੈਂਪਲੇਟ ਚੁਣੋ",
+      "chooseTemplateDesc": "ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਬੇਸ ਟੈਂਪਲੇਟ ਚੁਣੋ। ਹਰ ਟੈਂਪਲੇਟ ਫਰੇਮਵਰਕ, ਬਿਲਡ ਟੂਲ, ਅਤੇ ਨਿਰਭਰਤਾਵਾਂ ਨਾਲ ਪ੍ਰੀ-ਕੌਂਫਿਗਰਡ ਹੁੰਦਾ ਹੈ।",
+      "workspaceFeatures": "ਵਰਕਸਪੇਸ ਫੀਚਰਸ",
+      "codeEditor": "ਕੋਡ ਐਡੀਟਰ:",
+      "codeEditorDesc": "ਸਿੰਟੈਕਸ ਹਾਈਲਾਈਟਿੰਗ, ਆਟੋਕੰਪਲੀਟ, ਅਤੇ ਮਲਟੀ-ਫਾਈਲ ਸੰਪਾਦਨ ਨਾਲ ਪੂਰਾ-ਫੀਚਰ ਐਡੀਟਰ",
+      "fileExplorer": "ਫਾਈਲ ਐਕਸਪਲੋਰਰ:",
+      "fileExplorerDesc": "ਆਪਣੀਆਂ ਪ੍ਰੋਜੈਕਟ ਫਾਈਲਾਂ ਅਤੇ ਫੋਲਡਰ ਨੈਵੀਗੇਟ ਅਤੇ ਪ੍ਰਬੰਧਿਤ ਕਰੋ",
+      "terminal": "ਟਰਮੀਨਲ:",
+      "terminalDesc": "ਕਮਾਂਡ ਚਲਾਓ, ਪੈਕੇਜ ਇੰਸਟਾਲ ਕਰੋ, ਅਤੇ ਆਪਣਾ ਵਾਤਾਵਰਨ ਪ੍ਰਬੰਧਿਤ ਕਰੋ",
+      "livePreview": "ਲਾਈਵ ਪ੍ਰੀਵਿਊ:",
+      "livePreviewDesc": "ਕੋਡ ਕਰਦਿਆਂ ਤੁਰੰਤ ਬਦਲਾਅ ਦੇਖੋ",
+      "aiChat": "AI ਚੈਟ:",
+      "aiChatDesc": "ਮਦਦ ਮੰਗੋ, ਕੋਡ ਸਨਿੱਪੈਟ ਜਨਰੇਟ ਕਰੋ, ਜਾਂ ਸਮੱਸਿਆਵਾਂ ਡੀਬੱਗ ਕਰੋ",
+      "versionControl": "ਵਰਜ਼ਨ ਕੰਟਰੋਲ:",
+      "versionControlDesc": "ਬਦਲਾਵਾਂ ਨੂੰ ਟ੍ਰੈਕ ਕਰਨ ਲਈ ਬਿਲਟ-ਇਨ git ਇੰਟੀਗ੍ਰੇਸ਼ਨ",
       "importGithubTitle": "Import from GitHub",
       "importGithubDesc": "Bring your existing projects to AppNode. Import any public or private repository and enhance it with AI-powered development tools.",
-      "howToImport": "How to Import",
+      "howToImport": "ਕਿਵੇਂ ਇੰਪੋਰਟ ਕਰੀਏ",
       "connectGithub": "Connect GitHub",
       "connectGithubDesc": "Authorize AppNode to access your GitHub account for seamless imports",
-      "selectRepository": "Select Repository",
-      "selectRepositoryDesc": "Choose from your repositories or paste any public repo URL",
-      "configureSettings": "Configure Settings",
-      "configureSettingsDesc": "Select branch, set environment variables, and configure build settings",
-      "importBuild": "Import & Build",
-      "importBuildDesc": "We clone your repo, install dependencies, and start the dev server",
-      "whatHappensAfterImport": "What Happens After Import",
+      "selectRepository": "ਰਿਪੋਜ਼ਿਟਰੀ ਚੁਣੋ",
+      "selectRepositoryDesc": "ਆਪਣੀਆਂ ਰਿਪੋਜ਼ਿਟਰੀਆਂ ਵਿੱਚੋਂ ਚੁਣੋ ਜਾਂ ਕੋਈ ਪਬਲਿਕ ਰਿਪੋ URL ਪੇਸਟ ਕਰੋ",
+      "configureSettings": "ਸੈਟਿੰਗਾਂ ਕੌਂਫਿਗਰ ਕਰੋ",
+      "configureSettingsDesc": "ਬ੍ਰਾਂਚ ਚੁਣੋ, ਵਾਤਾਵਰਨ ਵੇਰੀਏਬਲ ਸੈੱਟ ਕਰੋ, ਅਤੇ ਬਿਲਡ ਸੈਟਿੰਗਾਂ ਕੌਂਫਿਗਰ ਕਰੋ",
+      "importBuild": "ਇੰਪੋਰਟ ਅਤੇ ਬਿਲਡ ਕਰੋ",
+      "importBuildDesc": "ਅਸੀਂ ਤੁਹਾਡੀ ਰਿਪੋ ਕਲੋਨ ਕਰਦੇ ਹਾਂ, ਨਿਰਭਰਤਾਵਾਂ ਇੰਸਟਾਲ ਕਰਦੇ ਹਾਂ, ਅਤੇ ਡੈਵ ਸਰਵਰ ਸ਼ੁਰੂ ਕਰਦੇ ਹਾਂ",
+      "whatHappensAfterImport": "ਇੰਪੋਰਟ ਤੋਂ ਬਾਅਦ ਕੀ ਹੁੰਦਾ ਹੈ",
       "afterImport1": "Your code is cloned into a new AppNode workspace",
-      "afterImport2": "Dependencies are automatically installed",
-      "afterImport3": "Development server starts with live preview",
-      "afterImport4": "AI analyzes your codebase to provide contextual help",
+      "afterImport2": "ਨਿਰਭਰਤਾਵਾਂ ਆਟੋਮੈਟਿਕਲੀ ਇੰਸਟਾਲ ਹੁੰਦੀਆਂ ਹਨ",
+      "afterImport3": "ਲਾਈਵ ਪ੍ਰੀਵਿਊ ਨਾਲ ਡਿਵੈਲਪਮੈਂਟ ਸਰਵਰ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ",
+      "afterImport4": "AI ਤੁਹਾਡੇ ਕੋਡਬੇਸ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰਕੇ ਸੰਦਰਭਿਕ ਮਦਦ ਦਿੰਦੀ ਹੈ",
       "afterImport5": "Changes can be pushed back to GitHub or exported",
-      "privateRepoNote": "Note:",
+      "privateRepoNote": "ਨੋਟ:",
       "privateRepoNoteDesc": "For private repositories, you'll need to authorize GitHub access. We only request the minimum permissions needed to clone your code.",
-      "minutes": "minutes",
-      "minute": "minute",
-      "bestForBeginners": "Best for beginners — describe your idea and let AI build it",
-      "blankCanvas": "Start with a blank canvas and full control",
-      "bringExisting": "Bring your existing project and enhance it with AI",
-      "useTemplate": "Use a Template",
-      "useTemplateDesc": "Start from a pre-built template and customize it",
-      "examplePrompt1": "\"Create a todo list with drag and drop and dark mode\"",
-      "examplePrompt2": "\"Build a simple drawing app with different brush sizes and colors\"",
-      "examplePrompt3": "\"Make a memory card game with emojis\"",
-      "examplePrompt4": "\"Create an expense tracker with charts and categories\"",
+      "minutes": "ਮਿੰਟ",
+      "minute": "ਮਿੰਟ",
+      "bestForBeginners": "ਸ਼ੁਰੂਆਤ ਕਰਨ ਵਾਲਿਆਂ ਲਈ ਵਧੀਆ — ਆਪਣਾ ਵਿਚਾਰ ਦੱਸੋ ਅਤੇ AI ਨੂੰ ਬਣਾਉਣ ਦਿਓ",
+      "blankCanvas": "ਖਾਲੀ ਕੈਨਵਸ ਅਤੇ ਪੂਰੇ ਕੰਟਰੋਲ ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ",
+      "bringExisting": "ਆਪਣਾ ਮੌਜੂਦਾ ਪ੍ਰੋਜੈਕਟ ਲਿਆਓ ਅਤੇ AI ਨਾਲ ਸੁਧਾਰੋ",
+      "useTemplate": "ਟੈਂਪਲੇਟ ਵਰਤੋ",
+      "useTemplateDesc": "ਪ੍ਰੀ-ਬਿਲਟ ਟੈਂਪਲੇਟ ਤੋਂ ਸ਼ੁਰੂ ਕਰੋ ਅਤੇ ਕਸਟਮਾਈਜ਼ ਕਰੋ",
+      "examplePrompt1": "\"ਡਰੈਗ ਐਂਡ ਡ੍ਰੌਪ ਅਤੇ ਡਾਰਕ ਮੋਡ ਨਾਲ ਟੂ-ਡੂ ਲਿਸਟ ਬਣਾਓ\"",
+      "examplePrompt2": "\"ਵੱਖ-ਵੱਖ ਬ੍ਰਸ਼ ਸਾਈਜ਼ ਅਤੇ ਰੰਗਾਂ ਨਾਲ ਸਧਾਰਨ ਡਰਾਇੰਗ ਐਪ ਬਣਾਓ\"",
+      "examplePrompt3": "\"ਇਮੋਜੀ ਨਾਲ ਮੈਮੋਰੀ ਕਾਰਡ ਗੇਮ ਬਣਾਓ\"",
+      "examplePrompt4": "\"ਚਾਰਟ ਅਤੇ ਸ਼੍ਰੇਣੀਆਂ ਨਾਲ ਖਰਚ ਟ੍ਰੈਕਰ ਬਣਾਓ\"",
       "reactVite": "React + Vite",
-      "reactViteDesc": "Fast, modern React setup",
+      "reactViteDesc": "ਤੇਜ਼, ਆਧੁਨਿਕ React ਸੈੱਟਅੱਪ",
       "nextjs": "Next.js",
-      "nextjsDesc": "Full-stack React framework",
+      "nextjsDesc": "ਫੁੱਲ-ਸਟੈਕ React ਫਰੇਮਵਰਕ",
       "vue3": "Vue 3",
-      "vue3Desc": "Progressive JavaScript framework",
+      "vue3Desc": "ਪ੍ਰੋਗਰੈਸਿਵ JavaScript ਫਰੇਮਵਰਕ",
       "svelte": "Svelte",
-      "svelteDesc": "Compile-time framework",
+      "svelteDesc": "ਕੰਪਾਈਲ-ਟਾਈਮ ਫਰੇਮਵਰਕ",
       "astro": "Astro",
-      "astroDesc": "Content-focused sites",
+      "astroDesc": "ਸਮੱਗਰੀ-ਕੇਂਦ੍ਰਿਤ ਸਾਈਟਾਂ",
       "vanillaJs": "Vanilla JS",
-      "vanillaJsDesc": "No framework, pure JavaScript",
+      "vanillaJsDesc": "ਕੋਈ ਫਰੇਮਵਰਕ ਨਹੀਂ, ਸ਼ੁੱਧ JavaScript",
       "trustOverviewTitle": "Trust & Safety at AppNode",
       "trustOverviewDesc": "We're committed to maintaining a safe, trustworthy platform for all users. Our Trust & Safety team works around the clock to ensure AppNode remains a space where creators can build without fear.",
-      "ourCommitment": "Our Commitment",
-      "commitment1": "24/7 monitoring of platform activity",
-      "commitment2": "Rapid response to abuse reports",
-      "commitment3": "Transparent enforcement policies",
-      "commitment4": "Regular security audits and updates",
-      "howWeKeepYouSafe": "How We Keep You Safe",
-      "howWeKeepYouSafeDesc": "Our multi-layered approach to safety includes automated detection systems, human review processes, and community reporting tools. We continuously improve our systems based on emerging threats and user feedback.",
-      "automatedDetection": "Automated Detection",
-      "automatedDetectionDesc": "AI-powered systems identify harmful content",
-      "humanReview": "Human Review",
-      "humanReviewDesc": "Expert team reviews flagged content",
-      "userReports": "User Reports",
-      "userReportsDesc": "Community helps identify issues",
-      "swiftAction": "Swift Action",
-      "swiftActionDesc": "Quick response to violations",
-      "reportingAbuseTitle": "Reporting Abuse",
-      "reportingAbuseDesc": "If you encounter content or behavior that violates our policies, please report it immediately. We take all reports seriously and investigate promptly.",
-      "howToReport": "How to Report",
-      "howToReport1": "Click the \"Report\" button on any project or user profile",
+      "ourCommitment": "ਸਾਡੀ ਵਚਨਬੱਧਤਾ",
+      "commitment1": "ਪਲੇਟਫਾਰਮ ਗਤੀਵਿਧੀ ਦੀ 24/7 ਨਿਗਰਾਨੀ",
+      "commitment2": "ਦੁਰਵਰਤੋਂ ਰਿਪੋਰਟਾਂ ਦਾ ਤੇਜ਼ ਜਵਾਬ",
+      "commitment3": "ਪਾਰਦਰਸ਼ੀ ਲਾਗੂ ਕਰਨ ਦੀਆਂ ਨੀਤੀਆਂ",
+      "commitment4": "ਨਿਯਮਤ ਸੁਰੱਖਿਆ ਆਡਿਟ ਅਤੇ ਅੱਪਡੇਟ",
+      "howWeKeepYouSafe": "ਅਸੀਂ ਤੁਹਾਨੂੰ ਕਿਵੇਂ ਸੁਰੱਖਿਅਤ ਰੱਖਦੇ ਹਾਂ",
+      "howWeKeepYouSafeDesc": "ਸੁਰੱਖਿਆ ਲਈ ਸਾਡੀ ਬਹੁ-ਪੱਧਰੀ ਪਹੁੰਚ ਵਿੱਚ ਆਟੋਮੈਟਿਡ ਖੋਜ ਸਿਸਟਮ, ਮਨੁੱਖੀ ਸਮੀਖਿਆ ਪ੍ਰਕਿਰਿਆਵਾਂ, ਅਤੇ ਕਮਿਊਨਿਟੀ ਰਿਪੋਰਟਿੰਗ ਟੂਲ ਸ਼ਾਮਲ ਹਨ।",
+      "automatedDetection": "ਆਟੋਮੈਟਿਡ ਖੋਜ",
+      "automatedDetectionDesc": "AI-ਸੰਚਾਲਿਤ ਸਿਸਟਮ ਨੁਕਸਾਨਦੇਹ ਸਮੱਗਰੀ ਦੀ ਪਛਾਣ ਕਰਦੇ ਹਨ",
+      "humanReview": "ਮਨੁੱਖੀ ਸਮੀਖਿਆ",
+      "humanReviewDesc": "ਮਾਹਰ ਟੀਮ ਫਲੈਗ ਕੀਤੀ ਸਮੱਗਰੀ ਦੀ ਸਮੀਖਿਆ ਕਰਦੀ ਹੈ",
+      "userReports": "ਯੂਜ਼ਰ ਰਿਪੋਰਟਾਂ",
+      "userReportsDesc": "ਕਮਿਊਨਿਟੀ ਸਮੱਸਿਆਵਾਂ ਦੀ ਪਛਾਣ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦੀ ਹੈ",
+      "swiftAction": "ਤੇਜ਼ ਕਾਰਵਾਈ",
+      "swiftActionDesc": "ਉਲੰਘਣਾਵਾਂ ਦਾ ਤੇਜ਼ ਜਵਾਬ",
+      "reportingAbuseTitle": "ਦੁਰਵਰਤੋਂ ਦੀ ਰਿਪੋਰਟ ਕਰੋ",
+      "reportingAbuseDesc": "ਜੇ ਤੁਹਾਨੂੰ ਅਜਿਹੀ ਸਮੱਗਰੀ ਜਾਂ ਵਿਵਹਾਰ ਮਿਲਦਾ ਹੈ ਜੋ ਸਾਡੀਆਂ ਨੀਤੀਆਂ ਦੀ ਉਲੰਘਣਾ ਕਰਦਾ ਹੈ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਤੁਰੰਤ ਰਿਪੋਰਟ ਕਰੋ।",
+      "howToReport": "ਕਿਵੇਂ ਰਿਪੋਰਟ ਕਰੀਏ",
+      "howToReport1": "ਕਿਸੇ ਵੀ ਪ੍ਰੋਜੈਕਟ ਜਾਂ ਯੂਜ਼ਰ ਪ੍ਰੋਫਾਈਲ 'ਤੇ \"ਰਿਪੋਰਟ\" ਬਟਨ 'ਤੇ ਕਲਿੱਕ ਕਰੋ",
       "howToReport2": "Email us directly at contact@appnode.ai",
-      "howToReport3": "Use the contact form in your account settings",
-      "whatWeInvestigate": "What We Investigate",
-      "investigate1": "Harassment or threats",
-      "investigate2": "Malware or malicious code",
-      "investigate3": "Copyright infringement",
-      "investigate4": "Spam or phishing attempts",
-      "investigate5": "Illegal content",
-      "copyrightClaimsTitle": "Copyright Claims",
-      "copyrightClaimsDesc": "We respect intellectual property rights and respond promptly to valid copyright claims.",
-      "filingClaim": "Filing a Claim",
+      "howToReport3": "ਆਪਣੀ ਖਾਤਾ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਸੰਪਰਕ ਫਾਰਮ ਵਰਤੋ",
+      "whatWeInvestigate": "ਅਸੀਂ ਕੀ ਜਾਂਚ ਕਰਦੇ ਹਾਂ",
+      "investigate1": "ਪ੍ਰੇਸ਼ਾਨੀ ਜਾਂ ਧਮਕੀਆਂ",
+      "investigate2": "ਮਾਲਵੇਅਰ ਜਾਂ ਖਰਾਬ ਕੋਡ",
+      "investigate3": "ਕਾਪੀਰਾਈਟ ਉਲੰਘਣਾ",
+      "investigate4": "ਸਪੈਮ ਜਾਂ ਫਿਸ਼ਿੰਗ ਕੋਸ਼ਿਸ਼ਾਂ",
+      "investigate5": "ਗੈਰ-ਕਾਨੂੰਨੀ ਸਮੱਗਰੀ",
+      "copyrightClaimsTitle": "ਕਾਪੀਰਾਈਟ ਦਾਅਵੇ",
+      "copyrightClaimsDesc": "ਅਸੀਂ ਬੌਧਿਕ ਸੰਪੱਤੀ ਅਧਿਕਾਰਾਂ ਦਾ ਸਨਮਾਨ ਕਰਦੇ ਹਾਂ ਅਤੇ ਵੈਧ ਕਾਪੀਰਾਈਟ ਦਾਅਵਿਆਂ ਦਾ ਤੁਰੰਤ ਜਵਾਬ ਦਿੰਦੇ ਹਾਂ।",
+      "filingClaim": "ਦਾਅਵਾ ਦਰਜ ਕਰਨਾ",
       "filingClaimDesc": "To file a DMCA takedown notice, please email contact@appnode.ai with:",
-      "claimItem1": "Identification of the copyrighted work",
-      "claimItem2": "URL of the infringing content",
-      "claimItem3": "Your contact information",
-      "claimItem4": "A statement of good faith belief",
-      "claimItem5": "Your physical or electronic signature",
-      "termsTitle": "Terms of Service",
-      "termsLastUpdated": "Last updated: January 2025",
+      "claimItem1": "ਕਾਪੀਰਾਈਟ ਕੀਤੇ ਕੰਮ ਦੀ ਪਛਾਣ",
+      "claimItem2": "ਉਲੰਘਣਾ ਕਰਨ ਵਾਲੀ ਸਮੱਗਰੀ ਦਾ URL",
+      "claimItem3": "ਤੁਹਾਡੀ ਸੰਪਰਕ ਜਾਣਕਾਰੀ",
+      "claimItem4": "ਸਦਭਾਵਨਾ ਦਾ ਬਿਆਨ",
+      "claimItem5": "ਤੁਹਾਡੇ ਭੌਤਿਕ ਜਾਂ ਇਲੈਕਟ੍ਰਾਨਿਕ ਦਸਤਖਤ",
+      "termsTitle": "ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ",
+      "termsLastUpdated": "ਆਖਰੀ ਅੱਪਡੇਟ: ਜਨਵਰੀ 2025",
       "termsIntro": "These Terms of Service (\"Terms\") govern your access to and use of AppNode's services, websites, and applications (\"Services\"). By using our Services, you agree to be bound by these Terms.",
-      "acceptanceOfTerms": "1. Acceptance of Terms",
-      "acceptanceOfTermsDesc": "By accessing or using our Services, you agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you may not access or use our Services.",
-      "descriptionOfServices": "2. Description of Services",
+      "acceptanceOfTerms": "1. ਸ਼ਰਤਾਂ ਦੀ ਸਵੀਕ੍ਰਿਤੀ",
+      "acceptanceOfTermsDesc": "ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਤੱਕ ਪਹੁੰਚ ਜਾਂ ਵਰਤੋਂ ਕਰਕੇ, ਤੁਸੀਂ ਇਹਨਾਂ ਸ਼ਰਤਾਂ ਅਤੇ ਸਾਡੀ ਗੋਪਨੀਯਤਾ ਨੀਤੀ ਨਾਲ ਬੰਨ੍ਹੇ ਜਾਣ ਲਈ ਸਹਿਮਤ ਹੁੰਦੇ ਹੋ।",
+      "descriptionOfServices": "2. ਸੇਵਾਵਾਂ ਦਾ ਵਰਣਨ",
       "descriptionOfServicesDesc": "AppNode provides an AI-powered development platform that enables users to build websites, applications, and digital products. Our Services include code generation, hosting, collaboration tools, and related features.",
-      "userAccounts": "3. User Accounts",
-      "userAccountsDesc": "To use certain features, you must create an account. You agree to:",
-      "userAccount1": "Provide accurate and complete information",
-      "userAccount2": "Maintain the security of your account credentials",
-      "userAccount3": "Accept responsibility for all activities under your account",
-      "userAccount4": "Notify us immediately of any unauthorized use",
-      "acceptableUse": "4. Acceptable Use",
-      "acceptableUseDesc": "You agree not to use our Services to:",
-      "acceptableUse1": "Violate any applicable laws or regulations",
-      "acceptableUse2": "Infringe on intellectual property rights",
-      "acceptableUse3": "Distribute malware, spam, or harmful content",
-      "acceptableUse4": "Harass, threaten, or harm others",
-      "acceptableUse5": "Attempt to gain unauthorized access to our systems",
-      "acceptableUse6": "Use our Services for any illegal or unauthorized purpose",
-      "intellectualProperty": "5. Intellectual Property",
-      "intellectualPropertyDesc": "You retain ownership of content you create using our Services. By using our Services, you grant us a limited license to host, display, and distribute your content as necessary to provide the Services.",
-      "termination": "6. Termination",
-      "terminationDesc": "We reserve the right to suspend or terminate your account for violations of these Terms or for any other reason at our discretion. You may also terminate your account at any time.",
-      "disclaimers": "7. Disclaimers",
-      "disclaimersDesc": "OUR SERVICES ARE PROVIDED \"AS IS\" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. WE DO NOT GUARANTEE THAT OUR SERVICES WILL BE UNINTERRUPTED, SECURE, OR ERROR-FREE.",
-      "termsContact": "8. Contact",
+      "userAccounts": "3. ਯੂਜ਼ਰ ਖਾਤੇ",
+      "userAccountsDesc": "ਕੁਝ ਫੀਚਰ ਵਰਤਣ ਲਈ, ਤੁਹਾਨੂੰ ਖਾਤਾ ਬਣਾਉਣਾ ਪਵੇਗਾ। ਤੁਸੀਂ ਸਹਿਮਤ ਹੁੰਦੇ ਹੋ:",
+      "userAccount1": "ਸਹੀ ਅਤੇ ਪੂਰੀ ਜਾਣਕਾਰੀ ਦਿਓ",
+      "userAccount2": "ਆਪਣੇ ਖਾਤੇ ਦੇ ਪ੍ਰਮਾਣ-ਪੱਤਰਾਂ ਦੀ ਸੁਰੱਖਿਆ ਬਣਾਈ ਰੱਖੋ",
+      "userAccount3": "ਆਪਣੇ ਖਾਤੇ ਅਧੀਨ ਸਾਰੀਆਂ ਗਤੀਵਿਧੀਆਂ ਦੀ ਜ਼ਿੰਮੇਵਾਰੀ ਸਵੀਕਾਰ ਕਰੋ",
+      "userAccount4": "ਕਿਸੇ ਵੀ ਅਣਅਧਿਕਾਰਤ ਵਰਤੋਂ ਬਾਰੇ ਤੁਰੰਤ ਸੂਚਿਤ ਕਰੋ",
+      "acceptableUse": "4. ਸਵੀਕਾਰਯੋਗ ਵਰਤੋਂ",
+      "acceptableUseDesc": "ਤੁਸੀਂ ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਦੀ ਵਰਤੋਂ ਹੇਠ ਲਿਖਿਆਂ ਲਈ ਨਾ ਕਰਨ ਲਈ ਸਹਿਮਤ ਹੁੰਦੇ ਹੋ:",
+      "acceptableUse1": "ਕਿਸੇ ਲਾਗੂ ਕਾਨੂੰਨ ਜਾਂ ਨਿਯਮ ਦੀ ਉਲੰਘਣਾ",
+      "acceptableUse2": "ਬੌਧਿਕ ਸੰਪੱਤੀ ਅਧਿਕਾਰਾਂ ਦੀ ਉਲੰਘਣਾ",
+      "acceptableUse3": "ਮਾਲਵੇਅਰ, ਸਪੈਮ, ਜਾਂ ਨੁਕਸਾਨਦੇਹ ਸਮੱਗਰੀ ਵੰਡਣਾ",
+      "acceptableUse4": "ਕਿਸੇ ਨੂੰ ਪ੍ਰੇਸ਼ਾਨ ਕਰਨਾ, ਧਮਕੀ ਦੇਣਾ, ਜਾਂ ਨੁਕਸਾਨ ਪਹੁੰਚਾਉਣਾ",
+      "acceptableUse5": "ਸਾਡੇ ਸਿਸਟਮਾਂ ਤੱਕ ਅਣਅਧਿਕਾਰਤ ਪਹੁੰਚ ਦੀ ਕੋਸ਼ਿਸ਼",
+      "acceptableUse6": "ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਦੀ ਗੈਰ-ਕਾਨੂੰਨੀ ਜਾਂ ਅਣਅਧਿਕਾਰਤ ਮਕਸਦ ਲਈ ਵਰਤੋਂ",
+      "intellectualProperty": "5. ਬੌਧਿਕ ਸੰਪੱਤੀ",
+      "intellectualPropertyDesc": "ਤੁਸੀਂ ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਬਣਾਈ ਸਮੱਗਰੀ ਦੀ ਮਾਲਕੀ ਰੱਖਦੇ ਹੋ। ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਵਰਤ ਕੇ, ਤੁਸੀਂ ਸਾਨੂੰ ਸੇਵਾਵਾਂ ਪ੍ਰਦਾਨ ਕਰਨ ਲਈ ਲੋੜੀਂਦੀ ਸੀਮਤ ਲਾਇਸੈਂਸ ਦਿੰਦੇ ਹੋ।",
+      "termination": "6. ਸਮਾਪਤੀ",
+      "terminationDesc": "ਅਸੀਂ ਇਹਨਾਂ ਸ਼ਰਤਾਂ ਦੀ ਉਲੰਘਣਾ ਜਾਂ ਕਿਸੇ ਹੋਰ ਕਾਰਨ ਲਈ ਤੁਹਾਡਾ ਖਾਤਾ ਮੁਅੱਤਲ ਜਾਂ ਬੰਦ ਕਰਨ ਦਾ ਅਧਿਕਾਰ ਰੱਖਦੇ ਹਾਂ।",
+      "disclaimers": "7. ਬੇਦਾਅਵੇ",
+      "disclaimersDesc": "ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਬਿਨਾਂ ਕਿਸੇ ਵਾਰੰਟੀ ਦੇ \"ਜਿਵੇਂ ਹੈ\" ਦੇ ਆਧਾਰ 'ਤੇ ਪ੍ਰਦਾਨ ਕੀਤੀਆਂ ਜਾਂਦੀਆਂ ਹਨ। ਅਸੀਂ ਗਾਰੰਟੀ ਨਹੀਂ ਦਿੰਦੇ ਕਿ ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਬਿਨਾਂ ਰੁਕਾਵਟ, ਸੁਰੱਖਿਅਤ, ਜਾਂ ਗਲਤੀ-ਮੁਕਤ ਹੋਣਗੀਆਂ।",
+      "termsContact": "8. ਸੰਪਰਕ",
       "termsContactDesc": "For questions about these Terms, contact us at contact@appnode.ai",
-      "privacyTitle": "Privacy Policy",
-      "privacyLastUpdated": "Last updated: January 2025",
+      "privacyTitle": "ਗੋਪਨੀਯਤਾ ਨੀਤੀ",
+      "privacyLastUpdated": "ਆਖਰੀ ਅੱਪਡੇਟ: ਜਨਵਰੀ 2025",
       "privacyIntro": "This Privacy Policy describes how AppNode collects, uses, and shares information about you when you use our services.",
-      "infoWeCollect": "Information We Collect",
-      "infoCollect1": "Account information (email, name, profile)",
-      "infoCollect2": "Usage data (features used, projects created)",
-      "infoCollect3": "Device information (browser, OS, IP address)",
-      "infoCollect4": "Payment information (processed by secure providers)",
-      "howWeUseInfo": "How We Use Your Information",
-      "useInfo1": "Provide and improve our services",
-      "useInfo2": "Process transactions and send related information",
-      "useInfo3": "Send technical notices and support messages",
-      "useInfo4": "Respond to your comments and questions",
-      "privacyContact": "Contact",
+      "infoWeCollect": "ਅਸੀਂ ਕਿਹੜੀ ਜਾਣਕਾਰੀ ਇਕੱਠੀ ਕਰਦੇ ਹਾਂ",
+      "infoCollect1": "ਖਾਤਾ ਜਾਣਕਾਰੀ (ਈਮੇਲ, ਨਾਮ, ਪ੍ਰੋਫਾਈਲ)",
+      "infoCollect2": "ਵਰਤੋਂ ਡਾਟਾ (ਵਰਤੇ ਫੀਚਰ, ਬਣਾਏ ਪ੍ਰੋਜੈਕਟ)",
+      "infoCollect3": "ਡਿਵਾਈਸ ਜਾਣਕਾਰੀ (ਬ੍ਰਾਊਜ਼ਰ, OS, IP ਪਤਾ)",
+      "infoCollect4": "ਭੁਗਤਾਨ ਜਾਣਕਾਰੀ (ਸੁਰੱਖਿਅਤ ਪ੍ਰਦਾਤਾਵਾਂ ਦੁਆਰਾ ਪ੍ਰੋਸੈਸ ਕੀਤੀ)",
+      "howWeUseInfo": "ਅਸੀਂ ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਕਿਵੇਂ ਵਰਤਦੇ ਹਾਂ",
+      "useInfo1": "ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਪ੍ਰਦਾਨ ਕਰਨ ਅਤੇ ਸੁਧਾਰਨ ਲਈ",
+      "useInfo2": "ਲੈਣ-ਦੇਣ ਪ੍ਰੋਸੈਸ ਕਰਨ ਅਤੇ ਸੰਬੰਧਿਤ ਜਾਣਕਾਰੀ ਭੇਜਣ ਲਈ",
+      "useInfo3": "ਤਕਨੀਕੀ ਨੋਟਿਸ ਅਤੇ ਸਹਾਇਤਾ ਸੁਨੇਹੇ ਭੇਜਣ ਲਈ",
+      "useInfo4": "ਤੁਹਾਡੀਆਂ ਟਿੱਪਣੀਆਂ ਅਤੇ ਸਵਾਲਾਂ ਦਾ ਜਵਾਬ ਦੇਣ ਲਈ",
+      "privacyContact": "ਸੰਪਰਕ",
       "privacyContactDesc": "For privacy-related questions, contact us at contact@appnode.ai",
-      "platformRulesTitle": "Platform Rules",
+      "platformRulesTitle": "ਪਲੇਟਫਾਰਮ ਨਿਯਮ",
       "platformRulesDesc": "These rules help maintain a safe and productive environment for all AppNode users.",
-      "prohibitedContent": "Prohibited Content",
-      "prohibited1": "Malware, viruses, or malicious code",
-      "prohibited2": "Phishing or scam websites",
-      "prohibited3": "Content that promotes violence or hate",
-      "prohibited4": "Illegal goods or services",
-      "prohibited5": "Copyright-infringing material",
-      "accountRules": "Account Rules",
-      "accountRule1": "One account per person",
-      "accountRule2": "No sharing account credentials",
-      "accountRule3": "No impersonating others",
-      "accountRule4": "No automated account creation",
+      "prohibitedContent": "ਪਾਬੰਦੀਸ਼ੁਦਾ ਸਮੱਗਰੀ",
+      "prohibited1": "ਮਾਲਵੇਅਰ, ਵਾਇਰਸ, ਜਾਂ ਖਰਾਬ ਕੋਡ",
+      "prohibited2": "ਫਿਸ਼ਿੰਗ ਜਾਂ ਧੋਖਾ ਵੈੱਬਸਾਈਟਾਂ",
+      "prohibited3": "ਹਿੰਸਾ ਜਾਂ ਨਫ਼ਰਤ ਨੂੰ ਉਤਸ਼ਾਹਿਤ ਕਰਨ ਵਾਲੀ ਸਮੱਗਰੀ",
+      "prohibited4": "ਗੈਰ-ਕਾਨੂੰਨੀ ਸਮਾਨ ਜਾਂ ਸੇਵਾਵਾਂ",
+      "prohibited5": "ਕਾਪੀਰਾਈਟ ਉਲੰਘਣਾ ਕਰਨ ਵਾਲੀ ਸਮੱਗਰੀ",
+      "accountRules": "ਖਾਤਾ ਨਿਯਮ",
+      "accountRule1": "ਪ੍ਰਤੀ ਵਿਅਕਤੀ ਇੱਕ ਖਾਤਾ",
+      "accountRule2": "ਖਾਤੇ ਦੇ ਪ੍ਰਮਾਣ-ਪੱਤਰ ਸਾਂਝੇ ਨਾ ਕਰੋ",
+      "accountRule3": "ਕਿਸੇ ਹੋਰ ਦੀ ਨਕਲ ਨਾ ਕਰੋ",
+      "accountRule4": "ਆਟੋਮੈਟਿਡ ਖਾਤਾ ਬਣਾਉਣਾ ਨਹੀਂ",
       "securityOverviewTitle": "Security at AppNode",
-      "securityOverviewDesc": "Security is foundational to everything we build. We implement industry-leading practices to protect your data, your projects, and your users.",
-      "infrastructureSecurity": "Infrastructure Security",
-      "encryptionAtRest": "Encryption at Rest",
-      "encryptionAtRestDesc": "All data encrypted with AES-256",
-      "encryptionInTransit": "Encryption in Transit",
-      "encryptionInTransitDesc": "TLS 1.3 for all connections",
-      "isolatedEnvironments": "Isolated Environments",
-      "isolatedEnvironmentsDesc": "Sandboxed execution for all projects",
-      "ddosProtection": "DDoS Protection",
-      "ddosProtectionDesc": "Enterprise-grade attack mitigation",
-      "applicationSecurity": "Application Security",
-      "appSecurity1": "Regular penetration testing by third-party firms",
-      "appSecurity2": "Automated vulnerability scanning in CI/CD pipeline",
-      "appSecurity3": "Secure development lifecycle (SDL) practices",
-      "appSecurity4": "Code review requirements for all changes",
-      "appSecurity5": "Bug bounty program for responsible disclosure",
-      "accountSecurity": "Account Security",
-      "accountSec1": "Multi-factor authentication (MFA) support",
-      "accountSec2": "Session management and device tracking",
-      "accountSec3": "Suspicious activity detection and alerts",
-      "accountSec4": "Secure password requirements with bcrypt hashing",
-      "compliance": "Compliance",
-      "complianceDesc": "We maintain compliance with industry standards and regulations:",
-      "reportVulnerability": "Report a Vulnerability",
+      "securityOverviewDesc": "ਸੁਰੱਖਿਆ ਹਰ ਚੀਜ਼ ਦੀ ਬੁਨਿਆਦ ਹੈ ਜੋ ਅਸੀਂ ਬਣਾਉਂਦੇ ਹਾਂ। ਅਸੀਂ ਤੁਹਾਡੇ ਡਾਟਾ, ਪ੍ਰੋਜੈਕਟ, ਅਤੇ ਯੂਜ਼ਰਾਂ ਦੀ ਸੁਰੱਖਿਆ ਲਈ ਉਦਯੋਗ-ਮੋਹਰੀ ਅਭਿਆਸ ਲਾਗੂ ਕਰਦੇ ਹਾਂ।",
+      "infrastructureSecurity": "ਢਾਂਚਾ ਸੁਰੱਖਿਆ",
+      "encryptionAtRest": "ਆਰਾਮ ਵਿੱਚ ਐਨਕ੍ਰਿਪਸ਼ਨ",
+      "encryptionAtRestDesc": "ਸਾਰਾ ਡਾਟਾ AES-256 ਨਾਲ ਐਨਕ੍ਰਿਪਟ ਕੀਤਾ ਗਿਆ",
+      "encryptionInTransit": "ਟ੍ਰਾਂਜ਼ਿਟ ਵਿੱਚ ਐਨਕ੍ਰਿਪਸ਼ਨ",
+      "encryptionInTransitDesc": "ਸਾਰੇ ਕਨੈਕਸ਼ਨਾਂ ਲਈ TLS 1.3",
+      "isolatedEnvironments": "ਅਲੱਗ ਵਾਤਾਵਰਨ",
+      "isolatedEnvironmentsDesc": "ਸਾਰੇ ਪ੍ਰੋਜੈਕਟਾਂ ਲਈ ਸੈਂਡਬਾਕਸਡ ਐਗਜ਼ੀਕਿਊਸ਼ਨ",
+      "ddosProtection": "DDoS ਸੁਰੱਖਿਆ",
+      "ddosProtectionDesc": "ਐਂਟਰਪ੍ਰਾਈਜ਼-ਗ੍ਰੇਡ ਹਮਲਾ ਘੱਟ ਕਰਨਾ",
+      "applicationSecurity": "ਐਪਲੀਕੇਸ਼ਨ ਸੁਰੱਖਿਆ",
+      "appSecurity1": "ਤੀਜੀ-ਧਿਰ ਫਰਮਾਂ ਦੁਆਰਾ ਨਿਯਮਤ ਪੈਨੀਟ੍ਰੇਸ਼ਨ ਟੈਸਟਿੰਗ",
+      "appSecurity2": "CI/CD ਪਾਈਪਲਾਈਨ ਵਿੱਚ ਆਟੋਮੈਟਿਡ ਕਮਜ਼ੋਰੀ ਸਕੈਨਿੰਗ",
+      "appSecurity3": "ਸੁਰੱਖਿਅਤ ਵਿਕਾਸ ਜੀਵਨ-ਚੱਕਰ (SDL) ਅਭਿਆਸ",
+      "appSecurity4": "ਸਾਰੇ ਬਦਲਾਵਾਂ ਲਈ ਕੋਡ ਸਮੀਖਿਆ ਲੋੜ",
+      "appSecurity5": "ਜ਼ਿੰਮੇਵਾਰ ਖੁਲਾਸੇ ਲਈ ਬੱਗ ਬਾਊਂਟੀ ਪ੍ਰੋਗਰਾਮ",
+      "accountSecurity": "ਖਾਤਾ ਸੁਰੱਖਿਆ",
+      "accountSec1": "ਮਲਟੀ-ਫੈਕਟਰ ਪ੍ਰਮਾਣੀਕਰਨ (MFA) ਸਹਾਇਤਾ",
+      "accountSec2": "ਸੈਸ਼ਨ ਪ੍ਰਬੰਧਨ ਅਤੇ ਡਿਵਾਈਸ ਟ੍ਰੈਕਿੰਗ",
+      "accountSec3": "ਸ਼ੱਕੀ ਗਤੀਵਿਧੀ ਖੋਜ ਅਤੇ ਅਲਰਟ",
+      "accountSec4": "bcrypt ਹੈਸ਼ਿੰਗ ਨਾਲ ਸੁਰੱਖਿਅਤ ਪਾਸਵਰਡ ਲੋੜਾਂ",
+      "compliance": "ਅਨੁਕੂਲਤਾ",
+      "complianceDesc": "ਅਸੀਂ ਉਦਯੋਗ ਮਿਆਰਾਂ ਅਤੇ ਨਿਯਮਾਂ ਦੀ ਅਨੁਕੂਲਤਾ ਬਣਾਈ ਰੱਖਦੇ ਹਾਂ:",
+      "reportVulnerability": "ਕਮਜ਼ੋਰੀ ਦੀ ਰਿਪੋਰਟ ਕਰੋ",
       "reportVulnerabilityDesc": "Found a security issue? Please report it responsibly to contact@appnode.ai. We appreciate your help in keeping AppNode secure and offer rewards for valid reports.",
-      "dataProtectionTitle": "Data Protection",
-      "dataProtectionDesc": "We take data protection seriously. Your code, your projects, and your personal information are safeguarded with multiple layers of protection.",
-      "yourDataRights": "Your Data Rights",
-      "dataRight1": "Access your personal data",
-      "dataRight2": "Export your projects at any time",
-      "dataRight3": "Request deletion of your account",
-      "dataRight4": "Opt out of marketing communications",
-      "dataRetention": "Data Retention",
-      "dataRetentionDesc": "We retain your data only as long as necessary to provide our services. When you delete your account, your data is permanently removed within 30 days.",
-      "generateCodeTitle": "How to Generate Code",
+      "dataProtectionTitle": "ਡਾਟਾ ਸੁਰੱਖਿਆ",
+      "dataProtectionDesc": "ਅਸੀਂ ਡਾਟਾ ਸੁਰੱਖਿਆ ਨੂੰ ਗੰਭੀਰਤਾ ਨਾਲ ਲੈਂਦੇ ਹਾਂ। ਤੁਹਾਡਾ ਕੋਡ, ਤੁਹਾਡੇ ਪ੍ਰੋਜੈਕਟ, ਅਤੇ ਤੁਹਾਡੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਕਈ ਪੱਧਰਾਂ ਦੀ ਸੁਰੱਖਿਆ ਨਾਲ ਸੁਰੱਖਿਅਤ ਹੈ।",
+      "yourDataRights": "ਤੁਹਾਡੇ ਡਾਟਾ ਅਧਿਕਾਰ",
+      "dataRight1": "ਆਪਣੇ ਨਿੱਜੀ ਡਾਟਾ ਤੱਕ ਪਹੁੰਚ ਕਰੋ",
+      "dataRight2": "ਕਿਸੇ ਵੀ ਸਮੇਂ ਆਪਣੇ ਪ੍ਰੋਜੈਕਟ ਐਕਸਪੋਰਟ ਕਰੋ",
+      "dataRight3": "ਆਪਣੇ ਖਾਤੇ ਨੂੰ ਡਿਲੀਟ ਕਰਨ ਦੀ ਬੇਨਤੀ ਕਰੋ",
+      "dataRight4": "ਮਾਰਕੀਟਿੰਗ ਸੰਚਾਰ ਤੋਂ ਬਾਹਰ ਹੋਵੋ",
+      "dataRetention": "ਡਾਟਾ ਧਾਰਨ",
+      "dataRetentionDesc": "ਅਸੀਂ ਤੁਹਾਡਾ ਡਾਟਾ ਸਿਰਫ਼ ਉੰਨਾ ਚਿਰ ਰੱਖਦੇ ਹਾਂ ਜਿੰਨਾ ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਪ੍ਰਦਾਨ ਕਰਨ ਲਈ ਜ਼ਰੂਰੀ ਹੈ। ਜਦੋਂ ਤੁਸੀਂ ਆਪਣਾ ਖਾਤਾ ਡਿਲੀਟ ਕਰਦੇ ਹੋ, ਤੁਹਾਡਾ ਡਾਟਾ 30 ਦਿਨਾਂ ਦੇ ਅੰਦਰ ਪੱਕੇ ਤੌਰ 'ਤੇ ਹਟਾ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ।",
+      "generateCodeTitle": "ਕੋਡ ਕਿਵੇਂ ਜਨਰੇਟ ਕਰੀਏ",
       "generateCodeDesc": "Learn different ways to generate code using AppNode's AI capabilities.",
-      "usingPromptBar": "Using the Prompt Bar",
-      "usingPromptBarDesc": "The prompt bar is your primary interface for AI code generation. Type natural language descriptions to create components, pages, or entire features.",
-      "contextualGeneration": "Contextual Generation",
-      "contextualGenerationDesc": "Right-click any file or folder to generate code in context. AI understands your project structure and generates compatible code.",
-      "codeCompletion": "Code Completion",
-      "codeCompletionDesc": "As you type, AI suggests completions based on your code context. Accept suggestions with Tab or continue typing to refine.",
-      "firstAppTitle": "Building Your First App",
+      "usingPromptBar": "ਪ੍ਰੌਂਪਟ ਬਾਰ ਦੀ ਵਰਤੋਂ",
+      "usingPromptBarDesc": "ਪ੍ਰੌਂਪਟ ਬਾਰ AI ਕੋਡ ਜਨਰੇਸ਼ਨ ਲਈ ਤੁਹਾਡਾ ਮੁੱਖ ਇੰਟਰਫੇਸ ਹੈ। ਕੰਪੋਨੈਂਟ, ਪੇਜ, ਜਾਂ ਪੂਰੇ ਫੀਚਰ ਬਣਾਉਣ ਲਈ ਕੁਦਰਤੀ ਭਾਸ਼ਾ ਵਿੱਚ ਟਾਈਪ ਕਰੋ।",
+      "contextualGeneration": "ਸੰਦਰਭਿਕ ਜਨਰੇਸ਼ਨ",
+      "contextualGenerationDesc": "ਸੰਦਰਭ ਵਿੱਚ ਕੋਡ ਜਨਰੇਟ ਕਰਨ ਲਈ ਕਿਸੇ ਵੀ ਫਾਈਲ ਜਾਂ ਫੋਲਡਰ 'ਤੇ ਰਾਈਟ-ਕਲਿੱਕ ਕਰੋ। AI ਤੁਹਾਡੇ ਪ੍ਰੋਜੈਕਟ ਢਾਂਚੇ ਨੂੰ ਸਮਝਦੀ ਹੈ।",
+      "codeCompletion": "ਕੋਡ ਪੂਰਤੀ",
+      "codeCompletionDesc": "ਜਿਵੇਂ ਤੁਸੀਂ ਟਾਈਪ ਕਰਦੇ ਹੋ, AI ਤੁਹਾਡੇ ਕੋਡ ਸੰਦਰਭ ਦੇ ਆਧਾਰ 'ਤੇ ਪੂਰਤੀ ਸੁਝਾਅ ਦਿੰਦੀ ਹੈ। Tab ਨਾਲ ਸਵੀਕਾਰ ਕਰੋ।",
+      "firstAppTitle": "ਆਪਣੀ ਪਹਿਲੀ ਐਪ ਬਣਾਉਣਾ",
       "firstAppIntro": "Follow this step-by-step guide to build your first application with AppNode.",
-      "firstAppStep1Title": "Step 1: Start a New Project",
-      "firstAppStep1Text": "Click \"Create New\" from your dashboard and choose \"Create with AI\" for the easiest start.",
-      "firstAppStep2Title": "Step 2: Describe Your App",
-      "firstAppStep2Text": "Try this prompt: \"Create a simple todo list app with the ability to add, complete, and delete tasks. Use a clean, minimal design with a light theme.\"",
-      "firstAppStep3Title": "Step 3: Watch It Build",
-      "firstAppStep3Text": "AI will generate your app in real-time. You'll see files being created and a live preview updating as code is written.",
-      "firstAppStep4Title": "Step 4: Make Changes",
-      "firstAppStep4Text": "Try asking: \"Add a dark mode toggle\" or \"Make the completed tasks strikethrough\" to see how AI can iterate on your app.",
-      "databasesTitle": "Building with Databases",
+      "firstAppStep1Title": "ਕਦਮ 1: ਨਵਾਂ ਪ੍ਰੋਜੈਕਟ ਸ਼ੁਰੂ ਕਰੋ",
+      "firstAppStep1Text": "ਆਪਣੇ ਡੈਸ਼ਬੋਰਡ ਤੋਂ \"ਨਵਾਂ ਬਣਾਓ\" 'ਤੇ ਕਲਿੱਕ ਕਰੋ ਅਤੇ ਸਭ ਤੋਂ ਆਸਾਨ ਸ਼ੁਰੂਆਤ ਲਈ \"AI ਨਾਲ ਬਣਾਓ\" ਚੁਣੋ।",
+      "firstAppStep2Title": "ਕਦਮ 2: ਆਪਣੀ ਐਪ ਦੱਸੋ",
+      "firstAppStep2Text": "ਇਹ ਪ੍ਰੌਂਪਟ ਅਜ਼ਮਾਓ: \"ਕੰਮ ਜੋੜਨ, ਪੂਰਾ ਕਰਨ, ਅਤੇ ਡਿਲੀਟ ਕਰਨ ਦੀ ਸਮਰੱਥਾ ਨਾਲ ਸਧਾਰਨ ਟੂ-ਡੂ ਲਿਸਟ ਐਪ ਬਣਾਓ। ਲਾਈਟ ਥੀਮ ਨਾਲ ਸਾਫ਼, ਸਧਾਰਨ ਡਿਜ਼ਾਈਨ ਵਰਤੋ।\"",
+      "firstAppStep3Title": "ਕਦਮ 3: ਬਣਦੇ ਦੇਖੋ",
+      "firstAppStep3Text": "AI ਤੁਹਾਡੀ ਐਪ ਰੀਅਲ-ਟਾਈਮ ਵਿੱਚ ਜਨਰੇਟ ਕਰੇਗੀ। ਤੁਸੀਂ ਫਾਈਲਾਂ ਬਣਦੀਆਂ ਅਤੇ ਲਾਈਵ ਪ੍ਰੀਵਿਊ ਅੱਪਡੇਟ ਹੁੰਦਾ ਦੇਖੋਗੇ।",
+      "firstAppStep4Title": "ਕਦਮ 4: ਬਦਲਾਅ ਕਰੋ",
+      "firstAppStep4Text": "ਅਜ਼ਮਾਓ: \"ਡਾਰਕ ਮੋਡ ਟੌਗਲ ਜੋੜੋ\" ਜਾਂ \"ਪੂਰੇ ਕੀਤੇ ਕੰਮਾਂ ਨੂੰ ਕੱਟ ਕੇ ਦਿਖਾਓ\" ਦੇਖਣ ਲਈ ਕਿ AI ਤੁਹਾਡੀ ਐਪ ਨੂੰ ਕਿਵੇਂ ਸੁਧਾਰ ਸਕਦੀ ਹੈ।",
+      "databasesTitle": "ਡੇਟਾਬੇਸ ਨਾਲ ਬਣਾਉਣਾ",
       "databasesIntro": "Learn how to add persistent data storage to your AppNode applications.",
-      "databasesAvailable": "Available Databases",
+      "databasesAvailable": "ਉਪਲਬਧ ਡੇਟਾਬੇਸ",
       "databasesSqlite": "SQLite",
-      "databasesSqliteDesc": "Simple, file-based database. Great for small apps.",
+      "databasesSqliteDesc": "ਸਧਾਰਨ, ਫਾਈਲ-ਅਧਾਰਿਤ ਡੇਟਾਬੇਸ। ਛੋਟੀਆਂ ਐਪਸ ਲਈ ਵਧੀਆ।",
       "databasesPostgres": "PostgreSQL",
-      "databasesPostgresDesc": "Full-featured relational database for complex data.",
+      "databasesPostgresDesc": "ਗੁੰਝਲਦਾਰ ਡਾਟਾ ਲਈ ਪੂਰਾ-ਫੀਚਰ ਰਿਲੇਸ਼ਨਲ ਡੇਟਾਬੇਸ।",
       "databasesMongo": "MongoDB",
-      "databasesMongoDesc": "Document database for flexible schemas.",
+      "databasesMongoDesc": "ਲਚਕੀਲੇ ਸਕੀਮਾ ਲਈ ਡਾਕੂਮੈਂਟ ਡੇਟਾਬੇਸ।",
       "databasesRedis": "Redis",
-      "databasesRedisDesc": "In-memory store for caching and sessions.",
-      "databasesAdding": "Adding a Database",
-      "databasesAddingText": "Simply describe your data needs: \"I need to store users with name, email, and profile picture\" and AI will set up the database schema and connections for you.",
-      "deployingTitle": "Deploying Your App",
+      "databasesRedisDesc": "ਕੈਸ਼ਿੰਗ ਅਤੇ ਸੈਸ਼ਨਾਂ ਲਈ ਇਨ-ਮੈਮੋਰੀ ਸਟੋਰ।",
+      "databasesAdding": "ਡੇਟਾਬੇਸ ਜੋੜਨਾ",
+      "databasesAddingText": "ਬੱਸ ਆਪਣੀਆਂ ਡਾਟਾ ਲੋੜਾਂ ਦੱਸੋ: \"ਮੈਨੂੰ ਨਾਮ, ਈਮੇਲ, ਅਤੇ ਪ੍ਰੋਫਾਈਲ ਤਸਵੀਰ ਨਾਲ ਯੂਜ਼ਰ ਸਟੋਰ ਕਰਨੇ ਹਨ\" ਅਤੇ AI ਡੇਟਾਬੇਸ ਸਕੀਮਾ ਅਤੇ ਕਨੈਕਸ਼ਨ ਸੈੱਟ ਕਰ ਦੇਵੇਗੀ।",
+      "deployingTitle": "ਆਪਣੀ ਐਪ ਡਿਪਲੌਇ ਕਰਨਾ",
       "deployingIntro": "Get your application live with one click. AppNode handles hosting, SSL, and scaling automatically.",
-      "deployingSteps": "Deploy Steps",
-      "deployingStep1": "Click Deploy",
-      "deployingStep1Text": "Hit the Deploy button in your workspace",
-      "deployingStep2": "Choose a Domain",
-      "deployingStep2Text": "Use our free subdomain or connect your own",
-      "deployingStep3": "Go Live",
-      "deployingStep3Text": "Your app is deployed in seconds with SSL included",
-      "deployingCustom": "Custom Domains",
+      "deployingSteps": "ਡਿਪਲੌਇ ਕਦਮ",
+      "deployingStep1": "ਡਿਪਲੌਇ 'ਤੇ ਕਲਿੱਕ ਕਰੋ",
+      "deployingStep1Text": "ਆਪਣੇ ਵਰਕਸਪੇਸ ਵਿੱਚ ਡਿਪਲੌਇ ਬਟਨ ਦਬਾਓ",
+      "deployingStep2": "ਡੋਮੇਨ ਚੁਣੋ",
+      "deployingStep2Text": "ਸਾਡਾ ਮੁਫ਼ਤ ਸਬਡੋਮੇਨ ਵਰਤੋ ਜਾਂ ਆਪਣਾ ਜੋੜੋ",
+      "deployingStep3": "ਲਾਈਵ ਜਾਓ",
+      "deployingStep3Text": "ਤੁਹਾਡੀ ਐਪ SSL ਸਮੇਤ ਸਕਿੰਟਾਂ ਵਿੱਚ ਡਿਪਲੌਇ ਹੋ ਜਾਂਦੀ ਹੈ",
+      "deployingCustom": "ਕਸਟਮ ਡੋਮੇਨ",
       "deployingCustomText": "Connect your own domain by adding a CNAME record pointing to AppNode. SSL certificates are automatically provisioned.",
-      "teamsTitle": "Teams Overview",
+      "teamsTitle": "ਟੀਮ ਸੰਖੇਪ",
       "teamsIntro": "Collaborate with your team on AppNode. Share projects, manage permissions, and build together in real-time.",
-      "teamsFeatures": "Team Features",
-      "teamsShared": "Shared Projects",
-      "teamsSharedDesc": "All team members can access and contribute to projects",
-      "teamsRealtime": "Real-time Collaboration",
-      "teamsRealtimeDesc": "See changes from teammates instantly",
-      "teamsRole": "Role-based Access",
-      "teamsRoleDesc": "Control who can view, edit, or deploy",
-      "teamsBilling": "Team Billing",
-      "teamsBillingDesc": "Consolidated billing for your organization",
-      "teamsGettingStarted": "Getting Started with Teams",
-      "teamsStep1": "Create a team from your dashboard settings",
-      "teamsStep2": "Invite team members via email",
-      "teamsStep3": "Set permissions for each member",
-      "teamsStep4": "Start collaborating on projects",
-      "enterpriseTitle": "Enterprise Features",
-      "enterpriseIntro": "Advanced features for large organizations with complex requirements.",
-      "enterpriseBenefits": "Enterprise Benefits",
-      "enterpriseSSO": "SSO Integration",
-      "enterpriseSSODesc": "Connect with your identity provider (Okta, Azure AD, etc.)",
-      "enterpriseAudit": "Audit Logs",
-      "enterpriseAuditDesc": "Track all actions across your organization",
-      "enterpriseContracts": "Custom Contracts",
-      "enterpriseContractsDesc": "Tailored agreements and SLAs",
-      "enterpriseSupport": "Dedicated Support",
-      "enterpriseSupportDesc": "Priority support with dedicated account manager",
-      "enterpriseCloud": "Private Cloud",
+      "teamsFeatures": "ਟੀਮ ਫੀਚਰਸ",
+      "teamsShared": "ਸਾਂਝੇ ਪ੍ਰੋਜੈਕਟ",
+      "teamsSharedDesc": "ਸਾਰੇ ਟੀਮ ਮੈਂਬਰ ਪ੍ਰੋਜੈਕਟਾਂ ਤੱਕ ਪਹੁੰਚ ਅਤੇ ਯੋਗਦਾਨ ਕਰ ਸਕਦੇ ਹਨ",
+      "teamsRealtime": "ਰੀਅਲ-ਟਾਈਮ ਸਹਿਯੋਗ",
+      "teamsRealtimeDesc": "ਸਾਥੀਆਂ ਦੇ ਬਦਲਾਅ ਤੁਰੰਤ ਵੇਖੋ",
+      "teamsRole": "ਭੂਮਿਕਾ-ਅਧਾਰਿਤ ਪਹੁੰਚ",
+      "teamsRoleDesc": "ਕੌਣ ਦੇਖ, ਸੰਪਾਦਿਤ, ਜਾਂ ਡਿਪਲੌਇ ਕਰ ਸਕਦਾ ਹੈ ਕੰਟਰੋਲ ਕਰੋ",
+      "teamsBilling": "ਟੀਮ ਬਿਲਿੰਗ",
+      "teamsBillingDesc": "ਤੁਹਾਡੀ ਸੰਸਥਾ ਲਈ ਏਕੀਕ੍ਰਿਤ ਬਿਲਿੰਗ",
+      "teamsGettingStarted": "ਟੀਮਾਂ ਨਾਲ ਸ਼ੁਰੂ ਕਰਨਾ",
+      "teamsStep1": "ਆਪਣੇ ਡੈਸ਼ਬੋਰਡ ਸੈਟਿੰਗਾਂ ਤੋਂ ਟੀਮ ਬਣਾਓ",
+      "teamsStep2": "ਈਮੇਲ ਰਾਹੀਂ ਟੀਮ ਮੈਂਬਰਾਂ ਨੂੰ ਸੱਦਾ ਦਿਓ",
+      "teamsStep3": "ਹਰ ਮੈਂਬਰ ਲਈ ਅਧਿਕਾਰ ਸੈੱਟ ਕਰੋ",
+      "teamsStep4": "ਪ੍ਰੋਜੈਕਟਾਂ 'ਤੇ ਸਹਿਯੋਗ ਸ਼ੁਰੂ ਕਰੋ",
+      "enterpriseTitle": "ਐਂਟਰਪ੍ਰਾਈਜ਼ ਫੀਚਰਸ",
+      "enterpriseIntro": "ਗੁੰਝਲਦਾਰ ਲੋੜਾਂ ਵਾਲੀਆਂ ਵੱਡੀਆਂ ਸੰਸਥਾਵਾਂ ਲਈ ਐਡਵਾਂਸਡ ਫੀਚਰਸ।",
+      "enterpriseBenefits": "ਐਂਟਰਪ੍ਰਾਈਜ਼ ਲਾਭ",
+      "enterpriseSSO": "SSO ਇੰਟੀਗ੍ਰੇਸ਼ਨ",
+      "enterpriseSSODesc": "ਆਪਣੇ ਪਛਾਣ ਪ੍ਰਦਾਤਾ ਨਾਲ ਜੋੜੋ (Okta, Azure AD, ਆਦਿ)",
+      "enterpriseAudit": "ਆਡਿਟ ਲੌਗ",
+      "enterpriseAuditDesc": "ਆਪਣੀ ਸੰਸਥਾ ਵਿੱਚ ਸਾਰੀਆਂ ਕਾਰਵਾਈਆਂ ਟ੍ਰੈਕ ਕਰੋ",
+      "enterpriseContracts": "ਕਸਟਮ ਇਕਰਾਰਨਾਮੇ",
+      "enterpriseContractsDesc": "ਅਨੁਕੂਲਿਤ ਸਮਝੌਤੇ ਅਤੇ SLAs",
+      "enterpriseSupport": "ਸਮਰਪਿਤ ਸਹਾਇਤਾ",
+      "enterpriseSupportDesc": "ਸਮਰਪਿਤ ਖਾਤਾ ਮੈਨੇਜਰ ਨਾਲ ਤਰਜੀਹੀ ਸਹਾਇਤਾ",
+      "enterpriseCloud": "ਪ੍ਰਾਈਵੇਟ ਕਲਾਊਡ",
       "enterpriseCloudDesc": "Run AppNode in your own infrastructure",
       "enterpriseContact": "Contact contact@appnode.ai to learn more.",
-      "collaborationTitle": "Collaboration",
-      "collaborationIntro": "Work together seamlessly with real-time collaboration features.",
-      "collaborationRealtime": "Real-time Features",
-      "collaborationItem1": "See teammates' cursors in the editor",
-      "collaborationItem2": "Live code changes sync instantly",
-      "collaborationItem3": "Built-in comments and discussions",
-      "collaborationItem4": "Activity feed shows recent changes",
-      "collaborationComm": "Communication",
-      "collaborationCommText": "Use the built-in chat or connect your Slack workspace for seamless team communication.",
+      "collaborationTitle": "ਸਹਿਯੋਗ",
+      "collaborationIntro": "ਰੀਅਲ-ਟਾਈਮ ਸਹਿਯੋਗ ਫੀਚਰਸ ਨਾਲ ਸਹਿਜ ਤੌਰ 'ਤੇ ਮਿਲ ਕੇ ਕੰਮ ਕਰੋ।",
+      "collaborationRealtime": "ਰੀਅਲ-ਟਾਈਮ ਫੀਚਰਸ",
+      "collaborationItem1": "ਐਡੀਟਰ ਵਿੱਚ ਸਾਥੀਆਂ ਦੇ ਕਰਸਰ ਦੇਖੋ",
+      "collaborationItem2": "ਲਾਈਵ ਕੋਡ ਬਦਲਾਅ ਤੁਰੰਤ ਸਿੰਕ ਹੁੰਦੇ ਹਨ",
+      "collaborationItem3": "ਬਿਲਟ-ਇਨ ਟਿੱਪਣੀਆਂ ਅਤੇ ਚਰਚਾਵਾਂ",
+      "collaborationItem4": "ਗਤੀਵਿਧੀ ਫੀਡ ਤਾਜ਼ਾ ਬਦਲਾਅ ਦਿਖਾਉਂਦੀ ਹੈ",
+      "collaborationComm": "ਸੰਚਾਰ",
+      "collaborationCommText": "ਸਹਿਜ ਟੀਮ ਸੰਚਾਰ ਲਈ ਬਿਲਟ-ਇਨ ਚੈਟ ਵਰਤੋ ਜਾਂ ਆਪਣਾ Slack ਵਰਕਸਪੇਸ ਜੋੜੋ।",
       "changelogTitle": "ਜਲਦੀ ਆ ਰਿਹਾ ਹੈ",
-      "changelogText": "We're working on something exciting. Check back soon for updates on the latest features and improvements.",
-      "roadmapTitle": "Roadmap",
-      "roadmapIntro": "See what we're working on and what's coming next.",
-      "roadmapInProgress": "In Progress",
-      "roadmapItem1": "Mobile app preview",
-      "roadmapItem2": "Enhanced AI models",
-      "roadmapItem3": "Plugin marketplace",
-      "roadmapPlanned": "Planned",
-      "roadmapItem4": "Native mobile app builder",
-      "roadmapItem5": "API marketplace",
-      "roadmapItem6": "Advanced analytics dashboard"
+      "changelogText": "ਅਸੀਂ ਕੁਝ ਦਿਲਚਸਪ 'ਤੇ ਕੰਮ ਕਰ ਰਹੇ ਹਾਂ। ਨਵੀਨਤਮ ਫੀਚਰਾਂ ਅਤੇ ਸੁਧਾਰਾਂ ਲਈ ਜਲਦੀ ਵਾਪਸ ਆਓ।",
+      "roadmapTitle": "ਰੋਡਮੈਪ",
+      "roadmapIntro": "ਦੇਖੋ ਅਸੀਂ ਕੀ ਬਣਾ ਰਹੇ ਹਾਂ ਅਤੇ ਅੱਗੇ ਕੀ ਆ ਰਿਹਾ ਹੈ।",
+      "roadmapInProgress": "ਚੱਲ ਰਿਹਾ ਹੈ",
+      "roadmapItem1": "ਮੋਬਾਈਲ ਐਪ ਪ੍ਰੀਵਿਊ",
+      "roadmapItem2": "ਵਧੀਆ AI ਮਾਡਲ",
+      "roadmapItem3": "ਪਲੱਗਇਨ ਮਾਰਕੀਟਪਲੇਸ",
+      "roadmapPlanned": "ਯੋਜਨਾਬੱਧ",
+      "roadmapItem4": "ਨੇਟਿਵ ਮੋਬਾਈਲ ਐਪ ਬਿਲਡਰ",
+      "roadmapItem5": "API ਮਾਰਕੀਟਪਲੇਸ",
+      "roadmapItem6": "ਐਡਵਾਂਸਡ ਵਿਸ਼ਲੇਸ਼ਣ ਡੈਸ਼ਬੋਰਡ"
     }
   },
   "aboutPage": {
-    "badge": "About Us",
-    "title": "Empowering creators to build anything",
+    "badge": "ਸਾਡੇ ਬਾਰੇ",
+    "title": "ਸਿਰਜਣਹਾਰਾਂ ਨੂੰ ਕੁਝ ਵੀ ਬਣਾਉਣ ਦੀ ਸ਼ਕਤੀ ਦੇਣਾ",
     "subtitle": "AppNode is on a mission to democratize software development. We believe everyone should have the power to bring their ideas to life, regardless of technical background.",
     "stats": {
-      "developers": "Developers",
-      "appsBuilt": "Apps Built",
-      "countries": "Countries",
-      "uptime": "Uptime"
+      "developers": "ਡਿਵੈਲਪਰ",
+      "appsBuilt": "ਬਣੀਆਂ ਐਪਸ",
+      "countries": "ਦੇਸ਼",
+      "uptime": "ਅੱਪਟਾਈਮ"
     },
     "ourStory": {
-      "title": "Our Story",
+      "title": "ਸਾਡੀ ਕਹਾਣੀ",
       "p1": "AppNode started with a simple observation: building software is too hard. Too many great ideas never see the light of day because creating apps requires years of technical training.",
       "p2": "We founded AppNode to change that. Using the latest advances in AI and intuitive design, we've created a platform where anyone can build production-ready applications in minutes, not months.",
       "p3": "Today, AppNode is loved by developers worldwide. From personal hobby projects to enterprise-scale products, we help people build and deploy powerful applications in minutes.",
-      "p4": "We're just getting started. Our vision is a world where technology creation is as accessible as writing an email. Join us on this journey.",
-      "quote": "\"The best way to predict the future is to create it.\"",
-      "quoteAttribution": "— Our founding principle"
+      "p4": "ਅਸੀਂ ਹੁਣੇ ਸ਼ੁਰੂ ਕੀਤਾ ਹੈ। ਸਾਡਾ ਦ੍ਰਿਸ਼ਟੀਕੋਣ ਅਜਿਹੀ ਦੁਨੀਆ ਹੈ ਜਿੱਥੇ ਤਕਨੀਕੀ ਸਿਰਜਣਾ ਈਮੇਲ ਲਿਖਣ ਜਿੰਨੀ ਆਸਾਨ ਹੋਵੇ। ਸਾਡੇ ਨਾਲ ਇਸ ਯਾਤਰਾ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ।",
+      "quote": "\"ਭਵਿੱਖ ਦੀ ਭਵਿੱਖਬਾਣੀ ਕਰਨ ਦਾ ਸਭ ਤੋਂ ਵਧੀਆ ਤਰੀਕਾ ਇਸਨੂੰ ਬਣਾਉਣਾ ਹੈ।\"",
+      "quoteAttribution": "— ਸਾਡਾ ਸੰਸਥਾਪਕ ਸਿਧਾਂਤ"
     },
     "values": {
-      "title": "Our Values",
+      "title": "ਸਾਡੀਆਂ ਕਦਰਾਂ-ਕੀਮਤਾਂ",
       "subtitle": "These principles guide everything we do at AppNode.",
       "innovationFirst": {
-        "title": "Innovation First",
-        "description": "We push boundaries and embrace cutting-edge technology to solve real problems."
+        "title": "ਨਵੀਨਤਾ ਪਹਿਲਾਂ",
+        "description": "ਅਸੀਂ ਸੀਮਾਵਾਂ ਤੋੜਦੇ ਹਾਂ ਅਤੇ ਅਸਲ ਸਮੱਸਿਆਵਾਂ ਹੱਲ ਕਰਨ ਲਈ ਨਵੀਨਤਮ ਤਕਨਾਲੋਜੀ ਅਪਣਾਉਂਦੇ ਹਾਂ।"
       },
       "developerFocused": {
-        "title": "Developer Focused",
-        "description": "Every decision we make starts with our users. Their success is our success."
+        "title": "ਡਿਵੈਲਪਰ-ਕੇਂਦ੍ਰਿਤ",
+        "description": "ਹਰ ਫੈਸਲਾ ਸਾਡੇ ਯੂਜ਼ਰਾਂ ਨਾਲ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ। ਉਹਨਾਂ ਦੀ ਸਫਲਤਾ ਸਾਡੀ ਸਫਲਤਾ ਹੈ।"
       },
       "simplicityMatters": {
-        "title": "Simplicity Matters",
-        "description": "We take security seriously. Your data and code are protected by industry-leading practices."
+        "title": "ਸਾਦਗੀ ਮਹੱਤਵਪੂਰਨ ਹੈ",
+        "description": "ਅਸੀਂ ਸੁਰੱਖਿਆ ਨੂੰ ਗੰਭੀਰਤਾ ਨਾਲ ਲੈਂਦੇ ਹਾਂ। ਤੁਹਾਡਾ ਡਾਟਾ ਅਤੇ ਕੋਡ ਉਦਯੋਗ-ਮੋਹਰੀ ਅਭਿਆਸਾਂ ਨਾਲ ਸੁਰੱਖਿਅਤ ਹੈ।"
       },
       "quality": {
-        "title": "Quality Obsession",
-        "description": "We're building tools that empower creators everywhere, regardless of background."
+        "title": "ਗੁਣਵੱਤਾ ਦਾ ਜਨੂੰਨ",
+        "description": "ਅਸੀਂ ਅਜਿਹੇ ਟੂਲ ਬਣਾ ਰਹੇ ਹਾਂ ਜੋ ਹਰ ਥਾਂ ਦੇ ਸਿਰਜਣਹਾਰਾਂ ਨੂੰ ਸ਼ਕਤੀ ਦਿੰਦੇ ਹਨ, ਪਿਛੋਕੜ ਦੀ ਪਰਵਾਹ ਕੀਤੇ ਬਿਨਾਂ।"
       },
       "transparency": {
-        "title": "Transparency",
-        "description": "We believe in open communication with our community and being honest about our roadmap."
+        "title": "ਪਾਰਦਰਸ਼ਤਾ",
+        "description": "ਅਸੀਂ ਆਪਣੇ ਭਾਈਚਾਰੇ ਨਾਲ ਖੁੱਲ੍ਹੇ ਸੰਚਾਰ ਅਤੇ ਸਾਡੇ ਰੋਡਮੈਪ ਬਾਰੇ ਇਮਾਨਦਾਰ ਹੋਣ ਵਿੱਚ ਵਿਸ਼ਵਾਸ ਕਰਦੇ ਹਾਂ।"
       },
       "communityDriven": {
-        "title": "Community Driven",
-        "description": "Our community shapes our product. We listen, learn, and build together."
+        "title": "ਭਾਈਚਾਰੇ ਦੁਆਰਾ ਸੰਚਾਲਿਤ",
+        "description": "ਸਾਡਾ ਭਾਈਚਾਰਾ ਸਾਡੇ ਉਤਪਾਦ ਨੂੰ ਆਕਾਰ ਦਿੰਦਾ ਹੈ। ਅਸੀਂ ਸੁਣਦੇ ਹਾਂ, ਸਿੱਖਦੇ ਹਾਂ, ਅਤੇ ਮਿਲ ਕੇ ਬਣਾਉਂਦੇ ਹਾਂ।"
       }
     },
     "journey": {
-      "title": "Our Journey",
-      "subtitle": "From an idea to a global platform.",
+      "title": "ਸਾਡੀ ਯਾਤਰਾ",
+      "subtitle": "ਇੱਕ ਵਿਚਾਰ ਤੋਂ ਗਲੋਬਲ ਪਲੇਟਫਾਰਮ ਤੱਕ।",
       "milestone1": {
         "year": "Jan 2023",
         "title": "The Idea Is Born",
@@ -3773,106 +3940,500 @@
       }
     },
     "team": {
-      "title": "Meet Our Team",
+      "title": "ਸਾਡੀ ਟੀਮ ਨੂੰ ਮਿਲੋ",
       "subtitle": "Powered by a talented team passionate about AppNode's mission.",
-      "joinTeam": "Join the Team",
-      "viewOpenings": "View Open Positions"
+      "joinTeam": "ਟੀਮ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ",
+      "viewOpenings": "ਖੁੱਲ੍ਹੀਆਂ ਅਸਾਮੀਆਂ ਵੇਖੋ"
     },
     "cta": {
-      "title": "Build with us?",
+      "title": "ਸਾਡੇ ਨਾਲ ਬਣਾਉਣਾ ਹੈ?",
       "subtitle": "Join hundreds of thousands of creators building amazing apps with AppNode.",
-      "getStartedFree": "Get Started Free",
-      "contactUs": "Contact Us",
+      "getStartedFree": "ਮੁਫ਼ਤ ਸ਼ੁਰੂ ਕਰੋ",
+      "contactUs": "ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ",
       "logIn": "ਲੌਗ ਇਨ",
       "getStarted": "ਸ਼ੁਰੂ ਕਰੋ"
     }
   },
   "rulesPage": {
-    "badge": "Community Guidelines",
-    "title": "Platform Rules",
-    "subtitle": "Our community thrives when everyone follows these guidelines. Together, we create a positive and productive environment.",
+    "badge": "ਭਾਈਚਾਰਾ ਦਿਸ਼ਾ-ਨਿਰਦੇਸ਼",
+    "title": "ਪਲੇਟਫਾਰਮ ਨਿਯਮ",
+    "subtitle": "ਸਾਡਾ ਭਾਈਚਾਰਾ ਉਦੋਂ ਖੁਸ਼ਹਾਲ ਹੁੰਦਾ ਹੈ ਜਦੋਂ ਹਰ ਕੋਈ ਇਹਨਾਂ ਦਿਸ਼ਾ-ਨਿਰਦੇਸ਼ਾਂ ਦੀ ਪਾਲਣਾ ਕਰਦਾ ਹੈ। ਮਿਲ ਕੇ, ਅਸੀਂ ਇੱਕ ਸਕਾਰਾਤਮਕ ਅਤੇ ਉਪਯੋਗੀ ਵਾਤਾਵਰਨ ਬਣਾਉਂਦੇ ਹਾਂ।",
     "rules": {
       "respectAndKindness": {
-        "title": "Respect and Kindness",
-        "description": "Treat all community members with respect. Harassment, hate speech, discrimination, or personal attacks of any kind are not tolerated.",
+        "title": "ਸਤਿਕਾਰ ਅਤੇ ਦਿਆਲਤਾ",
+        "description": "ਸਾਰੇ ਭਾਈਚਾਰੇ ਦੇ ਮੈਂਬਰਾਂ ਨਾਲ ਸਤਿਕਾਰ ਨਾਲ ਪੇਸ਼ ਆਓ। ਪਰੇਸ਼ਾਨੀ, ਨਫ਼ਰਤੀ ਭਾਸ਼ਣ, ਵਿਤਕਰਾ, ਜਾਂ ਕਿਸੇ ਵੀ ਕਿਸਮ ਦੇ ਨਿੱਜੀ ਹਮਲੇ ਬਰਦਾਸ਼ਤ ਨਹੀਂ ਕੀਤੇ ਜਾਂਦੇ।",
         "examples": {
-          "title": "Examples:",
-          "item1": "Be helpful and constructive in feedback",
-          "item2": "Avoid inflammatory or hostile language",
-          "item3": "Respect differences in opinion and experience"
+          "title": "ਉਦਾਹਰਨਾਂ:",
+          "item1": "ਫੀਡਬੈਕ ਵਿੱਚ ਸਹਾਇਕ ਅਤੇ ਉਸਾਰੂ ਬਣੋ",
+          "item2": "ਭੜਕਾਊ ਜਾਂ ਦੁਸ਼ਮਣੀ ਭਰੀ ਭਾਸ਼ਾ ਤੋਂ ਬਚੋ",
+          "item3": "ਰਾਏ ਅਤੇ ਤਜ਼ਰਬੇ ਵਿੱਚ ਅੰਤਰ ਦਾ ਸਤਿਕਾਰ ਕਰੋ"
         }
       },
       "originalContent": {
-        "title": "Original Content",
-        "description": "Create and share original work. Respect intellectual property rights and give proper attribution when using others' work.",
+        "title": "ਮੌਲਿਕ ਸਮੱਗਰੀ",
+        "description": "ਮੌਲਿਕ ਕੰਮ ਬਣਾਓ ਅਤੇ ਸਾਂਝਾ ਕਰੋ। ਬੌਧਿਕ ਸੰਪੱਤੀ ਅਧਿਕਾਰਾਂ ਦਾ ਸਤਿਕਾਰ ਕਰੋ ਅਤੇ ਦੂਜਿਆਂ ਦੇ ਕੰਮ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਸਮੇਂ ਸਹੀ ਕ੍ਰੈਡਿਟ ਦਿਓ।",
         "examples": {
-          "title": "Examples:",
-          "item1": "Only share content you have rights to",
-          "item2": "Credit original creators when inspired by their work",
-          "item3": "Don't copy or plagiarize other users' projects"
+          "title": "ਉਦਾਹਰਨਾਂ:",
+          "item1": "ਸਿਰਫ਼ ਉਹੀ ਸਮੱਗਰੀ ਸਾਂਝੀ ਕਰੋ ਜਿਸ 'ਤੇ ਤੁਹਾਡੇ ਅਧਿਕਾਰ ਹਨ",
+          "item2": "ਦੂਜਿਆਂ ਦੇ ਕੰਮ ਤੋਂ ਪ੍ਰੇਰਿਤ ਹੋਣ 'ਤੇ ਮੂਲ ਸਿਰਜਣਹਾਰਾਂ ਨੂੰ ਕ੍ਰੈਡਿਟ ਦਿਓ",
+          "item3": "ਦੂਜੇ ਯੂਜ਼ਰਾਂ ਦੇ ਪ੍ਰੋਜੈਕਟ ਕਾਪੀ ਜਾਂ ਨਕਲ ਨਾ ਕਰੋ"
         }
       },
       "safeContent": {
-        "title": "Safe Content",
-        "description": "Keep the platform safe for everyone. Do not create, share, or promote harmful, illegal, or inappropriate content.",
+        "title": "ਸੁਰੱਖਿਅਤ ਸਮੱਗਰੀ",
+        "description": "ਪਲੇਟਫਾਰਮ ਨੂੰ ਸਾਰਿਆਂ ਲਈ ਸੁਰੱਖਿਅਤ ਰੱਖੋ। ਹਾਨੀਕਾਰਕ, ਗ਼ੈਰ-ਕਾਨੂੰਨੀ, ਜਾਂ ਅਣਉਚਿਤ ਸਮੱਗਰੀ ਨਾ ਬਣਾਓ, ਸਾਂਝੀ ਕਰੋ, ਜਾਂ ਪ੍ਰੋਮੋਟ ਕਰੋ।",
         "examples": {
-          "title": "Examples:",
-          "item1": "No explicit, violent, or disturbing content",
-          "item2": "No promotion of illegal activities",
-          "item3": "No content that could harm or endanger others"
+          "title": "ਉਦਾਹਰਨਾਂ:",
+          "item1": "ਕੋਈ ਅਸ਼ਲੀਲ, ਹਿੰਸਕ, ਜਾਂ ਪਰੇਸ਼ਾਨ ਕਰਨ ਵਾਲੀ ਸਮੱਗਰੀ ਨਹੀਂ",
+          "item2": "ਗ਼ੈਰ-ਕਾਨੂੰਨੀ ਗਤੀਵਿਧੀਆਂ ਦਾ ਪ੍ਰੋਮੋਸ਼ਨ ਨਹੀਂ",
+          "item3": "ਅਜਿਹੀ ਸਮੱਗਰੀ ਨਹੀਂ ਜੋ ਦੂਜਿਆਂ ਨੂੰ ਨੁਕਸਾਨ ਪਹੁੰਚਾ ਸਕਦੀ ਹੈ"
         }
       },
       "noSpam": {
-        "title": "No Spam or Manipulation",
-        "description": "Don't engage in spam, manipulation, or deceptive practices. Keep the platform authentic and trustworthy.",
+        "title": "ਕੋਈ ਸਪੈਮ ਜਾਂ ਹੇਰਾਫੇਰੀ ਨਹੀਂ",
+        "description": "ਸਪੈਮ, ਹੇਰਾਫੇਰੀ, ਜਾਂ ਧੋਖੇਬਾਜ਼ ਅਭਿਆਸਾਂ ਵਿੱਚ ਸ਼ਾਮਲ ਨਾ ਹੋਵੋ। ਪਲੇਟਫਾਰਮ ਨੂੰ ਪ੍ਰਮਾਣਿਕ ਅਤੇ ਭਰੋਸੇਮੰਦ ਰੱਖੋ।",
         "examples": {
-          "title": "Examples:",
-          "item1": "No automated or bulk actions to artificially boost visibility",
-          "item2": "No fake accounts or impersonation",
-          "item3": "No misleading or deceptive content"
+          "title": "ਉਦਾਹਰਨਾਂ:",
+          "item1": "ਨਕਲੀ ਤੌਰ 'ਤੇ ਦਿੱਖ ਵਧਾਉਣ ਲਈ ਕੋਈ ਆਟੋਮੈਟਿਡ ਜਾਂ ਬਲਕ ਕਾਰਵਾਈਆਂ ਨਹੀਂ",
+          "item2": "ਕੋਈ ਫ਼ਰਜ਼ੀ ਖਾਤੇ ਜਾਂ ਨਕਲ ਨਹੀਂ",
+          "item3": "ਕੋਈ ਗੁਮਰਾਹਕੁੰਨ ਜਾਂ ਧੋਖੇਬਾਜ਼ ਸਮੱਗਰੀ ਨਹੀਂ"
         }
       },
       "securePractices": {
-        "title": "Secure Practices",
-        "description": "Follow security best practices. Never attempt to exploit, hack, or compromise the platform or other users.",
+        "title": "ਸੁਰੱਖਿਅਤ ਅਭਿਆਸ",
+        "description": "ਸੁਰੱਖਿਆ ਦੇ ਵਧੀਆ ਅਭਿਆਸਾਂ ਦੀ ਪਾਲਣਾ ਕਰੋ। ਪਲੇਟਫਾਰਮ ਜਾਂ ਹੋਰ ਯੂਜ਼ਰਾਂ ਦਾ ਸ਼ੋਸ਼ਣ, ਹੈਕ, ਜਾਂ ਸਮਝੌਤਾ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਦੇ ਨਾ ਕਰੋ।",
         "examples": {
-          "title": "Examples:",
-          "item1": "Don't attempt to access others' accounts",
-          "item2": "Report security vulnerabilities responsibly",
-          "item3": "Never share malicious code or phishing links"
+          "title": "ਉਦਾਹਰਨਾਂ:",
+          "item1": "ਦੂਜਿਆਂ ਦੇ ਖਾਤਿਆਂ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਨਾ ਕਰੋ",
+          "item2": "ਸੁਰੱਖਿਆ ਕਮਜ਼ੋਰੀਆਂ ਦੀ ਜ਼ਿੰਮੇਵਾਰੀ ਨਾਲ ਰਿਪੋਰਟ ਕਰੋ",
+          "item3": "ਹਾਨੀਕਾਰਕ ਕੋਡ ਜਾਂ ਫਿਸ਼ਿੰਗ ਲਿੰਕ ਕਦੇ ਸਾਂਝੇ ਨਾ ਕਰੋ"
         }
       },
       "fairUse": {
-        "title": "Fair Use",
-        "description": "Use the platform fairly and as intended. Respect usage limits and don't abuse our services.",
+        "title": "ਨਿਰਪੱਖ ਵਰਤੋਂ",
+        "description": "ਪਲੇਟਫਾਰਮ ਨੂੰ ਨਿਰਪੱਖ ਅਤੇ ਨਿਰਧਾਰਤ ਤਰੀਕੇ ਨਾਲ ਵਰਤੋ। ਵਰਤੋਂ ਸੀਮਾਵਾਂ ਦਾ ਸਤਿਕਾਰ ਕਰੋ ਅਤੇ ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਦੀ ਦੁਰਵਰਤੋਂ ਨਾ ਕਰੋ।",
         "examples": {
-          "title": "Examples:",
-          "item1": "Stay within your plan's usage limits",
-          "item2": "Don't use the platform for unauthorized commercial purposes",
-          "item3": "Don't circumvent platform restrictions"
+          "title": "ਉਦਾਹਰਨਾਂ:",
+          "item1": "ਆਪਣੀ ਯੋਜਨਾ ਦੀਆਂ ਵਰਤੋਂ ਸੀਮਾਵਾਂ ਵਿੱਚ ਰਹੋ",
+          "item2": "ਅਣਅਧਿਕਾਰਤ ਵਪਾਰਕ ਉਦੇਸ਼ਾਂ ਲਈ ਪਲੇਟਫਾਰਮ ਦੀ ਵਰਤੋਂ ਨਾ ਕਰੋ",
+          "item3": "ਪਲੇਟਫਾਰਮ ਦੀਆਂ ਪਾਬੰਦੀਆਂ ਨੂੰ ਟਾਲਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਨਾ ਕਰੋ"
         }
       }
     },
     "enforcement": {
-      "title": "Enforcement",
-      "description": "Violations of these rules may result in content removal, account warnings, temporary suspension, or permanent ban depending on the severity and frequency of violations. We review all reports and take appropriate action.",
+      "title": "ਲਾਗੂ ਕਰਨਾ",
+      "description": "ਇਹਨਾਂ ਨਿਯਮਾਂ ਦੀ ਉਲੰਘਣਾ ਦੇ ਨਤੀਜੇ ਵਜੋਂ ਸਮੱਗਰੀ ਹਟਾਉਣਾ, ਖਾਤਾ ਚੇਤਾਵਨੀ, ਅਸਥਾਈ ਮੁਅੱਤਲੀ, ਜਾਂ ਸਥਾਈ ਪਾਬੰਦੀ ਹੋ ਸਕਦੀ ਹੈ ਜੋ ਉਲੰਘਣਾ ਦੀ ਗੰਭੀਰਤਾ ਅਤੇ ਬਾਰੰਬਾਰਤਾ 'ਤੇ ਨਿਰਭਰ ਕਰਦੀ ਹੈ। ਅਸੀਂ ਸਾਰੀਆਂ ਰਿਪੋਰਟਾਂ ਦੀ ਸਮੀਖਿਆ ਕਰਦੇ ਹਾਂ ਅਤੇ ਢੁਕਵੀਂ ਕਾਰਵਾਈ ਕਰਦੇ ਹਾਂ।",
       "warning": {
-        "title": "Warning",
-        "subtitle": "First minor violation"
+        "title": "ਚੇਤਾਵਨੀ",
+        "subtitle": "ਪਹਿਲੀ ਛੋਟੀ ਉਲੰਘਣਾ"
       },
       "suspension": {
-        "title": "Suspension",
-        "subtitle": "Repeated or serious violations"
+        "title": "ਮੁਅੱਤਲੀ",
+        "subtitle": "ਵਾਰ-ਵਾਰ ਜਾਂ ਗੰਭੀਰ ਉਲੰਘਣਾਵਾਂ"
       },
       "ban": {
         "title": "Ban",
-        "subtitle": "Severe or persistent violations"
+        "subtitle": "ਬਹੁਤ ਗੰਭੀਰ ਜਾਂ ਲਗਾਤਾਰ ਉਲੰਘਣਾਵਾਂ"
       }
     },
     "report": {
-      "title": "See Something Wrong?",
-      "description": "If you encounter content or behavior that violates our platform rules, please report it so we can take action.",
-      "button": "Report Abuse"
+      "title": "ਕੁਝ ਗ਼ਲਤ ਦੇਖਿਆ?",
+      "description": "ਜੇਕਰ ਤੁਹਾਨੂੰ ਅਜਿਹੀ ਸਮੱਗਰੀ ਜਾਂ ਵਿਹਾਰ ਮਿਲਦਾ ਹੈ ਜੋ ਸਾਡੇ ਪਲੇਟਫਾਰਮ ਦੇ ਨਿਯमਾਂ ਦੀ ਉਲੰਘਣਾ ਕਰਦਾ ਹੈ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਰਿਪੋਰਟ ਕਰੋ ਤਾਂ ਜੋ ਅਸੀਂ ਕਾਰਵਾਈ ਕਰ ਸਕੀਏ।",
+      "button": "ਦੁਰਵਰਤੋਂ ਦੀ ਰਿਪੋਰਟ ਕਰੋ"
     }
+  },
+  "signupPage": {
+    "passwordsDoNotMatch": "ਪਾਸਵਰਡ ਮੇਲ ਨਹੀਂ ਖਾਂਦੇ",
+    "passwordTooShort": "ਪਾਸਵਰਡ ਘੱਟੋ-ਘੱਟ 6 ਅੱਖਰਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
+    "emailExists": "ਇਸ ਈਮੇਲ ਨਾਲ ਪਹਿਲਾਂ ਹੀ ਖਾਤਾ ਮੌਜੂਦ ਹੈ",
+    "selectAvatar": "ਕਿਰਪਾ ਕਰਕੇ ਅਵਤਾਰ ਰੰਗ ਚੁਣੋ",
+    "selectRole": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਭੂਮਿਕਾ ਚੁਣੋ",
+    "roles": [
+      "ਸੰਸਥਾਪਕ / ਉੱਦਮੀ",
+      "ਡਿਜ਼ਾਈਨਰ",
+      "ਡਿਵੈਲਪਰ",
+      "ਮਾਰਕੀਟਰ",
+      "ਉਤਪਾਦ ਮੈਨੇਜਰ",
+      "ਹੋਰ"
+    ]
+  },
+  "docsSearchModal": {
+    "noResults": "ਕੋਈ ਨਤੀਜੇ ਨਹੀਂ ਮਿਲੇ",
+    "tryAgain": "ਕੁਝ ਹੋਰ ਖੋਜਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
+    "navigate": "ਨੈਵੀਗੇਟ ਕਰੋ",
+    "select": "ਚੁਣੋ",
+    "close": "ਬੰਦ ਕਰੋ",
+    "searchPlaceholder": "ਦਸਤਾਵੇਜ਼ ਖੋਜੋ...",
+    "sections": {
+      "gettingStarted": "ਸ਼ੁਰੂਆਤ ਕਰੋ",
+      "trustSafety": "ਭਰੋਸਾ ਅਤੇ ਸੁਰੱਖਿਆ",
+      "legal": "ਕਾਨੂੰਨੀ",
+      "security": "ਸੁਰੱਖਿਆ",
+      "tutorials": "ਟਿਊਟੋਰੀਅਲ",
+      "teamsEnterprise": "ਟੀਮਾਂ ਅਤੇ ਐਂਟਰਪ੍ਰਾਈਜ਼",
+      "changelog": "ਬਦਲਾਅ ਲੌਗ"
+    },
+    "items": {
+      "introduction": "ਜਾਣ-ਪਛਾਣ",
+      "quickstartGuides": "ਤੁਰੰਤ ਸ਼ੁਰੂਆਤ ਗਾਈਡ",
+      "createWithAi": "AI ਨਾਲ ਬਣਾਓ",
+      "buildFromScratch": "ਸ਼ੁਰੂ ਤੋਂ ਬਣਾਓ",
+      "importFromGithub": "GitHub ਤੋਂ ਇੰਪੋਰਟ ਕਰੋ",
+      "contentPolicy": "ਸਮੱਗਰੀ ਨੀਤੀ",
+      "communityGuidelines": "ਭਾਈਚਾਰਾ ਦਿਸ਼ਾ-ਨਿਰਦੇਸ਼",
+      "termsOfService": "ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ",
+      "privacyPolicy": "ਗੋਪਨੀਯਤਾ ਨੀਤੀ",
+      "cookiePolicy": "ਕੂਕੀ ਨੀਤੀ",
+      "securityOverview": "ਸੁਰੱਖਿਆ ਸੰਖੇਪ",
+      "dataProtection": "ਡਾਟਾ ਸੁਰੱਖਿਆ",
+      "vulnerabilityDisclosure": "ਕਮਜ਼ੋਰੀ ਖੁਲਾਸਾ",
+      "buildingFirstApp": "ਆਪਣੀ ਪਹਿਲੀ ਐਪ ਬਣਾਉਣਾ",
+      "workingWithApis": "APIs ਨਾਲ ਕੰਮ ਕਰਨਾ",
+      "databaseIntegration": "ਡੇਟਾਬੇਸ ਇੰਟੀਗ੍ਰੇਸ਼ਨ",
+      "authentication": "ਪ੍ਰਮਾਣੀਕਰਨ",
+      "teamManagement": "ਟੀਮ ਪ੍ਰਬੰਧਨ",
+      "ssoSetup": "SSO ਸੈੱਟਅੱਪ",
+      "enterpriseFeatures": "ਐਂਟਰਪ੍ਰਾਈਜ਼ ਫੀਚਰਸ",
+      "latestUpdates": "ਤਾਜ਼ਾ ਅੱਪਡੇਟ"
+    }
+  },
+  "affiliatesPage": {
+    "badge": "ਐਫੀਲੀਏਟ ਪ੍ਰੋਗਰਾਮ",
+    "title": "AppNode ਸਾਂਝਾ ਕਰਕੇ ਪੈਸੇ ਕਮਾਓ",
+    "subtitle": "ਸਾਡੇ ਐਫੀਲੀਏਟ ਪ੍ਰੋਗਰਾਮ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ ਅਤੇ ਹਰ ਰੈਫਰ ਕੀਤੇ ਗਾਹਕ ਲਈ 40% ਤੱਕ ਆਵਰਤੀ ਕਮਿਸ਼ਨ ਕਮਾਓ।",
+    "emailPlaceholder": "ਆਪਣੀ ਈਮੇਲ ਦਾਖਲ ਕਰੋ",
+    "joinButton": "ਹੁਣੇ ਸ਼ਾਮਲ ਹੋਵੋ",
+    "alertMessage": "ਅਰਜ਼ੀ ਜਮ੍ਹਾਂ ਹੋ ਗਈ! ਅਗਲੇ ਕਦਮਾਂ ਲਈ ਆਪਣੀ ਈਮੇਲ ਚੈੱਕ ਕਰੋ।",
+    "benefits": {
+      "title": "ਸਾਡੇ ਪ੍ਰੋਗਰਾਮ ਵਿੱਚ ਕਿਉਂ ਸ਼ਾਮਲ ਹੋਵੋ?",
+      "items": [
+        {
+          "title": "30% ਕਮਿਸ਼ਨ",
+          "description": "ਤੁਹਾਡੇ ਹਰ ਰੈਫ਼ਰ ਕੀਤੇ ਗਾਹਕ 'ਤੇ ਪਹਿਲੇ 12 ਮਹੀਨਿਆਂ ਲਈ 30% ਆਵਰਤੀ ਕਮਿਸ਼ਨ ਕਮਾਓ।"
+        },
+        {
+          "title": "90-ਦਿਨ ਕੂਕੀ",
+          "description": "ਵਧੀ ਕੂਕੀ ਵਿੰਡੋ ਮਤਲਬ ਤੁਹਾਨੂੰ ਕ੍ਰੈਡਿਟ ਮਿਲਦਾ ਹੈ ਭਾਵੇਂ ਉਹ ਬਾਅਦ ਵਿੱਚ ਸਾਈਨ ਅੱਪ ਕਰਨ।"
+        },
+        {
+          "title": "ਰੀਅਲ-ਟਾਈਮ ਡੈਸ਼ਬੋਰਡ",
+          "description": "ਸਾਡੇ ਐਫੀਲੀਏਟ ਡੈਸ਼ਬੋਰਡ ਨਾਲ ਕਲਿੱਕ, ਕਨਵਰਜ਼ਨ, ਅਤੇ ਕਮਾਈ ਰੀਅਲ-ਟਾਈਮ ਵਿੱਚ ਟ੍ਰੈਕ ਕਰੋ।"
+        },
+        {
+          "title": "ਮਾਸਿਕ ਭੁਗਤਾਨ",
+          "description": "ਹਰ ਮਹੀਨੇ PayPal ਜਾਂ ਬੈਂਕ ਟ੍ਰਾਂਸਫ਼ਰ ਰਾਹੀਂ ਭੁਗਤਾਨ ਪ੍ਰਾਪਤ ਕਰੋ। $50 ਘੱਟੋ-ਘੱਟ ਸੀਮਾ।"
+        }
+      ]
+    },
+    "tiers": {
+      "title": "ਕਮਿਸ਼ਨ ਪੱਧਰ",
+      "subtitle": "ਜਿੰਨਾ ਜ਼ਿਆਦਾ ਰੈਫਰ ਕਰੋਗੇ, ਉੰਨਾ ਜ਼ਿਆਦਾ ਕਮਾਓਗੇ। ਜਿਵੇਂ-ਜਿਵੇਂ ਤੁਸੀਂ ਵਧਦੇ ਹੋ, ਉੱਚ ਕਮਿਸ਼ਨ ਦਰਾਂ ਅਨਲੌਕ ਕਰੋ।",
+      "referralsPerMonth": "ਰੈਫਰਲ/ਮਹੀਨਾ",
+      "recurringCommission": "ਆਵਰਤੀ ਕਮਿਸ਼ਨ",
+      "items": [
+        {
+          "name": "ਸਟਾਰਟਰ",
+          "perks": [
+            "ਬੁਨਿਆਦੀ ਡੈਸ਼ਬੋਰਡ",
+            "ਈਮੇਲ ਸਹਾਇਤਾ",
+            "ਮਿਆਰੀ ਲਿੰਕ"
+          ]
+        },
+        {
+          "name": "ਪ੍ਰੋ",
+          "perks": [
+            "ਐਡਵਾਂਸਡ ਵਿਸ਼ਲੇਸ਼ਣ",
+            "ਤਰਜੀਹੀ ਸਹਾਇਤਾ",
+            "ਕਸਟਮ ਲਿੰਕ",
+            "ਪ੍ਰਮੋਸ਼ਨਲ ਸਮੱਗਰੀ"
+          ]
+        },
+        {
+          "name": "ਐਲੀਟ",
+          "perks": [
+            "ਸਮਰਪਿਤ ਮੈਨੇਜਰ",
+            "ਸਹਿ-ਮਾਰਕੀਟਿੰਗ",
+            "ਅਰਲੀ ਐਕਸੈਸ",
+            "ਕਸਟਮ ਮੁਹਿੰਮਾਂ"
+          ]
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "ਇਹ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ",
+      "steps": [
+        {
+          "title": "1. ਸਾਈਨ ਅੱਪ ਕਰੋ",
+          "description": "ਆਪਣਾ ਮੁਫ਼ਤ ਐਫੀਲੀਏਟ ਖਾਤਾ ਬਣਾਓ ਅਤੇ ਆਪਣਾ ਵਿਲੱਖਣ ਰੈਫ਼ਰਲ ਲਿੰਕ ਪ੍ਰਾਪਤ ਕਰੋ।"
+        },
+        {
+          "title": "2. ਸਾਂਝਾ ਕਰੋ",
+          "description": "ਆਪਣਾ ਲਿੰਕ ਆਪਣੇ ਦਰਸ਼ਕਾਂ, ਫੌਲੋਅਰਜ਼, ਜਾਂ ਭਾਈਚਾਰੇ ਨਾਲ ਸਾਂਝਾ ਕਰੋ।"
+        },
+        {
+          "title": "3. ਕਮਾਓ",
+          "description": "ਹਰ ਭੁਗਤਾਨ ਕਰਨ ਵਾਲੇ ਗਾਹਕ ਲਈ ਹਰ ਮਹੀਨੇ ਆਵਰਤੀ ਕਮਿਸ਼ਨ ਕਮਾਓ।"
+        }
+      ]
+    },
+    "stats": {
+      "title": "ਐਫੀਲੀਏਟ ਸਫਲਤਾ",
+      "paidToAffiliates": "ਐਫੀਲੀਏਟਸ ਨੂੰ ਭੁਗਤਾਨ",
+      "activeAffiliates": "ਸਰਗਰਮ ਐਫੀਲੀਏਟਸ",
+      "avgMonthlyEarnings": "ਔਸਤ ਮਹੀਨਾਵਾਰ ਕਮਾਈ",
+      "avgPayoutTime": "ਔਸਤ ਭੁਗਤਾਨ ਸਮਾਂ"
+    }
+  },
+  "connectionsPage": {
+    "badge": "ਇੰਟੀਗ੍ਰੇਸ਼ਨਾਂ",
+    "title": "ਕਨੈਕਸ਼ਨ ਅਤੇ ਇੰਟੀਗ੍ਰੇਸ਼ਨਾਂ",
+    "subtitle": "ਸ਼ਕਤੀਸ਼ਾਲੀ ਤੀਜੀ-ਧਿਰ ਸੇਵਾਵਾਂ ਨਾਲ ਜੁੜ ਕੇ ਆਪਣੀਆਂ ਐਪਸ ਨੂੰ ਸੁਪਰਚਾਰਜ ਕਰੋ",
+    "comingSoon": "ਜਲਦੀ ਆ ਰਿਹਾ ਹੈ",
+    "requestTitle": "ਕੀ ਵੱਖਰੀ ਇੰਟੀਗ੍ਰੇਸ਼ਨ ਚਾਹੀਦੀ ਹੈ?",
+    "requestDescription": "ਸਾਨੂੰ ਦੱਸੋ ਕਿ ਤੁਸੀਂ AppNode ਨਾਲ ਕਿਹੜੀਆਂ ਸੇਵਾਵਾਂ ਜੋੜਨਾ ਚਾਹੁੰਦੇ ਹੋ",
+    "requestButton": "ਇੰਟੀਗ੍ਰੇਸ਼ਨ ਦੀ ਬੇਨਤੀ ਕਰੋ",
+    "categories": {
+      "all": "ਸਭ",
+      "database": "ਡੇਟਾਬੇਸ",
+      "payments": "ਭੁਗਤਾਨ",
+      "ai": "AI",
+      "hosting": "ਹੋਸਟਿੰਗ",
+      "development": "ਡਿਵੈਲਪਮੈਂਟ",
+      "communication": "ਸੰਚਾਰ",
+      "authentication": "ਪ੍ਰਮਾਣੀਕਰਨ",
+      "search": "ਖੋਜ",
+      "ecommerce": "ਈ-ਕਾਮਰਸ",
+      "productivity": "ਉਤਪਾਦਕਤਾ"
+    },
+    "connections": [
+      {
+        "name": "Supabase",
+        "description": "PostgreSQL ਡੇਟਾਬੇਸ ਨਾਲ ਓਪਨ ਸੋਰਸ Firebase ਵਿਕਲਪ"
+      },
+      {
+        "name": "Stripe",
+        "description": "ਭੁਗਤਾਨ ਪ੍ਰੋਸੈਸਿੰਗ ਅਤੇ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਪ੍ਰਬੰਧਨ"
+      },
+      {
+        "name": "OpenAI",
+        "description": "ਆਪਣੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਵਿੱਚ AI ਸਮਰੱਥਾਵਾਂ ਜੋੜੋ"
+      },
+      {
+        "name": "Vercel",
+        "description": "ਆਪਣੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੂੰ ਗਲੋਬਲ ਪੱਧਰ 'ਤੇ ਡਿਪਲੌਇ ਅਤੇ ਹੋਸਟ ਕਰੋ"
+      },
+      {
+        "name": "GitHub",
+        "description": "ਵਰਜ਼ਨ ਕੰਟਰੋਲ ਅਤੇ ਕੋਡ ਸਹਿਯੋਗ"
+      },
+      {
+        "name": "Resend",
+        "description": "ਡਿਵੈਲਪਰਾਂ ਲਈ ਈਮੇਲ API"
+      },
+      {
+        "name": "Cloudflare",
+        "description": "CDN, ਸੁਰੱਖਿਆ, ਅਤੇ ਪ੍ਰਦਰਸ਼ਨ ਅਨੁਕੂਲਨ"
+      },
+      {
+        "name": "Twilio",
+        "description": "SMS, ਵੌਇਸ, ਅਤੇ ਮੈਸੇਜਿੰਗ APIs"
+      },
+      {
+        "name": "Auth0",
+        "description": "ਪ੍ਰਮਾਣੀਕਰਨ ਅਤੇ ਅਧਿਕਾਰ ਪਲੇਟਫਾਰਮ"
+      },
+      {
+        "name": "Algolia",
+        "description": "ਖੋਜ ਅਤੇ ਖੋਜ ਪਲੇਟਫਾਰਮ"
+      },
+      {
+        "name": "Shopify",
+        "description": "ਈ-ਕਾਮਰਸ ਪਲੇਟਫਾਰਮ ਇੰਟੀਗ੍ਰੇਸ਼ਨ"
+      },
+      {
+        "name": "Notion",
+        "description": "Notion ਡੇਟਾਬੇਸ ਅਤੇ ਪੇਜਾਂ ਨਾਲ ਜੋੜੋ"
+      }
+    ]
+  },
+  "securityReportPage": {
+    "badge": "ਸੁਰੱਖਿਆ",
+    "title": "ਸੁਰੱਖਿਆ ਚਿੰਤਾਵਾਂ ਦੀ ਰਿਪੋਰਟ ਕਰੋ",
+    "subtitle": "ਸੁਰੱਖਿਆ ਕਮਜ਼ੋਰੀ ਮਿਲੀ? ਅਸੀਂ ਜ਼ਿੰਮੇਵਾਰ ਖੁਲਾਸੇ ਦੀ ਕਦਰ ਕਰਦੇ ਹਾਂ ਅਤੇ ਮੁੱਦੇ ਨੂੰ ਹੱਲ ਕਰਨ ਲਈ ਤੁਹਾਡੇ ਨਾਲ ਕੰਮ ਕਰਾਂਗੇ।",
+    "bugBounty": {
+      "title": "ਬੱਗ ਬਾਊਂਟੀ ਪ੍ਰੋਗਰਾਮ",
+      "description": "ਅਸੀਂ ਵੈਧ ਸੁਰੱਖਿਆ ਰਿਪੋਰਟਾਂ ਲਈ ਇਨਾਮ ਦਿੰਦੇ ਹਾਂ। ਬਾਊਂਟੀ ਰਕਮ ਗੰਭੀਰਤਾ ਅਤੇ ਪ੍ਰਭਾਵ 'ਤੇ ਨਿਰਭਰ ਕਰਦੀ ਹੈ। ਗੰਭੀਰ ਕਮਜ਼ੋਰੀਆਂ $5,000 ਤੱਕ ਦੇ ਇਨਾਮ ਲਈ ਯੋਗ ਹੋ ਸਕਦੀਆਂ ਹਨ।"
+    },
+    "severityLabel": "ਗੰਭੀਰਤਾ ਦਾ ਪੱਧਰ",
+    "severity": {
+      "critical": {
+        "label": "ਨਾਜ਼ੁਕ",
+        "description": "ਪੂਰਾ ਸਿਸਟਮ ਸਮਝੌਤਾ, ਡਾਟਾ ਉਲੰਘਣਾ"
+      },
+      "high": {
+        "label": "ਉੱਚ",
+        "description": "ਮਹੱਤਵਪੂਰਨ ਸੁਰੱਖਿਆ ਪ੍ਰਭਾਵ"
+      },
+      "medium": {
+        "label": "ਮੱਧਮ",
+        "description": "ਸੀਮਤ ਸੁਰੱਖਿਆ ਪ੍ਰਭਾਵ"
+      },
+      "low": {
+        "label": "ਘੱਟ",
+        "description": "ਘੱਟੋ-ਘੱਟ ਸੁਰੱਖਿਆ ਪ੍ਰਭਾਵ"
+      }
+    },
+    "descriptionLabel": "ਕਮਜ਼ੋਰੀ ਦਾ ਵੇਰਵਾ",
+    "descriptionHint": "ਕਮਜ਼ੋਰੀ ਦਾ ਵਿਸਤਾਰ ਨਾਲ ਵਰਣਨ ਕਰੋ। ਪ੍ਰਭਾਵਿਤ ਕੰਪੋਨੈਂਟ ਜਾਂ ਫੀਚਰ ਸ਼ਾਮਲ ਕਰੋ।",
+    "descriptionPlaceholder": "ਸੁਰੱਖਿਆ ਕਮਜ਼ੋਰੀ ਦਾ ਵਰਣਨ ਕਰੋ...",
+    "stepsLabel": "ਦੁਬਾਰਾ ਪੈਦਾ ਕਰਨ ਦੇ ਕਦਮ",
+    "stepsHint": "ਕਮਜ਼ੋਰੀ ਨੂੰ ਦੁਬਾਰਾ ਪੈਦਾ ਕਰਨ ਲਈ ਸਪੱਸ਼ਟ ਕਦਮ ਦਿਓ।",
+    "stepsPlaceholder": "1. ਇੱਥੇ ਜਾਓ...\n2. ਇਸ 'ਤੇ ਕਲਿੱਕ ਕਰੋ...\n3. ਦੇਖੋ ਕਿ...",
+    "emailLabel": "ਤੁਹਾਡੀ ਈਮੇਲ",
+    "emailHint": "ਫਾਲੋ ਅੱਪ ਅਤੇ ਖੁਲਾਸੇ ਦੇ ਤਾਲਮੇਲ ਲਈ ਲੋੜੀਂਦੀ ਹੈ।",
+    "emailPlaceholder": "security-researcher@example.com",
+    "submitButton": "ਸੁਰੱਖਿਆ ਰਿਪੋਰਟ ਜਮ੍ਹਾਂ ਕਰੋ",
+    "submitted": {
+      "title": "ਰਿਪੋਰਟ ਪ੍ਰਾਪਤ ਹੋਈ",
+      "description": "ਇਸ ਸੁਰੱਖਿਆ ਚਿੰਤਾ ਨੂੰ ਜ਼ਿੰਮੇਵਾਰੀ ਨਾਲ ਖੁਲਾਸਾ ਕਰਨ ਲਈ ਧੰਨਵਾਦ। ਸਾਡੀ ਸੁਰੱਖਿਆ ਟੀਮ ਨੂੰ ਸੂਚਿਤ ਕੀਤਾ ਗਿਆ ਹੈ ਅਤੇ ਤੁਹਾਡੀ ਰਿਪੋਰਟ ਦੀ ਜਲਦੀ ਸਮੀਖਿਆ ਕਰੇਗੀ।",
+      "responseTime": "ਅਨੁਮਾਨਿਤ ਜਵਾਬ ਸਮਾਂ:",
+      "critical": "ਨਾਜ਼ੁਕ: 24 ਘੰਟਿਆਂ ਦੇ ਅੰਦਰ",
+      "high": "ਉੱਚ: 48 ਘੰਟਿਆਂ ਦੇ ਅੰਦਰ",
+      "mediumLow": "ਮੱਧਮ/ਘੱਟ: 5 ਕਾਰੋਬਾਰੀ ਦਿਨਾਂ ਦੇ ਅੰਦਰ",
+      "returnHome": "ਘਰ ਵਾਪਸ ਜਾਓ"
+    },
+    "guidelines": {
+      "title": "ਜ਼ਿੰਮੇਵਾਰ ਖੁਲਾਸਾ ਦਿਸ਼ਾ-ਨਿਰਦੇਸ਼",
+      "items": [
+        "ਦੂਜੇ ਯੂਜ਼ਰਾਂ ਦੇ ਡਾਟਾ ਨੂੰ ਐਕਸੈਸ, ਸੋਧ, ਜਾਂ ਡਿਲੀਟ ਨਾ ਕਰੋ।",
+        "ਸੇਵਾ ਤੋਂ ਇਨਕਾਰ ਹਮਲੇ ਨਾ ਕਰੋ ਜਾਂ ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਨੂੰ ਖ਼ਰਾਬ ਨਾ ਕਰੋ।",
+        "ਜਨਤਕ ਖੁਲਾਸੇ ਤੋਂ ਪਹਿਲਾਂ ਸਾਨੂੰ ਸਮੱਸਿਆ ਠੀਕ ਕਰਨ ਲਈ ਵਾਜਬ ਸਮਾਂ ਦਿਓ।",
+        "ਸਿਰਫ਼ ਉਹ ਖਾਤੇ ਟੈਸਟ ਕਰੋ ਜੋ ਤੁਹਾਡੇ ਹਨ ਜਾਂ ਜਿਨ੍ਹਾਂ ਤੱਕ ਪਹੁੰਚ ਦੀ ਤੁਹਾਨੂੰ ਇਜਾਜ਼ਤ ਹੈ।"
+      ]
+    },
+    "contactNote": "ਜ਼ਰੂਰੀ ਸੁਰੱਖਿਆ ਮਾਮਲਿਆਂ ਲਈ, ਤੁਸੀਂ ਸਾਡੇ ਨਾਲ ਇੱਥੇ ਵੀ ਸੰਪਰਕ ਕਰ ਸਕਦੇ ਹੋ"
+  },
+  "learnPublishPage": {
+    "badge": "ਇਹ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ",
+    "title": "AppNode ਨਾਲ ਬਣਾਓ ਅਤੇ ਪ੍ਰਕਾਸ਼ਿਤ ਕਰੋ",
+    "subtitle": "AppNode ਦੇ AI-ਸੰਚਾਲਿਤ ਕੋਡ ਜਨਰੇਟਰ ਨਾਲ ਐਪਲੀਕੇਸ਼ਨਾਂ ਬਣਾਉਣਾ ਅਤੇ ਡਿਪਲੌਇ ਕਰਨਾ ਸਿੱਖੋ। ਵਿਚਾਰ ਤੋਂ ਲਾਈਵ ਵੈੱਬਸਾਈਟ ਮਿੰਟਾਂ ਵਿੱਚ, ਮਹੀਨਿਆਂ ਵਿੱਚ ਨਹੀਂ।",
+    "steps": {
+      "title": "ਚਾਰ ਸਧਾਰਨ ਕਦਮ",
+      "subtitle": "ਆਪਣੀ ਐਪ ਬਣਾਉਣਾ ਅਤੇ ਪ੍ਰਕਾਸ਼ਿਤ ਕਰਨਾ ਪਹਿਲਾਂ ਕਦੇ ਇੰਨਾ ਆਸਾਨ ਨਹੀਂ ਸੀ। ਵਿਚਾਰ ਤੋਂ ਲਾਈਵ ਐਪਲੀਕੇਸ਼ਨ ਤੱਕ ਜਾਣ ਲਈ ਇਹ ਕਦਮ ਫੌਲੋ ਕਰੋ।",
+      "items": [
+        {
+          "title": "ਆਪਣੀ ਐਪ ਦੱਸੋ",
+          "description": "AppNode ਨੂੰ ਦੱਸੋ ਕਿ ਤੁਸੀਂ ਕੀ ਬਣਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ। ਆਪਣੀ ਐਪ ਦੇ ਫੀਚਰਸ, ਡਿਜ਼ਾਈਨ, ਅਤੇ ਕਾਰਜਕੁਸ਼ਲਤਾ ਦੱਸਣ ਲਈ ਕੁਦਰਤੀ ਭਾਸ਼ਾ ਵਰਤੋ। ਜਿੰਨਾ ਖ਼ਾਸ, ਉੱਨਾ ਵਧੀਆ ਨਤੀਜਾ।"
+        },
+        {
+          "title": "ਬਣਦੇ ਦੇਖੋ",
+          "description": "AppNode ਦੀ AI ਤੁਹਾਡੀ ਐਪਲੀਕੇਸ਼ਨ ਰੀਅਲ-ਟਾਈਮ ਵਿੱਚ ਜਨਰੇਟ ਕਰਦੀ ਹੈ। ਤੁਸੀਂ ਕੋਡ ਲਿਖੇ ਜਾਂਦੇ ਅਤੇ ਤੁਰੰਤ ਪ੍ਰੀਵਿਊ ਨਾਲ ਐਪ ਬਣਦੀ ਦੇਖੋਗੇ। ਬੱਸ ਕਹਿ ਕੇ ਬਦਲਾਅ ਕਰੋ।"
+        },
+        {
+          "title": "ਪ੍ਰੀਵਿਊ ਅਤੇ ਸੁਧਾਰ",
+          "description": "ਬ੍ਰਾਊਜ਼ਰ ਵਿੱਚ ਸਿੱਧੇ ਆਪਣੀ ਐਪ ਟੈਸਟ ਕਰੋ। ਡੈਸਕਟਾਪ, ਟੈਬਲੈਟ, ਅਤੇ ਮੋਬਾਈਲ 'ਤੇ ਦੇਖੋ। ਬਦਲਾਅ ਮੰਗੋ, ਫੀਚਰ ਜੋੜੋ, ਜਾਂ ਸਟਾਈਲ ਅਡਜਸਟ ਕਰੋ ਜਦੋਂ ਤੱਕ ਸੰਪੂਰਨ ਨਾ ਹੋਵੇ।"
+        },
+        {
+          "title": "ਤੁਰੰਤ ਡਿਪਲੌਇ",
+          "description": "ਜਦੋਂ ਤੁਸੀਂ ਤਿਆਰ ਹੋ, ਇੱਕ ਕਲਿੱਕ ਨਾਲ ਆਪਣੀ ਐਪ ਪ੍ਰਕਾਸ਼ਿਤ ਕਰੋ। ਕਸਟਮ ਡੋਮੇਨ, SSL ਸਰਟੀਫਿਕੇਟ, ਅਤੇ ਗਲੋਬਲ CDN ਆਪਣੇ ਆਪ ਮਿਲ ਜਾਂਦੇ ਹਨ। ਤੁਹਾਡੀ ਐਪ ਸਕਿੰਟਾਂ ਵਿੱਚ ਲਾਈਵ ਹੈ।"
+        }
+      ]
+    },
+    "features": {
+      "title": "ਡਿਪਲੌਇਮੈਂਟ ਫੀਚਰਸ",
+      "subtitle": "ਪੇਸ਼ੇਵਰ ਐਪਲੀਕੇਸ਼ਨਾਂ ਪ੍ਰਕਾਸ਼ਿਤ ਕਰਨ ਲਈ ਲੋੜੀਂਦੀ ਹਰ ਚੀਜ਼ ਬਾਕਸ ਵਿੱਚ ਸ਼ਾਮਲ ਹੈ।",
+      "items": [
+        {
+          "title": "ਇੱਕ-ਕਲਿੱਕ ਡਿਪਲੌਇਮੈਂਟ",
+          "description": "ਕੋਈ ਗੁੰਝਲਦਾਰ ਸੈੱਟਅੱਪ ਜਾਂ ਕੌਂਫਿਗਰੇਸ਼ਨ ਨਹੀਂ। ਬੱਸ ਡਿਪਲੌਇ 'ਤੇ ਕਲਿੱਕ ਕਰੋ ਅਤੇ ਤੁਹਾਡੀ ਐਪ ਲਾਈਵ ਹੈ।"
+        },
+        {
+          "title": "ਕਸਟਮ ਡੋਮੇਨ",
+          "description": "ਆਪਣਾ ਡੋਮੇਨ ਜੋੜੋ ਜਾਂ ਤੁਰੰਤ ਪ੍ਰਕਾਸ਼ਨ ਲਈ ਸਾਡਾ ਮੁਫ਼ਤ ਸਬਡੋਮੇਨ ਵਰਤੋ।"
+        },
+        {
+          "title": "SSL ਸਰਟੀਫਿਕੇਟ",
+          "description": "ਤੁਹਾਡੀਆਂ ਸਾਰੀਆਂ ਐਪਸ ਲਈ ਆਟੋਮੈਟਿਕ HTTPS। ਸੁਰੱਖਿਆ ਮਿਆਰੀ ਹੈ।"
+        },
+        {
+          "title": "ਗਲੋਬਲ CDN",
+          "description": "ਤੁਹਾਡੀ ਐਪ ਤੇਜ਼ ਰਫ਼ਤਾਰ ਲਈ ਦੁਨੀਆ ਭਰ ਦੇ ਐਜ ਲੋਕੇਸ਼ਨਾਂ ਤੋਂ ਸੇਵਾ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।"
+        },
+        {
+          "title": "ਤੁਰੰਤ ਰੋਲਬੈਕ",
+          "description": "ਗ਼ਲਤੀ ਹੋ ਗਈ? ਇੱਕ ਕਲਿੱਕ ਨਾਲ ਕਿਸੇ ਵੀ ਪਿਛਲੇ ਵਰਜ਼ਨ 'ਤੇ ਵਾਪਸ ਜਾਓ।"
+        },
+        {
+          "title": "ਬਿਲਟ-ਇਨ ਵਿਸ਼ਲੇਸ਼ਣ",
+          "description": "ਵਿਜ਼ਿਟਰ, ਪੇਜ ਵਿਊ, ਅਤੇ ਪ੍ਰਦਰਸ਼ਨ ਮੈਟ੍ਰਿਕਸ ਬਾਕਸ ਵਿੱਚੋਂ ਟ੍ਰੈਕ ਕਰੋ।"
+        }
+      ]
+    },
+    "tips": {
+      "title": "ਵਧੀਆ ਨਤੀਜਿਆਂ ਲਈ ਸੁਝਾਅ",
+      "items": [
+        {
+          "bold": "ਖ਼ਾਸ ਬਣੋ:",
+          "text": "ਤੁਸੀਂ ਜੋ ਰੰਗ, ਲੇਆਉਟ, ਅਤੇ ਕਾਰਜਕੁਸ਼ਲਤਾ ਚਾਹੁੰਦੇ ਹੋ ਦੱਸੋ"
+        },
+        {
+          "bold": "ਸਾਦਾ ਸ਼ੁਰੂ ਕਰੋ:",
+          "text": "ਮੁੱਖ ਫੀਚਰਸ ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ, ਫਿਰ ਸਮੇਂ ਨਾਲ ਹੋਰ ਜੋੜੋ"
+        },
+        {
+          "bold": "ਹਵਾਲੇ ਵਰਤੋ:",
+          "text": "ਤੁਹਾਨੂੰ ਪਸੰਦ ਐਪਸ ਜਾਂ ਵੈੱਬਸਾਈਟਾਂ ਦੀਆਂ ਉਦਾਹਰਨਾਂ ਸਾਂਝੀਆਂ ਕਰੋ"
+        },
+        {
+          "bold": "ਸਾਰੇ ਡਿਵਾਈਸਾਂ 'ਤੇ ਟੈਸਟ ਕਰੋ:",
+          "text": "ਡੈਸਕਟਾਪ, ਟੈਬਲੈਟ, ਅਤੇ ਮੋਬਾਈਲ ਵਿਊ ਵੇਖੋ"
+        }
+      ]
+    },
+    "cta": {
+      "title": "ਬਣਾਉਣ ਲਈ ਤਿਆਰ ਹੋ?",
+      "subtitle": "ਅੱਜ ਹੀ ਆਪਣੀ ਐਪਲੀਕੇਸ਼ਨ ਬਣਾਉਣਾ ਸ਼ੁਰੂ ਕਰੋ। ਕੋਡਿੰਗ ਤਜ਼ਰਬੇ ਦੀ ਲੋੜ ਨਹੀਂ।",
+      "startButton": "ਮੁਫ਼ਤ ਬਣਾਉਣਾ ਸ਼ੁਰੂ ਕਰੋ",
+      "docsButton": "ਦਸਤਾਵੇਜ਼ ਵੇਖੋ"
+    }
+  },
+  "blockchainSection": {
+    "badge": "ਮਲਟੀ-ਚੇਨ ਈਕੋਸਿਸਟਮ",
+    "titleLine1": "ਕਿਸੇ ਵੀ ਚੀਜ਼ ਨੂੰ ਬਣਾਓ",
+    "titleLine2": "ਕਿਸੇ ਵੀ ਬਲਾਕਚੇਨ 'ਤੇ",
+    "titleLine3": "ਪਹਿਲਾਂ ਨਾਲੋਂ ਤੇਜ਼",
+    "description": "Love Code ਪੂਰੇ ਆਨ-ਚੇਨ ਈਕੋਸਿਸਟਮ ਨੂੰ ਬਿਨਾਂ ਕਿਸੇ ਰੁਕਾਵਟ ਦੇ ਅਨਲੌਕ ਕਰਦਾ ਹੈ। L1 ਦੈਂਤਾਂ ਤੋਂ ਲੈ ਕੇ ਨਵੀਨਤਮ L2 ਤੱਕ, ਤੁਹਾਨੂੰ ਕੁਝ ਵੀ ਬਣਾਉਣ ਦੀ ਸ਼ਕਤੀ ਮਿਲਦੀ ਹੈ: ਲੈਂਡਿੰਗ ਪੇਜ, ਮੀਮ ਟੋਕਨ ਪ੍ਰੀਸੇਲ, NFT ਡ੍ਰੌਪ, ਡੈਸ਼ਬੋਰਡ, ਪੂਰੀਆਂ Web3 ਐਪਸ, ਜੋ ਵੀ ਤੁਸੀਂ ਸੋਚੋ।",
+    "descriptionHighlight": "ਕੋਈ ਸੀਮਾ ਨਹੀਂ। ਕੋਈ ਜਟਿਲਤਾ ਨਹੀਂ। ਬੱਸ ਸ਼ੁੱਧ ਸਿਰਜਣਾ।",
+    "bottomText": "ਜੇ ਇਹ ਬਲਾਕਚੇਨ 'ਤੇ ਮੌਜੂਦ ਹੈ, ਤਾਂ ਤੁਸੀਂ ਇਸਨੂੰ ਇੱਥੇ ਬਣਾ ਸਕਦੇ ਹੋ —",
+    "bottomHighlight": "ਆਸਾਨ, ਤੇਜ਼, ਅਤੇ ਪੂਰੀ ਤਰ੍ਹਾਂ ਨਵੇਂ ਪੱਧਰ 'ਤੇ।",
+    "ctaButton": "Web3 'ਤੇ ਬਣਾਉਣਾ ਸ਼ੁਰੂ ਕਰੋ",
+    "useCases": [
+      "ਲੈਂਡਿੰਗ ਪੇਜ",
+      "ਟੋਕਨ ਪ੍ਰੀਸੇਲ",
+      "NFT ਡ੍ਰੌਪ",
+      "DeFi ਡੈਸ਼ਬੋਰਡ",
+      "Web3 ਐਪਸ",
+      "DAO ਟੂਲ",
+      "ਸਟੇਕਿੰਗ ਪਲੇਟਫਾਰਮ",
+      "ਮੀਮ ਟੋਕਨ"
+    ],
+    "features": [
+      {
+        "title": "ਬਿਜਲੀ ਤੇਜ਼",
+        "description": "ਕਿਸੇ ਵੀ ਚੇਨ 'ਤੇ ਸਕਿੰਟਾਂ ਵਿੱਚ ਡਿਪਲੌਇ ਕਰੋ, ਘੰਟਿਆਂ ਵਿੱਚ ਨਹੀਂ"
+      },
+      {
+        "title": "ਕੋਈ ਕੋਡ ਨਹੀਂ ਚਾਹੀਦਾ",
+        "description": "ਕੁਦਰਤੀ ਭਾਸ਼ਾ ਨਾਲ ਗੁੰਝਲਦਾਰ dApps ਬਣਾਓ"
+      },
+      {
+        "title": "ਬੈਟਲ ਟੈਸਟਿਡ",
+        "description": "ਸਮਾਰਟ ਕੰਟ੍ਰੈਕਟ ਆਡਿਟ ਕੀਤੇ ਅਤੇ ਉਤਪਾਦਨ-ਯੋਗ"
+      },
+      {
+        "title": "ਮਲਟੀ-ਚੇਨ ਨੇਟਿਵ",
+        "description": "ਇੱਕ ਕੋਡਬੇਸ, ਹਰ ਬਲਾਕਚੇਨ ਸਹਾਇਤਾ"
+      }
+    ]
   }
 }

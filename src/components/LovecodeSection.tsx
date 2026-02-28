@@ -56,6 +56,8 @@ export default function LovecodeSection() {
     ko: '마우스를 움직여 탐색하세요',
     sw: 'Sogeza kipanya chako kuchunguza',
     ta: 'ஆராய உங்கள் சுட்டியை நகர்த்தவும்',
+    hi: 'एक्सप्लोर करने के लिए अपना माउस हिलाएं',
+    hr: 'Pomaknite miš za istraživanje',
     en: 'Move your mouse to explore'
   };
   
