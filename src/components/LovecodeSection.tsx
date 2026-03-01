@@ -58,6 +58,8 @@ export default function LovecodeSection() {
     ta: 'ஆராய உங்கள் சுட்டியை நகர்த்தவும்',
     hi: 'एक्सप्लोर करने के लिए अपना माउस हिलाएं',
     hr: 'Pomaknite miš za istraživanje',
+    bg: 'Преместете мишката, за да разгледате',
+    ro: 'Miscati mouse-ul pentru a explora',
     en: 'Move your mouse to explore'
   };
   
