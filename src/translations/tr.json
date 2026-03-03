@@ -2908,34 +2908,24 @@
       "title": "Yolculuğumuz",
       "subtitle": "Bir fikirden küresel bir platforma.",
       "milestone1": {
-        "year": "Ocak 2023",
-        "title": "Fikir Doğdu",
-        "description": "Yapay zeka destekli geliştirme platformunun ilk konsepti doğdu."
+        "year": "2025",
+        "title": "Kuruluş / Geliştirme Başlangıcı",
+        "description": "AppNode, Ekim 2025'te resmi olarak ciddi çalışmalara başladı (fikirler daha öncesinden olgunlaşıyordu). Canlı kodlamayı AI destekli UI oluşturma ile birleştiren çekirdek AI motorunu inşa ettik. Tanıtımları paylaşmak ve erken bir topluluk oluşturmak için X hesabı oluşturduk."
       },
       "milestone2": {
-        "year": "Nisan 2023",
-        "title": "Özel Beta",
-        "description": "İlk 100 kullanıcı AppNode'u test etmeye başladı."
+        "year": "2026",
+        "title": "Beta Lansmanı & Tohum Yatırımı",
+        "description": "Web uygulamaları için güçlü AI ile özel/genel beta başlatıldı. Ekibi büyütmek ve mobil özellikleri hızlandırmak için tohum yatırımı ($2-5M aralığında) toplandı. Güvenilirliği ve heyecanı artırmak için önemli AI sağlayıcıları ve geliştirici araçlarıyla ortaklık kuruldu."
       },
       "milestone3": {
-        "year": "Eylül 2023",
-        "title": "Genel Lansman",
-        "description": "Dünyaya açıldı. İlk ayda 10.000 kullanıcıya ulaşıldı."
+        "year": "2026",
+        "title": "10.000 Kullanıcı",
+        "description": "Beta'dan sadece birkaç ay sonra 10.000 kullanıcıya ulaşıldı. Erken benimseyenler hızı seviyor – fikirleri dakikalar içinde dağıtılabilir uygulamalara dönüştürme. iOS desteği ve uygulama paylaşma/yayınlama için yerleşik App Store'un ipuçları verilmeye başlandı."
       },
       "milestone4": {
-        "year": "Mart 2024",
-        "title": "1 Milyon Uygulama",
-        "description": "AppNode ile bir milyon uygulama oluşturuldu."
-      },
-      "milestone5": {
-        "year": "Ağustos 2024",
-        "title": "Kurumsal Lansman",
-        "description": "Fortune 500 şirketleri için çözümler başlatıldı."
-      },
-      "milestone6": {
-        "year": "Bugün",
-        "title": "Sürekli İnovasyon",
-        "description": "Geliştirmenin geleceğini inşa etmeye devam ediyoruz."
+        "year": "2026",
+        "title": "Büyümeye Devam Ediyoruz",
+        "description": "Özellikleri genişletiyoruz, topluluğumuzu büyütüyoruz ve en son AI gelişmelerini takip ediyoruz. Yeni sürümler ve yaklaşan özellikler hakkında gerçek zamanlı güncellemeler için X'te bizi takip edin."
       }
     },
     "team": {

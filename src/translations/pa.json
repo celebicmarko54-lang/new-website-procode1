@@ -3906,37 +3906,27 @@
       }
     },
     "journey": {
-      "title": "ਸਾਡੀ ਯਾਤਰਾ",
-      "subtitle": "ਇੱਕ ਵਿਚਾਰ ਤੋਂ ਗਲੋਬਲ ਪਲੇਟਫਾਰਮ ਤੱਕ।",
+      "title": "ਸਾਡਾ ਸਫ਼ਰ",
+      "subtitle": "ਇੱਕ ਵਿਚਾਰ ਤੋਂ ਇੱਕ ਗਲੋਬਲ ਪਲੈਟਫ਼ਾਰਮ ਤੱਕ।",
       "milestone1": {
-        "year": "Jan 2023",
-        "title": "The Idea Is Born",
-        "description": "The first concept of an AI-assisted development platform was born."
+        "year": "2025",
+        "title": "ਸਥਾਪਨਾ / ਵਿਕਾਸ ਦੀ ਸ਼ੁਰੂਆਤ",
+        "description": "AppNode ਨੇ ਅਕਤੂਬਰ 2025 ਵਿੱਚ ਅਧਿਕਾਰਤ ਤੌਰ 'ਤੇ ਗੰਭੀਰ ਕੰਮ ਸ਼ੁਰੂ ਕੀਤਾ (ਵਿਚਾਰ ਪਹਿਲਾਂ ਤੋਂ ਪੱਕ ਰਹੇ ਸਨ)। ਅਸੀਂ ਮੁੱਖ AI ਇੰਜਣ ਬਣਾਇਆ ਜੋ ਲਾਈਵ ਕੋਡਿੰਗ ਨੂੰ AI-ਸੰਚਾਲਿਤ UI ਜੈਨਰੇਸ਼ਨ ਨਾਲ ਜੋੜਦਾ ਹੈ। ਟੀਜ਼ਰ ਸਾਂਝੇ ਕਰਨ ਅਤੇ ਮੁਢਲੀ ਕਮਿਊਨਿਟੀ ਬਣਾਉਣ ਲਈ X ਅਕਾਊਂਟ ਬਣਾਇਆ।"
       },
       "milestone2": {
-        "year": "Apr 2023",
-        "title": "Private Beta",
-        "description": "The first 100 users began testing AppNode."
+        "year": "2026",
+        "title": "ਬੀਟਾ ਲਾਂਚ ਅਤੇ ਸੀਡ ਫੰਡਿੰਗ",
+        "description": "ਵੈੱਬ ਐਪਸ ਲਈ ਸ਼ਕਤੀਸ਼ਾਲੀ AI ਨਾਲ ਪ੍ਰਾਈਵੇਟ/ਪਬਲਿਕ ਬੀਟਾ ਲਾਂਚ ਕੀਤਾ। ਟੀਮ ਵਧਾਉਣ ਅਤੇ ਮੋਬਾਈਲ ਫੀਚਰਾਂ ਨੂੰ ਤੇਜ਼ ਕਰਨ ਲਈ ਸੀਡ ਫੰਡਿੰਗ ($2-5M ਰੇਂਜ) ਇਕੱਠੀ ਕੀਤੀ। ਭਰੋਸੇਯੋਗਤਾ ਅਤੇ ਉਤਸ਼ਾਹ ਵਧਾਉਣ ਲਈ ਮੁੱਖ AI ਪ੍ਰਦਾਤਾਵਾਂ ਅਤੇ ਡੈਵ ਟੂਲਜ਼ ਨਾਲ ਭਾਈਵਾਲੀ ਕੀਤੀ।"
       },
       "milestone3": {
-        "year": "Sep 2023",
-        "title": "Public Launch",
-        "description": "Opened to the world. Reached 10,000 users in the first month."
+        "year": "2026",
+        "title": "10,000 ਉਪਭੋਗਤਾ",
+        "description": "ਬੀਟਾ ਤੋਂ ਬਾਅਦ ਕੁਝ ਹੀ ਮਹੀਨਿਆਂ ਵਿੱਚ 10,000 ਉਪਭੋਗਤਾਵਾਂ ਤੱਕ ਪਹੁੰਚੇ। ਸ਼ੁਰੂਆਤੀ ਅਪਣਾਉਣ ਵਾਲੇ ਤੇਜ਼ੀ ਨੂੰ ਪਸੰਦ ਕਰਦੇ ਹਨ – ਵਿਚਾਰਾਂ ਨੂੰ ਮਿੰਟਾਂ ਵਿੱਚ ਤੈਨਾਤ ਕਰਨ ਯੋਗ ਐਪਸ ਵਿੱਚ ਬਦਲਣਾ। iOS ਸਪੋਰਟ ਅਤੇ ਐਪਸ ਸਾਂਝੇ/ਪ੍ਰਕਾਸ਼ਿਤ ਕਰਨ ਲਈ ਬਿਲਟ-ਇਨ App Store ਦੀ ਝਲਕ ਦੇਣੀ ਸ਼ੁਰੂ ਕੀਤੀ।"
       },
       "milestone4": {
-        "year": "Mar 2024",
-        "title": "1 Million Apps",
-        "description": "One million applications built with AppNode."
-      },
-      "milestone5": {
-        "year": "Aug 2024",
-        "title": "Enterprise Launch",
-        "description": "Solutions launched for Fortune 500 companies."
-      },
-      "milestone6": {
-        "year": "Today",
-        "title": "Continuous Innovation",
-        "description": "We continue to build the future of development."
+        "year": "2026",
+        "title": "ਲਗਾਤਾਰ ਵਧ ਰਹੇ ਹਾਂ",
+        "description": "ਫੀਚਰਾਂ ਦਾ ਵਿਸਤਾਰ ਕਰ ਰਹੇ ਹਾਂ, ਸਾਡੀ ਕਮਿਊਨਿਟੀ ਵਧਾ ਰਹੇ ਹਾਂ, ਅਤੇ ਨਵੀਨਤਮ AI ਤਰੱਕੀਆਂ ਨਾਲ ਅੱਪਡੇਟ ਰਹਿ ਰਹੇ ਹਾਂ। ਨਵੀਆਂ ਰਿਲੀਜ਼ਾਂ ਅਤੇ ਆਉਣ ਵਾਲੇ ਫੀਚਰਾਂ ਬਾਰੇ ਰੀਅਲ-ਟਾਈਮ ਅੱਪਡੇਟ ਲਈ X 'ਤੇ ਸਾਨੂੰ ਫ਼ਾਲੋ ਕਰੋ।"
       }
     },
     "team": {

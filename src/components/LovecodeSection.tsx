@@ -60,6 +60,8 @@ export default function LovecodeSection() {
     hr: 'Pomaknite miš za istraživanje',
     bg: 'Преместете мишката, за да разгледате',
     ro: 'Miscati mouse-ul pentru a explora',
+    el: 'Μετακινήστε το ποντίκι για εξερεύνηση',
+    sr: 'Pomerite miš da istražite',
     en: 'Move your mouse to explore'
   };
   

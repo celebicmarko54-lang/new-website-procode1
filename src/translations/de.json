@@ -2760,34 +2760,24 @@
       "title": "Unsere Reise",
       "subtitle": "Von einer Idee zur globalen Plattform.",
       "milestone1": {
-        "year": "Jan 2023",
-        "title": "Die Idee entsteht",
-        "description": "Das erste Konzept einer KI-gestützten Entwicklungsplattform wurde geboren."
+        "year": "2025",
+        "title": "Gründung / Entwicklungsstart",
+        "description": "AppNode begann im Oktober 2025 offiziell mit der ernsthaften Arbeit (Ideen entstanden schon früher). Wir bauten die zentrale KI-Engine, die Live-Coding mit KI-gesteuerter UI-Generierung verbindet. Wir erstellten einen X-Account, um Teaser zu teilen und eine frühe Community aufzubauen."
       },
       "milestone2": {
-        "year": "Apr 2023",
-        "title": "Private Beta",
-        "description": "Die ersten 100 Benutzer begannen, AppNode zu testen."
+        "year": "2026",
+        "title": "Beta-Start & Seed-Finanzierung",
+        "description": "Private/öffentliche Beta mit leistungsstarker KI für Web-Apps gestartet. Seed-Finanzierung ($2-5M Bereich) eingeworben, um das Team zu vergrößern und mobile Funktionen zu beschleunigen. Partnerschaften mit wichtigen KI-Anbietern und Entwicklertools zur Steigerung der Glaubwürdigkeit und Begeisterung."
       },
       "milestone3": {
-        "year": "Sep 2023",
-        "title": "Öffentlicher Start",
-        "description": "Weltweit geöffnet. Erreichte 10.000 Benutzer im ersten Monat."
+        "year": "2026",
+        "title": "10.000 Nutzer",
+        "description": "10.000 Nutzer in nur wenigen Monaten nach der Beta erreicht. Early Adopters lieben die Geschwindigkeit – Ideen in Minuten in einsatzbereite Apps verwandeln. Begonnen, iOS-Unterstützung und einen integrierten App Store zum Teilen/Veröffentlichen von Apps anzudeuten."
       },
       "milestone4": {
-        "year": "Mär 2024",
-        "title": "1 Million Apps",
-        "description": "Eine Million Anwendungen mit AppNode erstellt."
-      },
-      "milestone5": {
-        "year": "Aug 2024",
-        "title": "Enterprise-Start",
-        "description": "Lösungen für Fortune-500-Unternehmen gestartet."
-      },
-      "milestone6": {
-        "year": "Heute",
-        "title": "Kontinuierliche Innovation",
-        "description": "Wir bauen weiter an der Zukunft der Entwicklung."
+        "year": "2026",
+        "title": "Weiteres Wachstum",
+        "description": "Funktionen erweitern, unsere Community ausbauen und mit den neuesten KI-Fortschritten Schritt halten. Folgt uns auf X für Echtzeit-Updates zu neuen Versionen und kommenden Funktionen."
       }
     },
     "team": {

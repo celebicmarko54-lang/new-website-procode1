@@ -1,0 +1,20 @@
+# Allow all legitimate crawlers
+User-agent: *
+Allow: /
+
+# Block sensitive paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /src/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /node_modules/
+Disallow: /admin/
+Disallow: /debug/
+Disallow: /dashboard/
+Disallow: /settings/
+Disallow: /profile/
+Disallow: /billing/
+
+# Sitemap
+# Sitemap: https://appnode.ai/sitemap.xml

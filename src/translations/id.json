@@ -2757,37 +2757,27 @@
       }
     },
     "journey": {
-      "title": "Perjalanan kami",
-      "subtitle": "Dari ide hingga platform global.",
+      "title": "Perjalanan Kami",
+      "subtitle": "Dari sebuah ide menjadi platform global.",
       "milestone1": {
-        "year": "Jan 2023",
-        "title": "Ide lahir",
-        "description": "Konsep pertama platform pengembangan berbantuan AI lahir."
+        "year": "2025",
+        "title": "Didirikan / Awal Pengembangan",
+        "description": "AppNode secara resmi memulai pekerjaan serius pada Oktober 2025 (ide-ide sudah berkembang sebelumnya). Kami membangun mesin AI inti yang menggabungkan live coding dengan pembuatan UI berbasis AI. Membuat akun X untuk mulai berbagi teaser dan membangun komunitas awal."
       },
       "milestone2": {
-        "year": "Apr 2023",
-        "title": "Beta privat",
-        "description": "100 pengguna pertama mulai menguji AppNode."
+        "year": "2026",
+        "title": "Peluncuran Beta & Pendanaan Awal",
+        "description": "Meluncurkan beta privat/publik dengan AI yang powerful untuk aplikasi web. Mengumpulkan pendanaan awal (kisaran $2-5M) untuk memperbesar tim dan mempercepat fitur mobile. Bermitra dengan penyedia AI utama dan alat pengembang untuk meningkatkan kredibilitas dan antusiasme."
       },
       "milestone3": {
-        "year": "Sep 2023",
-        "title": "Peluncuran publik",
-        "description": "Terbuka untuk dunia. Mencapai 10.000 pengguna di bulan pertama."
+        "year": "2026",
+        "title": "10.000 Pengguna",
+        "description": "Mencapai 10.000 pengguna hanya dalam beberapa bulan setelah beta. Pengguna awal menyukai kecepatannya – mengubah ide menjadi aplikasi siap deploy dalam hitungan menit. Mulai mengumumkan dukungan iOS dan App Store bawaan untuk berbagi/mempublikasikan aplikasi."
       },
       "milestone4": {
-        "year": "Mar 2024",
-        "title": "1 juta app",
-        "description": "Satu juta aplikasi dibangun dengan AppNode."
-      },
-      "milestone5": {
-        "year": "Agu 2024",
-        "title": "Peluncuran Enterprise",
-        "description": "Solusi diluncurkan untuk perusahaan Fortune 500."
-      },
-      "milestone6": {
-        "year": "Hari ini",
-        "title": "Inovasi berkelanjutan",
-        "description": "Kami terus membangun masa depan pengembangan."
+        "year": "2026",
+        "title": "Terus Bertumbuh",
+        "description": "Memperluas fitur, mengembangkan komunitas kami, dan mengikuti perkembangan AI terbaru. Ikuti kami di X untuk pembaruan real-time tentang rilis baru dan fitur yang akan datang."
       }
     },
     "team": {

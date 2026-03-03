@@ -11,7 +11,7 @@
   "dependencies": {
     "@types/three": "^0.181.0",
     "critters": "^0.0.23",
-    "next": "16.0.6",
+    "next": "^16.1.6",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "three": "^0.181.2"

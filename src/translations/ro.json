@@ -3359,37 +3359,27 @@
       }
     },
     "journey": {
-      "title": "Calatoria noastra",
-      "subtitle": "De la o idee la o platforma globala.",
+      "title": "Călătoria Noastră",
+      "subtitle": "De la o idee la o platformă globală.",
       "milestone1": {
-        "year": "Jan 2023",
-        "title": "The Idea Is Born",
-        "description": "The first concept of an AI-assisted development platform was born."
+        "year": "2025",
+        "title": "Fondare / Începutul Dezvoltării",
+        "description": "AppNode a început oficial munca serioasă în octombrie 2025 (ideile se conturau de mai devreme). Am construit motorul AI de bază care combină programarea live cu generarea de interfețe prin AI. Am creat un cont X pentru a împărtăși teasere și a construi o comunitate timpurie."
       },
       "milestone2": {
-        "year": "Apr 2023",
-        "title": "Private Beta",
-        "description": "The first 100 users began testing AppNode."
+        "year": "2026",
+        "title": "Lansare Beta & Finanțare Seed",
+        "description": "Am lansat beta privată/publică cu AI puternic pentru aplicații web. Am obținut finanțare seed (interval $2-5M) pentru a crește echipa și a accelera funcționalitățile mobile. Parteneriat cu furnizori AI cheie și instrumente de dezvoltare pentru a crește credibilitatea și entuziasmul."
       },
       "milestone3": {
-        "year": "Sep 2023",
-        "title": "Public Launch",
-        "description": "Opened to the world. Reached 10,000 users in the first month."
+        "year": "2026",
+        "title": "10.000 de Utilizatori",
+        "description": "Am ajuns la 10.000 de utilizatori în doar câteva luni după beta. Utilizatorii timpurii adoră viteza – transformă ideile în aplicații gata de implementare în câteva minute. Am început să anunțăm suport iOS și un App Store integrat pentru partajarea/publicarea aplicațiilor."
       },
       "milestone4": {
-        "year": "Mar 2024",
-        "title": "1 Million Apps",
-        "description": "One million applications built with AppNode."
-      },
-      "milestone5": {
-        "year": "Aug 2024",
-        "title": "Enterprise Launch",
-        "description": "Solutions launched for Fortune 500 companies."
-      },
-      "milestone6": {
-        "year": "Today",
-        "title": "Continuous Innovation",
-        "description": "We continue to build the future of development."
+        "year": "2026",
+        "title": "Continuăm să Creștem",
+        "description": "Extindem funcționalitățile, creștem comunitatea noastră și rămânem la curent cu cele mai recente progrese în AI. Urmăriți-ne pe X pentru actualizări în timp real despre lansări noi și funcționalități viitoare."
       }
     },
     "team": {

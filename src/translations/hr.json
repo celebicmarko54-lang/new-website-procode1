@@ -4367,37 +4367,27 @@
       }
     },
     "journey": {
-      "title": "Naše putovanje",
+      "title": "Naš put",
       "subtitle": "Od ideje do globalne platforme.",
       "milestone1": {
-        "year": "Jan 2023",
-        "title": "Rođenje ideje",
-        "description": "Nastao je prvi koncept razvojne platforme potpomognute AI-jem."
+        "year": "2025",
+        "title": "Osnivanje / Početak razvoja",
+        "description": "AppNode je službeno započeo ozbiljan rad u listopadu 2025. (ideje su se rađale i ranije). Izgradili smo temeljni AI motor koji kombinira programiranje uživo s generiranjem korisničkog sučelja pomoću AI-ja. Stvorili smo X račun za dijeljenje najava i izgradnju rane zajednice."
       },
       "milestone2": {
-        "year": "Apr 2023",
-        "title": "Privatna beta",
-        "description": "Prvih 100 korisnika počelo je testirati AppNode."
+        "year": "2026",
+        "title": "Beta lansiranje i početno financiranje",
+        "description": "Pokrenuli smo privatnu/javnu betu s moćnim AI-jem za web aplikacije. Prikupili smo početno financiranje (raspon $2-5M) za rast tima i ubrzanje mobilnih značajki. Partnerstvo s ključnim AI pružateljima i razvojnim alatima za jačanje vjerodostojnosti i entuzijazma."
       },
       "milestone3": {
-        "year": "Sep 2023",
-        "title": "Javno lansiranje",
-        "description": "Otvoreno svijetu. 10.000 korisnika u prvom mjesecu."
+        "year": "2026",
+        "title": "10.000 korisnika",
+        "description": "Dosegli smo 10.000 korisnika u samo nekoliko mjeseci nakon bete. Rani korisnici obožavaju brzinu – pretvaranje ideja u aplikacije spremne za pokretanje u minutama. Počeli smo najave podrške za iOS i ugrađenog App Storea za dijeljenje/objavljivanje aplikacija."
       },
       "milestone4": {
-        "year": "Mar 2024",
-        "title": "1 milijun aplikacija",
-        "description": "Milijun aplikacija izgrađenih s AppNodeom."
-      },
-      "milestone5": {
-        "year": "Kol 2024",
-        "title": "Lansiranje za poduzeća",
-        "description": "Pokrenuta rješenja za Fortune 500 tvrtke."
-      },
-      "milestone6": {
-        "year": "Danas",
-        "title": "Neprestana inovacija",
-        "description": "Nastavljamo graditi budućnost razvoja."
+        "year": "2026",
+        "title": "Nastavljamo rasti",
+        "description": "Proširujemo značajke, razvijamo našu zajednicu i pratimo najnovija dostignuća u AI-ju. Pratite nas na X za ažuriranja u stvarnom vremenu o novim izdanjima i nadolazećim značajkama."
       }
     },
     "team": {

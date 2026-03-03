@@ -2757,37 +2757,27 @@
       }
     },
     "journey": {
-      "title": "Nuestro camino",
+      "title": "Nuestro Recorrido",
       "subtitle": "De una idea a una plataforma global.",
       "milestone1": {
-        "year": "Ene 2023",
-        "title": "Nace la idea",
-        "description": "El primer concepto de una plataforma de desarrollo asistida por IA nació."
+        "year": "2025",
+        "title": "Fundación / Inicio del Desarrollo",
+        "description": "AppNode comenzó oficialmente el trabajo serio en octubre de 2025 (las ideas venían gestándose desde antes). Construimos el motor central de IA que combina programación en vivo con generación de interfaces mediante IA. Creamos una cuenta en X para compartir avances y construir una comunidad temprana."
       },
       "milestone2": {
-        "year": "Abr 2023",
-        "title": "Beta privada",
-        "description": "Los primeros 100 usuarios comenzaron a probar AppNode."
+        "year": "2026",
+        "title": "Lanzamiento Beta y Financiación Semilla",
+        "description": "Lanzamos una beta privada/pública con potente IA para aplicaciones web. Obtuvimos financiación semilla (rango de $2-5M) para hacer crecer el equipo y acelerar las funciones móviles. Nos asociamos con proveedores clave de IA y herramientas de desarrollo para impulsar la credibilidad y el entusiasmo."
       },
       "milestone3": {
-        "year": "Sep 2023",
-        "title": "Lanzamiento público",
-        "description": "Abierto al mundo. Alcanzamos 10,000 usuarios en el primer mes."
+        "year": "2026",
+        "title": "10.000 Usuarios",
+        "description": "Alcanzamos 10.000 usuarios en solo unos meses después de la beta. Los primeros usuarios adoran la velocidad: convierten ideas en aplicaciones desplegables en minutos. Empezamos a anticipar soporte para iOS y un App Store integrado para compartir/publicar aplicaciones."
       },
       "milestone4": {
-        "year": "Mar 2024",
-        "title": "1 millón de apps",
-        "description": "Un millón de aplicaciones construidas con AppNode."
-      },
-      "milestone5": {
-        "year": "Ago 2024",
-        "title": "Lanzamiento Enterprise",
-        "description": "Lanzamos soluciones para empresas Fortune 500."
-      },
-      "milestone6": {
-        "year": "Hoy",
-        "title": "Innovación continua",
-        "description": "Seguimos construyendo el futuro del desarrollo."
+        "year": "2026",
+        "title": "Seguimos Creciendo",
+        "description": "Ampliando funciones, haciendo crecer nuestra comunidad y manteniéndonos al día con los últimos avances en IA. Síguenos en X para actualizaciones en tiempo real sobre nuevos lanzamientos y funciones próximas."
       }
     },
     "team": {
